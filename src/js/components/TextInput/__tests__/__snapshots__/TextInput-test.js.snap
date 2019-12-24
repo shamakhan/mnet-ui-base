@@ -1,86 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput a11yTitle 1`] = `
-.c1 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-}
-
-.c1:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c1:focus > circle,
-.c1:focus > ellipse,
-.c1:focus > line,
-.c1:focus > path,
-.c1:focus > polygon,
-.c1:focus > polyline,
-.c1:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c1:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c1::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c1::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c1:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c1::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c1::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c1:-moz-placeholder,
-.c1::-moz-placeholder {
-  opacity: 1;
-}
-
-.c0 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <input
-    aria-label="aria-test"
-    autocomplete="off"
-    class="c1"
-    name="item"
-    value=""
-  />
-</div>
-`;
-
 exports[`TextInput basic 1`] = `
 .c1 {
   box-sizing: border-box;
@@ -88,34 +7,19 @@ exports[`TextInput basic 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
   background: transparent;
   color: inherit;
-  width: 100%;
-  padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
+  width: 100%;
 }
 
-.c1:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c1:focus > circle,
-.c1:focus > ellipse,
-.c1:focus > line,
-.c1:focus > path,
-.c1:focus > polygon,
-.c1:focus > polyline,
-.c1:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c1:focus::-moz-focus-inner {
-  border: 0;
+.c1::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 .c1::-webkit-input-placeholder {
@@ -130,18 +34,9 @@ exports[`TextInput basic 1`] = `
   color: #AAAAAA;
 }
 
-.c1::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 .c1::-moz-focus-inner {
   border: none;
   outline: none;
-}
-
-.c1:-moz-placeholder,
-.c1::-moz-placeholder {
-  opacity: 1;
 }
 
 .c0 {
@@ -160,521 +55,6 @@ exports[`TextInput basic 1`] = `
   />
 </div>
 `;
-
-exports[`TextInput calls onSuggestionsClose 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-}
-
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      autocomplete="off"
-      class="c2"
-      data-testid="test-input"
-      id="item"
-      name="item"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput calls onSuggestionsClose 2`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: auto;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: auto;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 12px;
-}
-
-.c1 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  border-radius: 0px;
-  position: fixed;
-  z-index: 20;
-  outline: none;
-  background-color: #FFFFFF;
-  color: #444444;
-  opacity: 0;
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
-  -webkit-animation-delay: 0.01s;
-  animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c4 {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c3 {
-  max-height: inherit;
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    padding: 6px;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3 {
-    width: 100%;
-  }
-}
-
-<div
-  class="c0 c1"
-  data-g-portal-id="0"
-  id="text-input-drop__item"
-  style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
-  tabindex="-1"
->
-  <div
-    class="c2 c3"
-  >
-    <ol
-      class="c4"
-    >
-      <li>
-        <button
-          class="c5"
-          type="button"
-        >
-          <div
-            class="c6"
-          >
-            test
-          </div>
-        </button>
-      </li>
-      <li>
-        <button
-          class="c5"
-          type="button"
-        >
-          <div
-            class="c6"
-          >
-            test1
-          </div>
-        </button>
-      </li>
-    </ol>
-  </div>
-</div>
-`;
-
-exports[`TextInput calls onSuggestionsClose 3`] = `""`;
-
-exports[`TextInput calls onSuggestionsClose 4`] = `
-<div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
->
-  <div
-    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 dpaJQp"
-  >
-    <input
-      autocomplete="off"
-      class="StyledTextInput-sc-1x30a0s-0 eZRMGn"
-      data-testid="test-input"
-      id="item"
-      name="item"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput calls onSuggestionsOpen 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: auto;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: auto;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 12px;
-}
-
-.c1 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  border-radius: 0px;
-  position: fixed;
-  z-index: 20;
-  outline: none;
-  background-color: #FFFFFF;
-  color: #444444;
-  opacity: 0;
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
-  -webkit-animation-delay: 0.01s;
-  animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c4 {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c3 {
-  max-height: inherit;
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    padding: 6px;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3 {
-    width: 100%;
-  }
-}
-
-<div
-  class="c0 c1"
-  data-g-portal-id="0"
-  id="text-input-drop__item"
-  style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
-  tabindex="-1"
->
-  <div
-    class="c2 c3"
-  >
-    <ol
-      class="c4"
-    >
-      <li>
-        <button
-          class="c5"
-          type="button"
-        >
-          <div
-            class="c6"
-          >
-            test
-          </div>
-        </button>
-      </li>
-      <li>
-        <button
-          class="c5"
-          type="button"
-        >
-          <div
-            class="c6"
-          >
-            test1
-          </div>
-        </button>
-      </li>
-    </ol>
-  </div>
-</div>
-`;
-
-exports[`TextInput calls onSuggestionsOpen 2`] = `""`;
 
 exports[`TextInput close suggestion drop 1`] = `
 .c0 {
@@ -693,34 +73,19 @@ exports[`TextInput close suggestion drop 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
   background: transparent;
   color: inherit;
-  width: 100%;
-  padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
+  width: 100%;
 }
 
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
+.c2::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 .c2::-webkit-input-placeholder {
@@ -735,18 +100,9 @@ exports[`TextInput close suggestion drop 1`] = `
   color: #AAAAAA;
 }
 
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 .c2::-moz-focus-inner {
   border: none;
   outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
 }
 
 .c1 {
@@ -779,6 +135,7 @@ exports[`TextInput close suggestion drop 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -795,6 +152,7 @@ exports[`TextInput close suggestion drop 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -810,6 +168,7 @@ exports[`TextInput close suggestion drop 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -821,6 +180,54 @@ exports[`TextInput close suggestion drop 2`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 12px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 0px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c5:hover {
+  background-color: rgba(221,221,221,0.4);
+  color: #000000;
 }
 
 .c1 {
@@ -835,60 +242,16 @@ exports[`TextInput close suggestion drop 2`] = `
   position: fixed;
   z-index: 20;
   outline: none;
-  background-color: #FFFFFF;
+  background: #ffffff;
   color: #444444;
   opacity: 0;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
   -webkit-animation-delay: 0.01s;
   animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
 }
 
 .c4 {
@@ -930,7 +293,6 @@ exports[`TextInput close suggestion drop 2`] = `
 
 <div
   class="c0 c1"
-  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -965,23 +327,92 @@ exports[`TextInput close suggestion drop 2`] = `
           </div>
         </button>
       </li>
+      <div
+        class="c7"
+      />
     </ol>
   </div>
 </div>
 `;
 
-exports[`TextInput close suggestion drop 3`] = `""`;
+exports[`TextInput close suggestion drop 3`] = `
+".glTYPu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
+}
+
+@media only screen and (max-width:768px) {
+  .cWLJoU {
+    padding: 6px;
+  }
+}
+
+.GOEwZ {
+  font-size: 18px;
+  line-height: 24px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0px;
+  position: fixed;
+  z-index: 20;
+  outline: none;
+  background: #ffffff;
+  color: #444444;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
+  -webkit-animation-delay: 0.01s;
+  animation-delay: 0.01s;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .GOEwZ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .cblTHf {
+    width: 100%;
+  }
+}"
+`;
 
 exports[`TextInput close suggestion drop 4`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledGrommet-sc-1rvbxuz-0 eKCBdL"
 >
   <div
-    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 dpaJQp"
+    class="StyledTextInput__StyledTextInputContainer-ilbntv-1 jIAIZE"
   >
     <input
       autocomplete="off"
-      class="StyledTextInput-sc-1x30a0s-0 eZRMGn"
+      class="StyledTextInput-ilbntv-0 fcHDFG"
       data-testid="test-input"
       id="item"
       name="item"
@@ -1008,34 +439,19 @@ exports[`TextInput complex suggestions 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
   background: transparent;
   color: inherit;
-  width: 100%;
-  padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
+  width: 100%;
 }
 
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
+.c2::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 .c2::-webkit-input-placeholder {
@@ -1050,18 +466,9 @@ exports[`TextInput complex suggestions 1`] = `
   color: #AAAAAA;
 }
 
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 .c2::-moz-focus-inner {
   border: none;
   outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
 }
 
 .c1 {
@@ -1094,6 +501,7 @@ exports[`TextInput complex suggestions 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1110,6 +518,7 @@ exports[`TextInput complex suggestions 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1125,17 +534,46 @@ exports[`TextInput complex suggestions 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 12px;
+  height: 0px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c5:hover {
+  background-color: rgba(221,221,221,0.4);
+  color: #000000;
 }
 
 .c1 {
@@ -1150,60 +588,16 @@ exports[`TextInput complex suggestions 2`] = `
   position: fixed;
   z-index: 20;
   outline: none;
-  background-color: #FFFFFF;
+  background: #ffffff;
   color: #444444;
   opacity: 0;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
   -webkit-animation-delay: 0.01s;
   animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
 }
 
 .c4 {
@@ -1216,12 +610,6 @@ exports[`TextInput complex suggestions 2`] = `
 
 .c3 {
   max-height: inherit;
-}
-
-@media only screen and (max-width:768px) {
-  .c6 {
-    padding: 6px;
-  }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1245,7 +633,6 @@ exports[`TextInput complex suggestions 2`] = `
 
 <div
   class="c0 c1"
-  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -1261,11 +648,7 @@ exports[`TextInput complex suggestions 2`] = `
           class="c5"
           type="button"
         >
-          <div
-            class="c6"
-          >
-            test
-          </div>
+          test
         </button>
       </li>
       <li>
@@ -1273,19 +656,84 @@ exports[`TextInput complex suggestions 2`] = `
           class="c5"
           type="button"
         >
-          <div
-            class="c6"
-          >
-            test1
-          </div>
+          test1
         </button>
       </li>
+      <div
+        class="c6"
+      />
     </ol>
   </div>
 </div>
 `;
 
-exports[`TextInput complex suggestions 3`] = `""`;
+exports[`TextInput complex suggestions 3`] = `
+".glTYPu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
+}
+
+@media only screen and (max-width:768px) {
+  .cWLJoU {
+    padding: 6px;
+  }
+}
+
+.GOEwZ {
+  font-size: 18px;
+  line-height: 24px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0px;
+  position: fixed;
+  z-index: 20;
+  outline: none;
+  background: #ffffff;
+  color: #444444;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
+  -webkit-animation-delay: 0.01s;
+  animation-delay: 0.01s;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .GOEwZ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .cblTHf {
+    width: 100%;
+  }
+}"
+`;
 
 exports[`TextInput disabled 1`] = `
 .c1 {
@@ -1294,36 +742,21 @@ exports[`TextInput disabled 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
   background: transparent;
   color: inherit;
-  width: 100%;
-  padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
+  width: 100%;
   opacity: 0.3;
   cursor: default;
 }
 
-.c1:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c1:focus > circle,
-.c1:focus > ellipse,
-.c1:focus > line,
-.c1:focus > path,
-.c1:focus > polygon,
-.c1:focus > polyline,
-.c1:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c1:focus::-moz-focus-inner {
-  border: 0;
+.c1::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 .c1::-webkit-input-placeholder {
@@ -1338,18 +771,9 @@ exports[`TextInput disabled 1`] = `
   color: #AAAAAA;
 }
 
-.c1::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 .c1::-moz-focus-inner {
   border: none;
   outline: none;
-}
-
-.c1:-moz-placeholder,
-.c1::-moz-placeholder {
-  opacity: 1;
 }
 
 .c0 {
@@ -1387,34 +811,19 @@ exports[`TextInput handles next and previous without suggestion 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
   background: transparent;
   color: inherit;
-  width: 100%;
-  padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
+  width: 100%;
 }
 
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
+.c2::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 .c2::-webkit-input-placeholder {
@@ -1429,18 +838,9 @@ exports[`TextInput handles next and previous without suggestion 1`] = `
   color: #AAAAAA;
 }
 
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 .c2::-moz-focus-inner {
   border: none;
   outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
 }
 
 .c1 {
@@ -1468,318 +868,20 @@ exports[`TextInput handles next and previous without suggestion 1`] = `
 
 exports[`TextInput handles next and previous without suggestion 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledGrommet-sc-1rvbxuz-0 eKCBdL"
 >
   <div
-    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 dpaJQp"
+    class="StyledTextInput__StyledTextInputContainer-ilbntv-1 jIAIZE"
   >
     <input
       autocomplete="off"
-      class="StyledTextInput-sc-1x30a0s-0 eZRMGn"
+      class="StyledTextInput-ilbntv-0 fcHDFG"
       data-testid="test-input"
       id="item"
       name="item"
       value=""
     />
   </div>
-</div>
-`;
-
-exports[`TextInput icon 1`] = `
-.c2 {
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 24px;
-  fill: #666666;
-  stroke: #666666;
-}
-
-.c2 g {
-  fill: inherit;
-  stroke: inherit;
-}
-
-.c2 *:not([stroke])[fill="none"] {
-  stroke-width: 0;
-}
-
-.c2 *[stroke*="#"],
-.c2 *[STROKE*="#"] {
-  stroke: inherit;
-  fill: none;
-}
-
-.c2 *[fill-rule],
-.c2 *[FILL-RULE],
-.c2 *[fill*="#"],
-.c2 *[FILL*="#"] {
-  fill: inherit;
-  stroke: none;
-}
-
-.c3 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-  padding-left: 48px;
-}
-
-.c3:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c3:focus > circle,
-.c3:focus > ellipse,
-.c3:focus > line,
-.c3:focus > path,
-.c3:focus > polygon,
-.c3:focus > polyline,
-.c3:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c3:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c3::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c3:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c3::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c3::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c3:-moz-placeholder,
-.c3::-moz-placeholder {
-  opacity: 1;
-}
-
-.c0 {
-  position: relative;
-  width: 100%;
-}
-
-.c1 {
-  position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-packjustify: center;
-  -webkit-justify: center;
-  -ms-flex-packjustify: center;
-  justify: center;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  pointer-events: none;
-  left: 12px;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <svg
-      aria-label="Search"
-      class="c2"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M15,15 L22,22 L15,15 Z M9.5,17 C13.6421356,17 17,13.6421356 17,9.5 C17,5.35786438 13.6421356,2 9.5,2 C5.35786438,2 2,5.35786438 2,9.5 C2,13.6421356 5.35786438,17 9.5,17 Z"
-        fill="none"
-        stroke="#000"
-        stroke-width="2"
-      />
-    </svg>
-  </div>
-  <input
-    autocomplete="off"
-    class="c3"
-    name="item"
-    value=""
-  />
-</div>
-`;
-
-exports[`TextInput icon reverse 1`] = `
-.c2 {
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 24px;
-  fill: #666666;
-  stroke: #666666;
-}
-
-.c2 g {
-  fill: inherit;
-  stroke: inherit;
-}
-
-.c2 *:not([stroke])[fill="none"] {
-  stroke-width: 0;
-}
-
-.c2 *[stroke*="#"],
-.c2 *[STROKE*="#"] {
-  stroke: inherit;
-  fill: none;
-}
-
-.c2 *[fill-rule],
-.c2 *[FILL-RULE],
-.c2 *[fill*="#"],
-.c2 *[FILL*="#"] {
-  fill: inherit;
-  stroke: none;
-}
-
-.c3 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-  padding-right: 48px;
-}
-
-.c3:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c3:focus > circle,
-.c3:focus > ellipse,
-.c3:focus > line,
-.c3:focus > path,
-.c3:focus > polygon,
-.c3:focus > polyline,
-.c3:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c3:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c3::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c3:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c3::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c3::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c3:-moz-placeholder,
-.c3::-moz-placeholder {
-  opacity: 1;
-}
-
-.c0 {
-  position: relative;
-  width: 100%;
-}
-
-.c1 {
-  position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-packjustify: center;
-  -webkit-justify: center;
-  -ms-flex-packjustify: center;
-  justify: center;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  pointer-events: none;
-  right: 12px;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <svg
-      aria-label="Search"
-      class="c2"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M15,15 L22,22 L15,15 Z M9.5,17 C13.6421356,17 17,13.6421356 17,9.5 C17,5.35786438 13.6421356,2 9.5,2 C5.35786438,2 2,5.35786438 2,9.5 C2,13.6421356 5.35786438,17 9.5,17 Z"
-        fill="none"
-        stroke="#000"
-        stroke-width="2"
-      />
-    </svg>
-  </div>
-  <input
-    autocomplete="off"
-    class="c3"
-    name="item"
-    value=""
-  />
 </div>
 `;
 
@@ -1790,6 +892,7 @@ exports[`TextInput large drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1806,6 +909,7 @@ exports[`TextInput large drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1821,6 +925,7 @@ exports[`TextInput large drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -1832,6 +937,54 @@ exports[`TextInput large drop height 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 12px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 0px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c5:hover {
+  background-color: rgba(221,221,221,0.4);
+  color: #000000;
 }
 
 .c1 {
@@ -1846,60 +999,16 @@ exports[`TextInput large drop height 1`] = `
   position: fixed;
   z-index: 20;
   outline: none;
-  background-color: #FFFFFF;
+  background: #ffffff;
   color: #444444;
   opacity: 0;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
   -webkit-animation-delay: 0.01s;
   animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
 }
 
 .c4 {
@@ -1941,7 +1050,6 @@ exports[`TextInput large drop height 1`] = `
 
 <div
   class="c0 c1"
-  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -1976,12 +1084,99 @@ exports[`TextInput large drop height 1`] = `
           </div>
         </button>
       </li>
+      <div
+        class="c7"
+      />
     </ol>
   </div>
 </div>
 `;
 
-exports[`TextInput large drop height 2`] = `""`;
+exports[`TextInput large drop height 2`] = `
+".glTYPu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
+}
+
+@media only screen and (max-width:768px) {
+  .cWLJoU {
+    padding: 6px;
+  }
+}
+
+.GOEwZ {
+  font-size: 18px;
+  line-height: 24px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0px;
+  position: fixed;
+  z-index: 20;
+  outline: none;
+  background: #ffffff;
+  color: #444444;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
+  -webkit-animation-delay: 0.01s;
+  animation-delay: 0.01s;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .GOEwZ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .cblTHf {
+    width: 100%;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .jelrel {
+    width: 100%;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .gCzMjn {
+    width: 100%;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .jrDezH {
+    width: 100%;
+  }
+}"
+`;
 
 exports[`TextInput medium drop height 1`] = `
 .c0 {
@@ -1990,6 +1185,7 @@ exports[`TextInput medium drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -2006,6 +1202,7 @@ exports[`TextInput medium drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -2021,6 +1218,7 @@ exports[`TextInput medium drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -2032,6 +1230,54 @@ exports[`TextInput medium drop height 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 12px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 0px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c5:hover {
+  background-color: rgba(221,221,221,0.4);
+  color: #000000;
 }
 
 .c1 {
@@ -2046,60 +1292,16 @@ exports[`TextInput medium drop height 1`] = `
   position: fixed;
   z-index: 20;
   outline: none;
-  background-color: #FFFFFF;
+  background: #ffffff;
   color: #444444;
   opacity: 0;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
   -webkit-animation-delay: 0.01s;
   animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
 }
 
 .c4 {
@@ -2141,7 +1343,6 @@ exports[`TextInput medium drop height 1`] = `
 
 <div
   class="c0 c1"
-  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -2176,15 +1377,39 @@ exports[`TextInput medium drop height 1`] = `
           </div>
         </button>
       </li>
+      <div
+        class="c7"
+      />
     </ol>
   </div>
 </div>
 `;
 
-exports[`TextInput medium drop height 2`] = `""`;
+exports[`TextInput medium drop height 2`] = `
+".glTYPu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
+}
 
-exports[`TextInput select a suggestion with onSelect 1`] = `
-.c0 {
+@media only screen and (max-width:768px) {
+  .cWLJoU {
+    padding: 6px;
+  }
+}
+
+.GOEwZ {
   font-size: 18px;
   line-height: 24px;
   box-sizing: border-box;
@@ -2192,94 +1417,55 @@ exports[`TextInput select a suggestion with onSelect 1`] = `
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-}
-
-.c2:focus {
+  border-radius: 0px;
+  position: fixed;
+  z-index: 20;
   outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
+  background: #ffffff;
+  color: #444444;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
+  -webkit-animation-delay: 0.01s;
+  animation-delay: 0.01s;
 }
 
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .GOEwZ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
 }
 
-.c2:focus::-moz-focus-inner {
-  border: 0;
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .cblTHf {
+    width: 100%;
+  }
 }
 
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .jelrel {
+    width: 100%;
+  }
 }
 
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      autocomplete="off"
-      class="c2"
-      data-testid="test-input"
-      id="item"
-      name="item"
-      value=""
-    />
-  </div>
-</div>
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .gCzMjn {
+    width: 100%;
+  }
+}"
 `;
 
-exports[`TextInput select a suggestion with onSuggestionSelect 1`] = `
+exports[`TextInput select a suggestion 1`] = `
 .c0 {
   font-size: 18px;
   line-height: 24px;
@@ -2296,34 +1482,19 @@ exports[`TextInput select a suggestion with onSuggestionSelect 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
   background: transparent;
   color: inherit;
-  width: 100%;
-  padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
+  width: 100%;
 }
 
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
+.c2::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 .c2::-webkit-input-placeholder {
@@ -2338,18 +1509,9 @@ exports[`TextInput select a suggestion with onSuggestionSelect 1`] = `
   color: #AAAAAA;
 }
 
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 .c2::-moz-focus-inner {
   border: none;
   outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
 }
 
 .c1 {
@@ -2392,38 +1554,22 @@ exports[`TextInput select suggestion 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
   background: transparent;
   color: inherit;
-  width: 100%;
-  padding: 11px;
   font-weight: 600;
   margin: 0;
-  font-size: 22px;
-  line-height: 28px;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
-  outline: none;
+  width: 100%;
+  font-size: 22px;
+  line-height: 28px;
   border: none;
 }
 
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
+.c2::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 .c2::-webkit-input-placeholder {
@@ -2438,18 +1584,9 @@ exports[`TextInput select suggestion 1`] = `
   color: #AAAAAA;
 }
 
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 .c2::-moz-focus-inner {
   border: none;
   outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
 }
 
 .c1 {
@@ -2482,6 +1619,7 @@ exports[`TextInput select suggestion 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -2498,6 +1636,7 @@ exports[`TextInput select suggestion 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -2513,6 +1652,7 @@ exports[`TextInput select suggestion 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -2524,6 +1664,54 @@ exports[`TextInput select suggestion 2`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 12px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 0px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c5:hover {
+  background-color: rgba(221,221,221,0.4);
+  color: #000000;
 }
 
 .c1 {
@@ -2538,60 +1726,16 @@ exports[`TextInput select suggestion 2`] = `
   position: fixed;
   z-index: 20;
   outline: none;
-  background-color: #FFFFFF;
+  background: #ffffff;
   color: #444444;
   opacity: 0;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
   -webkit-animation-delay: 0.01s;
   animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
 }
 
 .c4 {
@@ -2633,7 +1777,6 @@ exports[`TextInput select suggestion 2`] = `
 
 <div
   class="c0 c1"
-  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -2668,755 +1811,95 @@ exports[`TextInput select suggestion 2`] = `
           </div>
         </button>
       </li>
+      <div
+        class="c7"
+      />
     </ol>
   </div>
 </div>
 `;
 
-exports[`TextInput select suggestion 3`] = `""`;
-
-exports[`TextInput select suggestion 4`] = `
-<div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
->
-  <div
-    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 dpaJQp"
-  >
-    <input
-      autocomplete="off"
-      class="StyledTextInput-sc-1x30a0s-0 fcSdEK"
-      data-testid="test-input"
-      id="item"
-      name="item"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput select with onSuggestionSelect when onSelect is present 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-}
-
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      autocomplete="off"
-      class="c2"
-      data-testid="test-input"
-      id="item"
-      name="item"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput should have padding when plain 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-  outline: none;
-  border: none;
-}
-
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      autocomplete="off"
-      class="c2"
-      name="name"
-      placeholder="should still have padding"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput should hide non-string placeholder when having a value 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-}
-
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      autocomplete="off"
-      class="c2"
-      data-testid="styled-placeholder"
-      id="styled-placeholder"
-      name="styled-placeholder"
-      value="test"
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput should not have accessibility violations 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-}
-
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      aria-label="aria-test"
-      autocomplete="off"
-      class="c2"
-      name="item"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput should not have padding when plain="full" 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-  outline: none;
-  border: none;
-  padding: 0;
-}
-
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      autocomplete="off"
-      class="c2"
-      name="name"
-      placeholder="should not have padding"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput should only show default placeholder when placeholder is a
-  string 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-}
-
-.c2:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c2:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      autocomplete="off"
-      class="c2"
-      data-testid="placeholder"
-      id="placeholder"
-      name="placeholder"
-      placeholder="placeholder text"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput should only show default placeholder when placeholder is a
-  string 2`] = `
-<div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
->
-  <div
-    class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 dpaJQp"
-  >
-    <input
-      autocomplete="off"
-      class="StyledTextInput-sc-1x30a0s-0 eZRMGn"
-      data-testid="placeholder"
-      id="placeholder"
-      name="placeholder"
-      placeholder="placeholder text"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`TextInput should show non-string placeholder 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c4 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-}
-
-.c4:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c4:focus > circle,
-.c4:focus > ellipse,
-.c4:focus > line,
-.c4:focus > path,
-.c4:focus > polygon,
-.c4:focus > polyline,
-.c4:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c4:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c4::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c4::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c4:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c4::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c4::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c4:-moz-placeholder,
-.c4::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-.c2 {
-  position: absolute;
-  left: 11px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+exports[`TextInput select suggestion 3`] = `
+".glTYPu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  pointer-events: none;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
 }
 
-.c3 {
+@media only screen and (max-width:768px) {
+  .cWLJoU {
+    padding: 6px;
+  }
+}
+
+.GOEwZ {
   font-size: 18px;
   line-height: 24px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0px;
+  position: fixed;
+  z-index: 20;
+  outline: none;
+  background: #ffffff;
+  color: #444444;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
+  -webkit-animation-delay: 0.01s;
+  animation-delay: 0.01s;
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .GOEwZ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .cblTHf {
+    width: 100%;
+  }
+}"
+`;
+
+exports[`TextInput select suggestion 4`] = `
 <div
-  class="c0"
+  class="StyledGrommet-sc-1rvbxuz-0 eKCBdL"
 >
   <div
-    class="c1"
+    class="StyledTextInput__StyledTextInputContainer-ilbntv-1 jIAIZE"
   >
-    <div
-      class="c2"
-    >
-      <span
-        class="c3"
-      >
-        placeholder text
-      </span>
-    </div>
     <input
       autocomplete="off"
-      class="c4"
-      data-testid="test-styled-placeholder"
-      id="styled-placeholder"
-      name="styled-placeholder"
+      class="StyledTextInput-ilbntv-0 kksDXv"
+      data-testid="test-input"
+      id="item"
+      name="item"
       value=""
     />
   </div>
@@ -3430,6 +1913,7 @@ exports[`TextInput small drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -3446,6 +1930,7 @@ exports[`TextInput small drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -3461,6 +1946,7 @@ exports[`TextInput small drop height 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -3472,6 +1958,54 @@ exports[`TextInput small drop height 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 12px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 0px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c5:hover {
+  background-color: rgba(221,221,221,0.4);
+  color: #000000;
 }
 
 .c1 {
@@ -3486,60 +2020,16 @@ exports[`TextInput small drop height 1`] = `
   position: fixed;
   z-index: 20;
   outline: none;
-  background-color: #FFFFFF;
+  background: #ffffff;
   color: #444444;
   opacity: 0;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
   -webkit-animation-delay: 0.01s;
   animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
 }
 
 .c4 {
@@ -3581,7 +2071,6 @@ exports[`TextInput small drop height 1`] = `
 
 <div
   class="c0 c1"
-  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -3616,12 +2105,87 @@ exports[`TextInput small drop height 1`] = `
           </div>
         </button>
       </li>
+      <div
+        class="c7"
+      />
     </ol>
   </div>
 </div>
 `;
 
-exports[`TextInput small drop height 2`] = `""`;
+exports[`TextInput small drop height 2`] = `
+".glTYPu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
+}
+
+@media only screen and (max-width:768px) {
+  .cWLJoU {
+    padding: 6px;
+  }
+}
+
+.GOEwZ {
+  font-size: 18px;
+  line-height: 24px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0px;
+  position: fixed;
+  z-index: 20;
+  outline: none;
+  background: #ffffff;
+  color: #444444;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
+  -webkit-animation-delay: 0.01s;
+  animation-delay: 0.01s;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .GOEwZ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .cblTHf {
+    width: 100%;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .jelrel {
+    width: 100%;
+  }
+}"
+`;
 
 exports[`TextInput suggestions 1`] = `
 .c1 {
@@ -3630,34 +2194,19 @@ exports[`TextInput suggestions 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
+  padding: 11px;
+  outline: none;
   background: transparent;
   color: inherit;
-  width: 100%;
-  padding: 11px;
   font-weight: 600;
   margin: 0;
   border: 1px solid rgba(0,0,0,0.33);
   border-radius: 4px;
+  width: 100%;
 }
 
-.c1:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c1:focus > circle,
-.c1:focus > ellipse,
-.c1:focus > line,
-.c1:focus > path,
-.c1:focus > polygon,
-.c1:focus > polyline,
-.c1:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c1:focus::-moz-focus-inner {
-  border: 0;
+.c1::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 .c1::-webkit-input-placeholder {
@@ -3672,18 +2221,9 @@ exports[`TextInput suggestions 1`] = `
   color: #AAAAAA;
 }
 
-.c1::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 .c1::-moz-focus-inner {
   border: none;
   outline: none;
-}
-
-.c1:-moz-placeholder,
-.c1::-moz-placeholder {
-  opacity: 1;
 }
 
 .c0 {
@@ -3712,6 +2252,7 @@ exports[`TextInput suggestions 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -3728,6 +2269,7 @@ exports[`TextInput suggestions 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -3743,6 +2285,7 @@ exports[`TextInput suggestions 2`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -3754,6 +2297,54 @@ exports[`TextInput suggestions 2`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 12px;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 0px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c5 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c5:hover {
+  background-color: rgba(221,221,221,0.4);
+  color: #000000;
 }
 
 .c1 {
@@ -3768,60 +2359,16 @@ exports[`TextInput suggestions 2`] = `
   position: fixed;
   z-index: 20;
   outline: none;
-  background-color: #FFFFFF;
+  background: #ffffff;
   color: #444444;
   opacity: 0;
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  -webkit-animation: kPQHBD 0.1s forwards;
-  animation: kPQHBD 0.1s forwards;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
   -webkit-animation-delay: 0.01s;
   animation-delay: 0.01s;
-}
-
-.c5 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c5:focus {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus > circle,
-.c5:focus > ellipse,
-.c5:focus > line,
-.c5:focus > path,
-.c5:focus > polygon,
-.c5:focus > polyline,
-.c5:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
-}
-
-.c5:focus::-moz-focus-inner {
-  border: 0;
 }
 
 .c4 {
@@ -3863,7 +2410,6 @@ exports[`TextInput suggestions 2`] = `
 
 <div
   class="c0 c1"
-  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -3898,15 +2444,39 @@ exports[`TextInput suggestions 2`] = `
           </div>
         </button>
       </li>
+      <div
+        class="c7"
+      />
     </ol>
   </div>
 </div>
 `;
 
-exports[`TextInput suggestions 3`] = `""`;
+exports[`TextInput suggestions 3`] = `
+".glTYPu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
+}
 
-exports[`TextInput textAlign end 1`] = `
-.c0 {
+@media only screen and (max-width:768px) {
+  .cWLJoU {
+    padding: 6px;
+  }
+}
+
+.GOEwZ {
   font-size: 18px;
   line-height: 24px;
   box-sizing: border-box;
@@ -3914,87 +2484,38 @@ exports[`TextInput textAlign end 1`] = `
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-.c2 {
-  box-sizing: border-box;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  -webkit-appearance: none;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  padding: 11px;
-  font-weight: 600;
-  margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 4px;
-  text-align: right;
-}
-
-.c2:focus {
+  border-radius: 0px;
+  position: fixed;
+  z-index: 20;
   outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
+  background: #ffffff;
+  color: #444444;
+  opacity: 0;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-animation: jNdvGQ 0.1s forwards;
+  animation: jNdvGQ 0.1s forwards;
+  -webkit-animation-delay: 0.01s;
+  animation-delay: 0.01s;
 }
 
-.c2:focus > circle,
-.c2:focus > ellipse,
-.c2:focus > line,
-.c2:focus > path,
-.c2:focus > polygon,
-.c2:focus > polyline,
-.c2:focus > rect {
-  outline: none;
-  box-shadow: 0 0 2px 2px #6FFFB0;
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .GOEwZ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
 }
 
-.c2:focus::-moz-focus-inner {
-  border: 0;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-moz-placeholder {
-  color: #AAAAAA;
-}
-
-.c2:-ms-input-placeholder {
-  color: #AAAAAA;
-}
-
-.c2::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-.c2::-moz-focus-inner {
-  border: none;
-  outline: none;
-}
-
-.c2:-moz-placeholder,
-.c2::-moz-placeholder {
-  opacity: 1;
-}
-
-.c1 {
-  position: relative;
-  width: 100%;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <input
-      autocomplete="off"
-      class="c2"
-      value="1234"
-    />
-  </div>
-</div>
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .cblTHf {
+    width: 100%;
+  }
+}"
 `;
