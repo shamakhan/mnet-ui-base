@@ -20,34 +20,34 @@ import { base as iconBase } from 'grommet-icons/themes/base';
 import { deepFreeze, deepMerge } from '../utils/object';
 import { parseMetricToNum } from '../utils/mixins';
 
-const brandColor = '#7D4CDB';
-const accentColors = ['#6FFFB0', '#FD6FFF', '#81FCED', '#FFCA58'];
-const neutralColors = ['#00873D', '#3D138D', '#00739D', '#A2423D'];
+const brandColor = '#EB5B5B';
+const accentColors = ['#20314f', '#519bff', '#4DFFEA', '#A4FF4D'];
+const neutralColors = ['#519bff', '#99742E', '#00739D', '#A2423D'];
 const statusColors = {
-  critical: '#FF4040',
-  error: '#FF4040',
+  critical: '#e35e59',
+  error: '#e35e59',
   warning: '#FFAA15',
-  ok: '#00C781',
+  ok: '#44b88d',
   unknown: '#CCCCCC',
   disabled: '#CCCCCC',
 };
 const darkColors = [
-  '#333333',
-  '#555555',
-  '#777777',
-  '#999999',
+  '#313340',
+  '#4b4d59',
+  '#65707d',
+  '#8691a8',
   '#999999',
   '#999999',
 ];
 const lightColors = [
-  '#F8F8F8',
-  '#F2F2F2',
-  '#EDEDED',
-  '#DADADA',
-  '#DADADA',
+  '#fbfbfb',
+  '#f6f6f8',
+  '#f5f6f8',
+  '#e1e3ef',
+  '#dfdfdf',
   '#DADADA',
 ];
-const focusColor = accentColors[0];
+const focusColor = accentColors[1];
 
 const colors = {
   active: rgba(221, 221, 221, 0.5),
@@ -361,27 +361,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       // extend: undefined,
     },
-    avatar: {
-      // extend: undefined,
-      size: {
-        xsmall: `${baseSpacing * 0.75}px`,
-        small: `${baseSpacing}px`,
-        medium: `${baseSpacing * 2}px`, // default 48
-        large: `${baseSpacing * 3}px`,
-        xlarge: `${baseSpacing * 4}px`,
-      },
-      text: {
-        size: {
-          xsmall: 'small',
-          small: 'medium',
-          medium: 'large',
-          large: 'xlarge',
-          xlarge: 'xxlarge',
-        },
-        // fontWeight: undefined,
-        // extend: undefined
-      },
-    },
     box: {
       responsiveBreakpoint: 'small', // when we switch rows to columns
       // extend: undefined,
@@ -419,7 +398,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       border: {
         // color: { dark: undefined, light: undefined }
         width: `${borderWidth}px`,
-        radius: `${baseSpacing * 0.75}px`,
+        radius: `${baseSpacing * 0.2}px`,
       },
       // color: { dark: undefined, light: undefined }
       // default: {

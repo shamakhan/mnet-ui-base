@@ -17,17 +17,13 @@ exports[`RangeSelector basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
@@ -37,14 +33,14 @@ exports[`RangeSelector basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -53,10 +49,8 @@ exports[`RangeSelector basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -79,6 +73,7 @@ exports[`RangeSelector basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -104,9 +99,10 @@ exports[`RangeSelector basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -123,16 +119,17 @@ exports[`RangeSelector basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c2 {
@@ -176,14 +173,13 @@ exports[`RangeSelector basic 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -215,14 +211,13 @@ exports[`RangeSelector basic 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -255,17 +250,13 @@ exports[`RangeSelector color 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
@@ -275,14 +266,14 @@ exports[`RangeSelector color 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -291,10 +282,8 @@ exports[`RangeSelector color 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -317,6 +306,7 @@ exports[`RangeSelector color 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -342,9 +332,10 @@ exports[`RangeSelector color 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #6FFFB0;
-  color: #444444;
+  background: #20314f;
+  color: #f8f8f8;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -361,16 +352,17 @@ exports[`RangeSelector color 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(111,255,176,0.4);
+  background-color: rgba(32,49,79,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c2 {
@@ -414,14 +406,13 @@ exports[`RangeSelector color 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -453,14 +444,13 @@ exports[`RangeSelector color 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -493,17 +483,13 @@ exports[`RangeSelector direction 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
@@ -513,14 +499,14 @@ exports[`RangeSelector direction 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -529,10 +515,8 @@ exports[`RangeSelector direction 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -555,6 +539,7 @@ exports[`RangeSelector direction 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -580,9 +565,10 @@ exports[`RangeSelector direction 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -599,16 +585,17 @@ exports[`RangeSelector direction 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c8 {
@@ -617,11 +604,8 @@ exports[`RangeSelector direction 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -637,26 +621,8 @@ exports[`RangeSelector direction 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 24px;
-  height: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -673,12 +639,13 @@ exports[`RangeSelector direction 1`] = `
   overflow: visible;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -698,21 +665,23 @@ exports[`RangeSelector direction 1`] = `
   justify-content: center;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 24px;
+  width: 100%;
   height: 100%;
 }
 
@@ -757,14 +726,13 @@ exports[`RangeSelector direction 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -796,14 +764,13 @@ exports[`RangeSelector direction 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -821,7 +788,7 @@ exports[`RangeSelector direction 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c9"
+      className="c8"
       style={
         Object {
           "flex": "20 0 0",
@@ -829,7 +796,7 @@ exports[`RangeSelector direction 1`] = `
       }
     />
     <div
-      className="c10"
+      className="c9"
       onKeyDown={[Function]}
       style={
         Object {
@@ -839,7 +806,7 @@ exports[`RangeSelector direction 1`] = `
     >
       <div
         aria-label="Lower Bounds"
-        className="c11"
+        className="c10"
         onBlur={[Function]}
         onFocus={[Function]}
         style={
@@ -847,19 +814,18 @@ exports[`RangeSelector direction 1`] = `
             "cursor": "row-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c12"
+      className="c11"
       style={
         Object {
           "cursor": "ns-resize",
@@ -868,7 +834,7 @@ exports[`RangeSelector direction 1`] = `
       }
     />
     <div
-      className="c10"
+      className="c9"
       onKeyDown={[Function]}
       style={
         Object {
@@ -878,7 +844,7 @@ exports[`RangeSelector direction 1`] = `
     >
       <div
         aria-label="Upper Bounds"
-        className="c11"
+        className="c10"
         onBlur={[Function]}
         onFocus={[Function]}
         style={
@@ -886,19 +852,18 @@ exports[`RangeSelector direction 1`] = `
             "cursor": "row-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c9"
+      className="c8"
       style={
         Object {
           "flex": "70 0 0",
@@ -920,41 +885,20 @@ exports[`RangeSelector handle keyboard 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -963,10 +907,8 @@ exports[`RangeSelector handle keyboard 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -989,6 +931,7 @@ exports[`RangeSelector handle keyboard 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1014,9 +957,10 @@ exports[`RangeSelector handle keyboard 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -1033,16 +977,34 @@ exports[`RangeSelector handle keyboard 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  cursor: pointer;
 }
 
 .c2 {
@@ -1070,11 +1032,11 @@ exports[`RangeSelector handle keyboard 1`] = `
       <div
         aria-label="Lower Bounds"
         class="c5"
-        style="cursor: col-resize; outline: none; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
         tabindex="0"
       >
         <div
-          class="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          class="c6"
         />
       </div>
     </div>
@@ -1089,11 +1051,11 @@ exports[`RangeSelector handle keyboard 1`] = `
       <div
         aria-label="Upper Bounds"
         class="c5"
-        style="cursor: col-resize; outline: none; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
         tabindex="0"
       >
         <div
-          class="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          class="c6"
         />
       </div>
     </div>
@@ -1116,41 +1078,20 @@ exports[`RangeSelector handle mouse 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -1159,10 +1100,8 @@ exports[`RangeSelector handle mouse 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1185,6 +1124,7 @@ exports[`RangeSelector handle mouse 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1210,9 +1150,10 @@ exports[`RangeSelector handle mouse 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -1229,16 +1170,34 @@ exports[`RangeSelector handle mouse 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  cursor: pointer;
 }
 
 .c2 {
@@ -1266,11 +1225,11 @@ exports[`RangeSelector handle mouse 1`] = `
       <div
         aria-label="Lower Bounds"
         class="c5"
-        style="cursor: col-resize; outline: none; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
         tabindex="0"
       >
         <div
-          class="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          class="c6"
         />
       </div>
     </div>
@@ -1285,11 +1244,11 @@ exports[`RangeSelector handle mouse 1`] = `
       <div
         aria-label="Upper Bounds"
         class="c5"
-        style="cursor: col-resize; outline: none; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
         tabindex="0"
       >
         <div
-          class="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          class="c6"
         />
       </div>
     </div>
@@ -1318,36 +1277,30 @@ exports[`RangeSelector invert 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
-.c3 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(218,218,218,0.4);
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -1356,10 +1309,8 @@ exports[`RangeSelector invert 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1382,6 +1333,7 @@ exports[`RangeSelector invert 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1407,9 +1359,10 @@ exports[`RangeSelector invert 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -1420,38 +1373,42 @@ exports[`RangeSelector invert 1`] = `
   border-radius: 100%;
 }
 
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 24px;
-  width: 100%;
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background-color: rgba(225,227,239,0.4);
+  color: #444444;
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
 }
 
 .c2 {
@@ -1495,14 +1452,13 @@ exports[`RangeSelector invert 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -1534,14 +1490,13 @@ exports[`RangeSelector invert 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -1585,14 +1540,13 @@ exports[`RangeSelector invert 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -1624,14 +1578,13 @@ exports[`RangeSelector invert 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -1664,17 +1617,13 @@ exports[`RangeSelector max 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
@@ -1684,14 +1633,14 @@ exports[`RangeSelector max 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -1700,10 +1649,8 @@ exports[`RangeSelector max 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1726,6 +1673,7 @@ exports[`RangeSelector max 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1751,9 +1699,10 @@ exports[`RangeSelector max 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -1770,16 +1719,17 @@ exports[`RangeSelector max 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c2 {
@@ -1823,14 +1773,13 @@ exports[`RangeSelector max 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -1862,14 +1811,13 @@ exports[`RangeSelector max 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -1902,17 +1850,13 @@ exports[`RangeSelector min 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
@@ -1922,14 +1866,14 @@ exports[`RangeSelector min 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -1938,10 +1882,8 @@ exports[`RangeSelector min 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1964,6 +1906,7 @@ exports[`RangeSelector min 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1989,9 +1932,10 @@ exports[`RangeSelector min 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -2008,16 +1952,17 @@ exports[`RangeSelector min 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c2 {
@@ -2061,14 +2006,13 @@ exports[`RangeSelector min 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2100,14 +2044,13 @@ exports[`RangeSelector min 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2140,17 +2083,13 @@ exports[`RangeSelector opacity 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
@@ -2160,14 +2099,14 @@ exports[`RangeSelector opacity 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -2176,10 +2115,8 @@ exports[`RangeSelector opacity 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2202,6 +2139,7 @@ exports[`RangeSelector opacity 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2227,9 +2165,10 @@ exports[`RangeSelector opacity 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -2240,39 +2179,41 @@ exports[`RangeSelector opacity 1`] = `
   border-radius: 100%;
 }
 
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  background-color: rgba(125,76,219,0.1);
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 24px;
-  width: 100%;
-}
-
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background-color: rgba(235,91,91,0.1);
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
 }
 
 .c9 {
@@ -2281,16 +2222,17 @@ exports[`RangeSelector opacity 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.8);
-  color: #f8f8f8;
+  background-color: rgba(235,91,91,0.8);
+  color: #444444;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c2 {
@@ -2334,14 +2276,13 @@ exports[`RangeSelector opacity 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2373,14 +2314,13 @@ exports[`RangeSelector opacity 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2424,14 +2364,13 @@ exports[`RangeSelector opacity 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2463,14 +2402,13 @@ exports[`RangeSelector opacity 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2514,14 +2452,13 @@ exports[`RangeSelector opacity 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2553,14 +2490,13 @@ exports[`RangeSelector opacity 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2593,35 +2529,14 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 24px;
-  width: 100%;
-  border-radius: 6px;
 }
 
 .c4 {
@@ -2630,10 +2545,8 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2656,6 +2569,7 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2681,9 +2595,10 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -2694,22 +2609,40 @@ exports[`RangeSelector round 1`] = `
   border-radius: 100%;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 6px;
+}
+
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 6px;
 }
 
@@ -2719,14 +2652,14 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 12px;
 }
 
@@ -2736,16 +2669,17 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 12px;
 }
 
@@ -2755,14 +2689,14 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 24px;
 }
 
@@ -2772,16 +2706,17 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 24px;
 }
 
@@ -2791,14 +2726,14 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 48px;
 }
 
@@ -2808,16 +2743,17 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 48px;
 }
 
@@ -2827,14 +2763,14 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 100%;
 }
 
@@ -2844,16 +2780,17 @@ exports[`RangeSelector round 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
   border-radius: 100%;
 }
 
@@ -2946,14 +2883,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -2985,14 +2921,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3036,14 +2971,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3075,14 +3009,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3126,14 +3059,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3165,14 +3097,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3216,14 +3147,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3255,14 +3185,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3306,14 +3235,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3345,14 +3273,13 @@ exports[`RangeSelector round 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3363,201 +3290,6 @@ exports[`RangeSelector round 1`] = `
           "flex": "70 0 0",
         }
       }
-    />
-  </div>
-</div>
-`;
-
-exports[`RangeSelector should not have accessibility violations 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 24px;
-  width: 100%;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  overflow: visible;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  height: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 12px;
-  width: 12px;
-  border-radius: 100%;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 24px;
-  width: 100%;
-}
-
-.c2 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-<div
-  class="c0"
->
-  <div
-    class="c1 c2"
-    tabindex="-1"
-  >
-    <div
-      class="c3"
-      style="flex: 20 0 0px;"
-    />
-    <div
-      class="c4"
-      style="flex: 0 0 1px;"
-    >
-      <div
-        aria-label="Lower Bounds"
-        class="c5"
-        style="cursor: col-resize; outline: none; min-width: 12px; min-height: 12px; z-index: 10;"
-        tabindex="0"
-      >
-        <div
-          class="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
-        />
-      </div>
-    </div>
-    <div
-      class="c7"
-      style="flex: 11 0 0px; cursor: ew-resize;"
-    />
-    <div
-      class="c4"
-      style="flex: 0 0 1px;"
-    >
-      <div
-        aria-label="Upper Bounds"
-        class="c5"
-        style="cursor: col-resize; outline: none; min-width: 12px; min-height: 12px; z-index: 10;"
-        tabindex="0"
-      >
-        <div
-          class="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
-        />
-      </div>
-    </div>
-    <div
-      class="c3"
-      style="flex: 70 0 0px;"
     />
   </div>
 </div>
@@ -3580,17 +3312,13 @@ exports[`RangeSelector size 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 100%;
   height: 100%;
 }
 
@@ -3600,14 +3328,14 @@ exports[`RangeSelector size 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 3px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -3616,10 +3344,8 @@ exports[`RangeSelector size 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3642,6 +3368,7 @@ exports[`RangeSelector size 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3667,9 +3394,10 @@ exports[`RangeSelector size 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -3686,224 +3414,17 @@ exports[`RangeSelector size 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 3px;
-  width: 100%;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 6px;
-  width: 100%;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 6px;
-  width: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 12px;
-  width: 100%;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 12px;
-  width: 100%;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 24px;
-  width: 100%;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 24px;
-  width: 100%;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 48px;
-  width: 100%;
-}
-
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 48px;
-  width: 100%;
-}
-
-.c16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 96px;
-  width: 100%;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 96px;
-  width: 100%;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-}
-
-.c19 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  background-color: rgba(125,76,219,0.4);
-  color: #444444;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
+  height: 100%;
 }
 
 .c2 {
@@ -3947,14 +3468,13 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -3986,14 +3506,13 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
@@ -4011,7 +3530,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c8"
+      className="c3"
       style={
         Object {
           "flex": "20 0 0",
@@ -4037,19 +3556,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c9"
+      className="c7"
       style={
         Object {
           "cursor": "ew-resize",
@@ -4076,19 +3594,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c8"
+      className="c3"
       style={
         Object {
           "flex": "70 0 0",
@@ -4101,7 +3618,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c10"
+      className="c3"
       style={
         Object {
           "flex": "20 0 0",
@@ -4127,19 +3644,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c11"
+      className="c7"
       style={
         Object {
           "cursor": "ew-resize",
@@ -4166,19 +3682,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c10"
+      className="c3"
       style={
         Object {
           "flex": "70 0 0",
@@ -4191,7 +3706,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c12"
+      className="c3"
       style={
         Object {
           "flex": "20 0 0",
@@ -4217,19 +3732,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c13"
+      className="c7"
       style={
         Object {
           "cursor": "ew-resize",
@@ -4256,19 +3770,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c12"
+      className="c3"
       style={
         Object {
           "flex": "70 0 0",
@@ -4281,7 +3794,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c14"
+      className="c3"
       style={
         Object {
           "flex": "20 0 0",
@@ -4307,19 +3820,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c15"
+      className="c7"
       style={
         Object {
           "cursor": "ew-resize",
@@ -4346,19 +3858,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c14"
+      className="c3"
       style={
         Object {
           "flex": "70 0 0",
@@ -4371,7 +3882,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c16"
+      className="c3"
       style={
         Object {
           "flex": "20 0 0",
@@ -4397,19 +3908,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c17"
+      className="c7"
       style={
         Object {
           "cursor": "ew-resize",
@@ -4436,19 +3946,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c16"
+      className="c3"
       style={
         Object {
           "flex": "70 0 0",
@@ -4461,7 +3970,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c18"
+      className="c3"
       style={
         Object {
           "flex": "20 0 0",
@@ -4487,19 +3996,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c19"
+      className="c7"
       style={
         Object {
           "cursor": "ew-resize",
@@ -4526,19 +4034,18 @@ exports[`RangeSelector size 1`] = `
             "cursor": "col-resize",
             "minHeight": 12,
             "minWidth": 12,
-            "outline": "none",
             "zIndex": 10,
           }
         }
         tabIndex={0}
       >
         <div
-          className="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          className="c6"
         />
       </div>
     </div>
     <div
-      className="c18"
+      className="c3"
       style={
         Object {
           "flex": "70 0 0",
@@ -4560,41 +4067,20 @@ exports[`RangeSelector step renders correct values 1`] = `
   -webkit-font-smoothing: antialiased;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
 }
 
 .c4 {
@@ -4603,10 +4089,8 @@ exports[`RangeSelector step renders correct values 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4629,6 +4113,7 @@ exports[`RangeSelector step renders correct values 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4654,9 +4139,10 @@ exports[`RangeSelector step renders correct values 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: #7D4CDB;
-  color: #f8f8f8;
+  background: #EB5B5B;
+  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -4673,16 +4159,34 @@ exports[`RangeSelector step renders correct values 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
+  outline: none;
   max-width: 100%;
-  background-color: rgba(125,76,219,0.4);
+  background-color: rgba(235,91,91,0.4);
+  color: #444444;
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 100%;
+  cursor: pointer;
 }
 
 .c2 {
@@ -4710,11 +4214,11 @@ exports[`RangeSelector step renders correct values 1`] = `
       <div
         aria-label="Lower Bounds"
         class="c5"
-        style="cursor: col-resize; outline: none; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
         tabindex="0"
       >
         <div
-          class="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          class="c6"
         />
       </div>
     </div>
@@ -4729,11 +4233,11 @@ exports[`RangeSelector step renders correct values 1`] = `
       <div
         aria-label="Upper Bounds"
         class="c5"
-        style="cursor: col-resize; outline: none; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
         tabindex="0"
       >
         <div
-          class="c6 EdgeControl__StyledBox-sc-1xo2yt9-0"
+          class="c6"
         />
       </div>
     </div>
