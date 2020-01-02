@@ -33,14 +33,10 @@ import {
   TextInput,
   Video,
 } from 'grommet';
+import { mnet, dark } from 'grommet/themes';
 import { FormNext } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
 import { generate } from 'grommet/themes/base';
 import { deepMerge } from 'grommet/utils';
-import { hpe } from 'grommet-theme-hpe';
-import { aruba } from 'grommet-theme-aruba';
-import { hp } from 'grommet-theme-hp';
-import { dxc } from 'grommet-theme-dxc';
 
 const Node = ({ id, ...rest }) => (
   <Box
@@ -65,22 +61,19 @@ const connection = (fromTarget, toTarget, { color, ...rest } = {}) => ({
 });
 
 const themes = {
-  grommet,
-  hpe,
-  aruba,
-  hp,
-  dxc,
+  dark,
+  mnet,
 };
 
 const Components = () => {
-  const [baseSize, setBaseSize] = useState(24);
+  const [baseSize, setBaseSize] = useState(16);
   const [checkBox, setCheckBox] = useState(true);
   const [textInput, setTextInput] = useState('');
   const [maskedInput, setMaskedInput] = useState('');
   const [radioButton, setRadioButton] = useState('RadioButton 1');
   const [rangeSelector, setRangeSelector] = useState([1, 2]);
   const [themeMode, setThemeMode] = useState();
-  const [themeName, setThemeName] = useState('grommet');
+  const [themeName, setThemeName] = useState('mnet');
   const [background, setBackground] = useState(undefined);
   const [tabIndex, setTabIndex] = useState(0);
 
@@ -313,7 +306,7 @@ const Components = () => {
 
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Grommet theme={grommet} style={{ flex: '0 0 auto' }}>
+      <Grommet theme={mnet} style={{ flex: '0 0 auto' }}>
         <Box
           direction="row-responsive"
           gap="medium"
@@ -325,7 +318,7 @@ const Components = () => {
             <Select
               plain
               size="small"
-              options={Object.keys(themes)}
+              options={['mnet', 'dark']}
               value={themeName}
               onChange={event => setThemeName(event.option)}
             />
