@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { css } from 'styled-components';
 
-import { Box, Grommet, CheckBox } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, MnetUIBase, CheckBox } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 const checkboxCheckStyle = css`
   background-color: #2196f3;
@@ -62,7 +62,7 @@ export const CustomToggle = props => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Grommet theme={deepMerge(grommet, customToggleTheme)}>
+    <MnetUIBase theme={deepMerge(mnet, customToggleTheme)}>
       <Box align="center" pad="large">
         <CheckBox
           {...props}
@@ -72,7 +72,7 @@ export const CustomToggle = props => {
           toggle
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { MnetUIBase, Box, Text } from 'mnet-ui-base';
+import { mnet } from '../../../themes';
 
 export const BackgroundBox = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="small" gap="small" align="start">
       <Box
         pad="small"
@@ -78,7 +78,7 @@ export const BackgroundBox = () => (
         </Box>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 BackgroundBox.storyName = 'Background';

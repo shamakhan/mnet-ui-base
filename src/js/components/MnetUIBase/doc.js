@@ -3,17 +3,17 @@ import { describe, PropTypes } from 'react-desc';
 import { backgroundDoc } from '../../utils/prop-types';
 import { getAvailableAtBadge } from '../../utils/mixins';
 
-export const doc = Grommet => {
-  const DocumentedGrommet = describe(Grommet)
-    .availableAt(getAvailableAtBadge('Grommet', 'Utilities'))
-    .description('The top level Grommet container.')
+export const doc = MnetUIBase => {
+  const DocumentedMnetUIBase = describe(MnetUIBase)
+    .availableAt(getAvailableAtBadge('MnetUIBase', 'Utilities'))
+    .description('The top level MnetUIBase container.')
     .usage(
-      `import { Grommet } from 'grommet';
-<Grommet>...</Grommet>`,
+      `import { MnetUIBase } from 'mnet-ui-base';
+<MnetUIBase>...</MnetUIBase>`,
     )
     .intrinsicElement('div');
 
-  DocumentedGrommet.propTypes = {
+  DocumentedMnetUIBase.propTypes = {
     background: backgroundDoc,
     dir: PropTypes.oneOf(['rtl']).description(
       'Layout direction for right to left contexts',
@@ -23,7 +23,7 @@ export const doc = Grommet => {
       .defaultValue(false),
     plain: PropTypes.bool
       .description(
-        `Whether or not Grommet should apply a global font-family, font-size,
+        `Whether or not MnetUIBase should apply a global font-family, font-size,
         and line-height.`,
       )
       .defaultValue(false),
@@ -31,7 +31,7 @@ export const doc = Grommet => {
       .description('Whether to expose the css variables.')
       .defaultValue(false),
     theme: PropTypes.object.description(
-      'Custom styles for Grommet app component.',
+      'Custom styles for MnetUIBase app component.',
     ),
     themeMode: PropTypes.oneOf(['dark', 'light']).description(
       `Dark vs. light theme variation. Default is unspecified and left to
@@ -49,12 +49,12 @@ export const doc = Grommet => {
     ),
   };
 
-  return DocumentedGrommet;
+  return DocumentedMnetUIBase;
 };
 
 export const themeDoc = {
   'grommet.extend': {
-    description: 'Any additional style for Grommet.',
+    description: 'Any additional style for MnetUIBase.',
     type: 'string | (props) => {}',
     defaultValue: undefined,
   },

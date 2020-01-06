@@ -1,16 +1,22 @@
 import React from 'react';
 
-import { Grommet, Box, Grid, Heading, ResponsiveContext } from 'grommet';
+import {
+  MnetUIBase,
+  Box,
+  Grid,
+  Heading,
+  ResponsiveContext,
+} from 'mnet-ui-base';
 
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 // Two responsive grids
 //    - First one with a known number of elements
 //    - Second one with an unknown number of elements
 
 // set custom breakpoints so we can see the changes
-const customBreakpoints = deepMerge(grommet, {
+const customBreakpoints = deepMerge(mnet, {
   global: {
     breakpoints: {
       small: {
@@ -146,7 +152,7 @@ const Responsive = ({
 );
 
 export const ResponsiveGrid = () => (
-  <Grommet theme={customBreakpoints}>
+  <MnetUIBase theme={customBreakpoints}>
     <Box>
       <Heading level={2}>Resize me.</Heading>
       <Responsive
@@ -185,7 +191,7 @@ export const ResponsiveGrid = () => (
         {listAnimalsBoxes}
       </Responsive>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ResponsiveGrid.storyName = 'Responsive grid';

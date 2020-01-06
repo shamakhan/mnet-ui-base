@@ -7,7 +7,7 @@ import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Text } from '..';
 
 test('should have no accessibility violations', async () => {
@@ -23,9 +23,9 @@ test('should have no accessibility violations', async () => {
 
 test('renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text>text</Text>
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -46,7 +46,7 @@ test('accepts ref', () => {
 
 test('renders size', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text size="xsmall" />
       <Text size="small" />
       <Text size="medium" />
@@ -58,7 +58,7 @@ test('renders size', () => {
       <Text size="4xl" />
       <Text size="5xl" />
       <Text size="6xl" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -66,11 +66,11 @@ test('renders size', () => {
 
 test('renders textAlign', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text textAlign="start" />
       <Text textAlign="center" />
       <Text textAlign="end" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -78,7 +78,7 @@ test('renders textAlign', () => {
 
 test('renders margin', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text margin="small" />
       <Text margin="medium" />
       <Text margin="large" />
@@ -89,7 +89,7 @@ test('renders margin', () => {
       <Text margin={{ top: 'small' }} />
       <Text margin={{ left: 'small' }} />
       <Text margin={{ right: 'small' }} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -99,10 +99,10 @@ const LONG = 'a b c d e f g h i j k l m n o p q r s t u v w x y z';
 
 test('renders truncate', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text truncate={false}>{LONG}</Text>
       <Text truncate>{LONG}</Text>
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -110,9 +110,9 @@ test('renders truncate', () => {
 
 test('renders color', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text color="status-critical" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -120,9 +120,9 @@ test('renders color', () => {
 
 test('renders tag', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text as="div" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -130,24 +130,24 @@ test('renders tag', () => {
 
 test('proxies tag', () => {
   const tagComponent = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text tag="div" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const asComponent = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text as="div" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   expect(tagComponent.toJSON()).toEqual(asComponent.toJSON());
 });
 
 test('renders weight', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text weight="normal" />
       <Text weight="bold" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 
 import { act, cleanup, fireEvent, render } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Image } from '..';
 
 const opacityTypes = ['weak', 'medium', 'strong', '0.3', true, false];
@@ -28,9 +28,9 @@ test('image should have no violations', async () => {
 
 test('Image renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Image src={SRC} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -48,10 +48,10 @@ test('Image renders with aria-label', () => {
 
 test('Image fit renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Image fit="cover" src={SRC} />
       <Image fit="contain" src={SRC} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -60,9 +60,9 @@ test('Image fit renders', () => {
 opacityTypes.forEach(opacity => {
   test(`Image opacity of ${opacity} renders`, () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Image opacity={opacity} src={SRC} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -71,12 +71,12 @@ opacityTypes.forEach(opacity => {
 
 test('Image fillProp renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Image fill src={SRC} />
       <Image fill={false} src={SRC} />
       <Image fill="horizontal" src={SRC} />
       <Image fill="vertical" src={SRC} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Grid } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Grid } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const GridAreasAlternative = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Grid
       rows={['xxsmall', 'medium', 'xsmall']}
       columns={['1/4', '3/4']}
@@ -31,7 +31,7 @@ export const GridAreasAlternative = () => (
         Footer
       </Box>
     </Grid>
-  </Grommet>
+  </MnetUIBase>
 );
 
 GridAreasAlternative.storyName = 'Areas prop alternatives';

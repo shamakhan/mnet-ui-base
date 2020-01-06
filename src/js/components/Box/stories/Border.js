@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { MnetUIBase, Box, Text } from 'mnet-ui-base';
+import { mnet } from '../../../themes';
 
 export const BorderBox = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="small" gap="small" align="start">
       <Box pad="small" border>
         true
@@ -79,7 +79,7 @@ export const BorderBox = () => (
         ))}
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 BorderBox.storyName = 'Border';

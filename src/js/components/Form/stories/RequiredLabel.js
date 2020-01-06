@@ -5,12 +5,13 @@ import {
   Button,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   Text,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+} from 'mnet-ui-base';
+
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 const customTheme = deepMerge(grommet, {
   formField: {
@@ -21,7 +22,7 @@ const customTheme = deepMerge(grommet, {
 });
 
 export const RequiredLabel = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Box align="center" pad="large">
       <Form>
         <FormField
@@ -49,7 +50,7 @@ export const RequiredLabel = () => (
         </Text>
       </Form>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 RequiredLabel.storyName = 'Required label';

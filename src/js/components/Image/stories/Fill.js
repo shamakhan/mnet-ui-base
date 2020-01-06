@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Image, Anchor } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Image, Anchor } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Fill = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="start" gap="small">
       <Box height="small" width="small" border>
         <Anchor href="#">
@@ -12,7 +12,7 @@ export const Fill = () => (
         </Anchor>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

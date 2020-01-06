@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { MnetUIBase, Box, Text } from 'mnet-ui-base';
+import { mnet } from '../../../themes';
 
 export const FixedSizesBox = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="small" gap="small">
       <Box
         width="small"
@@ -43,7 +43,7 @@ export const FixedSizesBox = () => (
         Large
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 FixedSizesBox.storyName = 'Fixed sizes';

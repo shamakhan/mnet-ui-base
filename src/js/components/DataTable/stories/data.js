@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Meter, Text, Tip } from 'grommet';
+import { Box, Meter, Text, Tip } from 'mnet-ui-base';
 
 const amountFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',

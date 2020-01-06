@@ -12,13 +12,13 @@ import {
   Accordion,
   AccordionPanel,
   Box,
-  Grommet,
+  MnetUIBase,
   Heading,
   Spinner,
   Text,
   ThemeContext,
-} from 'grommet';
-import { grommet, ThemeType } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet, ThemeType } from 'mnet-ui-base/themes';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
@@ -73,7 +73,7 @@ const RichAccordion = () => {
   const [highlightLoaded, setHighlightLoaded] = React.useState(false);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill direction="row">
         <Box basis="medium" border="all">
           <Box
@@ -213,7 +213,7 @@ const RichAccordion = () => {
           </ThemeContext.Extend>
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

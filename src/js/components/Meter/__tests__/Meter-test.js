@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Meter } from '..';
 
 const VALUES = [{ value: 20, label: 'twenty', onHover: () => {} }];
@@ -10,9 +10,9 @@ const VALUES = [{ value: 20, label: 'twenty', onHover: () => {} }];
 describe('Meter', () => {
   test('default', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -30,9 +30,9 @@ describe('Meter', () => {
 
   test('basic', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter values={VALUES} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -40,7 +40,7 @@ describe('Meter', () => {
 
   test('many values', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter
           values={[
             { value: 5 },
@@ -53,7 +53,7 @@ describe('Meter', () => {
             { value: 5 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -61,10 +61,10 @@ describe('Meter', () => {
 
   test('type', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter type="bar" values={VALUES} />
         <Meter type="circle" values={VALUES} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -72,7 +72,7 @@ describe('Meter', () => {
 
   test('size', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter size="xsmall" values={VALUES} />
         <Meter size="small" values={VALUES} />
         <Meter size="medium" values={VALUES} />
@@ -85,7 +85,7 @@ describe('Meter', () => {
         <Meter type="circle" size="large" values={VALUES} />
         <Meter type="circle" size="xlarge" values={VALUES} />
         <Meter type="circle" size="55px" values={VALUES} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -93,7 +93,7 @@ describe('Meter', () => {
 
   test('thickness', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter thickness="xsmall" values={VALUES} />
         <Meter thickness="small" values={VALUES} />
         <Meter thickness="medium" values={VALUES} />
@@ -106,7 +106,7 @@ describe('Meter', () => {
         <Meter type="circle" thickness="large" values={VALUES} />
         <Meter type="circle" thickness="xlarge" values={VALUES} />
         <Meter type="circle" thickness="55px" values={VALUES} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -114,10 +114,10 @@ describe('Meter', () => {
 
   test('round', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter round values={VALUES} />
         <Meter type="circle" round values={VALUES} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -125,7 +125,7 @@ describe('Meter', () => {
 
   test('background', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter background="light-3" values={VALUES} />
         <Meter
           background={{ color: 'light-3', opacity: 'medium' }}
@@ -141,7 +141,7 @@ describe('Meter', () => {
           background={{ color: 'light-3', opacity: 0.2 }}
           values={VALUES}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

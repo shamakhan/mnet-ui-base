@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Box, Drop, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Drop, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 import { deepMerge } from 'grommet/utils';
 
-const lazyTheme = deepMerge(grommet, {
+const lazyTheme = deepMerge(mnet, {
   global: {
     drop: {
       background: 'rgba(255, 255, 255, 0.7)',
@@ -30,7 +30,7 @@ const LazyDrop = () => {
   }, []);
 
   return (
-    <Grommet theme={lazyTheme} full>
+    <MnetUIBase theme={lazyTheme} full>
       <Box fill justify="between" pad="large" gap="small">
         <Box direction="row" justify="between" pad={{ horizontal: 'small' }}>
           <Box
@@ -116,7 +116,7 @@ const LazyDrop = () => {
           )}
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

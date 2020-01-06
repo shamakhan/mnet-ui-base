@@ -1,14 +1,14 @@
 import React from 'react';
-import { grommet } from 'grommet/themes';
+import { mnet } from 'mnet-ui-base/themes';
 
-import { Grommet, Box, InfiniteScroll, Text } from 'grommet';
+import { MnetUIBase, Box, InfiniteScroll, Text } from 'mnet-ui-base';
 
 const allItems = Array(240)
   .fill()
   .map((_, i) => `item ${i + 1}`);
 
 export const Replace = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <InfiniteScroll items={allItems} replace>
       {item => (
         <Box key={item} pad="medium" border={{ side: 'bottom' }} align="center">
@@ -16,7 +16,7 @@ export const Replace = () => (
         </Box>
       )}
     </InfiniteScroll>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Replace.parameters = {

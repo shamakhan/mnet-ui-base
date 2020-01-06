@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet } from 'grommet';
+import { mnet, Box, Button, MnetUIBase } from 'mnet-ui-base';
 
 export const Basic = props => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="medium">
       <Button label="Default" onClick={() => {}} {...props} />
     </Box>
@@ -25,7 +25,7 @@ export const Basic = props => (
         {...props}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

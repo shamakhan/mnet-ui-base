@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Accordion, AccordionPanel, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Accordion, AccordionPanel, Box, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const DarkNoAnimation = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box background="dark-2">
       <Accordion animate={false}>
         <AccordionPanel label="Panel 1">
@@ -26,7 +26,7 @@ export const DarkNoAnimation = () => (
         </AccordionPanel>
       </Accordion>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 DarkNoAnimation.storyName = 'Dark no animation';

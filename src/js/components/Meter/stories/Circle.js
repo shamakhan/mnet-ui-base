@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import { Grommet, Box, Meter } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Meter } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Circle = () => {
   const [value, setValue] = useState(20);
@@ -20,7 +20,7 @@ export const Circle = () => {
   );
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Meter
           type="circle"
@@ -28,7 +28,7 @@ export const Circle = () => {
           values={[{ value, color: value > 50 ? 'accent-2' : 'accent-1' }]}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

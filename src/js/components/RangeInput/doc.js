@@ -8,7 +8,7 @@ export const doc = RangeInput => {
     .availableAt(getAvailableAtBadge('RangeInput', 'Input'))
     .description('A slider control to input a value within a fixed range.')
     .usage(
-      `import { RangeInput } from 'grommet';
+      `import { RangeInput } from 'mnet-ui-base';
 <RangeInput />`,
     )
     .intrinsicElement('input');

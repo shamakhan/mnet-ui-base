@@ -2,14 +2,14 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Heading } from '..';
 
 test('Heading renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -30,7 +30,7 @@ test('Heading accepts ref', () => {
 
 test('Heading level renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading level={1} />
       <Heading level={2} />
       <Heading level={3} />
@@ -39,7 +39,7 @@ test('Heading level renders', () => {
       <Heading level="2" />
       <Heading level="3" />
       <Heading level="4" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -47,7 +47,7 @@ test('Heading level renders', () => {
 
 test('Heading size renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading level={1} size="small" />
       <Heading level={1} size="medium" />
       <Heading level={1} size="large" />
@@ -65,7 +65,7 @@ test('Heading size renders', () => {
       <Heading level={4} size="large" />
       <Heading level={4} size="xlarge" />
       <Heading level={1} size="77px" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -73,11 +73,11 @@ test('Heading size renders', () => {
 
 test('Heading textAlign renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading textAlign="start" />
       <Heading textAlign="center" />
       <Heading textAlign="end" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -85,7 +85,7 @@ test('Heading textAlign renders', () => {
 
 test('Heading margin renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading margin="small" />
       <Heading margin="medium" />
       <Heading margin="large" />
@@ -94,7 +94,7 @@ test('Heading margin renders', () => {
       <Heading margin={{ top: 'small' }} />
       <Heading margin={{ bottom: 'none' }} />
       <Heading margin={{ top: 'none' }} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -102,9 +102,9 @@ test('Heading margin renders', () => {
 
 test('Heading color renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading color="brand" />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -114,10 +114,10 @@ const LONG = 'a b c d e f g h i j k l m n o p q r s t u v w x y z';
 
 test('Heading truncate renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading truncate={false}>{LONG}</Heading>
       <Heading truncate>{LONG}</Heading>
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -125,10 +125,10 @@ test('Heading truncate renders', () => {
 
 test('responsive renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading responsive />
       <Heading responsive={false} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -160,12 +160,12 @@ test('Theme based font family renders', () => {
     },
   };
   const component = renderer.create(
-    <Grommet theme={customTheme}>
+    <MnetUIBase theme={customTheme}>
       <Heading level={1} />
       <Heading level={2} />
       <Heading level={3} />
       <Heading level={4} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -195,12 +195,12 @@ test('Theme based font weight renders', () => {
     },
   };
   const component = renderer.create(
-    <Grommet theme={customTheme}>
+    <MnetUIBase theme={customTheme}>
       <Heading level={1} />
       <Heading level={2} />
       <Heading level={3} />
       <Heading level={4} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

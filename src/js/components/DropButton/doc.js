@@ -14,7 +14,7 @@ export const doc = DropButton => {
       `,
     )
     .usage(
-      `import { DropButton } from 'grommet';
+      `import { DropButton } from 'mnet-ui-base';
 <DropButton dropContent={...} />`,
     )
     .intrinsicElement('button');

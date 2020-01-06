@@ -8,7 +8,7 @@ import { cleanup, fireEvent, render, waitFor } from '@testing-library/react';
 
 import { expectPortal } from '../../../utils/portal';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Drop } from '..';
 
 const customTheme = {
@@ -50,10 +50,10 @@ const TestInput = ({
     );
   }
   return (
-    <Grommet theme={theme} containerTarget={containerTarget}>
+    <MnetUIBase theme={theme} containerTarget={containerTarget}>
       <input ref={inputRef} {...inputProps} aria-label="test" />
       {drop}
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

@@ -5,13 +5,13 @@ import { getAvailableAtBadge } from '../../utils/mixins';
 export const doc = Markdown => {
   const DocumentedMarkdown = describe(Markdown)
     .availableAt(getAvailableAtBadge('Markdown', 'Type'))
-    .description('Markdown formatting using Grommet components.')
+    .description('Markdown formatting using MnetUIBase components.')
     .details(
       `Grommet uses 'markdown-to-jsx' in Markdown component,
       you can see all the options in the documentation.`,
     )
     .usage(
-      `import { Markdown } from 'grommet';
+      `import { Markdown } from 'mnet-ui-base';
       <Markdown>{content}</Markdown>`,
     )
     .intrinsicElement('div');

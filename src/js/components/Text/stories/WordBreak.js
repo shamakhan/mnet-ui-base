@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Box, Grommet, Text, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Text, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const wordBreakValues = ['normal', 'break-all', 'keep-all', 'break-word'];
 
 /* eslint-disable max-len */
 export const WordBreak = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     {wordBreakValues.map(value => (
       <Box key={value} margin="small" width="medium">
         <Heading level={4}>{`word-break: ${value};`}</Heading>
@@ -18,7 +18,7 @@ export const WordBreak = () => (
         </Text>
       </Box>
     ))}
-  </Grommet>
+  </MnetUIBase>
 );
 /* eslint-enable max-len */
 WordBreak.storyName = 'Word break';

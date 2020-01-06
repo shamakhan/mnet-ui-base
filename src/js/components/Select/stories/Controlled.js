@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Select, Button } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Controlled = () => {
   const options = ['one', 'two'];
@@ -9,7 +9,7 @@ export const Controlled = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={theme || mnet}>
       <Box fill align="center" justify="start" pad="large" gap="small">
         <Button onClick={() => setOpen(!open)} label="Control the select" />
         <Select
@@ -22,7 +22,7 @@ export const Controlled = () => {
           onChange={({ option }) => setValue(option)}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

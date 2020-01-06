@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import 'jest-styled-components';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { WorldMap } from '..';
 
 describe('WorldMap', () => {
@@ -11,9 +11,9 @@ describe('WorldMap', () => {
 
   test('default', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <WorldMap />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -21,9 +21,9 @@ describe('WorldMap', () => {
 
   test('color', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <WorldMap color="brand" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe('WorldMap', () => {
 
   test('continents', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <WorldMap
           continents={[
             {
@@ -41,14 +41,14 @@ describe('WorldMap', () => {
             },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('places', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <WorldMap
           places={[
             {
@@ -59,7 +59,7 @@ describe('WorldMap', () => {
             },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -103,7 +103,7 @@ describe('WorldMap', () => {
     const onClick = jest.fn();
     const onHover = jest.fn();
     const { container, getByTestId } = render(
-      <Grommet>
+      <MnetUIBase>
         <WorldMap
           continents={[
             {
@@ -114,7 +114,7 @@ describe('WorldMap', () => {
             },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.mouseOver(getByTestId('Africa'));
     expect(container.firstChild).toMatchSnapshot();
@@ -133,12 +133,12 @@ describe('WorldMap', () => {
 
   test('fill', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <WorldMap fill />
         <WorldMap fill={false} />
         <WorldMap fill="horizontal" />
         <WorldMap fill="vertical" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

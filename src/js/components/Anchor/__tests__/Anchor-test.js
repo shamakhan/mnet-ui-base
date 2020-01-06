@@ -2,35 +2,20 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { cleanup, fireEvent, render } from '@testing-library/react';
 import 'jest-styled-components';
-import 'jest-axe/extend-expect';
-import 'regenerator-runtime/runtime';
 
-import { axe } from 'jest-axe';
 import { findAllByType } from '../../../utils';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Anchor } from '..';
 
 describe('Anchor', () => {
   afterEach(cleanup);
 
-  test('should have no accessibility violations', async () => {
-    const { container } = render(
-      <Grommet>
-        <Anchor>Link</Anchor>
-      </Grommet>,
-    );
-
-    const results = await axe(container);
-    expect(results).toHaveNoViolations();
-    expect(container).toMatchSnapshot();
-  });
-
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Anchor />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -38,93 +23,77 @@ describe('Anchor', () => {
 
   test('renders with children', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Anchor href="#">children</Anchor>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test('warns about invalid label render', () => {
-    console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
-    const { container } = render(
-      <Grommet>
+    const component = renderer.create(
+      <MnetUIBase>
         <Anchor href="#" label="Test">
           invalid
         </Anchor>
-      </Grommet>,
+      </MnetUIBase>,
     );
-    expect(container.firstChild).toMatchSnapshot();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
     expect(warnSpy).toHaveBeenCalledWith(
       'Anchor should not have children if icon or label is provided',
     );
 
     warnSpy.mockReset();
     warnSpy.mockRestore();
-    console.warn.mockReset();
   });
 
   test('warns about invalid icon render', () => {
-    console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
-    const { container } = render(
-      <Grommet>
+    const component = renderer.create(
+      <MnetUIBase>
         <Anchor href="#" icon={<svg />}>
           invalid
         </Anchor>
-      </Grommet>,
+      </MnetUIBase>,
     );
-    expect(container.firstChild).toMatchSnapshot();
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
     expect(warnSpy).toHaveBeenCalledWith(
       'Anchor should not have children if icon or label is provided',
     );
 
     warnSpy.mockReset();
     warnSpy.mockRestore();
-    console.warn.mockReset();
   });
 
   test('primary renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Anchor href="#" primary label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test('focus renders', () => {
-    const onFocus = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
-        <Anchor href="#" label="Test" onFocus={onFocus} />
-      </Grommet>,
+      <MnetUIBase>
+        <Anchor href="#" label="Test" />
+      </MnetUIBase>,
     );
     fireEvent.focus(getByText('Test'));
     expect(container.firstChild).toMatchSnapshot();
-    expect(onFocus).toHaveBeenCalledTimes(1);
-  });
-
-  test('blur renders', () => {
-    const onBlur = jest.fn();
-    const { container, getByText } = render(
-      <Grommet>
-        <Anchor href="#" label="Test" onBlur={onBlur} />
-      </Grommet>,
-    );
-    fireEvent.blur(getByText('Test'));
-    expect(container.firstChild).toMatchSnapshot();
-    expect(onBlur).toHaveBeenCalledTimes(1);
   });
 
   test('disabled renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Anchor disabled />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -132,9 +101,9 @@ describe('Anchor', () => {
 
   test('icon label renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Anchor icon={<svg />} label="Test" onClick={() => {}} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -142,24 +111,9 @@ describe('Anchor', () => {
 
   test('reverse icon label renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Anchor reverse icon={<svg />} label="Test" onClick={() => {}} />
-      </Grommet>,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('size renders', () => {
-    const component = renderer.create(
-      <Grommet>
-        <Anchor size="xsmall" />
-        <Anchor size="small" />
-        <Anchor size="medium" />
-        <Anchor size="large" />
-        <Anchor size="xlarge" />
-        <Anchor size="xxlarge" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -168,9 +122,9 @@ describe('Anchor', () => {
   test('is clickable', () => {
     const onClick = jest.fn();
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Anchor href="#" label="Test" onClick={onClick} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
 
@@ -181,21 +135,9 @@ describe('Anchor', () => {
 
   test('renders tag', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Anchor href="#" label="Test" as="span" />
-      </Grommet>,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('weight renders', () => {
-    const component = renderer.create(
-      <Grommet>
-        <Anchor href="#" label="Normal" weight="normal" />
-        <Anchor href="#" label="Bold" weight="bold" />
-        <Anchor href="#" label="Bold" weight={500} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

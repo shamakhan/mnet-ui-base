@@ -1,15 +1,16 @@
 import React from 'react';
 import { Close, Send, User } from 'grommet-icons';
 
-import { Box, Button, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, MnetUIBase, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Icon = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <Text margin="small"> plain=true (no padding, no border) </Text>
       <Box direction="row">
         <Button plain icon={<Close />} onClick={() => {}} primary />
+        ye
         <Button plain icon={<Send />} onClick={() => {}} />
         <Button plain icon={<User />} onClick={() => {}} />
       </Box>
@@ -30,7 +31,7 @@ export const Icon = () => (
         <Button icon={<User />} onClick={() => {}} />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Icon.storyName = 'Icon plain';

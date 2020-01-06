@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, CheckBox } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, CheckBox } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Indeterminate = () => {
   const [checked, setChecked] = useState([]);
@@ -24,7 +24,7 @@ export const Indeterminate = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Box direction="row" gap="medium">
           <CheckBox
@@ -43,7 +43,7 @@ export const Indeterminate = () => {
           ))}
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import { Grommet, Box, Button, Grid, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Button, Grid, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const AppGrid = () => {
   const [sidebar, setSidebar] = useState(true);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Grid
         fill
         rows={['auto', 'flex']}
@@ -54,7 +54,7 @@ export const AppGrid = () => {
           <Text>main</Text>
         </Box>
       </Grid>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

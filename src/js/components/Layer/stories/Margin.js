@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Layer } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Layer } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const MarginLayer = ({ margin, ...rest }) => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Layer
       margin={
         margin || { left: '40px', top: '50px', right: '30px', bottom: '10px' }
@@ -20,7 +20,7 @@ const MarginLayer = ({ margin, ...rest }) => (
         <Box pad="xlarge">text</Box>
       </Box>
     </Layer>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const Margin = () => <MarginLayer full />;

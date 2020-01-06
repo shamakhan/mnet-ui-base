@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, TextArea } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, TextArea } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Fill = () => {
   const [value, setValue] = useState('');
@@ -9,7 +9,7 @@ export const Fill = () => {
   const onChange = event => setValue(event.target.value);
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box
         width="large"
         height="medium"
@@ -17,7 +17,7 @@ export const Fill = () => {
       >
         <TextArea value={value} onChange={onChange} fill />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

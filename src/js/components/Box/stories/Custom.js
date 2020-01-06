@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { MnetUIBase, Box, Text } from 'mnet-ui-base';
+import { mnet } from '../../../themes';
 
 export const GradientColorBox = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box
       justify="center"
       align="center"
@@ -14,7 +14,7 @@ export const GradientColorBox = () => (
     >
       <Text color="white">I have a linear gradient background</Text>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 GradientColorBox.storyName = 'Gradient';

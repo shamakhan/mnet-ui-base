@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Grommet, Box, Button, RadioButton } from 'grommet';
+import { MnetUIBase, Box, Button, RadioButton } from 'mnet-ui-base';
 import { Ascend } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Children = () => {
   const [selected, setSelected] = React.useState();
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large" gap="large">
         <RadioButton
           name="name"
@@ -23,7 +23,7 @@ export const Children = () => {
 
         <Button label="clear" onClick={() => setSelected(undefined)} />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

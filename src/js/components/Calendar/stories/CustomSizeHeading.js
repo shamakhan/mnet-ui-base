@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { deepMerge } from 'grommet/utils';
+import { deepMerge } from 'mnet-ui-base/utils';
 
-import { Box, Calendar, Grommet, grommet } from 'grommet';
+import { Box, Calendar, MnetUIBase, mnet } from 'mnet-ui-base';
 
-const customHeading = deepMerge(grommet, {
+const customHeading = deepMerge(mnet, {
   calendar: {
     heading: {
       level: '3',
@@ -19,7 +19,7 @@ export const CustomSizeCalendar = () => {
   };
 
   return (
-    <Grommet theme={customHeading}>
+    <MnetUIBase theme={customHeading}>
       <Box align="center" pad="large">
         <Calendar
           date={date}
@@ -27,7 +27,7 @@ export const CustomSizeCalendar = () => {
           bounds={['2018-09-08', '2020-12-13']}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

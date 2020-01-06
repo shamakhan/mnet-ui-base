@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Gremlin, Grommet as GrommetIcon } from 'grommet-icons';
-import { Grommet, Box, RangeSelector, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Gremlin, MnetUIBase as MnetUIBaseIcon } from 'grommet-icons';
+import { MnetUIBase, Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
-const customEdge = deepMerge(grommet, {
+const customEdge = deepMerge(mnet, {
   rangeSelector: {
     edge: {
       type: <Gremlin size="large" color="neutral-2" />,
@@ -21,7 +21,7 @@ export const CustomEdgeControl = ({ direction = 'horizontal', ...rest }) => {
   };
 
   return (
-    <Grommet theme={customEdge}>
+    <MnetUIBase theme={customEdge}>
       <Box align="center" pad="xlarge" gap="large">
         <Text style={{ fontFamily: 'Comic Sans MS' }} color="brand">
           Feed the gremlins with grommets...{' '}
@@ -38,7 +38,7 @@ export const CustomEdgeControl = ({ direction = 'horizontal', ...rest }) => {
                 pad="small"
                 border={false}
               >
-                <GrommetIcon color="brand" size="small" />
+                <MnetUIBaseIcon color="brand" size="small" />
               </Box>
             ))}
           </Box>
@@ -54,7 +54,7 @@ export const CustomEdgeControl = ({ direction = 'horizontal', ...rest }) => {
           />
         </Stack>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

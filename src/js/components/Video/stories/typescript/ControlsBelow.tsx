@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Video } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Video } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const SimpleVideo = props => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <Video {...props}>
         <source src="small.mp4" type="video/mp4" />
@@ -22,7 +22,7 @@ const SimpleVideo = props => (
         />
       </Video>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const ControlsBelow = () => <SimpleVideo controls="below" />;

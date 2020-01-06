@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Grommet, Box, RangeSelector, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Simple = ({ direction = 'horizontal' }) => {
   const [range, setRange] = useState([12, 16]);
@@ -10,7 +10,7 @@ export const Simple = ({ direction = 'horizontal' }) => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Stack>
           <Box
@@ -40,7 +40,7 @@ export const Simple = ({ direction = 'horizontal' }) => {
           />
         </Stack>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

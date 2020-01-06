@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Select } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 // the prefix name of the Create option entry
 const prefix = 'Create';
@@ -37,7 +37,7 @@ export const CreateOption = () => {
   const [searchValue, setSearchValue] = useState('');
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           open
@@ -63,7 +63,7 @@ export const CreateOption = () => {
           }}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 
 import { FormClose } from 'grommet-icons';
-import { Box, Button, CheckBox, Grommet, Select, Text } from 'grommet';
+import { Box, Button, CheckBox, MnetUIBase, Select, Text } from 'mnet-ui-base';
 // https://github.com/grommet/grommet/blob/master/src/js/components/Select/stories/theme.js
 import { theme as customSearchTheme } from './theme';
 
@@ -149,7 +149,7 @@ export const CustomSearch = () => {
   };
 
   return (
-    <Grommet full theme={customSearchTheme}>
+    <MnetUIBase full theme={customSearchTheme}>
       <Box fill align="center" justify="center" width="medium">
         <Select
           ref={selectRef}
@@ -193,7 +193,7 @@ export const CustomSearch = () => {
           {renderOption}
         </Select>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

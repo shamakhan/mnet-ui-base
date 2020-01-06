@@ -8,7 +8,7 @@ export const doc = RoutedAnchor => {
     .availableAt(getAvailableAtBadge('RoutedAnchor', 'Controls'))
     .description('An Anchor with support for React Router.')
     .usage(
-      "import { RoutedAnchor } from 'grommet';\n" +
+      "import { RoutedAnchor } from 'mnet-ui-base';\n" +
         "<RoutedAnchor primary path='/documentation' />",
     )
     .intrinsicElement('a');

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Grid } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Grid } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Percentages = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Grid
       fill
       areas={[
@@ -18,7 +18,7 @@ export const Percentages = () => (
       <Box gridArea="nav" background="brand" />
       <Box gridArea="main" background="brand" />
     </Grid>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Menu } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Menu } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const SimpleMenu = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <Menu
         dropProps={{
@@ -19,7 +19,7 @@ const SimpleMenu = () => (
         ]}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const Simple = () => <SimpleMenu />;

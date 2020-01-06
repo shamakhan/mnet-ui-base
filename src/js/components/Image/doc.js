@@ -8,7 +8,7 @@ export const doc = Image => {
     .availableAt(getAvailableAtBadge('Image', 'Media'))
     .description('An image.')
     .usage(
-      `import { Image } from 'grommet';
+      `import { Image } from 'mnet-ui-base';
 <Image/>`,
     )
     .intrinsicElement('img');

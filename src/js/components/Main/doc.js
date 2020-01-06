@@ -7,7 +7,7 @@ export const doc = Main => {
     .availableAt(getAvailableAtBadge('Main', 'Layout'))
     .description('main content of a document.')
     .usage(
-      `import { Main } from 'grommet';
+      `import { Main } from 'mnet-ui-base';
 <Main />`,
     );
 

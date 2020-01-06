@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, Clock, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Clock, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 import { deepMerge } from 'grommet/utils';
 
 const override = {
@@ -17,12 +17,12 @@ const override = {
   },
 };
 
-const theme = deepMerge(grommet, override);
+const theme = deepMerge(mnet, override);
 
 const clockSizes = ['xsmall', 'small', 'medium', 'large', 'xlarge', 'xxlarge'];
 
 export const Digital = () => (
-  <Grommet theme={theme}>
+  <MnetUIBase theme={theme}>
     <Box direction="row" gap="medium" pad="medium">
       {clockSizes.map(size => (
         <Box key={size} align="center">
@@ -42,7 +42,7 @@ export const Digital = () => (
         <Clock type="digital" size="customSize" />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Digital.parameters = {

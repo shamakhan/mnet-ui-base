@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Box } from '../../Box';
 import { Text } from '../../Text';
 import { DataTable } from '..';
@@ -17,16 +17,16 @@ describe('DataTable', () => {
 
   test('empty', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('basic', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -37,7 +37,7 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -63,7 +63,7 @@ describe('DataTable', () => {
 
   test('paths', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -74,14 +74,14 @@ describe('DataTable', () => {
             { a: 'two', b: { c: 2 } },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('primaryKey', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -93,14 +93,14 @@ describe('DataTable', () => {
           ]}
           primaryKey="b"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('footer', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A', footer: 'Total' },
@@ -111,7 +111,7 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -143,7 +143,7 @@ describe('DataTable', () => {
   test('onSort', () => {
     const onSort = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -157,7 +157,7 @@ describe('DataTable', () => {
           onSort={onSort}
           sortable
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -320,12 +320,12 @@ describe('DataTable', () => {
 
   test('search', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[{ property: 'a', header: 'A', search: true }]}
           data={[{ a: 'Alpha' }, { a: 'beta' }, { a: '[]' }]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(container.querySelector('[aria-label="Open search by a"]'));
@@ -339,7 +339,7 @@ describe('DataTable', () => {
 
   test('resizeable', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -351,14 +351,14 @@ describe('DataTable', () => {
           ]}
           resizeable
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('aggregate', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -374,7 +374,7 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -466,7 +466,7 @@ describe('DataTable', () => {
   });
   test('groupBy', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -480,7 +480,7 @@ describe('DataTable', () => {
           ]}
           groupBy="a"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -492,13 +492,13 @@ describe('DataTable', () => {
   test('click', () => {
     const onClickRow = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[{ property: 'a', header: 'A' }]}
           data={[{ a: 'alpha' }, { a: 'beta' }]}
           onClickRow={onClickRow}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('beta'));
@@ -510,7 +510,7 @@ describe('DataTable', () => {
 
   test('background', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         {[
           'accent-1',
           ['accent-1', 'accent-2'],
@@ -529,14 +529,14 @@ describe('DataTable', () => {
             background={background}
           />
         ))}
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('border', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         {[
           true,
           'top',
@@ -559,14 +559,14 @@ describe('DataTable', () => {
             border={border}
           />
         ))}
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('pad', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         {[
           'small',
           { vertical: 'small', horizontal: 'medium' },
@@ -588,14 +588,14 @@ describe('DataTable', () => {
             pad={pad}
           />
         ))}
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('rowProps', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A', footer: 'Total' },
@@ -609,14 +609,14 @@ describe('DataTable', () => {
             one: { background: 'accent-1', border: 'bottom', pad: 'large' },
           }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('groupBy property', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -630,7 +630,7 @@ describe('DataTable', () => {
           ]}
           groupBy={{ property: 'a' }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -641,7 +641,7 @@ describe('DataTable', () => {
 
   test('groupBy expand', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -656,7 +656,7 @@ describe('DataTable', () => {
           primaryKey="b"
           groupBy={{ property: 'a', expand: ['one'] }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -664,7 +664,7 @@ describe('DataTable', () => {
   test('groupBy onExpand', () => {
     const onExpand = jest.fn(groupState => groupState);
     const { getAllByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -679,7 +679,7 @@ describe('DataTable', () => {
           primaryKey="b"
           groupBy={{ property: 'a', onExpand }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const expandButtons = getAllByLabelText('expand');
@@ -692,7 +692,7 @@ describe('DataTable', () => {
 
   test('replace', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -708,7 +708,7 @@ describe('DataTable', () => {
           step={2}
           replace
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

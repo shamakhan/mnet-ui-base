@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Attraction, Car, TreeOption } from 'grommet-icons';
-import { Box, Grommet, Tab, Tabs } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Tab, Tabs } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const ControlledTabs = () => {
   const [index, setIndex] = React.useState(0);
@@ -12,7 +12,7 @@ const ControlledTabs = () => {
   const onActive = (nextIndex: number) => setIndex(nextIndex);
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Tabs activeIndex={index} onActive={onActive}>
         <Tab title="Tab 1">
           <Box margin="small" pad="large" align="center" background="accent-1">
@@ -30,7 +30,7 @@ const ControlledTabs = () => {
           </Box>
         </Tab>
       </Tabs>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

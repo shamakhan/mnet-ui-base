@@ -2,11 +2,11 @@ import React from 'react';
 
 import { FormClose } from 'grommet-icons';
 
-import { Box, Button, Grommet, Layer, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, MnetUIBase, Layer, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const ScrollBodyLayer = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Layer full="vertical" position="right">
       <Box fill style={{ minWidth: '378px' }}>
         <Box
@@ -96,7 +96,7 @@ export const ScrollBodyLayer = () => (
         </Box>
       </Box>
     </Layer>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ScrollBodyLayer.storyName = 'Fixed header, scroll body';

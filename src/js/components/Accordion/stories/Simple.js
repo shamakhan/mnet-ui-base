@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Accordion, AccordionPanel, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Accordion, AccordionPanel, Box, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Simple = props => {
   const { animate, multiple, ...rest } = props;
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box {...rest}>
         <Accordion animate={animate} multiple={multiple}>
           <AccordionPanel label="Panel 1">
@@ -28,7 +28,7 @@ export const Simple = props => {
           </AccordionPanel>
         </Accordion>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

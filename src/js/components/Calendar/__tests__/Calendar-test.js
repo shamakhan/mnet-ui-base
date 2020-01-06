@@ -8,7 +8,7 @@ import 'regenerator-runtime/runtime';
 import { axe } from 'jest-axe';
 import { cleanup, fireEvent, render, act } from '@testing-library/react';
 import { FormNextLink, FormPreviousLink } from 'grommet-icons';
-import { Box, Button, Calendar, Grommet, Text } from '../..';
+import { Box, Button, Calendar, MnetUIBase, Text } from '../..';
 
 const DATE = '2020-01-15T00:00:00-08:00';
 const DATES = [
@@ -33,7 +33,7 @@ describe('Calendar', () => {
   test('date', () => {
     // need to set the date to avoid snapshot drift over time
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar date={DATE} animate={false} />
       </Grommet>,
     );
@@ -50,7 +50,7 @@ describe('Calendar', () => {
     const component = renderer.create(
       <Grommet>
         <Calendar date={DATE} disabled={[disabledDate.toDateString()]} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -59,9 +59,9 @@ describe('Calendar', () => {
 
   test('dates', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar dates={DATES} animate={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -70,9 +70,9 @@ describe('Calendar', () => {
 
   test('daysOfWeek', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar daysOfWeek dates={DATES} animate={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -81,7 +81,7 @@ describe('Calendar', () => {
 
   test('size', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar size="small" date={DATE} animate={false} />
         <Calendar size="medium" date={DATE} animate={false} />
         <Calendar size="large" date={DATE} animate={false} />
@@ -96,7 +96,7 @@ describe('Calendar', () => {
     const component = renderer.create(
       <Grommet>
         <Calendar fill date={DATE} animate={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -105,10 +105,10 @@ describe('Calendar', () => {
 
   test('firstDayOfWeek', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar firstDayOfWeek={0} date={DATE} animate={false} />
         <Calendar firstDayOfWeek={1} date={DATE} animate={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -117,7 +117,7 @@ describe('Calendar', () => {
 
   test('reference', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar reference={DATE} animate={false} />
       </Grommet>,
     );
@@ -132,7 +132,7 @@ describe('Calendar', () => {
         <Calendar date={DATE} animate={false} />
         <Calendar date={DATE} animate={false} showAdjacentDays={false} />
         <Calendar date={DATE} animate={false} showAdjacentDays="trim" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -141,7 +141,7 @@ describe('Calendar', () => {
 
   test('header', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar
           date={DATE}
           onSelect={() => {}}
@@ -178,7 +178,7 @@ describe('Calendar', () => {
           )}
           animate={false}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

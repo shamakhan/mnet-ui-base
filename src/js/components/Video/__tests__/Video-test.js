@@ -5,19 +5,19 @@ import { axe } from 'jest-axe';
 import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
 
-import { Grommet, Video } from '../..';
+import { MnetUIBase, Video } from '../..';
 
 describe('Video', () => {
   let App;
 
   beforeEach(() => {
     App = ({ ...props }) => (
-      <Grommet>
+      <MnetUIBase>
         <Video {...props}>
           <source key="source" src="small.mp4" type="video/mp4" />
           <track key="track" />
         </Video>
-      </Grommet>
+      </MnetUIBase>
     );
   });
 
@@ -31,7 +31,7 @@ describe('Video', () => {
 
   test('renders with theme', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           video: {
             controls: { background: '#000000' },
@@ -43,7 +43,7 @@ describe('Video', () => {
           <source key="source" src="small.mp4" type="video/mp4" />
           <track key="track" />
         </Video>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -2,9 +2,10 @@ import React from 'react';
 import { css } from 'styled-components';
 
 import { CircleInformation, Currency } from 'grommet-icons';
-import { Box, Grommet, FormField, Tab, Tabs, Text, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+
+import { Box, MnetUIBase, FormField, Tab, Tabs, Text, TextInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 const RichTabTitle = ({ icon, label }) => (
   <Box direction="row" align="center" gap="xsmall" margin="xsmall">
@@ -15,7 +16,7 @@ const RichTabTitle = ({ icon, label }) => (
   </Box>
 );
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   global: {
     edgeSize: {
       small: '10px',
@@ -74,7 +75,7 @@ const customTheme = deepMerge(grommet, {
 });
 
 const CustomTabs = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Tabs>
       <Tab
         title={
@@ -102,7 +103,7 @@ const CustomTabs = () => (
         tab.active.color)
       </Tab>
     </Tabs>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const Custom = () => <CustomTabs />;

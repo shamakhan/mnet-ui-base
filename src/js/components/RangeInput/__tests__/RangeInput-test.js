@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 
 import { axe } from 'jest-axe';
 import { cleanup, render, fireEvent } from '@testing-library/react';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { RangeInput } from '..';
 
 describe('RangeInput', () => {
@@ -26,9 +26,9 @@ describe('RangeInput', () => {
 
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <RangeInput value="50" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

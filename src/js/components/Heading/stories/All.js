@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grommet, Grid, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+
+
+import { MnetUIBase, Grid, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const headingFiller = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -32,7 +34,7 @@ Set.propTypes = {
 };
 
 export const All = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Grid columns="large" gap="medium">
       <Set size="medium" />
       <Set size="small" />
@@ -40,7 +42,7 @@ export const All = () => (
       <Set size="xlarge" />
     </Grid>
     <Heading fill>{headingFiller}</Heading>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

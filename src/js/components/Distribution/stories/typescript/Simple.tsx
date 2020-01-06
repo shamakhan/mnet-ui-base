@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Distribution, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Distribution, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Simple = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Distribution
       fill
       values={[
@@ -21,7 +21,7 @@ export const Simple = () => (
         </Box>
       )}
     </Distribution>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

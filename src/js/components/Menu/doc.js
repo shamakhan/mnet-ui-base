@@ -19,7 +19,7 @@ export const doc = Menu => {
       in those cases.`,
     )
     .usage(
-      `import { Menu } from 'grommet';
+      `import { Menu } from 'mnet-ui-base';
 <Menu />`,
     )
     .intrinsicElement('button');

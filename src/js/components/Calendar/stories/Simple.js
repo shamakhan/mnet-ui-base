@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Calendar, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Calendar, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Simple = () => {
   const [date, setDate] = useState();
@@ -11,7 +11,7 @@ export const Simple = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Calendar
           date={date}
@@ -29,7 +29,7 @@ export const Simple = () => {
           bounds={['2018-09-08', '2020-12-13']}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

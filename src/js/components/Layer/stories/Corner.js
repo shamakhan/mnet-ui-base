@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Add } from 'grommet-icons';
 
-import { Box, Button, Grommet, Layer, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, MnetUIBase, Layer, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const CornerLayer = () => {
   const [open, setOpen] = React.useState();
@@ -13,7 +13,7 @@ export const CornerLayer = () => {
   const onClose = () => setOpen(undefined);
 
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Box fill align="center" justify="center">
         <Button
           icon={<Add color="brand" />}
@@ -33,7 +33,7 @@ export const CornerLayer = () => {
           </Box>
         </Layer>
       )}
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

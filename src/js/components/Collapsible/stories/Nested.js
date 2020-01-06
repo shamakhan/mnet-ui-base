@@ -2,8 +2,8 @@ import React from 'react';
 
 import { FormDown, FormNext } from 'grommet-icons';
 
-import { Box, Button, Collapsible, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Collapsible, MnetUIBase, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const MenuButton = ({ label, open, submenu, ...rest }) => {
   const Icon = open ? FormDown : FormNext;
@@ -28,7 +28,7 @@ export const Nested = () => {
   const [openMenu2, setOpenMenu2] = React.useState(false);
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box width="small">
         <MenuButton
           open={openMenu1}
@@ -100,7 +100,7 @@ export const Nested = () => {
           {/* eslint-enable no-alert */}
         </Collapsible>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, InfiniteScroll, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, InfiniteScroll, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const allItems = Array(2000)
   .fill()
@@ -15,13 +15,13 @@ const MyItem = ({ item }) => (
 );
 
 export const ClassChildrenInfiniteScroll = props => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box>
       <InfiniteScroll items={allItems} {...props}>
         {item => <MyItem key={item} item={item} />}
       </InfiniteScroll>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ClassChildrenInfiniteScroll.storyName = 'Class children';

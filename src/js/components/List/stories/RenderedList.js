@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, List, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, List, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const locations = [
   'Boise',
@@ -20,7 +20,7 @@ for (let i = 0; i < 40; i += 1) {
 }
 
 export const RenderedList = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <List
         data={data.slice(0, 10)}
@@ -36,7 +36,7 @@ export const RenderedList = () => (
         )}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 RenderedList.storyName = 'Key render';

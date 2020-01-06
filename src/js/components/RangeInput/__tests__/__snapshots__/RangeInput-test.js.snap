@@ -994,13 +994,13 @@ exports[`RangeInput with min and max offset 1`] = `
   height: 24px;
   width: 24px;
   overflow: visible;
-  background: #EB5B5B;
+  background: #E15151;
   -webkit-appearance: none;
   cursor: pointer;
 }
 
 .c1::-webkit-slider-thumb:hover {
-  box-shadow: 0px 0px 0px 2px #EB5B5B;
+  box-shadow: 0px 0px 0px 2px #E15151;
 }
 
 .c1::-moz-range-track {
@@ -1017,7 +1017,7 @@ exports[`RangeInput with min and max offset 1`] = `
   height: 24px;
   width: 24px;
   overflow: visible;
-  background: #EB5B5B;
+  background: #E15151;
   -webkit-appearance: none;
   cursor: pointer;
   margin-top: 0px;
@@ -1032,7 +1032,7 @@ exports[`RangeInput with min and max offset 1`] = `
   height: 24px;
   width: 24px;
   overflow: visible;
-  background: #EB5B5B;
+  background: #E15151;
   -webkit-appearance: none;
   cursor: pointer;
   margin-top: 0px;
@@ -1041,11 +1041,11 @@ exports[`RangeInput with min and max offset 1`] = `
 }
 
 .c1:hover::-moz-range-thumb {
-  box-shadow: 0px 0px 0px 2px #EB5B5B;
+  box-shadow: 0px 0px 0px 2px #E15151;
 }
 
 .c1:hover::-ms-thumb {
-  box-shadow: 0px 0px 0px 2px #EB5B5B;
+  box-shadow: 0px 0px 0px 2px #E15151;
 }
 
 .c1::-ms-track {

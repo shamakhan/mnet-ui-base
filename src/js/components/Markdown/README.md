@@ -1,5 +1,5 @@
-## GrommetMarkdown
-Markdown formatting using Grommet components.
+## MnetUIBaseMarkdown
+Markdown formatting using MnetUIBase components.
 
 Grommet uses 'markdown-to-jsx' in Markdown component,
       you can see all the options in the documentation.
@@ -8,7 +8,7 @@ Grommet uses 'markdown-to-jsx' in Markdown component,
 ## Usage
 
 ```javascript
-import { Markdown } from 'grommet';
+import { Markdown } from 'mnet-ui-base';
       <Markdown>{content}</Markdown>
 ```
 

@@ -1,8 +1,15 @@
 import React from 'react';
 
 import { FormClose } from 'grommet-icons';
-import { Box, Button, Grommet, Keyboard, Text, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import {
+  Box,
+  Button,
+  MnetUIBase,
+  Keyboard,
+  Text,
+  TextInput,
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const allSuggestions = ['sony', 'sonar', 'foo', 'bar'];
 
@@ -117,7 +124,7 @@ export const WithTags = () => {
     );
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box pad="small">
         <TagInput
           placeholder="Search for aliases..."
@@ -128,7 +135,7 @@ export const WithTags = () => {
           onChange={({ target: { value } }) => onFilterSuggestion(value)}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

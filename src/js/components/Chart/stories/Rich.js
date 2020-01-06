@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { Grommet, Box, Chart, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Chart, Stack, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 import { calcs } from '../calcs';
 
@@ -44,7 +44,7 @@ export const Rich = () => {
     overflow: true,
   };
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Box
           direction="row"
@@ -94,7 +94,7 @@ export const Rich = () => {
           />
         </Stack>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

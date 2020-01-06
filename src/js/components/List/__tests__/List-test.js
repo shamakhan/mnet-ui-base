@@ -5,7 +5,7 @@ import 'regenerator-runtime/runtime';
 
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { List } from '..';
 
 const data = [];
@@ -34,32 +34,32 @@ describe('List', () => {
 
   test('empty', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('data strings', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={['one', 'two']} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('data objects', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List
           data={[
             { a: 'one', b: 1 },
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -67,12 +67,12 @@ describe('List', () => {
   test('onClickItem', () => {
     const onClickItem = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <List
           data={[{ a: 'alpha' }, { a: 'beta' }]}
           onClickItem={onClickItem}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('beta'));
@@ -84,30 +84,30 @@ describe('List', () => {
 
   test('background string', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={['one', 'two']} background="accent-1" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('background array', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List
           data={['one', 'two', 'three', 'four']}
           background={['accent-1', 'accent-2']}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('border boolean true', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={['one', 'two']} border />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -123,39 +123,39 @@ describe('List', () => {
 
   test('border side', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={['one', 'two']} border="horizontal" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('border object', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List
           data={['one', 'two']}
           border={{ color: 'accent-1', side: 'horizontal', size: 'large' }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('children render', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={['one', 'two']}>
           {(item, index) => `${item} - ${index}`}
         </List>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('itemProps', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List
           data={['one', 'two']}
           itemProps={{
@@ -166,7 +166,7 @@ describe('List', () => {
             },
           }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -191,25 +191,25 @@ describe('List', () => {
 
   test('pad string', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={['one', 'two']} pad="large" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('pad object', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={['one', 'two']} pad={{ horizontal: 'large' }} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('primaryKey', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List
           data={[
             { a: 'one', b: 1 },
@@ -217,14 +217,14 @@ describe('List', () => {
           ]}
           primaryKey="a"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('secondaryKey', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List
           data={[
             { a: 'one', b: 1 },
@@ -233,7 +233,7 @@ describe('List', () => {
           primaryKey="a"
           secondaryKey="b"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

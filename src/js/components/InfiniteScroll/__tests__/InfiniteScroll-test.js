@@ -2,7 +2,7 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import 'jest-styled-components';
 
-import { Grommet, Image, Box } from '../..';
+import { MnetUIBase, Image, Box } from '../../MnetUIBase';
 import { InfiniteScroll } from '..';
 
 const simpleItems = value =>
@@ -22,7 +22,7 @@ describe('InfiniteScroll', () => {
 
   test('basic', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll />
         <InfiniteScroll items={items}>
           {(item, index, ref) => (
@@ -34,36 +34,36 @@ describe('InfiniteScroll', () => {
         <InfiniteScroll items={items}>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('step', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll items={items} step={2}>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('show', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll items={items} step={2} show={3}>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renderMarker', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll
           items={items}
           step={2}
@@ -71,18 +71,18 @@ describe('InfiniteScroll', () => {
         >
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('replace', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll items={items} step={2} replace>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -220,7 +220,7 @@ describe('Number of Items Rendered', () => {
     /* Expected number of items should be at the show value rounded
     up to the next step increment/ */
     const expectedItems = step;
-    /* If the number of distinct items is equivalent to the length 
+    /* If the number of distinct items is equivalent to the length
     of results, then we have unique items. */
     expect(distinctItems.size).toEqual(expectedItems);
     expect(container.firstChild).toMatchSnapshot();

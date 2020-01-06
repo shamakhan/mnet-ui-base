@@ -16,7 +16,7 @@ import {
   useForwardedRef,
 } from '../../utils';
 import { base as baseTheme } from '../../themes';
-import { StyledGrommet } from './StyledGrommet';
+import { StyledMnetUIBase } from './StyledMnetUIBase';
 import { RootsContext } from '../../contexts/RootsContext';
 
 const FullGlobalStyle = createGlobalStyle`
@@ -44,7 +44,7 @@ const deviceResponsive = (userAgent, theme) => {
   return undefined;
 };
 
-const Grommet = forwardRef((props, ref) => {
+const MnetUIBase = forwardRef((props, ref) => {
   const {
     children,
     full,
@@ -107,16 +107,16 @@ const Grommet = forwardRef((props, ref) => {
     deviceResponsive(userAgent, theme) ||
     theme.global.deviceBreakpoints.tablet;
 
-  const grommetRef = useForwardedRef(ref);
+  const mnetuibaseRef = useForwardedRef(ref);
 
   return (
     <ThemeContext.Provider value={theme}>
       <ResponsiveContext.Provider value={responsive}>
-        <RootsContext.Provider value={[grommetRef.current]}>
+        <RootsContext.Provider value={[mnetuibaseRef.current]}>
           <ContainerTargetContext.Provider value={containerTarget}>
-            <StyledGrommet full={full} {...rest} ref={grommetRef}>
+            <StyledMnetUIBase full={full} {...rest} ref={mnetuibaseRef}>
               {children}
-            </StyledGrommet>
+            </StyledMnetUIBase>
             {full && <FullGlobalStyle />}
           </ContainerTargetContext.Provider>
         </RootsContext.Provider>
@@ -125,13 +125,13 @@ const Grommet = forwardRef((props, ref) => {
   );
 });
 
-Grommet.displayName = 'Grommet';
+MnetUIBase.displayName = 'MnetUIBase';
 
-let GrommetDoc;
+let MnetUIBaseDoc;
 if (process.env.NODE_ENV !== 'production') {
   // eslint-disable-next-line global-require
-  GrommetDoc = require('./doc').doc(Grommet);
+  MnetUIBaseDoc = require('./doc').doc(MnetUIBase);
 }
-const GrommetWrapper = GrommetDoc || Grommet;
+const MnetUIBaseWrapper = MnetUIBaseDoc || MnetUIBase;
 
-export { GrommetWrapper as Grommet };
+export { MnetUIBaseWrapper as MnetUIBase };

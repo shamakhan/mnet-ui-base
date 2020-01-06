@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Grommet, Box, Meter, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Meter, Stack, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Labelled = () => {
   const meterValue = 30;
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Stack anchor="center">
           <Meter
@@ -25,7 +25,7 @@ export const Labelled = () => {
           </Box>
         </Stack>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

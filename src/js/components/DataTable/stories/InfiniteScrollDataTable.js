@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable, Heading, Meter, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DataTable, Heading, Meter, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const amountFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -310,7 +310,7 @@ export const InfiniteScrollDataTable = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Heading level={3}>
           <Box gap="small">
@@ -327,7 +327,7 @@ export const InfiniteScrollDataTable = () => {
           onMore={() => load()}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

@@ -9,7 +9,7 @@ export const doc = Video => {
     .availableAt(getAvailableAtBadge('Video', 'Media'))
     .description('A video player.')
     .usage(
-      `import { Video } from 'grommet';
+      `import { Video } from 'mnet-ui-base';
 <Video />`,
     )
     .intrinsicElement('video');

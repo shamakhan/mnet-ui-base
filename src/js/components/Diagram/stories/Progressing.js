@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 
-import { Grommet, Box, Diagram, Stack, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Diagram, Stack, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const Node = ({ id, ...rest }) => (
   <Box
@@ -56,7 +56,7 @@ export const Progressing = () => {
   }
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="start" pad="large">
         <Text> Adding and removing nodes</Text>
         <Stack>
@@ -75,7 +75,7 @@ export const Progressing = () => {
           <Diagram connections={connections} />
         </Stack>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

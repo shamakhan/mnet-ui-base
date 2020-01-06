@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, Clock, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Clock, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const sizes = [
   'xsmall',
@@ -14,7 +14,7 @@ const sizes = [
 ];
 
 export const Analog = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box direction="row" gap="small" pad="large">
       {sizes.map(size => (
         <Box key={size} align="center">
@@ -29,7 +29,7 @@ export const Analog = () => (
         compatibility.
       </Text>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Analog.parameters = {

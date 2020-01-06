@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable, Meter, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DataTable, Meter, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 import { ColumnConfig } from '../..';
 
@@ -141,7 +141,7 @@ const DATA: RowType[] = [
 ];
 
 export const ClickableDataTable = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       {/* eslint-disable no-alert */}
       <DataTable
@@ -151,7 +151,7 @@ export const ClickableDataTable = () => (
         onClickRow={event => console.log(event.datum)}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ClickableDataTable.storyName = 'Clickable';

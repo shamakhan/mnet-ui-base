@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   Box,
-  Grommet,
+  MnetUIBase,
   Table,
   TableBody,
   TableCell,
@@ -10,7 +10,7 @@ import {
   TableHeader,
   TableRow,
   Text,
-} from 'grommet';
+} from 'mnet-ui-base';
 import { data, columns } from './data';
 
 const customTheme = {
@@ -47,7 +47,7 @@ const customTheme = {
 };
 
 export const Custom = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Box align="center" pad="large">
       <Table caption="Custom Theme Table">
         <TableHeader>
@@ -81,7 +81,7 @@ export const Custom = () => (
         </TableFooter>
       </Table>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Select } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const defaultOptions = [];
 for (let i = 1; i <= 200; i += 1) {
@@ -14,7 +14,7 @@ export const Search = () => {
   const [valueMultiple, setValueMultiple] = useState([]);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box pad="large" gap="medium" direction="row">
         <Select
           size="medium"
@@ -57,7 +57,7 @@ export const Search = () => {
           }}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

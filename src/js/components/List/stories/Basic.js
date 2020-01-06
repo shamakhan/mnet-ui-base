@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, List } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, List } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const locations = [
   'Boise',
@@ -12,11 +12,11 @@ const locations = [
 ];
 
 export const Basic = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <List data={locations} />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

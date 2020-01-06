@@ -8,7 +8,7 @@ import 'regenerator-runtime/runtime';
 import { axe } from 'jest-axe';
 import { cleanup, render } from '@testing-library/react';
 import { Alert, New, StatusInfo } from 'grommet-icons';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Form } from '../../Form';
 import { FormField } from '..';
 import { TextInput } from '../../TextInput';
@@ -33,12 +33,12 @@ describe('FormField', () => {
 
   test('default', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField />
         <FormField>
           <TextInput />
         </FormField>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -47,9 +47,9 @@ describe('FormField', () => {
 
   test('label', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField label="test label" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -58,9 +58,9 @@ describe('FormField', () => {
 
   test('help', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField help="test help" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -69,9 +69,9 @@ describe('FormField', () => {
 
   test('error', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField error="test error" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -91,9 +91,9 @@ describe('FormField', () => {
 
   test('htmlFor', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField htmlFor="test-id" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -102,9 +102,9 @@ describe('FormField', () => {
 
   test('margin', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField margin="medium" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -113,9 +113,9 @@ describe('FormField', () => {
 
   test('empty margin', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField margin="none" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -124,9 +124,9 @@ describe('FormField', () => {
 
   test('pad', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField pad />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -135,7 +135,7 @@ describe('FormField', () => {
 
   test('abut', () => {
     const component = renderer.create(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             border: {
@@ -155,7 +155,7 @@ describe('FormField', () => {
         }}
       >
         <FormField htmlFor="test-id" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -164,7 +164,7 @@ describe('FormField', () => {
 
   test('abut with margin', () => {
     const component = renderer.create(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             border: {
@@ -184,7 +184,7 @@ describe('FormField', () => {
         }}
       >
         <FormField margin="medium" htmlFor="test-id" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -193,9 +193,9 @@ describe('FormField', () => {
 
   test('custom formfield', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <CustomFormField htmlFor="test-id" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

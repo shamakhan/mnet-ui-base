@@ -7,7 +7,7 @@ export const doc = RadioButtonGroup => {
     .availableAt(getAvailableAtBadge('RadioButtonGroup', 'Input'))
     .description('A group of radio buttons.')
     .usage(
-      `import { RadioButtonGroup } from 'grommet';
+      `import { RadioButtonGroup } from 'mnet-ui-base';
 <RadioButtonGroup />`,
     )
     .intrinsicElement('div');

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ThemeType } from 'grommet/themes';
-import { grommet, Box, Button, Grommet } from 'grommet';
+import { mnet, Box, Button, MnetUIBase } from 'mnet-ui-base';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
@@ -51,21 +51,21 @@ const customTheme: ThemeType = {
 
 export const TSCustom = () => (
   <>
-    <Grommet theme={customTheme}>
+    <MnetUIBase theme={customTheme}>
       <Box align="center" pad="large">
         <Button label="custom theme" onClick={() => {}} primary />
       </Box>
-    </Grommet>
-    <Grommet theme={customTheme}>
+    </MnetUIBase>
+    <MnetUIBase theme={customTheme}>
       <Box align="center" pad="large">
         <Button label="custom theme disabled" disabled primary />
       </Box>
-    </Grommet>
-    <Grommet theme={grommet}>
+    </MnetUIBase>
+    <MnetUIBase theme={grommet}>
       <Box align="center" pad="large">
         <Button as="span" label="Custom as=span" />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   </>
 );
 TSCustom.storyName = 'TS-Custom';

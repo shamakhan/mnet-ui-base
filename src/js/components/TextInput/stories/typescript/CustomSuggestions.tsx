@@ -1,13 +1,13 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 
 import { Search } from 'grommet-icons';
-import { Box, Grommet, Image, Text, TextInput } from 'grommet';
-import { grommet, ThemeType } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Image, MnetUIBase, Text, TextInput } from 'mnet-ui-base';
+import { mnet, ThemeType } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
-const myCustomTheme: ThemeType = deepMerge(grommet, {
+const myCustomTheme: ThemeType = deepMerge(mnet, {
   global: {
     drop: {
       background: '#444444',
@@ -131,7 +131,7 @@ export const CustomSuggestions = () => {
   );
 
   return (
-    <Grommet full theme={myCustomTheme}>
+    <MnetUIBase full theme={myCustomTheme}>
       <Box background="dark-1" fill align="center" pad={{ top: 'large' }}>
         <Box
           ref={boxRef}
@@ -168,7 +168,7 @@ export const CustomSuggestions = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

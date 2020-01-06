@@ -61,7 +61,7 @@ export const doc = DataTable => {
     .availableAt(getAvailableAtBadge('DataTable', 'Visualizations'))
     .description('A data driven table.')
     .usage(
-      `import { DataTable } from 'grommet';
+      `import { DataTable } from 'mnet-ui-base';
 <DataTable />`,
     )
     .intrinsicElement('table');

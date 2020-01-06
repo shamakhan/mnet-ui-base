@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   CheckBox,
+  MnetUIBase,
   FileInput,
   Form,
   FormField,
@@ -12,11 +13,11 @@ import {
   RangeInput,
   Select,
   TextArea,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const FieldWithComponentProp = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Box fill overflow="auto" align="center" justify="center" pad="large">
       <Box flex={false} width="medium">
         <Form
@@ -85,7 +86,7 @@ export const FieldWithComponentProp = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 FieldWithComponentProp.storyName = 'Field with component prop';

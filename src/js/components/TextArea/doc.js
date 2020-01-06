@@ -8,7 +8,7 @@ export const doc = TextArea => {
     .availableAt(getAvailableAtBadge('TextArea', 'Input'))
     .description('A control to input multiple lines of text.')
     .usage(
-      `import { TextArea } from 'grommet';
+      `import { TextArea } from 'mnet-ui-base';
 <TextArea id='item' name='item' />`,
     )
     .intrinsicElement('textarea');

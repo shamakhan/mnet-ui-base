@@ -1,11 +1,11 @@
 import React from 'react';
 import { Attraction } from 'grommet-icons';
 
-import { Grommet, Box, Text } from 'grommet';
-import { grommet } from '../../../themes';
+import { MnetUIBase, Box, Text } from 'mnet-ui-base';
+import { mnet } from '../../../themes';
 
 export const OnClickBox = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box justify="center" align="center" pad="large">
       {/* eslint-disable no-alert */}
       <Box
@@ -28,7 +28,7 @@ export const OnClickBox = () => (
         <Text>Party</Text>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 OnClickBox.storyName = 'onClick';

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, List } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, List } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const locations = [
   'Boise',
@@ -21,7 +21,7 @@ for (let i = 0; i < 40; i += 1) {
 }
 
 export const SecondaryKey = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <List
         data={data.slice(0, 10)}
@@ -29,7 +29,7 @@ export const SecondaryKey = () => (
         secondaryKey="location"
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 SecondaryKey.storyName = 'Secondary key';

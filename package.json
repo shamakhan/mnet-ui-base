@@ -169,7 +169,7 @@
   ],
   "bundlesize": [
     {
-      "path": "./dist/grommet.min.js",
+      "path": "./dist/mnetuibase.min.js",
       "maxSize": "120 kB"
     }
   ],

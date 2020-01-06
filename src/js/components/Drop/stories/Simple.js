@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Box, Drop, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Drop, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const SimpleDrop = () => {
   const targetRef = useRef();
@@ -12,7 +12,7 @@ const SimpleDrop = () => {
   }, []);
 
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Box fill align="center" justify="center">
         <Box
           background="dark-3"
@@ -32,7 +32,7 @@ const SimpleDrop = () => {
           </Drop>
         )}
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

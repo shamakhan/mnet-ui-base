@@ -8,7 +8,7 @@ export const doc = Meter => {
     .availableAt(getAvailableAtBadge('Meter', 'Visualizations'))
     .description('A graphical meter.')
     .usage(
-      `import { Meter } from 'grommet';
+      `import { Meter } from 'mnet-ui-base';
 <Meter />`,
     );
   // We don't include svg due to a collision on the values property

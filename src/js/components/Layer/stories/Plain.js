@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Layer, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Layer, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const PlainLayer = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box fill background="dark-3">
       <Layer margin="medium" plain>
         <Box pad="large" border={{ color: 'accent-1', size: 'large' }}>
@@ -12,7 +12,7 @@ export const PlainLayer = () => (
         </Box>
       </Layer>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 PlainLayer.storyName = 'Plain';

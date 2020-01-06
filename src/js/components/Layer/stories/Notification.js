@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Add, FormClose, StatusGood } from 'grommet-icons';
 
-import { Box, Button, Grommet, Layer, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, MnetUIBase, Layer, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const NotificationLayer = () => {
   const [open, setOpen] = React.useState();
@@ -18,7 +18,7 @@ export const NotificationLayer = () => {
   const onClose = () => setOpen(undefined);
 
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Box fill align="center" justify="center">
         <Button
           icon={<Add color="brand" />}
@@ -61,7 +61,7 @@ export const NotificationLayer = () => {
           </Box>
         </Layer>
       )}
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

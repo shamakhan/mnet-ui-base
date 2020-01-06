@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, RadioButton } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, RadioButton } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Disabled = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large" gap="large">
       <RadioButton
         label="option 1"
@@ -14,7 +14,7 @@ export const Disabled = () => (
         disabled
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

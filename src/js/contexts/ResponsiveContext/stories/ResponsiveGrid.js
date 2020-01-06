@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { deepMerge } from 'grommet/utils';
-import { grommet } from 'grommet/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
+import { mnet } from 'mnet-ui-base/themes';
 
-import { Box, Grid, Paragraph, Grommet, ResponsiveContext } from 'grommet';
+import { Box, Grid, Paragraph, MnetUIBase, ResponsiveContext } from 'mnet-ui-base';
 
-const customBreakpoints = deepMerge(grommet, {
+const customBreakpoints = deepMerge(mnet, {
   global: {
     breakpoints: {
       xsmall: {
@@ -32,7 +32,7 @@ const ResponsiveGrid = ({ children, areas, ...props }) => {
 };
 
 export const ResponsiveGridExample = () => (
-  <Grommet theme={customBreakpoints} full>
+  <MnetUIBase theme={customBreakpoints} full>
     <ResponsiveGrid
       columns={['25%', '25%', '25%', '25%']}
       rows={['3em', '3em', '3em']}
@@ -72,7 +72,7 @@ export const ResponsiveGridExample = () => (
       Below a certain threshold, Columns 1 &amp; 2 switch to 50% and Column 3
       moves down to a new spot in the grid.
     </Paragraph>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ResponsiveGridExample.storyName = 'Responsive grid';

@@ -132,15 +132,15 @@ exports[`TextArea basic 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -226,15 +226,15 @@ exports[`TextArea disabled 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -316,15 +316,15 @@ exports[`TextArea fill 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -404,15 +404,15 @@ exports[`TextArea focusIndicator 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -492,15 +492,15 @@ exports[`TextArea placeholder 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -585,15 +585,15 @@ exports[`TextArea plain 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -674,15 +674,15 @@ exports[`TextArea resize false 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -763,15 +763,15 @@ exports[`TextArea resize horizontal 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -852,15 +852,15 @@ exports[`TextArea resize true 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -941,15 +941,15 @@ exports[`TextArea resize vertical 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -1031,15 +1031,15 @@ exports[`TextArea size large 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -1122,15 +1122,15 @@ exports[`TextArea size medium 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
@@ -1213,15 +1213,15 @@ exports[`TextArea size small 1`] = `
 }
 
 .c1::-webkit-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-moz-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1:-ms-input-placeholder {
-  color: #AAAAAA;
+  color: #e0e4ee;
 }
 
 .c1::-webkit-search-decoration {
