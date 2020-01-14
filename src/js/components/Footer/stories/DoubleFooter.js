@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MnetUIBase as MnetUIBaseIcon } from 'grommet-icons';
+import { Grommet as MnetUIBaseIcon } from 'grommet-icons';
 import {
   Anchor,
   Box,
