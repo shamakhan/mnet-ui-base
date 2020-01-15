@@ -40,7 +40,12 @@ export const InsideFormField = props => {
             setState({ value: '', suggestions: allSuggestions });
           }}
         >
-          <FormField label="Label" htmlFor="text-input" {...props}>
+          <FormField
+          direction="row"
+          label="Label"
+          htmlFor="text-input"
+          {...props}
+        >
             <TextInput
               id="text-input"
               placeholder="placeholder"

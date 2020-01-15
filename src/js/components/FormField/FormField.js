@@ -336,6 +336,7 @@ const FormField = forwardRef(
         outerStyle = {
           position: focus ? 'relative' : undefined,
           zIndex: focus ? 10 : undefined,
+
           ...style,
         };
       }
