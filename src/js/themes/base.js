@@ -294,7 +294,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         font: {
           // size: undefined,
           // height: undefined,
-          weight: 600,
+          weight: 400,
+        boxShadow: 'inset 1px 1px 1px 0 rgba(216,218,229,.68)',
+        borderRadius: '3px',
         },
         // deprecate in v3
         // weight: undefined,
@@ -1383,4 +1385,4 @@ export const generate = (baseSpacing = 24, scale = 6) => {
   return deepFreeze(result);
 };
 
-export const base = generate(24);
+export const base = generate(16);
