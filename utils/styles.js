@@ -1,9 +1,11 @@
 "use strict";
 
 exports.__esModule = true;
-exports.sizeStyle = exports.disabledStyle = exports.genericStyles = exports.evalStyle = exports.placeholderStyle = exports.overflowStyle = exports.inputStyle = exports.focusStyle = exports.edgeStyle = exports.controlBorderStyle = exports.baseStyle = void 0;
+exports.sizeStyle = exports.disabledStyle = exports.genericStyles = exports.placeholderStyle = exports.overflowStyle = exports.inputStyle = exports.focusStyle = exports.edgeStyle = exports.controlBorderStyle = exports.baseStyle = void 0;
 
 var _styledComponents = require("styled-components");
+
+var _background = require("./background");
 
 var _colors = require("./colors");
 
@@ -18,7 +20,7 @@ var baseStyle = (0, _styledComponents.css)(["font-family:", ";font-size:", ";lin
 }, function (props) {
   return props.theme.global.font.weight;
 }, function (props) {
-  return !props.plain && props.theme.global.colors.background && (0, _styledComponents.css)(["background:", ";color:", ";"], (0, _colors.normalizeColor)('background', props.theme, true), (0, _colors.normalizeColor)('text', props.theme, true));
+  return !props.plain && (0, _background.backgroundStyle)(props.theme.baseBackground, props.theme);
 });
 exports.baseStyle = baseStyle;
 var controlBorderStyle = (0, _styledComponents.css)(["border:", " solid ", ";border-radius:", ";"], function (props) {
@@ -63,14 +65,20 @@ var edgeStyle = function edgeStyle(kind, data, responsive, responsiveBreakpoint,
     result.push((0, _styledComponents.css)(["", "-right:", ";", ";"], kind, theme.global.edgeSize[data.right] || data.right, responsive && breakpoint ? (0, _mixins.breakpointStyle)(breakpoint, "\n        " + kind + "-right: " + (breakpoint.edgeSize[data.right] || data.right) + ";\n      ") : ''));
   }
 
+  if (data.start) {
+    result.push((0, _styledComponents.css)(["", "-inline-start:", ";", ";"], kind, theme.global.edgeSize[data.start] || data.start, responsive && breakpoint ? (0, _mixins.breakpointStyle)(breakpoint, "\n        " + kind + "-inline-start: " + (breakpoint.edgeSize[data.start] || data.start) + ";\n      ") : ''));
+  }
+
+  if (data.end) {
+    result.push((0, _styledComponents.css)(["", "-inline-end:", ";", ";"], kind, theme.global.edgeSize[data.end] || data.end, responsive && breakpoint ? (0, _mixins.breakpointStyle)(breakpoint, "\n        " + kind + "-inline-end: " + (breakpoint.edgeSize[data.end] || data.end) + ";\n      ") : ''));
+  }
+
   return result;
 }; // focus also supports clickable elements inside svg
 
 
 exports.edgeStyle = edgeStyle;
-var focusStyle = (0, _styledComponents.css)(["> circle,> ellipse,> line,> path,> polygon,> polyline,> rect{outline:", " solid 2px;}outline-color:", ";border-color:", ";box-shadow:0 0 2px 2px ", ";::-moz-focus-inner{border:0;}"], function (props) {
-  return (0, _colors.normalizeColor)(props.theme.global.focus.border.color, props.theme);
-}, function (props) {
+var focusStyle = (0, _styledComponents.css)(["> circle,> ellipse,> line,> path,> polygon,> polyline,> rect{outline:", " solid 1px;}outline-color:", ";border-color:", ";::-moz-focus-inner{border:0;}"], function (props) {
   return (0, _colors.normalizeColor)(props.theme.global.focus.border.color, props.theme);
 }, function (props) {
   return (0, _colors.normalizeColor)(props.theme.global.focus.border.color, props.theme);
@@ -78,8 +86,10 @@ var focusStyle = (0, _styledComponents.css)(["> circle,> ellipse,> line,> path,>
   return (0, _colors.normalizeColor)(props.theme.global.focus.border.color, props.theme);
 });
 exports.focusStyle = focusStyle;
-var inputStyle = (0, _styledComponents.css)(["box-sizing:border-box;font-size:inherit;font-family:inherit;border:none;-webkit-appearance:none;padding:", "px;outline:none;background:transparent;color:inherit;", " margin:0;", " ", "::-webkit-search-decoration{-webkit-appearance:none;}"], function (props) {
+var inputStyle = (0, _styledComponents.css)(["box-sizing:border-box;font-size:inherit;font-family:inherit;border:none;-webkit-appearance:none;padding:", "px;outline:none;background:transparent;color:inherit;box-shadow:inset 1px 1px 1px 0 ", ";", " margin:0;", " ", "::-webkit-search-decoration{-webkit-appearance:none;}"], function (props) {
   return (0, _mixins.parseMetricToNum)(props.theme.global.input.padding) - (0, _mixins.parseMetricToNum)(props.theme.global.control.border.width);
+}, function (props) {
+  return (0, _colors.normalizeColor)(props.theme.global.colors.border, props.theme);
 }, function (props) {
   return props.theme.global.input.weight && (0, _styledComponents.css)(["font-weight:", ";"], props.theme.global.input.weight);
 }, function (props) {
@@ -99,21 +109,8 @@ exports.overflowStyle = overflowStyle;
 var placeholderColor = (0, _styledComponents.css)(["color:", ";"], function (props) {
   return props.theme.global.colors.placeholder;
 });
-var placeholderStyle = (0, _styledComponents.css)(["&::-webkit-input-placeholder{", ";}&::-moz-placeholder{", ";}&:-ms-input-placeholder{", ";}"], placeholderColor, placeholderColor, placeholderColor); // evalStyle() converts a styled-components item into a string
-
+var placeholderStyle = (0, _styledComponents.css)(["&::-webkit-input-placeholder{", ";}&::-moz-placeholder{", ";}&:-ms-input-placeholder{", ";}"], placeholderColor, placeholderColor, placeholderColor);
 exports.placeholderStyle = placeholderStyle;
-
-var evalStyle = function evalStyle(arg, theme) {
-  if (arg && Array.isArray(arg) && typeof arg[0] === 'function') {
-    return arg[0]({
-      theme: theme
-    });
-  }
-
-  return arg;
-};
-
-exports.evalStyle = evalStyle;
 var ALIGN_SELF_MAP = {
   center: 'center',
   end: 'flex-end',
@@ -125,7 +122,7 @@ var genericStyles = (0, _styledComponents.css)(["", " ", " ", ""], function (pro
 }, function (props) {
   return props.gridArea && "grid-area: " + props.gridArea + ";";
 }, function (props) {
-  return props.margin && edgeStyle('margin', props.margin, props.responsive, props.theme.global.edgeSize.responsiveBreakpoint, props.theme);
+  return props.margin && props.theme.global && edgeStyle('margin', props.margin, props.responsive, props.theme.global.edgeSize.responsiveBreakpoint, props.theme);
 });
 exports.genericStyles = genericStyles;
 

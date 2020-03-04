@@ -9,7 +9,6 @@ var ActionList = function ActionList() {
   return React.createElement(MnetUIBase, {
     theme: mnet
   }, React.createElement(Box, {
-    align: "center",
     pad: "large"
   }, React.createElement(List, {
     data: data.slice(0, 10),

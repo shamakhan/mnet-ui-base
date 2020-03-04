@@ -13,12 +13,12 @@ exports[`DropButton close by clicking outside 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 2px solid #E15151;
-  border-radius: 6px;
+  border: 1px solid #E15151;
+  border-radius: 3.2px;
   color: #444444;
-  padding: 4px 22px;
-  font-size: 18px;
-  line-height: 24px;
+  padding: 3px 15px;
+  font-size: 12px;
+  line-height: 16px;
   -webkit-transition-property: color, background-color, border-color, box-shadow;
   transition-property: color, background-color, border-color, box-shadow;
   -webkit-transition-duration: 0.1s;
@@ -50,7 +50,7 @@ exports[`DropButton close by clicking outside 2`] = `
 
 exports[`DropButton close by clicking outside 3`] = `
 "@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -76,12 +76,12 @@ exports[`DropButton closed 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 2px solid #E15151;
-  border-radius: 6px;
+  border: 1px solid #E15151;
+  border-radius: 3.2px;
   color: #444444;
-  padding: 4px 22px;
-  font-size: 18px;
-  line-height: 24px;
+  padding: 3px 15px;
+  font-size: 12px;
+  line-height: 16px;
   -webkit-transition-property: color, background-color, border-color, box-shadow;
   transition-property: color, background-color, border-color, box-shadow;
   -webkit-transition-duration: 0.1s;
@@ -121,12 +121,12 @@ exports[`DropButton disabled 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 2px solid #E15151;
-  border-radius: 6px;
+  border: 1px solid #E15151;
+  border-radius: 3.2px;
   color: #444444;
-  padding: 4px 22px;
-  font-size: 18px;
-  line-height: 24px;
+  padding: 3px 15px;
+  font-size: 12px;
+  line-height: 16px;
   opacity: 0.3;
   cursor: default;
   -webkit-transition-property: color, background-color, border-color, box-shadow;
@@ -160,12 +160,12 @@ exports[`DropButton open and close 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 2px solid #E15151;
-  border-radius: 6px;
+  border: 1px solid #E15151;
+  border-radius: 3.2px;
   color: #444444;
-  padding: 4px 22px;
-  font-size: 18px;
-  line-height: 24px;
+  padding: 3px 15px;
+  font-size: 12px;
+  line-height: 16px;
   -webkit-transition-property: color, background-color, border-color, box-shadow;
   transition-property: color, background-color, border-color, box-shadow;
   -webkit-transition-duration: 0.1s;
@@ -197,7 +197,7 @@ exports[`DropButton open and close 2`] = `
 
 exports[`DropButton open and close 3`] = `
 "@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -223,12 +223,12 @@ exports[`DropButton opened 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 2px solid #E15151;
-  border-radius: 6px;
+  border: 1px solid #E15151;
+  border-radius: 3.2px;
   color: #444444;
-  padding: 4px 22px;
-  font-size: 18px;
-  line-height: 24px;
+  padding: 3px 15px;
+  font-size: 12px;
+  line-height: 16px;
   -webkit-transition-property: color, background-color, border-color, box-shadow;
   transition-property: color, background-color, border-color, box-shadow;
   -webkit-transition-duration: 0.1s;
@@ -268,12 +268,12 @@ exports[`DropButton opened ref 1`] = `
   background: transparent;
   overflow: visible;
   text-transform: none;
-  border: 2px solid #E15151;
-  border-radius: 6px;
+  border: 1px solid #E15151;
+  border-radius: 3.2px;
   color: #444444;
-  padding: 4px 22px;
-  font-size: 18px;
-  line-height: 24px;
+  padding: 3px 15px;
+  font-size: 12px;
+  line-height: 16px;
   -webkit-transition-property: color, background-color, border-color, box-shadow;
   transition-property: color, background-color, border-color, box-shadow;
   -webkit-transition-duration: 0.1s;
@@ -305,7 +305,7 @@ exports[`DropButton opened ref 2`] = `
 
 exports[`DropButton opened ref 3`] = `
 "@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

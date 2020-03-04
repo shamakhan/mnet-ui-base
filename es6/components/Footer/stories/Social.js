@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Grommet as MnetUIBaseIcon } from "grommet-icons/es6/icons/Grommet";
+import { MnetUIBase as MnetUIBaseIcon } from "grommet-icons/es6/icons/MnetUIBase";
 import { FacebookOption } from "grommet-icons/es6/icons/FacebookOption";
 import { Instagram } from "grommet-icons/es6/icons/Instagram";
 import { Twitter } from "grommet-icons/es6/icons/Twitter";

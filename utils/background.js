@@ -7,7 +7,16 @@ var _styledComponents = require("styled-components");
 
 var _colors = require("./colors");
 
-var _styles = require("./styles");
+// evalStyle() converts a styled-components item into a string
+var evalStyle = function evalStyle(arg, theme) {
+  if (arg && Array.isArray(arg) && typeof arg[0] === 'function') {
+    return arg[0]({
+      theme: theme
+    });
+  }
+
+  return arg;
+};
 
 var normalizeBackground = function normalizeBackground(background, theme) {
   // If the background has a light or dark object, use that
@@ -20,7 +29,7 @@ var normalizeBackground = function normalizeBackground(background, theme) {
       result = background.light;
     }
 
-    result = (0, _styles.evalStyle)(result, theme);
+    result = evalStyle(result, theme);
   }
 
   return result;
@@ -63,7 +72,12 @@ var backgroundIsDark = function backgroundIsDark(backgroundArg, theme) {
 exports.backgroundIsDark = backgroundIsDark;
 
 var backgroundStyle = function backgroundStyle(backgroundArg, theme, textColorArg) {
-  // If the background has a light or dark object, use that
+  // for MnetUIBase component, if the background isn't defined, don't set it
+  if (backgroundArg === undefined) {
+    return undefined;
+  } // If the background has a light or dark object, use that
+
+
   var background = normalizeBackground(backgroundArg, theme);
   var textColor = textColorArg || theme.global.colors.text;
 
@@ -109,7 +123,8 @@ var backgroundStyle = function backgroundStyle(backgroundArg, theme, textColorAr
     var _backgroundColor = (0, _colors.normalizeColor)(background, theme);
 
     if (_backgroundColor) {
-      return (0, _styledComponents.css)(["background:", ";color:", ";"], _backgroundColor, (0, _colors.normalizeColor)(textColor[(0, _colors.colorIsDark)(_backgroundColor) ? 'dark' : 'light'] || textColor, theme));
+      var backgroundDark = (0, _colors.colorIsDark)(_backgroundColor);
+      return (0, _styledComponents.css)(["background:", ";color:", ";"], _backgroundColor, (0, _colors.normalizeColor)(textColor[backgroundDark || backgroundDark === undefined && theme.dark ? 'dark' : 'light'] || textColor, theme));
     }
   }
 

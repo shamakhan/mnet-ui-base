@@ -6,6 +6,7 @@ import { MnetUIBase } from '../../MnetUIBase';
 import { Form } from '..';
 import { FormField } from '../../FormField';
 import { Button } from '../../Button';
+import { Text } from '../../Text';
 describe('Form', function () {
   afterEach(cleanup);
   test('empty', function () {
@@ -20,8 +21,31 @@ describe('Form', function () {
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+  test('errors', function () {
+    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Form, {
+      errors: {
+        test: 'missing'
+      }
+    }, React.createElement(FormField, {
+      name: "test"
+    }))));
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('infos', function () {
+    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Form, {
+      infos: {
+        test: 'missing'
+      }
+    }, React.createElement(FormField, {
+      name: "test"
+    }))));
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
   test('update', function () {
     var validate = jest.fn().mockReturnValueOnce('too short').mockReturnValueOnce(undefined);
+    var validate2 = jest.fn().mockReturnValue(undefined);
     var onSubmit = jest.fn();
 
     var _render = render(React.createElement(MnetUIBase, null, React.createElement(Form, {
@@ -33,7 +57,8 @@ describe('Form', function () {
       placeholder: "test input"
     }), React.createElement(FormField, {
       name: "test2",
-      placeholder: "test-2 input"
+      placeholder: "test-2 input",
+      validate: [validate2]
     }), React.createElement(Button, {
       type: "submit",
       primary: true,
@@ -53,6 +78,9 @@ describe('Form', function () {
     expect(validate).toBeCalledWith('v', {
       test: 'v'
     });
+    expect(validate2).toBeCalledWith(undefined, {
+      test: 'v'
+    });
     fireEvent.change(getByPlaceholderText('test input'), {
       target: {
         value: 'value'
@@ -68,10 +96,18 @@ describe('Form', function () {
       test: 'value',
       test2: 'value-2'
     });
+    expect(validate2).toBeCalledWith('value-2', {
+      test: 'value',
+      test2: 'value-2'
+    });
     expect(onSubmit).toBeCalledWith(expect.objectContaining({
       value: {
         test: 'value',
         test2: 'value-2'
+      },
+      touched: {
+        test: true,
+        test2: true
       }
     }));
   });
@@ -111,10 +147,71 @@ describe('Form', function () {
     fireEvent.click(getByText('Submit'));
     expect(queryByText('invalid')).toBeNull();
   });
-  test('required validation', function () {
+  test('validate', function () {
     var onSubmit = jest.fn();
 
     var _render3 = render(React.createElement(MnetUIBase, null, React.createElement(Form, {
+      onSubmit: onSubmit
+    }, React.createElement(FormField, {
+      name: "test",
+      required: true,
+      validate: [function (name) {
+        return name.length === 1 ? 'simple string' : undefined;
+      }, function (name) {
+        return name.length === 2 ? React.createElement(Text, null, " ReactNode ") : undefined;
+      }, function (name) {
+        return name.length === 3 ? {
+          message: 'status error',
+          status: 'error'
+        } : undefined;
+      }, function (name) {
+        return name.length === 4 ? {
+          message: 'status info',
+          status: 'info'
+        } : undefined;
+      }],
+      placeholder: "test input"
+    }), React.createElement(Button, {
+      type: "submit",
+      primary: true,
+      label: "Submit"
+    })))),
+        getByPlaceholderText = _render3.getByPlaceholderText,
+        getByText = _render3.getByText;
+
+    fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'a'
+      }
+    });
+    fireEvent.click(getByText('Submit'));
+    expect(getByText('simple string')).toMatchSnapshot();
+    fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'ab'
+      }
+    });
+    fireEvent.click(getByText('Submit'));
+    expect(getByText('ReactNode')).toMatchSnapshot();
+    fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'abc'
+      }
+    });
+    fireEvent.click(getByText('Submit'));
+    expect(getByText('status error')).toMatchSnapshot();
+    fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'abcd'
+      }
+    });
+    fireEvent.click(getByText('Submit'));
+    expect(getByText('status info')).toMatchSnapshot();
+  });
+  test('required validation', function () {
+    var onSubmit = jest.fn();
+
+    var _render4 = render(React.createElement(MnetUIBase, null, React.createElement(Form, {
       onSubmit: onSubmit
     }, React.createElement(FormField, {
       name: "test",
@@ -125,9 +222,9 @@ describe('Form', function () {
       primary: true,
       label: "Submit"
     })))),
-        getByPlaceholderText = _render3.getByPlaceholderText,
-        getByText = _render3.getByText,
-        queryByText = _render3.queryByText;
+        getByPlaceholderText = _render4.getByPlaceholderText,
+        getByText = _render4.getByText,
+        queryByText = _render4.queryByText;
 
     fireEvent.click(getByText('Submit'));
     expect(queryByText('required')).toMatchSnapshot();
@@ -141,7 +238,7 @@ describe('Form', function () {
   test('reset clears form', function () {
     var onReset = jest.fn();
 
-    var _render4 = render(React.createElement(MnetUIBase, null, React.createElement(Form, {
+    var _render5 = render(React.createElement(MnetUIBase, null, React.createElement(Form, {
       onReset: onReset
     }, React.createElement(FormField, {
       name: "test",
@@ -152,9 +249,9 @@ describe('Form', function () {
       primary: true,
       label: "Reset"
     })))),
-        getByPlaceholderText = _render4.getByPlaceholderText,
-        getByText = _render4.getByText,
-        queryByText = _render4.queryByText;
+        getByPlaceholderText = _render5.getByPlaceholderText,
+        getByText = _render5.getByText,
+        queryByText = _render5.queryByText;
 
     fireEvent.change(getByPlaceholderText('test input'), {
       target: {
@@ -167,11 +264,13 @@ describe('Form', function () {
   test('initial values', function () {
     var _onSubmit = jest.fn();
 
-    var _render5 = render(React.createElement(MnetUIBase, null, React.createElement(Form, {
+    var _render6 = render(React.createElement(MnetUIBase, null, React.createElement(Form, {
       onSubmit: function onSubmit(_ref) {
-        var value = _ref.value;
+        var value = _ref.value,
+            touched = _ref.touched;
         return _onSubmit({
-          value: value
+          value: value,
+          touched: touched
         });
       }
     }, React.createElement(FormField, {
@@ -187,8 +286,8 @@ describe('Form', function () {
       primary: true,
       label: "Submit"
     })))),
-        getByText = _render5.getByText,
-        queryByText = _render5.queryByText;
+        getByText = _render6.getByText,
+        queryByText = _render6.queryByText;
 
     fireEvent.click(getByText('Submit'));
     expect(queryByText('required')).toBeNull();
@@ -196,7 +295,8 @@ describe('Form', function () {
       value: {
         test: 'Initial value',
         test2: 'Initial value2'
-      }
+      },
+      touched: {}
     }));
   });
 });

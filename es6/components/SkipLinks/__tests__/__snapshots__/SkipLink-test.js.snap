@@ -19,8 +19,8 @@ exports[`SkipLink basic 1`] = `
 }
 
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -68,7 +68,7 @@ exports[`SkipLink basic 1`] = `
 
 exports[`SkipLink basic 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <div>
     <a
@@ -100,17 +100,20 @@ exports[`SkipLink basic 2`] = `
 
 exports[`SkipLink basic 3`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <div>
     <a
       aria-hidden="true"
       class="StyledAnchor-sc-1meb4kf-0 hUzLU SkipLinkTarget__HiddenAnchor-sc-1cistln-0 eVhvpB"
+      data-g-tabindex="-1"
       id="main"
       tabindex="-1"
     />
     Main Content
     <input
+      data-g-tabindex="none"
+      tabindex="-1"
       type="text"
       value="main content"
     />
@@ -119,10 +122,13 @@ exports[`SkipLink basic 3`] = `
     <a
       aria-hidden="true"
       class="StyledAnchor-sc-1meb4kf-0 hUzLU SkipLinkTarget__HiddenAnchor-sc-1cistln-0 eVhvpB"
+      data-g-tabindex="-1"
       id="footer"
       tabindex="-1"
     />
     <input
+      data-g-tabindex="none"
+      tabindex="-1"
       type="text"
       value="footer"
     />

@@ -18,7 +18,6 @@ var ActionList = function ActionList() {
   return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _themes.mnet
   }, _react["default"].createElement(_mnetUiBase.Box, {
-    align: "center",
     pad: "large"
   }, _react["default"].createElement(_mnetUiBase.List, {
     data: _data.data.slice(0, 10),

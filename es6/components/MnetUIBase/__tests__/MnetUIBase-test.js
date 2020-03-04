@@ -77,6 +77,13 @@ describe('MnetUIBase', function () {
     }, "MnetUIBase App"));
     expect(component.toJSON()).toMatchSnapshot();
   });
+  test('background', function () {
+    var component = renderer.create(React.createElement(MnetUIBase, {
+      full: true,
+      background: "blue"
+    }, "MnetUIBase App"));
+    expect(component.toJSON()).toMatchSnapshot();
+  });
   test('announce', function (done) {
     var _render = render(React.createElement(MnetUIBase, null, React.createElement(AnnounceContext.Consumer, null, function (announce) {
       return React.createElement(TestAnnouncer, {

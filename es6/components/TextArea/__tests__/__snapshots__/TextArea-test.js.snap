@@ -2,8 +2,8 @@
 
 exports[`TextArea basic 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -17,14 +17,15 @@ exports[`TextArea basic 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -57,6 +58,7 @@ exports[`TextArea basic 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -65,8 +67,8 @@ exports[`TextArea basic 1`] = `
 
 exports[`TextArea disabled 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -80,14 +82,15 @@ exports[`TextArea disabled 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
   border: none;
   width: 100%;
@@ -126,6 +129,7 @@ exports[`TextArea disabled 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -134,8 +138,8 @@ exports[`TextArea disabled 1`] = `
 
 exports[`TextArea fill 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -149,14 +153,15 @@ exports[`TextArea fill 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
   height: 100%;
 }
@@ -190,6 +195,7 @@ exports[`TextArea fill 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -198,8 +204,8 @@ exports[`TextArea fill 1`] = `
 
 exports[`TextArea focusIndicator 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -213,14 +219,15 @@ exports[`TextArea focusIndicator 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -253,6 +260,7 @@ exports[`TextArea focusIndicator 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -261,8 +269,8 @@ exports[`TextArea focusIndicator 1`] = `
 
 exports[`TextArea placeholder 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -276,14 +284,15 @@ exports[`TextArea placeholder 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -316,6 +325,7 @@ exports[`TextArea placeholder 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     placeholder="placeholder"
@@ -325,8 +335,8 @@ exports[`TextArea placeholder 1`] = `
 
 exports[`TextArea plain 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -340,14 +350,15 @@ exports[`TextArea plain 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
   border: none;
   width: 100%;
@@ -383,6 +394,7 @@ exports[`TextArea plain 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -391,8 +403,8 @@ exports[`TextArea plain 1`] = `
 
 exports[`TextArea resize false 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -406,14 +418,15 @@ exports[`TextArea resize false 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
   resize: none;
 }
@@ -447,6 +460,7 @@ exports[`TextArea resize false 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -455,8 +469,8 @@ exports[`TextArea resize false 1`] = `
 
 exports[`TextArea resize horizontal 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -470,14 +484,15 @@ exports[`TextArea resize horizontal 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
   resize: horizontal;
 }
@@ -511,6 +526,7 @@ exports[`TextArea resize horizontal 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -519,8 +535,8 @@ exports[`TextArea resize horizontal 1`] = `
 
 exports[`TextArea resize true 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -534,14 +550,15 @@ exports[`TextArea resize true 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
   resize: both;
 }
@@ -575,6 +592,7 @@ exports[`TextArea resize true 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -583,8 +601,8 @@ exports[`TextArea resize true 1`] = `
 
 exports[`TextArea resize vertical 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -598,14 +616,15 @@ exports[`TextArea resize vertical 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
   resize: vertical;
 }
@@ -639,6 +658,7 @@ exports[`TextArea resize vertical 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
   />
@@ -647,8 +667,8 @@ exports[`TextArea resize vertical 1`] = `
 
 exports[`TextArea size large 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -662,17 +682,18 @@ exports[`TextArea size large 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 14.666666666666666px;
+  line-height: 18.666666666666668px;
 }
 
 .c1::-webkit-search-decoration {
@@ -704,6 +725,7 @@ exports[`TextArea size large 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     size="large"
@@ -713,8 +735,8 @@ exports[`TextArea size large 1`] = `
 
 exports[`TextArea size medium 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -728,17 +750,18 @@ exports[`TextArea size medium 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c1::-webkit-search-decoration {
@@ -770,6 +793,7 @@ exports[`TextArea size medium 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     size="medium"
@@ -779,8 +803,8 @@ exports[`TextArea size medium 1`] = `
 
 exports[`TextArea size small 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -794,17 +818,18 @@ exports[`TextArea size small 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 9.333333333333334px;
+  line-height: 13.333333333333334px;
 }
 
 .c1::-webkit-search-decoration {
@@ -836,6 +861,7 @@ exports[`TextArea size small 1`] = `
     id="item"
     name="item"
     onBlur={[Function]}
+    onChange={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     size="small"

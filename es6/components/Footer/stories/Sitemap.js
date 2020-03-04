@@ -2,7 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Grommet as MnetUIBaseIcon } from "grommet-icons/es6/icons/Grommet";
+import { MnetUIBase as MnetUIBaseIcon } from "grommet-icons/es6/icons/MnetUIBase";
 import { Anchor, Box, Footer, MnetUIBase, Main, Text, mnet } from 'mnet-ui-base';
 import { threeColumns as data } from './data';
 

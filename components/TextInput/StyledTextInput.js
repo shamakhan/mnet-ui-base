@@ -18,7 +18,7 @@ var sizeStyle = function sizeStyle(props) {
   return (0, _styledComponents.css)(["font-size:", ";line-height:", ";"], data.size, data.height);
 };
 
-var plainStyle = (0, _styledComponents.css)([""]);
+var plainStyle = (0, _styledComponents.css)(["border:none;box-shadow:none;"]);
 
 var StyledTextInput = _styledComponents["default"].input.withConfig({
   displayName: "StyledTextInput",

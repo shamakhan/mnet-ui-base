@@ -2,8 +2,8 @@
 
 exports[`DataTable aggregate 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -37,11 +37,11 @@ exports[`DataTable aggregate 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c6 {
@@ -51,10 +51,10 @@ exports[`DataTable aggregate 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c9 {
@@ -64,11 +64,11 @@ exports[`DataTable aggregate 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -82,13 +82,13 @@ exports[`DataTable aggregate 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -225,8 +225,8 @@ exports[`DataTable aggregate 1`] = `
 
 exports[`DataTable background 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -260,11 +260,11 @@ exports[`DataTable background 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c8 {
@@ -274,10 +274,10 @@ exports[`DataTable background 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c13 {
@@ -287,11 +287,11 @@ exports[`DataTable background 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c4 {
@@ -303,11 +303,11 @@ exports[`DataTable background 1`] = `
   text-align: start;
   background: #20314f;
   color: #f8f8f8;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c6 {
@@ -319,10 +319,10 @@ exports[`DataTable background 1`] = `
   text-align: start;
   background: #20314f;
   color: #f8f8f8;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c10 {
@@ -334,11 +334,11 @@ exports[`DataTable background 1`] = `
   text-align: start;
   background: #20314f;
   color: #f8f8f8;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c12 {
@@ -350,10 +350,10 @@ exports[`DataTable background 1`] = `
   text-align: start;
   background: #519bff;
   color: #444444;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c14 {
@@ -365,11 +365,11 @@ exports[`DataTable background 1`] = `
   text-align: start;
   background: #4DFFEA;
   color: #444444;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -383,13 +383,13 @@ exports[`DataTable background 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -752,8 +752,8 @@ exports[`DataTable background 1`] = `
 
 exports[`DataTable basic 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -787,11 +787,11 @@ exports[`DataTable basic 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c6 {
@@ -801,10 +801,10 @@ exports[`DataTable basic 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -818,13 +818,13 @@ exports[`DataTable basic 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -941,8 +941,8 @@ exports[`DataTable basic 1`] = `
 
 exports[`DataTable border 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -976,10 +976,10 @@ exports[`DataTable border 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c9 {
@@ -989,11 +989,11 @@ exports[`DataTable border 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c4 {
@@ -1003,11 +1003,11 @@ exports[`DataTable border 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c10 {
@@ -1018,10 +1018,10 @@ exports[`DataTable border 1`] = `
   height: 100%;
   text-align: start;
   border-top: solid 2px #20314f;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -1035,13 +1035,13 @@ exports[`DataTable border 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c6 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -1517,8 +1517,8 @@ exports[`DataTable border 1`] = `
 
 exports[`DataTable click 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1552,11 +1552,11 @@ exports[`DataTable click 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c7 {
@@ -1566,10 +1566,10 @@ exports[`DataTable click 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -1583,13 +1583,13 @@ exports[`DataTable click 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c8 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -1683,7 +1683,7 @@ exports[`DataTable click 1`] = `
 
 exports[`DataTable click 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <table
     class="StyledTable-sc-1iut3o1-6 gCsqvv StyledDataTable-ng31qc-0 lnDqFo"
@@ -1695,11 +1695,11 @@ exports[`DataTable click 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 kfYXPB"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gtQApl"
           scope="col"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             A
           </span>
@@ -1714,11 +1714,11 @@ exports[`DataTable click 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 dWgyOb"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
           scope="row"
         >
           <span
-            class="StyledText-sc-3e83s1-0 fgKWd"
+            class="StyledText-sc-3e83s1-0 kGuimG"
           >
             alpha
           </span>
@@ -1728,11 +1728,11 @@ exports[`DataTable click 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 dWgyOb"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
           scope="row"
         >
           <span
-            class="StyledText-sc-3e83s1-0 fgKWd"
+            class="StyledText-sc-3e83s1-0 kGuimG"
           >
             beta
           </span>
@@ -1742,7 +1742,7 @@ exports[`DataTable click 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
         >
           <div
             class="StyledBox-sc-1etxkdl-0 jBQShp"
@@ -1756,8 +1756,8 @@ exports[`DataTable click 2`] = `
 
 exports[`DataTable empty 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1809,8 +1809,8 @@ exports[`DataTable empty 1`] = `
 
 exports[`DataTable footer 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1844,11 +1844,11 @@ exports[`DataTable footer 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c6 {
@@ -1858,10 +1858,10 @@ exports[`DataTable footer 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c9 {
@@ -1871,11 +1871,11 @@ exports[`DataTable footer 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -1889,13 +1889,13 @@ exports[`DataTable footer 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -2038,8 +2038,8 @@ exports[`DataTable groupBy 1`] = `
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
-  fill: rgba(0,0,0,0.33);
-  stroke: rgba(0,0,0,0.33);
+  fill: #cdd3e3;
+  stroke: #cdd3e3;
 }
 
 .c7 g {
@@ -2066,8 +2066,8 @@ exports[`DataTable groupBy 1`] = `
 }
 
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2092,7 +2092,7 @@ exports[`DataTable groupBy 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 6px;
+  padding: 2px;
 }
 
 .c5 {
@@ -2131,11 +2131,11 @@ exports[`DataTable groupBy 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c11 {
@@ -2145,10 +2145,10 @@ exports[`DataTable groupBy 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c4 {
@@ -2157,12 +2157,12 @@ exports[`DataTable groupBy 1`] = `
   font-weight: inherit;
   text-align: inherit;
   height: 100%;
-  width: 48px;
-  max-width: 48px;
+  width: 32px;
+  max-width: 32px;
   overflow: hidden;
   vertical-align: top;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
+  border-bottom: solid 1px #cdd3e3;
   padding: 0px;
 }
 
@@ -2172,8 +2172,8 @@ exports[`DataTable groupBy 1`] = `
   font-weight: inherit;
   text-align: inherit;
   height: 100%;
-  width: 48px;
-  max-width: 48px;
+  width: 32px;
+  max-width: 32px;
   overflow: hidden;
   vertical-align: top;
   text-align: start;
@@ -2191,8 +2191,8 @@ exports[`DataTable groupBy 1`] = `
 }
 
 .c9 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c2 {
@@ -2201,9 +2201,9 @@ exports[`DataTable groupBy 1`] = `
   height: auto;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 3px;
+    padding: 2px;
   }
 }
 
@@ -2369,7 +2369,7 @@ exports[`DataTable groupBy 1`] = `
 
 exports[`DataTable groupBy 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <table
     class="StyledTable-sc-1iut3o1-6 gCsqvv StyledDataTable-ng31qc-0 lnDqFo"
@@ -2381,7 +2381,7 @@ exports[`DataTable groupBy 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 enoool"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gMWEaD"
         >
           <button
             aria-label="expand"
@@ -2389,11 +2389,11 @@ exports[`DataTable groupBy 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-1etxkdl-0 bxhqdb"
+              class="StyledBox-sc-1etxkdl-0 czasUY"
             >
               <svg
                 aria-label="FormDown"
-                class="StyledIcon-ofa7kd-0 eoTmgW"
+                class="StyledIcon-ofa7kd-0 gNXnLb"
                 viewBox="0 0 24 24"
               >
                 <polyline
@@ -2407,21 +2407,21 @@ exports[`DataTable groupBy 2`] = `
           </button>
         </td>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 kfYXPB"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gtQApl"
           scope="col"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             A
           </span>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 kfYXPB"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gtQApl"
           scope="col"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             B
           </span>
@@ -2435,7 +2435,7 @@ exports[`DataTable groupBy 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 hCTkEJ"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 iVgFLO"
         >
           <button
             aria-label="expand"
@@ -2443,11 +2443,11 @@ exports[`DataTable groupBy 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-1etxkdl-0 bxhqdb"
+              class="StyledBox-sc-1etxkdl-0 czasUY"
             >
               <svg
                 aria-label="FormDown"
-                class="StyledIcon-ofa7kd-0 eoTmgW"
+                class="StyledIcon-ofa7kd-0 gNXnLb"
                 viewBox="0 0 24 24"
               >
                 <polyline
@@ -2461,24 +2461,24 @@ exports[`DataTable groupBy 2`] = `
           </button>
         </td>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
           scope="row"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             one
           </span>
         </th>
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
         />
       </tr>
       <tr
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 hCTkEJ"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 iVgFLO"
         >
           <button
             aria-label="expand"
@@ -2486,11 +2486,11 @@ exports[`DataTable groupBy 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-1etxkdl-0 bxhqdb"
+              class="StyledBox-sc-1etxkdl-0 czasUY"
             >
               <svg
                 aria-label="FormDown"
-                class="StyledIcon-ofa7kd-0 eoTmgW"
+                class="StyledIcon-ofa7kd-0 gNXnLb"
                 viewBox="0 0 24 24"
               >
                 <polyline
@@ -2504,17 +2504,17 @@ exports[`DataTable groupBy 2`] = `
           </button>
         </td>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
           scope="row"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             two
           </span>
         </th>
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
         />
       </tr>
     </tbody>
@@ -2530,8 +2530,8 @@ exports[`DataTable groupBy expand 1`] = `
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
-  fill: rgba(0,0,0,0.33);
-  stroke: rgba(0,0,0,0.33);
+  fill: #cdd3e3;
+  stroke: #cdd3e3;
 }
 
 .c7 g {
@@ -2558,8 +2558,8 @@ exports[`DataTable groupBy expand 1`] = `
 }
 
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2584,7 +2584,7 @@ exports[`DataTable groupBy expand 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 6px;
+  padding: 2px;
 }
 
 .c5 {
@@ -2623,11 +2623,11 @@ exports[`DataTable groupBy expand 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c11 {
@@ -2637,10 +2637,10 @@ exports[`DataTable groupBy expand 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c4 {
@@ -2649,12 +2649,12 @@ exports[`DataTable groupBy expand 1`] = `
   font-weight: inherit;
   text-align: inherit;
   height: 100%;
-  width: 48px;
-  max-width: 48px;
+  width: 32px;
+  max-width: 32px;
   overflow: hidden;
   vertical-align: top;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
+  border-bottom: solid 1px #cdd3e3;
   padding: 0px;
 }
 
@@ -2664,8 +2664,8 @@ exports[`DataTable groupBy expand 1`] = `
   font-weight: inherit;
   text-align: inherit;
   height: 100%;
-  width: 48px;
-  max-width: 48px;
+  width: 32px;
+  max-width: 32px;
   overflow: hidden;
   vertical-align: top;
   text-align: start;
@@ -2678,8 +2678,8 @@ exports[`DataTable groupBy expand 1`] = `
   font-weight: inherit;
   text-align: inherit;
   height: 100%;
-  width: 48px;
-  max-width: 48px;
+  width: 32px;
+  max-width: 32px;
   overflow: hidden;
   vertical-align: bottom;
   text-align: start;
@@ -2697,8 +2697,8 @@ exports[`DataTable groupBy expand 1`] = `
 }
 
 .c9 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c2 {
@@ -2707,9 +2707,9 @@ exports[`DataTable groupBy expand 1`] = `
   height: auto;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 3px;
+    padding: 2px;
   }
 }
 
@@ -2946,8 +2946,8 @@ exports[`DataTable groupBy property 1`] = `
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
-  fill: rgba(0,0,0,0.33);
-  stroke: rgba(0,0,0,0.33);
+  fill: #cdd3e3;
+  stroke: #cdd3e3;
 }
 
 .c7 g {
@@ -2974,8 +2974,8 @@ exports[`DataTable groupBy property 1`] = `
 }
 
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -3000,7 +3000,7 @@ exports[`DataTable groupBy property 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 6px;
+  padding: 2px;
 }
 
 .c5 {
@@ -3039,11 +3039,11 @@ exports[`DataTable groupBy property 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c11 {
@@ -3053,10 +3053,10 @@ exports[`DataTable groupBy property 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c4 {
@@ -3065,12 +3065,12 @@ exports[`DataTable groupBy property 1`] = `
   font-weight: inherit;
   text-align: inherit;
   height: 100%;
-  width: 48px;
-  max-width: 48px;
+  width: 32px;
+  max-width: 32px;
   overflow: hidden;
   vertical-align: top;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
+  border-bottom: solid 1px #cdd3e3;
   padding: 0px;
 }
 
@@ -3080,8 +3080,8 @@ exports[`DataTable groupBy property 1`] = `
   font-weight: inherit;
   text-align: inherit;
   height: 100%;
-  width: 48px;
-  max-width: 48px;
+  width: 32px;
+  max-width: 32px;
   overflow: hidden;
   vertical-align: top;
   text-align: start;
@@ -3099,8 +3099,8 @@ exports[`DataTable groupBy property 1`] = `
 }
 
 .c9 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c2 {
@@ -3109,9 +3109,9 @@ exports[`DataTable groupBy property 1`] = `
   height: auto;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 3px;
+    padding: 2px;
   }
 }
 
@@ -3277,7 +3277,7 @@ exports[`DataTable groupBy property 1`] = `
 
 exports[`DataTable groupBy property 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <table
     class="StyledTable-sc-1iut3o1-6 gCsqvv StyledDataTable-ng31qc-0 lnDqFo"
@@ -3289,7 +3289,7 @@ exports[`DataTable groupBy property 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 enoool"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gMWEaD"
         >
           <button
             aria-label="expand"
@@ -3297,11 +3297,11 @@ exports[`DataTable groupBy property 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-1etxkdl-0 bxhqdb"
+              class="StyledBox-sc-1etxkdl-0 czasUY"
             >
               <svg
                 aria-label="FormDown"
-                class="StyledIcon-ofa7kd-0 eoTmgW"
+                class="StyledIcon-ofa7kd-0 gNXnLb"
                 viewBox="0 0 24 24"
               >
                 <polyline
@@ -3315,21 +3315,21 @@ exports[`DataTable groupBy property 2`] = `
           </button>
         </td>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 kfYXPB"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gtQApl"
           scope="col"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             A
           </span>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 kfYXPB"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gtQApl"
           scope="col"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             B
           </span>
@@ -3343,7 +3343,7 @@ exports[`DataTable groupBy property 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 hCTkEJ"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 iVgFLO"
         >
           <button
             aria-label="expand"
@@ -3351,11 +3351,11 @@ exports[`DataTable groupBy property 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-1etxkdl-0 bxhqdb"
+              class="StyledBox-sc-1etxkdl-0 czasUY"
             >
               <svg
                 aria-label="FormDown"
-                class="StyledIcon-ofa7kd-0 eoTmgW"
+                class="StyledIcon-ofa7kd-0 gNXnLb"
                 viewBox="0 0 24 24"
               >
                 <polyline
@@ -3369,24 +3369,24 @@ exports[`DataTable groupBy property 2`] = `
           </button>
         </td>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
           scope="row"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             one
           </span>
         </th>
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
         />
       </tr>
       <tr
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 hCTkEJ"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 iVgFLO"
         >
           <button
             aria-label="expand"
@@ -3394,11 +3394,11 @@ exports[`DataTable groupBy property 2`] = `
             type="button"
           >
             <div
-              class="StyledBox-sc-1etxkdl-0 bxhqdb"
+              class="StyledBox-sc-1etxkdl-0 czasUY"
             >
               <svg
                 aria-label="FormDown"
-                class="StyledIcon-ofa7kd-0 eoTmgW"
+                class="StyledIcon-ofa7kd-0 gNXnLb"
                 viewBox="0 0 24 24"
               >
                 <polyline
@@ -3412,17 +3412,17 @@ exports[`DataTable groupBy property 2`] = `
           </button>
         </td>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
           scope="row"
         >
           <span
-            class="StyledText-sc-3e83s1-0 glCdoa"
+            class="StyledText-sc-3e83s1-0 bsNPum"
           >
             two
           </span>
         </th>
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
         />
       </tr>
     </tbody>
@@ -3432,8 +3432,8 @@ exports[`DataTable groupBy property 2`] = `
 
 exports[`DataTable pad 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -3467,10 +3467,10 @@ exports[`DataTable pad 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c14 {
@@ -3480,11 +3480,11 @@ exports[`DataTable pad 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c4 {
@@ -3494,8 +3494,8 @@ exports[`DataTable pad 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding: 12px;
+  border-bottom: solid 1px #cdd3e3;
+  padding: 4px;
 }
 
 .c6 {
@@ -3505,7 +3505,7 @@ exports[`DataTable pad 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding: 12px;
+  padding: 4px;
 }
 
 .c10 {
@@ -3515,8 +3515,8 @@ exports[`DataTable pad 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding: 12px;
+  border-top: solid 1px #cdd3e3;
+  padding: 4px;
 }
 
 .c11 {
@@ -3526,11 +3526,11 @@ exports[`DataTable pad 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .c12 {
@@ -3540,10 +3540,10 @@ exports[`DataTable pad 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .c13 {
@@ -3553,11 +3553,11 @@ exports[`DataTable pad 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .c3 {
@@ -3571,13 +3571,13 @@ exports[`DataTable pad 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -3940,8 +3940,8 @@ exports[`DataTable pad 1`] = `
 
 exports[`DataTable paths 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -3975,11 +3975,11 @@ exports[`DataTable paths 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c6 {
@@ -3989,10 +3989,10 @@ exports[`DataTable paths 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -4006,13 +4006,13 @@ exports[`DataTable paths 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -4129,8 +4129,8 @@ exports[`DataTable paths 1`] = `
 
 exports[`DataTable primaryKey 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -4164,11 +4164,11 @@ exports[`DataTable primaryKey 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c6 {
@@ -4178,10 +4178,10 @@ exports[`DataTable primaryKey 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -4195,13 +4195,13 @@ exports[`DataTable primaryKey 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -4318,8 +4318,8 @@ exports[`DataTable primaryKey 1`] = `
 
 exports[`DataTable replace 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -4353,11 +4353,11 @@ exports[`DataTable replace 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c6 {
@@ -4367,10 +4367,10 @@ exports[`DataTable replace 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -4384,13 +4384,13 @@ exports[`DataTable replace 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -4507,8 +4507,8 @@ exports[`DataTable replace 1`] = `
 
 exports[`DataTable resizeable 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -4567,7 +4567,7 @@ exports[`DataTable resizeable 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  border-right: solid 1px rgba(0,0,0,0.33);
+  border-inline-end: solid 1px #cdd3e3;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -4576,15 +4576,15 @@ exports[`DataTable resizeable 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .c7 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 12px;
+  width: 4px;
 }
 
 .c4 {
@@ -4594,11 +4594,11 @@ exports[`DataTable resizeable 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c10 {
@@ -4608,10 +4608,10 @@ exports[`DataTable resizeable 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -4625,13 +4625,13 @@ exports[`DataTable resizeable 1`] = `
 }
 
 .c6 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c11 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -4774,8 +4774,8 @@ exports[`DataTable resizeable 1`] = `
 
 exports[`DataTable rowProps 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -4809,11 +4809,11 @@ exports[`DataTable rowProps 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c8 {
@@ -4823,10 +4823,10 @@ exports[`DataTable rowProps 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c10 {
@@ -4836,11 +4836,11 @@ exports[`DataTable rowProps 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-top: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-top: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c6 {
@@ -4852,8 +4852,8 @@ exports[`DataTable rowProps 1`] = `
   text-align: start;
   background: #20314f;
   color: #f8f8f8;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding: 48px;
+  border-bottom: solid 1px #cdd3e3;
+  padding: 16px;
 }
 
 .c3 {
@@ -4867,13 +4867,13 @@ exports[`DataTable rowProps 1`] = `
 }
 
 .c5 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -5016,8 +5016,8 @@ exports[`DataTable search 1`] = `
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
-  fill: rgba(0,0,0,0.33);
-  stroke: rgba(0,0,0,0.33);
+  fill: #cdd3e3;
+  stroke: #cdd3e3;
 }
 
 .c9 g {
@@ -5044,8 +5044,8 @@ exports[`DataTable search 1`] = `
 }
 
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -5100,7 +5100,7 @@ exports[`DataTable search 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 12px;
+  width: 4px;
 }
 
 .c8 {
@@ -5120,7 +5120,7 @@ exports[`DataTable search 1`] = `
   padding: 0;
   text-align: inherit;
   line-height: 0;
-  padding: 12px;
+  padding: 4px;
 }
 
 .c8:hover {
@@ -5135,11 +5135,11 @@ exports[`DataTable search 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c10 {
@@ -5149,10 +5149,10 @@ exports[`DataTable search 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -5166,13 +5166,13 @@ exports[`DataTable search 1`] = `
 }
 
 .c6 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c11 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -5300,7 +5300,7 @@ exports[`DataTable search 1`] = `
 
 exports[`DataTable search 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <table
     class="StyledTable-sc-1iut3o1-6 gCsqvv StyledDataTable-ng31qc-0 lnDqFo"
@@ -5312,19 +5312,19 @@ exports[`DataTable search 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 kfYXPB"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gtQApl"
           scope="col"
         >
           <div
             class="StyledBox-sc-1etxkdl-0 gHPAHC"
           >
             <span
-              class="StyledText-sc-3e83s1-0 glCdoa"
+              class="StyledText-sc-3e83s1-0 bsNPum"
             >
               A
             </span>
             <div
-              class="StyledBox__StyledBoxGap-sc-1etxkdl-1 hkymms"
+              class="StyledBox__StyledBoxGap-sc-1etxkdl-1 VNJWf"
             />
             .c0 {
   display: -webkit-box;
@@ -5334,120 +5334,115 @@ exports[`DataTable search 2`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 0;
   min-height: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-left: 12px;
-  padding-right: 12px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  -webkit-appearance: none;
+  padding: 7px;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
+  margin: 0;
+  outline-color: #B1C2FE;
+  border-color: #B1C2FE;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
+  width: 100%;
+  outline-color: #B1C2FE;
+  border-color: #B1C2FE;
+}
+
+.c2 > circle,
+.c2 > ellipse,
+.c2 > line,
+.c2 > path,
+.c2 > polygon,
+.c2 > polyline,
+.c2 > rect {
+  outline: #B1C2FE solid 1px;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #e0e4ee;
+}
+
+.c2::-moz-placeholder {
+  color: #e0e4ee;
+}
+
+.c2:-ms-input-placeholder {
+  color: #e0e4ee;
+}
+
+.c2::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+
+.c2 > circle,
+.c2 > ellipse,
+.c2 > line,
+.c2 > path,
+.c2 > polygon,
+.c2 > polyline,
+.c2 > rect {
+  outline: #B1C2FE solid 1px;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
 }
 
 .c1 {
-  font-size: 18px;
-  line-height: 24px;
+  position: relative;
+  width: 100%;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c0 {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
 
 <div
               class="c0"
             >
-              <span
+              <div
                 class="c1"
               >
-                [
-              </span>
-            </div>
-            .c1 {
-  display: inline-block;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 24px;
-  height: 24px;
-  fill: rgba(0,0,0,0.33);
-  stroke: rgba(0,0,0,0.33);
-}
-
-.c1 g {
-  fill: inherit;
-  stroke: inherit;
-}
-
-.c1 *:not([stroke])[fill="none"] {
-  stroke-width: 0;
-}
-
-.c1 *[stroke*="#"],
-.c1 *[STROKE*="#"] {
-  stroke: inherit;
-  fill: none;
-}
-
-.c1 *[fill-rule],
-.c1 *[FILL-RULE],
-.c1 *[fill*="#"],
-.c1 *[FILL*="#"] {
-  fill: inherit;
-  stroke: none;
-}
-
-.c0 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  outline: none;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  line-height: 0;
-  padding: 12px;
-}
-
-.c0:hover {
-  background-color: rgba(221,221,221,0.4);
-  color: #000000;
-}
-
-<button
-              aria-label="focus-search-a"
-              class="c0"
-              type="button"
-            >
-              <svg
-                aria-label="FormSearch"
-                class="c1"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M13.8,13.8 L18,18 L13.8,13.8 Z M10.5,15 C12.9852814,15 15,12.9852814 15,10.5 C15,8.01471863 12.9852814,6 10.5,6 C8.01471863,6 6,8.01471863 6,10.5 C6,12.9852814 8.01471863,15 10.5,15 Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-width="2"
+                <input
+                  autocomplete="off"
+                  class="c2"
+                  name="search-a"
+                  value="["
                 />
-              </svg>
-            </button>
+              </div>
+            </div>
           </div>
         </th>
       </tr>
@@ -5462,10 +5457,10 @@ exports[`DataTable search 2`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c0 {
@@ -5473,8 +5468,8 @@ exports[`DataTable search 2`] = `
 }
 
 .c2 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -5496,7 +5491,7 @@ exports[`DataTable search 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
         >
           <div
             class="StyledBox-sc-1etxkdl-0 jBQShp"
@@ -5510,8 +5505,8 @@ exports[`DataTable search 2`] = `
 
 exports[`DataTable sort 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -5583,11 +5578,11 @@ exports[`DataTable sort 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  border-bottom: solid 1px rgba(0,0,0,0.33);
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  border-bottom: solid 1px #cdd3e3;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c8 {
@@ -5597,10 +5592,10 @@ exports[`DataTable sort 1`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c3 {
@@ -5614,13 +5609,13 @@ exports[`DataTable sort 1`] = `
 }
 
 .c7 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c9 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -5778,7 +5773,7 @@ exports[`DataTable sort 1`] = `
 
 exports[`DataTable sort 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <table
     class="StyledTable-sc-1iut3o1-6 gCsqvv StyledDataTable-ng31qc-0 lnDqFo"
@@ -5790,7 +5785,7 @@ exports[`DataTable sort 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES StyledDataTable__StyledDataTableRow-ng31qc-1 kgRrlS"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 kfYXPB"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gtQApl"
           scope="col"
         >
           <button
@@ -5801,7 +5796,7 @@ exports[`DataTable sort 2`] = `
               class="StyledBox-sc-1etxkdl-0 kfxhW"
             >
               <span
-                class="StyledText-sc-3e83s1-0 glCdoa"
+                class="StyledText-sc-3e83s1-0 bsNPum"
               >
                 A
               </span>
@@ -5809,7 +5804,7 @@ exports[`DataTable sort 2`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  width: 6px;
+  width: 2px;
 }
 
 <div
@@ -5865,7 +5860,7 @@ exports[`DataTable sort 2`] = `
           </button>
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 kfYXPB"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gtQApl"
           scope="col"
         >
           <button
@@ -5876,7 +5871,7 @@ exports[`DataTable sort 2`] = `
               class="StyledBox-sc-1etxkdl-0 kfxhW"
             >
               <span
-                class="StyledText-sc-3e83s1-0 glCdoa"
+                class="StyledText-sc-3e83s1-0 bsNPum"
               >
                 B
               </span>
@@ -5895,10 +5890,10 @@ exports[`DataTable sort 2`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c0 {
@@ -5906,13 +5901,13 @@ exports[`DataTable sort 2`] = `
 }
 
 .c3 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c2 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -5946,10 +5941,10 @@ exports[`DataTable sort 2`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c0 {
@@ -5957,13 +5952,13 @@ exports[`DataTable sort 2`] = `
 }
 
 .c3 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c2 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -5997,10 +5992,10 @@ exports[`DataTable sort 2`] = `
   text-align: inherit;
   height: 100%;
   text-align: start;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .c0 {
@@ -6008,13 +6003,13 @@ exports[`DataTable sort 2`] = `
 }
 
 .c3 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .c2 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 
@@ -6045,7 +6040,7 @@ exports[`DataTable sort 2`] = `
         class="StyledTable__StyledTableRow-sc-1iut3o1-2 kSVBES"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1iut3o1-0 dxdYme"
+          class="StyledTable__StyledTableCell-sc-1iut3o1-0 gTUgaE"
         >
           <div
             class="StyledBox-sc-1etxkdl-0 jBQShp"

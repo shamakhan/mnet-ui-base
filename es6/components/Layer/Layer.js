@@ -1,105 +1,80 @@
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-import React, { Component } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { getNewContainer } from '../../utils';
 import { LayerContainer } from './LayerContainer';
 import { animationDuration } from './StyledLayer';
+var Layer = forwardRef(function (props, ref) {
+  var animate = props.animate,
+      animation = props.animation;
 
-var Layer =
-/*#__PURE__*/
-function (_Component) {
-  _inheritsLoose(Layer, _Component);
+  var _useState = useState(),
+      originalFocusedElement = _useState[0],
+      setOriginalFocusedElement = _useState[1];
 
-  function Layer() {
-    var _this;
+  useEffect(function () {
+    return setOriginalFocusedElement(document.activeElement);
+  }, []);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+  var _useState2 = useState(),
+      layerContainer = _useState2[0],
+      setLayerContainer = _useState2[1];
 
-    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
+  useEffect(function () {
+    return setLayerContainer(getNewContainer());
+  }, []); // just a few things to clean up when the Layer is unmounted
 
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      islayerContainerAvailable: false
-    });
-
-    return _this;
-  }
-
-  var _proto = Layer.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    // ensure document is available
-    this.originalFocusedElement = document.activeElement;
-    this.layerContainer = getNewContainer();
-    this.setState({
-      islayerContainerAvailable: true
-    });
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    var _this2 = this;
-
-    var _this$props = this.props,
-        animate = _this$props.animate,
-        animation = _this$props.animation;
-
-    if (this.originalFocusedElement) {
-      if (this.originalFocusedElement.focus) {
-        // wait for the fixed positioning to come back to normal
-        // see layer styling for reference
-        setTimeout(function () {
-          _this2.originalFocusedElement.focus();
-        }, 0);
-      } else if (this.originalFocusedElement.parentNode && this.originalFocusedElement.parentNode.focus) {
-        // required for IE11 and Edge
-        this.originalFocusedElement.parentNode.focus();
-      }
-    }
-
-    var activeAnimation = animation !== undefined ? animation : animate;
-
-    if (activeAnimation !== false) {
-      // undefined uses 'slide' as the default
-      // animate out and remove later
-      var layerClone = this.layerContainer.cloneNode(true);
-      layerClone.id = 'layerClone';
-      document.body.appendChild(layerClone);
-      var clonedContainer = layerClone.querySelector('[class*="StyledLayer__StyledContainer"]');
-
-      if (clonedContainer && clonedContainer.style) {
-        clonedContainer.style.animationDirection = 'reverse';
+  useEffect(function () {
+    return function () {
+      if (originalFocusedElement) {
+        if (originalFocusedElement.focus) {
+          // wait for the fixed positioning to come back to normal
+          // see layer styling for reference
+          setTimeout(function () {
+            return originalFocusedElement.focus();
+          }, 0);
+        } else if (originalFocusedElement.parentNode && originalFocusedElement.parentNode.focus) {
+          // required for IE11 and Edge
+          originalFocusedElement.parentNode.focus();
+        }
       }
 
-      setTimeout(function () {
-        // we add the id and query here so the unit tests work
-        var clone = document.getElementById('layerClone');
-        if (clone) document.body.removeChild(clone);
-      }, animationDuration);
-    }
-  };
+      if (layerContainer) {
+        var activeAnimation = animation !== undefined ? animation : animate;
 
-  _proto.render = function render() {
-    var islayerContainerAvailable = this.state.islayerContainerAvailable;
-    return islayerContainerAvailable ? createPortal(React.createElement(LayerContainer, this.props), this.layerContainer) : null;
-  };
+        if (activeAnimation !== false) {
+          // undefined uses 'slide' as the default
+          // animate out and remove later
+          var layerClone = layerContainer.cloneNode(true);
+          layerClone.id = 'layerClone';
+          document.body.appendChild(layerClone);
+          var clonedContainer = layerClone.querySelector('[class*="StyledLayer__StyledContainer"]');
 
-  return Layer;
-}(Component);
+          if (clonedContainer && clonedContainer.style) {
+            clonedContainer.style.animationDirection = 'reverse';
+          }
 
-_defineProperty(Layer, "defaultProps", {
-  full: false,
-  margin: 'none',
-  modal: true,
-  position: 'center',
-  responsive: true
+          setTimeout(function () {
+            // we add the id and query here so the unit tests work
+            var clone = document.getElementById('layerClone');
+
+            if (clone) {
+              document.body.removeChild(clone);
+              layerContainer.remove();
+            }
+          }, animationDuration);
+        } else {
+          document.body.removeChild(layerContainer);
+        }
+      }
+    };
+  }, [animate, animation, layerContainer, originalFocusedElement]);
+  return layerContainer ? createPortal(React.createElement(LayerContainer, _extends({
+    ref: ref
+  }, props)), layerContainer) : null;
 });
-
+Layer.displayName = 'Layer';
 var LayerDoc;
 
 if (process.env.NODE_ENV !== 'production') {

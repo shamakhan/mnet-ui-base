@@ -316,6 +316,14 @@ describe('Box', function () {
       }
     }), _react["default"].createElement(_.Box, {
       margin: {
+        start: 'small'
+      }
+    }), _react["default"].createElement(_.Box, {
+      margin: {
+        end: 'small'
+      }
+    }), _react["default"].createElement(_.Box, {
+      margin: {
         top: 'small'
       }
     })));
@@ -349,6 +357,14 @@ describe('Box', function () {
     }), _react["default"].createElement(_.Box, {
       pad: {
         right: 'small'
+      }
+    }), _react["default"].createElement(_.Box, {
+      pad: {
+        start: 'small'
+      }
+    }), _react["default"].createElement(_.Box, {
+      pad: {
+        end: 'small'
       }
     }), _react["default"].createElement(_.Box, {
       pad: {
@@ -504,7 +520,10 @@ describe('Box', function () {
         size: 'large',
         style: 'dashed'
       }]
-    })));
+    }), _react["default"].createElement(_.Box, {
+      border: "between",
+      gap: "small"
+    }, _react["default"].createElement(_.Box, null, "one"), _react["default"].createElement(_.Box, null, "two"))));
 
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();

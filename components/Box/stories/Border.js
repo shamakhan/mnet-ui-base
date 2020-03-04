@@ -87,6 +87,16 @@ var BorderBox = function BorderBox() {
         style: type
       }
     }, type);
+  })), _react["default"].createElement(_mnetUiBase.Box, {
+    direction: "row-responsive",
+    gap: "large",
+    align: "center"
+  }, ['column', 'row'].map(function (direction) {
+    return _react["default"].createElement(_mnetUiBase.Box, {
+      direction: direction,
+      gap: "medium",
+      border: "between"
+    }, _react["default"].createElement(_mnetUiBase.Text, null, "between"), _react["default"].createElement(_mnetUiBase.Text, null, direction));
   }))));
 };
 

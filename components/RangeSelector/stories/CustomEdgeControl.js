@@ -69,7 +69,7 @@ var CustomEdgeControl = function CustomEdgeControl(_ref) {
       align: "center",
       pad: "small",
       border: false
-    }, _react["default"].createElement(_grommetIcons.Grommet, {
+    }, _react["default"].createElement(_grommetIcons.MnetUIBase, {
       color: "brand",
       size: "small"
     }));

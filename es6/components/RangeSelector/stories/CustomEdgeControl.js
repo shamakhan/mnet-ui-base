@@ -5,7 +5,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { Gremlin } from "grommet-icons/es6/icons/Gremlin";
-import { Grommet as MnetUIBaseIcon } from "grommet-icons/es6/icons/Grommet";
+import { MnetUIBase as MnetUIBaseIcon } from "grommet-icons/es6/icons/MnetUIBase";
 import { MnetUIBase, Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 import { deepMerge } from 'mnet-ui-base/utils';

@@ -1,3 +1,5 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 import React from 'react';
 import 'jest-styled-components';
 import { cleanup, render, fireEvent } from '@testing-library/react';
@@ -6,13 +8,32 @@ import { createPortal, expectPortal } from '../../../utils/portal';
 import { MnetUIBase, Box, Layer } from '../..';
 import { LayerContainer } from '../LayerContainer';
 
+var SimpleLayer = function SimpleLayer() {
+  var _React$useState = React.useState(true),
+      showLayer = _React$useState[0],
+      setShowLayer = _React$useState[1];
+
+  React.useEffect(function () {
+    return setShowLayer(false);
+  }, []);
+  var layer;
+
+  if (showLayer) {
+    layer = React.createElement(Layer, {
+      "data-testid": "test-dom-removal"
+    }, "This is a test");
+  }
+
+  return React.createElement(Box, null, layer);
+};
+
 var FakeLayer = function FakeLayer(_ref) {
   var children = _ref.children,
       dataTestid = _ref.dataTestid;
 
-  var _React$useState = React.useState(false),
-      showLayer = _React$useState[0],
-      setShowLayer = _React$useState[1];
+  var _React$useState2 = React.useState(false),
+      showLayer = _React$useState2[0],
+      setShowLayer = _React$useState2[1];
 
   React.useEffect(function () {
     return setShowLayer(true);
@@ -31,13 +52,31 @@ var FakeLayer = function FakeLayer(_ref) {
     })));
   }
 
-  return React.createElement(MnetUIBase, null, layer, children);
+  return React.createElement(Box, null, layer, children);
+};
+
+var TargetLayer = function TargetLayer(props) {
+  var _React$useState3 = React.useState(),
+      target = _React$useState3[0],
+      setTarget = _React$useState3[1];
+
+  var layer;
+
+  if (target) {
+    layer = React.createElement(Layer, _extends({}, props, {
+      target: target
+    }), "this is a test layer");
+  }
+
+  return React.createElement(MnetUIBase, null, React.createElement("div", {
+    ref: setTarget
+  }), layer);
 };
 
 describe('Layer', function () {
   beforeEach(createPortal);
   afterEach(cleanup);
-  ['top', 'bottom', 'left', 'right', 'center'].forEach(function (position) {
+  ['top', 'bottom', 'left', 'right', 'start', 'end', 'center'].forEach(function (position) {
     return test("position " + position, function () {
       render(React.createElement(MnetUIBase, null, React.createElement(Layer, {
         id: "position-test",
@@ -166,19 +205,6 @@ describe('Layer', function () {
       done();
     }, 300);
   });
-  test('should be null prior to mounting, displayed after mount', function () {
-    var ref = React.createRef();
-    render(React.createElement(MnetUIBase, null, React.createElement(Layer, {
-      "data-testid": "test-layer-container",
-      ref: ref
-    }, "Layer container is available")));
-    ref.current.setState({
-      islayerContainerAvailable: false
-    });
-    expect(queryByTestId(document, 'test-layer-container')).toBeNull();
-    ref.current.componentDidMount();
-    expect(queryByTestId(document, 'test-layer-container')).toMatchSnapshot();
-  });
   test('focus on layer', function () {
     /* eslint-disable jsx-a11y/no-autofocus */
     render(React.createElement(MnetUIBase, null, React.createElement(Layer, {
@@ -208,5 +234,17 @@ describe('Layer', function () {
     var inputNode = getByTestId(document, 'focus-input');
     expect(layerNode).toMatchSnapshot();
     expect(document.activeElement).toBe(inputNode);
+  });
+  test('target', function () {
+    render(React.createElement(MnetUIBase, null, React.createElement(TargetLayer, {
+      id: "target-test"
+    }, "This layer has a target")));
+    expectPortal('target-test').toMatchSnapshot();
+  });
+  test('unmounts from dom', function () {
+    render(React.createElement(MnetUIBase, null, React.createElement(SimpleLayer, null)));
+    setTimeout(function () {
+      expect(queryByTestId(document, 'test-dom-removal')).toBeNull();
+    }, 1000);
   });
 });

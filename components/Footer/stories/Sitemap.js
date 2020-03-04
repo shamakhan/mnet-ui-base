@@ -63,7 +63,7 @@ var Sitemap = function Sitemap() {
   }, _react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     gap: "small"
-  }, _react["default"].createElement(_grommetIcons.Grommet, {
+  }, _react["default"].createElement(_grommetIcons.MnetUIBase, {
     color: "brand",
     size: "large"
   }), _react["default"].createElement(_mnetUiBase.Text, {

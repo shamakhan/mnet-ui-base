@@ -1,9 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Grid a11yTitle renders 1`] = `
+.c0 {
+  font-size: 12px;
+  line-height: 16px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c1 {
+  display: grid;
+  box-sizing: border-box;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      aria-label="My Grid"
+      class="c1"
+    />
+  </div>
+</div>
+`;
+
 exports[`Grid align renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -67,8 +95,8 @@ exports[`Grid align renders 1`] = `
 
 exports[`Grid alignContent renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -150,8 +178,8 @@ exports[`Grid alignContent renders 1`] = `
 
 exports[`Grid areas renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -164,7 +192,7 @@ exports[`Grid areas renders 1`] = `
   box-sizing: border-box;
   grid-template-areas: "header main footer" "header sidebar footer" ". .";
   grid-template-columns: 75% 25%;
-  grid-template-rows: 48px 384px 96px;
+  grid-template-rows: 32px 256px 64px;
 }
 
 <div
@@ -178,8 +206,8 @@ exports[`Grid areas renders 1`] = `
 
 exports[`Grid areas renders when given an array of string arrays 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -192,7 +220,7 @@ exports[`Grid areas renders when given an array of string arrays 1`] = `
   box-sizing: border-box;
   grid-template-areas: "header header" "sidebar main" "footer footer";
   grid-template-columns: 75% 25%;
-  grid-template-rows: 48px 384px 96px;
+  grid-template-rows: 32px 256px 64px;
 }
 
 <div
@@ -206,8 +234,8 @@ exports[`Grid areas renders when given an array of string arrays 1`] = `
 
 exports[`Grid as renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -231,8 +259,8 @@ exports[`Grid as renders 1`] = `
 
 exports[`Grid columns renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -261,19 +289,19 @@ exports[`Grid columns renders 1`] = `
 .c4 {
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: repeat( auto-fill,minmax(192px,1fr) );
+  grid-template-columns: repeat( auto-fill,minmax(128px,1fr) );
 }
 
 .c5 {
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: repeat( auto-fit,minmax(192px,1fr) );
+  grid-template-columns: repeat( auto-fit,minmax(128px,1fr) );
 }
 
 .c6 {
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: repeat( auto-fill,minmax(192px,384px) );
+  grid-template-columns: repeat( auto-fill,minmax(128px,256px) );
 }
 
 <div
@@ -302,8 +330,8 @@ exports[`Grid columns renders 1`] = `
 
 exports[`Grid fill renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -355,8 +383,8 @@ exports[`Grid fill renders 1`] = `
 
 exports[`Grid gap renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -367,62 +395,62 @@ exports[`Grid gap renders 1`] = `
 .c1 {
   display: grid;
   box-sizing: border-box;
-  grid-gap: 12px 12px;
+  grid-gap: 4px 4px;
 }
 
 .c2 {
   display: grid;
   box-sizing: border-box;
-  grid-gap: 24px 24px;
+  grid-gap: 8px 8px;
 }
 
 .c3 {
   display: grid;
   box-sizing: border-box;
-  grid-gap: 48px 48px;
+  grid-gap: 16px 16px;
 }
 
 .c4 {
   display: grid;
   box-sizing: border-box;
-  grid-row-gap: 12px;
+  grid-row-gap: 4px;
 }
 
 .c5 {
   display: grid;
   box-sizing: border-box;
-  grid-row-gap: 24px;
+  grid-row-gap: 8px;
 }
 
 .c6 {
   display: grid;
   box-sizing: border-box;
-  grid-row-gap: 48px;
+  grid-row-gap: 16px;
 }
 
 .c7 {
   display: grid;
   box-sizing: border-box;
-  grid-column-gap: 12px;
+  grid-column-gap: 4px;
 }
 
 .c8 {
   display: grid;
   box-sizing: border-box;
-  grid-column-gap: 24px;
+  grid-column-gap: 8px;
 }
 
 .c9 {
   display: grid;
   box-sizing: border-box;
-  grid-column-gap: 48px;
+  grid-column-gap: 16px;
 }
 
 .c10 {
   display: grid;
   box-sizing: border-box;
-  grid-row-gap: 12px;
-  grid-column-gap: 24px;
+  grid-row-gap: 4px;
+  grid-column-gap: 8px;
 }
 
 <div
@@ -463,8 +491,8 @@ exports[`Grid gap renders 1`] = `
 
 exports[`Grid justify renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -516,8 +544,8 @@ exports[`Grid justify renders 1`] = `
 
 exports[`Grid justifyContent renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -603,10 +631,128 @@ exports[`Grid justifyContent renders 1`] = `
 </div>
 `;
 
+exports[`Grid pad 1`] = `
+.c0 {
+  font-size: 12px;
+  line-height: 16px;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c1 {
+  display: grid;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+.c2 {
+  display: grid;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.c3 {
+  display: grid;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.c4 {
+  display: grid;
+  box-sizing: border-box;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.c5 {
+  display: grid;
+  box-sizing: border-box;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.c6 {
+  display: grid;
+  box-sizing: border-box;
+  padding-bottom: 4px;
+}
+
+.c7 {
+  display: grid;
+  box-sizing: border-box;
+  padding-left: 4px;
+}
+
+.c8 {
+  display: grid;
+  box-sizing: border-box;
+  padding-right: 4px;
+}
+
+.c9 {
+  display: grid;
+  box-sizing: border-box;
+  padding-inline-start: 4px;
+}
+
+.c10 {
+  display: grid;
+  box-sizing: border-box;
+  padding-inline-end: 4px;
+}
+
+.c11 {
+  display: grid;
+  box-sizing: border-box;
+  padding-top: 4px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+  <div
+    className="c3"
+  />
+  <div
+    className="c4"
+  />
+  <div
+    className="c5"
+  />
+  <div
+    className="c6"
+  />
+  <div
+    className="c7"
+  />
+  <div
+    className="c8"
+  />
+  <div
+    className="c9"
+  />
+  <div
+    className="c10"
+  />
+  <div
+    className="c11"
+  />
+</div>
+`;
+
 exports[`Grid renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -630,8 +776,8 @@ exports[`Grid renders 1`] = `
 
 exports[`Grid rows renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -642,13 +788,13 @@ exports[`Grid rows renders 1`] = `
 .c1 {
   display: grid;
   box-sizing: border-box;
-  grid-template-rows: 192px 768px 384px;
+  grid-template-rows: 128px 512px 256px;
 }
 
 .c2 {
   display: grid;
   box-sizing: border-box;
-  grid-auto-rows: 192px;
+  grid-auto-rows: 128px;
 }
 
 <div
@@ -660,33 +806,5 @@ exports[`Grid rows renders 1`] = `
   <div
     className="c2"
   />
-</div>
-`;
-
-exports[`a11yTitle renders 1`] = `
-.c0 {
-  font-size: 18px;
-  line-height: 24px;
-  box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c1 {
-  display: grid;
-  box-sizing: border-box;
-}
-
-<div>
-  <div
-    class="c0"
-  >
-    <div
-      aria-label="My Grid"
-      class="c1"
-    />
-  </div>
 </div>
 `;

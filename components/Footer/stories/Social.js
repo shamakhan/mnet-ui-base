@@ -56,7 +56,7 @@ var Social = function Social() {
     align: "center",
     direction: "row",
     gap: "xsmall"
-  }, _react["default"].createElement(_grommetIcons.Grommet, {
+  }, _react["default"].createElement(_grommetIcons.MnetUIBase, {
     color: "brand",
     size: "medium"
   }), _react["default"].createElement(_mnetUiBase.Text, {

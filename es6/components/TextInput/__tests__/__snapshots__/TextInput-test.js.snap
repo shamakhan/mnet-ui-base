@@ -7,14 +7,15 @@ exports[`TextInput basic 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -58,8 +59,8 @@ exports[`TextInput basic 1`] = `
 
 exports[`TextInput close suggestion drop 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -73,14 +74,15 @@ exports[`TextInput close suggestion drop 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -179,7 +181,7 @@ exports[`TextInput close suggestion drop 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 12px;
+  padding: 4px;
 }
 
 .c7 {
@@ -231,8 +233,8 @@ exports[`TextInput close suggestion drop 2`] = `
 }
 
 .c1 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -266,9 +268,9 @@ exports[`TextInput close suggestion drop 2`] = `
   max-height: inherit;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 6px;
+    padding: 4px;
   }
 }
 
@@ -293,6 +295,7 @@ exports[`TextInput close suggestion drop 2`] = `
 
 <div
   class="c0 c1"
+  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -353,15 +356,15 @@ exports[`TextInput close suggestion drop 3`] = `
   box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
 }
 
-@media only screen and (max-width:768px) {
-  .cWLJoU {
-    padding: 6px;
+@media only screen and (max-width:512px) {
+  .idoCJE {
+    padding: 4px;
   }
 }
 
-.GOEwZ {
-  font-size: 18px;
-  line-height: 24px;
+.iHfJbP {
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -384,7 +387,7 @@ exports[`TextInput close suggestion drop 3`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -405,18 +408,18 @@ exports[`TextInput close suggestion drop 3`] = `
 
 exports[`TextInput close suggestion drop 4`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <div
     class="StyledTextInput__StyledTextInputContainer-ilbntv-1 jIAIZE"
   >
     <input
       autocomplete="off"
-      class="StyledTextInput-ilbntv-0 lcLZmS"
+      class="StyledTextInput-ilbntv-0 ejGDFh"
       data-testid="test-input"
       id="item"
       name="item"
-      value=""
+      value=" "
     />
   </div>
 </div>
@@ -424,8 +427,8 @@ exports[`TextInput close suggestion drop 4`] = `
 
 exports[`TextInput complex suggestions 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -439,14 +442,15 @@ exports[`TextInput complex suggestions 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -577,8 +581,8 @@ exports[`TextInput complex suggestions 2`] = `
 }
 
 .c1 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -633,6 +637,7 @@ exports[`TextInput complex suggestions 2`] = `
 
 <div
   class="c0 c1"
+  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -685,15 +690,15 @@ exports[`TextInput complex suggestions 3`] = `
   box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
 }
 
-@media only screen and (max-width:768px) {
-  .cWLJoU {
-    padding: 6px;
+@media only screen and (max-width:512px) {
+  .idoCJE {
+    padding: 4px;
   }
 }
 
-.GOEwZ {
-  font-size: 18px;
-  line-height: 24px;
+.iHfJbP {
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -716,7 +721,7 @@ exports[`TextInput complex suggestions 3`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -742,14 +747,15 @@ exports[`TextInput disabled 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
   opacity: 0.3;
   cursor: default;
@@ -796,8 +802,8 @@ exports[`TextInput disabled 1`] = `
 
 exports[`TextInput handles next and previous without suggestion 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -811,14 +817,15 @@ exports[`TextInput handles next and previous without suggestion 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -868,14 +875,14 @@ exports[`TextInput handles next and previous without suggestion 1`] = `
 
 exports[`TextInput handles next and previous without suggestion 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <div
     class="StyledTextInput__StyledTextInputContainer-ilbntv-1 jIAIZE"
   >
     <input
       autocomplete="off"
-      class="StyledTextInput-ilbntv-0 lcLZmS"
+      class="StyledTextInput-ilbntv-0 bOJdpn"
       data-testid="test-input"
       id="item"
       name="item"
@@ -936,7 +943,7 @@ exports[`TextInput large drop height 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 12px;
+  padding: 4px;
 }
 
 .c7 {
@@ -988,8 +995,8 @@ exports[`TextInput large drop height 1`] = `
 }
 
 .c1 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1020,12 +1027,12 @@ exports[`TextInput large drop height 1`] = `
 }
 
 .c3 {
-  max-height: 768px;
+  max-height: 512px;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 6px;
+    padding: 4px;
   }
 }
 
@@ -1050,6 +1057,7 @@ exports[`TextInput large drop height 1`] = `
 
 <div
   class="c0 c1"
+  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -1110,15 +1118,15 @@ exports[`TextInput large drop height 2`] = `
   box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
 }
 
-@media only screen and (max-width:768px) {
-  .cWLJoU {
-    padding: 6px;
+@media only screen and (max-width:512px) {
+  .idoCJE {
+    padding: 4px;
   }
 }
 
-.GOEwZ {
-  font-size: 18px;
-  line-height: 24px;
+.iHfJbP {
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1141,7 +1149,7 @@ exports[`TextInput large drop height 2`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1160,19 +1168,19 @@ exports[`TextInput large drop height 2`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .jelrel {
+  .gTOSTg {
     width: 100%;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .gCzMjn {
+  .kFBqoL {
     width: 100%;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .jrDezH {
+  .byNtyK {
     width: 100%;
   }
 }"
@@ -1229,7 +1237,7 @@ exports[`TextInput medium drop height 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 12px;
+  padding: 4px;
 }
 
 .c7 {
@@ -1281,8 +1289,8 @@ exports[`TextInput medium drop height 1`] = `
 }
 
 .c1 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1313,12 +1321,12 @@ exports[`TextInput medium drop height 1`] = `
 }
 
 .c3 {
-  max-height: 384px;
+  max-height: 256px;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 6px;
+    padding: 4px;
   }
 }
 
@@ -1343,6 +1351,7 @@ exports[`TextInput medium drop height 1`] = `
 
 <div
   class="c0 c1"
+  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -1403,15 +1412,15 @@ exports[`TextInput medium drop height 2`] = `
   box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
 }
 
-@media only screen and (max-width:768px) {
-  .cWLJoU {
-    padding: 6px;
+@media only screen and (max-width:512px) {
+  .idoCJE {
+    padding: 4px;
   }
 }
 
-.GOEwZ {
-  font-size: 18px;
-  line-height: 24px;
+.iHfJbP {
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1434,7 +1443,7 @@ exports[`TextInput medium drop height 2`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1453,13 +1462,13 @@ exports[`TextInput medium drop height 2`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .jelrel {
+  .gTOSTg {
     width: 100%;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .gCzMjn {
+  .kFBqoL {
     width: 100%;
   }
 }"
@@ -1467,8 +1476,8 @@ exports[`TextInput medium drop height 2`] = `
 
 exports[`TextInput select a suggestion 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1482,14 +1491,15 @@ exports[`TextInput select a suggestion 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -1539,8 +1549,8 @@ exports[`TextInput select a suggestion 1`] = `
 
 exports[`TextInput select suggestion 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1554,17 +1564,20 @@ exports[`TextInput select suggestion 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 14.666666666666666px;
+  line-height: 18.666666666666668px;
+  border: none;
+  box-shadow: none;
 }
 
 .c2::-webkit-search-decoration {
@@ -1662,7 +1675,7 @@ exports[`TextInput select suggestion 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 12px;
+  padding: 4px;
 }
 
 .c7 {
@@ -1714,8 +1727,8 @@ exports[`TextInput select suggestion 2`] = `
 }
 
 .c1 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1749,9 +1762,9 @@ exports[`TextInput select suggestion 2`] = `
   max-height: inherit;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 6px;
+    padding: 4px;
   }
 }
 
@@ -1776,6 +1789,7 @@ exports[`TextInput select suggestion 2`] = `
 
 <div
   class="c0 c1"
+  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -1836,15 +1850,15 @@ exports[`TextInput select suggestion 3`] = `
   box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
 }
 
-@media only screen and (max-width:768px) {
-  .cWLJoU {
-    padding: 6px;
+@media only screen and (max-width:512px) {
+  .idoCJE {
+    padding: 4px;
   }
 }
 
-.GOEwZ {
-  font-size: 18px;
-  line-height: 24px;
+.iHfJbP {
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1867,7 +1881,7 @@ exports[`TextInput select suggestion 3`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1888,18 +1902,18 @@ exports[`TextInput select suggestion 3`] = `
 
 exports[`TextInput select suggestion 4`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 cLFevK"
+  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
 >
   <div
     class="StyledTextInput__StyledTextInputContainer-ilbntv-1 jIAIZE"
   >
     <input
       autocomplete="off"
-      class="StyledTextInput-ilbntv-0 funDBl"
+      class="StyledTextInput-ilbntv-0 gpypmo"
       data-testid="test-input"
       id="item"
       name="item"
-      value=""
+      value="test1"
     />
   </div>
 </div>
@@ -1956,7 +1970,7 @@ exports[`TextInput small drop height 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 12px;
+  padding: 4px;
 }
 
 .c7 {
@@ -2008,8 +2022,8 @@ exports[`TextInput small drop height 1`] = `
 }
 
 .c1 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2040,12 +2054,12 @@ exports[`TextInput small drop height 1`] = `
 }
 
 .c3 {
-  max-height: 192px;
+  max-height: 128px;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 6px;
+    padding: 4px;
   }
 }
 
@@ -2070,6 +2084,7 @@ exports[`TextInput small drop height 1`] = `
 
 <div
   class="c0 c1"
+  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -2130,15 +2145,15 @@ exports[`TextInput small drop height 2`] = `
   box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
 }
 
-@media only screen and (max-width:768px) {
-  .cWLJoU {
-    padding: 6px;
+@media only screen and (max-width:512px) {
+  .idoCJE {
+    padding: 4px;
   }
 }
 
-.GOEwZ {
-  font-size: 18px;
-  line-height: 24px;
+.iHfJbP {
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2161,7 +2176,7 @@ exports[`TextInput small drop height 2`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2180,7 +2195,7 @@ exports[`TextInput small drop height 2`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .jelrel {
+  .gTOSTg {
     width: 100%;
   }
 }"
@@ -2193,14 +2208,15 @@ exports[`TextInput suggestions 1`] = `
   font-family: inherit;
   border: none;
   -webkit-appearance: none;
-  padding: 11px;
+  padding: 7px;
   outline: none;
   background: transparent;
   color: inherit;
-  font-weight: 600;
+  box-shadow: inset 1px 1px 1px 0 #cdd3e3;
+  font-weight: 400;
   margin: 0;
-  border: 1px solid rgba(0,0,0,0.33);
-  border-radius: 0px;
+  border: 1px solid #cdd3e3;
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -2295,7 +2311,7 @@ exports[`TextInput suggestions 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 12px;
+  padding: 4px;
 }
 
 .c7 {
@@ -2347,8 +2363,8 @@ exports[`TextInput suggestions 2`] = `
 }
 
 .c1 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2382,9 +2398,9 @@ exports[`TextInput suggestions 2`] = `
   max-height: inherit;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
-    padding: 6px;
+    padding: 4px;
   }
 }
 
@@ -2409,6 +2425,7 @@ exports[`TextInput suggestions 2`] = `
 
 <div
   class="c0 c1"
+  data-g-portal-id="0"
   id="text-input-drop__item"
   style="left: 0px; width: 0.1px; top: 0px; max-height: 768px;"
   tabindex="-1"
@@ -2469,15 +2486,15 @@ exports[`TextInput suggestions 3`] = `
   box-shadow: 0px 2px 4px rgba(0,0,0,0.20);
 }
 
-@media only screen and (max-width:768px) {
-  .cWLJoU {
-    padding: 6px;
+@media only screen and (max-width:512px) {
+  .idoCJE {
+    padding: 4px;
   }
 }
 
-.GOEwZ {
-  font-size: 18px;
-  line-height: 24px;
+.iHfJbP {
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2500,7 +2517,7 @@ exports[`TextInput suggestions 3`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .GOEwZ {
+  .iHfJbP {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

@@ -2,8 +2,8 @@
 
 exports[`CheckBox checked renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -52,8 +52,8 @@ exports[`CheckBox checked renders 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 24px;
+  height: 16px;
+  width: 16px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -65,8 +65,8 @@ exports[`CheckBox checked renders 1`] = `
   box-sizing: border-box;
   stroke-width: 4px;
   stroke: #E15151;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 
 .c1 {
@@ -106,7 +106,7 @@ exports[`CheckBox checked renders 1`] = `
 }
 
 .c4:checked + span > span {
-  left: calc( 48px - 24px );
+  left: calc( 32px - 16px );
   background: #E15151;
 }
 
@@ -116,7 +116,7 @@ exports[`CheckBox checked renders 1`] = `
   flex-shrink: 0;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c5 {
     border: solid 2px #E15151;
   }
@@ -138,6 +138,7 @@ exports[`CheckBox checked renders 1`] = `
         checked={true}
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -164,8 +165,8 @@ exports[`CheckBox checked renders 1`] = `
 
 exports[`CheckBox disabled renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -214,8 +215,8 @@ exports[`CheckBox disabled renders 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 24px;
+  height: 16px;
+  width: 16px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -241,8 +242,8 @@ exports[`CheckBox disabled renders 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 24px;
+  height: 16px;
+  width: 16px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -254,8 +255,8 @@ exports[`CheckBox disabled renders 1`] = `
   box-sizing: border-box;
   stroke-width: 4px;
   stroke: #E15151;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 
 .c1 {
@@ -295,7 +296,7 @@ exports[`CheckBox disabled renders 1`] = `
 }
 
 .c4:checked + span > span {
-  left: calc( 48px - 24px );
+  left: calc( 32px - 16px );
   background: #E15151;
 }
 
@@ -305,13 +306,13 @@ exports[`CheckBox disabled renders 1`] = `
   flex-shrink: 0;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c5 {
     border: solid 2px rgba(0,0,0,0.15);
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c6 {
     border: solid 2px #E15151;
   }
@@ -333,6 +334,7 @@ exports[`CheckBox disabled renders 1`] = `
         className="c4"
         disabled={true}
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -358,6 +360,7 @@ exports[`CheckBox disabled renders 1`] = `
         className="c4"
         disabled={true}
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -390,8 +393,8 @@ exports[`CheckBox disabled renders 1`] = `
 
 exports[`CheckBox indeterminate renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -440,8 +443,8 @@ exports[`CheckBox indeterminate renders 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 24px;
+  height: 16px;
+  width: 16px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -457,7 +460,7 @@ exports[`CheckBox indeterminate renders 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin-right: 12px;
+  margin-right: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -477,8 +480,8 @@ exports[`CheckBox indeterminate renders 1`] = `
   box-sizing: border-box;
   stroke-width: 4px;
   stroke: #E15151;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 
 .c1 {
@@ -518,7 +521,7 @@ exports[`CheckBox indeterminate renders 1`] = `
 }
 
 .c4:checked + span > span {
-  left: calc( 48px - 24px );
+  left: calc( 32px - 16px );
   background: #E15151;
 }
 
@@ -528,15 +531,15 @@ exports[`CheckBox indeterminate renders 1`] = `
   flex-shrink: 0;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c5 {
     border: solid 2px rgba(0,0,0,0.15);
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c7 {
-    margin-right: 6px;
+    margin-right: 4px;
   }
 }
 
@@ -553,6 +556,7 @@ exports[`CheckBox indeterminate renders 1`] = `
       <input
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -582,6 +586,7 @@ exports[`CheckBox indeterminate renders 1`] = `
       <input
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -609,8 +614,8 @@ exports[`CheckBox indeterminate renders 1`] = `
 
 exports[`CheckBox label renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -636,8 +641,8 @@ exports[`CheckBox label renders 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 24px;
+  height: 16px;
+  width: 16px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -653,7 +658,7 @@ exports[`CheckBox label renders 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin-right: 12px;
+  margin-right: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -706,7 +711,7 @@ exports[`CheckBox label renders 1`] = `
 }
 
 .c4:checked + span > span {
-  left: calc( 48px - 24px );
+  left: calc( 32px - 16px );
   background: #E15151;
 }
 
@@ -716,15 +721,15 @@ exports[`CheckBox label renders 1`] = `
   flex-shrink: 0;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c5 {
     border: solid 2px rgba(0,0,0,0.15);
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c2 {
-    margin-right: 6px;
+    margin-right: 4px;
   }
 }
 
@@ -741,6 +746,7 @@ exports[`CheckBox label renders 1`] = `
       <input
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -762,6 +768,7 @@ exports[`CheckBox label renders 1`] = `
       <input
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -778,8 +785,8 @@ exports[`CheckBox label renders 1`] = `
 
 exports[`CheckBox renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -828,8 +835,8 @@ exports[`CheckBox renders 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 24px;
+  height: 16px;
+  width: 16px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -874,7 +881,7 @@ exports[`CheckBox renders 1`] = `
 }
 
 .c4:checked + span > span {
-  left: calc( 48px - 24px );
+  left: calc( 32px - 16px );
   background: #E15151;
 }
 
@@ -884,7 +891,7 @@ exports[`CheckBox renders 1`] = `
   flex-shrink: 0;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c5 {
     border: solid 2px rgba(0,0,0,0.15);
   }
@@ -903,6 +910,7 @@ exports[`CheckBox renders 1`] = `
       <input
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -924,6 +932,7 @@ exports[`CheckBox renders 1`] = `
         id="test id"
         name="test name"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -937,8 +946,8 @@ exports[`CheckBox renders 1`] = `
 
 exports[`CheckBox reverse renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -964,8 +973,8 @@ exports[`CheckBox reverse renders 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 24px;
-  width: 24px;
+  height: 16px;
+  width: 16px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -981,7 +990,7 @@ exports[`CheckBox reverse renders 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin-left: 12px;
+  margin-left: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1034,7 +1043,7 @@ exports[`CheckBox reverse renders 1`] = `
 }
 
 .c4:checked + span > span {
-  left: calc( 48px - 24px );
+  left: calc( 32px - 16px );
   background: #E15151;
 }
 
@@ -1044,15 +1053,15 @@ exports[`CheckBox reverse renders 1`] = `
   flex-shrink: 0;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c5 {
     border: solid 2px rgba(0,0,0,0.15);
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c2 {
-    margin-left: 6px;
+    margin-left: 4px;
   }
 }
 
@@ -1072,6 +1081,7 @@ exports[`CheckBox reverse renders 1`] = `
       <input
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -1085,8 +1095,8 @@ exports[`CheckBox reverse renders 1`] = `
 
 exports[`CheckBox toggle renders 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1125,7 +1135,7 @@ exports[`CheckBox toggle renders 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
-  margin-right: 12px;
+  margin-right: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1178,7 +1188,7 @@ exports[`CheckBox toggle renders 1`] = `
 }
 
 .c4:checked + span > span {
-  left: calc( 48px - 24px );
+  left: calc( 32px - 16px );
   background: #E15151;
 }
 
@@ -1186,11 +1196,11 @@ exports[`CheckBox toggle renders 1`] = `
   box-sizing: border-box;
   vertical-align: middle;
   display: inline-block;
-  width: 48px;
-  height: 24px;
+  width: 32px;
+  height: 16px;
   border: 2px solid;
   border-color: rgba(0,0,0,0.15);
-  border-radius: 24px;
+  border-radius: 16px;
   background-color: transparent;
 }
 
@@ -1202,10 +1212,10 @@ exports[`CheckBox toggle renders 1`] = `
   left: -2px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   background: #d9d9d9;
-  border-radius: 24px;
+  border-radius: 16px;
 }
 
 .c3 {
@@ -1214,9 +1224,9 @@ exports[`CheckBox toggle renders 1`] = `
   flex-shrink: 0;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c7 {
-    margin-right: 6px;
+    margin-right: 4px;
   }
 }
 
@@ -1233,6 +1243,7 @@ exports[`CheckBox toggle renders 1`] = `
       <input
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -1258,6 +1269,7 @@ exports[`CheckBox toggle renders 1`] = `
         checked={true}
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />
@@ -1282,6 +1294,7 @@ exports[`CheckBox toggle renders 1`] = `
       <input
         className="c4"
         onBlur={[Function]}
+        onChange={[Function]}
         onFocus={[Function]}
         type="checkbox"
       />

@@ -2,21 +2,49 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React from 'react';
-import { compose } from 'recompose';
-import { withFocus, withForwardRef } from '../hocs';
+import React, { forwardRef, useContext, useState } from 'react';
+import { FormContext } from '../Form/FormContext';
 import { StyledRangeInput } from './StyledRangeInput';
+var RangeInput = forwardRef(function (_ref, ref) {
+  var name = _ref.name,
+      _onChange = _ref.onChange,
+      _onFocus = _ref.onFocus,
+      _onBlur = _ref.onBlur,
+      valueProp = _ref.value,
+      rest = _objectWithoutPropertiesLoose(_ref, ["name", "onChange", "onFocus", "onBlur", "value"]);
 
-var RangeInput = function RangeInput(_ref) {
-  var forwardRef = _ref.forwardRef,
-      rest = _objectWithoutPropertiesLoose(_ref, ["forwardRef"]);
+  var formContext = useContext(FormContext);
 
-  return React.createElement(StyledRangeInput, _extends({}, rest, {
-    ref: forwardRef,
+  var _formContext$useFormC = formContext.useFormContext(name, valueProp),
+      value = _formContext$useFormC[0],
+      setValue = _formContext$useFormC[1];
+
+  var _useState = useState(),
+      focus = _useState[0],
+      setFocus = _useState[1];
+
+  return React.createElement(StyledRangeInput, _extends({
+    ref: ref,
+    name: name,
+    focus: focus,
+    value: value
+  }, rest, {
+    onFocus: function onFocus(event) {
+      setFocus(true);
+      if (_onFocus) _onFocus(event);
+    },
+    onBlur: function onBlur(event) {
+      setFocus(false);
+      if (_onBlur) _onBlur(event);
+    },
+    onChange: function onChange(event) {
+      setValue(event.target.value);
+      if (_onChange) _onChange(event);
+    },
     type: "range"
   }));
-};
-
+});
+RangeInput.displayName = 'RangeInput';
 var RangeInputDoc;
 
 if (process.env.NODE_ENV !== 'production') {
@@ -24,5 +52,5 @@ if (process.env.NODE_ENV !== 'production') {
   RangeInputDoc = require('./doc').doc(RangeInput);
 }
 
-var RangeInputWrapper = compose(withFocus(), withForwardRef)(RangeInputDoc || RangeInput);
+var RangeInputWrapper = RangeInputDoc || RangeInput;
 export { RangeInputWrapper as RangeInput };

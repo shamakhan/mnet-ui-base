@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { deepMerge } from 'mnet-ui-base/utils';
-import { mnet, Box, FormField, TextArea, MnetUIBase } from 'mnet-ui-base';
+import { mnet, Box, Button, CheckBox, Form, FormField, MaskedInput, RadioButtonGroup, RangeInput, Select, TextArea, TextInput, MnetUIBase } from 'mnet-ui-base';
 var customFormFieldTheme = {
   global: {
     font: {
-      size: '13px'
+      size: '16px'
     },
     input: {
       weight: 400
@@ -14,32 +14,123 @@ var customFormFieldTheme = {
   formField: {
     label: {
       color: 'dark-3',
-      size: 'xsmall',
-      margin: {
-        vertical: '0',
-        bottom: 'small',
-        horizontal: '0'
-      },
+      size: 'small',
+      margin: 'xsmall',
       weight: 600
     },
-    border: false,
-    margin: 0
+    border: {
+      position: 'outer',
+      side: 'all'
+    },
+    disabled: {
+      background: {
+        color: 'status-disabled',
+        opacity: true
+      }
+    },
+    content: {
+      pad: 'small'
+    },
+    error: {
+      background: {
+        color: 'status-critical',
+        opacity: 'weak'
+      }
+    },
+    margin: 'none'
   }
 };
 
 var CustomFormField = function CustomFormField() {
   return React.createElement(MnetUIBase, {
+    full: true,
     theme: deepMerge(mnet, customFormFieldTheme)
   }, React.createElement(Box, {
+    fill: true,
     align: "center",
-    pad: "large"
+    justify: "center"
+  }, React.createElement(Box, {
+    width: "medium"
+  }, React.createElement(Form, {
+    onReset: function onReset(event) {
+      return console.log(event);
+    },
+    onSubmit: function onSubmit(_ref) {
+      var value = _ref.value;
+      return console.log('Submit', value);
+    }
   }, React.createElement(FormField, {
-    label: "Label",
-    htmlFor: "text-area"
+    label: "Name",
+    name: "name",
+    required: true
+  }, React.createElement(TextInput, {
+    name: "name"
+  })), React.createElement(FormField, {
+    label: "Email",
+    name: "email",
+    required: true
+  }, React.createElement(MaskedInput, {
+    name: "email",
+    mask: [{
+      regexp: /^[\w\-_.]+$/,
+      placeholder: 'example'
+    }, {
+      fixed: '@'
+    }, {
+      regexp: /^[\w]+$/,
+      placeholder: 'my'
+    }, {
+      fixed: '.'
+    }, {
+      regexp: /^[\w]+$/,
+      placeholder: 'com'
+    }]
+  })), React.createElement(FormField, {
+    name: "subscribe"
+  }, React.createElement(CheckBox, {
+    name: "subscribe",
+    label: "Subscribe?"
+  })), React.createElement(FormField, {
+    name: "ampm"
+  }, React.createElement(RadioButtonGroup, {
+    name: "ampm",
+    options: ['morning', 'evening']
+  })), React.createElement(FormField, {
+    label: "Size",
+    name: "size"
+  }, React.createElement(Select, {
+    name: "size",
+    options: ['small', 'medium', 'large']
+  })), React.createElement(FormField, {
+    label: "Comments",
+    name: "comments",
+    disabled: true
   }, React.createElement(TextArea, {
-    id: "text-area",
-    placeholder: "placeholder"
-  }))));
+    name: "comments",
+    disabled: true
+  })), React.createElement(FormField, {
+    label: "Age",
+    name: "age"
+  }, React.createElement(RangeInput, {
+    name: "age",
+    min: 15,
+    max: 75
+  })), React.createElement(Box, {
+    direction: "row",
+    justify: "between",
+    margin: {
+      top: 'medium'
+    }
+  }, React.createElement(Button, {
+    label: "Cancel"
+  }), React.createElement(Button, {
+    type: "reset",
+    label: "Reset"
+  }), React.createElement(Button, {
+    type: "submit",
+    label: "Update",
+    primary: true
+  }))))));
 };
 
 storiesOf('Form', module).add('Custom Theme', function () {

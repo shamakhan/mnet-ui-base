@@ -2,8 +2,8 @@
 
 exports[`RangeSelector basic 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -19,11 +19,16 @@ exports[`RangeSelector basic 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
@@ -40,7 +45,8 @@ exports[`RangeSelector basic 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -51,6 +57,9 @@ exports[`RangeSelector basic 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -108,8 +117,8 @@ exports[`RangeSelector basic 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -123,13 +132,13 @@ exports[`RangeSelector basic 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c2 {
@@ -171,8 +180,8 @@ exports[`RangeSelector basic 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -209,8 +218,8 @@ exports[`RangeSelector basic 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -235,8 +244,8 @@ exports[`RangeSelector basic 1`] = `
 
 exports[`RangeSelector color 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -252,11 +261,16 @@ exports[`RangeSelector color 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
@@ -273,7 +287,8 @@ exports[`RangeSelector color 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -284,6 +299,9 @@ exports[`RangeSelector color 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -341,8 +359,8 @@ exports[`RangeSelector color 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -356,13 +374,13 @@ exports[`RangeSelector color 1`] = `
   max-width: 100%;
   background-color: rgba(32,49,79,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c2 {
@@ -404,8 +422,8 @@ exports[`RangeSelector color 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -442,8 +460,8 @@ exports[`RangeSelector color 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -468,8 +486,8 @@ exports[`RangeSelector color 1`] = `
 
 exports[`RangeSelector direction 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -485,11 +503,16 @@ exports[`RangeSelector direction 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
@@ -506,7 +529,8 @@ exports[`RangeSelector direction 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -517,6 +541,9 @@ exports[`RangeSelector direction 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -574,8 +601,8 @@ exports[`RangeSelector direction 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -589,13 +616,13 @@ exports[`RangeSelector direction 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c8 {
@@ -606,6 +633,10 @@ exports[`RangeSelector direction 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
@@ -623,6 +654,26 @@ exports[`RangeSelector direction 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 8px;
+  height: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -639,7 +690,7 @@ exports[`RangeSelector direction 1`] = `
   overflow: visible;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -665,7 +716,7 @@ exports[`RangeSelector direction 1`] = `
   justify-content: center;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -675,13 +726,12 @@ exports[`RangeSelector direction 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
+  width: 8px;
   height: 100%;
 }
 
@@ -724,8 +774,8 @@ exports[`RangeSelector direction 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -762,8 +812,8 @@ exports[`RangeSelector direction 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -788,7 +838,7 @@ exports[`RangeSelector direction 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c8"
+      className="c9"
       style={
         Object {
           "flex": "20 0 0",
@@ -796,7 +846,7 @@ exports[`RangeSelector direction 1`] = `
       }
     />
     <div
-      className="c9"
+      className="c10"
       onKeyDown={[Function]}
       style={
         Object {
@@ -806,14 +856,14 @@ exports[`RangeSelector direction 1`] = `
     >
       <div
         aria-label="Lower Bounds"
-        className="c10"
+        className="c11"
         onBlur={[Function]}
         onFocus={[Function]}
         style={
           Object {
             "cursor": "row-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -825,7 +875,7 @@ exports[`RangeSelector direction 1`] = `
       </div>
     </div>
     <div
-      className="c11"
+      className="c12"
       style={
         Object {
           "cursor": "ns-resize",
@@ -834,7 +884,7 @@ exports[`RangeSelector direction 1`] = `
       }
     />
     <div
-      className="c9"
+      className="c10"
       onKeyDown={[Function]}
       style={
         Object {
@@ -844,14 +894,14 @@ exports[`RangeSelector direction 1`] = `
     >
       <div
         aria-label="Upper Bounds"
-        className="c10"
+        className="c11"
         onBlur={[Function]}
         onFocus={[Function]}
         style={
           Object {
             "cursor": "row-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -863,7 +913,7 @@ exports[`RangeSelector direction 1`] = `
       </div>
     </div>
     <div
-      className="c8"
+      className="c9"
       style={
         Object {
           "flex": "70 0 0",
@@ -876,8 +926,8 @@ exports[`RangeSelector direction 1`] = `
 
 exports[`RangeSelector handle keyboard 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -898,7 +948,8 @@ exports[`RangeSelector handle keyboard 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -909,6 +960,9 @@ exports[`RangeSelector handle keyboard 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -966,8 +1020,8 @@ exports[`RangeSelector handle keyboard 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -981,13 +1035,13 @@ exports[`RangeSelector handle keyboard 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c1 {
@@ -998,11 +1052,16 @@ exports[`RangeSelector handle keyboard 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
   cursor: pointer;
 }
@@ -1032,7 +1091,7 @@ exports[`RangeSelector handle keyboard 1`] = `
       <div
         aria-label="Lower Bounds"
         class="c5"
-        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 8px; min-height: 8px; z-index: 10;"
         tabindex="0"
       >
         <div
@@ -1051,7 +1110,7 @@ exports[`RangeSelector handle keyboard 1`] = `
       <div
         aria-label="Upper Bounds"
         class="c5"
-        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 8px; min-height: 8px; z-index: 10;"
         tabindex="0"
       >
         <div
@@ -1069,8 +1128,8 @@ exports[`RangeSelector handle keyboard 1`] = `
 
 exports[`RangeSelector handle mouse 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1091,7 +1150,8 @@ exports[`RangeSelector handle mouse 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -1102,6 +1162,9 @@ exports[`RangeSelector handle mouse 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1159,8 +1222,8 @@ exports[`RangeSelector handle mouse 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -1174,13 +1237,13 @@ exports[`RangeSelector handle mouse 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c1 {
@@ -1191,11 +1254,16 @@ exports[`RangeSelector handle mouse 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
   cursor: pointer;
 }
@@ -1225,7 +1293,7 @@ exports[`RangeSelector handle mouse 1`] = `
       <div
         aria-label="Lower Bounds"
         class="c5"
-        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 8px; min-height: 8px; z-index: 10;"
         tabindex="0"
       >
         <div
@@ -1244,7 +1312,7 @@ exports[`RangeSelector handle mouse 1`] = `
       <div
         aria-label="Upper Bounds"
         class="c5"
-        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 8px; min-height: 8px; z-index: 10;"
         tabindex="0"
       >
         <div
@@ -1262,8 +1330,8 @@ exports[`RangeSelector handle mouse 1`] = `
 
 exports[`RangeSelector invert 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1279,11 +1347,16 @@ exports[`RangeSelector invert 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
@@ -1300,7 +1373,8 @@ exports[`RangeSelector invert 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -1311,6 +1385,9 @@ exports[`RangeSelector invert 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1368,8 +1445,8 @@ exports[`RangeSelector invert 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -1383,13 +1460,13 @@ exports[`RangeSelector invert 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c3 {
@@ -1402,13 +1479,13 @@ exports[`RangeSelector invert 1`] = `
   max-width: 100%;
   background-color: rgba(225,227,239,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c2 {
@@ -1450,8 +1527,8 @@ exports[`RangeSelector invert 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -1488,8 +1565,8 @@ exports[`RangeSelector invert 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -1538,8 +1615,8 @@ exports[`RangeSelector invert 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -1576,8 +1653,8 @@ exports[`RangeSelector invert 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -1602,8 +1679,8 @@ exports[`RangeSelector invert 1`] = `
 
 exports[`RangeSelector max 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1619,11 +1696,16 @@ exports[`RangeSelector max 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
@@ -1640,7 +1722,8 @@ exports[`RangeSelector max 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -1651,6 +1734,9 @@ exports[`RangeSelector max 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1708,8 +1794,8 @@ exports[`RangeSelector max 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -1723,13 +1809,13 @@ exports[`RangeSelector max 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c2 {
@@ -1771,8 +1857,8 @@ exports[`RangeSelector max 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -1809,8 +1895,8 @@ exports[`RangeSelector max 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -1835,8 +1921,8 @@ exports[`RangeSelector max 1`] = `
 
 exports[`RangeSelector min 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1852,11 +1938,16 @@ exports[`RangeSelector min 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
@@ -1873,7 +1964,8 @@ exports[`RangeSelector min 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -1884,6 +1976,9 @@ exports[`RangeSelector min 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1941,8 +2036,8 @@ exports[`RangeSelector min 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -1956,13 +2051,13 @@ exports[`RangeSelector min 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c2 {
@@ -2004,8 +2099,8 @@ exports[`RangeSelector min 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2042,8 +2137,8 @@ exports[`RangeSelector min 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2068,8 +2163,8 @@ exports[`RangeSelector min 1`] = `
 
 exports[`RangeSelector opacity 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2085,11 +2180,16 @@ exports[`RangeSelector opacity 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
@@ -2106,7 +2206,8 @@ exports[`RangeSelector opacity 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -2117,6 +2218,9 @@ exports[`RangeSelector opacity 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2174,8 +2278,8 @@ exports[`RangeSelector opacity 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -2189,13 +2293,13 @@ exports[`RangeSelector opacity 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c7 {
@@ -2207,13 +2311,13 @@ exports[`RangeSelector opacity 1`] = `
   outline: none;
   max-width: 100%;
   background-color: rgba(225,81,81,0.1);
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c9 {
@@ -2226,13 +2330,13 @@ exports[`RangeSelector opacity 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.8);
   color: #f8f8f8;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c2 {
@@ -2274,8 +2378,8 @@ exports[`RangeSelector opacity 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2312,8 +2416,8 @@ exports[`RangeSelector opacity 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2362,8 +2466,8 @@ exports[`RangeSelector opacity 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2400,8 +2504,8 @@ exports[`RangeSelector opacity 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2450,8 +2554,8 @@ exports[`RangeSelector opacity 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2488,8 +2592,8 @@ exports[`RangeSelector opacity 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2514,8 +2618,8 @@ exports[`RangeSelector opacity 1`] = `
 
 exports[`RangeSelector round 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2531,11 +2635,16 @@ exports[`RangeSelector round 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
@@ -2547,6 +2656,9 @@ exports[`RangeSelector round 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2604,8 +2716,8 @@ exports[`RangeSelector round 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -2622,8 +2734,9 @@ exports[`RangeSelector round 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  border-radius: 6px;
+  height: 8px;
+  width: 100%;
+  border-radius: 2px;
 }
 
 .c7 {
@@ -2636,14 +2749,14 @@ exports[`RangeSelector round 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  border-radius: 6px;
+  height: 8px;
+  width: 100%;
+  border-radius: 2px;
 }
 
 .c8 {
@@ -2659,8 +2772,9 @@ exports[`RangeSelector round 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  border-radius: 12px;
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
 }
 
 .c9 {
@@ -2673,14 +2787,14 @@ exports[`RangeSelector round 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  border-radius: 12px;
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
 }
 
 .c10 {
@@ -2696,8 +2810,9 @@ exports[`RangeSelector round 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  border-radius: 24px;
+  height: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .c11 {
@@ -2710,14 +2825,14 @@ exports[`RangeSelector round 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  border-radius: 24px;
+  height: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .c12 {
@@ -2733,8 +2848,9 @@ exports[`RangeSelector round 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  border-radius: 48px;
+  height: 8px;
+  width: 100%;
+  border-radius: 16px;
 }
 
 .c13 {
@@ -2747,14 +2863,14 @@ exports[`RangeSelector round 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  border-radius: 48px;
+  height: 8px;
+  width: 100%;
+  border-radius: 16px;
 }
 
 .c14 {
@@ -2770,7 +2886,8 @@ exports[`RangeSelector round 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
   border-radius: 100%;
 }
 
@@ -2784,13 +2901,13 @@ exports[`RangeSelector round 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
   border-radius: 100%;
 }
 
@@ -2801,51 +2918,51 @@ exports[`RangeSelector round 1`] = `
   user-select: none;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c3 {
-    border-radius: 3px;
+    border-radius: 2px;
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c7 {
-    border-radius: 3px;
+    border-radius: 2px;
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c8 {
-    border-radius: 6px;
+    border-radius: 4px;
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c9 {
-    border-radius: 6px;
+    border-radius: 4px;
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c10 {
-    border-radius: 12px;
+    border-radius: 8px;
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c11 {
-    border-radius: 12px;
+    border-radius: 8px;
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c12 {
-    border-radius: 24px;
+    border-radius: 16px;
   }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:512px) {
   .c13 {
-    border-radius: 24px;
+    border-radius: 16px;
   }
 }
 
@@ -2881,8 +2998,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2919,8 +3036,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -2969,8 +3086,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3007,8 +3124,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3057,8 +3174,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3095,8 +3212,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3145,8 +3262,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3183,8 +3300,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3233,8 +3350,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3271,8 +3388,8 @@ exports[`RangeSelector round 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3297,8 +3414,8 @@ exports[`RangeSelector round 1`] = `
 
 exports[`RangeSelector size 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -3314,15 +3431,20 @@ exports[`RangeSelector size 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
 }
 
-.c3 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3335,7 +3457,8 @@ exports[`RangeSelector size 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -3346,6 +3469,9 @@ exports[`RangeSelector size 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3403,9 +3529,45 @@ exports[`RangeSelector size 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background-color: rgba(225,81,81,0.4);
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 8px;
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 1px;
+  width: 100%;
 }
 
 .c7 {
@@ -3418,13 +3580,161 @@ exports[`RangeSelector size 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 1px;
+  width: 100%;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 2px;
+  width: 100%;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background-color: rgba(225,81,81,0.4);
   color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 2px;
+  width: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 4px;
+  width: 100%;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background-color: rgba(225,81,81,0.4);
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 4px;
+  width: 100%;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 16px;
+  width: 100%;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  background-color: rgba(225,81,81,0.4);
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 16px;
+  width: 100%;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  outline: none;
+  max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  background-color: rgba(225,81,81,0.4);
+  color: #444444;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
 }
 
 .c2 {
@@ -3466,8 +3776,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3504,8 +3814,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3530,7 +3840,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c3"
+      className="c8"
       style={
         Object {
           "flex": "20 0 0",
@@ -3554,8 +3864,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3567,7 +3877,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c7"
+      className="c9"
       style={
         Object {
           "cursor": "ew-resize",
@@ -3592,8 +3902,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3605,7 +3915,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c8"
       style={
         Object {
           "flex": "70 0 0",
@@ -3618,7 +3928,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c3"
+      className="c10"
       style={
         Object {
           "flex": "20 0 0",
@@ -3642,8 +3952,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3655,7 +3965,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c7"
+      className="c11"
       style={
         Object {
           "cursor": "ew-resize",
@@ -3680,8 +3990,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3693,7 +4003,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c10"
       style={
         Object {
           "flex": "70 0 0",
@@ -3706,7 +4016,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c3"
+      className="c12"
       style={
         Object {
           "flex": "20 0 0",
@@ -3730,8 +4040,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3743,7 +4053,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c7"
+      className="c13"
       style={
         Object {
           "cursor": "ew-resize",
@@ -3768,8 +4078,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3781,7 +4091,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c12"
       style={
         Object {
           "flex": "70 0 0",
@@ -3794,7 +4104,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c3"
+      className="c14"
       style={
         Object {
           "flex": "20 0 0",
@@ -3818,8 +4128,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3831,7 +4141,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c7"
+      className="c15"
       style={
         Object {
           "cursor": "ew-resize",
@@ -3856,8 +4166,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3869,7 +4179,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c14"
       style={
         Object {
           "flex": "70 0 0",
@@ -3882,7 +4192,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c3"
+      className="c14"
       style={
         Object {
           "flex": "20 0 0",
@@ -3906,8 +4216,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3919,7 +4229,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c7"
+      className="c15"
       style={
         Object {
           "cursor": "ew-resize",
@@ -3944,8 +4254,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -3957,7 +4267,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c14"
       style={
         Object {
           "flex": "70 0 0",
@@ -3970,7 +4280,7 @@ exports[`RangeSelector size 1`] = `
     tabIndex="-1"
   >
     <div
-      className="c3"
+      className="c16"
       style={
         Object {
           "flex": "20 0 0",
@@ -3994,8 +4304,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -4007,7 +4317,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c7"
+      className="c17"
       style={
         Object {
           "cursor": "ew-resize",
@@ -4032,8 +4342,8 @@ exports[`RangeSelector size 1`] = `
         style={
           Object {
             "cursor": "col-resize",
-            "minHeight": 12,
-            "minWidth": 12,
+            "minHeight": 8,
+            "minWidth": 8,
             "zIndex": 10,
           }
         }
@@ -4045,7 +4355,7 @@ exports[`RangeSelector size 1`] = `
       </div>
     </div>
     <div
-      className="c3"
+      className="c16"
       style={
         Object {
           "flex": "70 0 0",
@@ -4058,8 +4368,8 @@ exports[`RangeSelector size 1`] = `
 
 exports[`RangeSelector step renders correct values 1`] = `
 .c0 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 16px;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -4080,7 +4390,8 @@ exports[`RangeSelector step renders correct values 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c4 {
@@ -4091,6 +4402,9 @@ exports[`RangeSelector step renders correct values 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4148,8 +4462,8 @@ exports[`RangeSelector step renders correct values 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   border-radius: 100%;
 }
 
@@ -4163,13 +4477,13 @@ exports[`RangeSelector step renders correct values 1`] = `
   max-width: 100%;
   background-color: rgba(225,81,81,0.4);
   color: #444444;
-  color: #444444;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
+  height: 8px;
+  width: 100%;
 }
 
 .c1 {
@@ -4180,11 +4494,16 @@ exports[`RangeSelector step renders correct values 1`] = `
   box-sizing: border-box;
   outline: none;
   max-width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-width: 0;
   min-height: 0;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
   height: 100%;
   cursor: pointer;
 }
@@ -4214,7 +4533,7 @@ exports[`RangeSelector step renders correct values 1`] = `
       <div
         aria-label="Lower Bounds"
         class="c5"
-        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 8px; min-height: 8px; z-index: 10;"
         tabindex="0"
       >
         <div
@@ -4233,7 +4552,7 @@ exports[`RangeSelector step renders correct values 1`] = `
       <div
         aria-label="Upper Bounds"
         class="c5"
-        style="cursor: col-resize; min-width: 12px; min-height: 12px; z-index: 10;"
+        style="cursor: col-resize; min-width: 8px; min-height: 8px; z-index: 10;"
         tabindex="0"
       >
         <div

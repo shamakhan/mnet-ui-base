@@ -56,13 +56,27 @@ var statusColors = {
 };
 var darkColors = ['#313340', '#4b4d59', '#65707d', '#8691a8', '#999999', '#999999'];
 var lightColors = ['#fbfbfb', '#f6f6f8', '#f5f6f8', '#e1e3ef', '#dfdfdf', '#DADADA'];
-var focusColor = accentColors[1];
+var focusColor = '#B1C2FE';
 var colors = {
   active: (0, _polished.rgba)(221, 221, 221, 0.5),
+  'background-back': {
+    dark: '#33333308',
+    light: '#EDEDED'
+  },
+  'background-front': {
+    dark: '#444444',
+    light: '#FFFFFF'
+  },
+  'background-contrast': {
+    dark: '#33333308',
+    light: '#FFFFFF08'
+  },
+  'active-background': 'background-contrast',
+  'active-text': 'text-strong',
   black: '#000000',
   border: {
     dark: (0, _polished.rgba)(255, 255, 255, 0.33),
-    light: (0, _polished.rgba)(0, 0, 0, 0.33)
+    light: (0, _polished.rgba)(205, 211, 227, 1)
   },
   brand: brandColor,
   control: {
@@ -70,20 +84,35 @@ var colors = {
     light: 'brand'
   },
   focus: focusColor,
-  // "graph-0": 'accent-1',
-  // "graph-1": 'neutral-1',
-  // "graph-2": 'accent-2',
-  // "graph-3": 'neutral-2',
+  'graph-0': 'accent-1',
+  'graph-1': 'neutral-1',
+  'graph-2': 'neutral-2',
+  'graph-3': 'neutral-3',
+  'graph-4': 'neutral-4',
   placeholder: '#e0e4ee',
   selected: 'dark-2',
   text: {
     dark: '#f8f8f8',
     light: '#444444'
   },
+  'text-strong': {
+    dark: '#FFFFFF',
+    light: '#000000'
+  },
+  'text-weak': {
+    dark: '#CCCCCC',
+    light: '#555555'
+  },
+  'text-xweak': {
+    dark: '#BBBBBB',
+    light: '#666666'
+  },
   icon: {
     dark: '#f8f8f8',
     light: '#666666'
   },
+  'selected-background': 'brand',
+  'selected-text': 'text-strong',
   white: '#FFFFFF'
 };
 
@@ -103,7 +132,7 @@ Object.keys(statusColors).forEach(function (color) {
 
 var generate = function generate(baseSpacing, scale) {
   if (baseSpacing === void 0) {
-    baseSpacing = 10;
+    baseSpacing = 24;
   }
 
   if (scale === void 0) {
@@ -125,7 +154,7 @@ var generate = function generate(baseSpacing, scale) {
     };
   };
 
-  var borderWidth = 2;
+  var borderWidth = 1;
   var result = (0, _object.deepMerge)(_base.base, {
     global: {
       active: {
@@ -218,7 +247,7 @@ var generate = function generate(baseSpacing, scale) {
       control: {
         border: {
           width: '1px',
-          radius: '0px',
+          radius: '4px',
           color: 'border'
         },
         disabled: {
@@ -239,17 +268,17 @@ var generate = function generate(baseSpacing, scale) {
         none: '0px',
         hair: '1px',
         // for Chart
-        xxsmall: baseSpacing / 8 + "px",
+        xxsmall: baseSpacing / 16 + "px",
         // 3
-        xsmall: baseSpacing / 4 + "px",
+        xsmall: baseSpacing / 8 + "px",
         // 6
-        small: baseSpacing / 2 + "px",
+        small: baseSpacing / 4 + "px",
         // 12
-        medium: baseSpacing + "px",
+        medium: baseSpacing / 2 + "px",
         // 24
-        large: baseSpacing * 2 + "px",
+        large: baseSpacing + "px",
         // 48
-        xlarge: baseSpacing * 4 + "px",
+        xlarge: baseSpacing + "px",
         // 96
         responsiveBreakpoint: 'small'
       },
@@ -289,7 +318,7 @@ var generate = function generate(baseSpacing, scale) {
       },
       input: {
         padding: baseSpacing / 2 + "px",
-        weight: 600
+        weight: 400
       },
       opacity: {
         strong: 0.8,
@@ -354,13 +383,54 @@ var generate = function generate(baseSpacing, scale) {
 
     },
     button: {
+      size: {
+        small: {
+          border: {
+            radius: baseSpacing * 0.75 + "px"
+          },
+          pad: {
+            vertical: baseSpacing / 4 - borderWidth + "px",
+            // 4px
+            horizontal: baseSpacing - borderWidth * 2 + "px" // 20px,
+
+          }
+        },
+        medium: {
+          border: {
+            radius: baseSpacing * 0.75 + "px" // 18px
+
+          },
+          pad: {
+            vertical: baseSpacing / 4 - borderWidth + "px",
+            // 4px
+            horizontal: baseSpacing - borderWidth + "px" // 22px
+
+          }
+        },
+        large: {
+          border: {
+            radius: baseSpacing + "px" // 24px
+
+          },
+          pad: {
+            vertical: baseSpacing / 4 + borderWidth + "px",
+            // 8px
+            horizontal: baseSpacing + borderWidth * 4 + "px" // 32px,
+
+          }
+        }
+      },
       border: {
         // color: { dark: undefined, light: undefined }
         width: borderWidth + "px",
-        radius: baseSpacing * 0.25 + "px"
+        radius: baseSpacing * 0.2 + "px"
       },
       // color: { dark: 'white', light: 'white' },
-      primary: {// color: { dark: 'white', light: 'white' },
+      primary: {
+        color: {
+          dark: 'white',
+          light: 'white'
+        }
       },
       // disabled: { opacity: undefined },
       padding: {
@@ -417,7 +487,7 @@ var generate = function generate(baseSpacing, scale) {
       }
     },
     chart: {
-      color: 'accent-1' // extend: undefined,
+      color: 'graph-0' // extend: undefined,
 
     },
     checkBox: {
@@ -569,14 +639,14 @@ var generate = function generate(baseSpacing, scale) {
       resize: {
         border: {
           color: 'border',
-          side: 'right'
+          side: 'end'
         }
       }
     },
     diagram: {
       // extend: undefined,
       line: {
-        color: 'accent-1'
+        color: 'graph-0'
       }
     },
     // drop: {
@@ -593,33 +663,38 @@ var generate = function generate(baseSpacing, scale) {
           }
         },
         position: 'inner',
-        side: 'bottom',
-        size: '0'
+        side: 'all',
+        size: 'xsmall'
       },
       content: {
-        pad: {
-          horizontal: 'small',
-          bottom: 'small'
+        pad: 'small'
+      },
+      disabled: {
+        background: {
+          color: 'status-disabled',
+          opacity: 'medium'
         }
       },
       error: {
-        color: {
-          dark: 'status-critical',
-          light: 'status-critical'
-        },
+        color: 'status-critical',
         margin: {
           vertical: 'xsmall',
           horizontal: 'small'
-        }
+        } // background: undefined,
+
       },
       // extend: undefined,
       help: {
-        color: {
-          dark: 'dark-3',
-          light: 'dark-3'
-        },
+        color: 'dark-3',
         margin: {
-          left: 'small'
+          start: 'small'
+        }
+      },
+      info: {
+        color: 'text-xweak',
+        margin: {
+          vertical: 'xsmall',
+          horizontal: 'small'
         }
       },
       label: {
@@ -630,7 +705,8 @@ var generate = function generate(baseSpacing, scale) {
       },
       margin: {
         bottom: 'small'
-      }
+      } // round: undefined,
+
     },
     mnet: {// extend: undefined
     },
@@ -735,7 +811,7 @@ var generate = function generate(baseSpacing, scale) {
       }
     },
     meter: {
-      color: 'accent-1' // colors: [],
+      color: 'graph-0' // colors: [] || colors: ['graph-0', 'graph-1', 'graph-2', 'graph-3'],
       // extend: undefined,
 
     },
@@ -972,5 +1048,5 @@ var generate = function generate(baseSpacing, scale) {
 };
 
 exports.generate = generate;
-var base = generate(24);
+var base = generate(16);
 exports.base = base;

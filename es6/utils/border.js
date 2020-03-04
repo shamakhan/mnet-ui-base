@@ -12,10 +12,16 @@ export var borderStyle = function borderStyle(data, responsive, theme) {
   var responsiveValue = responsive && breakpoint && (breakpoint.borderSize[borderSize] || borderSize) && style + " " + (breakpoint.borderSize[borderSize] || borderSize) + " " + color;
 
   if (side === 'top' || side === 'bottom' || side === 'left' || side === 'right') {
-    styles.push(css(["border-", ":", ";"], side, value));
+    styles.push("border-" + side + ": " + value + ";");
 
     if (responsiveValue) {
       styles.push(breakpointStyle(breakpoint, "\n        border-" + side + ": " + responsiveValue + ";\n      "));
+    }
+  } else if (side === 'end' || side === 'start') {
+    styles.push(css(["border-inline-", ":", ";"], side, value));
+
+    if (responsiveValue) {
+      styles.push(breakpointStyle(breakpoint, "\n        border-inline-" + side + ": " + responsiveValue + ";\n      "));
     }
   } else if (side === 'vertical') {
     styles.push(css(["border-left:", ";border-right:", ";"], value, value));
@@ -29,6 +35,7 @@ export var borderStyle = function borderStyle(data, responsive, theme) {
     if (responsiveValue) {
       styles.push(breakpointStyle(breakpoint, "\n        border-top: " + responsiveValue + ";\n        border-bottom: " + responsiveValue + ";\n      "));
     }
+  } else if (side === 'between') {// no-op
   } else {
     styles.push(css(["border:", ";"], value));
 

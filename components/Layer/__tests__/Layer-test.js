@@ -16,13 +16,35 @@ var _LayerContainer = require("../LayerContainer");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+var SimpleLayer = function SimpleLayer() {
+  var _React$useState = _react["default"].useState(true),
+      showLayer = _React$useState[0],
+      setShowLayer = _React$useState[1];
+
+  _react["default"].useEffect(function () {
+    return setShowLayer(false);
+  }, []);
+
+  var layer;
+
+  if (showLayer) {
+    layer = _react["default"].createElement(_.Layer, {
+      "data-testid": "test-dom-removal"
+    }, "This is a test");
+  }
+
+  return _react["default"].createElement(_.Box, null, layer);
+};
+
 var FakeLayer = function FakeLayer(_ref) {
   var children = _ref.children,
       dataTestid = _ref.dataTestid;
 
-  var _React$useState = _react["default"].useState(false),
-      showLayer = _React$useState[0],
-      setShowLayer = _React$useState[1];
+  var _React$useState2 = _react["default"].useState(false),
+      showLayer = _React$useState2[0],
+      setShowLayer = _React$useState2[1];
 
   _react["default"].useEffect(function () {
     return setShowLayer(true);
@@ -42,13 +64,31 @@ var FakeLayer = function FakeLayer(_ref) {
     })));
   }
 
-  return _react["default"].createElement(_.MnetUIBase, null, layer, children);
+  return _react["default"].createElement(_.Box, null, layer, children);
+};
+
+var TargetLayer = function TargetLayer(props) {
+  var _React$useState3 = _react["default"].useState(),
+      target = _React$useState3[0],
+      setTarget = _React$useState3[1];
+
+  var layer;
+
+  if (target) {
+    layer = _react["default"].createElement(_.Layer, _extends({}, props, {
+      target: target
+    }), "this is a test layer");
+  }
+
+  return _react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement("div", {
+    ref: setTarget
+  }), layer);
 };
 
 describe('Layer', function () {
   beforeEach(_portal.createPortal);
   afterEach(_react2.cleanup);
-  ['top', 'bottom', 'left', 'right', 'center'].forEach(function (position) {
+  ['top', 'bottom', 'left', 'right', 'start', 'end', 'center'].forEach(function (position) {
     return test("position " + position, function () {
       (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Layer, {
         id: "position-test",
@@ -181,20 +221,6 @@ describe('Layer', function () {
       done();
     }, 300);
   });
-  test('should be null prior to mounting, displayed after mount', function () {
-    var ref = _react["default"].createRef();
-
-    (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Layer, {
-      "data-testid": "test-layer-container",
-      ref: ref
-    }, "Layer container is available")));
-    ref.current.setState({
-      islayerContainerAvailable: false
-    });
-    expect((0, _dom.queryByTestId)(document, 'test-layer-container')).toBeNull();
-    ref.current.componentDidMount();
-    expect((0, _dom.queryByTestId)(document, 'test-layer-container')).toMatchSnapshot();
-  });
   test('focus on layer', function () {
     /* eslint-disable jsx-a11y/no-autofocus */
     (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Layer, {
@@ -224,5 +250,17 @@ describe('Layer', function () {
     var inputNode = (0, _dom.getByTestId)(document, 'focus-input');
     expect(layerNode).toMatchSnapshot();
     expect(document.activeElement).toBe(inputNode);
+  });
+  test('target', function () {
+    (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(TargetLayer, {
+      id: "target-test"
+    }, "This layer has a target")));
+    (0, _portal.expectPortal)('target-test').toMatchSnapshot();
+  });
+  test('unmounts from dom', function () {
+    (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(SimpleLayer, null)));
+    setTimeout(function () {
+      expect((0, _dom.queryByTestId)(document, 'test-dom-removal')).toBeNull();
+    }, 1000);
   });
 });

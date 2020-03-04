@@ -72,7 +72,7 @@ var DoubleFooter = function DoubleFooter() {
   }, _react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     gap: "small"
-  }, _react["default"].createElement(_grommetIcons.Grommet, {
+  }, _react["default"].createElement(_grommetIcons.MnetUIBase, {
     color: "brand"
   }), _react["default"].createElement(_mnetUiBase.Text, {
     alignSelf: "center"

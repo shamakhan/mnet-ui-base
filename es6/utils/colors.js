@@ -1,5 +1,5 @@
-export var normalizeColor = function normalizeColor(color, theme, required) {
-  var colorSpec = theme.global.colors[color] !== undefined ? theme.global.colors[color] : color; // If the color has a light or dark object, use that
+export var normalizeColor = function normalizeColor(color, theme) {
+  var colorSpec = theme.global && theme.global.colors[color] !== undefined ? theme.global.colors[color] : color; // If the color has a light or dark object, use that
 
   var result = colorSpec;
 
@@ -12,11 +12,11 @@ export var normalizeColor = function normalizeColor(color, theme, required) {
   } // allow one level of indirection in color names
 
 
-  if (result && theme.global.colors[result] !== undefined) {
+  if (result && theme.global && theme.global.colors[result] !== undefined) {
     result = normalizeColor(result, theme);
   }
 
-  return required && result === color ? 'inherit' : result;
+  return result;
 };
 
 var parseHexToRGB = function parseHexToRGB(color) {

@@ -5,11 +5,7 @@ exports.LayerContainer = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _defaultProps = require("../../default-props");
-
-var _contexts = require("../../contexts");
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _FocusedContainer = require("../FocusedContainer");
 
@@ -19,8 +15,6 @@ var _utils = require("../../utils");
 
 var _StyledLayer = require("./StyledLayer");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -29,55 +23,43 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var HiddenAnchor = _styledComponents["default"].a.withConfig({
   displayName: "LayerContainer__HiddenAnchor",
   componentId: "sc-1ipspnq-0"
 })(["width:0;height:0;overflow:hidden;position:absolute;"]);
 
-var LayerContainer =
-/*#__PURE__*/
-function (_Component) {
-  _inheritsLoose(LayerContainer, _Component);
+var LayerContainer = (0, _react.forwardRef)(function (_ref, ref) {
+  var children = _ref.children,
+      _ref$full = _ref.full,
+      full = _ref$full === void 0 ? false : _ref$full,
+      id = _ref.id,
+      _ref$margin = _ref.margin,
+      margin = _ref$margin === void 0 ? 'none' : _ref$margin,
+      _ref$modal = _ref.modal,
+      modal = _ref$modal === void 0 ? true : _ref$modal,
+      onClickOutside = _ref.onClickOutside,
+      onEsc = _ref.onEsc,
+      plain = _ref.plain,
+      _ref$position = _ref.position,
+      position = _ref$position === void 0 ? 'center' : _ref$position,
+      _ref$responsive = _ref.responsive,
+      responsive = _ref$responsive === void 0 ? true : _ref$responsive,
+      layerTarget = _ref.target,
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "full", "id", "margin", "modal", "onClickOutside", "onEsc", "plain", "position", "responsive", "target"]);
 
-  function LayerContainer() {
-    var _this;
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+  var _useState = (0, _react.useState)(),
+      targetBounds = _useState[0],
+      setTargetBounds = _useState[1];
 
-    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
-
-    _defineProperty(_assertThisInitialized(_this), "anchorRef", (0, _react.createRef)());
-
-    _defineProperty(_assertThisInitialized(_this), "containerRef", _react["default"].createRef());
-
-    _defineProperty(_assertThisInitialized(_this), "layerRef", _react["default"].createRef());
-
-    _defineProperty(_assertThisInitialized(_this), "makeLayerVisible", function () {
-      var node = _this.layerRef.current || _this.containerRef.current;
-
-      if (node && node.scrollIntoView) {
-        node.scrollIntoView();
-      }
-    });
-
-    return _this;
-  }
-
-  var _proto = LayerContainer.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    var position = this.props.position;
-
+  var anchorRef = (0, _react.useRef)();
+  var containerRef = (0, _react.useRef)();
+  var layerRef = (0, _react.useRef)();
+  (0, _react.useEffect)(function () {
     if (position !== 'hidden') {
-      this.makeLayerVisible(); // Once layer is open we make sure it has focus so that you
+      var node = layerRef.current || containerRef.current || ref.current;
+      if (node && node.scrollIntoView) node.scrollIntoView(); // Once layer is open we make sure it has focus so that you
       // can start tabbing inside the layer. If the caller put focus
       // on an element already, we honor that. Otherwise, we put
       // the focus in the hidden anchor.
@@ -85,7 +67,7 @@ function (_Component) {
       var element = document.activeElement;
 
       while (element) {
-        if (element === this.containerRef.current) {
+        if (element === containerRef.current) {
           // already have focus inside the container
           break;
         }
@@ -93,104 +75,98 @@ function (_Component) {
         element = element.parentElement;
       }
 
-      if (!element && this.anchorRef.current) {
-        this.anchorRef.current.focus();
+      if (modal && !element && anchorRef.current) {
+        anchorRef.current.focus();
       }
     }
-  };
-
-  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    var position = this.props.position;
-
-    if (prevProps.position !== position && position !== 'hidden') {
-      this.makeLayerVisible();
+  }, [modal, position, ref]);
+  (0, _react.useEffect)(function () {
+    if (position !== 'hidden') {
+      var node = layerRef.current || containerRef.current || ref.current;
+      if (node && node.scrollIntoView) node.scrollIntoView();
     }
-  };
+  }, [position, ref]);
+  (0, _react.useEffect)(function () {
+    if (layerTarget) {
+      var updateBounds = function updateBounds() {
+        var rect = (0, _utils.findVisibleParent)(layerTarget).getBoundingClientRect();
+        setTargetBounds({
+          left: rect.left,
+          right: rect.right,
+          top: rect.top,
+          bottom: rect.bottom
+        });
+      };
 
-  _proto.render = function render() {
-    var _this$props = this.props,
-        children = _this$props.children,
-        id = _this$props.id,
-        modal = _this$props.modal,
-        onClickOutside = _this$props.onClickOutside,
-        onEsc = _this$props.onEsc,
-        plain = _this$props.plain,
-        position = _this$props.position,
-        responsive = _this$props.responsive,
-        propsTheme = _this$props.theme,
-        rest = _objectWithoutPropertiesLoose(_this$props, ["children", "id", "modal", "onClickOutside", "onEsc", "plain", "position", "responsive", "theme"]);
+      updateBounds();
+      window.addEventListener('resize', updateBounds);
+      return function () {
+        return window.removeEventListener('resize', updateBounds);
+      };
+    }
 
-    var theme = this.context || propsTheme;
+    return undefined;
+  }, [layerTarget]);
 
-    var content = _react["default"].createElement(_StyledLayer.StyledContainer, _extends({
-      id: id
-    }, rest, {
-      position: position,
+  var content = _react["default"].createElement(_StyledLayer.StyledContainer, _extends({
+    ref: ref || containerRef,
+    id: id,
+    full: full,
+    margin: margin,
+    modal: modal
+  }, rest, {
+    position: position,
+    plain: plain,
+    responsive: responsive,
+    dir: theme.dir
+  }), _react["default"].createElement(HiddenAnchor, {
+    ref: anchorRef,
+    tabIndex: "-1",
+    "aria-hidden": "true"
+  }), children);
+
+  if (modal) {
+    content = _react["default"].createElement(_StyledLayer.StyledLayer, {
+      ref: layerRef,
+      id: id,
+      targetBounds: targetBounds,
       plain: plain,
+      position: position,
       responsive: responsive,
-      ref: this.containerRef
-    }), _react["default"].createElement(HiddenAnchor, {
-      ref: this.anchorRef,
       tabIndex: "-1",
-      "aria-hidden": "true"
-    }), children);
+      dir: theme.dir
+    }, _react["default"].createElement(_StyledLayer.StyledOverlay, {
+      plain: plain,
+      onMouseDown: onClickOutside,
+      responsive: responsive
+    }), content);
+  }
 
-    if (modal) {
-      content = _react["default"].createElement(_StyledLayer.StyledLayer, {
-        id: id,
-        plain: plain,
-        position: position,
-        responsive: responsive,
-        tabIndex: "-1",
-        ref: this.layerRef
-      }, _react["default"].createElement(_StyledLayer.StyledOverlay, {
-        plain: plain,
-        onMouseDown: onClickOutside,
-        responsive: responsive
-      }), content);
-      /* eslint-enable jsx-a11y/anchor-is-valid, jsx-a11y/anchor-has-content */
-    }
+  if (onEsc) {
+    content = _react["default"].createElement(_Keyboard.Keyboard, {
+      onEsc: onEsc
+    }, content);
+  }
 
-    if (onEsc) {
-      content = _react["default"].createElement(_Keyboard.Keyboard, {
-        onEsc: onEsc
+  if (theme.layer.background) {
+    var dark = (0, _utils.backgroundIsDark)(theme.layer.background, theme);
+
+    if (dark !== undefined && dark !== theme.dark) {
+      content = _react["default"].createElement(_styledComponents.ThemeContext.Provider, {
+        value: _extends({}, theme, {
+          dark: dark
+        })
       }, content);
     }
+  }
 
-    if (theme.layer.background) {
-      var dark = (0, _utils.backgroundIsDark)(theme.layer.background, theme);
+  if (modal) {
+    content = _react["default"].createElement(_FocusedContainer.FocusedContainer, {
+      hidden: position === 'hidden',
+      restrictScroll: true
+    }, content);
+  }
 
-      if (dark !== undefined && dark !== theme.dark) {
-        content = _react["default"].createElement(_contexts.ThemeContext.Provider, {
-          value: _extends({}, theme, {
-            dark: dark
-          })
-        }, content);
-      }
-    }
-
-    if (modal) {
-      content = _react["default"].createElement(_FocusedContainer.FocusedContainer, {
-        hidden: position === 'hidden',
-        restrictScroll: true
-      }, content);
-    }
-
-    return content;
-  };
-
-  return LayerContainer;
-}(_react.Component);
-
-exports.LayerContainer = LayerContainer;
-
-_defineProperty(LayerContainer, "contextType", _contexts.ThemeContext);
-
-_defineProperty(LayerContainer, "defaultProps", {
-  full: false,
-  margin: 'none',
-  modal: true,
-  position: 'center'
+  return content;
 });
-
-Object.setPrototypeOf(LayerContainer.defaultProps, _defaultProps.defaultProps);
+exports.LayerContainer = LayerContainer;

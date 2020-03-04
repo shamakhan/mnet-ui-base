@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var customFormFieldTheme = {
   global: {
     font: {
-      size: '13px'
+      size: '16px'
     },
     input: {
       weight: 400
@@ -22,32 +22,123 @@ var customFormFieldTheme = {
   formField: {
     label: {
       color: 'dark-3',
-      size: 'xsmall',
-      margin: {
-        vertical: '0',
-        bottom: 'small',
-        horizontal: '0'
-      },
+      size: 'small',
+      margin: 'xsmall',
       weight: 600
     },
-    border: false,
-    margin: 0
+    border: {
+      position: 'outer',
+      side: 'all'
+    },
+    disabled: {
+      background: {
+        color: 'status-disabled',
+        opacity: true
+      }
+    },
+    content: {
+      pad: 'small'
+    },
+    error: {
+      background: {
+        color: 'status-critical',
+        opacity: 'weak'
+      }
+    },
+    margin: 'none'
   }
 };
 
 var CustomFormField = function CustomFormField() {
   return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+    full: true,
     theme: (0, _utils.deepMerge)(_mnetUiBase.mnet, customFormFieldTheme)
   }, _react["default"].createElement(_mnetUiBase.Box, {
+    fill: true,
     align: "center",
-    pad: "large"
+    justify: "center"
+  }, _react["default"].createElement(_mnetUiBase.Box, {
+    width: "medium"
+  }, _react["default"].createElement(_mnetUiBase.Form, {
+    onReset: function onReset(event) {
+      return console.log(event);
+    },
+    onSubmit: function onSubmit(_ref) {
+      var value = _ref.value;
+      return console.log('Submit', value);
+    }
   }, _react["default"].createElement(_mnetUiBase.FormField, {
-    label: "Label",
-    htmlFor: "text-area"
+    label: "Name",
+    name: "name",
+    required: true
+  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+    name: "name"
+  })), _react["default"].createElement(_mnetUiBase.FormField, {
+    label: "Email",
+    name: "email",
+    required: true
+  }, _react["default"].createElement(_mnetUiBase.MaskedInput, {
+    name: "email",
+    mask: [{
+      regexp: /^[\w\-_.]+$/,
+      placeholder: 'example'
+    }, {
+      fixed: '@'
+    }, {
+      regexp: /^[\w]+$/,
+      placeholder: 'my'
+    }, {
+      fixed: '.'
+    }, {
+      regexp: /^[\w]+$/,
+      placeholder: 'com'
+    }]
+  })), _react["default"].createElement(_mnetUiBase.FormField, {
+    name: "subscribe"
+  }, _react["default"].createElement(_mnetUiBase.CheckBox, {
+    name: "subscribe",
+    label: "Subscribe?"
+  })), _react["default"].createElement(_mnetUiBase.FormField, {
+    name: "ampm"
+  }, _react["default"].createElement(_mnetUiBase.RadioButtonGroup, {
+    name: "ampm",
+    options: ['morning', 'evening']
+  })), _react["default"].createElement(_mnetUiBase.FormField, {
+    label: "Size",
+    name: "size"
+  }, _react["default"].createElement(_mnetUiBase.Select, {
+    name: "size",
+    options: ['small', 'medium', 'large']
+  })), _react["default"].createElement(_mnetUiBase.FormField, {
+    label: "Comments",
+    name: "comments",
+    disabled: true
   }, _react["default"].createElement(_mnetUiBase.TextArea, {
-    id: "text-area",
-    placeholder: "placeholder"
-  }))));
+    name: "comments",
+    disabled: true
+  })), _react["default"].createElement(_mnetUiBase.FormField, {
+    label: "Age",
+    name: "age"
+  }, _react["default"].createElement(_mnetUiBase.RangeInput, {
+    name: "age",
+    min: 15,
+    max: 75
+  })), _react["default"].createElement(_mnetUiBase.Box, {
+    direction: "row",
+    justify: "between",
+    margin: {
+      top: 'medium'
+    }
+  }, _react["default"].createElement(_mnetUiBase.Button, {
+    label: "Cancel"
+  }), _react["default"].createElement(_mnetUiBase.Button, {
+    type: "reset",
+    label: "Reset"
+  }), _react["default"].createElement(_mnetUiBase.Button, {
+    type: "submit",
+    label: "Update",
+    primary: true
+  }))))));
 };
 
 (0, _react2.storiesOf)('Form', module).add('Custom Theme', function () {

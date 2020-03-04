@@ -140,13 +140,16 @@ describe('Select', function () {
         getByPlaceholderText = _render4.getByPlaceholderText,
         container = _render4.container;
 
+    var select = getByPlaceholderText('test select');
     expect(container.firstChild).toMatchSnapshot();
 
     _react2.fireEvent.click(getByPlaceholderText('test select')); // pressing enter here nothing will happen
 
 
-    _react2.fireEvent.click(document.getElementById('test-select__drop').querySelector('button'));
+    _react2.fireEvent.click(document.getElementById('test-select__drop').querySelector('button')); // checks it select has a value assigned to it after option is selected
 
+
+    expect(select.value).toEqual('one');
     expect(onChange).toBeCalled();
     expect(window.scrollTo).toBeCalled();
   });
@@ -426,15 +429,19 @@ describe('Select', function () {
 
     expect(container.firstChild).toMatchSnapshot();
     var selectButton = container.querySelector('Button');
-    expect(selectButton).toHaveStyleRule('background', 'purple');
+    var style;
+    style = window.getComputedStyle(selectButton);
+    expect(style.background).toBe('purple');
 
     _react2.fireEvent.click(selectButton);
 
-    expect(selectButton).toHaveStyleRule('background', 'lightgrey');
+    style = window.getComputedStyle(selectButton);
+    expect(style.background).toBe('lightgrey');
 
     _react2.fireEvent.click(selectButton);
 
-    expect(selectButton).toHaveStyleRule('background', 'purple');
+    style = window.getComputedStyle(selectButton);
+    expect(style.background).toBe('purple');
   });
   test("renders styled select options backwards compatible with legacy\n    documentation (select.options.box)", function () {
     var customTheme = {
@@ -465,7 +472,8 @@ describe('Select', function () {
     _react2.fireEvent.click(selectButton);
 
     var optionButton = getByText('morning').closest('button');
-    expect(optionButton.firstChild).toHaveStyleRule('background', 'lightblue');
+    var style = window.getComputedStyle(optionButton.firstChild);
+    expect(style.background).toBe('lightblue');
   });
   test('renders styled select options using select.options.container', function () {
     var customTheme = {
@@ -496,7 +504,8 @@ describe('Select', function () {
     _react2.fireEvent.click(selectButton);
 
     var optionButton = getByText('morning').closest('button');
-    expect(optionButton.firstChild).toHaveStyleRule('background', 'lightgreen');
+    var style = window.getComputedStyle(optionButton.firstChild);
+    expect(style.background).toBe('lightgreen');
   });
   test("renders styled select options combining select.options.box &&\n  select.options.container;\n  select.options.container prioritized if conflict", function () {
     var customTheme = {
@@ -534,10 +543,13 @@ describe('Select', function () {
 
     _react2.fireEvent.click(selectButton);
 
+    var style;
     var optionButton = getByText('morning').closest('button');
-    expect(optionButton.firstChild).not.toHaveStyleRule('background', 'lightblue');
-    expect(optionButton.firstChild).toHaveStyleRule('background', 'lightgreen');
-    expect(optionButton.firstChild).toHaveStyleRule('border-bottom', 'solid 2px blue');
+    style = window.getComputedStyle(optionButton.firstChild);
+    expect(style.background).not.toBe('lightblue');
+    style = window.getComputedStyle(optionButton.firstChild);
+    expect(style.background).toBe('lightgreen');
+    expect(style.borderBottom).toBe('2px solid blue');
   });
   test('applies custom global.hover theme to options', function () {
     var customTheme = {

@@ -2,32 +2,58 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React from 'react';
-import { compose } from 'recompose';
+import React, { forwardRef, useContext, useState } from 'react';
+import { FormContext } from '../Form/FormContext';
 import { Keyboard } from '../Keyboard';
-import { withFocus, withForwardRef } from '../hocs';
 import { StyledTextArea } from './StyledTextArea';
-
-var TextArea = function TextArea(_ref) {
+var TextArea = forwardRef(function (_ref, ref) {
   var fill = _ref.fill,
-      forwardRef = _ref.forwardRef,
-      rest = _objectWithoutPropertiesLoose(_ref, ["fill", "forwardRef"]);
+      name = _ref.name,
+      _onBlur = _ref.onBlur,
+      _onChange = _ref.onChange,
+      _onFocus = _ref.onFocus,
+      valueProp = _ref.value,
+      rest = _objectWithoutPropertiesLoose(_ref, ["fill", "name", "onBlur", "onChange", "onFocus", "value"]);
 
-  var onEsc = function onEsc(event) {
-    // we have to stop both synthetic events and native events
-    // drop and layer should not close by pressing esc on this input
-    event.stopPropagation();
-    event.nativeEvent.stopImmediatePropagation();
-  };
+  var formContext = useContext(FormContext);
+
+  var _formContext$useFormC = formContext.useFormContext(name, valueProp),
+      value = _formContext$useFormC[0],
+      setValue = _formContext$useFormC[1];
+
+  var _useState = useState(),
+      focus = _useState[0],
+      setFocus = _useState[1];
 
   return React.createElement(Keyboard, {
-    onEsc: onEsc
+    onEsc: function onEsc(event) {
+      // we have to stop both synthetic events and native events
+      // drop and layer should not close by pressing esc on this input
+      event.stopPropagation();
+      event.nativeEvent.stopImmediatePropagation();
+    }
   }, React.createElement(StyledTextArea, _extends({
-    ref: forwardRef,
-    fillArg: fill
-  }, rest)));
-};
-
+    ref: ref,
+    name: name,
+    fillArg: fill,
+    focus: focus,
+    value: value
+  }, rest, {
+    onFocus: function onFocus(event) {
+      setFocus(true);
+      if (_onFocus) _onFocus(event);
+    },
+    onBlur: function onBlur(event) {
+      setFocus(false);
+      if (_onBlur) _onBlur(event);
+    },
+    onChange: function onChange(event) {
+      setValue(event.target.value);
+      if (_onChange) _onChange(event);
+    }
+  })));
+});
+TextArea.displayName = 'TextArea';
 var TextAreaDoc;
 
 if (process.env.NODE_ENV !== 'production') {
@@ -35,7 +61,5 @@ if (process.env.NODE_ENV !== 'production') {
   TextAreaDoc = require('./doc').doc(TextArea);
 }
 
-var TextAreaWrapper = compose(withFocus({
-  focusWithMouse: true
-}), withForwardRef)(TextAreaDoc || TextArea);
+var TextAreaWrapper = TextAreaDoc || TextArea;
 export { TextAreaWrapper as TextArea };

@@ -14,7 +14,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var hiddenPositionStyle = (0, _styledComponents.css)(["left:-100%;right:100%;z-index:-1;position:fixed;"]);
-var desktopLayerStyle = "\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  bottom: 0px;\n  width: 100vw;\n  height: 100vh;\n";
+var desktopLayerStyle = "\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  bottom: 0px;\n";
 var responsiveLayerStyle = "\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  min-height: 100vh;\n";
 
 var StyledLayer = _styledComponents["default"].div.withConfig({
@@ -27,7 +27,18 @@ var StyledLayer = _styledComponents["default"].div.withConfig({
     return hiddenPositionStyle;
   }
 
-  var styles = [desktopLayerStyle];
+  var styles = [];
+
+  if (props.targetBounds) {
+    var _props$targetBounds = props.targetBounds,
+        left = _props$targetBounds.left,
+        right = _props$targetBounds.right,
+        top = _props$targetBounds.top,
+        bottom = _props$targetBounds.bottom;
+    styles.push("\n        position: fixed;\n        top: " + top + "px;\n        left: " + left + "px;\n        right: " + (window.innerWidth - right) + "px;\n        bottom: " + (window.innerHeight - bottom) + "px;\n      ");
+  } else {
+    styles.push(desktopLayerStyle);
+  }
 
   if (props.responsive && props.theme.layer.responsiveBreakpoint) {
     var breakpoint = props.theme.global.breakpoints[props.theme.layer.responsiveBreakpoint];
@@ -80,8 +91,10 @@ var MARGINS = function MARGINS(margin, theme, position) {
     bottom: getMargin(margin, theme, 'bottom'),
     'bottom-left': getMargin(margin, theme, 'bottom-left'),
     'bottom-right': getMargin(margin, theme, 'bottom-right'),
+    end: getMargin(margin, theme, 'end'),
     left: getMargin(margin, theme, 'left'),
     right: getMargin(margin, theme, 'right'),
+    start: getMargin(margin, theme, 'start'),
     top: getMargin(margin, theme, 'top'),
     'top-right': getMargin(margin, theme, 'top-right'),
     'top-left': getMargin(margin, theme, 'top-left')
@@ -114,6 +127,18 @@ var KEYFRAMES = {
     "false": (0, _styledComponents.keyframes)(["0%{transform:translate(-100%,-50%);}100%{transform:translate(0,-50%);}"])
   },
   right: {
+    vertical: (0, _styledComponents.keyframes)(["0%{transform:translateX(100%);}100%{transform:translateX(0);}"]),
+    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translate(100%,-50%);}100%{transform:translate(0,-50%);}"]),
+    "true": (0, _styledComponents.keyframes)(["0%{transform:translateX(100%);}100%{transform:translateX(0);}"]),
+    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(100%,-50%);}100%{transform:translate(0,-50%);}"])
+  },
+  start: {
+    vertical: (0, _styledComponents.keyframes)(["0%{transform:translateX(-100%);}100%{transform:translateX(0);}"]),
+    horizontal: (0, _styledComponents.keyframes)(["0%{transform:translate(-100%,-50%);}100%{transform:translate(0,-50%);}"]),
+    "true": (0, _styledComponents.keyframes)(["0%{transform:translateX(-100%);}100%{transform:translateX(0);}"]),
+    "false": (0, _styledComponents.keyframes)(["0%{transform:translate(-100%,-50%);}100%{transform:translate(0,-50%);}"])
+  },
+  end: {
     vertical: (0, _styledComponents.keyframes)(["0%{transform:translateX(100%);}100%{transform:translateX(0);}"]),
     horizontal: (0, _styledComponents.keyframes)(["0%{transform:translate(100%,-50%);}100%{transform:translate(0,-50%);}"]),
     "true": (0, _styledComponents.keyframes)(["0%{transform:translateX(100%);}100%{transform:translateX(0);}"]),
@@ -251,6 +276,50 @@ var POSITIONS = {
     "false": function _false(margin) {
       return (0, _styledComponents.css)(["right:", ";top:50%;transform:translate(0,-50%);", ""], margin.right, function (props) {
         return getAnimationStyle(props, 'right', 'false');
+      });
+    }
+  },
+  start: {
+    vertical: function vertical(margin) {
+      return (0, _styledComponents.css)(["top:", ";bottom:", ";inset-inline-start:", ";transform:translateX(0);", ""], margin.top, margin.bottom, margin.start, function (props) {
+        return getAnimationStyle(props, 'start', 'vertical');
+      });
+    },
+    horizontal: function horizontal(margin) {
+      return (0, _styledComponents.css)(["inset-inline-start:", ";inset-inline-end:", ";top:50%;transform:translate(0,-50%);", ""], margin.start, margin.end, function (props) {
+        return getAnimationStyle(props, 'start', 'horizontal');
+      });
+    },
+    "true": function _true(margin) {
+      return (0, _styledComponents.css)(["top:", ";bottom:", ";inset-inline-start:", ";inset-inline-end:", ";transform:translateX(0);", ""], margin.top, margin.bottom, margin.start, margin.end, function (props) {
+        return getAnimationStyle(props, 'start', 'true');
+      });
+    },
+    "false": function _false(margin) {
+      return (0, _styledComponents.css)(["inset-inline-start:", ";top:50%;transform:translate(0,-50%);", ""], margin.start, function (props) {
+        return getAnimationStyle(props, 'start', 'false');
+      });
+    }
+  },
+  end: {
+    vertical: function vertical(margin) {
+      return (0, _styledComponents.css)(["top:", ";bottom:", ";inset-inline-end:", ";transform:translateX(0);", ""], margin.top, margin.bottom, margin.end, function (props) {
+        return getAnimationStyle(props, 'end', 'vertical');
+      });
+    },
+    horizontal: function horizontal(margin) {
+      return (0, _styledComponents.css)(["inset-inline-start:", ";inset-inline-end:", ";top:50%;transform:translate(0,-50%);", ""], margin.start, margin.end, function (props) {
+        return getAnimationStyle(props, 'end', 'horizontal');
+      });
+    },
+    "true": function _true(margin) {
+      return (0, _styledComponents.css)(["top:", ";bottom:", ";inset-inline-start:", ";inset-inline-end:", ";transform:translateX(0);", ""], margin.top, margin.bottom, margin.start, margin.end, function (props) {
+        return getAnimationStyle(props, 'end', 'true');
+      });
+    },
+    "false": function _false(margin) {
+      return (0, _styledComponents.css)(["inset-inline-end:", ";top:50%;transform:translate(0,-50%);", ""], margin.end, function (props) {
+        return getAnimationStyle(props, 'end', 'false');
       });
     }
   },

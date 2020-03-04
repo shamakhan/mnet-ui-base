@@ -7,6 +7,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Box = require("../Box");
 
+var _FormContext = require("../Form/FormContext");
+
 var _Keyboard = require("../Keyboard");
 
 var _RadioButton = require("../RadioButton");
@@ -21,36 +23,37 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var RadioButtonGroup = (0, _react.forwardRef)(function (_ref, ref) {
   var children = _ref.children,
+      disabled = _ref.disabled,
       _ref$gap = _ref.gap,
       gap = _ref$gap === void 0 ? 'small' : _ref$gap,
       name = _ref.name,
-      onChange = _ref.onChange,
+      _onChange = _ref.onChange,
       optionsProp = _ref.options,
       valueProp = _ref.value,
-      rest = _objectWithoutPropertiesLoose(_ref, ["children", "gap", "name", "onChange", "options", "value"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "disabled", "gap", "name", "onChange", "options", "value"]);
 
-  // normalize options to always use an object
+  var formContext = (0, _react.useContext)(_FormContext.FormContext); // normalize options to always use an object
+
   var options = (0, _react.useMemo)(function () {
     return optionsProp.map(function (o) {
       return typeof o === 'string' ? {
-        id: o,
+        disabled: disabled,
+        id: rest.id ? rest.id + "-" + o : o,
         label: o,
         value: o
-      } : o;
+      } : _extends({
+        disabled: disabled
+      }, o);
     });
-  }, [optionsProp]);
+  }, [disabled, optionsProp, rest.id]);
 
-  var _useState = (0, _react.useState)(valueProp),
-      value = _useState[0],
-      setValue = _useState[1];
+  var _formContext$useFormC = formContext.useFormContext(name, valueProp),
+      value = _formContext$useFormC[0],
+      setValue = _formContext$useFormC[1];
 
-  (0, _react.useEffect)(function () {
-    return setValue(valueProp);
-  }, [valueProp]);
-
-  var _useState2 = (0, _react.useState)(),
-      focus = _useState2[0],
-      setFocus = _useState2[1];
+  var _useState = (0, _react.useState)(),
+      focus = _useState[0],
+      setFocus = _useState[1];
 
   var optionRefs = (0, _react.useRef)([]);
 
@@ -76,14 +79,11 @@ var RadioButtonGroup = (0, _react.forwardRef)(function (_ref, ref) {
       var nextIndex = valueIndex + 1;
       var nextValue = options[nextIndex].value;
       setValue(nextValue);
-
-      if (onChange) {
-        onChange({
-          target: {
-            value: nextValue
-          }
-        });
-      }
+      if (_onChange) _onChange({
+        target: {
+          value: nextValue
+        }
+      });
     }
   };
 
@@ -92,14 +92,11 @@ var RadioButtonGroup = (0, _react.forwardRef)(function (_ref, ref) {
       var nextIndex = valueIndex - 1;
       var nextValue = options[nextIndex].value;
       setValue(nextValue);
-
-      if (onChange) {
-        onChange({
-          target: {
-            value: nextValue
-          }
-        });
-      }
+      if (_onChange) _onChange({
+        target: {
+          value: nextValue
+        }
+      });
     }
   };
 
@@ -126,26 +123,31 @@ var RadioButtonGroup = (0, _react.forwardRef)(function (_ref, ref) {
     ref: ref,
     gap: gap
   }, rest), options.map(function (_ref2, index) {
-    var disabled = _ref2.disabled,
+    var optionDisabled = _ref2.disabled,
         id = _ref2.id,
         label = _ref2.label,
-        optionValue = _ref2.value;
-    return _react["default"].createElement(_RadioButton.RadioButton, {
+        optionValue = _ref2.value,
+        optionRest = _objectWithoutPropertiesLoose(_ref2, ["disabled", "id", "label", "value"]);
+
+    return _react["default"].createElement(_RadioButton.RadioButton, _extends({
       ref: function ref(aRef) {
         optionRefs.current[index] = aRef;
       },
       key: optionValue,
       name: name,
       label: !children ? label : undefined,
-      disabled: disabled,
+      disabled: optionDisabled,
       checked: optionValue === value,
       focus: focus && (optionValue === value || value === undefined && !index),
       id: id,
       value: optionValue,
-      onChange: onChange,
       onFocus: onFocus,
-      onBlur: onBlur
-    }, children ? function (state) {
+      onBlur: onBlur,
+      onChange: function onChange(event) {
+        setValue(event.target.value);
+        if (_onChange) _onChange(event);
+      }
+    }, optionRest), children ? function (state) {
       return children(optionsProp[index], state);
     } : null);
   })));
