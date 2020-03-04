@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Grommet, Box, Menu, ThemeType } from 'grommet';
+import { MnetUIBase, Box, Menu, ThemeType } from 'mnet-ui-base';
 import { FormUp, FormDown } from 'grommet-icons';
 
 // Type annotations can only be used in TypeScript files.
@@ -69,7 +69,7 @@ const customBreakpoints: ThemeType = {
 
 const ThemedMenu = () => {
   return (
-    <Grommet theme={customBreakpoints}>
+    <MnetUIBase theme={customBreakpoints}>
       <Box align="center" pad="large">
         <Menu
           dropProps={{ align: { top: 'bottom', left: 'left' } }}
@@ -81,7 +81,7 @@ const ThemedMenu = () => {
           ]}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

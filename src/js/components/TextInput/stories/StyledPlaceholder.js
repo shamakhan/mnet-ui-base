@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Form, Grommet, TextInput, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Form, Grommet, TextInput, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const StyledPlaceholder = () => (
   <Grommet full theme={grommet}>

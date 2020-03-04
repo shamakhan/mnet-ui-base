@@ -1,9 +1,9 @@
 import React from 'react';
-import { Grommet, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { MnetUIBase, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
-const customlevel = deepMerge(grommet, {
+const customlevel = deepMerge(mnet, {
   heading: {
     level: {
       5: {
@@ -25,7 +25,7 @@ const customlevel = deepMerge(grommet, {
   },
 });
 export const Custom = () => (
-  <Grommet theme={customlevel}>
+  <MnetUIBase theme={customlevel}>
     <Heading level={5} size="small">
       Heading level 5 small
     </Heading>
@@ -35,7 +35,7 @@ export const Custom = () => (
     <Heading level={5} size="large">
       Heading level 5 small
     </Heading>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Layer } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Layer } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const RTLLayer = () => (
-  <Grommet theme={grommet} dir="rtl">
+  <MnetUIBase theme={mnet} dir="rtl">
     <Layer
       position="start"
       margin={{ vertical: 'small', start: 'xlarge', end: 'medium' }}
@@ -18,7 +18,7 @@ export const RTLLayer = () => (
         <Box pad="xlarge">text</Box>
       </Box>
     </Layer>
-  </Grommet>
+  </MnetUIBase>
 );
 
 RTLLayer.storyName = 'RTL';

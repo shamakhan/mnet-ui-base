@@ -78,9 +78,9 @@ describe('MnetUIBase', () => {
 
   test('background', () => {
     const component = renderer.create(
-      <Grommet full background="#0000ff">
-        Grommet App
-      </Grommet>,
+      <MnetUIBase full background="#0000ff">
+        MnetUIBase App
+      </MnetUIBase>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });

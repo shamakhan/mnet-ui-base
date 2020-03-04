@@ -1,11 +1,11 @@
 import React from 'react';
-import { Grommet, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Color = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Heading color="accent-1">Colored Heading</Heading>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

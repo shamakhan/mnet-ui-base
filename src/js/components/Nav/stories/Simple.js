@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Anchor, Grommet, Nav } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Anchor, MnetUIBase, Nav } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const items = [
   { label: 'Item A', href: '#' },
@@ -11,13 +11,13 @@ const items = [
 ];
 
 const SimpleNav = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Nav pad="large">
       {items.map(item => (
         <Anchor href={item.href} label={item.label} key={item.label} />
       ))}
     </Nav>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const Simple = () => <SimpleNav />;

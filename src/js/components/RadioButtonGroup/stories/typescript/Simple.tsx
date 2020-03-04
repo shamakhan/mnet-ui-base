@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { RadioButtonGroup } from 'grommet';
+import { RadioButtonGroup } from 'mnet-ui-base';
 
 export const SimpleTS = () => {
   const postMethods = [

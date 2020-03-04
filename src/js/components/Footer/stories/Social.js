@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Grommet as MnetUIBaseIcon,
+  MnetUIBase as MnetUIBaseIcon,
   FacebookOption,
   Instagram,
   Twitter,

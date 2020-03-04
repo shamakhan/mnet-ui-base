@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Button, CheckBox, Grid, Grommet, Layer, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, CheckBox, Grid, MnetUIBase, Layer, Select } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const positions = ['left', 'right', 'top', 'bottom', 'center'];
 
@@ -18,7 +18,7 @@ export const TargetLayer = () => {
   const onClose = () => setOpen(undefined);
 
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Grid
         fill
         columns={[gutter, 'flex', gutter]}
@@ -74,7 +74,7 @@ export const TargetLayer = () => {
           </Box>
         </Layer>
       )}
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

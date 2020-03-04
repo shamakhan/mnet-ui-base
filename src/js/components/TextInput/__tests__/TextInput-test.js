@@ -493,7 +493,7 @@ describe('TextInput', () => {
   test('should return focus to input on select', async () => {
     const onSelect = jest.fn();
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input-focus"
           id="input-focus"
@@ -502,7 +502,7 @@ describe('TextInput', () => {
           suggestions={['option0', 'option1', 'option2']}
           onSelect={onSelect}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const input = getByPlaceholderText('Type to search...');
@@ -521,7 +521,7 @@ describe('TextInput', () => {
     const inputRef = { current: {} };
     const onSelect = jest.fn();
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input-focus"
           id="input-focus"
@@ -531,7 +531,7 @@ describe('TextInput', () => {
           onSelect={onSelect}
           ref={inputRef}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const input = getByPlaceholderText('Type to search...');

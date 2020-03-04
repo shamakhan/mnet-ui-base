@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, RadioButtonGroup, ThemeContext } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, MnetUIBase, RadioButtonGroup, ThemeContext } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 import { css } from 'styled-components';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   radioButtonGroup: {
     container: {
       gap: 'xlarge',
@@ -43,7 +43,7 @@ export const CustomRadioButtonGroup = ({ value: initialValue, ...props }) => {
   const [value, setValue] = useState(initialValue);
 
   return (
-    <Grommet theme={customTheme}>
+    <MnetUIBase theme={customTheme}>
       <ThemeContext.Consumer>
         {theme => console.log(JSON.stringify(theme.radioButton))}
       </ThemeContext.Consumer>
@@ -60,7 +60,7 @@ export const CustomRadioButtonGroup = ({ value: initialValue, ...props }) => {
           {...props}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

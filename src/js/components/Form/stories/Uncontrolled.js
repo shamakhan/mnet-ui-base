@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   CheckBox,
+  MnetUIBase,
   Form,
   FormField,
   FileInput,
@@ -14,13 +15,13 @@ import {
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const suggestions = ['Shimi', 'Eric'];
 
 export const Uncontrolled = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form
@@ -68,7 +69,7 @@ export const Uncontrolled = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {
