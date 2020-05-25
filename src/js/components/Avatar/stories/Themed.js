@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Favorite } from 'grommet-icons';
 
-import { Avatar, Box, Grommet } from 'grommet';
+import { Avatar, Box, MnetUIBase } from 'mnet-ui-base';
 
 const theme = {
   avatar: {
@@ -25,7 +25,7 @@ export const Themed = () => {
   const src = '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 
   return (
-    <Grommet theme={theme}>
+    <MnetUIBase theme={theme}>
       <Box
         align="center"
         justify="center"
@@ -45,7 +45,7 @@ export const Themed = () => {
           SY
         </Avatar>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

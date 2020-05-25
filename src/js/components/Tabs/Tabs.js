@@ -45,12 +45,13 @@ const Tabs = forwardRef(
     delete rest.onActive;
     /* eslint-enable no-param-reassign */
 
+
     const tabs = React.Children.map(children, (child, index) => (
       <TabsContext.Provider
         value={{
           activeIndex,
-          active: activeIndex === index,
-          onActivate: () => activateTab(index),
+      active: activeIndex === index,
+        onActivate: () => activateTab(index),
           setActiveContent,
           setActiveTitle,
         }}
@@ -61,22 +62,22 @@ const Tabs = forwardRef(
           ? // cloneElement is needed for backward compatibility with custom
             // styled components that rely on props.active. We should reassess
             // if it is still necessary in our next major release.
-            React.cloneElement(child, { active: activeIndex === index })
+        React.cloneElement(child, { active: activeIndex === index })
           : child}
-      </TabsContext.Provider>
-    ));
+        </TabsContext.Provider>
+          ));
 
-    const tabsHeaderStyles = {};
-    if (theme.tabs.header && theme.tabs.header.border) {
-      let borderColor =
-        theme.tabs.header.border.color || theme.global.control.border.color;
-      borderColor = normalizeColor(borderColor, theme);
+            const tabsHeaderStyles = {};
+          if (theme.tabs.header && theme.tabs.header.border) {
+            let borderColor =
+          theme.tabs.header.border.color || theme.global.control.border.color;
+        borderColor = normalizeColor(borderColor, theme);
 
-      tabsHeaderStyles.border = {
-        side: theme.tabs.header.border.side,
-        size: theme.tabs.header.border.size,
+        tabsHeaderStyles.border = {
+          side: theme.tabs.header.border.side,
+          size: theme.tabs.header.border.size,
         style: theme.tabs.header.border.style,
-        color: borderColor,
+      color: borderColor,
       };
     }
 
@@ -89,27 +90,25 @@ const Tabs = forwardRef(
         role="tablist"
         flex={flex}
         responsive={responsive}
-        {...rest}
+        responsive={responsive}{...rest}
         background={theme.tabs.background}
       >
         <StyledTabsHeader
           as={Box}
           direction="row"
           justify={justify}
-          alignSelf={alignControls}
-          flex={false}
+          alignSelf={alignControls}flex={false}
           wrap
           background={theme.tabs.header.background}
           gap={theme.tabs.gap}
-          {...tabsHeaderStyles}
-        >
+        {...tabsHeaderStyles}>
           {tabs}
         </StyledTabsHeader>
         <StyledTabPanel
           flex={flex}
           aria-label={tabContentTitle}
           role="tabpanel"
-        >
+          >
           {activeContent}
         </StyledTabPanel>
       </StyledTabs>

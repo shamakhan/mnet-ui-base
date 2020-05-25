@@ -8,8 +8,8 @@ import {
   FormField,
   Text,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 // This example shows a way to perform validation across multiple fields.
 export const AggregateValidation = () => {
@@ -19,7 +19,7 @@ export const AggregateValidation = () => {
       ? 'Mismatched first character'
       : undefined;
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -48,7 +48,7 @@ export const AggregateValidation = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

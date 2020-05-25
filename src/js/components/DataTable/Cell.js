@@ -98,6 +98,8 @@ const Cell = ({
 
 Cell.displayName = 'Cell';
 
+Cell.displayName = 'Cell';
+
 Cell.defaultProps = {};
 Object.setPrototypeOf(Cell.defaultProps, defaultProps);
 

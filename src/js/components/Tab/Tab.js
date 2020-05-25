@@ -81,14 +81,11 @@ const Tab = forwardRef(
         // eslint-disable-next-line max-len
         `Warning: Tab props 'active' and 'disabled' have both been set to TRUE on the same Tab resulting in an interesting Tab state. Is this your intent?`,
       );
-    }
-
-    if (!plain) {
+    }if (!plain) {
       if (typeof title !== 'string') {
         normalizedTitle = title;
       } else if (active) {
-        normalizedTitle = <Text {...theme.tab.active}>{title}</Text>;
-      } else if (disabled && theme.tab.disabled) {
+        normalizedTitle = <Text {...theme.tab.active}>{title}</Text>;} else if (disabled && theme.tab.disabled) {
         normalizedTitle = <Text {...theme.tab.disabled}>{title}</Text>;
       } else {
         normalizedTitle = (

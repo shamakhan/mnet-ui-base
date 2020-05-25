@@ -242,6 +242,7 @@ const Select = forwardRef(
               options={optionsProp}
               allOptions={allOptions}
               optionIndexesInValue={optionIndexesInValue}
+              optionIndexesInValue={optionIndexesInValue}
               replace={replace}
               searchPlaceholder={searchPlaceholder}
               search={search}

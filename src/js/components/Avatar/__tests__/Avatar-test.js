@@ -5,7 +5,7 @@ import 'jest-styled-components';
 
 import { Favorite } from 'grommet-icons';
 import { Box } from '../../Box';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Stack } from '../../Stack';
 import { Text } from '../../Text';
 import { Avatar } from '..';
@@ -17,10 +17,10 @@ describe('Avatar', () => {
 
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Avatar />
         <Avatar id="test id" name="test name" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -28,12 +28,12 @@ describe('Avatar', () => {
 
   test('size renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Avatar size="xsmall" src={src} />
         <Avatar size="small" src={src} />
         <Avatar src={src} />
         <Avatar size="large" src={src} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -41,14 +41,14 @@ describe('Avatar', () => {
 
   test('round renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Avatar src={src} round={false} />
         <Avatar src={src} round="xsmall" />
         <Avatar src={src} round="small" />
         <Avatar src={src} round="medium" />
         <Avatar src={src} round="large" />
         <Avatar src={src} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -56,7 +56,7 @@ describe('Avatar', () => {
 
   test('text renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Avatar background="dark-2">
           <Text alignSelf="center" size="xlarge">
             R
@@ -67,7 +67,7 @@ describe('Avatar', () => {
             SY
           </Text>
         </Avatar>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -75,9 +75,9 @@ describe('Avatar', () => {
 
   test('icon renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Avatar src={<Favorite color="accent-2" />} background="accent-4" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -85,7 +85,7 @@ describe('Avatar', () => {
 
   test('stack renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Stack anchor="bottom-right">
           <Box>
             <Box direction="row">
@@ -96,34 +96,7 @@ describe('Avatar', () => {
           </Box>
           <Avatar src={src} size="42px" />
         </Stack>
-      </Grommet>,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('text size changes according to theme', () => {
-    const theme = {
-      avatar: {
-        text: {
-          size: {
-            small: '30px',
-            large: 'small',
-            '50px': '10px',
-          },
-        },
-      },
-    };
-
-    const component = renderer.create(
-      <Grommet theme={theme}>
-        <Box>
-          <Avatar>T1</Avatar>
-          <Avatar size="small">T2</Avatar>
-          <Avatar size="large">T3</Avatar>
-          <Avatar size="50px">T4</Avatar>
-        </Box>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

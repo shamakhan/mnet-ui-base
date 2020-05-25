@@ -198,6 +198,28 @@ describe('Accordion', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
+  test('accordion border', () => {
+    const component = renderer.create(
+      <MnetUIBase
+        theme={{
+          accordion: {
+            border: undefined,
+            panel: {
+              border: {
+                side: 'horizontal',
+              },
+            },
+          },
+        }}
+      >
+        <Accordion>
+          <AccordionPanel label="Panel 1">Panel body 1</AccordionPanel>
+        </Accordion>
+      </MnetUIBase>,
+    );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
   test('change active index', () => {
     const onActive = jest.fn();
     const { getByText, container } = render(
@@ -298,6 +320,83 @@ describe('Accordion', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  test('focus and hover styles', () => {
+    const { getByText, container } = render(
+      <MnetUIBase theme={{ accordion: { hover: { color: 'red' } } }}>
+        <Accordion>
+          <AccordionPanel
+            label="Panel 1"
+            onMouseOver={() => {}}
+            onMouseOut={() => {}}
+            onFocus={() => {}}
+            onBlur={() => {}}
+          >
+            Panel body 1
+          </AccordionPanel>
+        </Accordion>
+      </MnetUIBase>,
+    );
+
+    fireEvent.focus(getByText('Panel 1'));
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  test('backward compatibility of hover.color = undefined', () => {
+    const { getByText, container } = render(
+      <MnetUIBase
+        theme={{
+          accordion: {
+            hover: { color: undefined },
+          },
+        }}
+      >
+        <Accordion>
+          <AccordionPanel
+            label="Panel 1"
+            onMouseOver={() => {}}
+            onMouseOut={() => {}}
+            onFocus={() => {}}
+            onBlur={() => {}}
+          >
+            Panel body 1
+          </AccordionPanel>
+        </Accordion>
+      </MnetUIBase>,
+    );
+
+    fireEvent.focus(getByText('Panel 1'));
+    // hover color should be undefined
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  test('theme hover of hover.heading.color', () => {
+    const { getByText, container } = render(
+      <MnetUIBase
+        theme={{
+          accordion: {
+            hover: { heading: { color: 'teal' } },
+          },
+        }}
+      >
+        <Accordion>
+          <AccordionPanel
+            label="Panel 1"
+            onMouseOver={() => {}}
+            onMouseOut={() => {}}
+            onFocus={() => {}}
+            onBlur={() => {}}
+          >
+            Panel body 1
+          </AccordionPanel>
+        </Accordion>
+      </MnetUIBase>,
+    );
+
+    fireEvent.focus(getByText('Panel 1'));
+    // hover color should be undefined
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   test('set on hover', () => {
     const { getByText, container } = render(
       <MnetUIBase>
@@ -346,13 +445,13 @@ describe('Accordion', () => {
       </AccordionPanel>
     );
     const { getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Accordion animate={false} onActive={onActive}>
           {[1, 2].map(index => (
             <Panel key={index} index={index} />
           ))}
         </Accordion>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -365,7 +464,7 @@ describe('Accordion', () => {
   test('blur styles', () => {
     const onBlur = jest.fn();
     const { container, getByText } = render(
-      <Grommet theme={{ accordion: { hover: { heading: { color: 'red' } } } }}>
+      <MnetUIBase theme={{ accordion: { hover: { heading: { color: 'red' } } } }}>
         <Accordion>
           <AccordionPanel
             label="Panel 1"
@@ -377,7 +476,7 @@ describe('Accordion', () => {
             Panel body 1
           </AccordionPanel>
         </Accordion>
-      </Grommet>,
+      </MnetUIBase>,
     );
     // focus first then call blur
     fireEvent.focus(getByText('Panel 1'));

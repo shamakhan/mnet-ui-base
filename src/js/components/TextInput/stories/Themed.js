@@ -23,7 +23,7 @@ const customTheme = deepMerge(grommet, {
       background: #c9c19f;
       width: 300px;
       margin: 0 auto;
-
+      
       &:focus {
         box-shadow: none;
         border-color: initial;

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DataTable, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const DATA = [
   {
@@ -93,7 +93,7 @@ const columnsDefault = [
 ];
 
 export const ColumnSize = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box fill="horizontal" pad="medium">
       <Heading level="3"> Default DataTable</Heading>
       <DataTable
@@ -149,7 +149,7 @@ export const ColumnSize = () => (
         }}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ColumnSize.storyName = 'Column sizes';

@@ -113,6 +113,10 @@ export const doc = TextInput => {
       `Whether an icon should be reversed so that the icon is at the
       end of the input.`,
     ),
+    reverse: PropTypes.bool.description(
+      `Whether an icon should be reversed so that the icon is at the
+      end of the input.`,
+    ),
     size: PropTypes.oneOfType([
       PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
       PropTypes.string,

@@ -19,6 +19,7 @@ import { base as iconBase } from 'grommet-icons/themes/base';
 
 import { deepFreeze, deepMerge } from '../utils/object';
 import { parseMetricToNum } from '../utils/mixins';
+import { parseMetricToNum } from '../utils/mixins';
 
 const brandColor = '#E15151';
 const accentColors = ['#20314f', '#519bff', '#4DFFEA', '#A4FF4D'];
@@ -134,7 +135,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     maxWidth: `${baseSpacing * (baseFontSize + factor * fontScale)}px`,
   });
 
-  const borderWidth = 1;
+  const borderWidth = 2;
+  const controlBorderWidth = 1;
   const controlBorderWidth = 1;
 
   const result = deepMerge(iconBase, {
@@ -362,6 +364,20 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         // extend: undefined,
       },
       // extend: undefined,
+    },
+    avatar: {
+      // extend: undefined,
+      size: {
+        xsmall: `${baseSpacing * 0.75}px`,
+        small: `${baseSpacing}px`,
+        medium: `${baseSpacing * 2}px`, // default 48
+        large: `${baseSpacing * 3}px`,
+        xlarge: `${baseSpacing * 4}px`,
+      },
+      text: {
+        // fontWeight: undefined,
+        // extend: undefined
+      },
     },
     box: {
       responsiveBreakpoint: 'small', // when we switch rows to columns

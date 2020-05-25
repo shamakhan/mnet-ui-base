@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Box,
   Button,
-  CheckBox,
+  CheckBoxGroup,
   Form,
   FormField,
   FileInput,
@@ -41,14 +41,21 @@ export const Uncontrolled = () => (
               ]}
             />
           </FormField>
-          <FormField name="subscribe">
-            <CheckBox name="subscribe" label="Subscribe?" />
+          <FormField name="subscription">
+            <CheckBoxGroup
+              name="subscription"
+              options={['subscribe', 'receive email notifications']}
+            />
           </FormField>
           <FormField name="ampm">
             <RadioButtonGroup name="ampm" options={['morning', 'evening']} />
           </FormField>
           <FormField label="Size" name="size">
-            <Select name="size" options={['small', 'medium', 'large']} />
+            <Select
+              name="size"
+              multiple
+              options={['small', 'medium', 'large']}
+            />
           </FormField>
           <FormField label="Comments" name="comments">
             <TextArea name="comments" />
@@ -70,6 +77,10 @@ export const Uncontrolled = () => (
   </div>
 );
 
+<<<<<<<< HEAD:src/js/components/Form/stories/Uncontrolled.js
 export default {
   title: 'Input/Form/Uncontrolled',
 };
+========
+storiesOf('Form', module).add('FormField children', () => <Example />);
+>>>>>>>> Squashed commit of the following::src/js/components/Form/stories/AllChildren.js

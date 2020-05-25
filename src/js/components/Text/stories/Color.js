@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Color = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Text color="accent-1">Colored Text</Text>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

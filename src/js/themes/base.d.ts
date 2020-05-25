@@ -12,8 +12,7 @@ import {
   BreakpointEdgeSize,
   BreakpointSize,
   ColorType,
-  DeepReadonly,
-  DirectionType,
+  DeepReadonly,DirectionType,
   ElevationType,
   GapType,
   GraphColorsType,
@@ -256,13 +255,11 @@ export interface ThemeType {
         size?: BreakpointSize;
       };
       [x: string]:
-        | {
-            value?: number;
-            borderSize?: BreakpointBorderSize;
-            edgeSize?: BreakpointEdgeSize;
-            size?: BreakpointSize;
-          }
-        | undefined;
+        | {value?: number;
+        borderSize?: BreakpointBorderSize;
+        edgeSize?: BreakpointEdgeSize;
+        size?: BreakpointSize;
+      } | undefined;
     };
     deviceBreakpoints?: {
       phone?: string;
@@ -331,6 +328,14 @@ export interface ThemeType {
         color?: ColorType;
         size?: string;
       };
+      outline?: {
+        color?: ColorType;
+        size?: string;
+      };
+      shadow?: {
+        color?: ColorType;
+        size?: string;
+      };
     };
     font?: {
       face?: string;
@@ -358,6 +363,9 @@ export interface ThemeType {
             horizontal?: string;
             vertical?: string;
           };
+      font?: {
+        height?: string;
+        size?: string | { top?: string, bottom?: string, left?: string, right?: string, horizontal?: string, vertical?: string};
       font?: {
         height?: string;
         size?: string;

@@ -46,6 +46,25 @@ describe('Select', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
+  test('a11yTitle', () => {
+    const component = renderer.create(
+      <Select a11yTitle="aria-test" id="test-select" options={['one']} />,
+    );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  test('0 value', () => {
+    const component = renderer.create(
+      <Select
+        id="test-select"
+        placeholder="test select"
+        options={[0, 1]}
+        value={0}
+      />,
+    );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
   test('prop: onOpen', () => {
     jest.useFakeTimers();
     const onOpen = jest.fn();
@@ -506,7 +525,9 @@ describe('Select', () => {
         value: { id: 2, name: 'two' },
       }),
     );
-    expect(window.scrollTo).toBeCalled();
+    expect(window.scrollTo).toBeCalledWith(
+      expect.objectContaining({ value: ['two', 'one'] }),
+    );
   });
 
   test('select on multiple keydown always picks first enabled option', () => {
@@ -543,7 +564,7 @@ describe('Select', () => {
         value: 'two',
       }),
     );
-    expect(window.scrollTo).toBeCalled();
+    expect(window.scrollTo).toBeCalledWith(expect.objectContaining({ value: [] }));
   });
 
   test('disabled', () => {

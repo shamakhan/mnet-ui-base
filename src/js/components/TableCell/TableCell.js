@@ -21,8 +21,7 @@ const TableCell = forwardRef(
       background,
       border,
       children,
-      className, // so StyledDataTableCell is applied to td/th
-      colSpan,
+      className, // so StyledDataTableCell is applied to td/thcolSpan,
       pad,
       plain,
       scope,

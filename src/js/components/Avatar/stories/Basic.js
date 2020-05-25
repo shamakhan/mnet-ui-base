@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Favorite } from 'grommet-icons';
 
-import { Avatar, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Avatar, Box, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Basic = () => {
   const src = '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box
         align="center"
         justify="center"
@@ -24,7 +24,7 @@ export const Basic = () => {
         <Avatar background="dark-2">R</Avatar>
         <Avatar background="brand">SY</Avatar>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

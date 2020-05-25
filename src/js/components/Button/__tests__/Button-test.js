@@ -16,9 +16,9 @@ describe('Button', () => {
 
   test('should have no accessibility violations', async () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Button a11yTitle="Test button" label="Test" onClick={() => {}} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.click(getByText('Test'));
@@ -181,9 +181,9 @@ describe('Button', () => {
 
   test('active', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Button active label="Button" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -191,7 +191,7 @@ describe('Button', () => {
 
   test('active + primary', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Button active primary label="Button" />
       </MnetUIBase>,
     );
@@ -330,9 +330,9 @@ describe('Button', () => {
   test(`disabled state cursor should indicate the button cannot be 
   clicked`, () => {
     const { getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Button disabled label="Button" />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const button = getByText('Button');

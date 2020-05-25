@@ -399,7 +399,6 @@ const SelectContainer = forwardRef(
                       </OptionBox>
                     );
                   // if we have a child, turn on plain, and hoverIndicator
-
                   return (
                     <SelectOption
                       // eslint-disable-next-line react/no-array-index-key

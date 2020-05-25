@@ -21,9 +21,9 @@ describe('Calendar', () => {
 
   test('Calendar should have no accessbility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Calendar date={DATE} animate={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = await axe(container);
@@ -35,7 +35,7 @@ describe('Calendar', () => {
     const component = renderer.create(
       <MnetUIBase>
         <Calendar date={DATE} animate={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -48,7 +48,7 @@ describe('Calendar', () => {
     const disabledDate = new Date(DATE);
     disabledDate.setDate(disabledDate.getDate() + 1);
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar date={DATE} disabled={[disabledDate.toDateString()]} />
       </MnetUIBase>,
     );
@@ -85,7 +85,7 @@ describe('Calendar', () => {
         <Calendar size="small" date={DATE} animate={false} />
         <Calendar size="medium" date={DATE} animate={false} />
         <Calendar size="large" date={DATE} animate={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -94,7 +94,7 @@ describe('Calendar', () => {
 
   test('fill', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar fill date={DATE} animate={false} />
       </MnetUIBase>,
     );
@@ -119,7 +119,7 @@ describe('Calendar', () => {
     const component = renderer.create(
       <MnetUIBase>
         <Calendar reference={DATE} animate={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -128,7 +128,7 @@ describe('Calendar', () => {
 
   test('showAdjacentDays', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Calendar date={DATE} animate={false} />
         <Calendar date={DATE} animate={false} showAdjacentDays={false} />
         <Calendar date={DATE} animate={false} showAdjacentDays="trim" />
@@ -581,5 +581,31 @@ describe('Calendar Keyboard events', () => {
     });
     // Jan 16th is set to active
     expect(onSelect).toBeCalledWith(expect.stringMatching(/^2020-01-16T/));
+  });
+
+  test('select date', () => {
+    const onSelect = jest.fn();
+    const { getByText, container } = render(
+      <MnetUIBase>
+        <Calendar date={DATE} onSelect={onSelect} animate={false} />
+      </MnetUIBase>,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    fireEvent.click(getByText('17'));
+    expect(onSelect).toBeCalledWith(expect.stringMatching(/^2018-01-17T/));
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  test('select dates', () => {
+    const onSelect = jest.fn();
+    const { getByText, container } = render(
+      <MnetUIBase>
+        <Calendar dates={DATES} onSelect={onSelect} animate={false} />
+      </MnetUIBase>,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    fireEvent.click(getByText('17'));
+    expect(onSelect).toBeCalledWith(expect.stringMatching(/^2018-01-17T/));
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

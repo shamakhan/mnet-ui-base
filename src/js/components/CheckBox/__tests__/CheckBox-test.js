@@ -14,9 +14,9 @@ describe('CheckBox', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <CheckBox a11yTitle="test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -25,9 +25,9 @@ describe('CheckBox', () => {
 
   test('label should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <CheckBox label="test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -68,9 +68,9 @@ describe('CheckBox', () => {
 
   test('defaultChecked', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <CheckBox defaultChecked />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -120,8 +120,7 @@ describe('CheckBox', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('indeterminate checked warns', () => {
-    console.warn = jest.fn();
+  test('indeterminate checked warns', () => {console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
     render(
       <MnetUIBase>
@@ -131,8 +130,7 @@ describe('CheckBox', () => {
     expect(warnSpy).toBeCalledWith(
       'Checkbox cannot be "checked" and "indeterminate" at the same time.',
     );
-
-    warnSpy.mockReset();
+  warnSpy.mockReset();
     warnSpy.mockRestore();
     console.warn.mockReset();
   });
@@ -148,17 +146,28 @@ describe('CheckBox', () => {
     expect(warnSpy).toBeCalledWith(
       'Checkbox of type toggle does not have "indeterminate" state.',
     );
-
-    warnSpy.mockReset();
+  warnSpy.mockReset();
     warnSpy.mockRestore();
     console.warn.mockReset();
   });
 
   test('controlled', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <CheckBox label="test-label" checked />
-      </Grommet>,
+      </MnetUIBase>,
+    );
+    expect(container.firstChild).toMatchSnapshot();
+    fireEvent.click(getByText('test-label'));
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
+
+  test('controlled', () => {
+    const { container, getByText } = render(
+      <MnetUIBase>
+        <CheckBox label="test-label" checked />
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('test-label'));

@@ -213,6 +213,15 @@ Whether an icon should be reversed so that the icon is at the
 boolean
 ```
 
+**reverse**
+
+Whether an icon should be reversed so that the icon is at the
+      end of the input.
+
+```
+boolean
+```
+
 **size**
 
 The size of the TextInput.

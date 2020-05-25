@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const sizes = [
   '6xl',
@@ -19,7 +19,7 @@ const sizes = [
 ];
 
 export const All = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <>
       {sizes.map(size => (
         <Box key={size} margin="small">
@@ -32,7 +32,7 @@ export const All = () => (
         </Text>
       </Box>
     </>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

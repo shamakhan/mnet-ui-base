@@ -6,15 +6,15 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const defaultValue = {
   name: '',
@@ -31,7 +31,7 @@ const suggestions = ['Shimi', 'Eric'];
 export const Controlled = () => {
   const [value, setValue] = useState(defaultValue);
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={grommet}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -83,7 +83,7 @@ export const Controlled = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

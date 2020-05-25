@@ -53,7 +53,7 @@ export const doc = MnetUIBase => {
 };
 
 export const themeDoc = {
-  'grommet.extend': {
+  'mnet.extend': {
     description: 'Any additional style for MnetUIBase.',
     type: 'string | (props) => {}',
     defaultValue: undefined,

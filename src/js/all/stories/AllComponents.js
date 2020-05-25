@@ -245,7 +245,7 @@ const Components = () => {
             <Select
               plain
               size="small"
-              options={['mnet', 'dark', 'neo']}
+              options={Object.keys(themes)}
               value={themeName}
               onChange={event => setThemeName(event.option)}
             />
