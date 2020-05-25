@@ -1,16 +1,15 @@
 import React from 'react';
 
-import { Anchor, Box, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Anchor, Box } from 'mnet-ui-base';
 
 const DisabledAnchor = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box align="center" pad="large">
       <Box margin="small">
         <Anchor disabled label="Disabled Anchor" />
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 export const Disabled = () => <DisabledAnchor />;

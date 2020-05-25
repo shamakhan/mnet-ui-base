@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { mnet, Box, Button, MnetUIBase } from 'mnet-ui-base';
+import { Box, Button } from 'mnet-ui-base';
 
 export const Basic = props => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box align="center" pad="medium">
       <Button label="Default" onClick={() => {}} {...props} />
     </Box>
@@ -25,7 +25,7 @@ export const Basic = props => (
         {...props}
       />
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 export default {

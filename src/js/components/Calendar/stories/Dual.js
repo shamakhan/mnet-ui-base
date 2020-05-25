@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Calendar, MnetUIBase, Heading } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Calendar, Heading } from 'mnet-ui-base';
 
 import { Blank, Previous, Next } from 'grommet-icons';
 
@@ -21,7 +20,7 @@ export const Dual = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box justify="center" pad="large" direction="row" gap="small">
         <Calendar
           animate={false}
@@ -95,7 +94,7 @@ export const Dual = () => {
           )}
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

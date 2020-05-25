@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, DataTable, CheckBox } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, DataTable, CheckBox } from 'mnet-ui-base';
 
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
@@ -28,7 +27,7 @@ export const ControlledDataTable = () => {
     setChecked(event.target.checked ? DATA.map(datum => datum.name) : []);
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="medium">
         <DataTable
           columns={[
@@ -59,7 +58,7 @@ export const ControlledDataTable = () => {
           size="medium"
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Paragraph } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Paragraph } from 'mnet-ui-base';
 
 const sizes = ['xxlarge', 'xlarge', 'large', 'medium', 'small'];
 
@@ -11,7 +10,7 @@ tempor incididunt ut labore et dolore magna aliqua.
 `;
 
 export const All = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     {sizes.map(size => (
       <Paragraph key={size} size={size}>
         {`Paragraph ${size}`}
@@ -23,7 +22,7 @@ export const All = () => (
       This is a full-width paragraph, using the &quot;fill&quot; property:{' '}
       {paragraphFiller}
     </Paragraph>
-  </MnetUIBase>
+  </>
 );
 
 export default {

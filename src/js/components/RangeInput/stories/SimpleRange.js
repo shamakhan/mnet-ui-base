@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Box, MnetUIBase, RangeInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RangeInput } from 'mnet-ui-base';
 
 export const Simple = () => {
   const [value, setValue] = React.useState(5);
@@ -9,11 +8,11 @@ export const Simple = () => {
   const onChange = event => setValue(event.target.value);
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <RangeInput value={value} onChange={onChange} />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

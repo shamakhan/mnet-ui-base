@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { Accordion, AccordionPanel, Box, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Accordion, AccordionPanel, Box } from 'mnet-ui-base';
 
 export const Simple = props => {
   const { animate, multiple, ...rest } = props;
   return (
-    <MnetUIBase theme={mnet}>
+    <div>
       <Box {...rest}>
         <Accordion animate={animate} multiple={multiple}>
           <AccordionPanel label="Panel 1">
@@ -28,7 +27,7 @@ export const Simple = props => {
           </AccordionPanel>
         </Accordion>
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

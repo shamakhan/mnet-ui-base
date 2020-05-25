@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { MnetUIBase, Box, InfiniteScroll, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, InfiniteScroll, Text } from 'mnet-ui-base';
 
 const allItems = Array(2000)
   .fill()
   .map((_, i) => `item ${i + 1}`);
 
 export const Simple = props => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box>
       <InfiniteScroll items={allItems} {...props}>
         {item => (
@@ -23,7 +22,7 @@ export const Simple = props => (
         )}
       </InfiniteScroll>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 export default {

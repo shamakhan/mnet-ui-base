@@ -1,18 +1,10 @@
 import React from 'react';
 
 import { StatusGood } from 'grommet-icons';
-import {
-  Box,
-  Button,
-  MnetUIBase,
-  Form,
-  FormField,
-  TextInput,
-} from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Form, FormField, TextInput } from 'mnet-ui-base';
 
 export const ValidateOnBlur = () => (
-  <MnetUIBase full theme={mnet}>
+  <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form
@@ -57,7 +49,7 @@ export const ValidateOnBlur = () => (
         </Form>
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 ValidateOnBlur.storyName = 'Validate on blur';

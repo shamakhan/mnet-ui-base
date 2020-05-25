@@ -50,7 +50,7 @@ export const RequiredLabel = () => (
         </Text>
       </Form>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 RequiredLabel.storyName = 'Required label';

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 
-import { Box, MnetUIBase, RadioButtonGroup } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RadioButtonGroup } from 'mnet-ui-base';
 import { Ascend, Descend } from 'grommet-icons';
 
 export const Children = () => {
   const [value, setValue] = useState();
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <RadioButtonGroup
           name="radio"
@@ -32,7 +31,7 @@ export const Children = () => {
           }}
         </RadioButtonGroup>
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

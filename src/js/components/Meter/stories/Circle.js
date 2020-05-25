@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import { MnetUIBase, Box, Meter } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Meter } from 'mnet-ui-base';
 
 export const Circle = () => {
   const [value, setValue] = useState(20);
@@ -20,7 +19,7 @@ export const Circle = () => {
   );
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <Meter
           type="circle"
@@ -28,7 +27,7 @@ export const Circle = () => {
           values={[{ value, color: value > 50 ? 'accent-2' : 'accent-1' }]}
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

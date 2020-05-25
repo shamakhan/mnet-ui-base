@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-import { Box, MnetUIBase, RadioButtonGroup } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RadioButtonGroup } from 'mnet-ui-base';
 
 export const Disabled = ({ value: initialValue, ...props }) => {
   const [value, setValue] = useState(initialValue);
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <RadioButtonGroup
           name="radio"
@@ -22,7 +21,7 @@ export const Disabled = ({ value: initialValue, ...props }) => {
           {...props}
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

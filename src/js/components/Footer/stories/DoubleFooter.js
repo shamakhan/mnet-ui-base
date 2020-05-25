@@ -1,16 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MnetUIBase as MnetUIBaseIcon } from 'grommet-icons';
-import {
-  Anchor,
-  Box,
-  Footer,
-  MnetUIBase,
-  Main,
-  Text,
-  mnet,
-} from 'mnet-ui-base';
+import { Anchor, Box, Footer, Main, Text, Icon } from 'mnet-ui-base';
 import { fiveColumns as data } from './data';
 
 const StyledAnchor = styled(Anchor)`
@@ -36,7 +27,7 @@ const FooterContent = () =>
   ));
 
 export const DoubleFooter = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Main background="light-4" elevation="large" pad="large" border>
       <Text margin="small" size="xsmall">
         Main Content
@@ -51,14 +42,14 @@ export const DoubleFooter = () => (
       pad={{ horizontal: 'large', vertical: 'small' }}
     >
       <Box direction="row" gap="small">
-        <MnetUIBaseIcon color="brand" />
+        <Icon color="brand" />
         <Text alignSelf="center">grommet.io</Text>
       </Box>
       <Text textAlign="center" size="small">
         © 2019 Copyright
       </Text>
     </Footer>
-  </MnetUIBase>
+  </>
 );
 
 DoubleFooter.storyName = 'Double footer';

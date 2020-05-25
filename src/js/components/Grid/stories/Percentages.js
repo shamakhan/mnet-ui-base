@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Grid } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Grid } from 'mnet-ui-base';
 
 export const Percentages = () => (
-  <MnetUIBase theme={mnet} full>
+  <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
     <Grid
       fill
       areas={[
@@ -18,7 +17,7 @@ export const Percentages = () => (
       <Box gridArea="nav" background="brand" />
       <Box gridArea="main" background="brand" />
     </Grid>
-  </MnetUIBase>
+  </div>
 );
 
 export default {

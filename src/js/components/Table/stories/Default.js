@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   Box,
-  MnetUIBase,
   Table,
   TableBody,
   TableCell,
@@ -11,11 +10,10 @@ import {
   TableRow,
   Text,
 } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
 import { data, columns } from './data';
 
 export const Default = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <Table caption="Default Table">
         <TableHeader>
@@ -49,7 +47,7 @@ export const Default = () => (
         </TableFooter>
       </Table>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 export default {

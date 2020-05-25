@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SubtractCircle, AddCircle } from 'grommet-icons';
 
-import { Accordion, AccordionPanel, Box, MnetUIBase, Text } from 'mnet-ui-base';
+import { Accordion, AccordionPanel, Box, Text } from 'mnet-ui-base';
 
 const customAccordionTheme = {
   global: {
@@ -39,7 +39,7 @@ const customAccordionTheme = {
 };
 
 const CustomAccordion = ({ animate, multiple, ...rest }) => (
-  <MnetUIBase theme={customAccordionTheme}>
+  <div theme={customAccordionTheme}>
     <Box {...rest} pad="large" align="center" justify="center">
       <Accordion animate={animate} multiple>
         <AccordionPanel
@@ -68,7 +68,7 @@ const CustomAccordion = ({ animate, multiple, ...rest }) => (
         </AccordionPanel>
       </Accordion>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 export const Custom = () => <CustomAccordion />;

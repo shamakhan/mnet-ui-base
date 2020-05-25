@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, RadioButton } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RadioButton } from 'mnet-ui-base';
 
 export const Disabled = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large" gap="large">
       <RadioButton
         label="option 1"
@@ -14,7 +13,7 @@ export const Disabled = () => (
         disabled
       />
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 export default {

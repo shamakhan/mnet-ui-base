@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, List, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, List, Text } from 'mnet-ui-base';
 
 const locations = [
   'Boise',
@@ -20,7 +19,7 @@ for (let i = 0; i < 40; i += 1) {
 }
 
 export const RenderedList = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <List
         data={data.slice(0, 10)}
@@ -36,7 +35,7 @@ export const RenderedList = () => (
         )}
       />
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 RenderedList.storyName = 'Key render';

@@ -4,7 +4,7 @@ import { Accordion, AccordionPanel, Box, MnetUIBase } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 
 export const DarkNoAnimation = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box background="dark-2">
       <Accordion animate={false}>
         <AccordionPanel label="Panel 1">
@@ -26,7 +26,7 @@ export const DarkNoAnimation = () => (
         </AccordionPanel>
       </Accordion>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 DarkNoAnimation.storyName = 'Dark no animation';

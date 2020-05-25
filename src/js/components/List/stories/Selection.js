@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, List } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, List } from 'mnet-ui-base';
 
 const data = [];
 
@@ -15,7 +14,7 @@ export const Selection = () => {
   const [selected, setSelected] = React.useState();
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large" gap="large">
         <List
           data={data.slice(0, 10)}
@@ -27,7 +26,7 @@ export const Selection = () => {
           }
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

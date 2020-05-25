@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Anchor, MnetUIBase, Nav } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Anchor, Nav } from 'mnet-ui-base';
 
 const items = [
   { label: 'Item A', href: '#' },
@@ -11,13 +10,13 @@ const items = [
 ];
 
 const SimpleNav = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Nav pad="large">
       {items.map(item => (
         <Anchor href={item.href} label={item.label} key={item.label} />
       ))}
     </Nav>
-  </MnetUIBase>
+  </>
 );
 
 export const Simple = () => <SimpleNav />;

@@ -3,16 +3,14 @@ import React from 'react';
 import {
   Anchor,
   Box,
-  MnetUIBase,
   Header,
   Nav,
   Menu,
   ResponsiveContext,
 } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
 
 const CollapsableNav = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Header background="dark-1" pad="medium">
       <Box direction="row" align="center" gap="small">
         Resize the page to collapse the Nav into a Menu
@@ -38,7 +36,7 @@ const CollapsableNav = () => (
         }
       </ResponsiveContext.Consumer>
     </Header>
-  </MnetUIBase>
+  </>
 );
 
 export const Collapsable = () => <CollapsableNav />;

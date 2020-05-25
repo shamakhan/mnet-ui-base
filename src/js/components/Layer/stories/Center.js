@@ -2,16 +2,7 @@ import React from 'react';
 
 import { Trash } from 'grommet-icons';
 
-import {
-  Box,
-  Button,
-  MnetUIBase,
-  Heading,
-  Layer,
-  Select,
-  Text,
-} from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Heading, Layer, Select, Text } from 'mnet-ui-base';
 
 export const CenterLayer = () => {
   const [open, setOpen] = React.useState();
@@ -26,7 +17,7 @@ export const CenterLayer = () => {
   const onClose2 = () => setOpen2(undefined);
 
   return (
-    <MnetUIBase theme={mnet} full>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box fill align="center" justify="center">
         <Button
           icon={<Trash />}
@@ -89,7 +80,7 @@ export const CenterLayer = () => {
           </Box>
         </Layer>
       )}
-    </MnetUIBase>
+    </div>
   );
 };
 

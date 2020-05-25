@@ -10,6 +10,7 @@ import {
   TextInput,
 } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
+import { FormClose } from 'grommet-icons';
 
 const allSuggestions = ['sony', 'sonar', 'foo', 'bar'];
 
@@ -124,7 +125,7 @@ export const WithTags = () => {
     );
 
   return (
-    <MnetUIBase full theme={mnet}>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box pad="small">
         <TagInput
           placeholder="Search for aliases..."
@@ -135,7 +136,7 @@ export const WithTags = () => {
           onChange={({ target: { value } }) => onFilterSuggestion(value)}
         />
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

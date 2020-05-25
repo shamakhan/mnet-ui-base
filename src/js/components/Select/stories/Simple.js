@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-import { Box, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Select } from 'mnet-ui-base';
 
 export const Simple = () => {
   const options = ['one', 'two'];
   const [value, setValue] = useState('');
   return (
-    <MnetUIBase full theme={mnet}>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box fill align="center" justify="start" pad="large" gap="medium">
         <Select
           id="select"
@@ -18,7 +17,7 @@ export const Simple = () => {
           onChange={({ option }) => setValue(option)}
         />
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

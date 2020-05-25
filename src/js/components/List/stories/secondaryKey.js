@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, List } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, List } from 'mnet-ui-base';
 
 const locations = [
   'Boise',
@@ -21,7 +20,7 @@ for (let i = 0; i < 40; i += 1) {
 }
 
 export const SecondaryKey = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <List
         data={data.slice(0, 10)}
@@ -29,7 +28,7 @@ export const SecondaryKey = () => (
         secondaryKey="location"
       />
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 SecondaryKey.storyName = 'Secondary key';

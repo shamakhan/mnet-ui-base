@@ -1,11 +1,10 @@
 import React from 'react';
 import { Close, Send, User } from 'grommet-icons';
 
-import { Box, Button, MnetUIBase, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Text } from 'mnet-ui-base';
 
 export const Icon = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box align="center" pad="large">
       <Text margin="small"> plain=true (no padding, no border) </Text>
       <Box direction="row">
@@ -31,7 +30,7 @@ export const Icon = () => (
         <Button icon={<User />} onClick={() => {}} />
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 Icon.storyName = 'Icon plain';

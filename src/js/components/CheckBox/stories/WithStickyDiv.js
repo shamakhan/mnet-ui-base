@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { Box, CheckBox, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, CheckBox } from 'mnet-ui-base';
 
 const boxStyle = {
   position: 'relative',
@@ -28,7 +27,7 @@ export const WithStickyDiv = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box pad="large" align="center">
         <Box height="120px" width="120px" overflow="auto" style={boxStyle}>
           <Box background={titleBoxBackground} style={titleBoxStyle}>
@@ -44,7 +43,7 @@ export const WithStickyDiv = () => {
           ))}
         </Box>
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

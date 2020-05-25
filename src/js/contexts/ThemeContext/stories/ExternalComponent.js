@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { mnet } from 'mnet-ui-base/themes';
-import { Box, Text, ThemeContext, MnetUIBase } from 'mnet-ui-base';
+import { Box, Text, ThemeContext } from 'mnet-ui-base';
 
 export const ExternalComponentWithTheme = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box background="neutral-3">
       <Text color="light-1">This is a grommet component</Text>
     </Box>
@@ -18,7 +17,7 @@ export const ExternalComponentWithTheme = () => (
         </div>
       )}
     </ThemeContext.Consumer>
-  </MnetUIBase>
+  </>
 );
 
 ExternalComponentWithTheme.storyName = 'External components';

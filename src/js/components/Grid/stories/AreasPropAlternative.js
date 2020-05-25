@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Grid } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Grid } from 'mnet-ui-base';
 
 export const GridAreasAlternative = () => (
-  <MnetUIBase full theme={mnet}>
+  <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
     <Grid
       rows={['xxsmall', 'medium', 'xsmall']}
       columns={['1/4', '3/4']}
@@ -31,7 +30,7 @@ export const GridAreasAlternative = () => (
         Footer
       </Box>
     </Grid>
-  </MnetUIBase>
+  </div>
 );
 
 GridAreasAlternative.storyName = 'Areas prop alternatives';

@@ -220,7 +220,7 @@ object
 
 **dropProps**
 
-Any valid Drop prop. Defaults to `{}`.
+Any valid Drop prop.
 
 ```
 object
@@ -252,7 +252,7 @@ node
 
 Required. Menu items to be placed inside the drop down.
 The object values can be any Button prop, 
-for example: `label`, `onClick`, and `href`. Defaults to `[]`. Defaults to `[]`.
+for example: `label`, `onClick`, and `href`. Defaults to `[]`.
 
 ```
 [object]

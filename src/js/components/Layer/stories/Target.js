@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Button, CheckBox, Grid, MnetUIBase, Layer, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, CheckBox, Grid, Layer, Select } from 'mnet-ui-base';
 
 const positions = ['left', 'right', 'top', 'bottom', 'center'];
 
@@ -18,7 +17,7 @@ export const TargetLayer = () => {
   const onClose = () => setOpen(undefined);
 
   return (
-    <MnetUIBase theme={mnet} full>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Grid
         fill
         columns={[gutter, 'flex', gutter]}
@@ -74,7 +73,7 @@ export const TargetLayer = () => {
           </Box>
         </Layer>
       )}
-    </MnetUIBase>
+    </div>
   );
 };
 

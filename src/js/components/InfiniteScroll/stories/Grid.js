@@ -1,21 +1,13 @@
 import React from 'react';
 
-import {
-  Grid,
-  MnetUIBase,
-  Box,
-  Image,
-  InfiniteScroll,
-  Text,
-} from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Grid, Box, Image, InfiniteScroll, Text } from 'mnet-ui-base';
 
 const allItems = Array(2000)
   .fill()
   .map((_, i) => `item ${i + 1}`);
 
 export const GridInfiniteScroll = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Grid columns="xsmall" rows="small">
       <InfiniteScroll items={allItems} step={12}>
         {item => (
@@ -26,7 +18,7 @@ export const GridInfiniteScroll = () => (
         )}
       </InfiniteScroll>
     </Grid>
-  </MnetUIBase>
+  </>
 );
 
 GridInfiniteScroll.storyName = 'Grid';

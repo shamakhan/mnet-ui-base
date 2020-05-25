@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Image, Anchor } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Image, Anchor } from 'mnet-ui-base';
 
 export const Fill = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="start" gap="small">
       <Box height="small" width="small" border>
         <Anchor href="#">
@@ -12,7 +11,7 @@ export const Fill = () => (
         </Anchor>
       </Box>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 export default {

@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Box, MnetUIBase, Clock, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Clock, Text } from 'mnet-ui-base';
 
 const sizes = [
   'xsmall',
@@ -14,7 +13,7 @@ const sizes = [
 ];
 
 export const Analog = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box direction="row" gap="small" pad="large">
       {sizes.map(size => (
         <Box key={size} align="center">
@@ -29,7 +28,7 @@ export const Analog = () => (
         compatibility.
       </Text>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 Analog.parameters = {

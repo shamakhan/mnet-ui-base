@@ -2,14 +2,12 @@ import React from 'react';
 import {
   Box,
   Button,
-  MnetUIBase,
   Keyboard,
   Text,
   Calendar,
   MaskedInput,
   DropButton,
 } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
 import { Schedule } from 'grommet-icons';
 
 const DropContent = ({ date: initialDate, time: initialTime, onClose }) => {
@@ -95,7 +93,7 @@ export const DateTimeDropButton = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <div>
       <Box align="center" pad="large">
         <DropButton
           open={open}
@@ -115,7 +113,7 @@ export const DateTimeDropButton = () => {
           </Box>
         </DropButton>
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { Box, Calendar, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Calendar } from 'mnet-ui-base';
 
 export const Simple = () => {
   const [date, setDate] = useState();
@@ -11,7 +10,7 @@ export const Simple = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <Calendar
           date={date}
@@ -29,7 +28,7 @@ export const Simple = () => {
           bounds={['2018-09-08', '2020-12-13']}
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

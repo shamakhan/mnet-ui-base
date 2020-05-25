@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { Box, MnetUIBase, Layer } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Layer } from 'mnet-ui-base';
 
 const MarginLayer = ({ margin, ...rest }) => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Layer
       margin={
         margin || { left: '40px', top: '50px', right: '30px', bottom: '10px' }
@@ -20,7 +19,7 @@ const MarginLayer = ({ margin, ...rest }) => (
         <Box pad="xlarge">text</Box>
       </Box>
     </Layer>
-  </MnetUIBase>
+  </>
 );
 
 export const Margin = () => <MarginLayer full />;

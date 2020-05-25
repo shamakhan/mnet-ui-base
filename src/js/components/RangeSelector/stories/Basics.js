@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { MnetUIBase, Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
 
 export const Simple = ({ direction = 'horizontal' }) => {
   const [range, setRange] = useState([12, 16]);
@@ -10,7 +9,7 @@ export const Simple = ({ direction = 'horizontal' }) => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <Stack>
           <Box
@@ -40,7 +39,7 @@ export const Simple = ({ direction = 'horizontal' }) => {
           />
         </Stack>
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

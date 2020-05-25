@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import {
   Box,
   Heading,
-  MnetUIBase,
   InfiniteScroll,
   Table,
   TableRow,
@@ -11,7 +10,6 @@ import {
   TableCell,
   TableHeader,
   Text,
-  mnet,
 } from 'mnet-ui-base';
 
 export const InfiniteScrollInTable = () => {
@@ -28,7 +26,7 @@ export const InfiniteScrollInTable = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box pad="small" basis="small">
         <Heading level={3}>
           <Box gap="small">
@@ -79,7 +77,7 @@ export const InfiniteScrollInTable = () => {
           </TableBody>
         </Table>
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

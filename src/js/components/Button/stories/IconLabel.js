@@ -1,11 +1,10 @@
 import React from 'react';
 import { Add } from 'grommet-icons';
 
-import { Box, Button, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button } from 'mnet-ui-base';
 
 export const IconLabel = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <Box round="full" overflow="hidden" background="neutral-1">
         <Button icon={<Add />} hoverIndicator onClick={() => {}} />
@@ -22,7 +21,7 @@ export const IconLabel = () => (
         />
       </Box>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 IconLabel.storyName = 'Icon label';

@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 
 import { CaretDown } from 'grommet-icons';
-import { Box, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Select } from 'mnet-ui-base';
 
 export const ValueLabel = () => {
   const options = ['one', 'two'];
   const [value, setValue] = useState('');
 
   return (
-    <MnetUIBase full theme={mnet}>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           id="select"
@@ -41,7 +40,7 @@ export const ValueLabel = () => {
           }
         />
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Menu } from 'mnet-ui-base';
+import { Box, Menu } from 'mnet-ui-base';
 import { Power, User } from 'grommet-icons';
-import { mnet } from 'mnet-ui-base/themes';
 
 const ReverseMenu = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box align="center" pad="large">
       <Menu
         dropProps={{ align: { top: 'bottom', left: 'left' } }}
@@ -17,7 +16,7 @@ const ReverseMenu = () => (
         ]}
       />
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 export const Reverse = () => <ReverseMenu />;

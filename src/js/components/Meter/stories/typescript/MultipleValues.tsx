@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { MnetUIBase, Box, Meter, Stack, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Meter, Stack, Text } from 'mnet-ui-base';
 
 export const MultipleValues = () => {
   const total = 100;
@@ -10,7 +9,7 @@ export const MultipleValues = () => {
   const [highlight, setHighlight] = useState(false);
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <Stack anchor="center">
           <Meter
@@ -51,7 +50,7 @@ export const MultipleValues = () => {
           </Box>
         </Stack>
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

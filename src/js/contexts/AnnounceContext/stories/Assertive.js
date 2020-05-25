@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { mnet } from 'mnet-ui-base/themes';
-import { AnnounceContext, Box, MnetUIBase, Heading, Text } from 'mnet-ui-base';
+import { AnnounceContext, Box, Heading, Text } from 'mnet-ui-base';
 
 const Announcer = ({ announce, message, mode, role }) => {
   React.useEffect(() => {
@@ -30,14 +29,14 @@ Announcer.defaultProps = {
 };
 
 const AnnounceContextComponent = props => (
-  <MnetUIBase theme={mnet} full>
+  <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
     <Box justify="center" align="center" background="brand" fill>
       <Heading>Welcome to announcement section</Heading>
       <AnnounceContext.Consumer>
         {announce => <Announcer announce={announce} {...props} />}
       </AnnounceContext.Consumer>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 export const Assertive = () => (

@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Box, Drop, MnetUIBase, Text, ThemeContext } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Drop, Text, ThemeContext } from 'mnet-ui-base';
 
 const OneDrop = ({ align, target }) => (
   <Drop align={align} target={target} stretch={false}>
@@ -54,7 +53,7 @@ Set.propTypes = {
 };
 
 const AllDrops = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <ThemeContext.Extend
       value={{
         global: {
@@ -156,7 +155,7 @@ const AllDrops = () => (
         <Set label="(center vertical and horizontal)" aligns={[{}]} />
       </Box>
     </ThemeContext.Extend>
-  </MnetUIBase>
+  </>
 );
 
 export const AllNotStretched = () => <AllDrops />;

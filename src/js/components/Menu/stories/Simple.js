@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Menu } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Menu } from 'mnet-ui-base';
 
 const SimpleMenu = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <Menu
         dropProps={{
@@ -19,7 +18,7 @@ const SimpleMenu = () => (
         ]}
       />
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 export const Simple = () => <SimpleMenu />;

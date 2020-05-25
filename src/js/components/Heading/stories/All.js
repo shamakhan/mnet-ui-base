@@ -34,7 +34,7 @@ Set.propTypes = {
 };
 
 export const All = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Grid columns="large" gap="medium">
       <Set size="medium" />
       <Set size="small" />

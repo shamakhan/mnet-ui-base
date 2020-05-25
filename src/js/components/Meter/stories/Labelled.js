@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Meter, Stack, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Meter, Stack, Text } from 'mnet-ui-base';
 
 export const Labelled = () => {
   const meterValue = 30;
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <Stack anchor="center">
           <Meter
@@ -25,7 +24,7 @@ export const Labelled = () => {
           </Box>
         </Stack>
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

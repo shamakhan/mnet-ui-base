@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-import { Box, Button, Drop, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Drop } from 'mnet-ui-base';
 
 const ProgressiveDrop = () => {
   const boxRef = useRef();
@@ -24,7 +23,7 @@ const ProgressiveDrop = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet} full>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box fill align="center" justify="center">
         <Button ref={boxRef} primary label="Click me" onClick={onOpenDrop} />
         {openDrop && (
@@ -63,7 +62,7 @@ const ProgressiveDrop = () => {
           </Drop>
         )}
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, DataTable, Meter, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, DataTable, Meter, Text } from 'mnet-ui-base';
 
 import { ColumnConfig } from '../..';
 
@@ -141,7 +140,7 @@ const DATA: RowType[] = [
 ];
 
 export const ClickableDataTable = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       {/* eslint-disable no-alert */}
       <DataTable
@@ -151,7 +150,7 @@ export const ClickableDataTable = () => (
         onClickRow={event => console.log(event.datum)}
       />
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 ClickableDataTable.storyName = 'Clickable';

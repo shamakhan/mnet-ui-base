@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Box } from 'mnet-ui-base';
 
 export const RTLBox = () => (
-  <MnetUIBase theme={mnet} dir="rtl">
+  <div dir="rtl">
     <Box direction="row" align="center" pad="small" gap="small" border>
       <Box direction="row" align="center" pad="small" border="start">
         border start
@@ -26,7 +25,7 @@ export const RTLBox = () => (
         margin start
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 RTLBox.storyName = 'RTL';

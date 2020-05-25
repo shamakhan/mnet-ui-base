@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { Box, MnetUIBase, CheckBox } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, CheckBox } from 'mnet-ui-base';
 
 export const Indeterminate = () => {
   const [checked, setChecked] = useState([]);
@@ -24,7 +23,7 @@ export const Indeterminate = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <Box direction="row" gap="medium">
           <CheckBox
@@ -43,7 +42,7 @@ export const Indeterminate = () => {
           ))}
         </Box>
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

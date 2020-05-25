@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Button } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button } from 'mnet-ui-base';
 
 import { Add } from 'grommet-icons';
 
 export const Multiple = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <Box direction="row" align="center" gap="small" pad="xsmall">
         <Button label="Cancel" onClick={() => {}} />
@@ -43,7 +42,7 @@ export const Multiple = () => (
         />
       </Box>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 export default {

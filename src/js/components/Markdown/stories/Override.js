@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Box, MnetUIBase, Markdown } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Markdown } from 'mnet-ui-base';
 
 const CONTENT = `
   # Out of Breath
@@ -27,16 +26,24 @@ import { MnetUIBase } from 'mnet-ui-base';
   1 | 2 | 3
 `;
 
+const SimpleMarkdown = () => (
+  <>
+    <Box align="center" pad="large">
+      <Markdown>{CONTENT}</Markdown>
+    </Box>
+  </>
+);
+
 const StyledPre = styled.pre`
   background-color: #7d4cdb;
 `;
 
 export const ComponentOverrideMarkdown = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <Markdown components={{ pre: StyledPre }}>{CONTENT}</Markdown>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 ComponentOverrideMarkdown.storyName = 'Component override markdown';

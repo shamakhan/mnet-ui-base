@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, DataTable, Heading, Meter, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, DataTable, Heading, Meter, Text } from 'mnet-ui-base';
 
 const amountFormatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -310,7 +309,7 @@ export const InfiniteScrollDataTable = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <Heading level={3}>
           <Box gap="small">
@@ -327,7 +326,7 @@ export const InfiniteScrollDataTable = () => {
           onMore={() => load()}
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

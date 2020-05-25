@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, DataTable } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, DataTable } from 'mnet-ui-base';
 
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
@@ -36,7 +35,7 @@ export const ServedDataTable = () => {
   };
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <DataTable
           columns={columns.map(column => ({
@@ -48,7 +47,7 @@ export const ServedDataTable = () => {
           onSearch={onSearch}
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

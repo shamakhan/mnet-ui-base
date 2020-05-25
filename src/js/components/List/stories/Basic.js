@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, List } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, List } from 'mnet-ui-base';
 
 const locations = [
   'Boise',
@@ -12,11 +11,11 @@ const locations = [
 ];
 
 export const Basic = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <List data={locations} />
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 export default {

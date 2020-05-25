@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Text } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Box, Text } from 'mnet-ui-base';
 
 export const FixedSizesBox = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box pad="small" gap="small">
       <Box
         width="small"
@@ -43,7 +42,7 @@ export const FixedSizesBox = () => (
         Large
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 FixedSizesBox.storyName = 'Fixed sizes';

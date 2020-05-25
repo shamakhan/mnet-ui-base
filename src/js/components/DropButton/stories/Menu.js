@@ -31,7 +31,7 @@ const GremlinDropButton = () => (
 );
 
 const MenuDropButton = () => (
-  <MnetUIBase theme={mnet} full>
+  <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
     <Box fill>
       <Box fill="vertical" width="xxsmall" background="dark-2">
         <GremlinDropButton />
@@ -39,7 +39,7 @@ const MenuDropButton = () => (
         <GremlinDropButton />
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 export const Menu = () => <MenuDropButton />;

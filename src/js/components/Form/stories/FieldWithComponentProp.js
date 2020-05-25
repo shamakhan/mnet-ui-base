@@ -14,10 +14,9 @@ import {
   Select,
   TextArea,
 } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
 
 export const FieldWithComponentProp = () => (
-  <MnetUIBase full theme={mnet}>
+  <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
     <Box fill overflow="auto" align="center" justify="center" pad="large">
       <Box flex={false} width="medium">
         <Form
@@ -86,7 +85,7 @@ export const FieldWithComponentProp = () => (
         </Form>
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 FieldWithComponentProp.storyName = 'Field with component prop';

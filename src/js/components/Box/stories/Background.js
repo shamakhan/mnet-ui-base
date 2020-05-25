@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Text } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Box, Text } from 'mnet-ui-base';
 
 export const BackgroundBox = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box pad="small" gap="small" align="start">
       <Box
         pad="small"
@@ -78,7 +77,7 @@ export const BackgroundBox = () => (
         </Box>
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 BackgroundBox.storyName = 'Background';

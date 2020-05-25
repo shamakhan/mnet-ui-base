@@ -1,10 +1,10 @@
 import React from 'react';
 import { Attraction, Car, TreeOption } from 'grommet-icons';
 
-import { MnetUIBase, Box, Carousel } from 'mnet-ui-base';
+import { Box, Carousel } from 'mnet-ui-base';
 
 export const Simple = () => (
-  <MnetUIBase>
+  <>
     <Box align="center" pad="large">
       <Carousel>
         <Box pad="xlarge" background="accent-1">
@@ -18,7 +18,7 @@ export const Simple = () => (
         </Box>
       </Carousel>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 Simple.parameters = {

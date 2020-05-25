@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Grid } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Box, Grid } from 'mnet-ui-base';
 
 export const RoundBox = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box pad="small" gap="small">
       <Box pad="small" background="brand" round alignSelf="start">
         true
@@ -53,7 +52,7 @@ export const RoundBox = () => (
         </Box>
       </Grid>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 RoundBox.storyName = 'Round';

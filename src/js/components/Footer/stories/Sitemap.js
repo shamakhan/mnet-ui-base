@@ -1,15 +1,7 @@
 import React from 'react';
 
 import { MnetUIBase as MnetUIBaseIcon } from 'grommet-icons';
-import {
-  Anchor,
-  Box,
-  Footer,
-  MnetUIBase,
-  Main,
-  Text,
-  mnet,
-} from 'mnet-ui-base';
+import { Anchor, Box, Footer, Main, Text } from 'mnet-ui-base';
 import { threeColumns as data } from './data';
 
 const FooterAnchor = ({ ...rest }) => (
@@ -31,7 +23,7 @@ const FooterContent = () =>
   ));
 
 export const Sitemap = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Main background="light-4" elevation="large" pad="large" gap="large" border>
       <Text margin="small" size="xsmall">
         Main Content
@@ -49,7 +41,7 @@ export const Sitemap = () => (
       </Box>
       <FooterContent />
     </Footer>
-  </MnetUIBase>
+  </>
 );
 
 export default {

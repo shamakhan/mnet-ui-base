@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { MnetUIBase, Box, InfiniteScroll, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, InfiniteScroll, Text } from 'mnet-ui-base';
 
 const allItems = Array(2000)
   .fill()
@@ -15,13 +14,13 @@ const MyItem = ({ item }) => (
 );
 
 export const ClassChildrenInfiniteScroll = props => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box>
       <InfiniteScroll items={allItems} {...props}>
         {item => <MyItem key={item} item={item} />}
       </InfiniteScroll>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 ClassChildrenInfiniteScroll.storyName = 'Class children';

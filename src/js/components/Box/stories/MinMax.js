@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Text } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Box, Text } from 'mnet-ui-base';
 
 export const MinMaxSizesBox = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box pad="small" gap="small">
       <Box pad="small" gap="small" direction="row" align="start">
         <Box
@@ -202,7 +201,7 @@ export const MinMaxSizesBox = () => (
         </Box>
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 MinMaxSizesBox.storyName = 'Min and max sizes';

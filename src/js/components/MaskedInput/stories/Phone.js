@@ -1,12 +1,11 @@
 import React from 'react';
-import { Box, MnetUIBase, MaskedInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, MaskedInput } from 'mnet-ui-base';
 
 export const Phone = () => {
   const [value, setValue] = React.useState('');
 
   return (
-    <MnetUIBase full theme={mnet}>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <MaskedInput
@@ -36,7 +35,7 @@ export const Phone = () => {
           />
         </Box>
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

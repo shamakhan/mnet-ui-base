@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Box, CheckBox, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, CheckBox, Select } from 'mnet-ui-base';
 
 const Option = React.memo(({ value, selected }) => (
   <Box direction="row" gap="small" align="center" pad="xsmall">
@@ -22,7 +21,7 @@ export const ManyOptions = () => {
   const [options, setOptions] = React.useState(dummyOptions);
 
   return (
-    <MnetUIBase full theme={mnet}>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           multiple
@@ -59,7 +58,7 @@ export const ManyOptions = () => {
           )}
         </Select>
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { MnetUIBase, Box, DataTable } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, DataTable } from 'mnet-ui-base';
 
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
 import { columns, DATA } from './data';
 
 export const TunableDataTable = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box align="center" pad="large">
       <DataTable
         columns={columns.map(c => ({
@@ -20,7 +19,7 @@ export const TunableDataTable = () => (
         resizeable
       />
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 TunableDataTable.storyName = 'Tunable';

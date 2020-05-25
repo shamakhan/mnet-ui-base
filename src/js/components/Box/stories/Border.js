@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { MnetUIBase, Box, Text } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Box, Text } from 'mnet-ui-base';
 
 export const BorderBox = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box pad="small" gap="small" align="start">
       <Box pad="small" border>
         true
@@ -79,7 +78,7 @@ export const BorderBox = () => (
         ))}
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 BorderBox.storyName = 'Border';

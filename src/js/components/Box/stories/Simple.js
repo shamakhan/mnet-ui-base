@@ -1,11 +1,10 @@
 import React from 'react';
 import { Attraction, Car } from 'grommet-icons';
 
-import { MnetUIBase, Anchor, Box, Button, Text } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Anchor, Box, Button, Text } from 'mnet-ui-base';
 
 export const SimpleBox = () => (
-  <MnetUIBase theme={mnet}>
+  <div>
     <Box
       direction="row-responsive"
       justify="center"
@@ -33,7 +32,7 @@ export const SimpleBox = () => (
         <Button label="Button" onClick={() => {}} />
       </Box>
     </Box>
-  </MnetUIBase>
+  </div>
 );
 
 SimpleBox.storyName = 'Simple';

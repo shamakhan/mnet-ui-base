@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { Box, Button, MnetUIBase } from 'mnet-ui-base';
+import { Box, Button } from 'mnet-ui-base';
 import { Next, Add } from 'grommet-icons';
-import { mnet } from 'mnet-ui-base/themes';
 
 export const Sizes = () => (
-  <MnetUIBase theme={mnet}>
+  <>
     <Box direction="row">
       <Box align="start" pad="large" gap="large">
         <Button size="small" label="Small" />
@@ -32,7 +31,7 @@ export const Sizes = () => (
         <Button size="large" icon={<Add />} primary />
       </Box>
     </Box>
-  </MnetUIBase>
+  </>
 );
 
 export default {

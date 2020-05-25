@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { Box, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Select } from 'mnet-ui-base';
 
 const defaultOptions = [];
 for (let i = 1; i <= 200; i += 1) {
@@ -14,7 +13,7 @@ export const Search = () => {
   const [valueMultiple, setValueMultiple] = useState([]);
 
   return (
-    <MnetUIBase full theme={mnet}>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box pad="large" gap="medium" direction="row">
         <Select
           size="medium"
@@ -57,7 +56,7 @@ export const Search = () => {
           }}
         />
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, FormField, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, FormField, Select } from 'mnet-ui-base';
+import { allOptions } from './data';
 
 const allOptions = Array(100)
   .fill()
@@ -11,7 +11,7 @@ export const Simple = () => {
   const [value, setValue] = useState('');
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large">
         <FormField label="Label" htmlFor="select">
           <Select
@@ -23,7 +23,7 @@ export const Simple = () => {
           />
         </FormField>
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 
