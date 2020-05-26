@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Heading, MnetUIBase, InfiniteScroll, Table, TableRow, TableBody, TableCell, TableHeader, Text, mnet } from 'mnet-ui-base';
+import { Box, Heading, InfiniteScroll, Table, TableRow, TableBody, TableCell, TableHeader, Text } from 'mnet-ui-base';
 
 var InfiniteScrollInTable = function InfiniteScrollInTable() {
   var step = 25;
@@ -22,9 +22,7 @@ var InfiniteScrollInTable = function InfiniteScrollInTable() {
     })));
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     pad: "small",
     basis: "small"
   }, React.createElement(Heading, {

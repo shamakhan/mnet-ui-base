@@ -2,12 +2,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { mnet, Box, FormField, Form, TextArea, MnetUIBase } from 'mnet-ui-base';
+import { Box, FormField, Form, TextArea } from 'mnet-ui-base';
 
 var FormFieldTextArea = function FormFieldTextArea(props) {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Form, null, React.createElement(FormField, _extends({

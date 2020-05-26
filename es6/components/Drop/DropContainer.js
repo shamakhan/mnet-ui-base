@@ -21,12 +21,14 @@ var preventLayerClose = function preventLayerClose(event) {
   }
 };
 
+var defaultAlign = {
+  top: 'top',
+  left: 'left'
+};
+var defaultPortalContext = [];
 var DropContainer = forwardRef(function (_ref, ref) {
   var _ref$align = _ref.align,
-      align = _ref$align === void 0 ? {
-    top: 'top',
-    left: 'left'
-  } : _ref$align,
+      align = _ref$align === void 0 ? defaultAlign : _ref$align,
       children = _ref.children,
       dropTarget = _ref.dropTarget,
       elevation = _ref.elevation,
@@ -43,7 +45,7 @@ var DropContainer = forwardRef(function (_ref, ref) {
       rest = _objectWithoutPropertiesLoose(_ref, ["align", "children", "dropTarget", "elevation", "onClickOutside", "onEsc", "onKeyDown", "overflow", "plain", "responsive", "restrictFocus", "stretch"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
-  var portalContext = useContext(PortalContext) || [];
+  var portalContext = useContext(PortalContext) || defaultPortalContext;
   var portalId = useMemo(function () {
     return portalContext.length;
   }, [portalContext]);

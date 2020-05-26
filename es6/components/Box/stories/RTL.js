@@ -1,11 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Box } from 'mnet-ui-base';
 
 var RTLBox = function RTLBox() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
+  return React.createElement("div", {
     dir: "rtl"
   }, React.createElement(Box, {
     direction: "row",

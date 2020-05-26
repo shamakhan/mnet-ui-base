@@ -1,12 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, MnetUIBase, Form, FormField, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Form, FormField, TextInput } from 'mnet-ui-base';
+import { StatusGood } from "grommet-icons/es6/icons/StatusGood";
 
 var Example = function Example() {
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",
@@ -30,6 +33,14 @@ var Example = function Example() {
       regexp: /^[a-z]/i
     }, function (name) {
       if (name && name.length === 1) return 'must be >1 character';
+      return undefined;
+    }, function (name) {
+      if (name === 'good') return {
+        message: React.createElement(Box, {
+          align: "end"
+        }, React.createElement(StatusGood, null)),
+        status: 'info'
+      };
       return undefined;
     }]
   }), React.createElement(FormField, {

@@ -6,8 +6,6 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var FullLayer = function FullLayer() {
@@ -15,9 +13,12 @@ var FullLayer = function FullLayer() {
       showLayer = _React$useState[0],
       setShowLayer = _React$useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet,
-    full: true
+  return _react["default"].createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "small",
     fill: true,

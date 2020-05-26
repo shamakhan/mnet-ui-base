@@ -12,44 +12,14 @@ var _base = require("mnet-ui-base/themes/base");
 
 var _utils = require("mnet-ui-base/utils");
 
+var _mnetUiBaseThemeNeo = require("mnet-ui-base-theme-neo");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-var Node = function Node(_ref) {
-  var id = _ref.id,
-      rest = _objectWithoutPropertiesLoose(_ref, ["id"]);
-
-  return _react["default"].createElement(_mnetUiBase.Box, _extends({
-    id: id,
-    basis: "xxsmall",
-    margin: "small",
-    pad: "medium",
-    round: "small",
-    background: "light-4"
-  }, rest));
-};
-
-var connection = function connection(fromTarget, toTarget, _temp) {
-  var _ref2 = _temp === void 0 ? {} : _temp,
-      color = _ref2.color,
-      rest = _objectWithoutPropertiesLoose(_ref2, ["color"]);
-
-  return _extends({
-    fromTarget: fromTarget,
-    toTarget: toTarget,
-    color: color || 'graph-0',
-    thickness: 'xsmall',
-    round: true,
-    type: 'rectilinear'
-  }, rest);
-};
-
 var themes = {
+  neo: _mnetUiBaseThemeNeo.neo,
   dark: _themes.dark,
   mnet: _themes.mnet
 };
@@ -95,7 +65,8 @@ var Components = function Components() {
   }, [theme]);
   var content = [_react["default"].createElement(_mnetUiBase.Box, {
     key: "type",
-    align: "start"
+    align: "start",
+    gap: "small"
   }, _react["default"].createElement(_mnetUiBase.Heading, {
     margin: {
       top: 'none'
@@ -113,7 +84,10 @@ var Components = function Components() {
   }), _react["default"].createElement(_mnetUiBase.Button, {
     label: "Button",
     onClick: function onClick() {}
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  }), _react["default"].createElement(_mnetUiBase.Button, {
+    plain: true,
+    onClick: function onClick() {}
+  }, _react["default"].createElement(_mnetUiBase.Text, null, "plain button"))), _react["default"].createElement(_mnetUiBase.Box, {
     key: "input",
     gap: "small"
   }, _react["default"].createElement(_mnetUiBase.Select, {
@@ -166,7 +140,7 @@ var Components = function Components() {
     invert: false,
     min: 0,
     max: 3,
-    size: "full",
+    size: "style={{ width: '100vw', height: '100vh', overflow: 'auto' }}",
     round: "small",
     values: rangeSelector,
     onChange: function onChange(values) {
@@ -187,73 +161,6 @@ var Components = function Components() {
   }), _react["default"].createElement(_mnetUiBase.Clock, {
     className: "chromatic-ignore"
   })), _react["default"].createElement(_mnetUiBase.Box, {
-    key: "measure",
-    gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Chart, {
-    type: "bar",
-    round: true,
-    size: "small",
-    values: [{
-      value: [10, 20]
-    }, {
-      value: [20, 30]
-    }, {
-      value: [30, 15]
-    }]
-  }), _react["default"].createElement(_mnetUiBase.Meter, {
-    type: "bar",
-    round: true,
-    size: "small",
-    background: "light-3",
-    values: [{
-      value: 30
-    }]
-  })), _react["default"].createElement(_mnetUiBase.Box, {
-    key: "visualize",
-    gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Distribution, {
-    basis: "small",
-    values: [{
-      value: 50,
-      color: 'light-3'
-    }, {
-      value: 30,
-      color: 'graph-0'
-    }, {
-      value: 20,
-      color: 'light-4'
-    }, {
-      value: 10,
-      color: 'light-3'
-    }, {
-      value: 5,
-      color: 'light-4'
-    }]
-  }, function (value) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
-      pad: "xsmall",
-      background: value.color,
-      fill: true
-    }, _react["default"].createElement(_mnetUiBase.Text, {
-      size: "large"
-    }, value.value));
-  }), _react["default"].createElement(_mnetUiBase.Stack, null, _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_mnetUiBase.Box, {
-    direction: "row"
-  }, [1, 2].map(function (id) {
-    return _react["default"].createElement(Node, {
-      key: id,
-      id: id
-    });
-  })), _react["default"].createElement(_mnetUiBase.Box, {
-    direction: "row"
-  }, [3, 4].map(function (id) {
-    return _react["default"].createElement(Node, {
-      key: id,
-      id: id
-    });
-  }))), _react["default"].createElement(_mnetUiBase.Diagram, {
-    connections: [connection('1', '4')]
-  }))), _react["default"].createElement(_mnetUiBase.Box, {
     key: "dataTable",
     alignSelf: "start"
   }, _react["default"].createElement(_mnetUiBase.DataTable, {
@@ -300,22 +207,7 @@ var Components = function Components() {
     title: "Tab 2"
   }, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "small"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "Tab 2 content"))))), _react["default"].createElement(_mnetUiBase.Box, {
-    key: "video",
-    alignSelf: "start"
-  }, _react["default"].createElement(_mnetUiBase.Video, null, _react["default"].createElement("source", {
-    src: "http://techslides.com/demos/sample-videos/small.webm",
-    type: "video/webm"
-  }), _react["default"].createElement("source", {
-    src: "http://techslides.com/demos/sample-videos/small.ogv",
-    type: "video/ogg"
-  }), _react["default"].createElement("source", {
-    src: "http://techslides.com/demos/sample-videos/small.mp4",
-    type: "video/mp4"
-  }), _react["default"].createElement("source", {
-    src: "http://techslides.com/demos/sample-videos/small.3gp",
-    type: "video/3gp"
-  })))];
+  }, _react["default"].createElement(_mnetUiBase.Text, null, "Tab 2 content")))))];
   return _react["default"].createElement("div", {
     style: {
       height: '100vh',
@@ -338,7 +230,7 @@ var Components = function Components() {
   }, _react["default"].createElement(_mnetUiBase.Select, {
     plain: true,
     size: "small",
-    options: ['mnet', 'dark'],
+    options: Object.keys(themes),
     value: themeName,
     onChange: function onChange(event) {
       return setThemeName(event.option);

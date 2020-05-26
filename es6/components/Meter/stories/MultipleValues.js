@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Meter, Stack, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Meter, Stack, Text } from 'mnet-ui-base';
 
 var MultipleValues = function MultipleValues() {
   var total = 100;
@@ -14,9 +13,7 @@ var MultipleValues = function MultipleValues() {
       label = _useState2[0],
       setLabel = _useState2[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Stack, {

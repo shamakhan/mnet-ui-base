@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Select } from 'mnet-ui-base';
 
 var DarkSelect = function DarkSelect() {
   var options = ['one', 'two'];
@@ -10,9 +9,12 @@ var DarkSelect = function DarkSelect() {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     background: "dark-1",

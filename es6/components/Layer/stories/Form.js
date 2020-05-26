@@ -2,8 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Add } from "grommet-icons/es6/icons/Add";
 import { Close } from "grommet-icons/es6/icons/Close";
-import { Box, Button, FormField, MnetUIBase, Heading, Layer, Select, TextArea, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, FormField, Heading, Layer, Select, TextArea, TextInput } from 'mnet-ui-base';
 
 var FormLayer = function FormLayer() {
   var _React$useState = React.useState(false),
@@ -22,9 +21,12 @@ var FormLayer = function FormLayer() {
     return setOpen(undefined);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

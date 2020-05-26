@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, DropButton, Text } from 'mnet-ui-base';
+import { Box, DropButton, Text } from 'mnet-ui-base';
 import { Gremlin } from "grommet-icons/es6/icons/Gremlin";
-import { mnet } from 'mnet-ui-base/themes';
 
 var renderItems = function renderItems() {
   return React.createElement(Box, null, React.createElement(Text, null, "hi"), React.createElement(Text, null, "hi"), React.createElement(Text, null, "hi"), React.createElement(Text, null, "hi"));
@@ -32,9 +31,12 @@ var GremlinDropButton = function GremlinDropButton() {
 };
 
 var MenuDropButton = function MenuDropButton() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true
   }, React.createElement(Box, {

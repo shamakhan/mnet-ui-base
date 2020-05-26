@@ -8,8 +8,6 @@ var _grommetIcons = require("grommet-icons");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var ControlledTabs = function ControlledTabs() {
@@ -21,9 +19,7 @@ var ControlledTabs = function ControlledTabs() {
     return setIndex(nextIndex);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Tabs, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Tabs, {
     activeIndex: index,
     onActive: onActive
   }, _react["default"].createElement(_mnetUiBase.Tab, {

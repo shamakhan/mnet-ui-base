@@ -6,8 +6,6 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 var _Basics = require("./Basics");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -29,9 +27,7 @@ var OnMoreInfiniteScroll = function OnMoreInfiniteScroll(_ref) {
     }, 1000);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
     items: items,
     onMore: onMore
   }, props), function (item) {

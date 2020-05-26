@@ -1,32 +1,31 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
-var defaultOptions = [];
+import { Box, Select } from 'mnet-ui-base';
 var objectOptions = [];
 
 for (var i = 1; i <= 200; i += 1) {
-  defaultOptions.push("option " + i);
   objectOptions.push({
     lab: "option " + i,
     val: i,
-    dis: i % 5 === 0,
-    sel: i % 13 === 0
+    dis: i % 5 === 0
   });
 }
 
-var ObjectMultiSelect = function ObjectMultiSelect() {
+var Example = function Example() {
   var _useState = useState(objectOptions),
       options = _useState[0],
       setOptions = _useState[1];
 
-  var _useState2 = useState(''),
+  var _useState2 = useState([1, 2]),
       value = _useState2[0],
       setValue = _useState2[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",
@@ -39,7 +38,10 @@ var ObjectMultiSelect = function ObjectMultiSelect() {
     closeOnChange: false,
     disabledKey: "dis",
     labelKey: "lab",
-    valueKey: "val",
+    valueKey: {
+      key: 'val',
+      reduce: true
+    },
     value: value,
     options: options,
     onChange: function onChange(_ref) {
@@ -65,5 +67,5 @@ var ObjectMultiSelect = function ObjectMultiSelect() {
 };
 
 storiesOf('Select', module).add('Object Multiple', function () {
-  return React.createElement(ObjectMultiSelect, null);
+  return React.createElement(Example, null);
 });

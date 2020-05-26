@@ -8,9 +8,11 @@ var _grommetIcons = require("grommet-icons");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var richAccordionTheme = {
   accordion: {
@@ -24,7 +26,8 @@ var richAccordionTheme = {
 var RichPanel = function RichPanel(_ref) {
   var children = _ref.children,
       icon = _ref.icon,
-      label = _ref.label;
+      label = _ref.label,
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "icon", "label"]);
 
   var _React$useState = _react["default"].useState(false),
       hovering = _React$useState[0],
@@ -44,7 +47,7 @@ var RichPanel = function RichPanel(_ref) {
     }, label));
   };
 
-  return _react["default"].createElement(_mnetUiBase.AccordionPanel, {
+  return _react["default"].createElement(_mnetUiBase.AccordionPanel, _extends({
     label: renderPanelTitle(),
     onMouseOver: function onMouseOver() {
       return setHovering(true);
@@ -58,7 +61,7 @@ var RichPanel = function RichPanel(_ref) {
     onBlur: function onBlur() {
       return setHovering(false);
     }
-  }, children);
+  }, rest), children);
 };
 
 var spinning = _react["default"].createElement("svg", {
@@ -94,9 +97,12 @@ var RichAccordion = function RichAccordion() {
       highlightLoaded = _React$useState2[0],
       setHighlightLoaded = _React$useState2[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    full: true,
-    theme: _themes.mnet
+  return _react["default"].createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, _react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     direction: "row"
@@ -173,7 +179,7 @@ var RichAccordion = function RichAccordion() {
       top: 'small'
     },
     gap: "medium"
-  }, "Yeah believe me, this channel has 2,000 members.")))))));
+  }, "Yeah believe me, this channel has 3,000 members.")))))));
 };
 
 (0, _react2.storiesOf)('Accordion', module).add('Rich', function () {

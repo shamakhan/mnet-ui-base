@@ -1,12 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Gremlin } from "grommet-icons/es6/icons/Gremlin";
-import { Box, MnetUIBase, mnet, List, Text } from 'mnet-ui-base';
+import { Box, List, Text } from 'mnet-ui-base';
 export var data = ['Boise', 'Fort Collins', 'Bay Area', 'North Carolina'];
 export var ChildrenExample = function ChildrenExample() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     pad: "large",
     height: "100%",
     background: "light-2"

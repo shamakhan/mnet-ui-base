@@ -17,6 +17,7 @@ export var doc = function doc(TextInput) {
     dropHeight: PropTypes.oneOfType([PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']), PropTypes.string]).description('The height of the drop container.'),
     dropTarget: PropTypes.object.description("Target where any suggestions drop will be aligned to. This should be\n      a React reference. Typically, this is not required as the drop will be\n      aligned to the TextInput itself by default."),
     dropProps: PropTypes.object.description('Any valid Drop prop.'),
+    icon: PropTypes.element.description("An optional icon to show. This could be used to provide an\n      indication of what kind of input is expected, like an email icon,\n      or what the input will be used for, like a search icon."),
     id: PropTypes.string.description('The id attribute of the input.'),
     focusIndicator: PropTypes.bool.description('Whether the plain text input should receive a focus outline.'),
     messages: PropTypes.shape({
@@ -30,13 +31,14 @@ export var doc = function doc(TextInput) {
       suggestionsExist: 'This input has suggestions use arrow keys to navigate',
       suggestionIsOpen: 'Suggestions drop is open, continue to use arrow keys to navigate'
     }),
-    name: PropTypes.string.description('The name attribute of the input.'),
+    name: PropTypes.string.description("The name of the attribute when in a Form or FormField."),
     onChange: PropTypes.func.description('Function that will be called when the user types in the input.'),
     onSelect: PropTypes.func.description("Function that will be called when the user selects a suggestion.\nThe suggestion contains the object chosen from the supplied suggestions."),
     onSuggestionsOpen: PropTypes.func.description('Function that will be called when the suggestions drop is opened.'),
     onSuggestionsClose: PropTypes.func.description('Function that will be called when the suggestions drop is closed.'),
     placeholder: PropTypes.node.description('Placeholder to use when no value is provided.'),
     plain: PropTypes.bool.description("Whether this is a plain input with no border or padding.\nOnly use this when the containing context provides sufficient affordance"),
+    reverse: PropTypes.bool.description("Whether an icon should be reversed so that the icon is at the\n      end of the input."),
     size: PropTypes.oneOfType([PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']), PropTypes.string]).description('The size of the TextInput.'),
     suggestions: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.shape({
       label: PropTypes.node,
@@ -102,7 +104,7 @@ export var themeDoc = _extends({
   },
   'textInput.disabled.opacity': {
     description: 'The opacity when the textInput is disabled.',
-    type: 'number',
-    defaultValue: 0.3
+    type: 'number | string',
+    defaultValue: undefined
   }
 }, themeDocUtils.focusStyle, {}, themeDocUtils.placeholderStyle, {}, themeDocUtils.disabledStyle, {}, themeDocUtils.inputStyle);

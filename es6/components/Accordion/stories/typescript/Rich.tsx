@@ -21,11 +21,19 @@ import {
 } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 
-const richAccordionTheme = {
+const richAccordionTheme: ThemeType = {
   accordion: {
     icons: {
       collapse: FormSubtract,
       expand: FormAdd,
+    },
+    panel: {
+      border: {
+        side: 'horizontal',
+        size: 'medium',
+        color: '#DADADA',
+        style: 'dotted',
+      },
     },
   },
 };
@@ -96,7 +104,7 @@ const RichAccordion = () => {
   const [highlightLoaded, setHighlightLoaded] = React.useState(false);
 
   return (
-    <MnetUIBase full theme={mnet}>
+    <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
       <Box fill direction="row">
         <Box basis="medium" border="all">
           <Box
@@ -229,14 +237,14 @@ const RichAccordion = () => {
                   }}
                   gap="medium"
                 >
-                  Yeah believe me, this channel has 2,000 members.
+                  Yeah believe me, this channel has 3,000 members.
                 </Box>
               </RichPanel>
             </Accordion>
           </ThemeContext.Extend>
         </Box>
       </Box>
-    </MnetUIBase>
+    </div>
   );
 };
 

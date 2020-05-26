@@ -3,8 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Attraction } from "grommet-icons/es6/icons/Attraction";
 import { Car } from "grommet-icons/es6/icons/Car";
 import { TreeOption } from "grommet-icons/es6/icons/TreeOption";
-import { Box, MnetUIBase, Tab, Tabs } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Tab, Tabs } from 'mnet-ui-base';
 
 var ResponsiveTabs = function ResponsiveTabs() {
   var _useState = useState(),
@@ -15,9 +14,7 @@ var ResponsiveTabs = function ResponsiveTabs() {
     return setIndex(nextIndex);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Tabs, {
+  return React.createElement(React.Fragment, null, React.createElement(Tabs, {
     activeIndex: index,
     onActive: onActive
   }, React.createElement(Tab, {

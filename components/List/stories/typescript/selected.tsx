@@ -2,8 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import isChromatic from 'storybook-chromatic/isChromatic';
 
-import { MnetUIBase, Box, List } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, List } from 'mnet-ui-base';
 
 export const locations = [
   'Boise',
@@ -26,10 +25,10 @@ for (let i = 0; i < 40; i += 1) {
 }
 
 const SelectedItem = () => {
-  const [selected, setSelected] = React.useState();
+  const [selected, setSelected] = React.useState(undefined);
 
   return (
-    <MnetUIBase theme={mnet}>
+    <>
       <Box align="center" pad="large" gap="large">
         <List
           data={data.slice(0, 10)}
@@ -43,7 +42,7 @@ const SelectedItem = () => {
           }
         />
       </Box>
-    </MnetUIBase>
+    </>
   );
 };
 

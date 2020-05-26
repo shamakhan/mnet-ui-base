@@ -254,7 +254,7 @@ describe('Box', function () {
     expect(tree).toMatchSnapshot();
   });
   test('gap', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, ['xsmall', 'small', 'medium', 'large', '80px'].map(function (gap) {
+    var component = renderer.create(React.createElement(MnetUIBase, null, ['xsmall', 'small', 'medium', 'large', '80px', 'none'].map(function (gap) {
       return React.createElement(Box, {
         key: gap,
         gap: gap,
@@ -303,6 +303,39 @@ describe('Box', function () {
       margin: {
         top: 'small'
       }
+    }), React.createElement(Box, {
+      margin: {
+        top: 'small',
+        left: 'medium',
+        horizontal: 'large'
+      }
+    }), React.createElement(Box, {
+      margin: {
+        top: 'small',
+        vertical: 'large'
+      }
+    }), React.createElement(Box, {
+      margin: {
+        horizontal: 'large',
+        vertical: 'large',
+        left: 'small'
+      }
+    }), React.createElement(Box, {
+      margin: {
+        top: 'small',
+        right: 'small',
+        left: 'small',
+        bottom: 'small'
+      }
+    }), React.createElement(Box, {
+      margin: {
+        left: 'small',
+        right: 'medium',
+        bottom: 'large',
+        top: 'small',
+        horizontal: 'medium',
+        vertical: 'small'
+      }
     })));
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -345,6 +378,41 @@ describe('Box', function () {
     }), React.createElement(Box, {
       pad: {
         top: 'small'
+      }
+    }), React.createElement(Box, {
+      pad: {
+        top: 'small',
+        left: 'medium',
+        horizontal: 'large'
+      }
+    }), React.createElement(Box, {
+      pad: {
+        horizontal: 'large',
+        vertical: 'large'
+      }
+    }), React.createElement(Box, {
+      pad: {
+        top: 'small',
+        right: 'medium',
+        horizontal: 'small',
+        vertical: 'large'
+      }
+    }), React.createElement(Box, {
+      pad: {
+        top: 'medium',
+        right: 'medium',
+        left: 'medium',
+        bottom: 'medium',
+        horizontal: 'small'
+      }
+    }), React.createElement(Box, {
+      pad: {
+        left: 'small',
+        right: 'medium',
+        bottom: 'large',
+        top: 'small',
+        horizontal: 'medium',
+        vertical: 'small'
       }
     })));
     var tree = component.toJSON();

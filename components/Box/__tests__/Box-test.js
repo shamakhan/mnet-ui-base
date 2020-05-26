@@ -276,7 +276,7 @@ describe('Box', function () {
     expect(tree).toMatchSnapshot();
   });
   test('gap', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, ['xsmall', 'small', 'medium', 'large', '80px'].map(function (gap) {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, ['xsmall', 'small', 'medium', 'large', '80px', 'none'].map(function (gap) {
       return _react["default"].createElement(_.Box, {
         key: gap,
         gap: gap,
@@ -326,6 +326,39 @@ describe('Box', function () {
       margin: {
         top: 'small'
       }
+    }), _react["default"].createElement(_.Box, {
+      margin: {
+        top: 'small',
+        left: 'medium',
+        horizontal: 'large'
+      }
+    }), _react["default"].createElement(_.Box, {
+      margin: {
+        top: 'small',
+        vertical: 'large'
+      }
+    }), _react["default"].createElement(_.Box, {
+      margin: {
+        horizontal: 'large',
+        vertical: 'large',
+        left: 'small'
+      }
+    }), _react["default"].createElement(_.Box, {
+      margin: {
+        top: 'small',
+        right: 'small',
+        left: 'small',
+        bottom: 'small'
+      }
+    }), _react["default"].createElement(_.Box, {
+      margin: {
+        left: 'small',
+        right: 'medium',
+        bottom: 'large',
+        top: 'small',
+        horizontal: 'medium',
+        vertical: 'small'
+      }
     })));
 
     var tree = component.toJSON();
@@ -369,6 +402,41 @@ describe('Box', function () {
     }), _react["default"].createElement(_.Box, {
       pad: {
         top: 'small'
+      }
+    }), _react["default"].createElement(_.Box, {
+      pad: {
+        top: 'small',
+        left: 'medium',
+        horizontal: 'large'
+      }
+    }), _react["default"].createElement(_.Box, {
+      pad: {
+        horizontal: 'large',
+        vertical: 'large'
+      }
+    }), _react["default"].createElement(_.Box, {
+      pad: {
+        top: 'small',
+        right: 'medium',
+        horizontal: 'small',
+        vertical: 'large'
+      }
+    }), _react["default"].createElement(_.Box, {
+      pad: {
+        top: 'medium',
+        right: 'medium',
+        left: 'medium',
+        bottom: 'medium',
+        horizontal: 'small'
+      }
+    }), _react["default"].createElement(_.Box, {
+      pad: {
+        left: 'small',
+        right: 'medium',
+        bottom: 'large',
+        top: 'small',
+        horizontal: 'medium',
+        vertical: 'small'
       }
     })));
 

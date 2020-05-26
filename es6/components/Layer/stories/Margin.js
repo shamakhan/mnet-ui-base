@@ -4,16 +4,13 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Layer } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Layer } from 'mnet-ui-base';
 
 var MarginLayer = function MarginLayer(_ref) {
   var margin = _ref.margin,
       rest = _objectWithoutPropertiesLoose(_ref, ["margin"]);
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Layer, _extends({
+  return React.createElement(React.Fragment, null, React.createElement(Layer, _extends({
     margin: margin || {
       left: '40px',
       top: '50px',

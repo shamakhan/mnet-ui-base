@@ -6,8 +6,6 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 var _data = require("./data");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -17,9 +15,7 @@ var OnClickItemList = function OnClickItemList() {
       clicked = _React$useState[0],
       setClicked = _React$useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large",
     gap: "large"

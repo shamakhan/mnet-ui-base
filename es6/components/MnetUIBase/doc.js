@@ -15,7 +15,7 @@ export var doc = function doc(MnetUIBase) {
   return DocumentedMnetUIBase;
 };
 export var themeDoc = {
-  'grommet.extend': {
+  'mnet.extend': {
     description: 'Any additional style for MnetUIBase.',
     type: 'string | (props) => {}',
     defaultValue: undefined

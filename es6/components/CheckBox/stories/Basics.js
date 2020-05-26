@@ -4,8 +4,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, CheckBox } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, CheckBox } from 'mnet-ui-base';
 
 var SimpleCheckBox = function SimpleCheckBox(_ref) {
   var checkedProp = _ref.checked,
@@ -19,9 +18,7 @@ var SimpleCheckBox = function SimpleCheckBox(_ref) {
     return setChecked(event.target.checked);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(CheckBox, _extends({}, rest, {

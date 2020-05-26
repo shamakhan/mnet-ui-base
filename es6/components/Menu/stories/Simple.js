@@ -1,12 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Menu } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Menu } from 'mnet-ui-base';
 
 var SimpleMenu = function SimpleMenu() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Menu, {
@@ -14,7 +11,8 @@ var SimpleMenu = function SimpleMenu() {
       align: {
         top: 'bottom',
         left: 'left'
-      }
+      },
+      elevation: 'xlarge'
     },
     label: "actions",
     items: [{

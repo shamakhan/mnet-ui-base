@@ -2,13 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Attraction } from "grommet-icons/es6/icons/Attraction";
 import { Car } from "grommet-icons/es6/icons/Car";
-import { MnetUIBase, Anchor, Box, Button, Text } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Anchor, Box, Button, Text } from 'mnet-ui-base';
 
 var SimpleBox = function SimpleBox() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     direction: "row-responsive",
     justify: "center",
     align: "center",

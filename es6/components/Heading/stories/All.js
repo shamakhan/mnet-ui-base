@@ -35,9 +35,7 @@ Set.propTypes = {
 };
 
 var All = function All() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Grid, {
+  return React.createElement(React.Fragment, null, React.createElement(Grid, {
     columns: "large",
     gap: "medium"
   }, React.createElement(Set, {
@@ -52,9 +50,7 @@ var All = function All() {
 };
 
 var Color = function Color() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Heading, {
+  return React.createElement(React.Fragment, null, React.createElement(Heading, {
     color: "accent-1"
   }, "Colored Heading"));
 };

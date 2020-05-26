@@ -2,17 +2,9 @@
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
-
-var _themes = require("mnet-ui-base/themes");
-
-var _utils = require("mnet-ui-base/utils");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -20,46 +12,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-var colors = {
-  selected: 'neutral-3'
-};
-var customRoundedTheme = (0, _utils.deepMerge)(_themes.mnet, {
-  global: {
-    colors: colors,
-    control: {
-      border: {
-        radius: '24px'
-      }
-    },
-    input: {
-      weight: 400
-    },
-    font: {
-      size: '12px'
-    }
-  },
-  text: {
-    medium: '13px'
-  },
-  textInput: {
-    extend: 'padding: 0 12px;'
-  },
-  select: {
-    control: {
-      extend: 'padding: 3px 6px;',
-      open: {
-        background: '#ece0fa',
-        border: '1px solid #7D4CDB'
-      }
-    }
-  }
-});
-
 var SimpleSelect = function SimpleSelect(_ref) {
-  var theme = _ref.theme,
-      rest = _objectWithoutPropertiesLoose(_ref, ["theme"]);
+  var rest = _extends({}, _ref);
 
   var options = ['one', 'two'];
 
@@ -67,10 +21,7 @@ var SimpleSelect = function SimpleSelect(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    full: true,
-    theme: theme || _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
@@ -88,12 +39,6 @@ var SimpleSelect = function SimpleSelect(_ref) {
   }, rest))));
 };
 
-SimpleSelect.propTypes = {
-  theme: _propTypes["default"].shape({})
-};
-SimpleSelect.defaultProps = {
-  theme: undefined
-};
 var defaultOptions = [];
 var objectOptions = [];
 
@@ -109,9 +54,4 @@ for (var i = 1; i <= 200; i += 1) {
 
 (0, _react2.storiesOf)('Select', module).add('Simple', function () {
   return _react["default"].createElement(SimpleSelect, null);
-}).add('Custom Theme', function () {
-  return _react["default"].createElement(SimpleSelect, {
-    open: true,
-    theme: customRoundedTheme
-  });
 });

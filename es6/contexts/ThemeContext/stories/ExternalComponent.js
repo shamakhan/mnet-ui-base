@@ -1,12 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { mnet } from 'mnet-ui-base/themes';
-import { Box, Text, ThemeContext, MnetUIBase } from 'mnet-ui-base';
+import { Box, Text, ThemeContext } from 'mnet-ui-base';
 
 var ExternalComponentWithTheme = function ExternalComponentWithTheme() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     background: "neutral-3"
   }, React.createElement(Text, {
     color: "light-1"

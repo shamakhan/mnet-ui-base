@@ -1,3 +1,7 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Bookmark } from "grommet-icons/es6/icons/Bookmark";
@@ -5,8 +9,7 @@ import { CircleInformation } from "grommet-icons/es6/icons/CircleInformation";
 import { FormSubtract } from "grommet-icons/es6/icons/FormSubtract";
 import { FormAdd } from "grommet-icons/es6/icons/FormAdd";
 import { User } from "grommet-icons/es6/icons/User";
-import { Accordion, AccordionPanel, Box, MnetUIBase, Heading, Text, ThemeContext } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Accordion, AccordionPanel, Box, Heading, Text, ThemeContext } from 'mnet-ui-base';
 var richAccordionTheme = {
   accordion: {
     icons: {
@@ -19,7 +22,8 @@ var richAccordionTheme = {
 var RichPanel = function RichPanel(_ref) {
   var children = _ref.children,
       icon = _ref.icon,
-      label = _ref.label;
+      label = _ref.label,
+      rest = _objectWithoutPropertiesLoose(_ref, ["children", "icon", "label"]);
 
   var _React$useState = React.useState(false),
       hovering = _React$useState[0],
@@ -39,7 +43,7 @@ var RichPanel = function RichPanel(_ref) {
     }, label));
   };
 
-  return React.createElement(AccordionPanel, {
+  return React.createElement(AccordionPanel, _extends({
     label: renderPanelTitle(),
     onMouseOver: function onMouseOver() {
       return setHovering(true);
@@ -53,7 +57,7 @@ var RichPanel = function RichPanel(_ref) {
     onBlur: function onBlur() {
       return setHovering(false);
     }
-  }, children);
+  }, rest), children);
 };
 
 var spinning = React.createElement("svg", {
@@ -88,9 +92,12 @@ var RichAccordion = function RichAccordion() {
       highlightLoaded = _React$useState2[0],
       setHighlightLoaded = _React$useState2[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     direction: "row"
@@ -167,7 +174,7 @@ var RichAccordion = function RichAccordion() {
       top: 'small'
     },
     gap: "medium"
-  }, "Yeah believe me, this channel has 2,000 members.")))))));
+  }, "Yeah believe me, this channel has 3,000 members.")))))));
 };
 
 storiesOf('Accordion', module).add('Rich', function () {

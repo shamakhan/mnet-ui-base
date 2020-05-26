@@ -1,12 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Image } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Image } from 'mnet-ui-base';
 
 var Fit = function Fit() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "start",
     gap: "medium"
   }, React.createElement(Box, {
@@ -14,14 +11,14 @@ var Fit = function Fit() {
     width: "small",
     border: true
   }, React.createElement(Image, {
-    src: "//v2.grommet.io/assets/IMG_4245.jpg",
+    src: "//v2.mnet.io/assets/IMG_4245.jpg",
     fit: "contain"
   })), React.createElement(Box, {
     height: "small",
     width: "small",
     border: true
   }, React.createElement(Image, {
-    src: "//v2.grommet.io/assets/IMG_4245.jpg",
+    src: "//v2.mnet.io/assets/IMG_4245.jpg",
     fit: "cover"
   }))));
 };

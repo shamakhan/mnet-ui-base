@@ -2,11 +2,20 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { Add } from "grommet-icons/es6/icons/Add";
-import { MnetUIBase, Anchor, Box, Text } from '../../components';
+import { MnetUIBase, Anchor, Box, Text, TextInput } from '../../components';
 import { dark } from '..';
 var colors = ['accent-1', 'accent-2', 'accent-3', 'brand', 'dark-1', 'dark-2', 'dark-3', 'dark-4', 'dark-5', 'dark-6', 'focus', 'light-1', 'light-2', 'light-3', 'light-4', 'light-5', 'light-6', 'neutral-1', 'neutral-2', 'neutral-3', 'status-critical', 'status-disabled', 'status-ok', 'status-unknown', 'status-warning'];
 var customTheme = {
   global: {
+    input: {
+      // test backwards compatibility that string value works for input pad
+      padding: '12px',
+      font: {
+        height: '50px',
+        size: 'large',
+        weight: 'bold'
+      }
+    },
     colors: {
       custom: '#cc6633'
     }
@@ -54,6 +63,8 @@ describe('MnetUIBase', function () {
       icon: React.createElement(Add, null),
       label: "Add",
       color: "custom"
+    })), React.createElement(Box, null, React.createElement(TextInput, {
+      value: "Value"
     }))));
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();

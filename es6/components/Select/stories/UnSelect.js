@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Select, Button } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Select, Button } from 'mnet-ui-base';
 var optionList = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 
 var UnSelect = function UnSelect() {
@@ -17,9 +16,7 @@ var UnSelect = function UnSelect() {
     setValue('');
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     pad: "medium",
     direction: "row",
     align: "center",

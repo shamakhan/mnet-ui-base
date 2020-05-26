@@ -85,7 +85,6 @@ exports[`Carousel basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -101,7 +100,6 @@ exports[`Carousel basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -116,7 +114,6 @@ exports[`Carousel basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -124,8 +121,8 @@ exports[`Carousel basic 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   opacity: 1;
-  -webkit-animation: iyuEas 1s 0s forwards;
-  animation: iyuEas 1s 0s forwards;
+  -webkit-animation: hftlBD 1s 0s forwards;
+  animation: hftlBD 1s 0s forwards;
 }
 
 .c7 {
@@ -134,7 +131,6 @@ exports[`Carousel basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -155,7 +151,6 @@ exports[`Carousel basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -174,7 +169,6 @@ exports[`Carousel basic 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -191,7 +185,6 @@ exports[`Carousel basic 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -200,6 +193,7 @@ exports[`Carousel basic 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -213,7 +207,6 @@ exports[`Carousel basic 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -222,6 +215,7 @@ exports[`Carousel basic 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -233,7 +227,6 @@ exports[`Carousel basic 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -242,6 +235,7 @@ exports[`Carousel basic 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -509,7 +503,6 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -519,28 +512,12 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   overflow: hidden;
 }
 
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  outline: none;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -548,8 +525,22 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   opacity: 1;
-  -webkit-animation: iyuEas 1s 0s forwards;
-  animation: iyuEas 1s 0s forwards;
+  -webkit-animation: hftlBD 1s 0s forwards;
+  animation: hftlBD 1s 0s forwards;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .c7 {
@@ -558,7 +549,6 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -579,7 +569,6 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -598,7 +587,6 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -611,53 +599,10 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   justify-content: center;
 }
 
-.c14 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  outline: none;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  opacity: 0.3;
-  cursor: default;
-  height: 100%;
-  line-height: 0;
-}
-
-.c12 {
-  display: inline-block;
-  box-sizing: border-box;
-  cursor: pointer;
-  outline: none;
-  font: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  background: transparent;
-  overflow: visible;
-  text-transform: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  text-align: inherit;
-  line-height: 0;
-  padding: 4px;
-}
-
 .c8 {
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -666,6 +611,7 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -678,13 +624,50 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   color: #000000;
 }
 
-.c1 {
-  position: relative;
+.c12 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  outline: none;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  line-height: 0;
+  padding: 4px;
 }
 
-.c5 {
+.c14 {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  background: transparent;
+  overflow: visible;
+  text-transform: none;
+  color: inherit;
+  outline: none;
+  border: none;
+  padding: 0;
+  text-align: inherit;
+  opacity: 0.3;
+  cursor: default;
+  height: 100%;
+  line-height: 0;
+}
+
+.c1 {
   position: relative;
-  display: block;
 }
 
 .c2 {
@@ -693,6 +676,11 @@ exports[`Carousel basic with \`initialChild: 1\` 1`] = `
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+.c5 {
+  position: relative;
+  display: block;
 }
 
 <div
@@ -933,7 +921,6 @@ exports[`Carousel navigate 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -949,7 +936,6 @@ exports[`Carousel navigate 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -964,7 +950,6 @@ exports[`Carousel navigate 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -972,8 +957,8 @@ exports[`Carousel navigate 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   opacity: 1;
-  -webkit-animation: iyuEas 1s 0s forwards;
-  animation: iyuEas 1s 0s forwards;
+  -webkit-animation: hftlBD 1s 0s forwards;
+  animation: hftlBD 1s 0s forwards;
 }
 
 .c7 {
@@ -982,7 +967,6 @@ exports[`Carousel navigate 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1003,7 +987,6 @@ exports[`Carousel navigate 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1022,7 +1005,6 @@ exports[`Carousel navigate 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1039,7 +1021,6 @@ exports[`Carousel navigate 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1048,6 +1029,7 @@ exports[`Carousel navigate 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -1061,7 +1043,6 @@ exports[`Carousel navigate 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1070,6 +1051,7 @@ exports[`Carousel navigate 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -1081,7 +1063,6 @@ exports[`Carousel navigate 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1090,6 +1071,7 @@ exports[`Carousel navigate 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -1251,58 +1233,58 @@ exports[`Carousel navigate 1`] = `
 
 exports[`Carousel navigate 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
+  class="StyledMnetUIBase-sc-17lh5y2-0 HlCER"
 >
   <div
-    class="StyledStack-gusj5d-0 eKKwAQ"
+    class="StyledStack-gusj5d-0 eLrvuF"
     data-testid="test-carousel"
   >
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 kCnniI"
+      class="StyledStack__StyledStackLayer-gusj5d-1 dbaEAf"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 fCoryO"
+        class="StyledBox-sc-1etxkdl-0 fdkUIB"
       >
         <div
-          class="StyledBox-sc-1etxkdl-0 bMLkPM"
+          class="StyledBox-sc-1etxkdl-0 jNzcgW"
         >
           <img
-            class="StyledImage-sc-1hty2va-0 imLmqd"
+            class="StyledImage-sc-1hty2va-0 hXGQOo"
             src="//v2.grommet.io/assets/IMG_4245.jpg"
           />
         </div>
       </div>
     </div>
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 haWqtV"
+      class="StyledStack__StyledStackLayer-gusj5d-1 cdrYZw"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 fCoryO"
+        class="StyledBox-sc-1etxkdl-0 fdkUIB"
       >
         <div
-          class="StyledBox-sc-1etxkdl-0 ioaeax"
+          class="StyledBox-sc-1etxkdl-0 pgLbQ"
         >
           <img
-            class="StyledImage-sc-1hty2va-0 imLmqd"
+            class="StyledImage-sc-1hty2va-0 hXGQOo"
             src="//v2.grommet.io/assets/IMG_4210.jpg"
           />
         </div>
       </div>
     </div>
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 kCnniI"
+      class="StyledStack__StyledStackLayer-gusj5d-1 dbaEAf"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 gHrySp"
+        class="StyledBox-sc-1etxkdl-0 kMMvUl"
         tabindex="0"
       >
         <button
-          class="StyledButton-sc-1hmw3c5-0 gECtYl"
+          class="StyledButton-sc-1hmw3c5-0 dwUkbn"
           type="button"
         >
           <svg
             aria-label="Previous"
-            class="StyledIcon-ofa7kd-0 iOkQrb"
+            class="StyledIcon-ofa7kd-0 jXwebn"
             viewBox="0 0 24 24"
           >
             <polyline
@@ -1315,18 +1297,18 @@ exports[`Carousel navigate 2`] = `
           </svg>
         </button>
         <div
-          class="StyledBox-sc-1etxkdl-0 dCOymX"
+          class="StyledBox-sc-1etxkdl-0 fwFRTw"
         >
           <div
-            class="StyledBox-sc-1etxkdl-0 Rrgek"
+            class="StyledBox-sc-1etxkdl-0 dptvkW"
           >
             <button
-              class="StyledButton-sc-1hmw3c5-0 jBSOZm"
+              class="StyledButton-sc-1hmw3c5-0 hTfSVB"
               type="button"
             >
               <svg
                 aria-label="Subtract"
-                class="StyledIcon-ofa7kd-0 iOkQrb"
+                class="StyledIcon-ofa7kd-0 jXwebn"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1338,12 +1320,12 @@ exports[`Carousel navigate 2`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-1hmw3c5-0 jBSOZm"
+              class="StyledButton-sc-1hmw3c5-0 hTfSVB"
               type="button"
             >
               <svg
                 aria-label="Subtract"
-                class="StyledIcon-ofa7kd-0 eCEOyf"
+                class="StyledIcon-ofa7kd-0 cuQMlL"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1357,13 +1339,13 @@ exports[`Carousel navigate 2`] = `
           </div>
         </div>
         <button
-          class="StyledButton-sc-1hmw3c5-0 dHbZEH"
+          class="StyledButton-sc-1hmw3c5-0 kNAgLp"
           disabled=""
           type="button"
         >
           <svg
             aria-label="Next"
-            class="StyledIcon-ofa7kd-0 iOkQrb"
+            class="StyledIcon-ofa7kd-0 jXwebn"
             viewBox="0 0 24 24"
           >
             <polyline
@@ -1382,59 +1364,59 @@ exports[`Carousel navigate 2`] = `
 
 exports[`Carousel navigate 3`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
+  class="StyledMnetUIBase-sc-17lh5y2-0 HlCER"
 >
   <div
-    class="StyledStack-gusj5d-0 eKKwAQ"
+    class="StyledStack-gusj5d-0 eLrvuF"
     data-testid="test-carousel"
   >
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 haWqtV"
+      class="StyledStack__StyledStackLayer-gusj5d-1 cdrYZw"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 fCoryO"
+        class="StyledBox-sc-1etxkdl-0 fdkUIB"
       >
         <div
-          class="StyledBox-sc-1etxkdl-0 jYALrr"
+          class="StyledBox-sc-1etxkdl-0 gWjaqk"
         >
           <img
-            class="StyledImage-sc-1hty2va-0 imLmqd"
+            class="StyledImage-sc-1hty2va-0 hXGQOo"
             src="//v2.grommet.io/assets/IMG_4245.jpg"
           />
         </div>
       </div>
     </div>
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 kCnniI"
+      class="StyledStack__StyledStackLayer-gusj5d-1 dbaEAf"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 fCoryO"
+        class="StyledBox-sc-1etxkdl-0 fdkUIB"
       >
         <div
-          class="StyledBox-sc-1etxkdl-0 bMLkPM"
+          class="StyledBox-sc-1etxkdl-0 jNzcgW"
         >
           <img
-            class="StyledImage-sc-1hty2va-0 imLmqd"
+            class="StyledImage-sc-1hty2va-0 hXGQOo"
             src="//v2.grommet.io/assets/IMG_4210.jpg"
           />
         </div>
       </div>
     </div>
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 kCnniI"
+      class="StyledStack__StyledStackLayer-gusj5d-1 dbaEAf"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 gHrySp"
+        class="StyledBox-sc-1etxkdl-0 kMMvUl"
         tabindex="0"
       >
         <button
-          class="StyledButton-sc-1hmw3c5-0 dHbZEH"
+          class="StyledButton-sc-1hmw3c5-0 kNAgLp"
           disabled=""
           type="button"
         >
           <svg
             aria-label="Previous"
-            class="StyledIcon-ofa7kd-0 iOkQrb"
+            class="StyledIcon-ofa7kd-0 jXwebn"
             viewBox="0 0 24 24"
           >
             <polyline
@@ -1447,18 +1429,18 @@ exports[`Carousel navigate 3`] = `
           </svg>
         </button>
         <div
-          class="StyledBox-sc-1etxkdl-0 dCOymX"
+          class="StyledBox-sc-1etxkdl-0 fwFRTw"
         >
           <div
-            class="StyledBox-sc-1etxkdl-0 Rrgek"
+            class="StyledBox-sc-1etxkdl-0 dptvkW"
           >
             <button
-              class="StyledButton-sc-1hmw3c5-0 jBSOZm"
+              class="StyledButton-sc-1hmw3c5-0 hTfSVB"
               type="button"
             >
               <svg
                 aria-label="Subtract"
-                class="StyledIcon-ofa7kd-0 eCEOyf"
+                class="StyledIcon-ofa7kd-0 cuQMlL"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1470,12 +1452,12 @@ exports[`Carousel navigate 3`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-1hmw3c5-0 jBSOZm"
+              class="StyledButton-sc-1hmw3c5-0 hTfSVB"
               type="button"
             >
               <svg
                 aria-label="Subtract"
-                class="StyledIcon-ofa7kd-0 iOkQrb"
+                class="StyledIcon-ofa7kd-0 jXwebn"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1489,12 +1471,12 @@ exports[`Carousel navigate 3`] = `
           </div>
         </div>
         <button
-          class="StyledButton-sc-1hmw3c5-0 gECtYl"
+          class="StyledButton-sc-1hmw3c5-0 dwUkbn"
           type="button"
         >
           <svg
             aria-label="Next"
-            class="StyledIcon-ofa7kd-0 iOkQrb"
+            class="StyledIcon-ofa7kd-0 jXwebn"
             viewBox="0 0 24 24"
           >
             <polyline
@@ -1596,7 +1578,6 @@ exports[`Carousel play 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1612,7 +1593,6 @@ exports[`Carousel play 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1627,7 +1607,6 @@ exports[`Carousel play 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1635,8 +1614,8 @@ exports[`Carousel play 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   opacity: 1;
-  -webkit-animation: iyuEas 1s 0s forwards;
-  animation: iyuEas 1s 0s forwards;
+  -webkit-animation: hftlBD 1s 0s forwards;
+  animation: hftlBD 1s 0s forwards;
 }
 
 .c7 {
@@ -1645,7 +1624,6 @@ exports[`Carousel play 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1666,7 +1644,6 @@ exports[`Carousel play 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1685,7 +1662,6 @@ exports[`Carousel play 1`] = `
   display: -ms-flexbox;
   display: flex;
   box-sizing: border-box;
-  outline: none;
   max-width: 100%;
   min-width: 0;
   min-height: 0;
@@ -1702,7 +1678,6 @@ exports[`Carousel play 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1711,6 +1686,7 @@ exports[`Carousel play 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -1724,7 +1700,6 @@ exports[`Carousel play 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1733,6 +1708,7 @@ exports[`Carousel play 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -1744,7 +1720,6 @@ exports[`Carousel play 1`] = `
   display: inline-block;
   box-sizing: border-box;
   cursor: pointer;
-  outline: none;
   font: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1753,6 +1728,7 @@ exports[`Carousel play 1`] = `
   overflow: visible;
   text-transform: none;
   color: inherit;
+  outline: none;
   border: none;
   padding: 0;
   text-align: inherit;
@@ -1913,57 +1889,57 @@ exports[`Carousel play 1`] = `
 
 exports[`Carousel play 2`] = `
 <div
-  class="StyledMnetUIBase-sc-17lh5y2-0 iPuYLx"
+  class="StyledMnetUIBase-sc-17lh5y2-0 HlCER"
 >
   <div
-    class="StyledStack-gusj5d-0 eKKwAQ"
+    class="StyledStack-gusj5d-0 eLrvuF"
   >
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 kCnniI"
+      class="StyledStack__StyledStackLayer-gusj5d-1 dbaEAf"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 fCoryO"
+        class="StyledBox-sc-1etxkdl-0 fdkUIB"
       >
         <div
-          class="StyledBox-sc-1etxkdl-0 bMLkPM"
+          class="StyledBox-sc-1etxkdl-0 jNzcgW"
         >
           <img
-            class="StyledImage-sc-1hty2va-0 imLmqd"
+            class="StyledImage-sc-1hty2va-0 hXGQOo"
             src="//v2.grommet.io/assets/IMG_4245.jpg"
           />
         </div>
       </div>
     </div>
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 haWqtV"
+      class="StyledStack__StyledStackLayer-gusj5d-1 cdrYZw"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 fCoryO"
+        class="StyledBox-sc-1etxkdl-0 fdkUIB"
       >
         <div
-          class="StyledBox-sc-1etxkdl-0 ioaeax"
+          class="StyledBox-sc-1etxkdl-0 pgLbQ"
         >
           <img
-            class="StyledImage-sc-1hty2va-0 imLmqd"
+            class="StyledImage-sc-1hty2va-0 hXGQOo"
             src="//v2.grommet.io/assets/IMG_4210.jpg"
           />
         </div>
       </div>
     </div>
     <div
-      class="StyledStack__StyledStackLayer-gusj5d-1 kCnniI"
+      class="StyledStack__StyledStackLayer-gusj5d-1 dbaEAf"
     >
       <div
-        class="StyledBox-sc-1etxkdl-0 gHrySp"
+        class="StyledBox-sc-1etxkdl-0 kMMvUl"
         tabindex="0"
       >
         <button
-          class="StyledButton-sc-1hmw3c5-0 gECtYl"
+          class="StyledButton-sc-1hmw3c5-0 dwUkbn"
           type="button"
         >
           <svg
             aria-label="Previous"
-            class="StyledIcon-ofa7kd-0 iOkQrb"
+            class="StyledIcon-ofa7kd-0 jXwebn"
             viewBox="0 0 24 24"
           >
             <polyline
@@ -1976,18 +1952,18 @@ exports[`Carousel play 2`] = `
           </svg>
         </button>
         <div
-          class="StyledBox-sc-1etxkdl-0 dCOymX"
+          class="StyledBox-sc-1etxkdl-0 fwFRTw"
         >
           <div
-            class="StyledBox-sc-1etxkdl-0 Rrgek"
+            class="StyledBox-sc-1etxkdl-0 dptvkW"
           >
             <button
-              class="StyledButton-sc-1hmw3c5-0 jBSOZm"
+              class="StyledButton-sc-1hmw3c5-0 hTfSVB"
               type="button"
             >
               <svg
                 aria-label="Subtract"
-                class="StyledIcon-ofa7kd-0 iOkQrb"
+                class="StyledIcon-ofa7kd-0 jXwebn"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1999,12 +1975,12 @@ exports[`Carousel play 2`] = `
               </svg>
             </button>
             <button
-              class="StyledButton-sc-1hmw3c5-0 jBSOZm"
+              class="StyledButton-sc-1hmw3c5-0 hTfSVB"
               type="button"
             >
               <svg
                 aria-label="Subtract"
-                class="StyledIcon-ofa7kd-0 eCEOyf"
+                class="StyledIcon-ofa7kd-0 cuQMlL"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -2018,13 +1994,13 @@ exports[`Carousel play 2`] = `
           </div>
         </div>
         <button
-          class="StyledButton-sc-1hmw3c5-0 dHbZEH"
+          class="StyledButton-sc-1hmw3c5-0 kNAgLp"
           disabled=""
           type="button"
         >
           <svg
             aria-label="Next"
-            class="StyledIcon-ofa7kd-0 iOkQrb"
+            class="StyledIcon-ofa7kd-0 jXwebn"
             viewBox="0 0 24 24"
           >
             <polyline

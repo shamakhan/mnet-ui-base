@@ -6,8 +6,6 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 var _grommetIcons = require("grommet-icons");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -23,9 +21,7 @@ var CustomHeaderCalendar = function CustomHeaderCalendar() {
     setDate(nextDate !== date ? nextDate : undefined);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
   }, _react["default"].createElement(_mnetUiBase.Calendar, {

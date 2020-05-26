@@ -1,12 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Anchor, Box, MnetUIBase, Header, Nav, Menu, ResponsiveContext } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Anchor, Box, Header, Nav, Menu, ResponsiveContext } from 'mnet-ui-base';
 
 var CollapsableNav = function CollapsableNav() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Header, {
+  return React.createElement(React.Fragment, null, React.createElement(Header, {
     background: "dark-1",
     pad: "medium"
   }, React.createElement(Box, {

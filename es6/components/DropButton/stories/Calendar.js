@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { FormDown } from "grommet-icons/es6/icons/FormDown";
-import { MnetUIBase, Box, Calendar, DropButton, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Calendar, DropButton, Text } from 'mnet-ui-base';
 
 var CalendarDropButton = function CalendarDropButton() {
   var _React$useState = React.useState(),
@@ -18,9 +17,7 @@ var CalendarDropButton = function CalendarDropButton() {
     setOpen(false);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(DropButton, {

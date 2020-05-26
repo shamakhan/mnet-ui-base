@@ -7,13 +7,13 @@ import { storiesOf } from '@storybook/react';
 import { Attraction } from "grommet-icons/es6/icons/Attraction";
 import { Car } from "grommet-icons/es6/icons/Car";
 import { TreeOption } from "grommet-icons/es6/icons/TreeOption";
-import { MnetUIBase, Box, Carousel } from 'mnet-ui-base';
+import { Box, Carousel } from 'mnet-ui-base';
 
 var SimpleCarousel = function SimpleCarousel(_ref) {
   var initialChild = _ref.initialChild,
       props = _objectWithoutPropertiesLoose(_ref, ["initialChild"]);
 
-  return React.createElement(MnetUIBase, null, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Carousel, _extends({

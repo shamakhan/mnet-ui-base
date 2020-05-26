@@ -2,8 +2,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, DataTable } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { DataTable } from 'mnet-ui-base'; // Source code for the data can be found here
+// https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
+
 import { columns, DATA } from './data';
 var groupColumns = [].concat(columns);
 var first = groupColumns[0];
@@ -17,9 +18,7 @@ var ControlledGroupedDataTable = function ControlledGroupedDataTable() {
       expandedGroups = _useState[0],
       setExpandedGroups = _useState[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(DataTable, {
+  return React.createElement(React.Fragment, null, React.createElement(DataTable, {
     columns: groupColumns,
     data: DATA,
     groupBy: {

@@ -1,44 +1,12 @@
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 import React, { useMemo, useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Accordion, AccordionPanel, Anchor, Box, Button, Calendar, Chart, CheckBox, Clock, DataTable, Diagram, Distribution, FormField, Grid, Heading, Menu, Meter, Paragraph, RadioButtonGroup, RangeInput, RangeSelector, Select, Stack, Tab, Tabs, Text, TextArea, TextInput, Video } from 'mnet-ui-base';
+import { Accordion, AccordionPanel, Anchor, Box, Button, Calendar, CheckBox, Clock, DataTable, FormField, Grid, Heading, Menu, Paragraph, RadioButtonGroup, RangeInput, RangeSelector, Select, Stack, Tab, Tabs, Text, TextArea, TextInput, MnetUIBase } from 'mnet-ui-base';
 import { mnet, dark } from 'mnet-ui-base/themes';
 import { generate } from 'mnet-ui-base/themes/base';
 import { deepMerge } from 'mnet-ui-base/utils';
-
-var Node = function Node(_ref) {
-  var id = _ref.id,
-      rest = _objectWithoutPropertiesLoose(_ref, ["id"]);
-
-  return React.createElement(Box, _extends({
-    id: id,
-    basis: "xxsmall",
-    margin: "small",
-    pad: "medium",
-    round: "small",
-    background: "light-4"
-  }, rest));
-};
-
-var connection = function connection(fromTarget, toTarget, _temp) {
-  var _ref2 = _temp === void 0 ? {} : _temp,
-      color = _ref2.color,
-      rest = _objectWithoutPropertiesLoose(_ref2, ["color"]);
-
-  return _extends({
-    fromTarget: fromTarget,
-    toTarget: toTarget,
-    color: color || 'graph-0',
-    thickness: 'xsmall',
-    round: true,
-    type: 'rectilinear'
-  }, rest);
-};
-
+import { neo } from 'mnet-ui-base-theme-neo';
 var themes = {
+  neo: neo,
   dark: dark,
   mnet: mnet
 };
@@ -84,7 +52,8 @@ var Components = function Components() {
   }, [theme]);
   var content = [React.createElement(Box, {
     key: "type",
-    align: "start"
+    align: "start",
+    gap: "small"
   }, React.createElement(Heading, {
     margin: {
       top: 'none'
@@ -102,7 +71,10 @@ var Components = function Components() {
   }), React.createElement(Button, {
     label: "Button",
     onClick: function onClick() {}
-  })), React.createElement(Box, {
+  }), React.createElement(Button, {
+    plain: true,
+    onClick: function onClick() {}
+  }, React.createElement(Text, null, "plain button"))), React.createElement(Box, {
     key: "input",
     gap: "small"
   }, React.createElement(Select, {
@@ -155,7 +127,7 @@ var Components = function Components() {
     invert: false,
     min: 0,
     max: 3,
-    size: "full",
+    size: "style={{ width: '100vw', height: '100vh', overflow: 'auto' }}",
     round: "small",
     values: rangeSelector,
     onChange: function onChange(values) {
@@ -176,73 +148,6 @@ var Components = function Components() {
   }), React.createElement(Clock, {
     className: "chromatic-ignore"
   })), React.createElement(Box, {
-    key: "measure",
-    gap: "medium"
-  }, React.createElement(Chart, {
-    type: "bar",
-    round: true,
-    size: "small",
-    values: [{
-      value: [10, 20]
-    }, {
-      value: [20, 30]
-    }, {
-      value: [30, 15]
-    }]
-  }), React.createElement(Meter, {
-    type: "bar",
-    round: true,
-    size: "small",
-    background: "light-3",
-    values: [{
-      value: 30
-    }]
-  })), React.createElement(Box, {
-    key: "visualize",
-    gap: "small"
-  }, React.createElement(Distribution, {
-    basis: "small",
-    values: [{
-      value: 50,
-      color: 'light-3'
-    }, {
-      value: 30,
-      color: 'graph-0'
-    }, {
-      value: 20,
-      color: 'light-4'
-    }, {
-      value: 10,
-      color: 'light-3'
-    }, {
-      value: 5,
-      color: 'light-4'
-    }]
-  }, function (value) {
-    return React.createElement(Box, {
-      pad: "xsmall",
-      background: value.color,
-      fill: true
-    }, React.createElement(Text, {
-      size: "large"
-    }, value.value));
-  }), React.createElement(Stack, null, React.createElement(Box, null, React.createElement(Box, {
-    direction: "row"
-  }, [1, 2].map(function (id) {
-    return React.createElement(Node, {
-      key: id,
-      id: id
-    });
-  })), React.createElement(Box, {
-    direction: "row"
-  }, [3, 4].map(function (id) {
-    return React.createElement(Node, {
-      key: id,
-      id: id
-    });
-  }))), React.createElement(Diagram, {
-    connections: [connection('1', '4')]
-  }))), React.createElement(Box, {
     key: "dataTable",
     alignSelf: "start"
   }, React.createElement(DataTable, {
@@ -289,22 +194,7 @@ var Components = function Components() {
     title: "Tab 2"
   }, React.createElement(Box, {
     pad: "small"
-  }, React.createElement(Text, null, "Tab 2 content"))))), React.createElement(Box, {
-    key: "video",
-    alignSelf: "start"
-  }, React.createElement(Video, null, React.createElement("source", {
-    src: "http://techslides.com/demos/sample-videos/small.webm",
-    type: "video/webm"
-  }), React.createElement("source", {
-    src: "http://techslides.com/demos/sample-videos/small.ogv",
-    type: "video/ogg"
-  }), React.createElement("source", {
-    src: "http://techslides.com/demos/sample-videos/small.mp4",
-    type: "video/mp4"
-  }), React.createElement("source", {
-    src: "http://techslides.com/demos/sample-videos/small.3gp",
-    type: "video/3gp"
-  })))];
+  }, React.createElement(Text, null, "Tab 2 content")))))];
   return React.createElement("div", {
     style: {
       height: '100vh',
@@ -327,7 +217,7 @@ var Components = function Components() {
   }, React.createElement(Select, {
     plain: true,
     size: "small",
-    options: ['mnet', 'dark'],
+    options: Object.keys(themes),
     value: themeName,
     onChange: function onChange(event) {
       return setThemeName(event.option);

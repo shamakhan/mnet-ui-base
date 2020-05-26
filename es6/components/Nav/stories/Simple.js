@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Anchor, MnetUIBase, Nav } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Anchor, Nav } from 'mnet-ui-base';
 var items = [{
   label: 'Item A',
   href: '#'
@@ -17,9 +16,7 @@ var items = [{
 }];
 
 var Simple = function Simple() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Nav, {
+  return React.createElement(React.Fragment, null, React.createElement(Nav, {
     pad: "large"
   }, items.map(function (item) {
     return React.createElement(Anchor, {

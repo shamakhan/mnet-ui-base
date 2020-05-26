@@ -8,8 +8,6 @@ var _grommetIcons = require("grommet-icons");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var CenterLayer = function CenterLayer() {
@@ -37,9 +35,12 @@ var CenterLayer = function CenterLayer() {
     return setOpen2(undefined);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet,
-    full: true
+  return _react["default"].createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, _react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
@@ -51,7 +52,6 @@ var CenterLayer = function CenterLayer() {
     plain: true
   })), open && _react["default"].createElement(_mnetUiBase.Layer, {
     position: "center",
-    modal: true,
     onClickOutside: onClose,
     onEsc: onClose
   }, _react["default"].createElement(_mnetUiBase.Box, {
@@ -84,7 +84,6 @@ var CenterLayer = function CenterLayer() {
     color: "status-critical"
   })))), open2 && _react["default"].createElement(_mnetUiBase.Layer, {
     position: "top",
-    modal: true,
     onClickOutside: onClose2,
     onEsc: onClose2
   }, _react["default"].createElement(_mnetUiBase.Box, {

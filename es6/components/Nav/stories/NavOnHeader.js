@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Anchor, Box, MnetUIBase, Header, Nav } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Anchor, Box, Header, Nav } from 'mnet-ui-base';
 import { Avatar } from '../../Header/stories/Simple';
 var items = [{
   label: 'HTML',
@@ -18,9 +17,7 @@ var items = [{
 }];
 
 var OnHeader = function OnHeader() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Header, {
+  return React.createElement(React.Fragment, null, React.createElement(Header, {
     background: "dark-1",
     pad: "medium"
   }, React.createElement(Box, {

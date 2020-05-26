@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, CheckBox, MnetUIBase, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, CheckBox, Text } from 'mnet-ui-base';
 
 var CheckBoxInsideButton = function CheckBoxInsideButton() {
   var _useState = useState(false),
@@ -14,9 +13,7 @@ var CheckBoxInsideButton = function CheckBoxInsideButton() {
 
   var onCheckboxChange = function onCheckboxChange() {};
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Button, {

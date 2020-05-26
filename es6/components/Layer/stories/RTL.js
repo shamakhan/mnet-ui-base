@@ -1,11 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Layer } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Layer } from 'mnet-ui-base';
 
 var RTLLayer = function RTLLayer() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
+  return React.createElement("div", {
     dir: "rtl"
   }, React.createElement(Layer, {
     position: "start",

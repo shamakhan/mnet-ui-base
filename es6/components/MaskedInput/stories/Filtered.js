@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, MaskedInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, MaskedInput } from 'mnet-ui-base';
 var data = {
   Cummings: ['a pretty day', 'i carry your heart with me', 'if you like my poems let them'],
   Chaucer: ["The Knight's Tale", 'The General Prologue', "The Friar's Tale"],
@@ -29,9 +28,12 @@ var FilteredMaskedInput = function FilteredMaskedInput() {
   poems.forEach(function (p) {
     longestPoemLength = Math.max(longestPoemLength, p.length);
   });
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

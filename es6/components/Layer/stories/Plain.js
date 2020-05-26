@@ -1,12 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Layer, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Layer, Text } from 'mnet-ui-base';
 
 var PlainLayer = function PlainLayer() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     background: "dark-3"

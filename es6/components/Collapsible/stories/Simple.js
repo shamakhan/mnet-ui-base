@@ -2,17 +2,14 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, Collapsible, MnetUIBase, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Collapsible, Text } from 'mnet-ui-base';
 
 var SimpleCollapsible = function SimpleCollapsible(props) {
   var _React$useState = React.useState(false),
       open = _React$useState[0],
       setOpen = _React$useState[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "start",
     gap: "small"
   }, React.createElement(Button, {

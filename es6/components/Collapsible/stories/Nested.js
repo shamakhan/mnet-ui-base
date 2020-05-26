@@ -6,8 +6,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { FormDown } from "grommet-icons/es6/icons/FormDown";
 import { FormNext } from "grommet-icons/es6/icons/FormNext";
-import { Box, Button, Collapsible, MnetUIBase, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Collapsible, Text } from 'mnet-ui-base';
 
 var MenuButton = function MenuButton(_ref) {
   var label = _ref.label,
@@ -45,9 +44,7 @@ var NestedCollapsible = function NestedCollapsible() {
       openMenu2 = _React$useState3[0],
       setOpenMenu2 = _React$useState3[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     width: "small"
   }, React.createElement(MenuButton, {
     open: openMenu1,

@@ -1,13 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { TreeOption } from "grommet-icons/es6/icons/TreeOption";
-import { Box, Heading, MnetUIBase, Tab, Tabs } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Heading, Tab, Tabs } from 'mnet-ui-base';
 
 var ScrollableTabs = function ScrollableTabs() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true
   }, React.createElement(Tabs, {

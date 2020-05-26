@@ -7,6 +7,7 @@ exports.buildGroupState = exports.buildGroups = exports.buildFooterValues = expo
 // files simpler.
 // get the value for the property in the datum object
 var datumValue = function datumValue(datum, property) {
+  if (!property) return undefined;
   var parts = property.split('.');
 
   if (parts.length === 1) {
@@ -32,8 +33,8 @@ var normalizePrimaryProperty = function normalizePrimaryProperty(columns, primar
     }
   });
 
-  if (!result && columns.length > 0) {
-    result = primaryKey || columns[0].property;
+  if (!result) {
+    if (primaryKey === false) result = undefined;else if (primaryKey) result = primaryKey;else if (columns.length > 0) result = columns[0].property;
   }
 
   return result;
@@ -82,11 +83,11 @@ var filterAndSortData = function filterAndSortData(data, filters, onSearch, sort
 
   if (sort) {
     var property = sort.property,
-        ascending = sort.ascending;
+        direction = sort.direction;
     result = result === data ? [].concat(data) : result; // don't sort caller's data
 
-    var before = ascending ? 1 : -1;
-    var after = ascending ? -1 : 1;
+    var before = direction === 'asc' ? 1 : -1;
+    var after = direction === 'asc' ? -1 : 1;
     result.sort(function (d1, d2) {
       if (d1[property] > d2[property]) return before;
       if (d1[property] < d2[property]) return after;

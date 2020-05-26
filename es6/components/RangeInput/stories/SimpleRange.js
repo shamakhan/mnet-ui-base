@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, RangeInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RangeInput } from 'mnet-ui-base';
 
 var SimpleRangeInput = function SimpleRangeInput() {
   var _React$useState = React.useState(5),
@@ -12,9 +11,7 @@ var SimpleRangeInput = function SimpleRangeInput() {
     return setValue(event.target.value);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(RangeInput, {

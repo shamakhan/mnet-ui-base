@@ -129,6 +129,46 @@ describe('Button', function () {
   test('disabled', function () {
     var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Button, {
       disabled: true
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      primary: true,
+      label: "Button"
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      label: "Button"
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      plain: true,
+      label: "Button"
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      plain: false,
+      label: "Button"
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      icon: _react["default"].createElement("svg", null)
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      icon: _react["default"].createElement("svg", null),
+      plain: true
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      icon: _react["default"].createElement("svg", null),
+      plain: false
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      icon: _react["default"].createElement("svg", null),
+      label: "Button"
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      icon: _react["default"].createElement("svg", null),
+      label: "Button",
+      plain: true
+    }), _react["default"].createElement(_.Button, {
+      disabled: true,
+      icon: _react["default"].createElement("svg", null),
+      label: "Button",
+      primary: true
     })));
 
     var tree = component.toJSON();

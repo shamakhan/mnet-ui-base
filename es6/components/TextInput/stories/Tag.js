@@ -4,8 +4,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, MnetUIBase, Keyboard, Text, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Keyboard, Text, TextInput } from 'mnet-ui-base';
 import { FormClose } from "grommet-icons/es6/icons/FormClose";
 var allSuggestions = ['sony', 'sonar', 'foo', 'bar'];
 
@@ -156,9 +155,12 @@ var TagTextInput = function TagTextInput() {
     }));
   };
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     pad: "small"
   }, React.createElement(TagInput, {

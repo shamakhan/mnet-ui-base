@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Trash } from "grommet-icons/es6/icons/Trash";
-import { Box, Button, MnetUIBase, Heading, Layer, Select, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Heading, Layer, Select, Text } from 'mnet-ui-base';
 
 var CenterLayer = function CenterLayer() {
   var _React$useState = React.useState(),
@@ -29,9 +28,12 @@ var CenterLayer = function CenterLayer() {
     return setOpen2(undefined);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",
@@ -43,7 +45,6 @@ var CenterLayer = function CenterLayer() {
     plain: true
   })), open && React.createElement(Layer, {
     position: "center",
-    modal: true,
     onClickOutside: onClose,
     onEsc: onClose
   }, React.createElement(Box, {
@@ -76,7 +77,6 @@ var CenterLayer = function CenterLayer() {
     color: "status-critical"
   })))), open2 && React.createElement(Layer, {
     position: "top",
-    modal: true,
     onClickOutside: onClose2,
     onEsc: onClose2
   }, React.createElement(Box, {

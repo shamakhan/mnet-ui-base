@@ -1,13 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Add } from "grommet-icons/es6/icons/Add";
-import { Anchor, Box, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Anchor, Box } from 'mnet-ui-base';
 
 var Colors = function Colors() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     pad: "medium",
     gap: "medium"
   }, React.createElement(Anchor, {

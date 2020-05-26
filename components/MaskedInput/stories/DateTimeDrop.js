@@ -6,8 +6,6 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 var _grommetIcons = require("grommet-icons");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -102,9 +100,7 @@ var DateTimeDropButton = function DateTimeDropButton() {
     }, 1);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
   }, _react["default"].createElement(_mnetUiBase.DropButton, {

@@ -1,12 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Heading, Paragraph, Text } from 'mnet-ui-base';
+import { Box, Heading, Paragraph, Text } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 var paragraphFiller = "\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua.\n";
 
 var Medium = function Medium() {
   var margin = undefined;
-  return React.createElement(MnetUIBase, {
+  return React.createElement("div", {
     theme: mnet
   }, React.createElement(Box, {
     pad: "medium"
@@ -41,9 +41,7 @@ var Medium = function Medium() {
 };
 
 var Small = function Small() {
-  return React.createElement(MnetUIBase, {
-    theme: MnetUIBase
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     pad: "medium"
   }, React.createElement("div", null, React.createElement(Heading, {
     size: "small"
@@ -68,7 +66,7 @@ var Small = function Small() {
 };
 
 var Large = function Large() {
-  return React.createElement(MnetUIBase, {
+  return React.createElement("div", {
     theme: mnet
   }, React.createElement(Box, {
     pad: "medium"

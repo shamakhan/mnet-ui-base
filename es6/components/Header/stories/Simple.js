@@ -2,8 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Anchor, Box, MnetUIBase, Header } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Anchor, Box, Header } from 'mnet-ui-base';
 export var Avatar = function Avatar(_ref) {
   var rest = _extends({}, _ref);
 
@@ -17,9 +16,7 @@ export var Avatar = function Avatar(_ref) {
 };
 
 var Simple = function Simple() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Header, {
+  return React.createElement(React.Fragment, null, React.createElement(Header, {
     background: "light-4",
     pad: "small"
   }, React.createElement(Avatar, null), React.createElement(Box, {

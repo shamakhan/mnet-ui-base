@@ -23,6 +23,13 @@ Object.keys(_Anchor).forEach(function (key) {
   exports[key] = _Anchor[key];
 });
 
+var _Avatar = require("./Avatar");
+
+Object.keys(_Avatar).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _Avatar[key];
+});
+
 var _Box = require("./Box");
 
 Object.keys(_Box).forEach(function (key) {
@@ -51,11 +58,11 @@ Object.keys(_Carousel).forEach(function (key) {
   exports[key] = _Carousel[key];
 });
 
-var _Chart = require("./Chart");
+var _CheckBoxGroup = require("./CheckBoxGroup");
 
-Object.keys(_Chart).forEach(function (key) {
+Object.keys(_CheckBoxGroup).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
-  exports[key] = _Chart[key];
+  exports[key] = _CheckBoxGroup[key];
 });
 
 var _CheckBox = require("./CheckBox");
@@ -86,20 +93,6 @@ Object.keys(_DataTable).forEach(function (key) {
   exports[key] = _DataTable[key];
 });
 
-var _Diagram = require("./Diagram");
-
-Object.keys(_Diagram).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  exports[key] = _Diagram[key];
-});
-
-var _Distribution = require("./Distribution");
-
-Object.keys(_Distribution).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  exports[key] = _Distribution[key];
-});
-
 var _Drop = require("./Drop");
 
 Object.keys(_Drop).forEach(function (key) {
@@ -112,13 +105,6 @@ var _DropButton = require("./DropButton");
 Object.keys(_DropButton).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   exports[key] = _DropButton[key];
-});
-
-var _Footer = require("./Footer");
-
-Object.keys(_Footer).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  exports[key] = _Footer[key];
 });
 
 var _Form = require("./Form");
@@ -296,6 +282,13 @@ Object.keys(_Select).forEach(function (key) {
   exports[key] = _Select[key];
 });
 
+var _Sidebar = require("./Sidebar");
+
+Object.keys(_Sidebar).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _Sidebar[key];
+});
+
 var _SkipLink = require("./SkipLink");
 
 Object.keys(_SkipLink).forEach(function (key) {
@@ -399,18 +392,4 @@ var _TextInput = require("./TextInput");
 Object.keys(_TextInput).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   exports[key] = _TextInput[key];
-});
-
-var _Video = require("./Video");
-
-Object.keys(_Video).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  exports[key] = _Video[key];
-});
-
-var _WorldMap = require("./WorldMap");
-
-Object.keys(_WorldMap).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  exports[key] = _WorldMap[key];
 });

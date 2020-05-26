@@ -1,12 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Anchor, Box, MnetUIBase, Paragraph } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Anchor, Box, Paragraph } from 'mnet-ui-base';
 
 var Inline = function Inline() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Paragraph, null, "This is ", React.createElement(Anchor, {

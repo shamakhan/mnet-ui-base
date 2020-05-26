@@ -2,7 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Body } from './Body';
@@ -34,16 +34,18 @@ var DataTable = function DataTable(_ref) {
       onClickRow = _ref.onClickRow,
       onMore = _ref.onMore,
       onSearch = _ref.onSearch,
+      onSortProp = _ref.onSort,
       replace = _ref.replace,
       pad = _ref.pad,
       primaryKey = _ref.primaryKey,
       resizeable = _ref.resizeable,
       rowProps = _ref.rowProps,
       size = _ref.size,
+      sortProp = _ref.sort,
       sortable = _ref.sortable,
       _ref$step = _ref.step,
       step = _ref$step === void 0 ? 50 : _ref$step,
-      rest = _objectWithoutPropertiesLoose(_ref, ["background", "border", "columns", "data", "groupBy", "onClickRow", "onMore", "onSearch", "replace", "pad", "primaryKey", "resizeable", "rowProps", "size", "sortable", "step"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["background", "border", "columns", "data", "groupBy", "onClickRow", "onMore", "onSearch", "onSort", "replace", "pad", "primaryKey", "resizeable", "rowProps", "size", "sort", "sortable", "step"]);
 
   // property name of the primary property
   var primaryProperty = useMemo(function () {
@@ -66,7 +68,7 @@ var DataTable = function DataTable(_ref) {
       setFilters = _useState2[1]; // which column we are sorting on, with direction
 
 
-  var _useState3 = useState({}),
+  var _useState3 = useState(sortProp || {}),
       sort = _useState3[0],
       setSort = _useState3[1]; // the data filtered and sorted, if needed
 
@@ -110,11 +112,14 @@ var DataTable = function DataTable(_ref) {
 
   var onSort = function onSort(property) {
     return function () {
-      var ascending = sort && property === sort.property ? !sort.ascending : true;
-      setSort({
+      var direction;
+      if (!sort || property !== sort.property) direction = 'asc';else if (sort.direction === 'asc') direction = 'desc';else direction = 'asc';
+      var nextSort = {
         property: property,
-        ascending: ascending
-      });
+        direction: direction
+      };
+      setSort(nextSort);
+      if (onSortProp) onSortProp(nextSort);
     };
   }; // toggle whether the group is expanded
 
@@ -159,14 +164,14 @@ var DataTable = function DataTable(_ref) {
   }; // remember the width this property's column should be
 
 
-  var onResize = function onResize(property) {
-    return function (width) {
+  var onResize = useCallback(function (property, width) {
+    if (widths[property] !== width) {
       var nextWidths = _extends({}, widths);
 
       nextWidths[property] = width;
       setWidths(nextWidths);
-    };
-  };
+    }
+  }, [widths]);
 
   if (size && resizeable) {
     console.warn('DataTable cannot combine "size" and "resizeble".');
@@ -187,7 +192,7 @@ var DataTable = function DataTable(_ref) {
     onFiltering: onFiltering,
     onFilter: onFilter,
     onResize: resizeable ? onResize : undefined,
-    onSort: sortable ? onSort : undefined,
+    onSort: sortable || sortProp || onSortProp ? onSort : undefined,
     onToggle: onToggleGroups
   }), groups ? React.createElement(GroupedBody, {
     background: normalizeProp(background, 'body'),

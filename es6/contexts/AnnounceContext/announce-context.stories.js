@@ -3,8 +3,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import { mnet } from 'mnet-ui-base/themes';
-import { AnnounceContext, Box, MnetUIBase, Heading, Text } from 'mnet-ui-base';
+import { AnnounceContext, Box, Heading, Text } from 'mnet-ui-base';
 
 var Announcer = function Announcer(_ref) {
   var announce = _ref.announce,
@@ -35,9 +34,12 @@ Announcer.defaultProps = {
 };
 
 var AnnounceContextComponent = function AnnounceContextComponent(props) {
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     justify: "center",
     align: "center",

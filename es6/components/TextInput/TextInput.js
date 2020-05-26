@@ -2,7 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React, { forwardRef, isValidElement, useContext, useEffect, useRef, useState } from 'react';
+import React, { forwardRef, isValidElement, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
@@ -13,7 +13,7 @@ import { Keyboard } from '../Keyboard';
 import { FormContext } from '../Form/FormContext';
 import { AnnounceContext } from '../../contexts';
 import { isNodeAfterScroll, isNodeBeforeScroll, sizeStyle } from '../../utils';
-import { StyledTextInput, StyledTextInputContainer, StyledPlaceholder, StyledSuggestions } from './StyledTextInput';
+import { StyledTextInput, StyledTextInputContainer, StyledPlaceholder, StyledIcon, StyledSuggestions } from './StyledTextInput';
 
 var renderLabel = function renderLabel(suggestion) {
   if (suggestion && typeof suggestion === 'object') {
@@ -41,27 +41,31 @@ var ContainerBox = styled(Box).withConfig({
 })(["", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:100%;}"], function (props) {
   return props.dropHeight ? sizeStyle('max-height', props.dropHeight, props.theme) : 'max-height: inherit;';
 });
+var defaultDropAlign = {
+  top: 'bottom',
+  left: 'left'
+};
+var defaultMessages = {
+  enterSelect: '(Press Enter to Select)',
+  suggestionsCount: 'suggestions available',
+  suggestionsExist: 'This input has suggestions use arrow keys to navigate',
+  suggestionIsOpen: 'Suggestions drop is open, continue to use arrow keys to navigate'
+};
 var TextInput = forwardRef(function (_ref, ref) {
-  var defaultValue = _ref.defaultValue,
+  var a11yTitle = _ref.a11yTitle,
+      defaultValue = _ref.defaultValue,
       _ref$dropAlign = _ref.dropAlign,
-      dropAlign = _ref$dropAlign === void 0 ? {
-    top: 'bottom',
-    left: 'left'
-  } : _ref$dropAlign,
+      dropAlign = _ref$dropAlign === void 0 ? defaultDropAlign : _ref$dropAlign,
       dropHeight = _ref.dropHeight,
       dropTarget = _ref.dropTarget,
       dropProps = _ref.dropProps,
+      icon = _ref.icon,
       id = _ref.id,
       _ref$messages = _ref.messages,
-      messages = _ref$messages === void 0 ? {
-    enterSelect: '(Press Enter to Select)',
-    suggestionsCount: 'suggestions available',
-    suggestionsExist: 'This input has suggestions use arrow keys to navigate',
-    suggestionIsOpen: 'Suggestions drop is open, continue to use arrow keys to navigate'
-  } : _ref$messages,
+      messages = _ref$messages === void 0 ? defaultMessages : _ref$messages,
       name = _ref.name,
       _onBlur = _ref.onBlur,
-      _onChange = _ref.onChange,
+      onChange = _ref.onChange,
       _onFocus = _ref.onFocus,
       onKeyDown = _ref.onKeyDown,
       onSelect = _ref.onSelect,
@@ -69,9 +73,11 @@ var TextInput = forwardRef(function (_ref, ref) {
       onSuggestionsOpen = _ref.onSuggestionsOpen,
       placeholder = _ref.placeholder,
       plain = _ref.plain,
+      readOnly = _ref.readOnly,
+      reverse = _ref.reverse,
       suggestions = _ref.suggestions,
       valueProp = _ref.value,
-      rest = _objectWithoutPropertiesLoose(_ref, ["defaultValue", "dropAlign", "dropHeight", "dropTarget", "dropProps", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "plain", "suggestions", "value"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "plain", "readOnly", "reverse", "suggestions", "value"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var announce = useContext(AnnounceContext);
@@ -79,9 +85,10 @@ var TextInput = forwardRef(function (_ref, ref) {
   var inputRef = useRef();
   var dropRef = useRef();
   var suggestionsRef = useRef();
-  var suggestionRefs = {};
+  var suggestionRefs = {}; // if this is a readOnly property, don't set a name with the form context
+  // this allows Select to control the form context for the name.
 
-  var _formContext$useFormC = formContext.useFormContext(name, valueProp),
+  var _formContext$useFormC = formContext.useFormContext(readOnly ? undefined : name, valueProp),
       value = _formContext$useFormC[0],
       setValue = _formContext$useFormC[1];
 
@@ -99,7 +106,20 @@ var TextInput = forwardRef(function (_ref, ref) {
       setShowDrop(false);
       if (onSuggestionsClose) onSuggestionsClose();
     }
-  }, [onSuggestionsClose, showDrop, suggestions]);
+  }, [onSuggestionsClose, showDrop, suggestions]); // If we have suggestions and focus, open drop if it's closed.
+  // This can occur when suggestions are tied to the value.
+  // We don't want focus or showDrop in the dependencies because we
+  // don't want to open the drop just because Esc close it.
+
+  /* eslint-disable react-hooks/exhaustive-deps */
+
+  useEffect(function () {
+    if (focus && !showDrop && suggestions && suggestions.length) {
+      setShowDrop(true);
+      if (onSuggestionsOpen) onSuggestionsOpen();
+    }
+  }, [onSuggestionsOpen, suggestions]);
+  /* eslint-enable react-hooks/exhaustive-deps */
 
   var _useState3 = useState(-1),
       activeSuggestionIndex = _useState3[0],
@@ -145,18 +165,17 @@ var TextInput = forwardRef(function (_ref, ref) {
       optionsNode.scrollTo(0, buttonNode.offsetTop);
     }
   }, [activeSuggestionIndex, suggestionRefs]);
-
-  var openDrop = function openDrop() {
+  var openDrop = useCallback(function () {
     setShowDrop(true);
     announce(messages.suggestionIsOpen);
     announce(suggestions.length + " " + messages.suggestionsCount);
     if (onSuggestionsOpen) onSuggestionsOpen();
-  };
-
-  var closeDrop = function closeDrop() {
+  }, [announce, messages.suggestionsCount, messages.suggestionIsOpen, onSuggestionsOpen, suggestions]);
+  var closeDrop = useCallback(function () {
     setShowDrop(false);
     if (messages.onSuggestionsClose) onSuggestionsClose();
-  };
+    if (onSuggestionsClose) onSuggestionsClose();
+  }, [messages.onSuggestionsClose, onSuggestionsClose]);
 
   var onNextSuggestion = function onNextSuggestion(event) {
     event.preventDefault();
@@ -211,10 +230,11 @@ var TextInput = forwardRef(function (_ref, ref) {
     }, React.createElement(StyledSuggestions, null, React.createElement(InfiniteScroll, {
       items: suggestions,
       step: theme.select.step
-    }, function (suggestion, index) {
+    }, function (suggestion, index, itemRef) {
       var plainLabel = typeof suggestion === 'object' && typeof isValidElement(suggestion.label);
       return React.createElement("li", {
-        key: stringLabel(suggestion) + "-" + index
+        key: stringLabel(suggestion) + "-" + index,
+        ref: itemRef
       }, React.createElement(Button, {
         active: activeSuggestionIndex === index || selectedSuggestionIndex === index,
         ref: function ref(r) {
@@ -252,7 +272,10 @@ var TextInput = forwardRef(function (_ref, ref) {
 
   return React.createElement(StyledTextInputContainer, {
     plain: plain
-  }, showStyledPlaceholder && React.createElement(StyledPlaceholder, null, placeholder), React.createElement(Keyboard, {
+  }, showStyledPlaceholder && React.createElement(StyledPlaceholder, null, placeholder), icon && React.createElement(StyledIcon, {
+    reverse: reverse,
+    theme: theme
+  }, icon), React.createElement(Keyboard, {
     onEnter: function onEnter(event) {
       closeDrop();
 
@@ -287,22 +310,26 @@ var TextInput = forwardRef(function (_ref, ref) {
     } : undefined,
     onKeyDown: onKeyDown
   }, React.createElement(StyledTextInput, _extends({
+    "aria-label": a11yTitle,
     ref: ref || inputRef,
     id: id,
     name: name,
     autoComplete: "off",
     plain: plain,
     placeholder: typeof placeholder === 'string' ? placeholder : undefined,
+    icon: icon,
+    reverse: reverse,
     focus: focus
   }, rest, {
     defaultValue: renderLabel(defaultValue),
-    value: renderLabel(value) || '',
+    value: renderLabel(value),
+    readOnly: readOnly,
     onFocus: function onFocus(event) {
       setFocus(true);
 
       if (suggestions && suggestions.length > 0) {
         announce(messages.suggestionsExist);
-        setShowDrop(true);
+        openDrop();
       }
 
       if (_onFocus) _onFocus(event);
@@ -311,9 +338,9 @@ var TextInput = forwardRef(function (_ref, ref) {
       setFocus(false);
       if (_onBlur) _onBlur(event);
     },
-    onChange: function onChange(event) {
+    onChange: readOnly ? undefined : function (event) {
       setValue(event.target.value);
-      if (_onChange) _onChange(event);
+      if (onChange) onChange(event);
     }
   }))), drop);
 });

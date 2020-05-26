@@ -17,9 +17,7 @@ var data = ['Boise', 'Fort Collins', 'Bay Area', 'North Carolina'];
 exports.data = data;
 
 var ChildrenExample = function ChildrenExample() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _mnetUiBase.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "large",
     height: "100%",
     background: "light-2"

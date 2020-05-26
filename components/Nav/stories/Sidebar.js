@@ -39,9 +39,12 @@ var SidebarNav = function SidebarNav() {
       active = _useState[0],
       setActive = _useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    full: true,
-    theme: _mnetUiBase.mnet
+  return _react["default"].createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, _react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     direction: "row"

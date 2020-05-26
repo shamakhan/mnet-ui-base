@@ -1,17 +1,19 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Notification } from "grommet-icons/es6/icons/Notification";
-import { Box, Button, Collapsible, Heading, MnetUIBase, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Collapsible, Heading, Text } from 'mnet-ui-base';
 
 var HorizontalCollapsible = function HorizontalCollapsible() {
   var _React$useState = React.useState(),
       openNotification = _React$useState[0],
       setOpenNotification = _React$useState[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true
   }, React.createElement(Box, {

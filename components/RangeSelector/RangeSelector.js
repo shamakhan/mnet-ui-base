@@ -51,7 +51,11 @@ var RangeSelector = (0, _react.forwardRef)(function (_ref, ref) {
       values = _ref$values === void 0 ? [] : _ref$values,
       rest = _objectWithoutPropertiesLoose(_ref, ["color", "direction", "invert", "max", "messages", "min", "onChange", "opacity", "round", "size", "step", "values"]);
 
-  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext);
+
+  if (!theme) {
+    return null;
+  }
 
   var _useState = (0, _react.useState)(),
       changing = _useState[0],

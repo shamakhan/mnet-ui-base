@@ -18,7 +18,7 @@ var SimpleCarousel = function SimpleCarousel(_ref) {
   var initialChild = _ref.initialChild,
       props = _objectWithoutPropertiesLoose(_ref, ["initialChild"]);
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
   }, _react["default"].createElement(_mnetUiBase.Carousel, _extends({

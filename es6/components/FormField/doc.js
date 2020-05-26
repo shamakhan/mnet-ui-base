@@ -17,12 +17,12 @@ export var doc = function doc(FormField) {
     validate: PropTypes.oneOfType([PropTypes.shape({
       regexp: PropTypes.object,
       // regular expression
-      message: PropTypes.string,
+      message: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
       status: PropTypes.oneOf(['error', 'info'])
     }), PropTypes.func, PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.shape({
       regexp: PropTypes.object,
       // regular expression
-      message: PropTypes.string,
+      message: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
       status: PropTypes.oneOf(['error', 'info'])
     }), PropTypes.func]))]).description("Validation rule when used within a grommet Form. Provide an object\n      with a regular expression, a function, or an array of these. If a\n      function is provided, it will be called with two arguments, the value\n      for this field and the entire value object. This permits validation to\n      encompass multiple fields. The function should return a string message\n      describing the validation issue, if any, or an object with 'message'\n      and 'status' properties.")
   };
@@ -64,6 +64,16 @@ export var themeDoc = {
     type: 'string | boolean | number',
     defaultValue: undefined
   },
+  'formField.disabled.border.color': {
+    description: 'The color of the FormField border when it is disabled.',
+    type: "string | {'dark': string, 'light': string}",
+    defaultValue: undefined
+  },
+  'formField.disabled.label.color': {
+    description: 'The color of the FormField label when it is disabled.',
+    type: "string | {'dark': string, 'light': string}",
+    defaultValue: undefined
+  },
   'formField.error.background.color': {
     description: 'The color of the FormField background when there is an error.',
     type: "string | {'dark': string, 'light': string}",
@@ -83,6 +93,16 @@ export var themeDoc = {
     description: 'The margin used for the FormField error.',
     type: 'string | object',
     defaultValue: "{ vertical: 'xsmall', horizontal: 'small' }"
+  },
+  'formField.focus.background.color': {
+    description: 'The color of the FormField background when it is in focus.',
+    type: "string | {'dark': string, 'light': string}",
+    defaultValue: undefined
+  },
+  'formField.focus.border.color': {
+    description: 'The color of the FormField border when it is in focus.',
+    type: "string | {'dark': string, 'light': string}",
+    defaultValue: undefined
   },
   'formField.extend': {
     description: 'Any additional style for FormField.',

@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, CheckBox, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, CheckBox, Select } from 'mnet-ui-base';
 var dummyOptions = Array(2000).fill().map(function (_, i) {
   return "option " + i;
 }).sort(function (a, b) {
@@ -67,9 +66,7 @@ var LazyLoading = function LazyLoading() {
     return setSelected(nextSelected);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",

@@ -8,8 +8,6 @@ var _grommetIcons = require("grommet-icons");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var NotificationLayer = function NotificationLayer() {
@@ -25,9 +23,12 @@ var NotificationLayer = function NotificationLayer() {
     return setOpen(undefined);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet,
-    full: true
+  return _react["default"].createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, _react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",

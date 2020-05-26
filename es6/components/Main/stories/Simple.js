@@ -1,12 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Header, Main, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Header, Main, Text } from 'mnet-ui-base';
 
 var Simple = function Simple() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Header, {
+  return React.createElement(React.Fragment, null, React.createElement(Header, {
     background: "light-4",
     pad: "small"
   }, React.createElement(Text, {

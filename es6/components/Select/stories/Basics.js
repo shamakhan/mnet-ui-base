@@ -1,51 +1,11 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
-import { deepMerge } from 'mnet-ui-base/utils';
-var colors = {
-  selected: 'neutral-3'
-};
-var customRoundedTheme = deepMerge(mnet, {
-  global: {
-    colors: colors,
-    control: {
-      border: {
-        radius: '24px'
-      }
-    },
-    input: {
-      weight: 400
-    },
-    font: {
-      size: '12px'
-    }
-  },
-  text: {
-    medium: '13px'
-  },
-  textInput: {
-    extend: 'padding: 0 12px;'
-  },
-  select: {
-    control: {
-      extend: 'padding: 3px 6px;',
-      open: {
-        background: '#ece0fa',
-        border: '1px solid #7D4CDB'
-      }
-    }
-  }
-});
+import { Box, Select } from 'mnet-ui-base';
 
 var SimpleSelect = function SimpleSelect(_ref) {
-  var theme = _ref.theme,
-      rest = _objectWithoutPropertiesLoose(_ref, ["theme"]);
+  var rest = _extends({}, _ref);
 
   var options = ['one', 'two'];
 
@@ -53,10 +13,7 @@ var SimpleSelect = function SimpleSelect(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: theme || mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
@@ -74,12 +31,6 @@ var SimpleSelect = function SimpleSelect(_ref) {
   }, rest))));
 };
 
-SimpleSelect.propTypes = {
-  theme: PropTypes.shape({})
-};
-SimpleSelect.defaultProps = {
-  theme: undefined
-};
 var defaultOptions = [];
 var objectOptions = [];
 
@@ -95,9 +46,4 @@ for (var i = 1; i <= 200; i += 1) {
 
 storiesOf('Select', module).add('Simple', function () {
   return React.createElement(SimpleSelect, null);
-}).add('Custom Theme', function () {
-  return React.createElement(SimpleSelect, {
-    open: true,
-    theme: customRoundedTheme
-  });
 });

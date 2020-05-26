@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, Drop, DropButton, MnetUIBase, Layer, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Drop, DropButton, Layer, TextInput } from 'mnet-ui-base';
 
 var MultipleDrop = function MultipleDrop() {
   var _useState = useState(false),
@@ -13,9 +12,12 @@ var MultipleDrop = function MultipleDrop() {
       setShowLayer = _useState2[1];
 
   var targetRef = useRef();
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

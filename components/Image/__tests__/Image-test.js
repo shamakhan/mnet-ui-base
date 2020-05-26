@@ -23,6 +23,15 @@ test('Image renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
+test('Image renders with aria-label', function () {
+  var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Image, {
+    a11yTitle: "aria-label-text",
+    src: SRC
+  })));
+
+  var tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
 test('Image fit renders', function () {
   var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Image, {
     fit: "cover",
@@ -49,6 +58,15 @@ opacityTypes.forEach(function (opacity) {
 test('Image fillProp renders', function () {
   var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Image, {
     fill: true,
+    src: SRC
+  }), _react["default"].createElement(_.Image, {
+    fill: false,
+    src: SRC
+  }), _react["default"].createElement(_.Image, {
+    fill: "horizontal",
+    src: SRC
+  }), _react["default"].createElement(_.Image, {
+    fill: "vertical",
     src: SRC
   })));
 

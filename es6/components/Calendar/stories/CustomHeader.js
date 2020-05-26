@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, Calendar, MnetUIBase, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Calendar, Text } from 'mnet-ui-base';
 import { FormPreviousLink } from "grommet-icons/es6/icons/FormPreviousLink";
 import { FormNextLink } from "grommet-icons/es6/icons/FormNextLink";
 
@@ -14,9 +13,7 @@ var CustomHeaderCalendar = function CustomHeaderCalendar() {
     setDate(nextDate !== date ? nextDate : undefined);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Calendar, {

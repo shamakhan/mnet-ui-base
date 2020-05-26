@@ -1,13 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, List } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, List } from 'mnet-ui-base';
 import { locations } from './data';
 
 var BasicList = function BasicList() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(List, {

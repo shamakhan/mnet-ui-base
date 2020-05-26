@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Drop, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Drop } from 'mnet-ui-base';
 
 var SimpleDrop = function SimpleDrop() {
   var targetRef = useRef();
@@ -12,9 +11,12 @@ var SimpleDrop = function SimpleDrop() {
   useEffect(function () {
     setShowDrop(true);
   }, []);
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

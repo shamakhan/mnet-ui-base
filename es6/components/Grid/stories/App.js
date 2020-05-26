@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Button, Grid, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Grid, Text } from 'mnet-ui-base';
 
 var AppGrid = function AppGrid() {
   var _useState = useState(true),
       sidebar = _useState[0],
       setSidebar = _useState[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Grid, {
     fill: true,
     rows: ['auto', 'flex'],

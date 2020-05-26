@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { Close } from "grommet-icons/es6/icons/Close";
-import { MnetUIBase, Box, Button, DropButton, Heading, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, DropButton, Heading, Text } from 'mnet-ui-base';
 
 var DropContent = function DropContent(_ref) {
   var onClose = _ref.onClose;
@@ -39,9 +38,7 @@ var SimpleDropButton = function SimpleDropButton() {
     setOpen(false);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(DropButton, {

@@ -14,7 +14,7 @@ var paragraphFiller = "\nLorem ipsum dolor sit amet, consectetur adipiscing elit
 
 var Medium = function Medium() {
   var margin = undefined;
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return _react["default"].createElement("div", {
     theme: _themes.mnet
   }, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
@@ -49,9 +49,7 @@ var Medium = function Medium() {
 };
 
 var Small = function Small() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _mnetUiBase.MnetUIBase
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
   }, _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Heading, {
     size: "small"
@@ -76,7 +74,7 @@ var Small = function Small() {
 };
 
 var Large = function Large() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return _react["default"].createElement("div", {
     theme: _themes.mnet
   }, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"

@@ -1,14 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Menu } from 'mnet-ui-base';
+import { Box, Menu } from 'mnet-ui-base';
 import { Power } from "grommet-icons/es6/icons/Power";
 import { User } from "grommet-icons/es6/icons/User";
-import { mnet } from 'mnet-ui-base/themes';
 
 var Reverse = function Reverse() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Menu, {

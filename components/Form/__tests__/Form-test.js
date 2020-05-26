@@ -18,6 +18,8 @@ var _Button = require("../../Button");
 
 var _Text = require("../../Text");
 
+var _TextInput = require("../../TextInput");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 describe('Form', function () {
@@ -60,12 +62,285 @@ describe('Form', function () {
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+  test('controlled', function () {
+    var onSubmit = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState = _react["default"].useState({
+        test: ''
+      }),
+          value = _React$useState[0],
+          setValue = _React$useState[1];
+
+      var onChange = _react["default"].useCallback(function (nextValue) {
+        return setValue(nextValue);
+      }, []);
+
+      return _react["default"].createElement(_.Form, {
+        value: value,
+        onChange: onChange,
+        onSubmit: onSubmit
+      }, _react["default"].createElement(_FormField.FormField, {
+        name: "test"
+      }, _react["default"].createElement(_TextInput.TextInput, {
+        name: "test",
+        placeholder: "test input"
+      })), _react["default"].createElement(_Button.Button, {
+        type: "submit",
+        primary: true,
+        label: "Submit"
+      }));
+    };
+
+    var _render = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render.getByPlaceholderText,
+        getByText = _render.getByText,
+        container = _render.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'v'
+      }
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Submit'));
+
+    expect(onSubmit).toBeCalledWith(expect.objectContaining({
+      value: {
+        test: 'v'
+      },
+      touched: {
+        test: true
+      }
+    }));
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('controlled lazy', function () {
+    var onSubmit = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState2 = _react["default"].useState({}),
+          value = _React$useState2[0],
+          setValue = _React$useState2[1];
+
+      _react["default"].useEffect(function () {
+        return setValue({
+          test: 'test'
+        });
+      }, []);
+
+      var onChange = _react["default"].useCallback(function (nextValue) {
+        return setValue(nextValue);
+      }, []);
+
+      return _react["default"].createElement(_.Form, {
+        value: value,
+        onChange: onChange,
+        onSubmit: onSubmit
+      }, _react["default"].createElement(_FormField.FormField, {
+        name: "test"
+      }, _react["default"].createElement(_TextInput.TextInput, {
+        name: "test",
+        placeholder: "test input"
+      })), _react["default"].createElement(_Button.Button, {
+        type: "submit",
+        primary: true,
+        label: "Submit"
+      }));
+    };
+
+    var _render2 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render2.getByPlaceholderText,
+        getByText = _render2.getByText,
+        container = _render2.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'v'
+      }
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Submit'));
+
+    expect(onSubmit).toBeCalledWith(expect.objectContaining({
+      value: {
+        test: 'v'
+      },
+      touched: {
+        test: true
+      }
+    }));
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('uncontrolled', function () {
+    var onSubmit = jest.fn();
+
+    var _render3 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
+      onSubmit: onSubmit
+    }, _react["default"].createElement(_FormField.FormField, {
+      name: "test"
+    }, _react["default"].createElement(_TextInput.TextInput, {
+      name: "test",
+      placeholder: "test input"
+    })), _react["default"].createElement(_Button.Button, {
+      type: "submit",
+      primary: true,
+      label: "Submit"
+    })))),
+        getByPlaceholderText = _render3.getByPlaceholderText,
+        getByText = _render3.getByText,
+        container = _render3.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'v'
+      }
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Submit'));
+
+    expect(onSubmit).toBeCalledWith(expect.objectContaining({
+      value: {
+        test: 'v'
+      },
+      touched: {
+        test: true
+      }
+    }));
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('controlled input', function () {
+    var onSubmit = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState3 = _react["default"].useState(''),
+          value = _React$useState3[0],
+          setValue = _React$useState3[1];
+
+      var onChange = _react["default"].useCallback(function (event) {
+        return setValue(event.target.value);
+      }, []);
+
+      return _react["default"].createElement(_.Form, {
+        onSubmit: onSubmit
+      }, _react["default"].createElement(_FormField.FormField, {
+        name: "test"
+      }, _react["default"].createElement(_TextInput.TextInput, {
+        name: "test",
+        placeholder: "test input",
+        value: value,
+        onChange: onChange
+      })), _react["default"].createElement(_Button.Button, {
+        type: "submit",
+        primary: true,
+        label: "Submit"
+      }));
+    };
+
+    var _render4 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render4.getByPlaceholderText,
+        getByText = _render4.getByText,
+        container = _render4.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'v'
+      }
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Submit'));
+
+    expect(onSubmit).toBeCalledWith(expect.objectContaining({
+      value: {
+        test: 'v'
+      },
+      touched: {
+        test: true
+      }
+    }));
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('controlled input lazy', function () {
+    var onSubmit = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState4 = _react["default"].useState(''),
+          value = _React$useState4[0],
+          setValue = _React$useState4[1];
+
+      _react["default"].useEffect(function () {
+        return setValue('test');
+      }, []);
+
+      var onChange = _react["default"].useCallback(function (event) {
+        return setValue(event.target.value);
+      }, []);
+
+      return _react["default"].createElement(_.Form, {
+        onSubmit: onSubmit
+      }, _react["default"].createElement(_FormField.FormField, {
+        name: "test"
+      }, _react["default"].createElement(_TextInput.TextInput, {
+        name: "test",
+        placeholder: "test input",
+        value: value,
+        onChange: onChange
+      })), _react["default"].createElement(_Button.Button, {
+        type: "submit",
+        primary: true,
+        label: "Submit"
+      }));
+    };
+
+    var _render5 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render5.getByPlaceholderText,
+        getByText = _render5.getByText,
+        container = _render5.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.change(getByPlaceholderText('test input'), {
+      target: {
+        value: 'v'
+      }
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Submit'));
+
+    expect(onSubmit).toBeCalledWith(expect.objectContaining({
+      value: {
+        test: 'v'
+      },
+      touched: {
+        test: true
+      }
+    }));
+    expect(container.firstChild).toMatchSnapshot();
+  });
   test('update', function () {
     var validate = jest.fn().mockReturnValueOnce('too short').mockReturnValueOnce(undefined);
     var validate2 = jest.fn().mockReturnValue(undefined);
     var onSubmit = jest.fn();
 
-    var _render = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
+    var _render6 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
       onSubmit: onSubmit
     }, _react["default"].createElement(_FormField.FormField, {
       name: "test",
@@ -81,9 +356,9 @@ describe('Form', function () {
       primary: true,
       label: "Submit"
     })))),
-        getByPlaceholderText = _render.getByPlaceholderText,
-        getByText = _render.getByText,
-        container = _render.container;
+        getByPlaceholderText = _render6.getByPlaceholderText,
+        getByText = _render6.getByText,
+        container = _render6.container;
 
     expect(container.firstChild).toMatchSnapshot();
 
@@ -138,7 +413,7 @@ describe('Form', function () {
   test('regexp validation', function () {
     var onSubmit = jest.fn();
 
-    var _render2 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
+    var _render7 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
       onSubmit: onSubmit
     }, _react["default"].createElement(_FormField.FormField, {
       name: "test",
@@ -152,9 +427,9 @@ describe('Form', function () {
       primary: true,
       label: "Submit"
     })))),
-        getByPlaceholderText = _render2.getByPlaceholderText,
-        getByText = _render2.getByText,
-        queryByText = _render2.queryByText;
+        getByPlaceholderText = _render7.getByPlaceholderText,
+        getByText = _render7.getByText,
+        queryByText = _render7.queryByText;
 
     _react2.fireEvent.change(getByPlaceholderText('test input'), {
       target: {
@@ -179,22 +454,22 @@ describe('Form', function () {
   test('validate', function () {
     var onSubmit = jest.fn();
 
-    var _render3 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
+    var _render8 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
       onSubmit: onSubmit
     }, _react["default"].createElement(_FormField.FormField, {
       name: "test",
       required: true,
-      validate: [function (name) {
-        return name.length === 1 ? 'simple string' : undefined;
-      }, function (name) {
-        return name.length === 2 ? _react["default"].createElement(_Text.Text, null, " ReactNode ") : undefined;
-      }, function (name) {
-        return name.length === 3 ? {
+      validate: [function (value) {
+        return value.length === 1 ? 'simple string' : undefined;
+      }, function (value) {
+        return value.length === 2 ? _react["default"].createElement(_Text.Text, null, " ReactNode ") : undefined;
+      }, function (value) {
+        return value.length === 3 ? {
           message: 'status error',
           status: 'error'
         } : undefined;
-      }, function (name) {
-        return name.length === 4 ? {
+      }, function (value) {
+        return value.length === 4 ? {
           message: 'status info',
           status: 'info'
         } : undefined;
@@ -205,8 +480,8 @@ describe('Form', function () {
       primary: true,
       label: "Submit"
     })))),
-        getByPlaceholderText = _render3.getByPlaceholderText,
-        getByText = _render3.getByText;
+        getByPlaceholderText = _render8.getByPlaceholderText,
+        getByText = _render8.getByText;
 
     _react2.fireEvent.change(getByPlaceholderText('test input'), {
       target: {
@@ -251,7 +526,7 @@ describe('Form', function () {
   test('required validation', function () {
     var onSubmit = jest.fn();
 
-    var _render4 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
+    var _render9 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
       onSubmit: onSubmit
     }, _react["default"].createElement(_FormField.FormField, {
       name: "test",
@@ -262,9 +537,9 @@ describe('Form', function () {
       primary: true,
       label: "Submit"
     })))),
-        getByPlaceholderText = _render4.getByPlaceholderText,
-        getByText = _render4.getByText,
-        queryByText = _render4.queryByText;
+        getByPlaceholderText = _render9.getByPlaceholderText,
+        getByText = _render9.getByText,
+        queryByText = _render9.queryByText;
 
     _react2.fireEvent.click(getByText('Submit'));
 
@@ -281,7 +556,7 @@ describe('Form', function () {
   test('reset clears form', function () {
     var onReset = jest.fn();
 
-    var _render5 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
+    var _render10 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
       onReset: onReset
     }, _react["default"].createElement(_FormField.FormField, {
       name: "test",
@@ -292,9 +567,9 @@ describe('Form', function () {
       primary: true,
       label: "Reset"
     })))),
-        getByPlaceholderText = _render5.getByPlaceholderText,
-        getByText = _render5.getByText,
-        queryByText = _render5.queryByText;
+        getByPlaceholderText = _render10.getByPlaceholderText,
+        getByText = _render10.getByText,
+        queryByText = _render10.queryByText;
 
     _react2.fireEvent.change(getByPlaceholderText('test input'), {
       target: {
@@ -309,7 +584,7 @@ describe('Form', function () {
   test('initial values', function () {
     var _onSubmit = jest.fn();
 
-    var _render6 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
+    var _render11 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.Form, {
       onSubmit: function onSubmit(_ref) {
         var value = _ref.value,
             touched = _ref.touched;
@@ -331,8 +606,8 @@ describe('Form', function () {
       primary: true,
       label: "Submit"
     })))),
-        getByText = _render6.getByText,
-        queryByText = _render6.queryByText;
+        getByText = _render11.getByText,
+        queryByText = _render11.queryByText;
 
     _react2.fireEvent.click(getByText('Submit'));
 
@@ -344,5 +619,186 @@ describe('Form', function () {
       },
       touched: {}
     }));
+  });
+  test('lazy value', function () {
+    var _onSubmit2 = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState5 = _react["default"].useState(),
+          test = _React$useState5[0],
+          setTest = _React$useState5[1];
+
+      return _react["default"].createElement(_.Form, {
+        onSubmit: function onSubmit(_ref2) {
+          var value = _ref2.value,
+              touched = _ref2.touched;
+          return _onSubmit2({
+            value: value,
+            touched: touched
+          });
+        }
+      }, _react["default"].createElement(_TextInput.TextInput, {
+        name: "test",
+        value: test
+      }), _react["default"].createElement(_Button.Button, {
+        label: "set",
+        onClick: function onClick() {
+          return setTest('a');
+        }
+      }), _react["default"].createElement(_Button.Button, {
+        label: "submit",
+        type: "submit"
+      }));
+    };
+
+    var _render12 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        container = _render12.container,
+        getByText = _render12.getByText;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('set'));
+
+    _react2.fireEvent.click(getByText('submit'));
+
+    expect(_onSubmit2).toBeCalledWith(expect.objectContaining({
+      value: {
+        test: 'a'
+      }
+    }));
+  });
+  test('validate on blur', function () {
+    var Test = function Test() {
+      return _react["default"].createElement(_.Form, {
+        validate: "blur"
+      }, _react["default"].createElement(_FormField.FormField, {
+        label: "Name",
+        name: "name",
+        placeholder: "name",
+        required: true,
+        validate: [{
+          regexp: /^[a-z]/i
+        }, function (name) {
+          if (name && name.length === 1) return 'must be >1 character';
+          return undefined;
+        }, function (name) {
+          if (name === 'good') return {
+            message: 'good',
+            status: 'info'
+          };
+          return undefined;
+        }]
+      }), _react["default"].createElement(_FormField.FormField, {
+        label: "Email",
+        name: "email",
+        required: true
+      }, _react["default"].createElement(_TextInput.TextInput, {
+        name: "email",
+        type: "email",
+        placeholder: "email"
+      })), _react["default"].createElement(_Button.Button, {
+        label: "submit",
+        type: "submit"
+      }));
+    };
+
+    var _render13 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByText = _render13.getByText,
+        getByPlaceholderText = _render13.getByPlaceholderText,
+        queryAllByText = _render13.queryAllByText,
+        queryByText = _render13.queryByText; // both fields have required error message
+
+
+    _react2.fireEvent.click(getByText('submit'));
+
+    expect(queryAllByText('required')).toHaveLength(2); // one fields has required error message
+
+    _react2.fireEvent.change(getByPlaceholderText('name'), {
+      target: {
+        value: 'Input has changed'
+      }
+    });
+
+    _react2.fireEvent.click(getByText('submit'));
+
+    expect(queryAllByText('required')).toHaveLength(1); // name field has new error and email field still has required error message
+
+    _react2.fireEvent.change(getByPlaceholderText('name'), {
+      target: {
+        value: 'a'
+      }
+    });
+
+    _react2.fireEvent.click(getByText('submit'));
+
+    expect(queryByText('required')).toBeTruthy();
+    expect(queryByText('must be >1 character')).toBeTruthy(); //  new value in name does not remove the error message in email
+
+    _react2.fireEvent.change(getByPlaceholderText('name'), {
+      target: {
+        value: 'abc'
+      }
+    });
+
+    expect(queryByText('required')).toBeTruthy();
+    expect(queryByText('must be >1 character')).toBe(null);
+  }); // deprecated FormField+input pattern
+
+  test('controlled FormField deprecated', function () {
+    var onSubmit = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState6 = _react["default"].useState({
+        test: ''
+      }),
+          value = _React$useState6[0],
+          setValue = _React$useState6[1];
+
+      var onChange = _react["default"].useCallback(function (nextValue) {
+        return setValue(nextValue);
+      }, []);
+
+      return _react["default"].createElement(_.Form, {
+        value: value,
+        onChange: onChange,
+        onSubmit: onSubmit
+      }, _react["default"].createElement(_FormField.FormField, {
+        label: "test",
+        name: "test",
+        id: "test",
+        htmlFor: "test"
+      }), _react["default"].createElement(_Button.Button, {
+        type: "submit",
+        primary: true,
+        label: "Submit"
+      }));
+    };
+
+    var _render14 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByLabelText = _render14.getByLabelText,
+        getByText = _render14.getByText,
+        container = _render14.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.change(getByLabelText('test'), {
+      target: {
+        value: 'v'
+      }
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Submit'));
+
+    expect(onSubmit).toBeCalledWith(expect.objectContaining({
+      value: {
+        test: 'v'
+      },
+      touched: {
+        test: true
+      }
+    }));
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

@@ -2,12 +2,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { mnet, Box, Button, MnetUIBase } from 'mnet-ui-base';
+import { Box, Button } from 'mnet-ui-base';
 
 var FillButtons = function FillButtons(props) {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     pad: "medium",
     justify: "center",
     direction: "row"

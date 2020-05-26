@@ -1,13 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { FormClose } from "grommet-icons/es6/icons/FormClose";
-import { Box, Button, MnetUIBase, Layer, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Layer, Text } from 'mnet-ui-base';
 
 var ScrollBodyLayer = function ScrollBodyLayer() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Layer, {
+  return React.createElement(React.Fragment, null, React.createElement(Layer, {
     full: "vertical",
     position: "right"
   }, React.createElement(Box, {

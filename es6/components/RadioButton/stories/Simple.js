@@ -1,16 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Button, RadioButton } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, RadioButton } from 'mnet-ui-base';
 
 var SimpleRadioButton = function SimpleRadioButton() {
   var _React$useState = React.useState(),
       selected = _React$useState[0],
       setSelected = _React$useState[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large",
     gap: "large"

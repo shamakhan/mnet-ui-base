@@ -10,7 +10,7 @@ import { Button } from '../Button';
 import { Drop } from '../Drop';
 import { FormContext } from '../Form/FormContext';
 import { Keyboard } from '../Keyboard';
-import { StyledMaskedInput, StyledMaskedInputContainer } from './StyledMaskedInput';
+import { StyledMaskedInput, StyledMaskedInputContainer, StyledIcon } from './StyledMaskedInput';
 
 var parseValue = function parseValue(mask, value) {
   // break the value up into mask parts
@@ -106,8 +106,13 @@ var parseValue = function parseValue(mask, value) {
 };
 
 var defaultMask = [];
+var dropAlign = {
+  top: 'bottom',
+  left: 'left'
+};
 var MaskedInput = forwardRef(function (_ref, ref) {
   var focusProp = _ref.focus,
+      icon = _ref.icon,
       id = _ref.id,
       _ref$mask = _ref.mask,
       mask = _ref$mask === void 0 ? defaultMask : _ref$mask,
@@ -118,8 +123,9 @@ var MaskedInput = forwardRef(function (_ref, ref) {
       onKeyDown = _ref.onKeyDown,
       placeholder = _ref.placeholder,
       plain = _ref.plain,
+      reverse = _ref.reverse,
       valueProp = _ref.value,
-      rest = _objectWithoutPropertiesLoose(_ref, ["focus", "id", "mask", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "placeholder", "plain", "value"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["focus", "icon", "id", "mask", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "placeholder", "plain", "reverse", "value"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var formContext = useContext(FormContext);
@@ -211,9 +217,12 @@ var MaskedInput = forwardRef(function (_ref, ref) {
     var nextValue = nextValueParts.map(function (part) {
       return part.part;
     }).join('');
-    if (value !== nextValue) setInputValue(nextValue);
-    if (onChange) onChange(event);
-    setValue(nextValue);
+
+    if (value !== nextValue) {
+      setInputValue(nextValue);
+      setValue(nextValue);
+      if (onChange) onChange(event);
+    }
   }, [mask, onChange, setInputValue, setValue, value]);
   var onOption = useCallback(function (option) {
     return function () {
@@ -271,6 +280,9 @@ var MaskedInput = forwardRef(function (_ref, ref) {
       setShowDrop(false);
     }
   }, [showDrop]);
+  var onHideDrop = useCallback(function () {
+    return setShowDrop(false);
+  }, []);
 
   var renderPlaceholder = function renderPlaceholder() {
     return mask.map(function (item) {
@@ -280,7 +292,10 @@ var MaskedInput = forwardRef(function (_ref, ref) {
 
   return React.createElement(StyledMaskedInputContainer, {
     plain: plain
-  }, React.createElement(Keyboard, {
+  }, icon && React.createElement(StyledIcon, {
+    reverse: reverse,
+    theme: theme
+  }, icon), React.createElement(Keyboard, {
     onEsc: onEsc,
     onTab: showDrop ? function () {
       return setShowDrop(false);
@@ -300,9 +315,11 @@ var MaskedInput = forwardRef(function (_ref, ref) {
     autoComplete: "off",
     plain: plain,
     placeholder: placeholder || renderPlaceholder(),
+    icon: icon,
+    reverse: reverse,
     focus: focus
   }, rest, {
-    value: value || '',
+    value: value,
     theme: theme,
     onFocus: function onFocus(event) {
       setFocus(true);
@@ -321,18 +338,11 @@ var MaskedInput = forwardRef(function (_ref, ref) {
     onChange: onChangeInput
   }))), showDrop && mask[activeMaskIndex] && mask[activeMaskIndex].options && React.createElement(Drop, {
     id: id ? "masked-input-drop__" + id : undefined,
-    align: {
-      top: 'bottom',
-      left: 'left'
-    },
+    align: dropAlign,
     responsive: false,
     target: (ref || inputRef).current,
-    onClickOutside: function onClickOutside() {
-      return setShowDrop(false);
-    },
-    onEsc: function onEsc() {
-      return setShowDrop(false);
-    }
+    onClickOutside: onHideDrop,
+    onEsc: onHideDrop
   }, React.createElement(Box, {
     ref: dropRef
   }, mask[activeMaskIndex].options.map(function (option, index) {

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, Drop, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Drop } from 'mnet-ui-base';
 
 var ProgressiveDrop = function ProgressiveDrop() {
   var boxRef = useRef();
@@ -29,9 +28,12 @@ var ProgressiveDrop = function ProgressiveDrop() {
     setOpenInnerDrop(false);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

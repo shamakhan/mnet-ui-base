@@ -28,9 +28,7 @@ var FormFieldLabel = function FormFieldLabel(props) {
 };
 
 var LabelFormField = function LabelFormField() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _mnetUiBase.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
   }, _react["default"].createElement(_mnetUiBase.Form, null, _react["default"].createElement(FormFieldLabel, {

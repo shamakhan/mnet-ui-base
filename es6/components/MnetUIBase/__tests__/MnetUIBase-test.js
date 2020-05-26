@@ -80,7 +80,7 @@ describe('MnetUIBase', function () {
   test('background', function () {
     var component = renderer.create(React.createElement(MnetUIBase, {
       full: true,
-      background: "blue"
+      background: "#0000ff"
     }, "MnetUIBase App"));
     expect(component.toJSON()).toMatchSnapshot();
   });

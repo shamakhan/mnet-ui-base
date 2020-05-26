@@ -30,9 +30,7 @@ var InfiniteScrollInTable = function InfiniteScrollInTable() {
     })));
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _mnetUiBase.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "small",
     basis: "small"
   }, _react["default"].createElement(_mnetUiBase.Heading, {

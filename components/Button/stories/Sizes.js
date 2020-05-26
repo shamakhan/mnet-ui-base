@@ -8,14 +8,10 @@ var _mnetUiBase = require("mnet-ui-base");
 
 var _grommetIcons = require("grommet-icons");
 
-var _themes = require("mnet-ui-base/themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var SizedButton = function SizedButton() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
     direction: "row"
   }, _react["default"].createElement(_mnetUiBase.Box, {
     align: "start",

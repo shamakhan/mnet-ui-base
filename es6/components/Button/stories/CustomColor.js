@@ -2,16 +2,20 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { mnet, MnetUIBase, Box, Button } from 'mnet-ui-base';
-import { deepMerge } from '../../../utils';
-var customButtonColor = deepMerge(mnet, {
+import { MnetUIBase, Box, Button } from 'mnet-ui-base';
+var customButtonColor = {
+  global: {
+    font: {
+      family: 'Arial'
+    }
+  },
   button: {
     color: {
       light: 'white',
       dark: 'white'
     }
   }
-});
+};
 
 var Colored = function Colored(props) {
   return React.createElement(MnetUIBase, {

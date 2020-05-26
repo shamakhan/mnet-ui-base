@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, CheckBox, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, CheckBox } from 'mnet-ui-base';
 var boxStyle = {
   position: 'relative',
   display: 'block'
@@ -40,9 +39,7 @@ var CheckBoxWithStickyDiv = function CheckBoxWithStickyDiv() {
     };
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     pad: "large",
     align: "center"
   }, React.createElement(Box, {

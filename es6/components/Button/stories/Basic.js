@@ -2,12 +2,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { mnet, Box, Button, MnetUIBase } from 'mnet-ui-base';
+import { Box, Button } from 'mnet-ui-base';
 
 var BasicButtons = function BasicButtons(props) {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     align: "center",
     pad: "medium"
   }, React.createElement(Button, _extends({
@@ -32,6 +30,14 @@ var BasicButtons = function BasicButtons(props) {
   }, React.createElement(Button, _extends({
     primary: true,
     label: "Primary",
+    onClick: function onClick() {}
+  }, props))), React.createElement(Box, {
+    align: "center",
+    pad: "medium"
+  }, React.createElement(Button, _extends({
+    primary: true,
+    label: "Active Primary",
+    active: true,
     onClick: function onClick() {}
   }, props))));
 };

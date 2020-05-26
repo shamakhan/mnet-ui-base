@@ -1,15 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Calendar, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Calendar } from 'mnet-ui-base';
 
 var RangeCalendar = function RangeCalendar() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Calendar, {
+    dates: [['2020-04-03', '2020-04-08']],
     range: true
   })));
 };

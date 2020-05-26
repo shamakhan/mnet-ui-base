@@ -6,7 +6,7 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
+var _grommetIcons = require("grommet-icons");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -15,31 +15,45 @@ var EmailMaskedInput = function EmailMaskedInput() {
       value = _React$useState[0],
       setValue = _React$useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    full: true,
-    theme: _themes.mnet
+  var emailMask = [{
+    regexp: /^[\w\-_.]+$/,
+    placeholder: 'example'
+  }, {
+    fixed: '@'
+  }, {
+    regexp: /^[\w]+$/,
+    placeholder: 'my'
+  }, {
+    fixed: '.'
+  }, {
+    regexp: /^[\w]+$/,
+    placeholder: 'com'
+  }];
+  return _react["default"].createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, _react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
   }, _react["default"].createElement(_mnetUiBase.Box, {
-    width: "medium"
+    width: "medium",
+    gap: "medium"
   }, _react["default"].createElement(_mnetUiBase.MaskedInput, {
-    mask: [{
-      regexp: /^[\w\-_.]+$/,
-      placeholder: 'example'
-    }, {
-      fixed: '@'
-    }, {
-      regexp: /^[\w]+$/,
-      placeholder: 'my'
-    }, {
-      fixed: '.'
-    }, {
-      regexp: /^[\w]+$/,
-      placeholder: 'com'
-    }],
+    icon: _react["default"].createElement(_grommetIcons.MailOption, null),
+    mask: emailMask,
+    value: value,
+    onChange: function onChange(event) {
+      return setValue(event.target.value);
+    }
+  }), _react["default"].createElement(_mnetUiBase.MaskedInput, {
+    reverse: true,
+    icon: _react["default"].createElement(_grommetIcons.MailOption, null),
+    mask: emailMask,
     value: value,
     onChange: function onChange(event) {
       return setValue(event.target.value);
@@ -47,6 +61,6 @@ var EmailMaskedInput = function EmailMaskedInput() {
   }))));
 };
 
-(0, _react2.storiesOf)('MaskedInput', module).add('Email', function () {
+(0, _react2.storiesOf)('MaskedInput', module).add('Email with Icon', function () {
   return _react["default"].createElement(EmailMaskedInput, null);
 });

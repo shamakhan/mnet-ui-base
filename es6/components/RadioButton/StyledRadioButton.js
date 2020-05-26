@@ -42,7 +42,7 @@ var StyledRadioButtonBox = styled.div.withConfig({
   displayName: "StyledRadioButton__StyledRadioButtonBox",
   componentId: "tlf8ya-3"
 })(["", ";", ";"], function (props) {
-  return props.focus && focusStyle;
+  return props.focus && focusStyle();
 }, function (props) {
   return props.theme.radioButton.check.extend;
 });

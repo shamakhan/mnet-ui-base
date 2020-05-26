@@ -2,17 +2,14 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Accordion, AccordionPanel, Box, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Accordion, AccordionPanel, Box } from 'mnet-ui-base';
 
 var SimpleAccordion = function SimpleAccordion(props) {
   var animate = props.animate,
       multiple = props.multiple,
       rest = _objectWithoutPropertiesLoose(props, ["animate", "multiple"]);
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, rest, React.createElement(Accordion, {
+  return React.createElement("div", null, React.createElement(Box, rest, React.createElement(Accordion, {
     animate: animate,
     multiple: multiple
   }, React.createElement(AccordionPanel, {

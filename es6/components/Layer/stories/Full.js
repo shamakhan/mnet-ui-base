@@ -1,16 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, MnetUIBase, Layer } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Layer } from 'mnet-ui-base';
 
 var FullLayer = function FullLayer() {
   var _React$useState = React.useState(false),
       showLayer = _React$useState[0],
       setShowLayer = _React$useState[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     pad: "small",
     fill: true,

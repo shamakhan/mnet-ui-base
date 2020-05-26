@@ -29,6 +29,25 @@ describe('Select', function () {
 
     expect(component.toJSON()).toMatchSnapshot();
   });
+  test('a11yTitle', function () {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_2.Select, {
+      a11yTitle: "aria-test",
+      id: "test-select",
+      options: ['one']
+    }));
+
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+  test('0 value', function () {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_2.Select, {
+      id: "test-select",
+      placeholder: "test select",
+      options: [0, 1],
+      value: 0
+    }));
+
+    expect(component.toJSON()).toMatchSnapshot();
+  });
   test('opens', function (done) {
     window.scrollTo = jest.fn();
 
@@ -102,31 +121,7 @@ describe('Select', function () {
 
       expect(onSearch).toBeCalledWith('a');
     }, 200);
-  }); // NOTE: This isn't really a test for Select
-  // test('closes drop on esc', () => {
-  //   const onClose = jest.fn();
-  //   const component = mount(
-  //     <Select id='test-select' options={['one', 'two']} onClose={onClose} />
-  //   );
-  //
-  //   fireEvent.keyDown(
-  //     component.getDOMNode(),
-  //     { key: 'Down', keyCode: 40, which: 40 }
-  //   );
-  //
-  //   expectPortal('test-select__drop').toMatchSnapshot();
-  //   expect(component.getDOMNode()).toMatchSnapshot();
-  //
-  //   fireEvent.keyDown(
-  //     document.getElementById('test-select__drop'),
-  //     { key: 'Esc', keyCode: 27, which: 27 }
-  //   );
-  //
-  //   expect(onClose).toBeCalled();
-  //   expect(document.getElementById('test-select__drop')).toBeNull();
-  //   expect(component.getDOMNode()).toMatchSnapshot();
-  // });
-
+  });
   test('select an option', function () {
     window.scrollTo = jest.fn();
     var onChange = jest.fn();
@@ -146,11 +141,13 @@ describe('Select', function () {
     _react2.fireEvent.click(getByPlaceholderText('test select')); // pressing enter here nothing will happen
 
 
-    _react2.fireEvent.click(document.getElementById('test-select__drop').querySelector('button')); // checks it select has a value assigned to it after option is selected
+    _react2.fireEvent.click(document.getElementById('test-select__drop').querySelector('button')); // checks if select has a value assigned to it after option is selected
 
 
     expect(select.value).toEqual('one');
-    expect(onChange).toBeCalled();
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: 'one'
+    }));
     expect(window.scrollTo).toBeCalled();
   });
   test('select an option with complex options', function () {
@@ -180,7 +177,11 @@ describe('Select', function () {
 
     _react2.fireEvent.click(document.getElementById('test-select__drop').querySelector('button'));
 
-    expect(onChange).toBeCalled();
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: {
+        test: 'one'
+      }
+    }));
     expect(window.scrollTo).toBeCalled();
   });
   test('select an option with enter', function () {
@@ -286,7 +287,9 @@ describe('Select', function () {
 
     _react2.fireEvent.click(document.getElementById('test-select__drop').querySelector('button'));
 
-    expect(onChange).toBeCalled();
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: ['two', 'one']
+    }));
   });
   test('deselect an option', function () {
     var onChange = jest.fn();
@@ -309,7 +312,9 @@ describe('Select', function () {
 
     _react2.fireEvent.click(document.getElementById('test-select__drop').querySelector('button'));
 
-    expect(onChange).toBeCalled();
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: []
+    }));
   });
   test('disabled', function () {
     var _render10 = (0, _react2.render)(_react["default"].createElement(_2.Select, {
@@ -588,5 +593,312 @@ describe('Select', function () {
     _react2.fireEvent.mouseOver(optionButton);
 
     expect(optionButton).toMatchSnapshot();
+  });
+  test('renders custom up and down icons', function () {
+    var customTheme = {
+      select: {
+        icons: {
+          down: _grommetIcons.FormDown,
+          up: _grommetIcons.CaretUp
+        }
+      }
+    };
+
+    var _render18 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, {
+      theme: customTheme
+    }, _react["default"].createElement(_2.Select, {
+      options: ['morning', 'afternoon', 'evening'],
+      placeholder: "Select..."
+    }))),
+        getByPlaceholderText = _render18.getByPlaceholderText,
+        container = _render18.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+    var selectButton = getByPlaceholderText('Select...');
+
+    _react2.fireEvent.click(selectButton); // Check that custom up icon is applied when open
+
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('onChange without valueKey', function () {
+    var onChange = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState = _react["default"].useState(),
+          value = _React$useState[0];
+
+      return _react["default"].createElement(_2.Select, {
+        id: "test-select",
+        placeholder: "test select",
+        labelKey: "name",
+        value: value,
+        options: [{
+          id: 1,
+          name: 'Value1'
+        }, {
+          id: 2,
+          name: 'Value2'
+        }],
+        onChange: onChange
+      });
+    };
+
+    var _render19 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render19.getByPlaceholderText,
+        getByText = _render19.getByText,
+        container = _render19.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByPlaceholderText('test select'));
+
+    (0, _portal.expectPortal)('test-select__drop').toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Value1'));
+
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: {
+        id: 1,
+        name: 'Value1'
+      }
+    }));
+  });
+  test('multiple onChange without valueKey', function () {
+    var onChange = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState2 = _react["default"].useState(),
+          value = _React$useState2[0];
+
+      return _react["default"].createElement(_2.Select, {
+        id: "test-select",
+        placeholder: "test select",
+        labelKey: "name",
+        value: value,
+        multiple: true,
+        closeOnChange: false,
+        options: [{
+          id: 1,
+          name: 'Value1'
+        }, {
+          id: 2,
+          name: 'Value2'
+        }],
+        onChange: onChange
+      });
+    };
+
+    var _render20 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render20.getByPlaceholderText,
+        getByText = _render20.getByText,
+        container = _render20.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByPlaceholderText('test select'));
+
+    (0, _portal.expectPortal)('test-select__drop').toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Value1'));
+
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: [{
+        id: 1,
+        name: 'Value1'
+      }]
+    }));
+    (0, _portal.expectPortal)('test-select__drop').toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Value2'));
+
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: [{
+        id: 1,
+        name: 'Value1'
+      }, {
+        id: 2,
+        name: 'Value2'
+      }]
+    }));
+  });
+  test('onChange with valueKey string', function () {
+    var onChange = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState3 = _react["default"].useState(),
+          value = _React$useState3[0];
+
+      return _react["default"].createElement(_2.Select, {
+        id: "test-select",
+        placeholder: "test select",
+        labelKey: "name",
+        valueKey: "id",
+        value: value,
+        options: [{
+          id: 1,
+          name: 'Value1'
+        }, {
+          id: 2,
+          name: 'Value2'
+        }],
+        onChange: onChange
+      });
+    };
+
+    var _render21 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render21.getByPlaceholderText,
+        getByText = _render21.getByText,
+        container = _render21.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByPlaceholderText('test select'));
+
+    (0, _portal.expectPortal)('test-select__drop').toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Value1'));
+
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: {
+        id: 1,
+        name: 'Value1'
+      }
+    }));
+  });
+  test('multiple onChange with valueKey string', function () {
+    var onChange = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState4 = _react["default"].useState([]),
+          value = _React$useState4[0];
+
+      return _react["default"].createElement(_2.Select, {
+        id: "test-select",
+        placeholder: "test select",
+        labelKey: "name",
+        valueKey: "id",
+        value: value,
+        multiple: true,
+        options: [{
+          id: 1,
+          name: 'Value1'
+        }, {
+          id: 2,
+          name: 'Value2'
+        }],
+        onChange: onChange
+      });
+    };
+
+    var _render22 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render22.getByPlaceholderText,
+        getByText = _render22.getByText,
+        container = _render22.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByPlaceholderText('test select'));
+
+    (0, _portal.expectPortal)('test-select__drop').toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Value1'));
+
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: [{
+        id: 1,
+        name: 'Value1'
+      }]
+    }));
+  });
+  test('multiple onChange with valueKey reduce', function () {
+    var onChange = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState5 = _react["default"].useState(),
+          value = _React$useState5[0];
+
+      return _react["default"].createElement(_2.Select, {
+        id: "test-select",
+        placeholder: "test select",
+        labelKey: "name",
+        valueKey: {
+          key: 'id',
+          reduce: true
+        },
+        value: value,
+        multiple: true,
+        options: [{
+          id: 1,
+          name: 'Value1'
+        }, {
+          id: 2,
+          name: 'Value2'
+        }],
+        onChange: onChange
+      });
+    };
+
+    var _render23 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render23.getByPlaceholderText,
+        getByText = _render23.getByText,
+        container = _render23.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByPlaceholderText('test select'));
+
+    (0, _portal.expectPortal)('test-select__drop').toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Value1'));
+
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: [1]
+    }));
+  });
+  test('multiple onChange toggle with valueKey reduce', function () {
+    var onChange = jest.fn();
+
+    var Test = function Test() {
+      var _React$useState6 = _react["default"].useState([1]),
+          value = _React$useState6[0];
+
+      return _react["default"].createElement(_2.Select, {
+        id: "test-select",
+        placeholder: "test select",
+        labelKey: "name",
+        valueKey: {
+          key: 'id',
+          reduce: true
+        },
+        value: value,
+        multiple: true,
+        options: [{
+          id: 1,
+          name: 'Value1'
+        }, {
+          id: 2,
+          name: 'Value2'
+        }],
+        onChange: onChange
+      });
+    };
+
+    var _render24 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(Test, null))),
+        getByPlaceholderText = _render24.getByPlaceholderText,
+        getByText = _render24.getByText,
+        container = _render24.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByPlaceholderText('test select'));
+
+    (0, _portal.expectPortal)('test-select__drop').toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Value1'));
+
+    expect(onChange).toBeCalledWith(expect.objectContaining({
+      value: []
+    }));
   });
 });

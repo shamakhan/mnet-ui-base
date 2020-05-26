@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import { Box, Drop, MnetUIBase, Text, ThemeContext } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Drop, Text, ThemeContext } from 'mnet-ui-base';
 
 var OneDrop = function OneDrop(_ref) {
   var align = _ref.align,
@@ -59,9 +58,7 @@ Set.propTypes = {
 };
 
 var AllDrops = function AllDrops() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(ThemeContext.Extend, {
+  return React.createElement(React.Fragment, null, React.createElement(ThemeContext.Extend, {
     value: {
       global: {
         drop: {

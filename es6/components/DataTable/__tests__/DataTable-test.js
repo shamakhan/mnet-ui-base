@@ -32,8 +32,30 @@ describe('DataTable', function () {
 
     expect(container.firstChild).toMatchSnapshot();
   });
-  test('paths', function () {
+  test('!primaryKey', function () {
     var _render3 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+      columns: [{
+        property: 'a',
+        header: 'A'
+      }, {
+        property: 'b',
+        header: 'B'
+      }],
+      data: [{
+        a: 'one',
+        b: 1
+      }, {
+        a: 'two',
+        b: 2
+      }],
+      primaryKey: false
+    }))),
+        container = _render3.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('paths', function () {
+    var _render4 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -53,12 +75,12 @@ describe('DataTable', function () {
         }
       }]
     }))),
-        container = _render3.container;
+        container = _render4.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
   test('primaryKey', function () {
-    var _render4 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render5 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -75,12 +97,12 @@ describe('DataTable', function () {
       }],
       primaryKey: "b"
     }))),
-        container = _render4.container;
+        container = _render5.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
   test('footer', function () {
-    var _render5 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render6 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A',
@@ -97,12 +119,12 @@ describe('DataTable', function () {
         b: 2
       }]
     }))),
-        container = _render5.container;
+        container = _render6.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
-  test('sort', function () {
-    var _render6 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+  test('sortable', function () {
+    var _render7 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -122,16 +144,52 @@ describe('DataTable', function () {
       }],
       sortable: true
     }))),
-        container = _render6.container,
-        getByText = _render6.getByText;
+        container = _render7.container,
+        getByText = _render7.getByText;
 
     expect(container.firstChild).toMatchSnapshot();
     var headerCell = getByText('A');
     fireEvent.click(headerCell, {});
     expect(container.firstChild).toMatchSnapshot();
   });
+  test('onSort', function () {
+    var onSort = jest.fn();
+
+    var _render8 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+      columns: [{
+        property: 'a',
+        header: 'A'
+      }, {
+        property: 'b',
+        header: 'B'
+      }],
+      data: [{
+        a: 'zero',
+        b: 0
+      }, {
+        a: 'one',
+        b: 1
+      }, {
+        a: 'two',
+        b: 2
+      }],
+      onSort: onSort,
+      sortable: true
+    }))),
+        container = _render8.container,
+        getByText = _render8.getByText;
+
+    expect(container.firstChild).toMatchSnapshot();
+    var headerCell = getByText('A');
+    fireEvent.click(headerCell, {});
+    expect(onSort).toBeCalledWith(expect.objectContaining({
+      property: 'a',
+      direction: 'asc'
+    }));
+    expect(container.firstChild).toMatchSnapshot();
+  });
   test('search', function () {
-    var _render7 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render9 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A',
@@ -145,7 +203,7 @@ describe('DataTable', function () {
         a: '[]'
       }]
     }))),
-        container = _render7.container;
+        container = _render9.container;
 
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(container.querySelector('[aria-label="focus-search-a"]'));
@@ -159,7 +217,7 @@ describe('DataTable', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('resizeable', function () {
-    var _render8 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render10 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -176,12 +234,12 @@ describe('DataTable', function () {
       }],
       resizeable: true
     }))),
-        container = _render8.container;
+        container = _render10.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
   test('aggregate', function () {
-    var _render9 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render11 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -201,12 +259,12 @@ describe('DataTable', function () {
         b: 2
       }]
     }))),
-        container = _render9.container;
+        container = _render11.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
   test('groupBy', function () {
-    var _render10 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render12 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -229,8 +287,8 @@ describe('DataTable', function () {
       }],
       groupBy: "a"
     }))),
-        container = _render10.container,
-        getByText = _render10.getByText;
+        container = _render12.container,
+        getByText = _render12.getByText;
 
     expect(container.firstChild).toMatchSnapshot();
     var headerCell = getByText('A');
@@ -240,7 +298,7 @@ describe('DataTable', function () {
   test('click', function () {
     var onClickRow = jest.fn();
 
-    var _render11 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render13 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -252,8 +310,8 @@ describe('DataTable', function () {
       }],
       onClickRow: onClickRow
     }))),
-        container = _render11.container,
-        getByText = _render11.getByText;
+        container = _render13.container,
+        getByText = _render13.getByText;
 
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('beta'));
@@ -265,7 +323,7 @@ describe('DataTable', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('background', function () {
-    var _render12 = render(React.createElement(MnetUIBase, null, ['accent-1', ['accent-1', 'accent-2'], {
+    var _render14 = render(React.createElement(MnetUIBase, null, ['accent-1', ['accent-1', 'accent-2'], {
       header: 'accent-1',
       body: 'accent-2',
       footer: 'accent-3'
@@ -290,12 +348,12 @@ describe('DataTable', function () {
         background: background
       });
     }))),
-        container = _render12.container;
+        container = _render14.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
   test('border', function () {
-    var _render13 = render(React.createElement(MnetUIBase, null, [true, 'top', {
+    var _render15 = render(React.createElement(MnetUIBase, null, [true, 'top', {
       color: 'accent-1',
       side: 'top',
       size: 'small'
@@ -327,12 +385,12 @@ describe('DataTable', function () {
         border: border
       });
     }))),
-        container = _render13.container;
+        container = _render15.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
   test('pad', function () {
-    var _render14 = render(React.createElement(MnetUIBase, null, ['small', {
+    var _render16 = render(React.createElement(MnetUIBase, null, ['small', {
       vertical: 'small',
       horizontal: 'medium'
     }, {
@@ -362,12 +420,12 @@ describe('DataTable', function () {
         pad: pad
       });
     }))),
-        container = _render14.container;
+        container = _render16.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
   test('rowProps', function () {
-    var _render15 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render17 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A',
@@ -391,12 +449,12 @@ describe('DataTable', function () {
         }
       }
     }))),
-        container = _render15.container;
+        container = _render17.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
   test('groupBy property', function () {
-    var _render16 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render18 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -421,8 +479,8 @@ describe('DataTable', function () {
         property: 'a'
       }
     }))),
-        container = _render16.container,
-        getByText = _render16.getByText;
+        container = _render18.container,
+        getByText = _render18.getByText;
 
     expect(container.firstChild).toMatchSnapshot();
     var headerCell = getByText('A');
@@ -430,7 +488,7 @@ describe('DataTable', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('groupBy expand', function () {
-    var _render17 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render19 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -457,7 +515,7 @@ describe('DataTable', function () {
         expand: ['one']
       }
     }))),
-        container = _render17.container;
+        container = _render19.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -466,7 +524,7 @@ describe('DataTable', function () {
       return groupState;
     });
 
-    var _render18 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render20 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -493,7 +551,7 @@ describe('DataTable', function () {
         onExpand: onExpand
       }
     }))),
-        getAllByLabelText = _render18.getAllByLabelText;
+        getAllByLabelText = _render20.getAllByLabelText;
 
     var expandButtons = getAllByLabelText('expand');
     fireEvent.click(expandButtons[1], {});
@@ -502,7 +560,7 @@ describe('DataTable', function () {
     expect(onExpand.mock.results[0].value).toMatchSnapshot();
   });
   test('replace', function () {
-    var _render19 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+    var _render21 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
       columns: [{
         property: 'a',
         header: 'A'
@@ -527,7 +585,76 @@ describe('DataTable', function () {
       step: 2,
       replace: true
     }))),
-        container = _render19.container;
+        container = _render21.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('themeColumnSizes', function () {
+    var _render22 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+      columns: [{
+        property: 'a',
+        header: 'A',
+        size: 'medium'
+      }, {
+        property: 'b',
+        header: 'B',
+        size: 'small'
+      }],
+      data: [{
+        a: 'one',
+        b: 1
+      }, {
+        a: 'two',
+        b: 2
+      }]
+    }))),
+        container = _render22.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('absoluteColumnSizes', function () {
+    var _render23 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+      columns: [{
+        property: 'a',
+        header: 'A',
+        size: '400px'
+      }, {
+        property: 'b',
+        header: 'B',
+        size: '200px'
+      }],
+      data: [{
+        a: 'one',
+        b: 1
+      }, {
+        a: 'two',
+        b: 2
+      }]
+    }))),
+        container = _render23.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('relativeColumnSizes', function () {
+    var _render24 = render(React.createElement(MnetUIBase, null, React.createElement(DataTable, {
+      columns: [{
+        property: 'a',
+        header: 'A',
+        size: '2/3'
+      }, {
+        property: 'b',
+        header: 'B',
+        size: '1/3'
+      }],
+      data: [{
+        a: 'one',
+        b: 1
+      }, {
+        a: 'two',
+        b: 2
+      }]
+    }))),
+        container = _render24.container;
 
     expect(container.firstChild).toMatchSnapshot();
   });

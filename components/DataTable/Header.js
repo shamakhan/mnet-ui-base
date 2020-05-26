@@ -3,9 +3,7 @@
 exports.__esModule = true;
 exports.Header = void 0;
 
-var _react = _interopRequireDefault(require("react"));
-
-var _recompose = require("recompose");
+var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = require("styled-components");
 
@@ -27,7 +25,9 @@ var _ExpanderCell = require("./ExpanderCell");
 
 var _StyledDataTable = require("./StyledDataTable");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -46,9 +46,10 @@ var Header = function Header(_ref) {
       onToggle = _ref.onToggle,
       pad = _ref.pad,
       sort = _ref.sort,
-      theme = _ref.theme,
       widths = _ref.widths,
-      rest = _objectWithoutPropertiesLoose(_ref, ["background", "border", "columns", "filtering", "filters", "groups", "groupState", "onFilter", "onFiltering", "onResize", "onSort", "onToggle", "pad", "sort", "theme", "widths"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["background", "border", "columns", "filtering", "filters", "groups", "groupState", "onFilter", "onFiltering", "onResize", "onSort", "onToggle", "pad", "sort", "widths"]);
+
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
   return _react["default"].createElement(_StyledDataTable.StyledDataTableHeader, rest, _react["default"].createElement(_StyledDataTable.StyledDataTableRow, null, groups && _react["default"].createElement(_ExpanderCell.ExpanderCell, {
     context: "header",
@@ -61,11 +62,13 @@ var Header = function Header(_ref) {
         header = _ref2.header,
         align = _ref2.align,
         search = _ref2.search,
-        sortable = _ref2.sortable;
+        sortable = _ref2.sortable,
+        verticalAlign = _ref2.verticalAlign,
+        size = _ref2.size;
     var content = typeof header === 'string' ? _react["default"].createElement(_Text.Text, null, header) : header;
 
     if (onSort && sortable !== false) {
-      var Icon = onSort && sortable !== false && sort && sort.property === property && theme.dataTable.icons[sort.ascending ? 'ascending' : 'descending'];
+      var Icon = onSort && sortable !== false && sort && sort.property === property && theme.dataTable.icons[sort.direction !== 'asc' ? 'ascending' : 'descending'];
       content = _react["default"].createElement(_Button.Button, {
         plain: true,
         fill: "vertical",
@@ -109,11 +112,13 @@ var Header = function Header(_ref) {
     return _react["default"].createElement(_TableCell.TableCell, {
       key: property,
       align: align,
+      verticalAlign: verticalAlign,
       background: background,
       border: border,
       pad: pad,
       plain: true,
       scope: "col",
+      size: widths && widths[property] ? undefined : size,
       style: widths && widths[property] ? {
         width: widths[property]
       } : undefined
@@ -121,7 +126,7 @@ var Header = function Header(_ref) {
   })));
 };
 
+exports.Header = Header;
+Header.displayName = 'Header';
 Header.defaultProps = {};
 Object.setPrototypeOf(Header.defaultProps, _defaultProps.defaultProps);
-var HeaderWrapper = (0, _recompose.compose)(_styledComponents.withTheme)(Header);
-exports.Header = HeaderWrapper;

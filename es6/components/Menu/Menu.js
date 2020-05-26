@@ -2,9 +2,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React, { useState } from 'react';
-import { compose } from 'recompose';
-import styled, { withTheme } from 'styled-components';
+import React, { forwardRef, useCallback, useContext, useMemo, useState } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import PropTypes from 'react-desc/lib/PropTypes';
 import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
@@ -12,7 +11,6 @@ import { Button } from '../Button';
 import { DropButton } from '../DropButton';
 import { Keyboard } from '../Keyboard';
 import { Text } from '../Text';
-import { withForwardRef } from '../hocs';
 import { normalizeColor } from '../../utils';
 var ContainerBox = styled(Box).withConfig({
   displayName: "Menu__ContainerBox",
@@ -41,7 +39,7 @@ To make a selection:
 - Space is pressed.
 */
 
-var Menu = function Menu(props) {
+var Menu = forwardRef(function (props, ref) {
   var a11yTitle = props.a11yTitle,
       children = props.children,
       disabled = props.disabled,
@@ -49,7 +47,6 @@ var Menu = function Menu(props) {
       dropBackground = props.dropBackground,
       dropProps = props.dropProps,
       dropTarget = props.dropTarget,
-      forwardRef = props.forwardRef,
       justifyContent = props.justifyContent,
       icon = props.icon,
       items = props.items,
@@ -59,32 +56,29 @@ var Menu = function Menu(props) {
       open = props.open,
       plain = props.plain,
       size = props.size,
-      theme = props.theme,
-      rest = _objectWithoutPropertiesLoose(props, ["a11yTitle", "children", "disabled", "dropAlign", "dropBackground", "dropProps", "dropTarget", "forwardRef", "justifyContent", "icon", "items", "label", "messages", "onKeyDown", "open", "plain", "size", "theme"]);
+      rest = _objectWithoutPropertiesLoose(props, ["a11yTitle", "children", "disabled", "dropAlign", "dropBackground", "dropProps", "dropTarget", "justifyContent", "icon", "items", "label", "messages", "onKeyDown", "open", "plain", "size"]);
 
+  var theme = useContext(ThemeContext) || defaultProps.theme;
   var MenuIcon = theme.menu.icons.down;
-  var iconColor = normalizeColor('control', theme);
+  var iconColor = normalizeColor(theme.menu.icons.color || 'control', theme);
   var align = dropProps.align || dropAlign;
-  var controlButtonIndex;
-
-  if (align.top === 'top') {
-    controlButtonIndex = -1;
-  } else if (align.bottom === 'bottom') {
-    controlButtonIndex = items.length;
-  } else {
-    controlButtonIndex = undefined;
-  }
-
+  var controlButtonIndex = useMemo(function () {
+    if (align.top === 'top') return -1;
+    if (align.bottom === 'bottom') return items.length;
+    return undefined;
+  }, [align, items]);
   var buttonRefs = {};
-  var constants = {
-    none: 'none',
-    tab: 9,
-    // Menu control button included on top of menu items
-    controlTop: align.top === 'top' || undefined,
-    // Menu control button included on the bottom of menu items
-    controlBottom: align.bottom === 'bottom' || undefined,
-    controlButtonIndex: controlButtonIndex
-  };
+  var constants = useMemo(function () {
+    return {
+      none: 'none',
+      tab: 9,
+      // Menu control button included on top of menu items
+      controlTop: align.top === 'top' || undefined,
+      // Menu control button included on the bottom of menu items
+      controlBottom: align.bottom === 'bottom' || undefined,
+      controlButtonIndex: controlButtonIndex
+    };
+  }, [align, controlButtonIndex]);
 
   var _useState = useState(constants.none),
       activeItemIndex = _useState[0],
@@ -94,14 +88,13 @@ var Menu = function Menu(props) {
       isOpen = _useState2[0],
       setOpen = _useState2[1];
 
-  var onDropClose = function onDropClose() {
+  var onDropClose = useCallback(function () {
     setActiveItemIndex(constants.none);
     setOpen(false);
-  };
-
-  var onDropOpen = function onDropOpen() {
+  }, [constants.none]);
+  var onDropOpen = useCallback(function () {
     setOpen(true);
-  };
+  }, []);
 
   var onSelectMenuItem = function onSelectMenuItem(event) {
     if (isOpen) {
@@ -220,12 +213,13 @@ var Menu = function Menu(props) {
     onTab: onDropClose,
     onKeyDown: onKeyDown
   }, React.createElement(DropButton, _extends({
-    ref: forwardRef
+    ref: ref
   }, rest, {
     a11yTitle: a11yTitle || messages.openMenu || 'Open Menu',
     disabled: disabled,
     dropAlign: align,
     dropTarget: dropTarget,
+    dropProps: dropProps,
     plain: plain,
     open: isOpen,
     onOpen: onDropOpen,
@@ -253,7 +247,8 @@ var Menu = function Menu(props) {
           },
           active: activeItemIndex === index,
           hoverIndicator: "background",
-          focusIndicator: false
+          focusIndicator: false,
+          plain: theme.button["default"] ? true : undefined
         }, _extends({}, item, {
           icon: undefined,
           label: undefined
@@ -276,8 +271,7 @@ var Menu = function Menu(props) {
       );
     })), align.bottom === 'bottom' ? controlMirror : undefined))
   }), content));
-};
-
+});
 Menu.propTypes = {
   dropAlign: PropTypes.shape({
     top: PropTypes.string,
@@ -305,12 +299,11 @@ Menu.defaultProps = {
   justifyContent: 'start'
 };
 Menu.displayName = 'Menu';
-Object.setPrototypeOf(Menu.defaultProps, defaultProps);
 var MenuDoc;
 
 if (process.env.NODE_ENV !== 'production') {
   MenuDoc = require('./doc').doc(Menu); // eslint-disable-line global-require
 }
 
-var MenuWrapper = compose(withTheme, withForwardRef)(MenuDoc || Menu);
+var MenuWrapper = MenuDoc || Menu;
 export { MenuWrapper as Menu };

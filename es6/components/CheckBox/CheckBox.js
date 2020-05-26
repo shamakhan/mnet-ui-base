@@ -39,7 +39,7 @@ var CheckBox = forwardRef(function (_ref, ref) {
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var formContext = useContext(FormContext);
 
-  var _formContext$useFormC = formContext.useFormContext(name, checkedProp),
+  var _formContext$useFormC = formContext.useFormContext(name, checkedProp, false),
       checked = _formContext$useFormC[0],
       setChecked = _formContext$useFormC[1];
 
@@ -51,14 +51,14 @@ var CheckBox = forwardRef(function (_ref, ref) {
     return setFocus(focusProp);
   }, [focusProp]);
   useEffect(function () {
-    if (checked && indeterminate) {
+    if (checkedProp && indeterminate) {
       console.warn('Checkbox cannot be "checked" and "indeterminate" at the same time.');
     }
 
     if (toggle && indeterminate) {
       console.warn('Checkbox of type toggle does not have "indeterminate" state.');
     }
-  }, [checked, toggle, indeterminate]);
+  }, [checkedProp, toggle, indeterminate]);
   var themeableProps = {
     checked: checked,
     disabled: disabled,

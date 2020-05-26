@@ -37,7 +37,11 @@ var RangeSelector = forwardRef(function (_ref, ref) {
       values = _ref$values === void 0 ? [] : _ref$values,
       rest = _objectWithoutPropertiesLoose(_ref, ["color", "direction", "invert", "max", "messages", "min", "onChange", "opacity", "round", "size", "step", "values"]);
 
-  var theme = useContext(ThemeContext) || defaultProps.theme;
+  var theme = useContext(ThemeContext);
+
+  if (!theme) {
+    return null;
+  }
 
   var _useState = useState(),
       changing = _useState[0],

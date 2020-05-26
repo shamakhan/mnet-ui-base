@@ -5,6 +5,7 @@ import 'jest-styled-components';
 import { MnetUIBase } from '../../MnetUIBase';
 import { FormField } from '..';
 import { TextInput } from '../../TextInput';
+import { Form } from '../../Form';
 var CustomFormField = styled(FormField).withConfig({
   displayName: "FormField-test__CustomFormField",
   componentId: "sc-8onemw-0"
@@ -130,6 +131,66 @@ describe('FormField', function () {
     var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CustomFormField, {
       htmlFor: "test-id"
     })));
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('disabled', function () {
+    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(FormField, {
+      disabled: true
+    }), " ", React.createElement(Form, null, React.createElement(FormField, {
+      disabled: true
+    }))));
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('required', function () {
+    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(FormField, {
+      required: true
+    }), " ", React.createElement(Form, null, React.createElement(FormField, {
+      required: true
+    }))));
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('custom label', function () {
+    var component = renderer.create(React.createElement(MnetUIBase, {
+      theme: {
+        formField: {
+          label: {
+            color: 'red',
+            size: 'small',
+            margin: 'xsmall',
+            weight: 600
+          }
+        }
+      }
+    }, React.createElement(Form, null, React.createElement(FormField, {
+      label: "label"
+    }))));
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('disabled with custom label', function () {
+    var component = renderer.create(React.createElement(MnetUIBase, {
+      theme: {
+        formField: {
+          label: {
+            color: 'red',
+            size: 'small',
+            margin: 'xsmall',
+            weight: 600
+          },
+          disabled: {
+            label: {
+              color: 'teal'
+            }
+          }
+        }
+      }
+    }, React.createElement(Form, null, React.createElement(FormField, {
+      disabled: true,
+      label: "label"
+    }))));
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

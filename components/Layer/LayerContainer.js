@@ -7,6 +7,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
+var _defaultProps = require("../../default-props");
+
 var _FocusedContainer = require("../FocusedContainer");
 
 var _Keyboard = require("../Keyboard");
@@ -28,6 +30,12 @@ var HiddenAnchor = _styledComponents["default"].a.withConfig({
   componentId: "sc-1ipspnq-0"
 })(["width:0;height:0;overflow:hidden;position:absolute;"]);
 
+var fullBounds = {
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0
+};
 var LayerContainer = (0, _react.forwardRef)(function (_ref, ref) {
   var children = _ref.children,
       _ref$full = _ref.full,
@@ -47,9 +55,9 @@ var LayerContainer = (0, _react.forwardRef)(function (_ref, ref) {
       layerTarget = _ref.target,
       rest = _objectWithoutPropertiesLoose(_ref, ["children", "full", "id", "margin", "modal", "onClickOutside", "onEsc", "plain", "position", "responsive", "target"]);
 
-  var theme = (0, _react.useContext)(_styledComponents.ThemeContext);
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
-  var _useState = (0, _react.useState)(),
+  var _useState = (0, _react.useState)(fullBounds),
       targetBounds = _useState[0],
       setTargetBounds = _useState[1];
 
@@ -92,9 +100,9 @@ var LayerContainer = (0, _react.forwardRef)(function (_ref, ref) {
         var rect = (0, _utils.findVisibleParent)(layerTarget).getBoundingClientRect();
         setTargetBounds({
           left: rect.left,
-          right: rect.right,
+          right: window.innerWidth - rect.right,
           top: rect.top,
-          bottom: rect.bottom
+          bottom: window.innerHeight - rect.bottom
         });
       };
 
@@ -105,6 +113,7 @@ var LayerContainer = (0, _react.forwardRef)(function (_ref, ref) {
       };
     }
 
+    setTargetBounds(fullBounds);
     return undefined;
   }, [layerTarget]);
 
@@ -113,7 +122,8 @@ var LayerContainer = (0, _react.forwardRef)(function (_ref, ref) {
     id: id,
     full: full,
     margin: margin,
-    modal: modal
+    modal: modal,
+    targetBounds: !modal ? targetBounds : fullBounds
   }, rest, {
     position: position,
     plain: plain,

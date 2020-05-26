@@ -85,23 +85,6 @@ var flexGrowShrinkProp = function flexGrowShrinkProp(flex) {
 var flexStyle = (0, _styledComponents.css)(["flex:", ";"], function (props) {
   return "" + flexGrowShrinkProp(props.flex) + (props.flex !== true && !props.basis ? ' auto' : '');
 });
-
-var fillStyle = function fillStyle(fillProp) {
-  if (fillProp === 'horizontal') {
-    return 'width: 100%;';
-  }
-
-  if (fillProp === 'vertical') {
-    return 'height: 100%;';
-  }
-
-  if (fillProp) {
-    return "\n      width: 100%;\n      height: 100%;\n    ";
-  }
-
-  return undefined;
-};
-
 var JUSTIFY_MAP = {
   around: 'space-around',
   between: 'space-between',
@@ -388,7 +371,7 @@ var widthStyle = (0, _styledComponents.css)(["width:", ";"], function (props) {
 var StyledBox = _styledComponents["default"].div.withConfig({
   displayName: "StyledBox",
   componentId: "sc-1etxkdl-0"
-})(["display:flex;box-sizing:border-box;outline:none;", ";", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function (props) {
+})(["display:flex;box-sizing:border-box;", ";", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function (props) {
   return !props.basis && 'max-width: 100%;';
 }, _utils.genericStyles, function (props) {
   return props.align && alignStyle;
@@ -411,7 +394,7 @@ var StyledBox = _styledComponents["default"].div.withConfig({
 }, function (props) {
   return props.basis && basisStyle;
 }, function (props) {
-  return props.fillProp && fillStyle(props.fillProp);
+  return props.fillProp && (0, _utils.fillStyle)(props.fillProp);
 }, function (props) {
   return props.justify && justifyStyle;
 }, function (props) {
@@ -429,7 +412,7 @@ var StyledBox = _styledComponents["default"].div.withConfig({
 }, function (props) {
   return props.onClick && interactiveStyle;
 }, function (props) {
-  return props.onClick && props.focus && props.focusIndicator !== false && _utils.focusStyle;
+  return props.onClick && props.focus && props.focusIndicator !== false && (0, _utils.focusStyle)();
 }, function (props) {
   return props.theme.box && props.theme.box.extend;
 });
@@ -487,7 +470,7 @@ Object.setPrototypeOf(StyledBox.defaultProps, _defaultProps.defaultProps);
 var StyledBoxGap = _styledComponents["default"].div.withConfig({
   displayName: "StyledBox__StyledBoxGap",
   componentId: "sc-1etxkdl-1"
-})(["flex:0 0 auto;", ";"], function (props) {
+})(["flex:0 0 auto;align-self:stretch;", ";"], function (props) {
   return props.gap && gapStyle(props.directionProp, props.gap, props.responsive, props.border, props.theme);
 });
 

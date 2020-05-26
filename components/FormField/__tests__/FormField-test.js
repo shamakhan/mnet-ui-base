@@ -14,6 +14,8 @@ var _ = require("..");
 
 var _TextInput = require("../../TextInput");
 
+var _Form = require("../../Form");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var CustomFormField = (0, _styledComponents["default"])(_.FormField).withConfig({
@@ -152,6 +154,70 @@ describe('FormField', function () {
     var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(CustomFormField, {
       htmlFor: "test-id"
     })));
+
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('disabled', function () {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.FormField, {
+      disabled: true
+    }), " ", _react["default"].createElement(_Form.Form, null, _react["default"].createElement(_.FormField, {
+      disabled: true
+    }))));
+
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('required', function () {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.FormField, {
+      required: true
+    }), " ", _react["default"].createElement(_Form.Form, null, _react["default"].createElement(_.FormField, {
+      required: true
+    }))));
+
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('custom label', function () {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, {
+      theme: {
+        formField: {
+          label: {
+            color: 'red',
+            size: 'small',
+            margin: 'xsmall',
+            weight: 600
+          }
+        }
+      }
+    }, _react["default"].createElement(_Form.Form, null, _react["default"].createElement(_.FormField, {
+      label: "label"
+    }))));
+
+    var tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('disabled with custom label', function () {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, {
+      theme: {
+        formField: {
+          label: {
+            color: 'red',
+            size: 'small',
+            margin: 'xsmall',
+            weight: 600
+          },
+          disabled: {
+            label: {
+              color: 'teal'
+            }
+          }
+        }
+      }
+    }, _react["default"].createElement(_Form.Form, null, _react["default"].createElement(_.FormField, {
+      disabled: true,
+      label: "label"
+    }))));
 
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();

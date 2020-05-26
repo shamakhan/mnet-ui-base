@@ -1,14 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, MnetUIBase } from 'mnet-ui-base';
+import { Box, Button } from 'mnet-ui-base';
 import { Next } from "grommet-icons/es6/icons/Next";
 import { Add } from "grommet-icons/es6/icons/Add";
-import { mnet } from 'mnet-ui-base/themes';
 
 var SizedButton = function SizedButton() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     direction: "row"
   }, React.createElement(Box, {
     align: "start",

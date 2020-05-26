@@ -1,13 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Table, TableBody, TableCell, TableFooter, TableHeader, TableRow, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Table, TableBody, TableCell, TableFooter, TableHeader, TableRow, Text } from 'mnet-ui-base';
 import { data, columns } from './data';
 
 var DefaultTable = function DefaultTable() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Table, {

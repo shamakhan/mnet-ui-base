@@ -44,9 +44,7 @@ Set.propTypes = {
 };
 
 var All = function All() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Grid, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Grid, {
     columns: "large",
     gap: "medium"
   }, _react["default"].createElement(Set, {
@@ -61,9 +59,7 @@ var All = function All() {
 };
 
 var Color = function Color() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Heading, {
     color: "accent-1"
   }, "Colored Heading"));
 };

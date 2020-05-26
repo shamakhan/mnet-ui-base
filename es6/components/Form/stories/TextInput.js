@@ -2,8 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, FormField, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, FormField, TextInput } from 'mnet-ui-base';
 import { allSuggestions } from './data';
 
 var FormFieldTextInput = function FormFieldTextInput(props) {
@@ -38,9 +37,7 @@ var FormFieldTextInput = function FormFieldTextInput(props) {
     }));
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(FormField, _extends({

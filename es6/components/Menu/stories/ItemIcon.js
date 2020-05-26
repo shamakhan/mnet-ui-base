@@ -1,15 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Menu, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Menu, Text } from 'mnet-ui-base';
 import { FormDown } from "grommet-icons/es6/icons/FormDown";
 import { Github } from "grommet-icons/es6/icons/Github";
 import { Slack } from "grommet-icons/es6/icons/Slack"; // This story offers a suggested workaround for issue #3209.
 
 var IconItemsMenu = function IconItemsMenu() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Menu, {

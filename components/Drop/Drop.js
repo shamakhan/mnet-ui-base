@@ -7,9 +7,15 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = require("react-dom");
 
+var _styledComponents = require("styled-components");
+
+var _defaultProps = require("../../default-props");
+
 var _utils = require("../../utils");
 
 var _DropContainer = require("./DropContainer");
+
+var _ContainerTargetContext = require("../../contexts/ContainerTargetContext");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -24,6 +30,8 @@ var Drop = (0, _react.forwardRef)(function (_ref, ref) {
       dropTarget = _ref.target,
       rest = _objectWithoutPropertiesLoose(_ref, ["restrictFocus", "target"]);
 
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
+
   var _useState = (0, _react.useState)(),
       originalFocusedElement = _useState[0],
       setOriginalFocusedElement = _useState[1];
@@ -36,9 +44,10 @@ var Drop = (0, _react.forwardRef)(function (_ref, ref) {
       dropContainer = _useState2[0],
       setDropContainer = _useState2[1];
 
+  var containerTarget = (0, _react.useContext)(_ContainerTargetContext.ContainerTargetContext);
   (0, _react.useEffect)(function () {
-    return setDropContainer((0, _utils.getNewContainer)());
-  }, []); // just a few things to clean up when the Drop is unmounted
+    return setDropContainer((0, _utils.getNewContainer)(containerTarget));
+  }, [containerTarget]); // just a few things to clean up when the Drop is unmounted
 
   (0, _react.useEffect)(function () {
     return function () {
@@ -52,12 +61,13 @@ var Drop = (0, _react.forwardRef)(function (_ref, ref) {
       }
 
       if (dropContainer) {
-        document.body.removeChild(dropContainer);
+        containerTarget.removeChild(dropContainer);
       }
     };
-  }, [dropContainer, originalFocusedElement, restrictFocus]);
+  }, [containerTarget, dropContainer, originalFocusedElement, restrictFocus]);
   return dropContainer ? (0, _reactDom.createPortal)(_react["default"].createElement(_DropContainer.DropContainer, _extends({
     ref: ref,
+    dir: theme && theme.dir,
     dropTarget: dropTarget,
     restrictFocus: restrictFocus
   }, rest)), dropContainer) : null;

@@ -1,12 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Grid } from 'mnet-ui-base';
-import { mnet } from '../../../themes';
+import { Box, Grid } from 'mnet-ui-base';
 
 var RoundBox = function RoundBox() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     pad: "small",
     gap: "small"
   }, React.createElement(Box, {

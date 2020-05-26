@@ -33,7 +33,7 @@ var CustomAccordion = function CustomAccordion(_ref) {
       multiple = _ref.multiple,
       rest = _objectWithoutPropertiesLoose(_ref, ["animate", "multiple"]);
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return _react["default"].createElement("div", {
     theme: CustomAccordionTheme
   }, _react["default"].createElement(_mnetUiBase.Box, _extends({}, rest, {
     pad: "large",

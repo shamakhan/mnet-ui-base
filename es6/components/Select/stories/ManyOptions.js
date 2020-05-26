@@ -2,8 +2,7 @@ function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.crea
 
 import React, { PureComponent } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, CheckBox, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, CheckBox, Select } from 'mnet-ui-base';
 
 var Option =
 /*#__PURE__*/
@@ -53,9 +52,12 @@ var ManyOptions = function ManyOptions() {
       options = _React$useState2[0],
       setOptions = _React$useState2[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

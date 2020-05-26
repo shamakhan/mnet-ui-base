@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
 var RANGE_MIN = 0;
 var RANGE_MAX = 100;
 
@@ -39,9 +38,7 @@ function Thin(_ref) {
 }
 
 function App() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     pad: "small"
   }, React.createElement(Thin, {
     label: "My Range Selector"

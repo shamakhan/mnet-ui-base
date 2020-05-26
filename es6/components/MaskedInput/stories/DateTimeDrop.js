@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, MnetUIBase, Keyboard, Text, Calendar, MaskedInput, DropButton } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Keyboard, Text, Calendar, MaskedInput, DropButton } from 'mnet-ui-base';
 import { Schedule } from "grommet-icons/es6/icons/Schedule";
 
 var DropContent = function DropContent(_ref) {
@@ -94,9 +93,7 @@ var DateTimeDropButton = function DateTimeDropButton() {
     }, 1);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(DropButton, {

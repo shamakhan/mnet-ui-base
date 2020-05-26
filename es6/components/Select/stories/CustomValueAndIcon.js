@@ -3,8 +3,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { CaretDown } from "grommet-icons/es6/icons/CaretDown";
-import { Box, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Select } from 'mnet-ui-base';
 
 var CustomSelect = function CustomSelect(_ref) {
   var rest = _extends({}, _ref);
@@ -15,9 +14,12 @@ var CustomSelect = function CustomSelect(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

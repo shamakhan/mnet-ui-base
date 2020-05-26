@@ -1,14 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Paragraph } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Paragraph } from 'mnet-ui-base';
 var sizes = ['xxlarge', 'xlarge', 'large', 'medium', 'small'];
 var paragraphFiller = "\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua.\n";
 
 var All = function All() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, sizes.map(function (size) {
+  return React.createElement(React.Fragment, null, sizes.map(function (size) {
     return React.createElement(Paragraph, {
       key: size,
       size: size

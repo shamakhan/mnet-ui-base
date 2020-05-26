@@ -109,6 +109,46 @@ describe('Button', function () {
   test('disabled', function () {
     var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Button, {
       disabled: true
+    }), React.createElement(Button, {
+      disabled: true,
+      primary: true,
+      label: "Button"
+    }), React.createElement(Button, {
+      disabled: true,
+      label: "Button"
+    }), React.createElement(Button, {
+      disabled: true,
+      plain: true,
+      label: "Button"
+    }), React.createElement(Button, {
+      disabled: true,
+      plain: false,
+      label: "Button"
+    }), React.createElement(Button, {
+      disabled: true,
+      icon: React.createElement("svg", null)
+    }), React.createElement(Button, {
+      disabled: true,
+      icon: React.createElement("svg", null),
+      plain: true
+    }), React.createElement(Button, {
+      disabled: true,
+      icon: React.createElement("svg", null),
+      plain: false
+    }), React.createElement(Button, {
+      disabled: true,
+      icon: React.createElement("svg", null),
+      label: "Button"
+    }), React.createElement(Button, {
+      disabled: true,
+      icon: React.createElement("svg", null),
+      label: "Button",
+      plain: true
+    }), React.createElement(Button, {
+      disabled: true,
+      icon: React.createElement("svg", null),
+      label: "Button",
+      primary: true
     })));
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();

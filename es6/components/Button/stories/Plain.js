@@ -3,13 +3,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Add } from "grommet-icons/es6/icons/Add";
-import { Box, Button, MnetUIBase, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Text } from 'mnet-ui-base';
 
 var PlainButton = function PlainButton(props) {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Button, _extends({

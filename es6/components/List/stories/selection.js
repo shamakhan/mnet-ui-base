@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, List } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, List } from 'mnet-ui-base';
 import { data } from './data';
 
 var SelectionList = function SelectionList() {
@@ -11,9 +10,7 @@ var SelectionList = function SelectionList() {
       selected = _React$useState[0],
       setSelected = _React$useState[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large",
     gap: "large"

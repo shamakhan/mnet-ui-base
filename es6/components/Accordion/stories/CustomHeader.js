@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Accordion, AccordionPanel, Box, MnetUIBase, Text, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Accordion, AccordionPanel, Box, Text, TextInput } from 'mnet-ui-base';
 
 var renderPanelHeader = function renderPanelHeader(title, active) {
   return React.createElement(Box, {
@@ -19,9 +18,7 @@ var CustomHeaderAccordion = function CustomHeaderAccordion() {
       activeIndex = _useState[0],
       setActiveIndex = _useState[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Accordion, {
+  return React.createElement("div", null, React.createElement(Accordion, {
     activeIndex: activeIndex,
     onActive: function onActive(newActiveIndex) {
       return setActiveIndex(newActiveIndex);
@@ -53,6 +50,6 @@ var CustomHeaderAccordion = function CustomHeaderAccordion() {
   }, React.createElement(Text, null, "Panel 3 contents")))));
 };
 
-storiesOf('Accordion', module).add('Custom Header', function () {
+storiesOf('Accordion', module).add('Header', function () {
   return React.createElement(CustomHeaderAccordion, null);
 });

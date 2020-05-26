@@ -19,6 +19,7 @@ import { VolumeLow } from 'grommet-icons/icons/VolumeLow';
 import { base as iconBase } from 'grommet-icons/themes/base';
 import { deepFreeze, deepMerge } from '../utils/object';
 import { normalizeColor } from '../utils/colors';
+import { parseMetricToNum } from '../utils/mixins';
 var brandColor = '#E15151';
 var accentColors = ['#20314f', '#519bff', '#4DFFEA', '#A4FF4D'];
 var neutralColors = ['#519bff', '#99742E', '#00739D', '#A2423D'];
@@ -129,7 +130,8 @@ export var generate = function generate(baseSpacing, scale) {
     };
   };
 
-  var borderWidth = 1;
+  var borderWidth = 2;
+  var controlBorderWidth = 1;
   var result = deepMerge(iconBase, {
     global: {
       active: {
@@ -221,7 +223,7 @@ export var generate = function generate(baseSpacing, scale) {
       colors: colors,
       control: {
         border: {
-          width: '1px',
+          width: controlBorderWidth + "px",
           radius: '4px',
           color: 'border'
         },
@@ -276,8 +278,15 @@ export var generate = function generate(baseSpacing, scale) {
         }
       },
       focus: {
+        // shadow or outline are required for accessibility
         border: {
+          // remove to only have shadow
           color: 'focus'
+        },
+        // outline: { color: undefined, size: undefined },
+        shadow: {
+          color: 'focus',
+          size: '2px'
         }
       },
       font: _extends({}, fontSizing(0)),
@@ -292,8 +301,17 @@ export var generate = function generate(baseSpacing, scale) {
         }
       },
       input: {
-        padding: baseSpacing / 2 + "px",
-        weight: 400
+        padding: {
+          horizontal: parseMetricToNum(baseSpacing / 2 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px",
+          vertical: parseMetricToNum(baseSpacing / 2 + "px") - parseMetricToNum(controlBorderWidth + "px") + "px"
+        },
+        font: {
+          // size: undefined,
+          // height: undefined,
+          weight: 600
+        } // deprecate in v3
+        // weight: undefined,
+
       },
       opacity: {
         strong: 0.8,
@@ -324,14 +342,33 @@ export var generate = function generate(baseSpacing, scale) {
       }
     },
     accordion: {
+      panel: {// border: {
+        //   side: 'bottom',
+        //   color: 'border',
+        // },
+      },
       border: {
         side: 'bottom',
         color: 'border'
       },
       heading: {
-        level: '4'
+        level: '4' // level ranges from 1-6
+        // margin: undefined
+
       },
-      // level ranges from 1-6
+      hover: {
+        color: {
+          dark: 'light-4',
+          light: 'dark-3'
+        },
+        // deprecated
+        heading: {
+          color: {
+            dark: 'light-4',
+            light: 'dark-3'
+          }
+        }
+      },
       icons: {
         collapse: FormUp,
         expand: FormDown // color: { dark: undefined, light: undefined },
@@ -351,6 +388,20 @@ export var generate = function generate(baseSpacing, scale) {
 
       } // extend: undefined,
 
+    },
+    avatar: {
+      // extend: undefined,
+      size: {
+        xsmall: baseSpacing * 0.75 + "px",
+        small: baseSpacing + "px",
+        medium: baseSpacing * 2 + "px",
+        // default 48
+        large: baseSpacing * 3 + "px",
+        xlarge: baseSpacing * 4 + "px"
+      },
+      text: {// fontWeight: undefined,
+        // extend: undefined
+      }
     },
     box: {
       responsiveBreakpoint: 'small' // when we switch rows to columns
@@ -400,17 +451,73 @@ export var generate = function generate(baseSpacing, scale) {
         width: borderWidth + "px",
         radius: baseSpacing * 0.2 + "px"
       },
-      // color: { dark: 'white', light: 'white' },
-      primary: {
-        color: {
-          dark: 'white',
-          light: 'white'
-        }
+      // color: { dark: undefined, light: undefined }
+      // default: {
+      //   background: undefined,
+      //   border: undefined,
+      //   color: undefined,
+      //   padding: {
+      //     vertical: undefined,
+      //     horizontal: undefined,
+      //   },
+      //   extend: undefined,
+      // },
+      // primary: {
+      //   background: undefined,
+      //   border: undefined,
+      //   color: undefined,
+      //   padding: {
+      //     vertical: undefined,
+      //     horizontal: undefined,
+      //   },
+      //   extend: undefined,
+      // },
+      // secondary: {
+      //   background: undefined,
+      //   border: undefined,
+      //   color: undefined,
+      //   padding: {
+      //     vertical: undefined,
+      //     horizontal: undefined,
+      //   },
+      //   extend: undefined,
+      // },
+      active: {
+        background: 'active-background',
+        //   border: undefined,
+        color: 'active-text' //   extend: undefined,
+        //   default: {},
+        //   primary: {},
+        //   secondary: {},
+
       },
-      // disabled: { opacity: undefined },
+      disabled: {
+        //   background: undefined,
+        //   border: undefined,
+        //   color: undefined,
+        opacity: 0.3 //   extend: undefined,
+        //   default: {},
+        //   primary: {},
+        //   secondary: {},
+
+      },
+      // hover: {
+      //   background: undefined,
+      //   border: undefined,
+      //   color: undefined},
+      //   extend: undefined,
+      //   default: {},
+      //   primary: {},
+      //   secondary: {},
+      // },
       padding: {
         vertical: baseSpacing / 4 - borderWidth + "px",
         horizontal: baseSpacing - borderWidth + "px"
+      },
+      transition: {
+        timing: 'ease-in-out',
+        duration: 0.1,
+        properties: ['color', 'background-color', 'border-color', 'box-shadow']
       }
     },
     calendar: {
@@ -648,8 +755,22 @@ export var generate = function generate(baseSpacing, scale) {
         background: {
           color: 'status-disabled',
           opacity: 'medium'
-        }
+        } // border: {
+        //   color: undefined,
+        // },
+        // label: {
+        //   color: undefined,
+        // },
+
       },
+      // focus: {
+      //   background: {
+      //     color: undefined,
+      //   },
+      //   border: {
+      //     color: undefined,
+      //   },
+      // },
       error: {
         color: 'status-critical',
         margin: {
@@ -777,12 +898,14 @@ export var generate = function generate(baseSpacing, scale) {
 
     },
     maskedInput: {// extend: undefined,
+      // disabled: { opacity: undefined },
     },
     menu: {
       // background: undefined,
       // extend: undefined,
       icons: {
-        down: FormDown
+        down: FormDown // color: { dark: undefined, light: undefined },
+
       }
     },
     meter: {
@@ -859,7 +982,8 @@ export var generate = function generate(baseSpacing, scale) {
         margin: {
           horizontal: 'small'
         },
-        down: FormDown
+        down: FormDown // up: undefined
+
       },
       options: {
         container: {

@@ -1,17 +1,10 @@
 import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { MnetUIBase } from '../../MnetUIBase';
 import { CheckBox } from '..';
-test('CheckBox renders', function () {
-  var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, null), React.createElement(CheckBox, {
-    id: "test id",
-    name: "test name"
-  })));
-  var tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
-test('CheckBox label renders', function () {
+test('label renders', function () {
   var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
     label: "test label"
   }), React.createElement(CheckBox, {
@@ -20,14 +13,14 @@ test('CheckBox label renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox checked renders', function () {
+test('checked renders', function () {
   var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
     checked: true
   })));
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox disabled renders', function () {
+test('disabled renders', function () {
   var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
     disabled: true
   }), React.createElement(CheckBox, {
@@ -37,7 +30,7 @@ test('CheckBox disabled renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox reverse renders', function () {
+test('reverse renders', function () {
   var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
     reverse: true,
     label: "test label"
@@ -45,7 +38,7 @@ test('CheckBox reverse renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox toggle renders', function () {
+test('toggle renders', function () {
   var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
     toggle: true
   }), React.createElement(CheckBox, {
@@ -58,7 +51,7 @@ test('CheckBox toggle renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox indeterminate renders', function () {
+test('indeterminate renders', function () {
   var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
     indeterminate: true
   }), React.createElement(CheckBox, {
@@ -68,7 +61,7 @@ test('CheckBox indeterminate renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox indeterminate checked warns', function () {
+test('indeterminate checked warns', function () {
   var spy = jest.spyOn(global.console, 'warn');
   renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
     indeterminate: true,
@@ -76,11 +69,23 @@ test('CheckBox indeterminate checked warns', function () {
   })));
   expect(spy).toBeCalledWith('Checkbox cannot be "checked" and "indeterminate" at the same time.');
 });
-test('CheckBox indeterminate toggle warns', function () {
+test('indeterminate toggle warns', function () {
   var spy = jest.spyOn(global.console, 'warn');
   renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
     indeterminate: true,
     toggle: true
   })));
   expect(spy).toBeCalledWith('Checkbox of type toggle does not have "indeterminate" state.');
+});
+test('controlled', function () {
+  var _render = render(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+    label: "test-label",
+    checked: true
+  }))),
+      container = _render.container,
+      getByText = _render.getByText;
+
+  expect(container.firstChild).toMatchSnapshot();
+  fireEvent.click(getByText('test-label'));
+  expect(container.firstChild).toMatchSnapshot();
 });

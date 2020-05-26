@@ -6,7 +6,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { SubtractCircle } from "grommet-icons/es6/icons/SubtractCircle";
 import { AddCircle } from "grommet-icons/es6/icons/AddCircle";
-import { Accordion, AccordionPanel, Box, MnetUIBase, Text } from 'mnet-ui-base';
+import { Accordion, AccordionPanel, Box, Text } from 'mnet-ui-base';
 var CustomAccordionTheme = {
   accordion: {
     heading: {
@@ -26,7 +26,7 @@ var CustomAccordion = function CustomAccordion(_ref) {
       multiple = _ref.multiple,
       rest = _objectWithoutPropertiesLoose(_ref, ["animate", "multiple"]);
 
-  return React.createElement(MnetUIBase, {
+  return React.createElement("div", {
     theme: CustomAccordionTheme
   }, React.createElement(Box, _extends({}, rest, {
     pad: "large",

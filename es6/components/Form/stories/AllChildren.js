@@ -1,12 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, CheckBox, MnetUIBase, Form, FormField, MaskedInput, RadioButtonGroup, RangeInput, Select, TextArea, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, CheckBoxGroup, Form, FormField, MaskedInput, RadioButtonGroup, RangeInput, Select, TextArea, TextInput } from 'mnet-ui-base';
 
 var Example = function Example() {
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",
@@ -48,10 +50,10 @@ var Example = function Example() {
       placeholder: 'com'
     }]
   })), React.createElement(FormField, {
-    name: "subscribe"
-  }, React.createElement(CheckBox, {
-    name: "subscribe",
-    label: "Subscribe?"
+    name: "subscription"
+  }, React.createElement(CheckBoxGroup, {
+    name: "subscription",
+    options: ['subscribe', 'receive email notifications']
   })), React.createElement(FormField, {
     name: "ampm"
   }, React.createElement(RadioButtonGroup, {
@@ -62,6 +64,7 @@ var Example = function Example() {
     name: "size"
   }, React.createElement(Select, {
     name: "size",
+    multiple: true,
     options: ['small', 'medium', 'large']
   })), React.createElement(FormField, {
     label: "Comments",
@@ -94,6 +97,6 @@ var Example = function Example() {
   }))))));
 };
 
-storiesOf('Form', module).add('All children', function () {
+storiesOf('Form', module).add('FormField children', function () {
   return React.createElement(Example, null);
 });

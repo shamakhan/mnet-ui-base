@@ -147,6 +147,24 @@ describe('Accordion', function () {
 
     expect(component.toJSON()).toMatchSnapshot();
   });
+  test('accordion border', function () {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, {
+      theme: {
+        accordion: {
+          border: undefined,
+          panel: {
+            border: {
+              side: 'horizontal'
+            }
+          }
+        }
+      }
+    }, _react["default"].createElement(_.Accordion, null, _react["default"].createElement(_.AccordionPanel, {
+      label: "Panel 1"
+    }, "Panel body 1"))));
+
+    expect(component.toJSON()).toMatchSnapshot();
+  });
   test('change active index', function () {
     var onActive = jest.fn();
 
@@ -169,8 +187,81 @@ describe('Accordion', function () {
     expect(onActive).toBeCalledWith([0]);
     expect(container.firstChild).toMatchSnapshot();
   });
+  test('focus and hover styles', function () {
+    var _render5 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, {
+      theme: {
+        accordion: {
+          hover: {
+            color: 'red'
+          }
+        }
+      }
+    }, _react["default"].createElement(_.Accordion, null, _react["default"].createElement(_.AccordionPanel, {
+      label: "Panel 1",
+      onMouseOver: function onMouseOver() {},
+      onMouseOut: function onMouseOut() {},
+      onFocus: function onFocus() {},
+      onBlur: function onBlur() {}
+    }, "Panel body 1")))),
+        getByText = _render5.getByText,
+        container = _render5.container;
+
+    _react2.fireEvent.focus(getByText('Panel 1'));
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('backward compatibility of hover.color = undefined', function () {
+    var _render6 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, {
+      theme: {
+        accordion: {
+          hover: {
+            color: undefined
+          }
+        }
+      }
+    }, _react["default"].createElement(_.Accordion, null, _react["default"].createElement(_.AccordionPanel, {
+      label: "Panel 1",
+      onMouseOver: function onMouseOver() {},
+      onMouseOut: function onMouseOut() {},
+      onFocus: function onFocus() {},
+      onBlur: function onBlur() {}
+    }, "Panel body 1")))),
+        getByText = _render6.getByText,
+        container = _render6.container;
+
+    _react2.fireEvent.focus(getByText('Panel 1')); // hover color should be undefined
+
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('theme hover of hover.heading.color', function () {
+    var _render7 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, {
+      theme: {
+        accordion: {
+          hover: {
+            heading: {
+              color: 'teal'
+            }
+          }
+        }
+      }
+    }, _react["default"].createElement(_.Accordion, null, _react["default"].createElement(_.AccordionPanel, {
+      label: "Panel 1",
+      onMouseOver: function onMouseOver() {},
+      onMouseOut: function onMouseOut() {},
+      onFocus: function onFocus() {},
+      onBlur: function onBlur() {}
+    }, "Panel body 1")))),
+        getByText = _render7.getByText,
+        container = _render7.container;
+
+    _react2.fireEvent.focus(getByText('Panel 1')); // hover color should be undefined
+
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
   test('set on hover', function () {
-    var _render5 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Accordion, null, _react["default"].createElement(_.AccordionPanel, {
+    var _render8 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Accordion, null, _react["default"].createElement(_.AccordionPanel, {
       label: "Panel 1",
       onMouseOver: function onMouseOver() {},
       onMouseOut: function onMouseOut() {},
@@ -183,8 +274,8 @@ describe('Accordion', function () {
       onFocus: function onFocus() {},
       onBlur: function onBlur() {}
     }, "Panel body 2")))),
-        getByText = _render5.getByText,
-        container = _render5.container;
+        getByText = _render8.getByText,
+        container = _render8.container;
 
     expect(container.firstChild).toMatchSnapshot();
 
@@ -202,6 +293,36 @@ describe('Accordion', function () {
 
     _react2.fireEvent.mouseOut(getByText('Panel 2'));
 
+    expect(container.firstChild).toMatchSnapshot();
+  });
+  test('wrapped panel', function () {
+    var onActive = jest.fn();
+
+    var Panel = function Panel(_ref) {
+      var index = _ref.index;
+      return _react["default"].createElement(_.AccordionPanel, {
+        label: "Panel " + index
+      }, "Panel body ", index);
+    };
+
+    var _render9 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Accordion, {
+      animate: false,
+      onActive: onActive
+    }, [1, 2].map(function (index) {
+      return _react["default"].createElement(Panel, {
+        key: index,
+        index: index
+      });
+    })))),
+        getByText = _render9.getByText,
+        container = _render9.container;
+
+    expect(container.firstChild).toMatchSnapshot();
+
+    _react2.fireEvent.click(getByText('Panel 1'));
+
+    expect(onActive).toBeCalledWith([0]);
+    expect(getByText('Panel body 1')).not.toBeNull();
     expect(container.firstChild).toMatchSnapshot();
   });
 });

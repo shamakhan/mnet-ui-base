@@ -8,6 +8,9 @@ var customTheme = deepMerge(mnet, {
     focus: {
       border: {
         color: 'red'
+      },
+      shadow: {
+        color: 'red'
       }
     }
   }

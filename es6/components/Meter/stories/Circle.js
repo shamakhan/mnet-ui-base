@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Meter } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Meter } from 'mnet-ui-base';
 
 var CircleMeter = function CircleMeter() {
   var _useState = useState(20),
@@ -18,9 +17,7 @@ var CircleMeter = function CircleMeter() {
       clearTimeout(timer.current);
     };
   }, []);
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Meter, {

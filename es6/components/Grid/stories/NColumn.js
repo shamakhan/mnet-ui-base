@@ -1,12 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, Grid } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Grid } from 'mnet-ui-base';
 
 var NColumnGrid = function NColumnGrid() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Grid, {
     columns: {
       count: 6,

@@ -4,8 +4,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RangeSelector, Stack, Text } from 'mnet-ui-base';
 
 var SimpleRangeSelector = function SimpleRangeSelector(_ref) {
   var _ref$direction = _ref.direction,
@@ -20,9 +19,7 @@ var SimpleRangeSelector = function SimpleRangeSelector(_ref) {
     setRange(values);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Stack, null, React.createElement(Box, {

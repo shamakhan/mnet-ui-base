@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Select } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes'; // the prefix name of the Create option entry
+import { Box, Select } from 'mnet-ui-base'; // the prefix name of the Create option entry
 
 var prefix = 'Create';
 var defaultOptions = [];
@@ -45,9 +44,12 @@ var CreateOption = function CreateOption() {
       searchValue = _useState3[0],
       setSearchValue = _useState3[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

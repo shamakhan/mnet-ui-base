@@ -6,14 +6,10 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("../../../themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var BackgroundBox = function BackgroundBox() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "small",
     gap: "small",
     align: "start"
@@ -57,7 +53,51 @@ var BackgroundBox = function BackgroundBox() {
   }, _react["default"].createElement(_mnetUiBase.Box, {
     background: "#11111108",
     pad: "small"
-  }, "low opacity on light background"))));
+  }, "low opacity on light background")), _react["default"].createElement(_mnetUiBase.Box, {
+    background: {
+      color: 'background',
+      dark: true
+    },
+    pad: "medium"
+  }, _react["default"].createElement(_mnetUiBase.Text, {
+    color: "brand"
+  }, "force dark background")), _react["default"].createElement(_mnetUiBase.Box, {
+    background: "dark-1",
+    pad: "medium"
+  }, _react["default"].createElement(_mnetUiBase.Box, {
+    background: {
+      color: 'background',
+      dark: false
+    },
+    pad: "medium"
+  }, _react["default"].createElement(_mnetUiBase.Text, {
+    color: "brand"
+  }, "force light background"))), _react["default"].createElement(_mnetUiBase.Box, {
+    background: {
+      color: {
+        dark: 'darkgrey',
+        light: 'lightgrey'
+      },
+      dark: true
+    },
+    pad: "medium"
+  }, _react["default"].createElement(_mnetUiBase.Text, {
+    color: "brand"
+  }, "force dark background with color as object")), _react["default"].createElement(_mnetUiBase.Box, {
+    background: "dark-1",
+    pad: "medium"
+  }, _react["default"].createElement(_mnetUiBase.Box, {
+    background: {
+      color: {
+        dark: 'darkgrey',
+        light: 'lightgrey'
+      },
+      dark: false
+    },
+    pad: "medium"
+  }, _react["default"].createElement(_mnetUiBase.Text, {
+    color: "brand"
+  }, "force light background with color as object")))));
 };
 
 (0, _react2.storiesOf)('Box', module).add('Background', function () {

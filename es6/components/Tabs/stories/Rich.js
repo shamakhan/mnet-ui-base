@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { CircleInformation } from "grommet-icons/es6/icons/CircleInformation";
 import { Currency } from "grommet-icons/es6/icons/Currency";
-import { Box, MnetUIBase, FormField, Tab, Tabs, Text, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, FormField, Tab, Tabs, Text, TextInput } from 'mnet-ui-base';
 
 var RichTabs = function RichTabs() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Tabs, null, React.createElement(Tab, {
+  return React.createElement(React.Fragment, null, React.createElement(Tabs, null, React.createElement(Tab, {
     title: React.createElement(RichTabTitle, {
       icon: React.createElement(CircleInformation, {
         color: "accent-2"

@@ -2,16 +2,13 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, InfiniteScroll, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, InfiniteScroll, Text } from 'mnet-ui-base';
 export var allItems = Array(2000).fill().map(function (_, i) {
   return "item " + (i + 1);
 });
 
 var SimpleInfiniteScroll = function SimpleInfiniteScroll(props) {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, null, React.createElement(InfiniteScroll, _extends({
+  return React.createElement(React.Fragment, null, React.createElement(Box, null, React.createElement(InfiniteScroll, _extends({
     items: allItems
   }, props), function (item) {
     return React.createElement(Box, {

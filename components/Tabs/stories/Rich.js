@@ -13,14 +13,10 @@ var _grommetIcons = require("grommet-icons");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var RichTabs = function RichTabs() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Tabs, null, _react["default"].createElement(_mnetUiBase.Tab, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Tabs, null, _react["default"].createElement(_mnetUiBase.Tab, {
     title: _react["default"].createElement(RichTabTitle, {
       icon: _react["default"].createElement(_grommetIcons.CircleInformation, {
         color: "accent-2"

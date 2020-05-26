@@ -18,6 +18,13 @@ var _ = require("../..");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+var customTheme = {
+  menu: {
+    icons: {
+      color: '#F08080'
+    }
+  }
+};
 describe('Menu', function () {
   beforeEach(_portal.createPortal);
   afterEach(_react2.cleanup);
@@ -417,5 +424,19 @@ describe('Menu', function () {
 
     expect(getByText('Item 1').innerHTML).toEqual(expect.stringMatching(/^Item 1/));
     expect(container).toMatchSnapshot();
+  });
+  test('custom theme icon color', function () {
+    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, {
+      theme: customTheme
+    }, _react["default"].createElement(_.Menu, {
+      label: "Test Menu",
+      items: [{
+        label: 'Item 1'
+      }, {
+        label: 'Item 2'
+      }]
+    })));
+
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });

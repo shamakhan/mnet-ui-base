@@ -4,7 +4,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { mnet, Box, FormField, Form, Text, Button, MnetUIBase } from 'mnet-ui-base';
+import { Box, FormField, Form, Text, Button } from 'mnet-ui-base';
 
 var FormFieldLabel = function FormFieldLabel(props) {
   var required = props.required,
@@ -22,9 +22,7 @@ var FormFieldLabel = function FormFieldLabel(props) {
 };
 
 var LabelFormField = function LabelFormField() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Form, null, React.createElement(FormFieldLabel, {

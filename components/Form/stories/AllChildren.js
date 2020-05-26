@@ -6,14 +6,15 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _themes = require("mnet-ui-base/themes");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Example = function Example() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    full: true,
-    theme: _themes.mnet
+  return _react["default"].createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, _react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
@@ -55,10 +56,10 @@ var Example = function Example() {
       placeholder: 'com'
     }]
   })), _react["default"].createElement(_mnetUiBase.FormField, {
-    name: "subscribe"
-  }, _react["default"].createElement(_mnetUiBase.CheckBox, {
-    name: "subscribe",
-    label: "Subscribe?"
+    name: "subscription"
+  }, _react["default"].createElement(_mnetUiBase.CheckBoxGroup, {
+    name: "subscription",
+    options: ['subscribe', 'receive email notifications']
   })), _react["default"].createElement(_mnetUiBase.FormField, {
     name: "ampm"
   }, _react["default"].createElement(_mnetUiBase.RadioButtonGroup, {
@@ -69,6 +70,7 @@ var Example = function Example() {
     name: "size"
   }, _react["default"].createElement(_mnetUiBase.Select, {
     name: "size",
+    multiple: true,
     options: ['small', 'medium', 'large']
   })), _react["default"].createElement(_mnetUiBase.FormField, {
     label: "Comments",
@@ -101,6 +103,6 @@ var Example = function Example() {
   }))))));
 };
 
-(0, _react2.storiesOf)('Form', module).add('All children', function () {
+(0, _react2.storiesOf)('Form', module).add('FormField children', function () {
   return _react["default"].createElement(Example, null);
 });

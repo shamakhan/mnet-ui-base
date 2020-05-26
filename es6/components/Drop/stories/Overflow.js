@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Calendar, Drop, Heading, MnetUIBase, TextInput } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Calendar, Drop, Heading, TextInput, mnet } from 'mnet-ui-base';
 
 var OverflowDrop = function OverflowDrop() {
   var targetRef = useRef();
@@ -26,9 +25,13 @@ var OverflowDrop = function OverflowDrop() {
   useEffect(function () {
     return setShowDrop(true);
   }, []);
-  return React.createElement(MnetUIBase, {
+  return React.createElement("div", {
     theme: mnet,
-    full: true
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

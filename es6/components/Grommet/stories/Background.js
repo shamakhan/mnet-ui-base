@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { mnet, MnetUIBase, Box, Text } from 'mnet-ui-base';
-import { hpe } from 'grommet-theme-hpe';
+import { neo } from 'mnet-ui-base-theme-neo';
 
 var Background = function Background() {
   var themeColor = 'background-back';
@@ -12,12 +12,12 @@ var Background = function Background() {
   }, React.createElement(MnetUIBase, null, React.createElement(Box, {
     pad: "medium"
   }, React.createElement(Text, null, "MnetUIBase with no theme or background prop"))), React.createElement(MnetUIBase, {
-    theme: hpe,
+    theme: neo,
     themeMode: "dark"
   }, React.createElement(Box, {
     pad: "medium"
   }, React.createElement(Text, null, "MnetUIBase with theme & themeMode but no background prop"))), React.createElement(MnetUIBase, {
-    theme: hpe,
+    theme: neo,
     themeMode: "light",
     background: themeColor
   }, React.createElement(Box, {

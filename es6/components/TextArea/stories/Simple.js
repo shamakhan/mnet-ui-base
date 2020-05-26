@@ -2,8 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { MnetUIBase, Box, TextArea } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, TextArea } from 'mnet-ui-base';
 
 var SimpleTextArea = function SimpleTextArea(props) {
   var _React$useState = React.useState(''),
@@ -14,9 +13,7 @@ var SimpleTextArea = function SimpleTextArea(props) {
     return setValue(event.target.value);
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(TextArea, _extends({

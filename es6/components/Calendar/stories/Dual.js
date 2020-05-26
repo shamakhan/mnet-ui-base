@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, Calendar, MnetUIBase, Heading } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Calendar, Heading } from 'mnet-ui-base';
 import { Blank } from "grommet-icons/es6/icons/Blank";
 import { Previous } from "grommet-icons/es6/icons/Previous";
 import { Next } from "grommet-icons/es6/icons/Next";
@@ -36,9 +35,7 @@ var DualCalendar = function DualCalendar() {
     }
   };
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     justify: "center",
     pad: "large",
     direction: "row",

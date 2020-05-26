@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, Button, Drop, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Drop } from 'mnet-ui-base';
 
 var TooltipDrop = function TooltipDrop() {
   var _useState = useState(),
@@ -9,9 +8,12 @@ var TooltipDrop = function TooltipDrop() {
       setOver = _useState[1];
 
   var ref = useRef();
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     align: "center",

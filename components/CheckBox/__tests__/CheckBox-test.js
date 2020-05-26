@@ -2,6 +2,8 @@
 
 var _react = _interopRequireDefault(require("react"));
 
+var _react2 = require("@testing-library/react");
+
 var _reactTestRenderer = _interopRequireDefault(require("react-test-renderer"));
 
 require("jest-styled-components");
@@ -12,16 +14,7 @@ var _ = require("..");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-test('CheckBox renders', function () {
-  var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, null), _react["default"].createElement(_.CheckBox, {
-    id: "test id",
-    name: "test name"
-  })));
-
-  var tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
-test('CheckBox label renders', function () {
+test('label renders', function () {
   var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
     label: "test label"
   }), _react["default"].createElement(_.CheckBox, {
@@ -31,7 +24,7 @@ test('CheckBox label renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox checked renders', function () {
+test('checked renders', function () {
   var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
     checked: true
   })));
@@ -39,7 +32,7 @@ test('CheckBox checked renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox disabled renders', function () {
+test('disabled renders', function () {
   var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
     disabled: true
   }), _react["default"].createElement(_.CheckBox, {
@@ -50,7 +43,7 @@ test('CheckBox disabled renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox reverse renders', function () {
+test('reverse renders', function () {
   var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
     reverse: true,
     label: "test label"
@@ -59,7 +52,7 @@ test('CheckBox reverse renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox toggle renders', function () {
+test('toggle renders', function () {
   var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
     toggle: true
   }), _react["default"].createElement(_.CheckBox, {
@@ -73,7 +66,7 @@ test('CheckBox toggle renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox indeterminate renders', function () {
+test('indeterminate renders', function () {
   var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
     indeterminate: true
   }), _react["default"].createElement(_.CheckBox, {
@@ -84,7 +77,7 @@ test('CheckBox indeterminate renders', function () {
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
-test('CheckBox indeterminate checked warns', function () {
+test('indeterminate checked warns', function () {
   var spy = jest.spyOn(global.console, 'warn');
 
   _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
@@ -94,7 +87,7 @@ test('CheckBox indeterminate checked warns', function () {
 
   expect(spy).toBeCalledWith('Checkbox cannot be "checked" and "indeterminate" at the same time.');
 });
-test('CheckBox indeterminate toggle warns', function () {
+test('indeterminate toggle warns', function () {
   var spy = jest.spyOn(global.console, 'warn');
 
   _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
@@ -103,4 +96,18 @@ test('CheckBox indeterminate toggle warns', function () {
   })));
 
   expect(spy).toBeCalledWith('Checkbox of type toggle does not have "indeterminate" state.');
+});
+test('controlled', function () {
+  var _render = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+    label: "test-label",
+    checked: true
+  }))),
+      container = _render.container,
+      getByText = _render.getByText;
+
+  expect(container.firstChild).toMatchSnapshot();
+
+  _react2.fireEvent.click(getByText('test-label'));
+
+  expect(container.firstChild).toMatchSnapshot();
 });

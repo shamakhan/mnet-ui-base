@@ -4,8 +4,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, RadioButtonGroup } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, RadioButtonGroup } from 'mnet-ui-base';
 
 var SimpleRadioButtonGroup = function SimpleRadioButtonGroup(_ref) {
   var initialValue = _ref.value,
@@ -15,9 +14,7 @@ var SimpleRadioButtonGroup = function SimpleRadioButtonGroup(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(RadioButtonGroup, _extends({

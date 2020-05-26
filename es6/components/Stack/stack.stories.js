@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { MnetUIBase, Box, Stack } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
 
 var SimpleStack = function SimpleStack() {
   return React.createElement(MnetUIBase, null, React.createElement(Stack, {
@@ -16,9 +15,12 @@ var SimpleStack = function SimpleStack() {
 };
 
 var FillStack = function FillStack() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet,
-    full: true
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Stack, {
     fill: true
   }, React.createElement(Box, {

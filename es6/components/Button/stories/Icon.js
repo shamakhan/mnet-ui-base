@@ -3,13 +3,10 @@ import { storiesOf } from '@storybook/react';
 import { Close } from "grommet-icons/es6/icons/Close";
 import { Send } from "grommet-icons/es6/icons/Send";
 import { User } from "grommet-icons/es6/icons/User";
-import { Box, Button, MnetUIBase, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Button, Text } from 'mnet-ui-base';
 
 var IconPlain = function IconPlain() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement("div", null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Text, {

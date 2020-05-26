@@ -1,14 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MnetUIBase, Meter, Table, TableBody, TableCell, TableRow, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, Meter, Table, TableBody, TableCell, TableRow, Text } from 'mnet-ui-base';
 var values = [20, 40, 60, 80, 100];
 
 var MeterInTable = function MeterInTable() {
-  return React.createElement(MnetUIBase, {
-    theme: mnet
-  }, React.createElement(Box, {
+  return React.createElement(React.Fragment, null, React.createElement(Box, {
     align: "center",
     pad: "large"
   }, React.createElement(Box, {

@@ -64,17 +64,18 @@ var Form = (0, _react.forwardRef)(function (_ref, ref) {
       _onSubmit = _ref.onSubmit,
       _ref$validate = _ref.validate,
       validate = _ref$validate === void 0 ? 'submit' : _ref$validate,
-      _ref$value = _ref.value,
-      valueProp = _ref$value === void 0 ? defaultValue : _ref$value,
+      valueProp = _ref.value,
       rest = _objectWithoutPropertiesLoose(_ref, ["children", "errors", "infos", "messages", "onChange", "onReset", "onSubmit", "validate", "value"]);
 
-  var _useState = (0, _react.useState)(valueProp),
+  var _useState = (0, _react.useState)(valueProp || defaultValue),
       value = _useState[0],
       setValue = _useState[1];
 
   (0, _react.useEffect)(function () {
-    if (valueProp !== defaultValue) setValue(valueProp);
-  }, [valueProp]);
+    if (valueProp !== undefined && valueProp !== value) {
+      setValue(valueProp);
+    }
+  }, [value, valueProp]);
 
   var _useState2 = (0, _react.useState)(messagesProp),
       messages = _useState2[0],
@@ -105,9 +106,6 @@ var Form = (0, _react.forwardRef)(function (_ref, ref) {
       setTouched = _useState5[1];
 
   var validations = (0, _react.useRef)({});
-  (0, _react.useEffect)(function () {
-    if (onChange) onChange(value);
-  }, [onChange, value]);
   (0, _react.useEffect)(function () {}, [value, errors, infos]);
   var update = (0, _react.useCallback)(function (name, data, initial) {
     setValue(function (prevValue) {
@@ -117,15 +115,15 @@ var Form = (0, _react.forwardRef)(function (_ref, ref) {
       // is checking across fields
 
       setErrors(function (prevErrors) {
-        var nextErrors = _extends({}, prevErrors);
+        if (prevErrors[name] && validations.current[name]) {
+          var nextErrors = _extends({}, prevErrors);
 
-        Object.keys(prevErrors).forEach(function (errName) {
-          if (validations.current[errName]) {
-            var nextError = validations.current[errName](data, nextValue);
-            updateErrors(nextErrors, errName, nextError);
-          }
-        });
-        return nextErrors;
+          var nextError = validations.current[name](data, nextValue);
+          updateErrors(nextErrors, name, nextError);
+          return nextErrors;
+        }
+
+        return prevErrors;
       });
       setInfos(function (prevInfos) {
         var nextInfos = _extends({}, prevInfos); // re-run any validations that have infos, in case the validation
@@ -140,6 +138,7 @@ var Form = (0, _react.forwardRef)(function (_ref, ref) {
         });
         return nextInfos;
       });
+      if (!initial && onChange) onChange(nextValue);
       return nextValue;
     });
     if (!initial) setTouched(function (prevTouched) {
@@ -148,26 +147,59 @@ var Form = (0, _react.forwardRef)(function (_ref, ref) {
       nextTouched[name] = true;
       return nextTouched;
     });
-  }, []);
+  }, [onChange]); // There are three basic models of handling form input value state:
+  //
+  // 1 - form controlled
+  //
+  // In this model, the caller sets `value` and `onChange` properties
+  // on the Form component to supply the values used by the input fields.
+  // In useFormContext(), componentValue would be undefined and formValue
+  // is be set to whatever the form state has. Whenever the form state
+  // changes, we update the contextValue so the input component will use
+  // that. When the input component changes, we will call update() to
+  // update the form state.
+  //
+  // 2 - input controlled
+  //
+  // In this model, the caller sets `value` and `onChange` properties
+  // on the input components, like TextInput, to supply the value for it.
+  // In useFormContext(), componentValue is this value and we ensure to
+  // update the form state, via update(), and set the contextValue from
+  // the componentValue. When the input component changes, we will
+  // call update() to update the form state.
+  //
+  // 3 - uncontrolled
+  //
+  // In this model, the caller doesn't set a `value` or `onChange` property
+  // at either the form or input component levels.
+  // In useFormContext(), componentValue is undefined and valueProp is
+  // undefined and nothing much happens here. That is, unless the
+  // calling component needs to know the state in order to work, such
+  // as CheckBox or Select. In this case, those components supply
+  // an initialValue, which will trigger updating the contextValue so
+  // they can have access to it.
+  //
 
-  var useFormContext = function useFormContext(name, dataProp) {
-    var valueData = name && value[name] !== undefined ? value[name] : '';
+  var useFormContext = function useFormContext(name, componentValue, initialValue) {
+    var _useState6 = (0, _react.useState)(initialValue),
+        contextValue = _useState6[0],
+        setContextValue = _useState6[1];
 
-    var _useState6 = (0, _react.useState)(dataProp !== undefined ? dataProp : valueData),
-        data = _useState6[0],
-        setData = _useState6[1]; // use dataProp passed in, allowing for it to change
-
-
+    var formValue = name ? value[name] : undefined;
     (0, _react.useEffect)(function () {
-      if (dataProp !== undefined) setData(dataProp);
-    }, [dataProp]); // update when the form value changes
-
-    (0, _react.useEffect)(function () {
-      if (name && valueData !== data) setData(valueData);
-    }, [data, name, valueData]);
-    return [data, function (nextData) {
-      if (name) update(name, nextData);
-      setData(nextData);
+      if (name && componentValue !== undefined && componentValue !== formValue) // input drives
+        update(name, componentValue, formValue === undefined);
+    }, [componentValue, contextValue, formValue, initialValue, name]);
+    var useValue;
+    if (componentValue !== undefined) // input drives
+      useValue = componentValue;else if (valueProp && name && formValue !== undefined) // form drives
+      useValue = formValue;else useValue = contextValue;
+    return [useValue, function (nextValue) {
+      // only set if the input isn't driving
+      if (componentValue === undefined) {
+        if (name) update(name, nextValue);
+        if (initialValue !== undefined) setContextValue(nextValue);
+      }
     }];
   };
 
@@ -175,7 +207,11 @@ var Form = (0, _react.forwardRef)(function (_ref, ref) {
     ref: ref
   }, rest, {
     onReset: function onReset(event) {
-      setValue(defaultValue);
+      if (!valueProp) {
+        setValue(defaultValue);
+        if (onChange) onChange(defaultValue);
+      }
+
       setErrors({});
       setTouched({});
 
@@ -220,6 +256,9 @@ var Form = (0, _react.forwardRef)(function (_ref, ref) {
     value: {
       addValidation: function addValidation(name, validation) {
         validations.current[name] = validation;
+      },
+      removeValidation: function removeValidation(name) {
+        delete validations.current[name];
       },
       onBlur: validate === 'blur' ? function (name) {
         if (validations.current[name]) {

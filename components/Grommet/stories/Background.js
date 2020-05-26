@@ -6,7 +6,7 @@ var _react2 = require("@storybook/react");
 
 var _mnetUiBase = require("mnet-ui-base");
 
-var _grommetThemeHpe = require("grommet-theme-hpe");
+var _mnetUiBaseThemeNeo = require("mnet-ui-base-theme-neo");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -19,12 +19,12 @@ var Background = function Background() {
   }, _react["default"].createElement(_mnetUiBase.MnetUIBase, null, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
   }, _react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with no theme or background prop"))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _grommetThemeHpe.hpe,
+    theme: _mnetUiBaseThemeNeo.neo,
     themeMode: "dark"
   }, _react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
   }, _react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with theme & themeMode but no background prop"))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
-    theme: _grommetThemeHpe.hpe,
+    theme: _mnetUiBaseThemeNeo.neo,
     themeMode: "light",
     background: themeColor
   }, _react["default"].createElement(_mnetUiBase.Box, {

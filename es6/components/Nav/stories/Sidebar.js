@@ -4,7 +4,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { mnet, Box, Button, MnetUIBase, Nav, Text } from 'mnet-ui-base';
+import { Box, Button, Nav, Text } from 'mnet-ui-base';
 
 var SidebarButton = function SidebarButton(_ref) {
   var label = _ref.label,
@@ -31,9 +31,12 @@ var SidebarNav = function SidebarNav() {
       active = _useState[0],
       setActive = _useState[1];
 
-  return React.createElement(MnetUIBase, {
-    full: true,
-    theme: mnet
+  return React.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh',
+      overflow: 'auto'
+    }
   }, React.createElement(Box, {
     fill: true,
     direction: "row"

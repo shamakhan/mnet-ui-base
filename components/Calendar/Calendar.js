@@ -7,6 +7,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = require("styled-components");
 
+var _defaultProps = require("../../default-props");
+
 var _Box = require("../Box");
 
 var _Button = require("../Button");
@@ -94,7 +96,8 @@ var Calendar = (0, _react.forwardRef)(function (_ref, ref) {
       size = _ref$size === void 0 ? 'medium' : _ref$size,
       rest = _objectWithoutPropertiesLoose(_ref, ["animate", "bounds", "date", "dates", "daysOfWeek", "disabled", "firstDayOfWeek", "header", "locale", "onReference", "onSelect", "range", "reference", "showAdjacentDays", "size"]);
 
-  var theme = (0, _react.useContext)(_styledComponents.ThemeContext); // set date when caller changes it, allows us to change it internally too
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme; // set date when caller changes it, allows us to change it internally too
+
 
   var _useState = (0, _react.useState)(dateProp),
       date = _useState[0],
@@ -237,7 +240,7 @@ var Calendar = (0, _react.forwardRef)(function (_ref, ref) {
       var priorDates = dates[0].map(function (d) {
         return new Date(d);
       });
-      var previousDate = new Date(lastSelectedDate);
+      var previousDate = new Date(lastSelectedDate || dates[0][0]);
 
       var _selDate = new Date(selectedDate);
 
@@ -265,7 +268,7 @@ var Calendar = (0, _react.forwardRef)(function (_ref, ref) {
     }
 
     setDates(nextDates);
-    setDate(nextDate);
+    if (!dates) setDate(nextDate);
     setActive(new Date(selectedDate));
     setLastSelectedDate(selectedDate);
     if (onSelect) onSelect(nextDates || nextDate);
