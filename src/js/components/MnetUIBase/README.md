@@ -128,7 +128,7 @@ div
 ```
 ## Theme
   
-**grommet.extend**
+**mnet.extend**
 
 Any additional style for MnetUIBase. Expects `string | (props) => {}`.
 
