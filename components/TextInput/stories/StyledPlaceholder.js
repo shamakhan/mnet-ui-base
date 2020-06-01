@@ -9,12 +9,12 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var StyledPlaceholder = function StyledPlaceholder() {
-  return _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_mnetUiBase.Form, null, _react["default"].createElement(_mnetUiBase.TextInput, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Form, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     name: "name",
-    placeholder: _react["default"].createElement(_mnetUiBase.Text, null, "footer")
+    placeholder: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "footer")
   })));
 };
 
 (0, _react2.storiesOf)('TextInput', module).add('StyledPlaceholder', function () {
-  return _react["default"].createElement(StyledPlaceholder, null);
+  return /*#__PURE__*/_react["default"].createElement(StyledPlaceholder, null);
 });

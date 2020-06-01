@@ -6,10 +6,10 @@ import { Box, DataTable } from 'mnet-ui-base'; // Source code for the data can b
 import { columns, data } from './data';
 
 var SizedDataTable = function SizedDataTable() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(DataTable, {
+  }, /*#__PURE__*/React.createElement(DataTable, {
     columns: columns,
     data: data,
     size: "medium"
@@ -17,5 +17,5 @@ var SizedDataTable = function SizedDataTable() {
 };
 
 storiesOf('DataTable', module).add('Sized', function () {
-  return React.createElement(SizedDataTable, null);
+  return /*#__PURE__*/React.createElement(SizedDataTable, null);
 });

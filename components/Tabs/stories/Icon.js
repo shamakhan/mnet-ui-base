@@ -46,47 +46,47 @@ var customTheme = (0, _utils.deepMerge)(_themes.mnet, {
 });
 
 var Icon = function Icon() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customTheme,
     full: true
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium",
     fill: true
-  }, _react["default"].createElement(_mnetUiBase.Tabs, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tabs, {
     flex: true
-  }, _react["default"].createElement(_mnetUiBase.Tab, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tab, {
     title: "Tab 1",
-    icon: _react["default"].createElement(_grommetIcons.Attraction, null)
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, null)
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, _react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
     size: "xlarge"
-  }))), _react["default"].createElement(_mnetUiBase.Tab, {
+  }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tab, {
     title: "Tab 2",
-    icon: _react["default"].createElement(_grommetIcons.TreeOption, null)
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, null)
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, _react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
     size: "xlarge"
-  }))), _react["default"].createElement(_mnetUiBase.Tab, {
+  }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tab, {
     title: "Tab 3",
-    icon: _react["default"].createElement(_grommetIcons.Car, null)
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, null)
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     pad: "large",
     align: "center",
     background: "accent-3"
-  }, _react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
     size: "xlarge"
   }))))));
 };
 
 (0, _react2.storiesOf)('Tabs', module).add('Icon', function () {
-  return _react["default"].createElement(Icon, null);
+  return /*#__PURE__*/_react["default"].createElement(Icon, null);
 });

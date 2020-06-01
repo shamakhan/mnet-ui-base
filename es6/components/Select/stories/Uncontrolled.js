@@ -4,15 +4,15 @@ import { Box, MnetUIBase, Select } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 
 var Example = function Example() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     full: true,
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     id: "select",
     name: "select",
     placeholder: "Select",
@@ -25,5 +25,5 @@ var Example = function Example() {
 };
 
 storiesOf('Select', module).add('Uncontrolled', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 });

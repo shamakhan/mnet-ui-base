@@ -21,12 +21,12 @@ var Example = function Example() {
       value2 = _useState2[0],
       setValue2 = _useState2[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium",
     gap: "large"
-  }, "Initial value via options object:", _react["default"].createElement(_mnetUiBase.CheckBoxGroup, {
+  }, "Initial value via options object:", /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBoxGroup, {
     value: value,
     onChange: function onChange(event) {
       console.log('value: ', event.value);
@@ -34,7 +34,7 @@ var Example = function Example() {
       setValue(event.value);
     },
     options: ['First', 'Second', 'Third']
-  }), "Initial value via controlled options object:", _react["default"].createElement(_mnetUiBase.CheckBoxGroup, {
+  }), "Initial value via controlled options object:", /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBoxGroup, {
     labelKey: "label",
     valueKey: "id",
     value: value2,
@@ -59,5 +59,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('CheckBoxGroup', module).add('Initial value', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

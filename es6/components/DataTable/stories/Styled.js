@@ -6,10 +6,10 @@ import { Box, DataTable } from 'mnet-ui-base'; // Source code for the data can b
 import { columns, DATA } from './data';
 
 var StyledDataTable = function StyledDataTable() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(DataTable, {
+  }, /*#__PURE__*/React.createElement(DataTable, {
     columns: columns,
     data: DATA,
     step: 10,
@@ -35,5 +35,5 @@ var StyledDataTable = function StyledDataTable() {
 };
 
 storiesOf('DataTable', module).add('Styled', function () {
-  return React.createElement(StyledDataTable, null);
+  return /*#__PURE__*/React.createElement(StyledDataTable, null);
 });

@@ -3,33 +3,33 @@ import { storiesOf } from '@storybook/react';
 import { Box, Layer } from 'mnet-ui-base';
 
 var RTLLayer = function RTLLayer() {
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     dir: "rtl"
-  }, React.createElement(Layer, {
+  }, /*#__PURE__*/React.createElement(Layer, {
     position: "start",
     margin: {
       vertical: 'small',
       start: 'xlarge',
       end: 'medium'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     height: "small",
     overflow: "auto"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "xlarge"
-  }, "text"), React.createElement(Box, {
+  }, "text"), /*#__PURE__*/React.createElement(Box, {
     pad: "xlarge"
-  }, "text"), React.createElement(Box, {
+  }, "text"), /*#__PURE__*/React.createElement(Box, {
     pad: "xlarge"
-  }, "text"), React.createElement(Box, {
+  }, "text"), /*#__PURE__*/React.createElement(Box, {
     pad: "xlarge"
-  }, "text"), React.createElement(Box, {
+  }, "text"), /*#__PURE__*/React.createElement(Box, {
     pad: "xlarge"
-  }, "text"), React.createElement(Box, {
+  }, "text"), /*#__PURE__*/React.createElement(Box, {
     pad: "xlarge"
   }, "text"))));
 };
 
 storiesOf('Layer', module).add('RTL', function () {
-  return React.createElement(RTLLayer, null);
+  return /*#__PURE__*/React.createElement(RTLLayer, null);
 });

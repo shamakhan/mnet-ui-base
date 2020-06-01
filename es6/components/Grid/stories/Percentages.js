@@ -3,13 +3,13 @@ import { storiesOf } from '@storybook/react';
 import { Box, Grid } from 'mnet-ui-base';
 
 var Percentages = function Percentages() {
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Grid, {
+  }, /*#__PURE__*/React.createElement(Grid, {
     fill: true,
     areas: [{
       name: 'nav',
@@ -23,15 +23,15 @@ var Percentages = function Percentages() {
     columns: ['small', 'flex'],
     rows: ['flex'],
     gap: "small"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     gridArea: "nav",
     background: "brand"
-  }), React.createElement(Box, {
+  }), /*#__PURE__*/React.createElement(Box, {
     gridArea: "main",
     background: "brand"
   })));
 };
 
 storiesOf('Grid', module).add('Percentages', function () {
-  return React.createElement(Percentages, null);
+  return /*#__PURE__*/React.createElement(Percentages, null);
 });

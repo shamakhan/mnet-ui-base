@@ -15,20 +15,20 @@ var IPv4MaskedInput = function IPv4MaskedInput() {
       value = _React$useState[0],
       setValue = _React$useState[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.MaskedInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MaskedInput, {
     mask: [{
       length: [1, 3],
       regexp: IPv4ElementExp,
@@ -60,5 +60,5 @@ var IPv4MaskedInput = function IPv4MaskedInput() {
 };
 
 (0, _react2.storiesOf)('MaskedInput', module).add('IPv4 Address', function () {
-  return _react["default"].createElement(IPv4MaskedInput, null);
+  return /*#__PURE__*/_react["default"].createElement(IPv4MaskedInput, null);
 });

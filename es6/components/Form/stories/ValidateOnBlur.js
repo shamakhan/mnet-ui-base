@@ -4,19 +4,19 @@ import { Box, Button, Form, FormField, TextInput } from 'mnet-ui-base';
 import { StatusGood } from "grommet-icons/es6/icons/StatusGood";
 
 var Example = function Example() {
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium"
-  }, React.createElement(Form, {
+  }, /*#__PURE__*/React.createElement(Form, {
     validate: "blur",
     onReset: function onReset(event) {
       return console.log(event);
@@ -25,7 +25,7 @@ var Example = function Example() {
       var value = _ref.value;
       return console.log('Submit', value);
     }
-  }, React.createElement(FormField, {
+  }, /*#__PURE__*/React.createElement(FormField, {
     label: "Name",
     name: "name",
     required: true,
@@ -36,32 +36,32 @@ var Example = function Example() {
       return undefined;
     }, function (name) {
       if (name === 'good') return {
-        message: React.createElement(Box, {
+        message: /*#__PURE__*/React.createElement(Box, {
           align: "end"
-        }, React.createElement(StatusGood, null)),
+        }, /*#__PURE__*/React.createElement(StatusGood, null)),
         status: 'info'
       };
       return undefined;
     }]
-  }), React.createElement(FormField, {
+  }), /*#__PURE__*/React.createElement(FormField, {
     label: "Email",
     name: "email",
     required: true
-  }, React.createElement(TextInput, {
+  }, /*#__PURE__*/React.createElement(TextInput, {
     name: "email",
     type: "email"
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     justify: "between",
     margin: {
       top: 'medium'
     }
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     label: "Cancel"
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     type: "reset",
     label: "Reset"
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     type: "submit",
     label: "Update",
     primary: true
@@ -69,5 +69,5 @@ var Example = function Example() {
 };
 
 storiesOf('Form', module).add('Validate on blur', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 });

@@ -25,7 +25,7 @@ var TestAnnouncer = function TestAnnouncer(_ref) {
     return announce('hello', 'assertive');
   });
 
-  return _react["default"].createElement("div", null, "hi");
+  return /*#__PURE__*/_react["default"].createElement("div", null, "hi");
 };
 
 var customBreakpointsTheme = {
@@ -51,30 +51,30 @@ var customBreakpointsTheme = {
 
 var SSRTester = function SSRTester(_ref2) {
   var ua = _ref2.ua;
-  return _react["default"].createElement(_.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, {
     theme: customBreakpointsTheme,
     userAgent: ua
-  }, _react["default"].createElement(_contexts.ResponsiveContext.Consumer, null, function (size) {
-    return _react["default"].createElement(_Heading.Heading, null, "Received size " + size + " for " + ua);
+  }, /*#__PURE__*/_react["default"].createElement(_contexts.ResponsiveContext.Consumer, null, function (size) {
+    return /*#__PURE__*/_react["default"].createElement(_Heading.Heading, null, "Received size " + size + " for " + ua);
   }));
 };
 
 describe('MnetUIBase', function () {
   afterEach(_react2.cleanup);
   test('basic', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, null));
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null));
 
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('mnet theme', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, {
       theme: _mnet.mnet
     }));
 
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('themeMode', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, {
       theme: _mnet.mnet,
       themeMode: "dark"
     }));
@@ -82,21 +82,21 @@ describe('MnetUIBase', function () {
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('cssVars', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, {
       cssVars: true
     }, "MnetUIBase App"));
 
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('full', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, {
       full: true
     }, "MnetUIBase App"));
 
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('background', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, {
       full: true,
       background: "#0000ff"
     }, "MnetUIBase App"));
@@ -104,8 +104,8 @@ describe('MnetUIBase', function () {
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('announce', function (done) {
-    var _render = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_contexts.AnnounceContext.Consumer, null, function (announce) {
-      return _react["default"].createElement(TestAnnouncer, {
+    var _render = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_contexts.AnnounceContext.Consumer, null, function (announce) {
+      return /*#__PURE__*/_react["default"].createElement(TestAnnouncer, {
         announce: announce
       });
     }))),
@@ -126,7 +126,7 @@ describe('MnetUIBase', function () {
   /* eslint-enable max-len */
   ].forEach(function (ua) {
     test("ssr rendering " + ua.substring(0, 25), function () {
-      var component = _reactTestRenderer["default"].create(_react["default"].createElement(SSRTester, {
+      var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(SSRTester, {
         ua: ua
       }));
 

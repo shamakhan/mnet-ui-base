@@ -11,37 +11,37 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var IconLabel = function IconLabel() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     round: "full",
     overflow: "hidden",
     background: "neutral-1"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     hoverIndicator: true,
     onClick: function onClick() {}
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     label: "Add",
     onClick: function onClick() {},
     primary: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     label: "Add",
     onClick: function onClick() {}
-  }), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     label: "Add",
     gap: "xlarge",
     onClick: function onClick() {}
-  }), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     label: "500px gap",
     gap: "500px",
     onClick: function onClick() {}
@@ -49,5 +49,5 @@ var IconLabel = function IconLabel() {
 };
 
 (0, _react2.storiesOf)('Button', module).add('Icon Label', function () {
-  return _react["default"].createElement(IconLabel, null);
+  return /*#__PURE__*/_react["default"].createElement(IconLabel, null);
 });

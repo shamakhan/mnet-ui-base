@@ -52,7 +52,7 @@ var normalize = function normalize(item, index, property) {
   return item[property];
 };
 
-var List = _react["default"].forwardRef(function (_ref, ref) {
+var List = /*#__PURE__*/_react["default"].forwardRef(function (_ref, ref) {
   var action = _ref.action,
       as = _ref.as,
       background = _ref.background,
@@ -75,7 +75,7 @@ var List = _react["default"].forwardRef(function (_ref, ref) {
       active = _useState[0],
       setActive = _useState[1];
 
-  return _react["default"].createElement(_Keyboard.Keyboard, {
+  return /*#__PURE__*/_react["default"].createElement(_Keyboard.Keyboard, {
     onEnter: onClickItem && active >= 0 ? function (event) {
       event.persist();
       var adjustedEvent = event;
@@ -89,17 +89,17 @@ var List = _react["default"].forwardRef(function (_ref, ref) {
     onDown: onClickItem && data && data.length ? function () {
       setActive(active >= 0 ? Math.min(active + 1, data.length - 1) : 0);
     } : undefined
-  }, _react["default"].createElement(StyledList, _extends({
+  }, /*#__PURE__*/_react["default"].createElement(StyledList, _extends({
     ref: ref,
     as: as || 'ul',
     tabIndex: onClickItem ? 0 : undefined
-  }, rest), _react["default"].createElement(_InfiniteScroll.InfiniteScroll, {
+  }, rest), /*#__PURE__*/_react["default"].createElement(_InfiniteScroll.InfiniteScroll, {
     items: data,
     onMore: onMore,
     scrollableAncestor: "window",
     step: step,
     renderMarker: function renderMarker(marker) {
-      return _react["default"].createElement(_Box.Box, {
+      return /*#__PURE__*/_react["default"].createElement(_Box.Box, {
         as: "li",
         flex: false
       }, marker);
@@ -116,7 +116,7 @@ var List = _react["default"].forwardRef(function (_ref, ref) {
       if (typeof primaryKey === 'function') {
         content = primaryKey(item, index);
       } else {
-        content = _react["default"].createElement(_Text.Text, {
+        content = /*#__PURE__*/_react["default"].createElement(_Text.Text, {
           key: "p",
           weight: "bold"
         }, normalize(item, index, primaryKey));
@@ -126,7 +126,7 @@ var List = _react["default"].forwardRef(function (_ref, ref) {
         if (typeof secondaryKey === 'function') {
           content = [content, secondaryKey(item, index)];
         } else {
-          content = [content, _react["default"].createElement(_Text.Text, {
+          content = [content, /*#__PURE__*/_react["default"].createElement(_Text.Text, {
             key: "s"
           }, normalize(item, index, secondaryKey))];
         }
@@ -145,7 +145,7 @@ var List = _react["default"].forwardRef(function (_ref, ref) {
     }
 
     if (action) {
-      content = [_react["default"].createElement(_Box.Box, {
+      content = [/*#__PURE__*/_react["default"].createElement(_Box.Box, {
         align: "start",
         key: "actionContainer" + index
       }, content), action(item, index)];
@@ -172,7 +172,7 @@ var List = _react["default"].forwardRef(function (_ref, ref) {
     }
 
     if (itemProps && itemProps[index]) {
-      boxProps = _extends({}, boxProps, {}, itemProps[index]);
+      boxProps = _extends({}, boxProps, itemProps[index]);
     }
 
     var clickProps;
@@ -204,7 +204,7 @@ var List = _react["default"].forwardRef(function (_ref, ref) {
       };
     }
 
-    return _react["default"].createElement(StyledItem, _extends({
+    return /*#__PURE__*/_react["default"].createElement(StyledItem, _extends({
       key: index,
       tag: "li",
       flex: false,

@@ -29,12 +29,12 @@ var Example = function Example() {
       value = _useState[0],
       setValue = _useState[1];
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     id: "select",
     name: "select",
     placeholder: "Select",
@@ -53,5 +53,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Select', module).add('Object options', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

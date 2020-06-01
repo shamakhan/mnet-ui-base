@@ -67,15 +67,15 @@ var SimpleSelect = function SimpleSelect(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     full: true,
     theme: customRoundedTheme
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Select, _extends({
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, _extends({
     id: "select",
     name: "select",
     placeholder: "Select",
@@ -104,7 +104,7 @@ for (var i = 1; i <= 200; i += 1) {
 (0, _react2.storiesOf)('Select', module) // Chromatic does not catch open Drop.
 // Screenshot taken before the Drop is open.
 .add('Custom Theme', function () {
-  return _react["default"].createElement(SimpleSelect, {
+  return /*#__PURE__*/_react["default"].createElement(SimpleSelect, {
     open: true
   });
 });

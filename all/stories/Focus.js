@@ -19,17 +19,17 @@ var customFocus = (0, _utils.deepMerge)(_mnetUiBase.mnet, {
 });
 
 var CustomDefaultProps = function CustomDefaultProps() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customFocus
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small",
     gap: "medium",
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "Focus on the input components and notice the custom focus color"), _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Focus on the input components and notice the custom focus color"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     placeholder: "hi"
-  }), _react["default"].createElement(_mnetUiBase.Anchor, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     href: ""
-  }, "Anchor"), _react["default"].createElement(_mnetUiBase.Menu, {
+  }, "Anchor"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Menu, {
     label: "Menu",
     items: [{
       label: 'One',
@@ -37,12 +37,12 @@ var CustomDefaultProps = function CustomDefaultProps() {
     }, {
       label: 'Two'
     }]
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Button",
     onClick: function onClick() {}
   })));
 };
 
 (0, _react2.storiesOf)('Theme', module).add('Focus', function () {
-  return _react["default"].createElement(CustomDefaultProps, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomDefaultProps, null);
 });

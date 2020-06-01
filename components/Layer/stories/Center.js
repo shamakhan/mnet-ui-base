@@ -35,33 +35,33 @@ var CenterLayer = function CenterLayer() {
     return setOpen2(undefined);
   };
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Trash, null),
-    label: _react["default"].createElement(_mnetUiBase.Text, null, _react["default"].createElement("strong", null, "Remove")),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Trash, null),
+    label: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, /*#__PURE__*/_react["default"].createElement("strong", null, "Remove")),
     onClick: onOpen,
     plain: true
-  })), open && _react["default"].createElement(_mnetUiBase.Layer, {
+  })), open && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Layer, {
     position: "center",
     onClickOutside: onClose,
     onEsc: onClose
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium",
     gap: "small",
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 3,
     margin: "none"
-  }, "Confirm"), _react["default"].createElement(_mnetUiBase.Text, null, "Are you sure you want to delete?"), _react["default"].createElement(_mnetUiBase.Box, {
+  }, "Confirm"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Are you sure you want to delete?"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     as: "footer",
     gap: "small",
     direction: "row",
@@ -71,31 +71,31 @@ var CenterLayer = function CenterLayer() {
       top: 'medium',
       bottom: 'small'
     }
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Open 2",
     onClick: onOpen2,
     color: "dark-3"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
-    label: _react["default"].createElement(_mnetUiBase.Text, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    label: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
       color: "white"
-    }, _react["default"].createElement("strong", null, "Delete")),
+    }, /*#__PURE__*/_react["default"].createElement("strong", null, "Delete")),
     onClick: onClose,
     primary: true,
     color: "status-critical"
-  })))), open2 && _react["default"].createElement(_mnetUiBase.Layer, {
+  })))), open2 && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Layer, {
     position: "top",
     onClickOutside: onClose2,
     onEsc: onClose2
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium",
     gap: "small",
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 3,
     margin: "none"
-  }, "Confirm 2"), _react["default"].createElement(_mnetUiBase.Select, {
+  }, "Confirm 2"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     options: ['one', 'two', 'three']
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     as: "footer",
     gap: "small",
     direction: "row",
@@ -105,7 +105,7 @@ var CenterLayer = function CenterLayer() {
       top: 'medium',
       bottom: 'small'
     }
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Close",
     onClick: onClose2,
     color: "dark-3"
@@ -113,5 +113,5 @@ var CenterLayer = function CenterLayer() {
 };
 
 (0, _react2.storiesOf)('Layer', module).add('Center', function () {
-  return _react["default"].createElement(CenterLayer, null);
+  return /*#__PURE__*/_react["default"].createElement(CenterLayer, null);
 });

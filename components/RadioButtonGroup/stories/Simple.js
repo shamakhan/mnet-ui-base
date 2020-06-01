@@ -22,10 +22,10 @@ var SimpleRadioButtonGroup = function SimpleRadioButtonGroup(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.RadioButtonGroup, _extends({
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RadioButtonGroup, _extends({
     name: "radio",
     options: [{
       label: 'Choice 1',
@@ -45,5 +45,5 @@ var SimpleRadioButtonGroup = function SimpleRadioButtonGroup(_ref) {
 };
 
 (0, _react2.storiesOf)('RadioButtonGroup', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleRadioButtonGroup, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleRadioButtonGroup, null);
 });

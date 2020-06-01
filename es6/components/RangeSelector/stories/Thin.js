@@ -14,14 +14,14 @@ function Thin(_ref) {
       range = _useState[0],
       setRange = _useState[1];
 
-  return React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(Box, {
     gap: "small",
     pad: "xlarge"
-  }, label ? React.createElement(Text, null, label) : null, React.createElement(Stack, null, React.createElement(Box, {
+  }, label ? /*#__PURE__*/React.createElement(Text, null, label) : null, /*#__PURE__*/React.createElement(Stack, null, /*#__PURE__*/React.createElement(Box, {
     background: "light-4",
     height: "6px",
     direction: "row"
-  }), React.createElement(RangeSelector, {
+  }), /*#__PURE__*/React.createElement(RangeSelector, {
     direction: "horizontal",
     min: RANGE_MIN,
     max: RANGE_MAX,
@@ -30,22 +30,22 @@ function Thin(_ref) {
     onChange: function onChange(nextRange) {
       setRange(nextRange);
     }
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     align: "center"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     size: "small"
   }, range[0] + "% - " + range[1] + "%")));
 }
 
 function App() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     pad: "small"
-  }, React.createElement(Thin, {
+  }, /*#__PURE__*/React.createElement(Thin, {
     label: "My Range Selector"
   })));
 }
 
-render(React.createElement(App, null), document.getElementById('root'));
+render( /*#__PURE__*/React.createElement(App, null), document.getElementById('root'));
 storiesOf('RangeSelector', module).add('Thin', function () {
-  return React.createElement(App, null);
+  return /*#__PURE__*/React.createElement(App, null);
 });

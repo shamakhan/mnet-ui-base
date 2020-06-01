@@ -14,19 +14,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var DropContent = function DropContent(_ref) {
   var onClose = _ref.onClose;
-  return _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     justify: "between",
     align: "center"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 3,
     margin: "small"
-  }, "Heading"), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Close, null),
+  }, "Heading"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Close, null),
     onClick: onClose
-  })), _react["default"].createElement(_mnetUiBase.Text, null, "Content"));
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Content"));
 };
 
 DropContent.propTypes = {
@@ -46,15 +46,15 @@ var SimpleDropButton = function SimpleDropButton() {
     setOpen(false);
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.DropButton, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DropButton, {
     label: "Open",
     open: open,
     onOpen: onOpen,
     onClose: onClose,
-    dropContent: _react["default"].createElement(DropContent, {
+    dropContent: /*#__PURE__*/_react["default"].createElement(DropContent, {
       onClose: onClose
     }),
     dropProps: {
@@ -66,5 +66,5 @@ var SimpleDropButton = function SimpleDropButton() {
 };
 
 (0, _react2.storiesOf)('DropButton', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleDropButton, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleDropButton, null);
 });

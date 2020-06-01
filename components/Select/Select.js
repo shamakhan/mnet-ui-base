@@ -56,7 +56,7 @@ var defaultDropAlign = {
 var defaultMessages = {
   multiple: 'multiple'
 };
-var Select = (0, _react.forwardRef)(function (_ref, ref) {
+var Select = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var a11yTitle = _ref.a11yTitle,
       alignSelf = _ref.alignSelf,
       children = _ref.children,
@@ -190,7 +190,7 @@ var Select = (0, _react.forwardRef)(function (_ref, ref) {
 
   var selectValue = (0, _react.useMemo)(function () {
     if (valueLabel) return valueLabel;
-    if (_react["default"].isValidElement(value)) return value; // deprecated
+    if ( /*#__PURE__*/_react["default"].isValidElement(value)) return value; // deprecated
 
     return undefined;
   }, [value, valueLabel]); // text to show
@@ -205,10 +205,10 @@ var Select = (0, _react.forwardRef)(function (_ref, ref) {
     return undefined;
   }, [labelKey, messages, optionIndexesInValue, options, selectValue]);
   var iconColor = (0, _utils.normalizeColor)(theme.select.icons.color || 'control', theme);
-  return _react["default"].createElement(_Keyboard.Keyboard, {
+  return /*#__PURE__*/_react["default"].createElement(_Keyboard.Keyboard, {
     onDown: onRequestOpen,
     onUp: onRequestOpen
-  }, _react["default"].createElement(StyledSelectDropButton, {
+  }, /*#__PURE__*/_react["default"].createElement(StyledSelectDropButton, {
     ref: ref,
     id: id,
     disabled: disabled === true || undefined,
@@ -222,7 +222,7 @@ var Select = (0, _react.forwardRef)(function (_ref, ref) {
     onOpen: onRequestOpen,
     onClose: onRequestClose,
     onClick: onClick,
-    dropContent: _react["default"].createElement(_SelectContainer.SelectContainer, {
+    dropContent: /*#__PURE__*/_react["default"].createElement(_SelectContainer.SelectContainer, {
       disabled: disabled,
       disabledKey: disabledKey,
       dropHeight: dropHeight,
@@ -246,16 +246,16 @@ var Select = (0, _react.forwardRef)(function (_ref, ref) {
     plain: plain,
     dropProps: dropProps,
     theme: theme
-  }, _react["default"].createElement(_Box.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     align: "center",
     direction: "row",
     justify: "between",
     background: theme.select.background
-  }, _react["default"].createElement(_Box.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     direction: "row",
     flex: true,
     basis: "auto"
-  }, selectValue || _react["default"].createElement(SelectTextInput, _extends({
+  }, selectValue || /*#__PURE__*/_react["default"].createElement(SelectTextInput, _extends({
     a11yTitle: a11yTitle && "" + a11yTitle + (value && typeof value === 'string' ? ", " + value : ''),
     id: id ? id + "__input" : undefined,
     name: name,
@@ -270,13 +270,13 @@ var Select = (0, _react.forwardRef)(function (_ref, ref) {
     size: size,
     theme: theme,
     onClick: disabled === true ? undefined : onRequestOpen
-  }))), SelectIcon && _react["default"].createElement(_Box.Box, {
+  }))), SelectIcon && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     margin: theme.select.icons.margin,
     flex: false,
     style: {
       minWidth: 'auto'
     }
-  }, (0, _react.isValidElement)(SelectIcon) ? SelectIcon : _react["default"].createElement(SelectIcon, {
+  }, /*#__PURE__*/(0, _react.isValidElement)(SelectIcon) ? SelectIcon : /*#__PURE__*/_react["default"].createElement(SelectIcon, {
     color: iconColor,
     size: size
   })))));

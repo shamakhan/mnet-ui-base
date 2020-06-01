@@ -29,25 +29,25 @@ var FormFieldSelect = function FormFieldSelect() {
   var onChange = (0, _react.useCallback)(function (nextValue) {
     return setValue(nextValue);
   }, []);
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Form, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Form, {
     value: value,
     onChange: onChange,
     onSubmit: function onSubmit() {
       return console.log('Submit', value);
     }
-  }, _react["default"].createElement(_mnetUiBase.FormField, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Label",
     name: "select"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     name: "select",
     placeholder: "placeholder",
     options: options,
     labelKey: "label",
     valueKey: "value"
-  })), _react["default"].createElement(_mnetUiBase.Button, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "submit",
     label: "Update",
     primary: true
@@ -55,5 +55,5 @@ var FormFieldSelect = function FormFieldSelect() {
 };
 
 (0, _react2.storiesOf)('Form', module).add('Select', function () {
-  return _react["default"].createElement(FormFieldSelect, null);
+  return /*#__PURE__*/_react["default"].createElement(FormFieldSelect, null);
 });

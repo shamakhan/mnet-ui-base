@@ -17,12 +17,12 @@ var Example = function Example() {
       dates = _useState[0],
       setDates = _useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Calendar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     dates: dates,
     onSelect: function onSelect(date) {
       var nextDates = [].concat(dates);
@@ -42,5 +42,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Calendar', module).add('Multiple', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

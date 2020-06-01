@@ -17,20 +17,20 @@ var DateRangeMaskedInput = function DateRangeMaskedInput() {
       value = _React$useState[0],
       setValue = _React$useState[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.MaskedInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MaskedInput, {
     mask: [{
       length: [1, 2],
       options: Array.from({
@@ -104,5 +104,5 @@ var DateRangeMaskedInput = function DateRangeMaskedInput() {
 };
 
 (0, _react2.storiesOf)('MaskedInput', module).add('Date range', function () {
-  return _react["default"].createElement(DateRangeMaskedInput, null);
+  return /*#__PURE__*/_react["default"].createElement(DateRangeMaskedInput, null);
 });

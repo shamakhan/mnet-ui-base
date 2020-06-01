@@ -9,17 +9,17 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var DigitalClock = function DigitalClock() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Clock, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Clock, {
     type: "digital"
   })));
 };
 
 (0, _react2.storiesOf)('Clock', module).add('Digital', function () {
-  return _react["default"].createElement(DigitalClock, null);
+  return /*#__PURE__*/_react["default"].createElement(DigitalClock, null);
 }, {
   chromatic: {
     disable: true

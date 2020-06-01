@@ -5,10 +5,10 @@ import { storiesOf } from '@storybook/react';
 import { Box, FormField, Form, TextArea } from 'mnet-ui-base';
 
 var FormFieldTextArea = function FormFieldTextArea(props) {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Form, null, React.createElement(FormField, _extends({
+  }, /*#__PURE__*/React.createElement(Form, null, /*#__PURE__*/React.createElement(FormField, _extends({
     label: "Label",
     htmlFor: "text-area"
   }, props, {
@@ -18,5 +18,5 @@ var FormFieldTextArea = function FormFieldTextArea(props) {
 };
 
 storiesOf('Form', module).add('TextArea', function () {
-  return React.createElement(FormFieldTextArea, null);
+  return /*#__PURE__*/React.createElement(FormFieldTextArea, null);
 });

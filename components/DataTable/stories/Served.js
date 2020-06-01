@@ -49,10 +49,10 @@ var ServedDataTable = function ServedDataTable() {
     setData2(nextData);
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.DataTable, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DataTable, {
     columns: _data.columns.map(function (column) {
       return _extends({}, column, {
         search: column.property === 'name' || column.property === 'location'
@@ -64,5 +64,5 @@ var ServedDataTable = function ServedDataTable() {
 };
 
 (0, _react2.storiesOf)('DataTable', module).add('Served', function () {
-  return _react["default"].createElement(ServedDataTable, null);
+  return /*#__PURE__*/_react["default"].createElement(ServedDataTable, null);
 });

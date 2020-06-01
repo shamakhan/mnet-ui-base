@@ -5,16 +5,16 @@ import { storiesOf } from '@storybook/react';
 import { Box, FormField, TextInput } from 'mnet-ui-base';
 
 var FormFieldHelpError = function FormFieldHelpError(props) {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(FormField, _extends({
+  }, /*#__PURE__*/React.createElement(FormField, _extends({
     label: "Label",
     htmlFor: "text-input"
   }, props, {
     help: "Text to help the user know what is possible",
     error: "Text to call attention to an issue with this field"
-  }), React.createElement(TextInput, {
+  }), /*#__PURE__*/React.createElement(TextInput, {
     id: "text-input",
     placeholder: "placeholder",
     value: "Value",
@@ -23,5 +23,5 @@ var FormFieldHelpError = function FormFieldHelpError(props) {
 };
 
 storiesOf('Form', module).add('Help and Error', function () {
-  return React.createElement(FormFieldHelpError, null);
+  return /*#__PURE__*/React.createElement(FormFieldHelpError, null);
 });

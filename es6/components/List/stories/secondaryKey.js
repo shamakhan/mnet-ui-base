@@ -4,10 +4,10 @@ import { Box, List } from 'mnet-ui-base';
 import { data } from './data';
 
 var SecondaryKeyList = function SecondaryKeyList() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(List, {
+  }, /*#__PURE__*/React.createElement(List, {
     data: data.slice(0, 10),
     primaryKey: "entry",
     secondaryKey: "location"
@@ -15,5 +15,5 @@ var SecondaryKeyList = function SecondaryKeyList() {
 };
 
 storiesOf('List', module).add('secondaryKey', function () {
-  return React.createElement(SecondaryKeyList, null);
+  return /*#__PURE__*/React.createElement(SecondaryKeyList, null);
 });

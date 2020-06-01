@@ -50,17 +50,17 @@ var Components = function Components() {
   var themeCanMode = useMemo(function () {
     return theme && theme.global.colors.background && theme.global.colors.background.dark;
   }, [theme]);
-  var content = [React.createElement(Box, {
+  var content = [/*#__PURE__*/React.createElement(Box, {
     key: "type",
     align: "start",
     gap: "small"
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     margin: {
       top: 'none'
     }
-  }, "Heading"), React.createElement(Paragraph, null, "Paragraph"), React.createElement(Text, null, "Text"), React.createElement(Anchor, {
+  }, "Heading"), /*#__PURE__*/React.createElement(Paragraph, null, "Paragraph"), /*#__PURE__*/React.createElement(Text, null, "Text"), /*#__PURE__*/React.createElement(Anchor, {
     href: ""
-  }, "Anchor"), React.createElement(Menu, {
+  }, "Anchor"), /*#__PURE__*/React.createElement(Menu, {
     label: "Menu",
     items: [{
       label: 'One',
@@ -68,27 +68,27 @@ var Components = function Components() {
     }, {
       label: 'Two'
     }]
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "Button",
     onClick: function onClick() {}
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     plain: true,
     onClick: function onClick() {}
-  }, React.createElement(Text, null, "plain button"))), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "plain button"))), /*#__PURE__*/React.createElement(Box, {
     key: "input",
     gap: "small"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     placeholder: "Select",
     options: ['One', 'Two'],
     onChange: function onChange() {}
-  }), React.createElement(CheckBox, {
+  }), /*#__PURE__*/React.createElement(CheckBox, {
     name: "check",
     checked: checkBox,
     label: "CheckBox",
     onChange: function onChange(event) {
       return setCheckBox(event.target.checked);
     }
-  }), React.createElement(CheckBox, {
+  }), /*#__PURE__*/React.createElement(CheckBox, {
     name: "toggle",
     toggle: true,
     checked: checkBox,
@@ -96,33 +96,33 @@ var Components = function Components() {
     onChange: function onChange(event) {
       return setCheckBox(event.target.checked);
     }
-  }), React.createElement(RadioButtonGroup, {
+  }), /*#__PURE__*/React.createElement(RadioButtonGroup, {
     name: "radio",
     options: ['RadioButton 1', 'RadioButton 2'],
     value: radioButton,
     onChange: function onChange(event) {
       return setRadioButton(event.target.value);
     }
-  }), React.createElement(TextInput, {
+  }), /*#__PURE__*/React.createElement(TextInput, {
     placeholder: "TextInput"
-  }), React.createElement(TextArea, {
+  }), /*#__PURE__*/React.createElement(TextArea, {
     placeholder: "TextArea"
-  }), React.createElement(RangeInput, {
+  }), /*#__PURE__*/React.createElement(RangeInput, {
     value: 24,
     onChange: function onChange() {}
-  }), React.createElement(Stack, null, React.createElement(Box, {
+  }), /*#__PURE__*/React.createElement(Stack, null, /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     justify: "between"
   }, [0, 1, 2, 3].map(function (value) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       key: value,
       pad: "small"
-    }, React.createElement(Text, {
+    }, /*#__PURE__*/React.createElement(Text, {
       style: {
         fontFamily: 'monospace'
       }
     }, value));
-  })), React.createElement(RangeSelector, {
+  })), /*#__PURE__*/React.createElement(RangeSelector, {
     direction: "horizontal",
     invert: false,
     min: 0,
@@ -133,24 +133,24 @@ var Components = function Components() {
     onChange: function onChange(values) {
       return setRangeSelector(values);
     }
-  })), React.createElement(FormField, {
+  })), /*#__PURE__*/React.createElement(FormField, {
     label: "FormField"
-  }, React.createElement(TextInput, {
+  }, /*#__PURE__*/React.createElement(TextInput, {
     placeholder: "TextInput"
-  }))), React.createElement(Box, {
+  }))), /*#__PURE__*/React.createElement(Box, {
     key: "time",
     gap: "medium"
-  }, React.createElement(Calendar, {
+  }, /*#__PURE__*/React.createElement(Calendar, {
     size: "small"
-  }), React.createElement(Clock, {
+  }), /*#__PURE__*/React.createElement(Clock, {
     type: "digital",
     className: "chromatic-ignore"
-  }), React.createElement(Clock, {
+  }), /*#__PURE__*/React.createElement(Clock, {
     className: "chromatic-ignore"
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     key: "dataTable",
     alignSelf: "start"
-  }, React.createElement(DataTable, {
+  }, /*#__PURE__*/React.createElement(DataTable, {
     columns: [{
       property: 'name',
       header: 'Name'
@@ -169,52 +169,52 @@ var Components = function Components() {
       color: 'orange'
     }],
     sortable: true
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     key: "accordion"
-  }, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
+  }, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
     label: "Accordion Panel 1"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "small"
-  }, React.createElement(Text, null, "Accordion panel 1 content"))), React.createElement(AccordionPanel, {
+  }, /*#__PURE__*/React.createElement(Text, null, "Accordion panel 1 content"))), /*#__PURE__*/React.createElement(AccordionPanel, {
     label: "Accordion Panel 2"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "small"
-  }, React.createElement(Text, null, "Accordion panel 2 content"))))), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "Accordion panel 2 content"))))), /*#__PURE__*/React.createElement(Box, {
     key: "tabs"
-  }, React.createElement(Tabs, {
+  }, /*#__PURE__*/React.createElement(Tabs, {
     activeIndex: tabIndex,
     onActive: function onActive(index) {
       return setTabIndex(index);
     }
-  }, React.createElement(Tab, {
+  }, /*#__PURE__*/React.createElement(Tab, {
     title: "Tab 1"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "small"
-  }, React.createElement(Text, null, "Tab 1 content"))), React.createElement(Tab, {
+  }, /*#__PURE__*/React.createElement(Text, null, "Tab 1 content"))), /*#__PURE__*/React.createElement(Tab, {
     title: "Tab 2"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "small"
-  }, React.createElement(Text, null, "Tab 2 content")))))];
-  return React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(Text, null, "Tab 2 content")))))];
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       height: '100vh',
       display: 'flex',
       flexDirection: 'column'
     }
-  }, React.createElement(MnetUIBase, {
+  }, /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet,
     style: {
       flex: '0 0 auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     direction: "row-responsive",
     gap: "medium",
     justify: "end",
     align: "center",
     margin: "small"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     basis: "small"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     plain: true,
     size: "small",
     options: Object.keys(themes),
@@ -222,15 +222,15 @@ var Components = function Components() {
     onChange: function onChange(event) {
       return setThemeName(event.option);
     }
-  })), themeCanMode && React.createElement(CheckBox, {
+  })), themeCanMode && /*#__PURE__*/React.createElement(CheckBox, {
     label: "dark",
     checked: themeMode === 'dark',
     onChange: function onChange() {
       return setThemeMode(themeMode === 'dark' ? 'light' : 'dark');
     }
-  }), !themeCanMode && React.createElement(Box, {
+  }), !themeCanMode && /*#__PURE__*/React.createElement(Box, {
     basis: "small"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     plain: true,
     placeholder: "background",
     size: "small",
@@ -239,9 +239,9 @@ var Components = function Components() {
     onChange: function onChange(event) {
       return setBackground(event.option);
     }
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     basis: "small"
-  }, React.createElement(RangeInput, {
+  }, /*#__PURE__*/React.createElement(RangeInput, {
     min: 16,
     max: 36,
     step: 2,
@@ -249,23 +249,23 @@ var Components = function Components() {
     onChange: function onChange(event) {
       return setBaseSize(parseInt(event.target.value, 10));
     }
-  })), React.createElement(Text, {
+  })), /*#__PURE__*/React.createElement(Text, {
     size: "small"
-  }, baseSize + "px base spacing"))), React.createElement(MnetUIBase, {
+  }, baseSize + "px base spacing"))), /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: theme,
     themeMode: themeMode,
     style: {
       flex: '1 1'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     pad: "medium",
     background: background || theme.global.colors.background,
     overflow: "auto"
-  }, Grid.available ? React.createElement(Grid, {
+  }, Grid.available ? /*#__PURE__*/React.createElement(Grid, {
     columns: "small",
     gap: "medium"
-  }, content) : React.createElement(Box, {
+  }, content) : /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     wrap: true,
     align: "start",
@@ -274,5 +274,5 @@ var Components = function Components() {
 };
 
 storiesOf('All', module).add('All', function () {
-  return React.createElement(Components, null);
+  return /*#__PURE__*/React.createElement(Components, null);
 });

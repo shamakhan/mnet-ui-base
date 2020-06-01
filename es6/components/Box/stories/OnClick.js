@@ -4,11 +4,11 @@ import { Attraction } from "grommet-icons/es6/icons/Attraction";
 import { Box, Text } from 'mnet-ui-base';
 
 var OnClickBox = function OnClickBox() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     justify: "center",
     align: "center",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     border: true,
     pad: "large",
     align: "center",
@@ -18,11 +18,11 @@ var OnClickBox = function OnClickBox() {
     onClick: function onClick() {
       alert('clicked');
     }
-  }, React.createElement(Attraction, {
+  }, /*#__PURE__*/React.createElement(Attraction, {
     size: "large"
-  }), React.createElement(Text, null, "Party"))));
+  }), /*#__PURE__*/React.createElement(Text, null, "Party"))));
 };
 
 storiesOf('Box', module).add('onClick', function () {
-  return React.createElement(OnClickBox, null);
+  return /*#__PURE__*/React.createElement(OnClickBox, null);
 });

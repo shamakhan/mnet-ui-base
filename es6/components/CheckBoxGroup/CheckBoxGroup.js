@@ -6,7 +6,7 @@ import React, { forwardRef, useContext, useMemo } from 'react';
 import { Box } from '../Box';
 import { CheckBox } from '../CheckBox';
 import { FormContext } from '../Form/FormContext';
-export var CheckBoxGroup = forwardRef(function (_ref, ref) {
+export var CheckBoxGroup = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var valueProp = _ref.value,
       disabledProp = _ref.disabled,
       _ref$gap = _ref.gap,
@@ -54,7 +54,7 @@ export var CheckBoxGroup = forwardRef(function (_ref, ref) {
     }
   };
 
-  return React.createElement(Box, _extends({
+  return /*#__PURE__*/React.createElement(Box, _extends({
     ref: ref,
     gap: gap
   }, rest), options.map(function (option) {
@@ -73,7 +73,7 @@ export var CheckBoxGroup = forwardRef(function (_ref, ref) {
       disabled: disabled
     });
 
-    return React.createElement(CheckBox, _extends({
+    return /*#__PURE__*/React.createElement(CheckBox, _extends({
       key: label
     }, optionProps, {
       disabled: disabled,

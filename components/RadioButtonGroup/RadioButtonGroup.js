@@ -21,7 +21,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var RadioButtonGroup = (0, _react.forwardRef)(function (_ref, ref) {
+var RadioButtonGroup = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var children = _ref.children,
       disabled = _ref.disabled,
       _ref$gap = _ref.gap,
@@ -113,13 +113,13 @@ var RadioButtonGroup = (0, _react.forwardRef)(function (_ref, ref) {
     return focus && setFocus(false);
   };
 
-  return _react["default"].createElement(_Keyboard.Keyboard, {
+  return /*#__PURE__*/_react["default"].createElement(_Keyboard.Keyboard, {
     target: "document",
     onUp: focus ? onPrevious : undefined,
     onDown: focus ? onNext : undefined,
     onLeft: focus ? onPrevious : undefined,
     onRight: focus ? onNext : undefined
-  }, _react["default"].createElement(_Box.Box, _extends({
+  }, /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
     ref: ref,
     gap: gap
   }, rest), options.map(function (_ref2, index) {
@@ -129,7 +129,7 @@ var RadioButtonGroup = (0, _react.forwardRef)(function (_ref, ref) {
         optionValue = _ref2.value,
         optionRest = _objectWithoutPropertiesLoose(_ref2, ["disabled", "id", "label", "value"]);
 
-    return _react["default"].createElement(_RadioButton.RadioButton, _extends({
+    return /*#__PURE__*/_react["default"].createElement(_RadioButton.RadioButton, _extends({
       ref: function ref(aRef) {
         optionRefs.current[index] = aRef;
       },

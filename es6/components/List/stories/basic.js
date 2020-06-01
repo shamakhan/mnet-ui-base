@@ -4,14 +4,14 @@ import { Box, List } from 'mnet-ui-base';
 import { locations } from './data';
 
 var BasicList = function BasicList() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(List, {
+  }, /*#__PURE__*/React.createElement(List, {
     data: locations
   })));
 };
 
 storiesOf('List', module).add('basic', function () {
-  return React.createElement(BasicList, null);
+  return /*#__PURE__*/React.createElement(BasicList, null);
 });

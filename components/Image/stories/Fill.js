@@ -9,26 +9,26 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Fill = function Fill() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "start",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     height: "small",
     width: "small",
     border: true
-  }, _react["default"].createElement(_mnetUiBase.Anchor, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     href: "#"
-  }, _react["default"].createElement(_mnetUiBase.Image, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Image, {
     fit: "cover",
     fill: true,
     src: "//v2.mnet.io/assets/IMG_4245.jpg"
-  }))), _react["default"].createElement(_mnetUiBase.Box, {
+  }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     height: "small",
     width: "small",
     border: true
-  }, _react["default"].createElement(_mnetUiBase.Anchor, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     href: "#"
-  }, _react["default"].createElement(_mnetUiBase.Image, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Image, {
     fit: "contain",
     fill: true,
     src: "//v2.mnet.io/assets/IMG_4245.jpg"
@@ -36,5 +36,5 @@ var Fill = function Fill() {
 };
 
 (0, _react2.storiesOf)('Image', module).add('Fill', function () {
-  return _react["default"].createElement(Fill, null);
+  return /*#__PURE__*/_react["default"].createElement(Fill, null);
 });

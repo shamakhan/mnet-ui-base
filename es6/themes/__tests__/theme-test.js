@@ -23,47 +23,47 @@ var customTheme = {
 };
 describe('MnetUIBase', function () {
   test('default theme', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, colors.map(function (color) {
-      return React.createElement(Box, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, colors.map(function (color) {
+      return /*#__PURE__*/React.createElement(Box, {
         key: color,
         background: color
-      }, React.createElement(Text, null, color));
+      }, /*#__PURE__*/React.createElement(Text, null, color));
     })));
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
   test('dark theme', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: dark
     }, colors.map(function (color) {
-      return React.createElement(Box, {
+      return /*#__PURE__*/React.createElement(Box, {
         key: color,
         background: color
-      }, React.createElement(Text, null, color));
+      }, /*#__PURE__*/React.createElement(Text, null, color));
     })));
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
   test('custom theme', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: customTheme
-    }, React.createElement(Box, null, React.createElement(Anchor, {
-      icon: React.createElement(Add, null),
+    }, /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Anchor, {
+      icon: /*#__PURE__*/React.createElement(Add, null),
       label: "Add"
-    }), React.createElement(Anchor, {
-      icon: React.createElement(Add, null),
+    }), /*#__PURE__*/React.createElement(Anchor, {
+      icon: /*#__PURE__*/React.createElement(Add, null),
       label: "Add",
       color: "custom"
-    })), React.createElement(Box, {
+    })), /*#__PURE__*/React.createElement(Box, {
       background: "dark-1"
-    }, React.createElement(Anchor, {
-      icon: React.createElement(Add, null),
+    }, /*#__PURE__*/React.createElement(Anchor, {
+      icon: /*#__PURE__*/React.createElement(Add, null),
       label: "Add"
-    }), React.createElement(Anchor, {
-      icon: React.createElement(Add, null),
+    }), /*#__PURE__*/React.createElement(Anchor, {
+      icon: /*#__PURE__*/React.createElement(Add, null),
       label: "Add",
       color: "custom"
-    })), React.createElement(Box, null, React.createElement(TextInput, {
+    })), /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(TextInput, {
       value: "Value"
     }))));
     var tree = component.toJSON();

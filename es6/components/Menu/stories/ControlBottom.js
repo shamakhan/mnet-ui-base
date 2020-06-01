@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react';
 import { Box, Menu } from 'mnet-ui-base';
 
 var ControlBottom = function ControlBottom() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     height: "medium",
     justify: "center",
     align: "center",
     pad: "large"
-  }, React.createElement(Menu, {
+  }, /*#__PURE__*/React.createElement(Menu, {
     dropProps: {
       align: {
         bottom: 'bottom',
@@ -30,5 +30,5 @@ var ControlBottom = function ControlBottom() {
 };
 
 storiesOf('Menu', module).add('Bottom Control Button', function () {
-  return React.createElement(ControlBottom, null);
+  return /*#__PURE__*/React.createElement(ControlBottom, null);
 });

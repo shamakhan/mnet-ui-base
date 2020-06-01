@@ -10,11 +10,11 @@ var SelectionList = function SelectionList() {
       selected = _React$useState[0],
       setSelected = _React$useState[1];
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large",
     gap: "large"
-  }, React.createElement(List, {
+  }, /*#__PURE__*/React.createElement(List, {
     data: data.slice(0, 10),
     itemProps: selected >= 0 ? (_ref = {}, _ref[selected] = {
       background: 'brand'
@@ -26,5 +26,5 @@ var SelectionList = function SelectionList() {
 };
 
 storiesOf('List', module).add('selection', function () {
-  return React.createElement(SelectionList, null);
+  return /*#__PURE__*/React.createElement(SelectionList, null);
 });

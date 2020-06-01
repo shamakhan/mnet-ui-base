@@ -33,24 +33,24 @@ var OverflowDrop = function OverflowDrop() {
   (0, _react.useEffect)(function () {
     return setShowDrop(true);
   }, []);
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     theme: _mnetUiBase.mnet,
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "dark-3",
     pad: "medium",
     align: "center",
     justify: "start",
     ref: targetRef
-  }, "Target"), targetRef.current && _react["default"].createElement(_mnetUiBase.Drop, {
+  }, "Target"), targetRef.current && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Drop, {
     overflow: "unset",
     align: {
       top: 'bottom',
@@ -60,27 +60,27 @@ var OverflowDrop = function OverflowDrop() {
     onClose: function onClose() {
       return setShowCalendar(false);
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     height: "small"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 4
-  }, "Select Start Date"), _react["default"].createElement("div", {
+  }, "Select Start Date"), /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       position: 'relative'
     }
-  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     ref: inputRef,
     value: date || '',
     placeholder: "Focus on me",
     onFocus: function onFocus() {
       return setShowCalendar(true);
     }
-  }), showCalendar && _react["default"].createElement("div", {
+  }), showCalendar && /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       position: 'absolute',
       background: '#eee'
     }
-  }, _react["default"].createElement(_mnetUiBase.Calendar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     date: date,
     onSelect: onSelect,
     size: "small"
@@ -88,5 +88,5 @@ var OverflowDrop = function OverflowDrop() {
 };
 
 (0, _react2.storiesOf)('Drop', module).add('Overflow', function () {
-  return _react["default"].createElement(OverflowDrop, null);
+  return /*#__PURE__*/_react["default"].createElement(OverflowDrop, null);
 });

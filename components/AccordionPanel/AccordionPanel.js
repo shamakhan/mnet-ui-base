@@ -29,7 +29,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var AccordionPanel = (0, _react.forwardRef)(function (_ref, ref) {
+var AccordionPanel = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var children = _ref.children,
       header = _ref.header,
       label = _ref.label,
@@ -82,13 +82,13 @@ var AccordionPanel = (0, _react.forwardRef)(function (_ref, ref) {
       theme.global.borderSize[panelBorder.size] || panelBorder.size || theme.global.borderSize.xsmall // '-1px'
       ) + "px"
     };
-  return _react["default"].createElement(_Box.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     ref: ref,
     flex: false,
     onClick: onClick,
     border: panelBorder,
     margin: abutMargin
-  }, _react["default"].createElement(_Button.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_Button.Button, {
     role: "tab",
     "aria-selected": active,
     "aria-expanded": active,
@@ -115,27 +115,27 @@ var AccordionPanel = (0, _react.forwardRef)(function (_ref, ref) {
     style: focus ? {
       zIndex: 1
     } : undefined
-  }, header || _react["default"].createElement(_Box.Box, _extends({
+  }, header || /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
     align: "center",
     direction: "row",
     justify: "between"
-  }, rest), typeof label === 'string' ? _react["default"].createElement(_Box.Box, {
+  }, rest), typeof label === 'string' ? /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     pad: {
       horizontal: 'xsmall'
     }
-  }, _react["default"].createElement(_Heading.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_Heading.Heading, {
     level: theme.accordion.heading && theme.accordion.heading.level || 4,
     margin: theme.accordion.heading && theme.accordion.heading.margin || undefined,
     color: hover
-  }, label)) : label, AccordionIcon && _react["default"].createElement(_Box.Box, {
+  }, label)) : label, AccordionIcon && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     pad: {
       horizontal: 'small'
     }
-  }, _react["default"].createElement(AccordionIcon, {
+  }, /*#__PURE__*/_react["default"].createElement(AccordionIcon, {
     color: iconColor
-  })))), _react["default"].createElement(_Box.Box, {
+  })))), /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     border: contentBorder
-  }, animate ? _react["default"].createElement(_Collapsible.Collapsible, {
+  }, animate ? /*#__PURE__*/_react["default"].createElement(_Collapsible.Collapsible, {
     open: active
   }, children) : active && children));
 });

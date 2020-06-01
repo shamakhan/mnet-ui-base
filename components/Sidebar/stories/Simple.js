@@ -14,7 +14,7 @@ var _grommetIcons = require("grommet-icons");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var SidebarHeader = function SidebarHeader() {
-  return _react["default"].createElement(_mnetUiBase.Avatar, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Avatar, {
     border: {
       size: 'small',
       color: 'accent-2'
@@ -24,68 +24,68 @@ var SidebarHeader = function SidebarHeader() {
 };
 
 var SidebarFooter = function SidebarFooter() {
-  return _react["default"].createElement(_mnetUiBase.Nav, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Nav, {
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Chat, null),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Chat, null),
     hoverIndicator: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Help, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Help, null),
     hoverIndicator: true
   }));
 };
 
 var MainNavigation = function MainNavigation() {
-  return _react["default"].createElement(_mnetUiBase.Nav, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Nav, {
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.StatusInfoSmall, null),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusInfoSmall, null),
     hoverIndicator: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Projects, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Projects, null),
     hoverIndicator: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Clock, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Clock, null),
     hoverIndicator: true
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small",
     border: {
       color: 'white',
       side: 'bottom'
     },
     hoverIndicator: true
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gap: "small",
     pad: {
       vertical: 'medium'
     },
     hoverIndicator: true
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Analytics, null),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Analytics, null),
     hoverIndicator: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Configure, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Configure, null),
     hoverIndicator: true
   })));
 };
 
 var SidebarIcons = function SidebarIcons() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBase.mnet,
     full: true
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     height: {
       min: '100%'
     }
-  }, _react["default"].createElement(_mnetUiBase.Sidebar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Sidebar, {
     background: "accent-1",
-    header: _react["default"].createElement(SidebarHeader, null),
-    footer: _react["default"].createElement(SidebarFooter, null)
-  }, _react["default"].createElement(MainNavigation, null))));
+    header: /*#__PURE__*/_react["default"].createElement(SidebarHeader, null),
+    footer: /*#__PURE__*/_react["default"].createElement(SidebarFooter, null)
+  }, /*#__PURE__*/_react["default"].createElement(MainNavigation, null))));
 };
 
 exports.SidebarIcons = SidebarIcons;
 (0, _react2.storiesOf)('Sidebar', module).add('Icons', function () {
-  return _react["default"].createElement(SidebarIcons, null);
+  return /*#__PURE__*/_react["default"].createElement(SidebarIcons, null);
 });

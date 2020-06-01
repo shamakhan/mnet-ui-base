@@ -6,11 +6,11 @@ import { Box, Drop, Text, ThemeContext } from 'mnet-ui-base';
 var OneDrop = function OneDrop(_ref) {
   var align = _ref.align,
       target = _ref.target;
-  return React.createElement(Drop, {
+  return /*#__PURE__*/React.createElement(Drop, {
     align: align,
     target: target,
     stretch: false
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "small"
   }));
 };
@@ -29,10 +29,10 @@ var Set = function Set(_ref2) {
       setTarget = _React$useState[1];
 
   var targetRef = React.useCallback(setTarget, []);
-  return React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(Box, {
     border: true,
     pad: "small"
-  }, React.createElement(Text, null, label), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, label), /*#__PURE__*/React.createElement(Box, {
     margin: "xlarge",
     background: "dark-3",
     pad: {
@@ -42,8 +42,8 @@ var Set = function Set(_ref2) {
     align: "center",
     justify: "center",
     ref: targetRef
-  }, "\xA0"), target && React.createElement(React.Fragment, null, aligns.map(function (align, index) {
-    return React.createElement(OneDrop // eslint-disable-next-line react/no-array-index-key
+  }, "\xA0"), target && /*#__PURE__*/React.createElement(React.Fragment, null, aligns.map(function (align, index) {
+    return /*#__PURE__*/React.createElement(OneDrop // eslint-disable-next-line react/no-array-index-key
     , {
       key: index,
       align: align,
@@ -58,7 +58,7 @@ Set.propTypes = {
 };
 
 var AllDrops = function AllDrops() {
-  return React.createElement(React.Fragment, null, React.createElement(ThemeContext.Extend, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ThemeContext.Extend, {
     value: {
       global: {
         drop: {
@@ -69,13 +69,13 @@ var AllDrops = function AllDrops() {
         }
       }
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     wrap: true,
     pad: "large",
     align: "center",
     justify: "center"
-  }, React.createElement(Set, {
+  }, /*#__PURE__*/React.createElement(Set, {
     label: "left: left",
     aligns: [{
       top: 'top',
@@ -90,7 +90,7 @@ var AllDrops = function AllDrops() {
       bottom: 'bottom',
       left: 'left'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "left: right",
     aligns: [{
       top: 'top',
@@ -105,7 +105,7 @@ var AllDrops = function AllDrops() {
       bottom: 'bottom',
       left: 'right'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "(center horizontal)",
     aligns: [{
       top: 'top'
@@ -116,7 +116,7 @@ var AllDrops = function AllDrops() {
     }, {
       bottom: 'bottom'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "right: left",
     aligns: [{
       top: 'top',
@@ -131,7 +131,7 @@ var AllDrops = function AllDrops() {
       bottom: 'bottom',
       right: 'left'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "right: right",
     aligns: [{
       top: 'top',
@@ -146,7 +146,7 @@ var AllDrops = function AllDrops() {
       bottom: 'bottom',
       right: 'right'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "top: top",
     aligns: [{
       left: 'left',
@@ -161,7 +161,7 @@ var AllDrops = function AllDrops() {
       right: 'right',
       top: 'top'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "top: bottom",
     aligns: [{
       left: 'left',
@@ -176,7 +176,7 @@ var AllDrops = function AllDrops() {
       right: 'right',
       top: 'bottom'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "(center vertical)",
     aligns: [{
       left: 'left'
@@ -187,7 +187,7 @@ var AllDrops = function AllDrops() {
     }, {
       right: 'right'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "bottom: top",
     aligns: [{
       left: 'left',
@@ -202,7 +202,7 @@ var AllDrops = function AllDrops() {
       right: 'right',
       bottom: 'top'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "bottom: bottom",
     aligns: [{
       left: 'left',
@@ -217,12 +217,12 @@ var AllDrops = function AllDrops() {
       right: 'right',
       bottom: 'bottom'
     }]
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     label: "(center vertical and horizontal)",
     aligns: [{}]
   }))));
 };
 
 storiesOf('Drop', module).add('All not stretch', function () {
-  return React.createElement(AllDrops, null);
+  return /*#__PURE__*/React.createElement(AllDrops, null);
 });

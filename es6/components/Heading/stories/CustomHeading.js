@@ -28,20 +28,20 @@ var customlevel = deepMerge(mnet, {
 });
 
 var CustomHeading = function CustomHeading() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: customlevel
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: 5,
     size: "small"
-  }, "Heading level 5 small"), React.createElement(Heading, {
+  }, "Heading level 5 small"), /*#__PURE__*/React.createElement(Heading, {
     level: 5,
     size: "medium"
-  }, "Heading level 5 small"), React.createElement(Heading, {
+  }, "Heading level 5 small"), /*#__PURE__*/React.createElement(Heading, {
     level: 5,
     size: "large"
   }, "Heading level 5 small"));
 };
 
 storiesOf('Heading', module).add('Custom', function () {
-  return React.createElement(CustomHeading, null);
+  return /*#__PURE__*/React.createElement(CustomHeading, null);
 });

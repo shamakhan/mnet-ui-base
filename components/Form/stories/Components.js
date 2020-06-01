@@ -9,19 +9,19 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Example = function Example() {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Form, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Form, {
     onReset: function onReset(event) {
       return console.log(event);
     },
@@ -30,7 +30,7 @@ var Example = function Example() {
           touched = _ref.touched;
       return console.log('Submit', value, touched);
     }
-  }, _react["default"].createElement(_mnetUiBase.FormField, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Name",
     name: "name",
     required: true,
@@ -46,12 +46,12 @@ var Example = function Example() {
       };
       return undefined;
     }]
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Email",
     name: "email",
     type: "email",
     required: true
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Employee ID",
     name: "employeeId",
     required: true,
@@ -59,15 +59,15 @@ var Example = function Example() {
       regexp: /^[0-9]{4,6}$/,
       message: '4-6 digits'
     }
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     name: "subscribe",
     component: _mnetUiBase.CheckBox,
     label: "Subscribe?"
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     name: "ampm",
     component: _mnetUiBase.RadioButtonGroup,
     options: ['morning', 'evening']
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Size",
     name: "size",
     component: _mnetUiBase.Select,
@@ -75,35 +75,35 @@ var Example = function Example() {
       return console.log(event);
     },
     options: ['small', 'medium', 'large', 'xlarge']
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Comments",
     name: "comments",
     component: _mnetUiBase.TextArea
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Age",
     name: "age",
     component: _mnetUiBase.RangeInput,
     pad: true,
     min: 15,
     max: 75
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Custom",
     name: "custom",
     component: function component(props) {
-      return _react["default"].createElement("input", props);
+      return /*#__PURE__*/_react["default"].createElement("input", props);
     }
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     justify: "between",
     margin: {
       top: 'medium'
     }
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Cancel"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "reset",
     label: "Reset"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "submit",
     label: "Update",
     primary: true
@@ -111,5 +111,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Form', module).add('FormField component', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

@@ -17,10 +17,10 @@ var FormFieldLabel = function FormFieldLabel(props) {
       label = props.label,
       rest = _objectWithoutPropertiesLoose(props, ["required", "label"]);
 
-  return _react["default"].createElement(_mnetUiBase.FormField, _extends({
-    label: required ? _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, _extends({
+    label: required ? /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       direction: "row"
-    }, _react["default"].createElement(_mnetUiBase.Text, null, label), _react["default"].createElement(_mnetUiBase.Text, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, label), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
       color: "status-critical"
     }, "*")) : label,
     required: required
@@ -28,25 +28,25 @@ var FormFieldLabel = function FormFieldLabel(props) {
 };
 
 var LabelFormField = function LabelFormField() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Form, null, _react["default"].createElement(FormFieldLabel, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Form, null, /*#__PURE__*/_react["default"].createElement(FormFieldLabel, {
     name: "firstName",
     label: "FirstName",
     required: true
-  }), _react["default"].createElement(FormFieldLabel, {
+  }), /*#__PURE__*/_react["default"].createElement(FormFieldLabel, {
     name: "LastName",
     label: "LastName",
     required: true
-  }), _react["default"].createElement(FormFieldLabel, {
+  }), /*#__PURE__*/_react["default"].createElement(FormFieldLabel, {
     name: "email",
     label: "Email"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "submit",
     label: "Submit",
     primary: true
-  }), _react["default"].createElement(_mnetUiBase.Text, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     margin: {
       left: 'small'
     },
@@ -56,5 +56,5 @@ var LabelFormField = function LabelFormField() {
 };
 
 (0, _react2.storiesOf)('Form', module).add('Required Label', function () {
-  return _react["default"].createElement(LabelFormField, null);
+  return /*#__PURE__*/_react["default"].createElement(LabelFormField, null);
 });

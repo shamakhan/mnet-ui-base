@@ -23,7 +23,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var Tabs = (0, _react.forwardRef)(function (_ref, ref) {
+var Tabs = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var children = _ref.children,
       flex = _ref.flex,
       _ref$justify = _ref.justify,
@@ -83,7 +83,7 @@ var Tabs = (0, _react.forwardRef)(function (_ref, ref) {
       }
     }
 
-    return (0, _react.cloneElement)(tab, {
+    return /*#__PURE__*/(0, _react.cloneElement)(tab, {
       active: isTabActive,
       onActivate: function onActivate() {
         return activateTab(index);
@@ -92,7 +92,7 @@ var Tabs = (0, _react.forwardRef)(function (_ref, ref) {
   }, _this);
 
   var tabContentTitle = (activeTitle || '') + " " + messages.tabContents;
-  return _react["default"].createElement(_StyledTabs.StyledTabs, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_StyledTabs.StyledTabs, _extends({
     ref: ref,
     as: _Box.Box,
     role: "tablist",
@@ -100,7 +100,7 @@ var Tabs = (0, _react.forwardRef)(function (_ref, ref) {
     responsive: responsive
   }, rest, {
     background: theme.tabs.background
-  }), _react["default"].createElement(_StyledTabs.StyledTabsHeader, {
+  }), /*#__PURE__*/_react["default"].createElement(_StyledTabs.StyledTabsHeader, {
     as: _Box.Box,
     direction: "row",
     justify: justify,
@@ -108,7 +108,7 @@ var Tabs = (0, _react.forwardRef)(function (_ref, ref) {
     wrap: true,
     background: theme.tabs.header.background,
     gap: theme.tabs.gap
-  }, tabs), _react["default"].createElement(_StyledTabs.StyledTabPanel, {
+  }, tabs), /*#__PURE__*/_react["default"].createElement(_StyledTabs.StyledTabPanel, {
     flex: flex,
     "aria-label": tabContentTitle,
     role: "tabpanel"

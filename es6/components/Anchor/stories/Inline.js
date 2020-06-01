@@ -3,15 +3,15 @@ import { storiesOf } from '@storybook/react';
 import { Anchor, Box, Paragraph } from 'mnet-ui-base';
 
 var Inline = function Inline() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Paragraph, null, "This is ", React.createElement(Anchor, {
+  }, /*#__PURE__*/React.createElement(Paragraph, null, "This is ", /*#__PURE__*/React.createElement(Anchor, {
     label: "an inline link",
     href: "#"
   }), " with surrounding text.")));
 };
 
 storiesOf('Anchor', module).add('Inline', function () {
-  return React.createElement(Inline, null);
+  return /*#__PURE__*/React.createElement(Inline, null);
 });

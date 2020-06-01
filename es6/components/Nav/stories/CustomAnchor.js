@@ -32,32 +32,32 @@ var customTheme = deepMerge(mnet, {
 });
 
 var CustomAnchor = function CustomAnchor() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     full: true,
     theme: customTheme
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     background: "dark-1",
     pad: "large",
     fill: true
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     pad: {
       vertical: 'medium'
     }
-  }, React.createElement(Nav, {
+  }, /*#__PURE__*/React.createElement(Nav, {
     width: "small",
     margin: {
       right: 'large'
     }
   }, navItems.map(function (item) {
-    return React.createElement(Anchor, {
+    return /*#__PURE__*/React.createElement(Anchor, {
       href: item.href,
       label: item.label,
       key: item.label
     });
-  })), React.createElement(Main, null, "Place main content here"))));
+  })), /*#__PURE__*/React.createElement(Main, null, "Place main content here"))));
 };
 
 storiesOf('Nav', module).add('Custom Anchor', function () {
-  return React.createElement(CustomAnchor, null);
+  return /*#__PURE__*/React.createElement(CustomAnchor, null);
 });

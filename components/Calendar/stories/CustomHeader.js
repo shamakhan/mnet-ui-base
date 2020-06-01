@@ -21,10 +21,10 @@ var CustomHeaderCalendar = function CustomHeaderCalendar() {
     setDate(nextDate !== date ? nextDate : undefined);
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Calendar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     date: date,
     onSelect: onSelect,
     size: "small",
@@ -36,26 +36,26 @@ var CustomHeaderCalendar = function CustomHeaderCalendar() {
           onNextMonth = _ref.onNextMonth,
           previousInBound = _ref.previousInBound,
           nextInBound = _ref.nextInBound;
-      return _react["default"].createElement(_mnetUiBase.Box, {
+      return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
         direction: "row",
         align: "center",
         justify: "between"
-      }, _react["default"].createElement(_mnetUiBase.Button, {
+      }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
         disabled: !previousInBound,
         onClick: onPreviousMonth
-      }, _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_grommetIcons.FormPreviousLink, null))), _react["default"].createElement(_mnetUiBase.Text, {
+      }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, null, /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormPreviousLink, null))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
         size: "small"
-      }, _react["default"].createElement("strong", null, currentDate.toLocaleDateString(locale, {
+      }, /*#__PURE__*/_react["default"].createElement("strong", null, currentDate.toLocaleDateString(locale, {
         month: 'long',
         year: 'numeric'
-      }))), _react["default"].createElement(_mnetUiBase.Button, {
+      }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
         disabled: !nextInBound,
         onClick: onNextMonth
-      }, _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_grommetIcons.FormNextLink, null))));
+      }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, null, /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormNextLink, null))));
     }
   })));
 };
 
 (0, _react2.storiesOf)('Calendar', module).add('Custom Header', function () {
-  return _react["default"].createElement(CustomHeaderCalendar, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomHeaderCalendar, null);
 });

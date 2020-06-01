@@ -6,24 +6,24 @@ import { Add } from "grommet-icons/es6/icons/Add";
 import { Box, Button, Text } from 'mnet-ui-base';
 
 var PlainButton = function PlainButton(props) {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     hoverIndicator: "light-1",
     onClick: function onClick() {}
-  }, props), React.createElement(Box, {
+  }, props), /*#__PURE__*/React.createElement(Box, {
     pad: "small",
     direction: "row",
     align: "center",
     gap: "small"
-  }, React.createElement(Add, null), React.createElement(Text, null, "Add")))));
+  }, /*#__PURE__*/React.createElement(Add, null), /*#__PURE__*/React.createElement(Text, null, "Add")))));
 };
 
 storiesOf('Button', module).add('Active', function () {
-  return React.createElement(PlainButton, {
+  return /*#__PURE__*/React.createElement(PlainButton, {
     active: true
   });
 }).add('Plain', function () {
-  return React.createElement(PlainButton, null);
+  return /*#__PURE__*/React.createElement(PlainButton, null);
 });

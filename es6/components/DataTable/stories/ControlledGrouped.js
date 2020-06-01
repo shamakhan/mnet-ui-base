@@ -18,7 +18,7 @@ var ControlledGroupedDataTable = function ControlledGroupedDataTable() {
       expandedGroups = _useState[0],
       setExpandedGroups = _useState[1];
 
-  return React.createElement(React.Fragment, null, React.createElement(DataTable, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(DataTable, {
     columns: groupColumns,
     data: DATA,
     groupBy: {
@@ -31,5 +31,5 @@ var ControlledGroupedDataTable = function ControlledGroupedDataTable() {
 };
 
 storiesOf('DataTable', module).add('Controlled grouped', function () {
-  return React.createElement(ControlledGroupedDataTable, null);
+  return /*#__PURE__*/React.createElement(ControlledGroupedDataTable, null);
 });

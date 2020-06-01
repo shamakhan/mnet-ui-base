@@ -13,48 +13,48 @@ var customTheme = {
 describe('Accordion', function () {
   afterEach(cleanup);
   test('no AccordionPanel', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Accordion, null)));
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, null)));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('AccordionPanel', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1"
-    }, "Panel body 1"), React.createElement(AccordionPanel, {
+    }, "Panel body 1"), /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 2"
-    }, "Panel body 2"), false && React.createElement(AccordionPanel, {
+    }, "Panel body 2"), false && /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 2"
     }, "Panel body 2"))));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('complex title', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Box, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Box, {
       background: "dark-1"
-    }, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
-      label: React.createElement("div", null, "Panel 1 complex")
-    }, "Panel body 1"), undefined, React.createElement(AccordionPanel, {
-      label: React.createElement("div", null, "Panel 2 complex")
+    }, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
+      label: /*#__PURE__*/React.createElement("div", null, "Panel 1 complex")
+    }, "Panel body 1"), undefined, /*#__PURE__*/React.createElement(AccordionPanel, {
+      label: /*#__PURE__*/React.createElement("div", null, "Panel 2 complex")
     }, "Panel body 2")))));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('complex header', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Accordion, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, {
       activeIndex: 1,
       animate: false
-    }, React.createElement(AccordionPanel, {
-      header: React.createElement("div", null, "Panel 1 header")
-    }, "Panel body 1"), undefined, React.createElement(AccordionPanel, {
-      header: React.createElement("div", null, "Panel 2 header")
+    }, /*#__PURE__*/React.createElement(AccordionPanel, {
+      header: /*#__PURE__*/React.createElement("div", null, "Panel 1 header")
+    }, "Panel body 1"), undefined, /*#__PURE__*/React.createElement(AccordionPanel, {
+      header: /*#__PURE__*/React.createElement("div", null, "Panel 2 header")
     }, "Panel body 2"))));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('change to second Panel', function (done) {
     var onActive = jest.fn();
 
-    var _render = render(React.createElement(MnetUIBase, null, React.createElement(Accordion, {
+    var _render = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, {
       onActive: onActive
-    }, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1"
-    }, "Panel body 1"), React.createElement(AccordionPanel, {
+    }, "Panel body 1"), /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 2"
     }, "Panel body 2")))),
         getByText = _render.getByText,
@@ -70,11 +70,11 @@ describe('Accordion', function () {
     }, 500);
   });
   test('change to second Panel without onActive', function () {
-    var _render2 = render(React.createElement(MnetUIBase, null, React.createElement(Accordion, {
+    var _render2 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, {
       animate: false
-    }, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1"
-    }, "Panel body 1"), React.createElement(AccordionPanel, {
+    }, "Panel body 1"), /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 2"
     }, "Panel body 2")))),
         getByText = _render2.getByText,
@@ -87,13 +87,13 @@ describe('Accordion', function () {
   test('multiple panels', function () {
     var onActive = jest.fn();
 
-    var _render3 = render(React.createElement(MnetUIBase, null, React.createElement(Accordion, {
+    var _render3 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, {
       animate: false,
       multiple: true,
       onActive: onActive
-    }, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1"
-    }, "Panel body 1"), React.createElement(AccordionPanel, {
+    }, "Panel body 1"), /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 2"
     }, "Panel body 2")))),
         getByText = _render3.getByText,
@@ -114,15 +114,15 @@ describe('Accordion', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('custom accordion', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: customTheme
-    }, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1"
     }, "Panel body 1"))));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('accordion border', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: {
         accordion: {
           border: undefined,
@@ -133,7 +133,7 @@ describe('Accordion', function () {
           }
         }
       }
-    }, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1"
     }, "Panel body 1"))));
     expect(component.toJSON()).toMatchSnapshot();
@@ -141,13 +141,13 @@ describe('Accordion', function () {
   test('change active index', function () {
     var onActive = jest.fn();
 
-    var _render4 = render(React.createElement(MnetUIBase, null, React.createElement(Accordion, {
+    var _render4 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, {
       animate: false,
       activeIndex: 1,
       onActive: onActive
-    }, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1"
-    }, "Panel body 1"), React.createElement(AccordionPanel, {
+    }, "Panel body 1"), /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 2"
     }, "Panel body 2")))),
         getByText = _render4.getByText,
@@ -159,7 +159,7 @@ describe('Accordion', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('focus and hover styles', function () {
-    var _render5 = render(React.createElement(MnetUIBase, {
+    var _render5 = render( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: {
         accordion: {
           hover: {
@@ -167,7 +167,7 @@ describe('Accordion', function () {
           }
         }
       }
-    }, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1",
       onMouseOver: function onMouseOver() {},
       onMouseOut: function onMouseOut() {},
@@ -181,7 +181,7 @@ describe('Accordion', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('backward compatibility of hover.color = undefined', function () {
-    var _render6 = render(React.createElement(MnetUIBase, {
+    var _render6 = render( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: {
         accordion: {
           hover: {
@@ -189,7 +189,7 @@ describe('Accordion', function () {
           }
         }
       }
-    }, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1",
       onMouseOver: function onMouseOver() {},
       onMouseOut: function onMouseOut() {},
@@ -204,7 +204,7 @@ describe('Accordion', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('theme hover of hover.heading.color', function () {
-    var _render7 = render(React.createElement(MnetUIBase, {
+    var _render7 = render( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: {
         accordion: {
           hover: {
@@ -214,7 +214,7 @@ describe('Accordion', function () {
           }
         }
       }
-    }, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
+    }, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1",
       onMouseOver: function onMouseOver() {},
       onMouseOut: function onMouseOut() {},
@@ -229,13 +229,13 @@ describe('Accordion', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('set on hover', function () {
-    var _render8 = render(React.createElement(MnetUIBase, null, React.createElement(Accordion, null, React.createElement(AccordionPanel, {
+    var _render8 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, null, /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 1",
       onMouseOver: function onMouseOver() {},
       onMouseOut: function onMouseOut() {},
       onFocus: function onFocus() {},
       onBlur: function onBlur() {}
-    }, "Panel body 1"), React.createElement(AccordionPanel, {
+    }, "Panel body 1"), /*#__PURE__*/React.createElement(AccordionPanel, {
       label: "Panel 2",
       onMouseOver: function onMouseOver() {},
       onMouseOut: function onMouseOut() {},
@@ -260,16 +260,16 @@ describe('Accordion', function () {
 
     var Panel = function Panel(_ref) {
       var index = _ref.index;
-      return React.createElement(AccordionPanel, {
+      return /*#__PURE__*/React.createElement(AccordionPanel, {
         label: "Panel " + index
       }, "Panel body ", index);
     };
 
-    var _render9 = render(React.createElement(MnetUIBase, null, React.createElement(Accordion, {
+    var _render9 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Accordion, {
       animate: false,
       onActive: onActive
     }, [1, 2].map(function (index) {
-      return React.createElement(Panel, {
+      return /*#__PURE__*/React.createElement(Panel, {
         key: index,
         index: index
       });

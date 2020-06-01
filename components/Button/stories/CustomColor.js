@@ -25,42 +25,42 @@ var customButtonColor = {
 };
 
 var Colored = function Colored(props) {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customButtonColor
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     primary: true,
     label: "Submit",
     onClick: function onClick() {}
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     primary: true,
     color: "dark-1",
     label: "custom theme text colored",
     onClick: function onClick() {}
-  }), _react["default"].createElement(_mnetUiBase.Button, _extends({
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     primary: true,
     color: "dark-1",
     label: "dark-1",
     onClick: function onClick() {}
-  }, props)), _react["default"].createElement(_mnetUiBase.Button, _extends({
+  }, props)), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     primary: true,
     color: "#111111",
     label: "#111111",
     onClick: function onClick() {}
-  }, props)), _react["default"].createElement(_mnetUiBase.Button, _extends({
+  }, props)), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     primary: true,
     color: "#777",
     label: "#777",
     onClick: function onClick() {}
-  }, props)), _react["default"].createElement(_mnetUiBase.Button, _extends({
+  }, props)), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     plain: true,
     color: "red",
     label: "plain red",
     onClick: function onClick() {}
-  }, props)), _react["default"].createElement(_mnetUiBase.Button, _extends({
+  }, props)), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     plain: true,
     label: "plain inherit",
     onClick: function onClick() {}
@@ -68,5 +68,5 @@ var Colored = function Colored(props) {
 };
 
 (0, _react2.storiesOf)('Button', module).add('Colored', function () {
-  return _react["default"].createElement(Colored, null);
+  return /*#__PURE__*/_react["default"].createElement(Colored, null);
 });

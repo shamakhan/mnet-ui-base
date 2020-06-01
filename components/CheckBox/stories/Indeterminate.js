@@ -35,19 +35,19 @@ var IndeterminateCheckBox = function IndeterminateCheckBox() {
     }
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.CheckBox, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
     checked: checked.length === 3,
     indeterminate: checked.length > 0 && checked.length < 3,
     label: "All",
     onChange: onCheckAll
   }), checkboxes.map(function (item) {
-    return _react["default"].createElement(_mnetUiBase.CheckBox, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
       key: item,
       checked: checked.includes(item),
       label: item,
@@ -59,5 +59,5 @@ var IndeterminateCheckBox = function IndeterminateCheckBox() {
 };
 
 (0, _react2.storiesOf)('CheckBox', module).add('Indeterminate', function () {
-  return _react["default"].createElement(IndeterminateCheckBox, null);
+  return /*#__PURE__*/_react["default"].createElement(IndeterminateCheckBox, null);
 });

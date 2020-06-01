@@ -5,27 +5,27 @@ import { mnet } from 'mnet-ui-base/themes';
 import { Search } from "grommet-icons/es6/icons/Search";
 
 var IconTextInput = function IconTextInput() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     full: true,
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium",
     gap: "medium"
-  }, React.createElement(TextInput, {
-    icon: React.createElement(Search, null),
+  }, /*#__PURE__*/React.createElement(TextInput, {
+    icon: /*#__PURE__*/React.createElement(Search, null),
     placeholder: "search ..."
-  }), React.createElement(TextInput, {
-    icon: React.createElement(Search, null),
+  }), /*#__PURE__*/React.createElement(TextInput, {
+    icon: /*#__PURE__*/React.createElement(Search, null),
     reverse: true,
     placeholder: "search ..."
   }))));
 };
 
 storiesOf('TextInput', module).add('Icon', function () {
-  return React.createElement(IconTextInput, null);
+  return /*#__PURE__*/React.createElement(IconTextInput, null);
 });

@@ -20,18 +20,18 @@ var Example = function Example() {
       value = _useState2[0],
       setValue = _useState2[1];
 
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     size: "medium",
     placeholder: "Select",
     multiple: true,
@@ -67,5 +67,5 @@ var Example = function Example() {
 };
 
 storiesOf('Select', module).add('Object Multiple', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 });

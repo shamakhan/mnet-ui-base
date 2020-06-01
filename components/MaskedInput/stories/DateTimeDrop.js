@@ -27,24 +27,24 @@ var DropContent = function DropContent(_ref) {
     return onClose(date || initialDate, time || initialTime);
   };
 
-  return _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center"
-  }, _react["default"].createElement(_mnetUiBase.Calendar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     animate: false,
     date: date || initialDate,
     onSelect: setDate,
     showAdjacentDays: false
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: false,
     pad: "medium",
     gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Keyboard, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Keyboard, {
     onEnter: function onEnter(event) {
       event.preventDefault(); // so drop doesn't re-open
 
       close();
     }
-  }, _react["default"].createElement(_mnetUiBase.MaskedInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MaskedInput, {
     mask: [{
       length: [1, 2],
       options: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
@@ -70,9 +70,9 @@ var DropContent = function DropContent(_ref) {
     onChange: function onChange(event) {
       return setTime(event.target.value);
     }
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: false
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Done",
     onClick: close
   }))));
@@ -100,10 +100,10 @@ var DateTimeDropButton = function DateTimeDropButton() {
     }, 1);
   };
 
-  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.DropButton, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DropButton, {
     open: open,
     onClose: function onClose() {
       return setOpen(false);
@@ -111,21 +111,21 @@ var DateTimeDropButton = function DateTimeDropButton() {
     onOpen: function onOpen() {
       return setOpen(true);
     },
-    dropContent: _react["default"].createElement(DropContent, {
+    dropContent: /*#__PURE__*/_react["default"].createElement(DropContent, {
       date: date,
       time: time,
       onClose: onClose
     })
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     gap: "medium",
     align: "center",
     pad: "small"
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     color: date ? undefined : 'dark-5'
-  }, date ? new Date(date).toLocaleDateString() + " " + time : 'Select date & time'), _react["default"].createElement(_grommetIcons.Schedule, null)))));
+  }, date ? new Date(date).toLocaleDateString() + " " + time : 'Select date & time'), /*#__PURE__*/_react["default"].createElement(_grommetIcons.Schedule, null)))));
 };
 
 (0, _react2.storiesOf)('MaskedInput', module).add('Date Time Drop', function () {
-  return _react["default"].createElement(DateTimeDropButton, null);
+  return /*#__PURE__*/_react["default"].createElement(DateTimeDropButton, null);
 });

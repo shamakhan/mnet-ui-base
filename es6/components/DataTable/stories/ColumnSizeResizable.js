@@ -65,14 +65,14 @@ var columnsResize = [{
 }];
 
 var ExampleResizable = function ExampleResizable() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: "3"
-  }, "Table with resizeable & column sizes"), React.createElement(DataTable, {
+  }, "Table with resizeable & column sizes"), /*#__PURE__*/React.createElement(DataTable, {
     columns: columnsResize,
     data: DATA,
     primaryKey: false,
@@ -81,5 +81,5 @@ var ExampleResizable = function ExampleResizable() {
 };
 
 storiesOf('DataTable', module).add('Column Sizes resizeable', function () {
-  return React.createElement(ExampleResizable, null);
+  return /*#__PURE__*/React.createElement(ExampleResizable, null);
 });

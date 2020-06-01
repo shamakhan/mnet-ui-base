@@ -16,18 +16,18 @@ var SearchSelect = function SearchSelect() {
       value = _useState2[0],
       setValue = _useState2[1];
 
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     size: "medium",
     placeholder: "Select",
     value: value,
@@ -55,5 +55,5 @@ var SearchSelect = function SearchSelect() {
 };
 
 storiesOf('Select', module).add('Search', function () {
-  return React.createElement(SearchSelect, null);
+  return /*#__PURE__*/React.createElement(SearchSelect, null);
 });

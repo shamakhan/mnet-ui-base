@@ -5,18 +5,18 @@ import { More } from "grommet-icons/es6/icons/More";
 import { data } from './data';
 
 var ActionList = function ActionList() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     pad: "large"
-  }, React.createElement(List, {
+  }, /*#__PURE__*/React.createElement(List, {
     data: data.slice(0, 10),
     pad: {
       left: 'small',
       right: 'none'
     },
     action: function action(item, index) {
-      return React.createElement(Menu, {
+      return /*#__PURE__*/React.createElement(Menu, {
         key: index,
-        icon: React.createElement(More, null),
+        icon: /*#__PURE__*/React.createElement(More, null),
         hoverIndicator: true,
         items: [{
           label: 'one'
@@ -27,5 +27,5 @@ var ActionList = function ActionList() {
 };
 
 storiesOf('List', module).add('action', function () {
-  return React.createElement(ActionList, null);
+  return /*#__PURE__*/React.createElement(ActionList, null);
 });

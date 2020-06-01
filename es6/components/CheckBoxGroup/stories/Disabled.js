@@ -4,23 +4,23 @@ import { Box, CheckBoxGroup, MnetUIBase, Text } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 
 var Disabled = function Disabled() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "medium",
     gap: "large"
-  }, React.createElement(Box, null, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Text, {
     margin: {
       vertical: 'small'
     }
-  }, "Disabled Group"), React.createElement(CheckBoxGroup, {
+  }, "Disabled Group"), /*#__PURE__*/React.createElement(CheckBoxGroup, {
     disabled: true,
     options: ['First', 'Second', 'Third']
-  })), React.createElement(Box, null, React.createElement(Text, {
+  })), /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Text, {
     margin: {
       vertical: 'small'
     }
-  }, " Disabled Individuals"), React.createElement(CheckBoxGroup, {
+  }, " Disabled Individuals"), /*#__PURE__*/React.createElement(CheckBoxGroup, {
     options: [{
       label: 'Maui',
       disabled: true
@@ -34,5 +34,5 @@ var Disabled = function Disabled() {
 };
 
 storiesOf('CheckBoxGroup', module).add('Disabled', function () {
-  return React.createElement(Disabled, null);
+  return /*#__PURE__*/React.createElement(Disabled, null);
 });

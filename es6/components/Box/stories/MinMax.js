@@ -3,15 +3,15 @@ import { storiesOf } from '@storybook/react';
 import { Box, Text } from 'mnet-ui-base';
 
 var MinMaxSizesBox = function MinMaxSizesBox() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     pad: "small",
     gap: "small"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "small",
     gap: "small",
     direction: "row",
     align: "start"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "small",
     height: {
       max: 'small'
@@ -21,7 +21,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "max-height=small")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "max-height=small")), /*#__PURE__*/React.createElement(Box, {
     width: "small",
     height: {
       max: 'small'
@@ -31,7 +31,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "max-height=small"), React.createElement(Text, null, "max-height=small"), React.createElement(Text, null, "max-height=small")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "max-height=small"), /*#__PURE__*/React.createElement(Text, null, "max-height=small"), /*#__PURE__*/React.createElement(Text, null, "max-height=small")), /*#__PURE__*/React.createElement(Box, {
     width: "small",
     height: {
       max: 'small'
@@ -42,12 +42,14 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     background: "brand",
     overflow: "auto"
   }, Array(20).fill().map(function (_, i) {
-    return (// eslint-disable-next-line react/no-array-index-key
+    return (
+      /*#__PURE__*/
+      // eslint-disable-next-line react/no-array-index-key
       React.createElement(Text, {
         key: i
       }, "Small (" + i + ")")
     );
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     width: "small",
     height: {
       max: '100px'
@@ -58,17 +60,19 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     background: "brand",
     overflow: "auto"
   }, Array(20).fill().map(function (_, i) {
-    return (// eslint-disable-next-line react/no-array-index-key
+    return (
+      /*#__PURE__*/
+      // eslint-disable-next-line react/no-array-index-key
       React.createElement(Text, {
         key: i
       }, "Small (" + i + ")")
     );
-  }))), React.createElement(Box, {
+  }))), /*#__PURE__*/React.createElement(Box, {
     pad: "small",
     gap: "small",
     direction: "row",
     align: "start"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "small",
     height: {
       min: '100px'
@@ -78,7 +82,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "min-height=100px")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "min-height=100px")), /*#__PURE__*/React.createElement(Box, {
     width: "small",
     height: {
       min: 'small'
@@ -88,7 +92,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "min-height=small")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "min-height=small")), /*#__PURE__*/React.createElement(Box, {
     width: "small",
     height: {
       min: 'small'
@@ -98,7 +102,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "min-height=small"), React.createElement(Text, null, "min-height=small"), React.createElement(Text, null, "min-height=small")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "min-height=small"), /*#__PURE__*/React.createElement(Text, null, "min-height=small"), /*#__PURE__*/React.createElement(Text, null, "min-height=small")), /*#__PURE__*/React.createElement(Box, {
     width: "small",
     height: {
       min: 'small'
@@ -109,17 +113,19 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     background: "brand",
     overflow: "auto"
   }, Array(20).fill().map(function (_, i) {
-    return (// eslint-disable-next-line react/no-array-index-key
+    return (
+      /*#__PURE__*/
+      // eslint-disable-next-line react/no-array-index-key
       React.createElement(Text, {
         key: i
       }, "Small (" + i + ")")
     );
-  }))), React.createElement(Box, {
+  }))), /*#__PURE__*/React.createElement(Box, {
     pad: "small",
     gap: "small",
     direction: "row",
     align: "start"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: {
       max: 'small'
     },
@@ -128,7 +134,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "max")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "max")), /*#__PURE__*/React.createElement(Box, {
     width: {
       max: 'small'
     },
@@ -137,7 +143,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "max-width=small")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "max-width=small")), /*#__PURE__*/React.createElement(Box, {
     width: {
       max: 'small'
     },
@@ -146,7 +152,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "max-width=small, max-width=small")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "max-width=small, max-width=small")), /*#__PURE__*/React.createElement(Box, {
     width: {
       max: '100px'
     },
@@ -155,12 +161,12 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "max-width=100px, max-width=100px"))), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "max-width=100px, max-width=100px"))), /*#__PURE__*/React.createElement(Box, {
     pad: "small",
     gap: "small",
     direction: "row",
     align: "start"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: {
       min: '100px'
     },
@@ -169,7 +175,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "100px")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "100px")), /*#__PURE__*/React.createElement(Box, {
     width: {
       min: 'small'
     },
@@ -178,7 +184,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "small")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "small")), /*#__PURE__*/React.createElement(Box, {
     width: {
       min: 'small'
     },
@@ -187,7 +193,7 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "min-width=small")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Text, null, "min-width=small")), /*#__PURE__*/React.createElement(Box, {
     width: {
       min: 'small'
     },
@@ -196,9 +202,9 @@ var MinMaxSizesBox = function MinMaxSizesBox() {
     justify: "center",
     background: "brand",
     overflow: "auto"
-  }, React.createElement(Text, null, "min-width=small, min-width=small")))));
+  }, /*#__PURE__*/React.createElement(Text, null, "min-width=small, min-width=small")))));
 };
 
 storiesOf('Box', module).add('Min/Max sizes', function () {
-  return React.createElement(MinMaxSizesBox, null);
+  return /*#__PURE__*/React.createElement(MinMaxSizesBox, null);
 });

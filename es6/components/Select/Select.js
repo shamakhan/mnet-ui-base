@@ -36,7 +36,7 @@ var defaultDropAlign = {
 var defaultMessages = {
   multiple: 'multiple'
 };
-var Select = forwardRef(function (_ref, ref) {
+var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var a11yTitle = _ref.a11yTitle,
       alignSelf = _ref.alignSelf,
       children = _ref.children,
@@ -169,7 +169,7 @@ var Select = forwardRef(function (_ref, ref) {
 
   var selectValue = useMemo(function () {
     if (valueLabel) return valueLabel;
-    if (React.isValidElement(value)) return value; // deprecated
+    if ( /*#__PURE__*/React.isValidElement(value)) return value; // deprecated
 
     return undefined;
   }, [value, valueLabel]); // text to show
@@ -184,10 +184,10 @@ var Select = forwardRef(function (_ref, ref) {
     return undefined;
   }, [labelKey, messages, optionIndexesInValue, options, selectValue]);
   var iconColor = normalizeColor(theme.select.icons.color || 'control', theme);
-  return React.createElement(Keyboard, {
+  return /*#__PURE__*/React.createElement(Keyboard, {
     onDown: onRequestOpen,
     onUp: onRequestOpen
-  }, React.createElement(StyledSelectDropButton, {
+  }, /*#__PURE__*/React.createElement(StyledSelectDropButton, {
     ref: ref,
     id: id,
     disabled: disabled === true || undefined,
@@ -201,7 +201,7 @@ var Select = forwardRef(function (_ref, ref) {
     onOpen: onRequestOpen,
     onClose: onRequestClose,
     onClick: onClick,
-    dropContent: React.createElement(SelectContainer, {
+    dropContent: /*#__PURE__*/React.createElement(SelectContainer, {
       disabled: disabled,
       disabledKey: disabledKey,
       dropHeight: dropHeight,
@@ -225,16 +225,16 @@ var Select = forwardRef(function (_ref, ref) {
     plain: plain,
     dropProps: dropProps,
     theme: theme
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     direction: "row",
     justify: "between",
     background: theme.select.background
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     flex: true,
     basis: "auto"
-  }, selectValue || React.createElement(SelectTextInput, _extends({
+  }, selectValue || /*#__PURE__*/React.createElement(SelectTextInput, _extends({
     a11yTitle: a11yTitle && "" + a11yTitle + (value && typeof value === 'string' ? ", " + value : ''),
     id: id ? id + "__input" : undefined,
     name: name,
@@ -249,13 +249,13 @@ var Select = forwardRef(function (_ref, ref) {
     size: size,
     theme: theme,
     onClick: disabled === true ? undefined : onRequestOpen
-  }))), SelectIcon && React.createElement(Box, {
+  }))), SelectIcon && /*#__PURE__*/React.createElement(Box, {
     margin: theme.select.icons.margin,
     flex: false,
     style: {
       minWidth: 'auto'
     }
-  }, isValidElement(SelectIcon) ? SelectIcon : React.createElement(SelectIcon, {
+  }, /*#__PURE__*/isValidElement(SelectIcon) ? SelectIcon : /*#__PURE__*/React.createElement(SelectIcon, {
     color: iconColor,
     size: size
   })))));

@@ -9,27 +9,27 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var RTLBox = function RTLBox() {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     dir: "rtl"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     align: "center",
     pad: "small",
     gap: "small",
     border: true
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     align: "center",
     pad: "small",
     border: "start"
-  }, "border start"), _react["default"].createElement(_mnetUiBase.Box, {
+  }, "border start"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     align: "center",
     pad: {
       start: 'large'
     },
     background: "brand"
-  }, "pad start"), _react["default"].createElement(_mnetUiBase.Box, {
+  }, "pad start"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     align: "center",
     margin: {
@@ -40,5 +40,5 @@ var RTLBox = function RTLBox() {
 };
 
 (0, _react2.storiesOf)('Box', module).add('RTL', function () {
-  return _react["default"].createElement(RTLBox, null);
+  return /*#__PURE__*/_react["default"].createElement(RTLBox, null);
 });

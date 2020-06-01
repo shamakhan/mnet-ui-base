@@ -21,12 +21,12 @@ var MultipleValues = function MultipleValues() {
       label = _useState2[0],
       setLabel = _useState2[1];
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Stack, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Stack, {
     anchor: "center"
-  }, _react["default"].createElement(_mnetUiBase.Meter, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Meter, {
     type: "circle",
     background: "light-2",
     values: [{
@@ -45,20 +45,20 @@ var MultipleValues = function MultipleValues() {
     max: 100,
     size: "small",
     thickness: "medium"
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     align: "center",
     pad: {
       bottom: 'xsmall'
     }
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "xxlarge",
     weight: "bold"
-  }, active || total), _react["default"].createElement(_mnetUiBase.Text, null, "GB")), _react["default"].createElement(_mnetUiBase.Text, null, label || 'total')))));
+  }, active || total), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "GB")), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, label || 'total')))));
 };
 
 (0, _react2.storiesOf)('Meter', module).add('Multiple Values', function () {
-  return _react["default"].createElement(MultipleValues, null);
+  return /*#__PURE__*/_react["default"].createElement(MultipleValues, null);
 });

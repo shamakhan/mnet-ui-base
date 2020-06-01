@@ -15,15 +15,15 @@ var HorizontalCollapsible = function HorizontalCollapsible() {
       openNotification = _React$useState[0],
       setOpenNotification = _React$useState[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     as: "header",
     direction: "row",
     align: "center",
@@ -37,38 +37,38 @@ var HorizontalCollapsible = function HorizontalCollapsible() {
     style: {
       zIndex: '1000'
     }
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 3,
     margin: "none",
     color: "white"
-  }, _react["default"].createElement("strong", null, "My App")), _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement("strong", null, "My App")), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     onClick: function onClick() {
       return setOpenNotification(!openNotification);
     },
-    icon: _react["default"].createElement(_grommetIcons.Notification, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Notification, {
       color: "white"
     })
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: true,
     direction: "row"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: true,
     align: "center",
     justify: "center"
-  }, "Dashboard content goes here, click on the notification icon"), _react["default"].createElement(_mnetUiBase.Collapsible, {
+  }, "Dashboard content goes here, click on the notification icon"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Collapsible, {
     direction: "horizontal",
     open: openNotification
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: true,
     width: "medium",
     background: "light-2",
     pad: "small",
     elevation: "small"
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "xlarge"
   }, "Sidebar"))))));
 };
 
 (0, _react2.storiesOf)('Collapsible', module).add('Horizontal', function () {
-  return _react["default"].createElement(HorizontalCollapsible, null);
+  return /*#__PURE__*/_react["default"].createElement(HorizontalCollapsible, null);
 });

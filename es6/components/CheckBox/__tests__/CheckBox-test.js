@@ -5,25 +5,25 @@ import 'jest-styled-components';
 import { MnetUIBase } from '../../MnetUIBase';
 import { CheckBox } from '..';
 test('label renders', function () {
-  var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     label: "test label"
-  }), React.createElement(CheckBox, {
-    label: React.createElement("div", null, "test label")
+  }), /*#__PURE__*/React.createElement(CheckBox, {
+    label: /*#__PURE__*/React.createElement("div", null, "test label")
   })));
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
 test('checked renders', function () {
-  var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     checked: true
   })));
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
 test('disabled renders', function () {
-  var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     disabled: true
-  }), React.createElement(CheckBox, {
+  }), /*#__PURE__*/React.createElement(CheckBox, {
     disabled: true,
     checked: true
   })));
@@ -31,7 +31,7 @@ test('disabled renders', function () {
   expect(tree).toMatchSnapshot();
 });
 test('reverse renders', function () {
-  var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     reverse: true,
     label: "test label"
   })));
@@ -39,12 +39,12 @@ test('reverse renders', function () {
   expect(tree).toMatchSnapshot();
 });
 test('toggle renders', function () {
-  var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     toggle: true
-  }), React.createElement(CheckBox, {
+  }), /*#__PURE__*/React.createElement(CheckBox, {
     toggle: true,
     checked: true
-  }), React.createElement(CheckBox, {
+  }), /*#__PURE__*/React.createElement(CheckBox, {
     toggle: true,
     label: "test label"
   })));
@@ -52,9 +52,9 @@ test('toggle renders', function () {
   expect(tree).toMatchSnapshot();
 });
 test('indeterminate renders', function () {
-  var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     indeterminate: true
-  }), React.createElement(CheckBox, {
+  }), /*#__PURE__*/React.createElement(CheckBox, {
     indeterminate: true,
     label: "test label"
   })));
@@ -63,7 +63,7 @@ test('indeterminate renders', function () {
 });
 test('indeterminate checked warns', function () {
   var spy = jest.spyOn(global.console, 'warn');
-  renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     indeterminate: true,
     checked: true
   })));
@@ -71,14 +71,14 @@ test('indeterminate checked warns', function () {
 });
 test('indeterminate toggle warns', function () {
   var spy = jest.spyOn(global.console, 'warn');
-  renderer.create(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     indeterminate: true,
     toggle: true
   })));
   expect(spy).toBeCalledWith('Checkbox of type toggle does not have "indeterminate" state.');
 });
 test('controlled', function () {
-  var _render = render(React.createElement(MnetUIBase, null, React.createElement(CheckBox, {
+  var _render = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(CheckBox, {
     label: "test-label",
     checked: true
   }))),

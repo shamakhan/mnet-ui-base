@@ -17,15 +17,15 @@ var SimpleRangeInput = function SimpleRangeInput() {
     return setValue(event.target.value);
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.RangeInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RangeInput, {
     value: value,
     onChange: onChange
   })));
 };
 
 (0, _react2.storiesOf)('RangeInput', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleRangeInput, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleRangeInput, null);
 });

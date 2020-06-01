@@ -11,40 +11,40 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Colors = function Colors() {
-  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium",
     gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Anchor, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     href: "#"
-  }), _react["default"].createElement(_mnetUiBase.Anchor, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     label: "Add",
     href: "#"
-  }), _react["default"].createElement(_mnetUiBase.Anchor, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     label: "Add",
     href: "#"
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "dark-1",
     pad: "medium",
     gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Anchor, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     href: "#"
-  }), _react["default"].createElement(_mnetUiBase.Anchor, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     label: "Add",
     href: "#"
-  }), _react["default"].createElement(_mnetUiBase.Anchor, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     label: "Add",
     href: "#"
-  }), _react["default"].createElement(_mnetUiBase.Anchor, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     label: "Add",
     href: "#"
   })));
 };
 
 (0, _react2.storiesOf)('Anchor', module).add('Colors', function () {
-  return _react["default"].createElement(Colors, null);
+  return /*#__PURE__*/_react["default"].createElement(Colors, null);
 });

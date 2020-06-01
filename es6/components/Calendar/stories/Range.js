@@ -3,15 +3,15 @@ import { storiesOf } from '@storybook/react';
 import { Box, Calendar } from 'mnet-ui-base';
 
 var RangeCalendar = function RangeCalendar() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Calendar, {
+  }, /*#__PURE__*/React.createElement(Calendar, {
     dates: [['2020-04-03', '2020-04-08']],
     range: true
   })));
 };
 
 storiesOf('Calendar', module).add('Range', function () {
-  return React.createElement(RangeCalendar, null);
+  return /*#__PURE__*/React.createElement(RangeCalendar, null);
 });

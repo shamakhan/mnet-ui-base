@@ -27,54 +27,54 @@ var FormLayer = function FormLayer() {
     return setOpen(undefined);
   };
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Add, null),
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
     label: "Add",
     onClick: onOpen
-  }), open && _react["default"].createElement(_mnetUiBase.Layer, {
+  }), open && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Layer, {
     position: "right",
     full: "vertical",
     modal: true,
     onClickOutside: onClose,
     onEsc: onClose
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     as: "form",
     fill: "vertical",
     overflow: "auto",
     width: "medium",
     pad: "medium",
     onSubmit: onClose
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: false,
     direction: "row",
     justify: "between"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 2,
     margin: "none"
-  }, "Add"), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Close, null),
+  }, "Add"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Close, null),
     onClick: onClose
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: "grow",
     overflow: "auto",
     pad: {
       vertical: 'medium'
     }
-  }, _react["default"].createElement(_mnetUiBase.FormField, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "First"
-  }, _react["default"].createElement(_mnetUiBase.TextInput, null)), _react["default"].createElement(_mnetUiBase.FormField, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, null)), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Second"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     options: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'],
     value: select,
     onSearch: function onSearch() {},
@@ -82,13 +82,13 @@ var FormLayer = function FormLayer() {
       var option = _ref.option;
       return setSelect(option);
     }
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Third"
-  }, _react["default"].createElement(_mnetUiBase.TextArea, null))), _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextArea, null))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: false,
     as: "footer",
     align: "start"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "submit",
     label: "Submit",
     onClick: onClose,
@@ -97,5 +97,5 @@ var FormLayer = function FormLayer() {
 };
 
 (0, _react2.storiesOf)('Layer', module).add('Form', function () {
-  return _react["default"].createElement(FormLayer, null);
+  return /*#__PURE__*/_react["default"].createElement(FormLayer, null);
 });

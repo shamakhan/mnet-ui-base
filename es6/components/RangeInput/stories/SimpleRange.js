@@ -11,15 +11,15 @@ var SimpleRangeInput = function SimpleRangeInput() {
     return setValue(event.target.value);
   };
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(RangeInput, {
+  }, /*#__PURE__*/React.createElement(RangeInput, {
     value: value,
     onChange: onChange
   })));
 };
 
 storiesOf('RangeInput', module).add('Simple', function () {
-  return React.createElement(SimpleRangeInput, null);
+  return /*#__PURE__*/React.createElement(SimpleRangeInput, null);
 });

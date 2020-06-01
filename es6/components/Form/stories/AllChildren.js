@@ -3,19 +3,19 @@ import { storiesOf } from '@storybook/react';
 import { Box, Button, CheckBoxGroup, Form, FormField, MaskedInput, RadioButtonGroup, RangeInput, Select, TextArea, TextInput } from 'mnet-ui-base';
 
 var Example = function Example() {
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium"
-  }, React.createElement(Form, {
+  }, /*#__PURE__*/React.createElement(Form, {
     onReset: function onReset(event) {
       return console.log(event);
     },
@@ -23,17 +23,17 @@ var Example = function Example() {
       var value = _ref.value;
       return console.log('Submit', value);
     }
-  }, React.createElement(FormField, {
+  }, /*#__PURE__*/React.createElement(FormField, {
     label: "Name",
     name: "name",
     required: true
-  }, React.createElement(TextInput, {
+  }, /*#__PURE__*/React.createElement(TextInput, {
     name: "name"
-  })), React.createElement(FormField, {
+  })), /*#__PURE__*/React.createElement(FormField, {
     label: "Email",
     name: "email",
     required: true
-  }, React.createElement(MaskedInput, {
+  }, /*#__PURE__*/React.createElement(MaskedInput, {
     name: "email",
     mask: [{
       regexp: /^[\w\-_.]+$/,
@@ -49,48 +49,48 @@ var Example = function Example() {
       regexp: /^[\w]+$/,
       placeholder: 'com'
     }]
-  })), React.createElement(FormField, {
+  })), /*#__PURE__*/React.createElement(FormField, {
     name: "subscription"
-  }, React.createElement(CheckBoxGroup, {
+  }, /*#__PURE__*/React.createElement(CheckBoxGroup, {
     name: "subscription",
     options: ['subscribe', 'receive email notifications']
-  })), React.createElement(FormField, {
+  })), /*#__PURE__*/React.createElement(FormField, {
     name: "ampm"
-  }, React.createElement(RadioButtonGroup, {
+  }, /*#__PURE__*/React.createElement(RadioButtonGroup, {
     name: "ampm",
     options: ['morning', 'evening']
-  })), React.createElement(FormField, {
+  })), /*#__PURE__*/React.createElement(FormField, {
     label: "Size",
     name: "size"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     name: "size",
     multiple: true,
     options: ['small', 'medium', 'large']
-  })), React.createElement(FormField, {
+  })), /*#__PURE__*/React.createElement(FormField, {
     label: "Comments",
     name: "comments"
-  }, React.createElement(TextArea, {
+  }, /*#__PURE__*/React.createElement(TextArea, {
     name: "comments"
-  })), React.createElement(FormField, {
+  })), /*#__PURE__*/React.createElement(FormField, {
     label: "Age",
     name: "age",
     pad: true
-  }, React.createElement(RangeInput, {
+  }, /*#__PURE__*/React.createElement(RangeInput, {
     name: "age",
     min: 15,
     max: 75
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     justify: "between",
     margin: {
       top: 'medium'
     }
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     label: "Cancel"
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     type: "reset",
     label: "Reset"
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     type: "submit",
     label: "Update",
     primary: true
@@ -98,5 +98,5 @@ var Example = function Example() {
 };
 
 storiesOf('Form', module).add('FormField children', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 });

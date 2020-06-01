@@ -43,12 +43,12 @@ var DualCalendar = function DualCalendar() {
     }
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     justify: "center",
     pad: "large",
     direction: "row",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Calendar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     animate: false,
     showAdjacentDays: false,
     range: true,
@@ -68,23 +68,23 @@ var DualCalendar = function DualCalendar() {
           locale = _ref.locale,
           onPreviousMonth = _ref.onPreviousMonth,
           previousInBound = _ref.previousInBound;
-      return _react["default"].createElement(_mnetUiBase.Box, {
+      return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
         direction: "row",
         align: "center",
         justify: "between"
-      }, _react["default"].createElement(_mnetUiBase.Button, {
+      }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
         disabled: !previousInBound,
-        icon: _react["default"].createElement(_grommetIcons.Previous, null),
+        icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Previous, null),
         onClick: onPreviousMonth
-      }), _react["default"].createElement(_mnetUiBase.Heading, {
+      }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
         level: 3,
         margin: "none"
       }, currentDate.toLocaleDateString(locale, {
         month: 'long',
         year: 'numeric'
-      })), _react["default"].createElement(_grommetIcons.Blank, null));
+      })), /*#__PURE__*/_react["default"].createElement(_grommetIcons.Blank, null));
     }
-  }), _react["default"].createElement(_mnetUiBase.Calendar, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     animate: false,
     showAdjacentDays: false,
     date: date,
@@ -104,19 +104,19 @@ var DualCalendar = function DualCalendar() {
           locale = _ref2.locale,
           onNextMonth = _ref2.onNextMonth,
           nextInBound = _ref2.nextInBound;
-      return _react["default"].createElement(_mnetUiBase.Box, {
+      return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
         direction: "row",
         align: "center",
         justify: "between"
-      }, _react["default"].createElement(_grommetIcons.Blank, null), _react["default"].createElement(_mnetUiBase.Heading, {
+      }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Blank, null), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
         level: 3,
         margin: "none"
       }, currentDate.toLocaleDateString(locale, {
         month: 'long',
         year: 'numeric'
-      })), _react["default"].createElement(_mnetUiBase.Button, {
+      })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
         disabled: !nextInBound,
-        icon: _react["default"].createElement(_grommetIcons.Next, null),
+        icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Next, null),
         onClick: onNextMonth
       }));
     }
@@ -124,5 +124,5 @@ var DualCalendar = function DualCalendar() {
 };
 
 (0, _react2.storiesOf)('Calendar', module).add('Dual', function () {
-  return _react["default"].createElement(DualCalendar, null);
+  return /*#__PURE__*/_react["default"].createElement(DualCalendar, null);
 });

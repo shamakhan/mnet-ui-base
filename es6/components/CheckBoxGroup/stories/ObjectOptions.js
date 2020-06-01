@@ -12,11 +12,11 @@ for (var i = 1; i <= 5; i += 1) {
 }
 
 var Example = function Example() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "medium"
-  }, React.createElement(CheckBoxGroup, {
+  }, /*#__PURE__*/React.createElement(CheckBoxGroup, {
     labelKey: "label",
     valueKey: "val",
     options: objectOptions
@@ -24,5 +24,5 @@ var Example = function Example() {
 };
 
 storiesOf('CheckBoxGroup', module).add('Object options', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 });

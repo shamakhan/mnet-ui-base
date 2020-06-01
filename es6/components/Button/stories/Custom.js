@@ -137,116 +137,116 @@ var coloredButton = {
 };
 
 var CustomTheme = function CustomTheme() {
-  return React.createElement(React.Fragment, null, React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: newCustomTheme
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     gap: "small",
     pad: "large"
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: 2,
     size: "small"
-  }, "new custom theme"), React.createElement(Box, {
+  }, "new custom theme"), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     direction: "row",
     gap: "small"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     label: "default",
     onClick: function onClick() {}
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "active default",
     onClick: function onClick() {},
     active: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "disabled default",
     onClick: function onClick() {},
     disabled: true
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     direction: "row",
     gap: "small"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     label: "primary",
     onClick: function onClick() {},
     primary: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "active primary",
     onClick: function onClick() {},
     primary: true,
     active: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "disabled primary",
     onClick: function onClick() {},
     primary: true,
     disabled: true
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     direction: "row",
     gap: "small"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     label: "secondary",
     onClick: function onClick() {},
     secondary: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "active secondary",
     onClick: function onClick() {},
     secondary: true,
     active: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "disabled secondary",
     onClick: function onClick() {},
     secondary: true,
     disabled: true
-  })))), React.createElement(MnetUIBase, {
+  })))), /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: customTheme
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     justify: "center",
     pad: "large",
     direction: "row",
     gap: "small"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     label: "custom theme",
     onClick: function onClick() {},
     primary: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "custom active primary",
     onClick: function onClick() {},
     primary: true,
     active: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "primary disabled",
     onClick: function onClick() {},
     primary: true,
     disabled: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "Disabled",
     onClick: function onClick() {},
     disabled: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "Plain Disabled",
     onClick: function onClick() {},
     plain: true,
     disabled: true
-  }))), React.createElement(MnetUIBase, {
+  }))), /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: coloredButton
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     as: "span",
     label: "theme on dark background",
     primary: true
-  }))), React.createElement(MnetUIBase, {
+  }))), /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     as: "span",
     label: "Custom as=span"
   }))));
 };
 
 storiesOf('Button', module).add('Custom', function () {
-  return React.createElement(CustomTheme, null);
+  return /*#__PURE__*/React.createElement(CustomTheme, null);
 });

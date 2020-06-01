@@ -18,16 +18,16 @@ var theme = deepMerge(mnet, {
 });
 
 var ThemedList = function ThemedList() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: theme
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(List, {
+  }, /*#__PURE__*/React.createElement(List, {
     data: locations
   })));
 };
 
 storiesOf('List', module).add('theme', function () {
-  return React.createElement(ThemedList, null);
+  return /*#__PURE__*/React.createElement(ThemedList, null);
 });

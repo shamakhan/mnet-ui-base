@@ -23,7 +23,7 @@ var Announcer = function Announcer(_ref) {
     announce(message, mode, timeout);
   }, [announce, message, mode]);
 
-  return _react["default"].createElement(_mnetUiBase.Text, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     align: "center",
     role: role,
     "aria-live": mode
@@ -43,28 +43,28 @@ Announcer.defaultProps = {
 };
 
 var AnnounceContextComponent = function AnnounceContextComponent(props) {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     justify: "center",
     align: "center",
     background: "brand",
     fill: true
-  }, _react["default"].createElement(_mnetUiBase.Heading, null, "Welcome to announcement section"), _react["default"].createElement(_mnetUiBase.AnnounceContext.Consumer, null, function (announce) {
-    return _react["default"].createElement(Announcer, _extends({
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, null, "Welcome to announcement section"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AnnounceContext.Consumer, null, function (announce) {
+    return /*#__PURE__*/_react["default"].createElement(Announcer, _extends({
       announce: announce
     }, props));
   })));
 };
 
 (0, _react2.storiesOf)('AnnounceContext', module).add('Polite', function () {
-  return _react["default"].createElement(AnnounceContextComponent, null);
+  return /*#__PURE__*/_react["default"].createElement(AnnounceContextComponent, null);
 }).add('Assertive', function () {
-  return _react["default"].createElement(AnnounceContextComponent, {
+  return /*#__PURE__*/_react["default"].createElement(AnnounceContextComponent, {
     message: "Turn on Accessibility feature to listen to this announcement. This will soon disappear",
     mode: "assertive",
     role: "alert"

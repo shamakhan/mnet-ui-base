@@ -7,20 +7,20 @@ var PhoneMaskedInput = function PhoneMaskedInput() {
       value = _React$useState[0],
       setValue = _React$useState[1];
 
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium"
-  }, React.createElement(MaskedInput, {
+  }, /*#__PURE__*/React.createElement(MaskedInput, {
     mask: [{
       fixed: '('
     }, {
@@ -50,5 +50,5 @@ var PhoneMaskedInput = function PhoneMaskedInput() {
 };
 
 storiesOf('MaskedInput', module).add('Phone', function () {
-  return React.createElement(PhoneMaskedInput, null);
+  return /*#__PURE__*/React.createElement(PhoneMaskedInput, null);
 });

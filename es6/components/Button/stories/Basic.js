@@ -5,36 +5,44 @@ import { storiesOf } from '@storybook/react';
 import { Box, Button } from 'mnet-ui-base';
 
 var BasicButtons = function BasicButtons(props) {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "medium"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
+    primary: true,
+    label: "Primary",
+    size: "medium",
+    onClick: function onClick() {}
+  }, props))), /*#__PURE__*/React.createElement(Box, {
+    align: "center",
+    pad: "medium"
+  }, /*#__PURE__*/React.createElement(Button, _extends({
+    secondary: true,
+    label: "Secondary",
+    onClick: function onClick() {}
+  }, props))), /*#__PURE__*/React.createElement(Box, {
+    align: "center",
+    pad: "medium"
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     label: "Default",
     onClick: function onClick() {}
-  }, props))), React.createElement(Box, {
+  }, props))), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "medium"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     label: "Anchor",
     href: "#"
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "medium"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     disabled: true,
     label: "Disabled",
     onClick: function onClick() {}
-  }, props))), React.createElement(Box, {
+  }, props))), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "medium"
-  }, React.createElement(Button, _extends({
-    primary: true,
-    label: "Primary",
-    onClick: function onClick() {}
-  }, props))), React.createElement(Box, {
-    align: "center",
-    pad: "medium"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     primary: true,
     label: "Active Primary",
     active: true,
@@ -43,5 +51,5 @@ var BasicButtons = function BasicButtons(props) {
 };
 
 storiesOf('Button', module).add('Basic', function () {
-  return React.createElement(BasicButtons, null);
+  return /*#__PURE__*/React.createElement(BasicButtons, null);
 });

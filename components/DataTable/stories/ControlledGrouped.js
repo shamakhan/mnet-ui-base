@@ -26,7 +26,7 @@ var ControlledGroupedDataTable = function ControlledGroupedDataTable() {
       expandedGroups = _useState[0],
       setExpandedGroups = _useState[1];
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.DataTable, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DataTable, {
     columns: groupColumns,
     data: _data.DATA,
     groupBy: {
@@ -39,5 +39,5 @@ var ControlledGroupedDataTable = function ControlledGroupedDataTable() {
 };
 
 (0, _react2.storiesOf)('DataTable', module).add('Controlled grouped', function () {
-  return _react["default"].createElement(ControlledGroupedDataTable, null);
+  return /*#__PURE__*/_react["default"].createElement(ControlledGroupedDataTable, null);
 });

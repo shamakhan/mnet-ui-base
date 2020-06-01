@@ -85,7 +85,7 @@ var getIconColor = function getIconColor(paths, theme, colorProp) {
   return result[1] || undefined;
 };
 
-var Button = (0, _react.forwardRef)(function (_ref, ref) {
+var Button = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var a11yTitle = _ref.a11yTitle,
       active = _ref.active,
       color = _ref.color,
@@ -204,12 +204,12 @@ var Button = (0, _react.forwardRef)(function (_ref, ref) {
       if (!plain) {
         // match what the label will use
         var iconColor = hover && getIconColor(themePaths.hover, theme) || getIconColor(themePaths.base, theme, color);
-        if (iconColor) buttonIcon = (0, _react.cloneElement)(icon, {
+        if (iconColor) buttonIcon = /*#__PURE__*/(0, _react.cloneElement)(icon, {
           color: iconColor
         });
       }
     } else if (primary) {
-      buttonIcon = (0, _react.cloneElement)(icon, {
+      buttonIcon = /*#__PURE__*/(0, _react.cloneElement)(icon, {
         color: theme.global.colors.text[isDarkBackground() ? 'dark' : 'light']
       });
     }
@@ -221,7 +221,7 @@ var Button = (0, _react.forwardRef)(function (_ref, ref) {
   var contents;
 
   if (first && second) {
-    contents = _react["default"].createElement(_Box.Box, {
+    contents = /*#__PURE__*/_react["default"].createElement(_Box.Box, {
       direction: "row",
       align: "center",
       justify: "center",
@@ -237,7 +237,7 @@ var Button = (0, _react.forwardRef)(function (_ref, ref) {
   }
 
   if (kind) {
-    return _react["default"].createElement(_StyledButtonKind.StyledButtonKind, _extends({}, rest, {
+    return /*#__PURE__*/_react["default"].createElement(_StyledButtonKind.StyledButtonKind, _extends({}, rest, {
       as: domTag,
       ref: ref,
       "aria-label": a11yTitle,
@@ -268,7 +268,7 @@ var Button = (0, _react.forwardRef)(function (_ref, ref) {
     }), contents);
   }
 
-  return _react["default"].createElement(_StyledButton.StyledButton, _extends({}, rest, {
+  return /*#__PURE__*/_react["default"].createElement(_StyledButton.StyledButton, _extends({}, rest, {
     as: domTag,
     ref: ref,
     "aria-label": a11yTitle,

@@ -5,28 +5,28 @@ import { Box, Meter, Table, TableBody, TableCell, TableRow, Text } from 'mnet-ui
 var values = [20, 40, 60, 80, 100];
 
 var MeterInTable = function MeterInTable() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     border: true,
     pad: {
       top: 'xsmall'
     }
-  }, React.createElement(Table, {
+  }, /*#__PURE__*/React.createElement(Table, {
     caption: "Meter Inside Table"
-  }, React.createElement(TableBody, null, values.map(function (val, index) {
-    return React.createElement(TableRow, {
+  }, /*#__PURE__*/React.createElement(TableBody, null, values.map(function (val, index) {
+    return /*#__PURE__*/React.createElement(TableRow, {
       key: index
-    }, React.createElement(TableCell, null, React.createElement(Meter, {
+    }, /*#__PURE__*/React.createElement(TableCell, null, /*#__PURE__*/React.createElement(Meter, {
       type: "bar",
       values: [{
         value: val
       }]
-    })), React.createElement(TableCell, null, React.createElement(Text, null, val, "% complete")));
+    })), /*#__PURE__*/React.createElement(TableCell, null, /*#__PURE__*/React.createElement(Text, null, val, "% complete")));
   }))))));
 };
 
 storiesOf('Table', module).add('Meter Inside Table', function () {
-  return React.createElement(MeterInTable, null);
+  return /*#__PURE__*/React.createElement(MeterInTable, null);
 });

@@ -29,16 +29,16 @@ var ThemedTextArea = function ThemedTextArea() {
     return setValue(event.target.value);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customTheme
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "large",
     height: "medium",
     border: {
       color: 'brand',
       size: 'medium'
     }
-  }, _react["default"].createElement(_mnetUiBase.TextArea, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextArea, {
     value: value,
     onChange: onChange,
     fill: true
@@ -46,5 +46,5 @@ var ThemedTextArea = function ThemedTextArea() {
 };
 
 (0, _react2.storiesOf)('TextArea', module).add('Themed', function () {
-  return _react["default"].createElement(ThemedTextArea, null);
+  return /*#__PURE__*/_react["default"].createElement(ThemedTextArea, null);
 });

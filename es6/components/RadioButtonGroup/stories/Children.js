@@ -9,10 +9,10 @@ var ChildrenRadioButtonGroup = function ChildrenRadioButtonGroup() {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(RadioButtonGroup, {
+  }, /*#__PURE__*/React.createElement(RadioButtonGroup, {
     name: "radio",
     direction: "row",
     gap: "xsmall",
@@ -27,13 +27,13 @@ var ChildrenRadioButtonGroup = function ChildrenRadioButtonGroup() {
     var Icon = option === 'asc' ? Ascend : Descend;
     var background;
     if (checked) background = 'brand';else if (hover) background = 'light-4';else background = 'light-2';
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       background: background,
       pad: "xsmall"
-    }, React.createElement(Icon, null));
+    }, /*#__PURE__*/React.createElement(Icon, null));
   })));
 };
 
 storiesOf('RadioButtonGroup', module).add('Children', function () {
-  return React.createElement(ChildrenRadioButtonGroup, null);
+  return /*#__PURE__*/React.createElement(ChildrenRadioButtonGroup, null);
 });

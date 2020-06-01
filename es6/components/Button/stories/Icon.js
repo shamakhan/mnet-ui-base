@@ -6,66 +6,66 @@ import { User } from "grommet-icons/es6/icons/User";
 import { Box, Button, Text } from 'mnet-ui-base';
 
 var IconPlain = function IconPlain() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     margin: "small"
-  }, " plain=true (no padding, no border) "), React.createElement(Box, {
+  }, " plain=true (no padding, no border) "), /*#__PURE__*/React.createElement(Box, {
     direction: "row"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     plain: true,
-    icon: React.createElement(Close, null),
+    icon: /*#__PURE__*/React.createElement(Close, null),
     onClick: function onClick() {},
     primary: true
-  }), "ye", React.createElement(Button, {
+  }), "ye", /*#__PURE__*/React.createElement(Button, {
     plain: true,
-    icon: React.createElement(Send, null),
+    icon: /*#__PURE__*/React.createElement(Send, null),
     onClick: function onClick() {}
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     plain: true,
-    icon: React.createElement(User, null),
+    icon: /*#__PURE__*/React.createElement(User, null),
     onClick: function onClick() {}
-  }))), React.createElement(Box, {
+  }))), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     margin: "small"
-  }, " plain=false (includes padding and border)"), React.createElement(Box, {
+  }, " plain=false (includes padding and border)"), /*#__PURE__*/React.createElement(Box, {
     direction: "row"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     plain: false,
-    icon: React.createElement(Close, null),
+    icon: /*#__PURE__*/React.createElement(Close, null),
     onClick: function onClick() {},
     primary: true
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     plain: false,
-    icon: React.createElement(Send, null),
+    icon: /*#__PURE__*/React.createElement(Send, null),
     onClick: function onClick() {}
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     plain: false,
-    icon: React.createElement(User, null),
+    icon: /*#__PURE__*/React.createElement(User, null),
     onClick: function onClick() {}
-  }))), React.createElement(Box, {
+  }))), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     margin: "small"
-  }, " plain=undefined (with padding, no border) "), React.createElement(Box, {
+  }, " plain=undefined (with padding, no border) "), /*#__PURE__*/React.createElement(Box, {
     direction: "row"
-  }, React.createElement(Button, {
-    icon: React.createElement(Close, null),
+  }, /*#__PURE__*/React.createElement(Button, {
+    icon: /*#__PURE__*/React.createElement(Close, null),
     onClick: function onClick() {},
     primary: true
-  }), React.createElement(Button, {
-    icon: React.createElement(Send, null),
+  }), /*#__PURE__*/React.createElement(Button, {
+    icon: /*#__PURE__*/React.createElement(Send, null),
     onClick: function onClick() {}
-  }), React.createElement(Button, {
-    icon: React.createElement(User, null),
+  }), /*#__PURE__*/React.createElement(Button, {
+    icon: /*#__PURE__*/React.createElement(User, null),
     onClick: function onClick() {}
   }))));
 };
 
 storiesOf('Button', module).add('Icon Plain', function () {
-  return React.createElement(IconPlain, null);
+  return /*#__PURE__*/React.createElement(IconPlain, null);
 });

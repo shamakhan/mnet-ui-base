@@ -5,73 +5,73 @@ import { storiesOf } from '@storybook/react';
 import { Box, Button } from 'mnet-ui-base';
 
 var FillButtons = function FillButtons(props) {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     pad: "medium",
     justify: "center",
     direction: "row"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     justify: "center",
     align: "center",
     pad: "medium",
     gap: "medium"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     border: true,
     justify: "center",
     align: "center",
     height: "100px",
     width: "300px"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     label: "False",
     onClick: function onClick() {}
-  }, props))), React.createElement(Box, {
+  }, props))), /*#__PURE__*/React.createElement(Box, {
     border: true,
     justify: "center",
     align: "center",
     height: "100px",
     width: "300px"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     label: "True",
     fill: true,
     onClick: function onClick() {}
-  }, props))), React.createElement(Box, {
+  }, props))), /*#__PURE__*/React.createElement(Box, {
     border: true,
     justify: "center",
     align: "center",
     height: "100px",
     width: "300px"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     label: "Horizontal",
     fill: "horizontal",
     onClick: function onClick() {}
-  }, props))), React.createElement(Box, {
+  }, props))), /*#__PURE__*/React.createElement(Box, {
     border: true,
     justify: "center",
     align: "center",
     height: "100px",
     width: "300px"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     label: "Vertical",
     fill: "vertical",
     onClick: function onClick() {}
-  }, props)))), React.createElement(Box, {
+  }, props)))), /*#__PURE__*/React.createElement(Box, {
     pad: "medium",
     justify: "center",
     align: "center",
     height: "700px",
     width: "300px",
     gap: "medium"
-  }, React.createElement(Button, _extends({
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     label: "False",
     onClick: function onClick() {}
-  }, props)), React.createElement(Button, _extends({
+  }, props)), /*#__PURE__*/React.createElement(Button, _extends({
     label: "True",
     fill: true,
     onClick: function onClick() {}
-  }, props)), React.createElement(Button, _extends({
+  }, props)), /*#__PURE__*/React.createElement(Button, _extends({
     label: "Horizontal",
     fill: "horizontal",
     onClick: function onClick() {}
-  }, props)), React.createElement(Button, _extends({
+  }, props)), /*#__PURE__*/React.createElement(Button, _extends({
     label: "Vertical",
     fill: "vertical",
     onClick: function onClick() {}
@@ -79,5 +79,5 @@ var FillButtons = function FillButtons(props) {
 };
 
 storiesOf('Button', module).add('Fill', function () {
-  return React.createElement(FillButtons, null);
+  return /*#__PURE__*/React.createElement(FillButtons, null);
 });

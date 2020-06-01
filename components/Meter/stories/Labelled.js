@@ -10,12 +10,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var LabelledMeter = function LabelledMeter() {
   var meterValue = 30;
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Stack, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Stack, {
     anchor: "center"
-  }, _react["default"].createElement(_mnetUiBase.Meter, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Meter, {
     type: "circle",
     background: "light-2",
     values: [{
@@ -23,20 +23,20 @@ var LabelledMeter = function LabelledMeter() {
     }],
     size: "xsmall",
     thickness: "small"
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     align: "center",
     pad: {
       bottom: 'xsmall'
     }
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "xlarge",
     weight: "bold"
-  }, meterValue), _react["default"].createElement(_mnetUiBase.Text, {
+  }, meterValue), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "small"
   }, "%")))));
 };
 
 (0, _react2.storiesOf)('Meter', module).add('Labelled', function () {
-  return _react["default"].createElement(LabelledMeter, null);
+  return /*#__PURE__*/_react["default"].createElement(LabelledMeter, null);
 });

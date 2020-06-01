@@ -19,30 +19,30 @@ var allItems = Array(2000).fill().map(function (_, i) {
 exports.allItems = allItems;
 
 var SimpleInfiniteScroll = function SimpleInfiniteScroll(props) {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
     items: allItems
   }, props), function (item) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: item,
       pad: "medium",
       border: {
         side: 'bottom'
       },
       align: "center"
-    }, _react["default"].createElement(_mnetUiBase.Text, null, item));
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, item));
   })));
 };
 
 (0, _react2.storiesOf)('InfiniteScroll', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleInfiniteScroll, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleInfiniteScroll, null);
 }).add('Show 118th item', function () {
-  return _react["default"].createElement(SimpleInfiniteScroll, {
+  return /*#__PURE__*/_react["default"].createElement(SimpleInfiniteScroll, {
     show: 117
   });
 }).add('Marker', function () {
-  return _react["default"].createElement(SimpleInfiniteScroll, {
+  return /*#__PURE__*/_react["default"].createElement(SimpleInfiniteScroll, {
     renderMarker: function renderMarker(marker) {
-      return _react["default"].createElement(_mnetUiBase.Box, {
+      return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
         pad: "medium",
         background: "accent-1"
       }, marker);

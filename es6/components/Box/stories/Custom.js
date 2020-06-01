@@ -3,17 +3,17 @@ import { storiesOf } from '@storybook/react';
 import { Box, Text } from 'mnet-ui-base';
 
 var GradientColorBox = function GradientColorBox() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     justify: "center",
     align: "center",
     pad: "xlarge",
     background: "linear-gradient(102.77deg, #865ED6 -9.18%, #18BAB9 209.09%)",
     round: "large"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     color: "white"
   }, "I have a linear gradient background")));
 };
 
 storiesOf('Box', module).add('Gradient', function () {
-  return React.createElement(GradientColorBox, null);
+  return /*#__PURE__*/React.createElement(GradientColorBox, null);
 });

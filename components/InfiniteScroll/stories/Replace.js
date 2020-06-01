@@ -17,23 +17,23 @@ var allItems = Array(240).fill().map(function (_, i) {
 });
 
 var InfiniteScrollReplace = function InfiniteScrollReplace(props) {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
     items: allItems
   }, props), function (item) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: item,
       pad: "medium",
       border: {
         side: 'bottom'
       },
       align: "center"
-    }, _react["default"].createElement(_mnetUiBase.Text, null, item));
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, item));
   }));
 };
 
 if (!(0, _isChromatic["default"])()) {
   (0, _react2.storiesOf)('InfiniteScroll', module).add('Replace', function () {
-    return _react["default"].createElement(InfiniteScrollReplace, {
+    return /*#__PURE__*/_react["default"].createElement(InfiniteScrollReplace, {
       replace: true
     });
   });

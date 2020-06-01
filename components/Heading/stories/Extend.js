@@ -45,20 +45,20 @@ var customTheme = (0, _utils.deepMerge)(_themes.mnet, {
 });
 
 var HeadingExtend = function HeadingExtend() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customTheme
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: "1",
     size: "large"
-  }, "This is using the extend property on Heading"), _react["default"].createElement(_mnetUiBase.Heading, {
+  }, "This is using the extend property on Heading"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: "2",
     size: "medium"
-  }, "This is using the extend property on Heading"), _react["default"].createElement(_mnetUiBase.Heading, {
+  }, "This is using the extend property on Heading"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: "3",
     size: "small"
   }, "This is using the extend property on Heading"));
 };
 
 (0, _react2.storiesOf)('Heading', module).add('Extend', function () {
-  return _react["default"].createElement(HeadingExtend, null);
+  return /*#__PURE__*/_react["default"].createElement(HeadingExtend, null);
 });

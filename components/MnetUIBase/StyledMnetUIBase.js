@@ -23,7 +23,7 @@ var StyledMnetUIBase = _styledComponents["default"].div.withConfig({
 }, function (props) {
   return props.full && fullStyle;
 }, function (props) {
-  return props.theme.global.fonyarface;
+  return props.theme.global.font.face;
 }, function (props) {
   return props.theme.mnet.extend;
 }, function (props) {

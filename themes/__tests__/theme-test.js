@@ -33,49 +33,49 @@ var customTheme = {
 };
 describe('MnetUIBase', function () {
   test('default theme', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_components.MnetUIBase, null, colors.map(function (color) {
-      return _react["default"].createElement(_components.Box, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_components.MnetUIBase, null, colors.map(function (color) {
+      return /*#__PURE__*/_react["default"].createElement(_components.Box, {
         key: color,
         background: color
-      }, _react["default"].createElement(_components.Text, null, color));
+      }, /*#__PURE__*/_react["default"].createElement(_components.Text, null, color));
     })));
 
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
   test('dark theme', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_components.MnetUIBase, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_components.MnetUIBase, {
       theme: _.dark
     }, colors.map(function (color) {
-      return _react["default"].createElement(_components.Box, {
+      return /*#__PURE__*/_react["default"].createElement(_components.Box, {
         key: color,
         background: color
-      }, _react["default"].createElement(_components.Text, null, color));
+      }, /*#__PURE__*/_react["default"].createElement(_components.Text, null, color));
     })));
 
     var tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
   test('custom theme', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_components.MnetUIBase, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_components.MnetUIBase, {
       theme: customTheme
-    }, _react["default"].createElement(_components.Box, null, _react["default"].createElement(_components.Anchor, {
-      icon: _react["default"].createElement(_grommetIcons.Add, null),
+    }, /*#__PURE__*/_react["default"].createElement(_components.Box, null, /*#__PURE__*/_react["default"].createElement(_components.Anchor, {
+      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
       label: "Add"
-    }), _react["default"].createElement(_components.Anchor, {
-      icon: _react["default"].createElement(_grommetIcons.Add, null),
+    }), /*#__PURE__*/_react["default"].createElement(_components.Anchor, {
+      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
       label: "Add",
       color: "custom"
-    })), _react["default"].createElement(_components.Box, {
+    })), /*#__PURE__*/_react["default"].createElement(_components.Box, {
       background: "dark-1"
-    }, _react["default"].createElement(_components.Anchor, {
-      icon: _react["default"].createElement(_grommetIcons.Add, null),
+    }, /*#__PURE__*/_react["default"].createElement(_components.Anchor, {
+      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
       label: "Add"
-    }), _react["default"].createElement(_components.Anchor, {
-      icon: _react["default"].createElement(_grommetIcons.Add, null),
+    }), /*#__PURE__*/_react["default"].createElement(_components.Anchor, {
+      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, null),
       label: "Add",
       color: "custom"
-    })), _react["default"].createElement(_components.Box, null, _react["default"].createElement(_components.TextInput, {
+    })), /*#__PURE__*/_react["default"].createElement(_components.Box, null, /*#__PURE__*/_react["default"].createElement(_components.TextInput, {
       value: "Value"
     }))));
 

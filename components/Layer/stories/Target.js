@@ -42,13 +42,13 @@ var TargetLayer = function TargetLayer() {
     return setOpen(undefined);
   };
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, {
     fill: true,
     columns: [gutter, 'flex', gutter],
     rows: [gutter, 'flex', gutter],
@@ -57,7 +57,7 @@ var TargetLayer = function TargetLayer() {
       start: [1, 1],
       end: [1, 1]
     }]
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     ref: ref,
     gridArea: "main",
     fill: true,
@@ -65,44 +65,44 @@ var TargetLayer = function TargetLayer() {
     justify: "center",
     gap: "medium",
     background: "brand"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     options: positions,
     value: position,
     onChange: function onChange(_ref) {
       var option = _ref.option;
       return setPosition(option);
     }
-  }), _react["default"].createElement(_mnetUiBase.CheckBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
     toggle: true,
     label: "modal",
     checked: modal,
     onChange: function onChange() {
       return setModal(!modal);
     }
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Open",
     onClick: onOpen
-  }))), open && _react["default"].createElement(_mnetUiBase.Layer, {
+  }))), open && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Layer, {
     modal: modal,
     position: position,
     target: ref.current,
     onClickOutside: onClose,
     onEsc: onClose
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium",
     gap: "small",
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Toggle gutter size",
     onClick: function onClick() {
       return setGutter(gutter === 'small' ? 'xsmall' : 'small');
     }
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Close",
     onClick: onClose
   }))));
 };
 
 (0, _react2.storiesOf)('Layer', module).add('Target', function () {
-  return _react["default"].createElement(TargetLayer, null);
+  return /*#__PURE__*/_react["default"].createElement(TargetLayer, null);
 });

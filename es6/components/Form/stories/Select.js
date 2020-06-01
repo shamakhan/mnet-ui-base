@@ -20,25 +20,25 @@ var FormFieldSelect = function FormFieldSelect() {
   var onChange = useCallback(function (nextValue) {
     return setValue(nextValue);
   }, []);
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Form, {
+  }, /*#__PURE__*/React.createElement(Form, {
     value: value,
     onChange: onChange,
     onSubmit: function onSubmit() {
       return console.log('Submit', value);
     }
-  }, React.createElement(FormField, {
+  }, /*#__PURE__*/React.createElement(FormField, {
     label: "Label",
     name: "select"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     name: "select",
     placeholder: "placeholder",
     options: options,
     labelKey: "label",
     valueKey: "value"
-  })), React.createElement(Button, {
+  })), /*#__PURE__*/React.createElement(Button, {
     type: "submit",
     label: "Update",
     primary: true
@@ -46,5 +46,5 @@ var FormFieldSelect = function FormFieldSelect() {
 };
 
 storiesOf('Form', module).add('Select', function () {
-  return React.createElement(FormFieldSelect, null);
+  return /*#__PURE__*/React.createElement(FormFieldSelect, null);
 });

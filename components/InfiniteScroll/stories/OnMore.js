@@ -27,25 +27,25 @@ var OnMoreInfiniteScroll = function OnMoreInfiniteScroll(_ref) {
     }, 1000);
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
     items: items,
     onMore: onMore
   }, props), function (item) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: item,
       pad: "medium",
       border: {
         side: 'bottom'
       },
       align: "center"
-    }, _react["default"].createElement(_mnetUiBase.Text, null, item));
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, item));
   })));
 };
 
 (0, _react2.storiesOf)('InfiniteScroll', module).add('onMore', function () {
-  return _react["default"].createElement(OnMoreInfiniteScroll, null);
+  return /*#__PURE__*/_react["default"].createElement(OnMoreInfiniteScroll, null);
 }).add('onMore step', function () {
-  return _react["default"].createElement(OnMoreInfiniteScroll, {
+  return /*#__PURE__*/_react["default"].createElement(OnMoreInfiniteScroll, {
     step: 75
   });
 });

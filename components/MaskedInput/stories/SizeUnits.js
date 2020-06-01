@@ -13,20 +13,20 @@ var SizeUnitsMaskedInput = function SizeUnitsMaskedInput() {
       value = _React$useState[0],
       setValue = _React$useState[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.MaskedInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MaskedInput, {
     mask: [{
       length: [1, 4],
       options: [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024],
@@ -48,5 +48,5 @@ var SizeUnitsMaskedInput = function SizeUnitsMaskedInput() {
 };
 
 (0, _react2.storiesOf)('MaskedInput', module).add('Size + Units', function () {
-  return _react["default"].createElement(SizeUnitsMaskedInput, null);
+  return /*#__PURE__*/_react["default"].createElement(SizeUnitsMaskedInput, null);
 });

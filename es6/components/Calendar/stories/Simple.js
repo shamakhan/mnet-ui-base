@@ -11,18 +11,18 @@ var SimpleCalendar = function SimpleCalendar() {
     setDate(nextDate !== date ? nextDate : undefined);
   };
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Calendar, {
+  }, /*#__PURE__*/React.createElement(Calendar, {
     date: date,
     onSelect: onSelect,
     size: "small",
     bounds: ['2018-09-08', '2020-12-13']
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Calendar, {
+  }, /*#__PURE__*/React.createElement(Calendar, {
     date: date,
     daysOfWeek: true,
     onSelect: onSelect,
@@ -32,5 +32,5 @@ var SimpleCalendar = function SimpleCalendar() {
 };
 
 storiesOf('Calendar', module).add('Simple', function () {
-  return React.createElement(SimpleCalendar, null);
+  return /*#__PURE__*/React.createElement(SimpleCalendar, null);
 });

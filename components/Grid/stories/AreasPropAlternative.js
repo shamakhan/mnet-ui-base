@@ -9,32 +9,32 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var GridAreasAlternative = function GridAreasAlternative() {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, {
     rows: ['xxsmall', 'medium', 'xsmall'],
     columns: ['1/4', '3/4'],
     areas: [['header', 'header'], ['sidebar', 'main'], ['footer', 'footer']],
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "brand",
     gridArea: "header"
-  }, "Header"), _react["default"].createElement(_mnetUiBase.Box, {
+  }, "Header"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-5",
     gridArea: "sidebar"
-  }, "Sidebar"), _react["default"].createElement(_mnetUiBase.Box, {
+  }, "Sidebar"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-2",
     gridArea: "main"
-  }, "Main"), _react["default"].createElement(_mnetUiBase.Box, {
+  }, "Main"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "dark-2",
     gridArea: "footer"
   }, "Footer")));
 };
 
 (0, _react2.storiesOf)('Grid', module).add('Areas prop alternative', function () {
-  return _react["default"].createElement(GridAreasAlternative, null);
+  return /*#__PURE__*/_react["default"].createElement(GridAreasAlternative, null);
 });

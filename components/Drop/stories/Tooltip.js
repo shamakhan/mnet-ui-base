@@ -16,17 +16,17 @@ var TooltipDrop = function TooltipDrop() {
       setOver = _useState[1];
 
   var ref = (0, _react.useRef)();
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Button",
     ref: ref,
     onMouseOver: function onMouseOver() {
@@ -37,13 +37,13 @@ var TooltipDrop = function TooltipDrop() {
     },
     onFocus: function onFocus() {},
     onBlur: function onBlur() {}
-  }), ref.current && over && _react["default"].createElement(_mnetUiBase.Drop, {
+  }), ref.current && over && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Drop, {
     align: {
       left: 'right'
     },
     target: ref.current,
     plain: true
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     margin: "xsmall",
     pad: "small",
     background: "dark-3",
@@ -55,5 +55,5 @@ var TooltipDrop = function TooltipDrop() {
 };
 
 (0, _react2.storiesOf)('Drop', module).add('Tooltip', function () {
-  return _react["default"].createElement(TooltipDrop, null);
+  return /*#__PURE__*/_react["default"].createElement(TooltipDrop, null);
 });

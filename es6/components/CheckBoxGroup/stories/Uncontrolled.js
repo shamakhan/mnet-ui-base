@@ -4,38 +4,38 @@ import { Box, Button, CheckBoxGroup, Form, FormField, MnetUIBase, Heading } from
 import { mnet } from 'mnet-ui-base/themes';
 
 var CheckBoxGroupForm = function CheckBoxGroupForm() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "medium"
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: "3"
-  }, "Form with string options"), React.createElement(Form, {
+  }, "Form with string options"), /*#__PURE__*/React.createElement(Form, {
     onSubmit: function onSubmit(_ref) {
       var value = _ref.value,
           touched = _ref.touched;
       return console.log('Submit', value, touched);
     }
-  }, React.createElement(FormField, {
+  }, /*#__PURE__*/React.createElement(FormField, {
     name: "am-pm",
     component: CheckBoxGroup,
     options: ['morning', 'evening']
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     type: "submit",
     label: "Submit"
-  }))), React.createElement(Box, {
+  }))), /*#__PURE__*/React.createElement(Box, {
     pad: "medium"
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: "3"
-  }, "Form with object options"), React.createElement(Form, {
+  }, "Form with object options"), /*#__PURE__*/React.createElement(Form, {
     onSubmit: function onSubmit(_ref2) {
       var value = _ref2.value,
           touched = _ref2.touched;
       return console.log('Submit object options', value, touched);
     }
-  }, React.createElement(FormField, {
+  }, /*#__PURE__*/React.createElement(FormField, {
     name: "drink"
-  }, React.createElement(CheckBoxGroup, {
+  }, /*#__PURE__*/React.createElement(CheckBoxGroup, {
     name: "drink",
     valueKey: "id",
     options: [{
@@ -48,12 +48,12 @@ var CheckBoxGroupForm = function CheckBoxGroupForm() {
       label: 'Milk',
       id: '3'
     }]
-  })), React.createElement(Button, {
+  })), /*#__PURE__*/React.createElement(Button, {
     type: "submit",
     label: "Submit"
   }))));
 };
 
 storiesOf('CheckBoxGroup', module).add('Form uncontrolled', function () {
-  return React.createElement(CheckBoxGroupForm, null);
+  return /*#__PURE__*/React.createElement(CheckBoxGroupForm, null);
 });

@@ -19,7 +19,7 @@ var deriveMax = function deriveMax(values) {
   return max;
 };
 
-var Meter = forwardRef(function (_ref, ref) {
+var Meter = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var _ref$background = _ref.background,
       background = _ref$background === void 0 ? {
     color: 'light-2',
@@ -40,7 +40,7 @@ var Meter = forwardRef(function (_ref, ref) {
   var content;
 
   if (type === 'bar') {
-    content = React.createElement(Bar, _extends({
+    content = /*#__PURE__*/React.createElement(Bar, _extends({
       ref: ref,
       max: memoizedMax,
       values: values,
@@ -49,7 +49,7 @@ var Meter = forwardRef(function (_ref, ref) {
       background: background
     }, rest));
   } else if (type === 'circle') {
-    content = React.createElement(Circle, _extends({
+    content = /*#__PURE__*/React.createElement(Circle, _extends({
       ref: ref,
       max: memoizedMax,
       values: values,

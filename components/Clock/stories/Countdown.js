@@ -11,13 +11,13 @@ var _themes = require("mnet-ui-base/themes");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Example = function Example() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Clock, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Clock, {
     type: "digital",
     time: "PT0H0M20S",
     run: "backward"
@@ -25,7 +25,7 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Clock', module).add('Countdown', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 }, {
   chromatic: {
     disable: true

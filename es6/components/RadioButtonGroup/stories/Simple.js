@@ -14,10 +14,10 @@ var SimpleRadioButtonGroup = function SimpleRadioButtonGroup(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(RadioButtonGroup, _extends({
+  }, /*#__PURE__*/React.createElement(RadioButtonGroup, _extends({
     name: "radio",
     options: [{
       label: 'Choice 1',
@@ -37,5 +37,5 @@ var SimpleRadioButtonGroup = function SimpleRadioButtonGroup(_ref) {
 };
 
 storiesOf('RadioButtonGroup', module).add('Simple', function () {
-  return React.createElement(SimpleRadioButtonGroup, null);
+  return /*#__PURE__*/React.createElement(SimpleRadioButtonGroup, null);
 });

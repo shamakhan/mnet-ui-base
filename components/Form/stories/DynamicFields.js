@@ -17,16 +17,16 @@ var Example = function Example() {
       haveAlias = _useState[0],
       setHaveAlias = _useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     full: true,
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Form, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Form, {
     onReset: function onReset(event) {
       return console.log(event);
     },
@@ -34,37 +34,37 @@ var Example = function Example() {
       var value = _ref.value;
       return console.log('Submit', value);
     }
-  }, _react["default"].createElement(_mnetUiBase.FormField, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Name",
     name: "name",
     required: true
-  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     name: "name"
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     name: "haveAlias"
-  }, _react["default"].createElement(_mnetUiBase.CheckBox, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
     name: "haveAlias",
     label: "alias?",
     checked: haveAlias,
     onChange: function onChange() {
       return setHaveAlias(!haveAlias);
     }
-  })), haveAlias && _react["default"].createElement(_mnetUiBase.FormField, {
+  })), haveAlias && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Alias",
     name: "alias",
     required: true
-  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     name: "alias"
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     justify: "between",
     margin: {
       top: 'medium'
     }
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "reset",
     label: "Reset"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "submit",
     label: "Update",
     primary: true
@@ -72,5 +72,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Form', module).add('Dynamic fields', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

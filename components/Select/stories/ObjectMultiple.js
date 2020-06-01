@@ -29,18 +29,18 @@ var Example = function Example() {
       value = _useState2[0],
       setValue = _useState2[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     size: "medium",
     placeholder: "Select",
     multiple: true,
@@ -76,5 +76,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Select', module).add('Object Multiple', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

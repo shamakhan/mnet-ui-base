@@ -4,12 +4,12 @@ import { Box, Meter, Stack, Text } from 'mnet-ui-base';
 
 var LabelledMeter = function LabelledMeter() {
   var meterValue = 30;
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Stack, {
+  }, /*#__PURE__*/React.createElement(Stack, {
     anchor: "center"
-  }, React.createElement(Meter, {
+  }, /*#__PURE__*/React.createElement(Meter, {
     type: "circle",
     background: "light-2",
     values: [{
@@ -17,20 +17,20 @@ var LabelledMeter = function LabelledMeter() {
     }],
     size: "xsmall",
     thickness: "small"
-  }), React.createElement(Box, {
+  }), /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     align: "center",
     pad: {
       bottom: 'xsmall'
     }
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     size: "xlarge",
     weight: "bold"
-  }, meterValue), React.createElement(Text, {
+  }, meterValue), /*#__PURE__*/React.createElement(Text, {
     size: "small"
   }, "%")))));
 };
 
 storiesOf('Meter', module).add('Labelled', function () {
-  return React.createElement(LabelledMeter, null);
+  return /*#__PURE__*/React.createElement(LabelledMeter, null);
 });

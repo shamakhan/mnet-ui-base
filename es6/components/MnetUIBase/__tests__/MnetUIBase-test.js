@@ -12,7 +12,7 @@ var TestAnnouncer = function TestAnnouncer(_ref) {
   React.useEffect(function () {
     return announce('hello', 'assertive');
   });
-  return React.createElement("div", null, "hi");
+  return /*#__PURE__*/React.createElement("div", null, "hi");
 };
 
 var customBreakpointsTheme = {
@@ -38,55 +38,55 @@ var customBreakpointsTheme = {
 
 var SSRTester = function SSRTester(_ref2) {
   var ua = _ref2.ua;
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: customBreakpointsTheme,
     userAgent: ua
-  }, React.createElement(ResponsiveContext.Consumer, null, function (size) {
-    return React.createElement(Heading, null, "Received size " + size + " for " + ua);
+  }, /*#__PURE__*/React.createElement(ResponsiveContext.Consumer, null, function (size) {
+    return /*#__PURE__*/React.createElement(Heading, null, "Received size " + size + " for " + ua);
   }));
 };
 
 describe('MnetUIBase', function () {
   afterEach(cleanup);
   test('basic', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null));
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('mnet theme', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: mnet
     }));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('themeMode', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: mnet,
       themeMode: "dark"
     }));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('cssVars', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       cssVars: true
     }, "MnetUIBase App"));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('full', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       full: true
     }, "MnetUIBase App"));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('background', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       full: true,
       background: "#0000ff"
     }, "MnetUIBase App"));
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('announce', function (done) {
-    var _render = render(React.createElement(MnetUIBase, null, React.createElement(AnnounceContext.Consumer, null, function (announce) {
-      return React.createElement(TestAnnouncer, {
+    var _render = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(AnnounceContext.Consumer, null, function (announce) {
+      return /*#__PURE__*/React.createElement(TestAnnouncer, {
         announce: announce
       });
     }))),
@@ -107,7 +107,7 @@ describe('MnetUIBase', function () {
   /* eslint-enable max-len */
   ].forEach(function (ua) {
     test("ssr rendering " + ua.substring(0, 25), function () {
-      var component = renderer.create(React.createElement(SSRTester, {
+      var component = renderer.create( /*#__PURE__*/React.createElement(SSRTester, {
         ua: ua
       }));
       expect(component.toJSON()).toMatchSnapshot();

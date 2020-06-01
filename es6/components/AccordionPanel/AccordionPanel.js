@@ -11,7 +11,7 @@ import { Button } from '../Button';
 import { Collapsible } from '../Collapsible';
 import { Heading } from '../Heading';
 import { AccordionContext } from '../Accordion/AccordionContext';
-var AccordionPanel = forwardRef(function (_ref, ref) {
+var AccordionPanel = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var children = _ref.children,
       header = _ref.header,
       label = _ref.label,
@@ -64,13 +64,13 @@ var AccordionPanel = forwardRef(function (_ref, ref) {
       theme.global.borderSize[panelBorder.size] || panelBorder.size || theme.global.borderSize.xsmall // '-1px'
       ) + "px"
     };
-  return React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(Box, {
     ref: ref,
     flex: false,
     onClick: onClick,
     border: panelBorder,
     margin: abutMargin
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     role: "tab",
     "aria-selected": active,
     "aria-expanded": active,
@@ -97,27 +97,27 @@ var AccordionPanel = forwardRef(function (_ref, ref) {
     style: focus ? {
       zIndex: 1
     } : undefined
-  }, header || React.createElement(Box, _extends({
+  }, header || /*#__PURE__*/React.createElement(Box, _extends({
     align: "center",
     direction: "row",
     justify: "between"
-  }, rest), typeof label === 'string' ? React.createElement(Box, {
+  }, rest), typeof label === 'string' ? /*#__PURE__*/React.createElement(Box, {
     pad: {
       horizontal: 'xsmall'
     }
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: theme.accordion.heading && theme.accordion.heading.level || 4,
     margin: theme.accordion.heading && theme.accordion.heading.margin || undefined,
     color: hover
-  }, label)) : label, AccordionIcon && React.createElement(Box, {
+  }, label)) : label, AccordionIcon && /*#__PURE__*/React.createElement(Box, {
     pad: {
       horizontal: 'small'
     }
-  }, React.createElement(AccordionIcon, {
+  }, /*#__PURE__*/React.createElement(AccordionIcon, {
     color: iconColor
-  })))), React.createElement(Box, {
+  })))), /*#__PURE__*/React.createElement(Box, {
     border: contentBorder
-  }, animate ? React.createElement(Collapsible, {
+  }, animate ? /*#__PURE__*/React.createElement(Collapsible, {
     open: active
   }, children) : active && children));
 });

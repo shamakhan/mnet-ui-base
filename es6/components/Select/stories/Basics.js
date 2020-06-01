@@ -13,12 +13,12 @@ var SimpleSelect = function SimpleSelect(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Select, _extends({
+  }, /*#__PURE__*/React.createElement(Select, _extends({
     id: "select",
     name: "select",
     placeholder: "Select",
@@ -45,5 +45,5 @@ for (var i = 1; i <= 200; i += 1) {
 }
 
 storiesOf('Select', module).add('Simple', function () {
-  return React.createElement(SimpleSelect, null);
+  return /*#__PURE__*/React.createElement(SimpleSelect, null);
 });

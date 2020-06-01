@@ -20,12 +20,12 @@ var Example = function Example() {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     id: "select",
     name: "select",
     placeholder: "Select",
@@ -44,5 +44,5 @@ var Example = function Example() {
 };
 
 storiesOf('Select', module).add('Object options', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 });

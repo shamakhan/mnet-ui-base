@@ -49,7 +49,7 @@ var SelectOption = (0, _styledComponents["default"])(_Button.Button).withConfig(
   displayName: "SelectContainer__SelectOption",
   componentId: "sc-64fnsh-2"
 })(["display:block;width:100%;"]);
-var SelectContainer = (0, _react.forwardRef)(function (_ref, ref) {
+var SelectContainer = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var _ref$children = _ref.children,
       children = _ref$children === void 0 ? null : _ref$children,
       disabled = _ref.disabled,
@@ -280,22 +280,22 @@ var SelectContainer = (0, _react.forwardRef)(function (_ref, ref) {
   var customSearchInput = theme.select.searchInput;
   var SelectTextInput = customSearchInput || _TextInput.TextInput;
 
-  var selectOptionsStyle = _extends({}, theme.select.options.box, {}, theme.select.options.container);
+  var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
 
-  return _react["default"].createElement(_Keyboard.Keyboard, {
+  return /*#__PURE__*/_react["default"].createElement(_Keyboard.Keyboard, {
     onEnter: onSelectOption,
     onUp: onPreviousOption,
     onDown: onNextOption,
     onKeyDown: onKeyDown
-  }, _react["default"].createElement(_StyledSelect.StyledContainer, {
+  }, /*#__PURE__*/_react["default"].createElement(_StyledSelect.StyledContainer, {
     ref: ref,
     as: _Box.Box,
     id: id ? id + "__select-drop" : undefined,
     dropHeight: dropHeight
-  }, onSearch && _react["default"].createElement(_Box.Box, {
+  }, onSearch && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     pad: !customSearchInput ? 'xsmall' : undefined,
     flex: false
-  }, _react["default"].createElement(SelectTextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(SelectTextInput, {
     focusIndicator: !customSearchInput,
     size: "small",
     ref: searchRef,
@@ -303,11 +303,11 @@ var SelectContainer = (0, _react.forwardRef)(function (_ref, ref) {
     value: search || '',
     placeholder: searchPlaceholder,
     onChange: onSearchChange
-  })), _react["default"].createElement(OptionsBox, {
+  })), /*#__PURE__*/_react["default"].createElement(OptionsBox, {
     role: "menubar",
     tabIndex: "-1",
     ref: optionsRef
-  }, options.length > 0 ? _react["default"].createElement(_InfiniteScroll.InfiniteScroll, {
+  }, options.length > 0 ? /*#__PURE__*/_react["default"].createElement(_InfiniteScroll.InfiniteScroll, {
     items: options,
     step: theme.select.step,
     onMore: onMore,
@@ -317,7 +317,7 @@ var SelectContainer = (0, _react.forwardRef)(function (_ref, ref) {
     var optionDisabled = isDisabled(index);
     var optionSelected = isSelected(index);
     var optionActive = activeIndex === index;
-    return _react["default"].createElement(SelectOption // eslint-disable-next-line react/no-array-index-key
+    return /*#__PURE__*/_react["default"].createElement(SelectOption // eslint-disable-next-line react/no-array-index-key
     , {
       key: index,
       ref: optionRef,
@@ -334,16 +334,16 @@ var SelectContainer = (0, _react.forwardRef)(function (_ref, ref) {
       active: optionActive,
       disabled: optionDisabled,
       selected: optionSelected
-    }) : _react["default"].createElement(OptionBox, _extends({}, selectOptionsStyle, {
+    }) : /*#__PURE__*/_react["default"].createElement(OptionBox, _extends({}, selectOptionsStyle, {
       selected: optionSelected
-    }), _react["default"].createElement(_Text.Text, theme.select.options.text, optionLabel(index))));
-  }) : _react["default"].createElement(SelectOption, {
+    }), /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.select.options.text, optionLabel(index))));
+  }) : /*#__PURE__*/_react["default"].createElement(SelectOption, {
     key: "search_empty",
     tabIndex: "-1",
     role: "menuitem",
     hoverIndicator: "background",
     disabled: true,
     option: emptySearchMessage
-  }, _react["default"].createElement(OptionBox, selectOptionsStyle, _react["default"].createElement(_Text.Text, theme.select.container.text, emptySearchMessage))))));
+  }, /*#__PURE__*/_react["default"].createElement(OptionBox, selectOptionsStyle, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.select.container.text, emptySearchMessage))))));
 });
 exports.SelectContainer = SelectContainer;

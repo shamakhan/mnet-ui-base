@@ -8,30 +8,30 @@ export var allItems = Array(2000).fill().map(function (_, i) {
 });
 
 var SimpleInfiniteScroll = function SimpleInfiniteScroll(props) {
-  return React.createElement(React.Fragment, null, React.createElement(Box, null, React.createElement(InfiniteScroll, _extends({
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(InfiniteScroll, _extends({
     items: allItems
   }, props), function (item) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       key: item,
       pad: "medium",
       border: {
         side: 'bottom'
       },
       align: "center"
-    }, React.createElement(Text, null, item));
+    }, /*#__PURE__*/React.createElement(Text, null, item));
   })));
 };
 
 storiesOf('InfiniteScroll', module).add('Simple', function () {
-  return React.createElement(SimpleInfiniteScroll, null);
+  return /*#__PURE__*/React.createElement(SimpleInfiniteScroll, null);
 }).add('Show 118th item', function () {
-  return React.createElement(SimpleInfiniteScroll, {
+  return /*#__PURE__*/React.createElement(SimpleInfiniteScroll, {
     show: 117
   });
 }).add('Marker', function () {
-  return React.createElement(SimpleInfiniteScroll, {
+  return /*#__PURE__*/React.createElement(SimpleInfiniteScroll, {
     renderMarker: function renderMarker(marker) {
-      return React.createElement(Box, {
+      return /*#__PURE__*/React.createElement(Box, {
         pad: "medium",
         background: "accent-1"
       }, marker);

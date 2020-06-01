@@ -23,18 +23,18 @@ var CustomSelect = function CustomSelect(_ref) {
       value = _useState[0],
       setValue = _useState[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Select, _extends({
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, _extends({
     id: "select",
     name: "select",
     placeholder: "Select",
@@ -45,19 +45,19 @@ var CustomSelect = function CustomSelect(_ref) {
       return setValue(option);
     },
     plain: true,
-    valueLabel: _react["default"].createElement(_mnetUiBase.Box, {
+    valueLabel: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       background: "brand",
       width: "small",
       round: "small",
       overflow: "hidden",
       align: "center"
     }, value || 'Select...'),
-    icon: _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_grommetIcons.CaretDown, {
+    icon: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, null, /*#__PURE__*/_react["default"].createElement(_grommetIcons.CaretDown, {
       color: "black"
     }))
   }, rest))));
 };
 
 (0, _react2.storiesOf)('Select', module).add('Custom', function () {
-  return _react["default"].createElement(CustomSelect, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomSelect, null);
 });

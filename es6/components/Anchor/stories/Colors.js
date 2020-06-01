@@ -4,40 +4,40 @@ import { Add } from "grommet-icons/es6/icons/Add";
 import { Anchor, Box } from 'mnet-ui-base';
 
 var Colors = function Colors() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     pad: "medium",
     gap: "medium"
-  }, React.createElement(Anchor, {
-    icon: React.createElement(Add, null),
+  }, /*#__PURE__*/React.createElement(Anchor, {
+    icon: /*#__PURE__*/React.createElement(Add, null),
     href: "#"
-  }), React.createElement(Anchor, {
-    icon: React.createElement(Add, null),
+  }), /*#__PURE__*/React.createElement(Anchor, {
+    icon: /*#__PURE__*/React.createElement(Add, null),
     label: "Add",
     href: "#"
-  }), React.createElement(Anchor, {
+  }), /*#__PURE__*/React.createElement(Anchor, {
     label: "Add",
     href: "#"
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     background: "dark-1",
     pad: "medium",
     gap: "medium"
-  }, React.createElement(Anchor, {
-    icon: React.createElement(Add, null),
+  }, /*#__PURE__*/React.createElement(Anchor, {
+    icon: /*#__PURE__*/React.createElement(Add, null),
     href: "#"
-  }), React.createElement(Anchor, {
-    icon: React.createElement(Add, null),
+  }), /*#__PURE__*/React.createElement(Anchor, {
+    icon: /*#__PURE__*/React.createElement(Add, null),
     label: "Add",
     href: "#"
-  }), React.createElement(Anchor, {
-    icon: React.createElement(Add, null),
+  }), /*#__PURE__*/React.createElement(Anchor, {
+    icon: /*#__PURE__*/React.createElement(Add, null),
     label: "Add",
     href: "#"
-  }), React.createElement(Anchor, {
+  }), /*#__PURE__*/React.createElement(Anchor, {
     label: "Add",
     href: "#"
   })));
 };
 
 storiesOf('Anchor', module).add('Colors', function () {
-  return React.createElement(Colors, null);
+  return /*#__PURE__*/React.createElement(Colors, null);
 });

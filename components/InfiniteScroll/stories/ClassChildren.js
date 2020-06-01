@@ -15,20 +15,20 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 /* eslint-disable react/prefer-stateless-function */
 var MyItem = function MyItem(_ref) {
   var item = _ref.item;
-  return _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium",
     border: {
       side: 'bottom'
     },
     align: "center"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, item));
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, item));
 };
 
 var ClassChildrenInfiniteScroll = function ClassChildrenInfiniteScroll(props) {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, null, _react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.InfiniteScroll, _extends({
     items: _Basics.allItems
   }, props), function (item) {
-    return _react["default"].createElement(MyItem, {
+    return /*#__PURE__*/_react["default"].createElement(MyItem, {
       key: item,
       item: item
     });
@@ -36,5 +36,5 @@ var ClassChildrenInfiniteScroll = function ClassChildrenInfiniteScroll(props) {
 };
 
 (0, _react2.storiesOf)('InfiniteScroll', module).add('Class Children', function () {
-  return _react["default"].createElement(ClassChildrenInfiniteScroll, null);
+  return /*#__PURE__*/_react["default"].createElement(ClassChildrenInfiniteScroll, null);
 });

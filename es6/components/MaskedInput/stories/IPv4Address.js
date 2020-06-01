@@ -8,20 +8,20 @@ var IPv4MaskedInput = function IPv4MaskedInput() {
       value = _React$useState[0],
       setValue = _React$useState[1];
 
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium"
-  }, React.createElement(MaskedInput, {
+  }, /*#__PURE__*/React.createElement(MaskedInput, {
     mask: [{
       length: [1, 3],
       regexp: IPv4ElementExp,
@@ -53,5 +53,5 @@ var IPv4MaskedInput = function IPv4MaskedInput() {
 };
 
 storiesOf('MaskedInput', module).add('IPv4 Address', function () {
-  return React.createElement(IPv4MaskedInput, null);
+  return /*#__PURE__*/React.createElement(IPv4MaskedInput, null);
 });

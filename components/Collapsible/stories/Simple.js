@@ -15,26 +15,26 @@ var SimpleCollapsible = function SimpleCollapsible(props) {
       open = _React$useState[0],
       setOpen = _React$useState[1];
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "start",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     primary: true,
     onClick: function onClick() {
       return setOpen(!open);
     },
     label: "Toggle"
-  }), _react["default"].createElement(_mnetUiBase.Collapsible, _extends({
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Collapsible, _extends({
     open: open
-  }, props), _react["default"].createElement(_mnetUiBase.Box, {
+  }, props), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-2",
     round: "medium",
     pad: "medium",
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "This is a box inside a Collapsible component"))), _react["default"].createElement(_mnetUiBase.Text, null, "This is other content outside the Collapsible box")));
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "This is a box inside a Collapsible component"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "This is other content outside the Collapsible box")));
 };
 
 (0, _react2.storiesOf)('Collapsible', module).add('Default', function () {
-  return _react["default"].createElement(SimpleCollapsible, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleCollapsible, null);
 });

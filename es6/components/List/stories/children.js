@@ -4,27 +4,27 @@ import { Gremlin } from "grommet-icons/es6/icons/Gremlin";
 import { Box, List, Text } from 'mnet-ui-base';
 export var data = ['Boise', 'Fort Collins', 'Bay Area', 'North Carolina'];
 export var ChildrenExample = function ChildrenExample() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     pad: "large",
     height: "100%",
     background: "light-2"
-  }, React.createElement(List, {
+  }, /*#__PURE__*/React.createElement(List, {
     data: data,
     pad: "medium"
   }, function (datum, index) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       key: index,
       direction: "row-responsive",
       gap: "large",
       size: "xsmall",
       align: "center"
-    }, React.createElement(Gremlin, {
+    }, /*#__PURE__*/React.createElement(Gremlin, {
       size: "large"
-    }), React.createElement(Text, {
+    }), /*#__PURE__*/React.createElement(Text, {
       weight: "bold"
     }, datum));
   })));
 };
 storiesOf('List', module).add('children', function () {
-  return React.createElement(ChildrenExample, null);
+  return /*#__PURE__*/React.createElement(ChildrenExample, null);
 });

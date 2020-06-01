@@ -4,13 +4,13 @@ import { Box, MnetUIBase, Clock } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 
 var Example = function Example() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Clock, {
+  }, /*#__PURE__*/React.createElement(Clock, {
     type: "digital",
     time: "PT0H0M20S",
     run: "backward"
@@ -18,7 +18,7 @@ var Example = function Example() {
 };
 
 storiesOf('Clock', module).add('Countdown', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 }, {
   chromatic: {
     disable: true

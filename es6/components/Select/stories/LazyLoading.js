@@ -13,12 +13,12 @@ var dummyOptions = Array(2000).fill().map(function (_, i) {
 var Option = function Option(_ref) {
   var value = _ref.value,
       selected = _ref.selected;
-  return React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     gap: "small",
     align: "center",
     pad: "xsmall"
-  }, React.createElement(CheckBox, {
+  }, /*#__PURE__*/React.createElement(CheckBox, {
     tabIndex: "-1",
     checked: selected,
     onChange: function onChange() {}
@@ -66,12 +66,12 @@ var LazyLoading = function LazyLoading() {
     return setSelected(nextSelected);
   };
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     multiple: true,
     closeOnChange: false,
     placeholder: "select an option...",
@@ -82,7 +82,7 @@ var LazyLoading = function LazyLoading() {
     onClose: onClose,
     onChange: onChange
   }, function (option, index) {
-    return React.createElement(Option, {
+    return /*#__PURE__*/React.createElement(Option, {
       value: option,
       selected: selected.indexOf(index) !== -1
     });
@@ -90,5 +90,5 @@ var LazyLoading = function LazyLoading() {
 };
 
 storiesOf('Select', module).add('Lazy Loading options', function () {
-  return React.createElement(LazyLoading, null);
+  return /*#__PURE__*/React.createElement(LazyLoading, null);
 });

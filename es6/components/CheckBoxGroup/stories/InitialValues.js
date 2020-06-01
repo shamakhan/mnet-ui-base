@@ -12,12 +12,12 @@ var Example = function Example() {
       value2 = _useState2[0],
       setValue2 = _useState2[1];
 
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "medium",
     gap: "large"
-  }, "Initial value via options object:", React.createElement(CheckBoxGroup, {
+  }, "Initial value via options object:", /*#__PURE__*/React.createElement(CheckBoxGroup, {
     value: value,
     onChange: function onChange(event) {
       console.log('value: ', event.value);
@@ -25,7 +25,7 @@ var Example = function Example() {
       setValue(event.value);
     },
     options: ['First', 'Second', 'Third']
-  }), "Initial value via controlled options object:", React.createElement(CheckBoxGroup, {
+  }), "Initial value via controlled options object:", /*#__PURE__*/React.createElement(CheckBoxGroup, {
     labelKey: "label",
     valueKey: "id",
     value: value2,
@@ -50,5 +50,5 @@ var Example = function Example() {
 };
 
 storiesOf('CheckBoxGroup', module).add('Initial value', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 });

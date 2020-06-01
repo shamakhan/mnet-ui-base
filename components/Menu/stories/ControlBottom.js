@@ -9,12 +9,12 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var ControlBottom = function ControlBottom() {
-  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     height: "medium",
     justify: "center",
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Menu, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Menu, {
     dropProps: {
       align: {
         bottom: 'bottom',
@@ -36,5 +36,5 @@ var ControlBottom = function ControlBottom() {
 };
 
 (0, _react2.storiesOf)('Menu', module).add('Bottom Control Button', function () {
-  return _react["default"].createElement(ControlBottom, null);
+  return /*#__PURE__*/_react["default"].createElement(ControlBottom, null);
 });

@@ -9,14 +9,14 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Size = function Size() {
-  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
   }, ['xxlarge', 'xlarge', 'large', 'medium', 'small', 'xsmall'].map(function (size) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: size,
       margin: "small"
-    }, _react["default"].createElement(_mnetUiBase.Anchor, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
       size: size,
       label: size,
       href: "#"
@@ -25,5 +25,5 @@ var Size = function Size() {
 };
 
 (0, _react2.storiesOf)('Anchor', module).add('Size', function () {
-  return _react["default"].createElement(Size, null);
+  return /*#__PURE__*/_react["default"].createElement(Size, null);
 });

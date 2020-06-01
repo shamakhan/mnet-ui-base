@@ -9,15 +9,15 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var RangeCalendar = function RangeCalendar() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Calendar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     dates: [['2020-04-03', '2020-04-08']],
     range: true
   })));
 };
 
 (0, _react2.storiesOf)('Calendar', module).add('Range', function () {
-  return _react["default"].createElement(RangeCalendar, null);
+  return /*#__PURE__*/_react["default"].createElement(RangeCalendar, null);
 });

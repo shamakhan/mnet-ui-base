@@ -15,45 +15,45 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var UncontrolledTabs = function UncontrolledTabs(_ref) {
   var _ref$plain = _ref.plain,
       plain = _ref$plain === void 0 ? false : _ref$plain;
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true
-  }, _react["default"].createElement(_mnetUiBase.Tabs, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tabs, {
     flex: true
-  }, _react["default"].createElement(_mnetUiBase.Tab, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tab, {
     plain: plain,
     title: "Tab 1"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     pad: "large",
     align: "center",
     background: "accent-1"
-  }, _react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
     size: "xlarge"
-  }))), _react["default"].createElement(_mnetUiBase.Tab, {
+  }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tab, {
     plain: plain,
     title: "Tab 2"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     pad: "large",
     align: "center",
     background: "accent-2"
-  }, _react["default"].createElement(_grommetIcons.TreeOption, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.TreeOption, {
     size: "xlarge"
-  }))), _react["default"].createElement(_mnetUiBase.Tab, {
+  }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tab, {
     plain: plain,
     title: "Tab 3"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     pad: "large",
     align: "center",
     background: "accent-3"
-  }, _react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
     size: "xlarge"
   }))))));
 };
@@ -63,9 +63,9 @@ UncontrolledTabs.propTypes = {
 
 };
 (0, _react2.storiesOf)('Tabs', module).add('Uncontrolled', function () {
-  return _react["default"].createElement(UncontrolledTabs, null);
+  return /*#__PURE__*/_react["default"].createElement(UncontrolledTabs, null);
 }).add('Plain', function () {
-  return _react["default"].createElement(UncontrolledTabs, {
+  return /*#__PURE__*/_react["default"].createElement(UncontrolledTabs, {
     plain: true
   });
 });

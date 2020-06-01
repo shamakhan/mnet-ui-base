@@ -11,20 +11,20 @@ var DateMaskedInput = function DateMaskedInput() {
       value = _React$useState[0],
       setValue = _React$useState[1];
 
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium"
-  }, React.createElement(MaskedInput, {
+  }, /*#__PURE__*/React.createElement(MaskedInput, {
     mask: [{
       length: [1, 2],
       options: Array.from({
@@ -65,5 +65,5 @@ var DateMaskedInput = function DateMaskedInput() {
 };
 
 storiesOf('MaskedInput', module).add('Date', function () {
-  return React.createElement(DateMaskedInput, null);
+  return /*#__PURE__*/React.createElement(DateMaskedInput, null);
 });

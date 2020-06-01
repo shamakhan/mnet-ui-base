@@ -17,7 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var H = function H(_ref) {
   var level = _ref.level,
       size = _ref.size;
-  return _react["default"].createElement(_mnetUiBase.Heading, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: level,
     size: size
   }, "Heading " + level + " " + size);
@@ -30,8 +30,8 @@ H.propTypes = {
 
 var Set = function Set(_ref2) {
   var size = _ref2.size;
-  return _react["default"].createElement("div", null, [1, 2, 3, 4, 5, 6].map(function (level) {
-    return _react["default"].createElement(H, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, [1, 2, 3, 4, 5, 6].map(function (level) {
+    return /*#__PURE__*/_react["default"].createElement(H, {
       key: level,
       level: level,
       size: size
@@ -44,22 +44,22 @@ Set.propTypes = {
 };
 
 var All = function All() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Grid, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, {
     columns: "large",
     gap: "medium"
-  }, _react["default"].createElement(Set, {
+  }, /*#__PURE__*/_react["default"].createElement(Set, {
     size: "medium"
-  }), _react["default"].createElement(Set, {
+  }), /*#__PURE__*/_react["default"].createElement(Set, {
     size: "small"
-  }), _react["default"].createElement(Set, {
+  }), /*#__PURE__*/_react["default"].createElement(Set, {
     size: "large"
-  }), _react["default"].createElement(Set, {
+  }), /*#__PURE__*/_react["default"].createElement(Set, {
     size: "xlarge"
   })));
 };
 
 var Color = function Color() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Heading, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     color: "accent-1"
   }, "Colored Heading"));
 };
@@ -89,20 +89,20 @@ var customlevel = (0, _utils.deepMerge)(_themes.mnet, {
 });
 
 var CustomHeading = function CustomHeading() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customlevel
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 5
   }, "Heading level 5"));
 };
 
 (0, _react2.storiesOf)('Heading', module).add('All', function () {
-  return _react["default"].createElement(All, null);
+  return /*#__PURE__*/_react["default"].createElement(All, null);
 }).add('Color', function () {
-  return _react["default"].createElement(Color, null);
+  return /*#__PURE__*/_react["default"].createElement(Color, null);
 }).add('Custom', function () {
-  return _react["default"].createElement(CustomHeading, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomHeading, null);
 });
 (0, _react2.storiesOf)('Heading', module).add('All', function () {
-  return _react["default"].createElement(All, null);
+  return /*#__PURE__*/_react["default"].createElement(All, null);
 });

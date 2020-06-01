@@ -8,12 +8,12 @@ var CheckBoxGroupForm = function CheckBoxGroupForm() {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "medium",
     width: "medium"
-  }, React.createElement(Form, {
+  }, /*#__PURE__*/React.createElement(Form, {
     onSubmit: function onSubmit(_ref) {
       var values = _ref.value,
           touched = _ref.touched;
@@ -22,9 +22,9 @@ var CheckBoxGroupForm = function CheckBoxGroupForm() {
         console.log('Submit', values, touched)
       );
     }
-  }, React.createElement(FormField, {
+  }, /*#__PURE__*/React.createElement(FormField, {
     name: "controlled"
-  }, React.createElement(CheckBoxGroup, {
+  }, /*#__PURE__*/React.createElement(CheckBoxGroup, {
     id: "check-box-group-id",
     name: "controlled",
     value: value,
@@ -33,12 +33,12 @@ var CheckBoxGroupForm = function CheckBoxGroupForm() {
       return setValue(nextValue);
     },
     options: ['Maui', 'Jerusalem', 'Wuhan']
-  })), React.createElement(Button, {
+  })), /*#__PURE__*/React.createElement(Button, {
     type: "submit",
     label: "Submit"
   }))));
 };
 
 storiesOf('CheckBoxGroup', module).add('Form controlled input', function () {
-  return React.createElement(CheckBoxGroupForm, null);
+  return /*#__PURE__*/React.createElement(CheckBoxGroupForm, null);
 });

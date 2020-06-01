@@ -12,22 +12,22 @@ var SimpleTextInput = function SimpleTextInput() {
     return setValue(event.target.value);
   };
 
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     full: true,
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium"
-  }, React.createElement(TextInput, {
+  }, /*#__PURE__*/React.createElement(TextInput, {
     value: value,
     onChange: onChange
   }))));
 };
 
 storiesOf('TextInput', module).add('Simple', function () {
-  return React.createElement(SimpleTextInput, null);
+  return /*#__PURE__*/React.createElement(SimpleTextInput, null);
 });

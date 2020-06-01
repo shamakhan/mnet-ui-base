@@ -9,19 +9,19 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var RoundBox = function RoundBox() {
-  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small",
     background: "brand",
     round: true,
     alignSelf: "start"
-  }, "true"), _react["default"].createElement(_mnetUiBase.Grid, {
+  }, "true"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, {
     columns: "small",
     gap: "small"
   }, ['xsmall', 'small', 'medium', 'large', 'xlarge', 'full'].map(function (size) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: size,
       pad: "large",
       background: "brand",
@@ -29,11 +29,11 @@ var RoundBox = function RoundBox() {
         size: size
       }
     }, size);
-  })), _react["default"].createElement(_mnetUiBase.Grid, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, {
     columns: "small",
     gap: "small"
   }, ['large', 'xlarge', 'full'].map(function (size) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       responsive: false,
       key: size,
       pad: "large",
@@ -42,11 +42,11 @@ var RoundBox = function RoundBox() {
         size: size
       }
     }, size, " - Not responsive");
-  })), _react["default"].createElement(_mnetUiBase.Grid, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, {
     columns: "small",
     gap: "small"
   }, ['left', 'top', 'right', 'bottom', 'top-left', 'top-right', 'bottom-left', 'bottom-right'].map(function (corner) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: corner,
       pad: "small",
       background: "brand",
@@ -54,7 +54,7 @@ var RoundBox = function RoundBox() {
         corner: corner
       }
     }, corner);
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "brand",
     pad: "small",
     round: {
@@ -65,5 +65,5 @@ var RoundBox = function RoundBox() {
 };
 
 (0, _react2.storiesOf)('Box', module).add('Round', function () {
-  return _react["default"].createElement(RoundBox, null);
+  return /*#__PURE__*/_react["default"].createElement(RoundBox, null);
 });

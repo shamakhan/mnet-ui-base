@@ -11,14 +11,14 @@ var _grommetIcons = require("grommet-icons");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var CustomMenu = function CustomMenu() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large",
     background: {
       color: 'dark-2',
       opacity: 0.7
     }
-  }, _react["default"].createElement(_mnetUiBase.Menu, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Menu, {
     plain: true,
     items: [{
       label: 'Launch',
@@ -31,19 +31,19 @@ var CustomMenu = function CustomMenu() {
     var drop = _ref.drop,
         hover = _ref.hover;
     var color = hover && !drop ? 'accent-1' : undefined;
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       direction: "row",
       gap: "small",
       pad: "small",
       background: hover && drop ? 'light-2' : undefined
-    }, _react["default"].createElement(_mnetUiBase.Text, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
       color: color
-    }, "actions"), _react["default"].createElement(_grommetIcons.FormDown, {
+    }, "actions"), /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormDown, {
       color: color
     }));
   })));
 };
 
 (0, _react2.storiesOf)('Menu', module).add('Custom', function () {
-  return _react["default"].createElement(CustomMenu, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomMenu, null);
 });

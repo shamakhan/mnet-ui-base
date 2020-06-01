@@ -23,24 +23,24 @@ var NotificationLayer = function NotificationLayer() {
     return setOpen(undefined);
   };
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Add, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, {
       color: "brand"
     }),
-    label: _react["default"].createElement(_mnetUiBase.Text, null, _react["default"].createElement("strong", null, "Add")),
+    label: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, /*#__PURE__*/_react["default"].createElement("strong", null, "Add")),
     onClick: onOpen,
     plain: true
-  })), open && _react["default"].createElement(_mnetUiBase.Layer, {
+  })), open && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Layer, {
     position: "bottom",
     modal: false,
     margin: {
@@ -50,7 +50,7 @@ var NotificationLayer = function NotificationLayer() {
     onEsc: onClose,
     responsive: false,
     plain: true
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     direction: "row",
     gap: "small",
@@ -62,17 +62,17 @@ var NotificationLayer = function NotificationLayer() {
       horizontal: 'small'
     },
     background: "status-ok"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     direction: "row",
     gap: "xsmall"
-  }, _react["default"].createElement(_grommetIcons.StatusGood, null), _react["default"].createElement(_mnetUiBase.Text, null, "A new virtual machine has been successfully added")), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.FormClose, null),
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusGood, null), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "A new virtual machine has been successfully added")), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormClose, null),
     onClick: onClose,
     plain: true
   }))));
 };
 
 (0, _react2.storiesOf)('Layer', module).add('Notification', function () {
-  return _react["default"].createElement(NotificationLayer, null);
+  return /*#__PURE__*/_react["default"].createElement(NotificationLayer, null);
 });

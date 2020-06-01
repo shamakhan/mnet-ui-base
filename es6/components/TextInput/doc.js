@@ -107,4 +107,4 @@ export var themeDoc = _extends({
     type: 'number | string',
     defaultValue: undefined
   }
-}, themeDocUtils.focusStyle, {}, themeDocUtils.placeholderStyle, {}, themeDocUtils.disabledStyle, {}, themeDocUtils.inputStyle);
+}, themeDocUtils.focusStyle, themeDocUtils.placeholderStyle, themeDocUtils.disabledStyle, themeDocUtils.inputStyle);

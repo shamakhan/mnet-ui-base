@@ -48,19 +48,19 @@ var CheckBoxWithStickyDiv = function CheckBoxWithStickyDiv() {
     };
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "large",
     align: "center"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     height: "120px",
     width: "120px",
     overflow: "auto",
     style: boxStyle
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: titleBoxBackground,
     style: titleBoxStyle
   }, "Click & Scroll"), checkboxes.map(function (item) {
-    return _react["default"].createElement(_mnetUiBase.CheckBox, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
       key: item,
       checked: checks.includes(item),
       label: item,
@@ -70,5 +70,5 @@ var CheckBoxWithStickyDiv = function CheckBoxWithStickyDiv() {
 };
 
 (0, _react2.storiesOf)('CheckBox', module).add('With Sticky Div', function () {
-  return _react["default"].createElement(CheckBoxWithStickyDiv, null);
+  return /*#__PURE__*/_react["default"].createElement(CheckBoxWithStickyDiv, null);
 });

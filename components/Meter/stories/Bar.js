@@ -10,10 +10,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var BarMeter = function BarMeter() {
   var value = 30;
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Meter, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Meter, {
     type: "bar",
     background: "light-2",
     values: [{
@@ -23,5 +23,5 @@ var BarMeter = function BarMeter() {
 };
 
 (0, _react2.storiesOf)('Meter', module).add('Bar', function () {
-  return _react["default"].createElement(BarMeter, null);
+  return /*#__PURE__*/_react["default"].createElement(BarMeter, null);
 });

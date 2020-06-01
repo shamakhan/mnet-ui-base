@@ -20,10 +20,10 @@ groupColumns[0].footer = groupColumns[1].footer;
 delete groupColumns[1].footer;
 
 var GroupedDataTable = function GroupedDataTable() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.DataTable, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DataTable, {
     columns: groupColumns,
     data: _data.DATA,
     groupBy: "location",
@@ -32,5 +32,5 @@ var GroupedDataTable = function GroupedDataTable() {
 };
 
 (0, _react2.storiesOf)('DataTable', module).add('Grouped', function () {
-  return _react["default"].createElement(GroupedDataTable, null);
+  return /*#__PURE__*/_react["default"].createElement(GroupedDataTable, null);
 });

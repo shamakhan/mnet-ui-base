@@ -29,12 +29,12 @@ var CustomSizeCalendar = function CustomSizeCalendar() {
     setDate(nextDate !== date ? nextDate : undefined);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customHeading
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Calendar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     date: date,
     onSelect: onSelect,
     bounds: ['2018-09-08', '2020-12-13']
@@ -42,5 +42,5 @@ var CustomSizeCalendar = function CustomSizeCalendar() {
 };
 
 (0, _react2.storiesOf)('Calendar', module).add('Heading Size', function () {
-  return _react["default"].createElement(CustomSizeCalendar, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomSizeCalendar, null);
 });

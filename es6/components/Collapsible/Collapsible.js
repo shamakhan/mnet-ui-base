@@ -11,7 +11,7 @@ var AnimatedBox = styled(Box).withConfig({
     "transition: " + ("max-" + props.dimension + " " + props.speedProp + "ms, opacity " + props.speedProp + "ms") + ";\n      opacity: " + (props.open ? 1 : 0) + ";\n      overflow: " + (props.animate || !props.open ? 'hidden' : 'visible') + ";\n      max-" + props.dimension + ": " + (props.open ? 'unset' : 0) + ";\n    "
   );
 });
-var Collapsible = forwardRef(function (_ref, ref) {
+var Collapsible = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var children = _ref.children,
       direction = _ref.direction,
       openArg = _ref.open;
@@ -92,7 +92,7 @@ var Collapsible = forwardRef(function (_ref, ref) {
       });
     }
   }, [animate, containerRef, dimension, open, size]);
-  return React.createElement(AnimatedBox, {
+  return /*#__PURE__*/React.createElement(AnimatedBox, {
     "aria-hidden": !open,
     ref: containerRef,
     open: open,

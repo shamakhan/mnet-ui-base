@@ -19,22 +19,22 @@ var SimpleTextInput = function SimpleTextInput() {
     return setValue(event.target.value);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     full: true,
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     value: value,
     onChange: onChange
   }))));
 };
 
 (0, _react2.storiesOf)('TextInput', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleTextInput, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleTextInput, null);
 });

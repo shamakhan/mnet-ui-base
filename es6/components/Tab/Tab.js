@@ -10,7 +10,7 @@ import { Button } from '../Button';
 import { Text } from '../Text';
 import { normalizeColor } from '../../utils';
 import { StyledTab } from './StyledTab';
-var Tab = forwardRef(function (_ref, ref) {
+var Tab = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var active = _ref.active,
       icon = _ref.icon,
       plain = _ref.plain,
@@ -62,9 +62,9 @@ var Tab = forwardRef(function (_ref, ref) {
     if (typeof title !== 'string') {
       normalizedTitle = title;
     } else if (active) {
-      normalizedTitle = React.createElement(Text, theme.tab.active, title);
+      normalizedTitle = /*#__PURE__*/React.createElement(Text, theme.tab.active, title);
     } else {
-      normalizedTitle = React.createElement(Text, {
+      normalizedTitle = /*#__PURE__*/React.createElement(Text, {
         color: over ? theme.tab.hover.color : theme.tab.color
       }, title);
     }
@@ -94,10 +94,10 @@ var Tab = forwardRef(function (_ref, ref) {
 
   var renderIcon = function renderIcon(iconProp) {
     if (active) {
-      return React.cloneElement(iconProp, _extends({}, theme.tab.active));
+      return /*#__PURE__*/React.cloneElement(iconProp, _extends({}, theme.tab.active));
     }
 
-    return React.cloneElement(iconProp, {
+    return /*#__PURE__*/React.cloneElement(iconProp, {
       color: over ? theme.tab.hover.color : theme.tab.color
     });
   };
@@ -121,7 +121,7 @@ var Tab = forwardRef(function (_ref, ref) {
     };
   }
 
-  return React.createElement(Button, _extends({
+  return /*#__PURE__*/React.createElement(Button, _extends({
     ref: ref,
     plain: true,
     role: "tab",
@@ -144,7 +144,7 @@ var Tab = forwardRef(function (_ref, ref) {
     style: focus && {
       zIndex: 1
     }
-  }), React.createElement(StyledTab, _extends({
+  }), /*#__PURE__*/React.createElement(StyledTab, _extends({
     as: Box,
     plain: plain
   }, withIconStyles, tabStyles), first, second));

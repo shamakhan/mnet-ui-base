@@ -23,34 +23,34 @@ var CornerLayer = function CornerLayer() {
     return setOpen(undefined);
   };
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.Add, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Add, {
       color: "brand"
     }),
-    label: _react["default"].createElement(_mnetUiBase.Text, null, _react["default"].createElement("strong", null, "Add Corner Layer")),
+    label: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, /*#__PURE__*/_react["default"].createElement("strong", null, "Add Corner Layer")),
     onClick: onOpen,
     plain: true
-  })), open && _react["default"].createElement(_mnetUiBase.Layer, {
+  })), open && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Layer, {
     position: "top-right",
     onClickOutside: onClose
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     height: "small",
     overflow: "auto"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "xlarge"
   }, "Corner top-right position"))));
 };
 
 (0, _react2.storiesOf)('Layer', module).add('Corner', function () {
-  return _react["default"].createElement(CornerLayer, null);
+  return /*#__PURE__*/_react["default"].createElement(CornerLayer, null);
 });

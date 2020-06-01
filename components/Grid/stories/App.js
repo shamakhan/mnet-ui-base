@@ -15,13 +15,13 @@ var AppGrid = function AppGrid() {
       sidebar = _useState[0],
       setSidebar = _useState[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Grid, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, {
     fill: true,
     rows: ['auto', 'flex'],
     columns: ['auto', 'flex'],
@@ -38,7 +38,7 @@ var AppGrid = function AppGrid() {
       start: [1, 1],
       end: [1, 1]
     }]
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gridArea: "header",
     direction: "row",
     align: "center",
@@ -48,13 +48,13 @@ var AppGrid = function AppGrid() {
       vertical: 'small'
     },
     background: "dark-2"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     onClick: function onClick() {
       return setSidebar(!sidebar);
     }
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "large"
-  }, "Title")), _react["default"].createElement(_mnetUiBase.Text, null, "my@email")), sidebar && _react["default"].createElement(_mnetUiBase.Box, {
+  }, "Title")), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "my@email")), sidebar && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gridArea: "sidebar",
     background: "dark-3",
     width: "small",
@@ -67,23 +67,23 @@ var AppGrid = function AppGrid() {
       duration: 150
     }]
   }, ['First', 'Second', 'Third'].map(function (name) {
-    return _react["default"].createElement(_mnetUiBase.Button, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
       key: name,
       href: "#",
       hoverIndicator: true
-    }, _react["default"].createElement(_mnetUiBase.Box, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       pad: {
         horizontal: 'medium',
         vertical: 'small'
       }
-    }, _react["default"].createElement(_mnetUiBase.Text, null, name)));
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, name)));
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gridArea: "main",
     justify: "center",
     align: "center"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "main"))));
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "main"))));
 };
 
 (0, _react2.storiesOf)('Grid', module).add('App', function () {
-  return _react["default"].createElement(AppGrid, null);
+  return /*#__PURE__*/_react["default"].createElement(AppGrid, null);
 });

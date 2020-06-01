@@ -3,19 +3,19 @@ import { storiesOf } from '@storybook/react';
 import { Box, Grid } from 'mnet-ui-base';
 
 var RoundBox = function RoundBox() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     pad: "small",
     gap: "small"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "small",
     background: "brand",
     round: true,
     alignSelf: "start"
-  }, "true"), React.createElement(Grid, {
+  }, "true"), /*#__PURE__*/React.createElement(Grid, {
     columns: "small",
     gap: "small"
   }, ['xsmall', 'small', 'medium', 'large', 'xlarge', 'full'].map(function (size) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       key: size,
       pad: "large",
       background: "brand",
@@ -23,11 +23,11 @@ var RoundBox = function RoundBox() {
         size: size
       }
     }, size);
-  })), React.createElement(Grid, {
+  })), /*#__PURE__*/React.createElement(Grid, {
     columns: "small",
     gap: "small"
   }, ['large', 'xlarge', 'full'].map(function (size) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       responsive: false,
       key: size,
       pad: "large",
@@ -36,11 +36,11 @@ var RoundBox = function RoundBox() {
         size: size
       }
     }, size, " - Not responsive");
-  })), React.createElement(Grid, {
+  })), /*#__PURE__*/React.createElement(Grid, {
     columns: "small",
     gap: "small"
   }, ['left', 'top', 'right', 'bottom', 'top-left', 'top-right', 'bottom-left', 'bottom-right'].map(function (corner) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       key: corner,
       pad: "small",
       background: "brand",
@@ -48,7 +48,7 @@ var RoundBox = function RoundBox() {
         corner: corner
       }
     }, corner);
-  }), React.createElement(Box, {
+  }), /*#__PURE__*/React.createElement(Box, {
     background: "brand",
     pad: "small",
     round: {
@@ -59,5 +59,5 @@ var RoundBox = function RoundBox() {
 };
 
 storiesOf('Box', module).add('Round', function () {
-  return React.createElement(RoundBox, null);
+  return /*#__PURE__*/React.createElement(RoundBox, null);
 });

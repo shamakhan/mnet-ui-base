@@ -24,10 +24,10 @@ var CalendarDropButton = function CalendarDropButton() {
     setOpen(false);
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.DropButton, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DropButton, {
     open: open,
     onClose: function onClose() {
       return setOpen(false);
@@ -35,20 +35,20 @@ var CalendarDropButton = function CalendarDropButton() {
     onOpen: function onOpen() {
       return setOpen(true);
     },
-    dropContent: _react["default"].createElement(_mnetUiBase.Calendar, {
+    dropContent: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
       date: date,
       onSelect: onSelect
     })
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     gap: "medium",
     align: "center",
     pad: "small"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, date ? new Date(date).toLocaleDateString() : 'Select date'), _react["default"].createElement(_grommetIcons.FormDown, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, date ? new Date(date).toLocaleDateString() : 'Select date'), /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormDown, {
     color: "brand"
   })))));
 };
 
 (0, _react2.storiesOf)('DropButton', module).add('Calendar', function () {
-  return _react["default"].createElement(CalendarDropButton, null);
+  return /*#__PURE__*/_react["default"].createElement(CalendarDropButton, null);
 });

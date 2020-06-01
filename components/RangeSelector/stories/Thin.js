@@ -24,14 +24,14 @@ function Thin(_ref) {
       range = _useState[0],
       setRange = _useState[1];
 
-  return _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gap: "small",
     pad: "xlarge"
-  }, label ? _react["default"].createElement(_mnetUiBase.Text, null, label) : null, _react["default"].createElement(_mnetUiBase.Stack, null, _react["default"].createElement(_mnetUiBase.Box, {
+  }, label ? /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, label) : null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Stack, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-4",
     height: "6px",
     direction: "row"
-  }), _react["default"].createElement(_mnetUiBase.RangeSelector, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RangeSelector, {
     direction: "horizontal",
     min: RANGE_MIN,
     max: RANGE_MAX,
@@ -40,22 +40,22 @@ function Thin(_ref) {
     onChange: function onChange(nextRange) {
       setRange(nextRange);
     }
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center"
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "small"
   }, range[0] + "% - " + range[1] + "%")));
 }
 
 function App() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small"
-  }, _react["default"].createElement(Thin, {
+  }, /*#__PURE__*/_react["default"].createElement(Thin, {
     label: "My Range Selector"
   })));
 }
 
-(0, _reactDom.render)(_react["default"].createElement(App, null), document.getElementById('root'));
+(0, _reactDom.render)( /*#__PURE__*/_react["default"].createElement(App, null), document.getElementById('root'));
 (0, _react2.storiesOf)('RangeSelector', module).add('Thin', function () {
-  return _react["default"].createElement(App, null);
+  return /*#__PURE__*/_react["default"].createElement(App, null);
 });

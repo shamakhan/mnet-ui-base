@@ -15,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 describe('CheckBoxGroup', function () {
   afterEach(_react2.cleanup);
   test('options renders', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBoxGroup, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBoxGroup, {
       options: ['First', 'Second']
     })));
 
@@ -23,7 +23,7 @@ describe('CheckBoxGroup', function () {
     expect(tree).toMatchSnapshot();
   });
   test('value renders', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBoxGroup, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBoxGroup, {
       value: ['First'],
       options: ['First', 'Second']
     })));
@@ -32,7 +32,7 @@ describe('CheckBoxGroup', function () {
     expect(tree).toMatchSnapshot();
   });
   test('initial value renders', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBoxGroup, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBoxGroup, {
       value: ['Wuhan', 'Jerusalem'],
       options: [{
         label: 'Maui',
@@ -50,15 +50,15 @@ describe('CheckBoxGroup', function () {
     expect(tree).toMatchSnapshot();
   });
   test('disabled renders', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBoxGroup, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBoxGroup, {
       disabled: true,
       options: ['First', 'Second']
-    }), _react["default"].createElement(_.CheckBoxGroup, {
+    }), /*#__PURE__*/_react["default"].createElement(_.CheckBoxGroup, {
       options: [{
         label: 'First',
         disabled: true
       }]
-    }), _react["default"].createElement(_.CheckBoxGroup, {
+    }), /*#__PURE__*/_react["default"].createElement(_.CheckBoxGroup, {
       options: [{
         label: 'First',
         disabled: true

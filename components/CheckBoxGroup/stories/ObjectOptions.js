@@ -20,11 +20,11 @@ for (var i = 1; i <= 5; i += 1) {
 }
 
 var Example = function Example() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
-  }, _react["default"].createElement(_mnetUiBase.CheckBoxGroup, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBoxGroup, {
     labelKey: "label",
     valueKey: "val",
     options: objectOptions
@@ -32,5 +32,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('CheckBoxGroup', module).add('Object options', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

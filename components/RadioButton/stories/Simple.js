@@ -13,11 +13,11 @@ var SimpleRadioButton = function SimpleRadioButton() {
       selected = _React$useState[0],
       setSelected = _React$useState[1];
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large",
     gap: "large"
-  }, _react["default"].createElement(_mnetUiBase.RadioButton, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RadioButton, {
     label: "option 1",
     name: "name",
     value: "option 1",
@@ -25,7 +25,7 @@ var SimpleRadioButton = function SimpleRadioButton() {
     onChange: function onChange(event) {
       return setSelected(event.target.value);
     }
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "clear",
     onClick: function onClick() {
       return setSelected(undefined);
@@ -34,5 +34,5 @@ var SimpleRadioButton = function SimpleRadioButton() {
 };
 
 (0, _react2.storiesOf)('RadioButton', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleRadioButton, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleRadioButton, null);
 });

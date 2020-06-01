@@ -27,17 +27,17 @@ var SuggestionsTextInput = function SuggestionsTextInput() {
     return setValue(event.suggestion);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     full: true,
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     value: value,
     onChange: onChange,
     onSelect: onSelect,
@@ -46,5 +46,5 @@ var SuggestionsTextInput = function SuggestionsTextInput() {
 };
 
 (0, _react2.storiesOf)('TextInput', module).add('Suggestions', function () {
-  return _react["default"].createElement(SuggestionsTextInput, null);
+  return /*#__PURE__*/_react["default"].createElement(SuggestionsTextInput, null);
 });

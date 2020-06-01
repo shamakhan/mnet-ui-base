@@ -39,19 +39,19 @@ var CheckBoxWithStickyDiv = function CheckBoxWithStickyDiv() {
     };
   };
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     pad: "large",
     align: "center"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     height: "120px",
     width: "120px",
     overflow: "auto",
     style: boxStyle
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     background: titleBoxBackground,
     style: titleBoxStyle
   }, "Click & Scroll"), checkboxes.map(function (item) {
-    return React.createElement(CheckBox, {
+    return /*#__PURE__*/React.createElement(CheckBox, {
       key: item,
       checked: checks.includes(item),
       label: item,
@@ -61,5 +61,5 @@ var CheckBoxWithStickyDiv = function CheckBoxWithStickyDiv() {
 };
 
 storiesOf('CheckBox', module).add('With Sticky Div', function () {
-  return React.createElement(CheckBoxWithStickyDiv, null);
+  return /*#__PURE__*/React.createElement(CheckBoxWithStickyDiv, null);
 });

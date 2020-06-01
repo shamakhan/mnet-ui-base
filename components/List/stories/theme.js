@@ -28,16 +28,16 @@ var theme = (0, _utils.deepMerge)(_themes.mnet, {
 });
 
 var ThemedList = function ThemedList() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: theme
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.List, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.List, {
     data: _data.locations
   })));
 };
 
 (0, _react2.storiesOf)('List', module).add('theme', function () {
-  return _react["default"].createElement(ThemedList, null);
+  return /*#__PURE__*/_react["default"].createElement(ThemedList, null);
 });

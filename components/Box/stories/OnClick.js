@@ -11,11 +11,11 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var OnClickBox = function OnClickBox() {
-  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     justify: "center",
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     border: true,
     pad: "large",
     align: "center",
@@ -25,11 +25,11 @@ var OnClickBox = function OnClickBox() {
     onClick: function onClick() {
       alert('clicked');
     }
-  }, _react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
     size: "large"
-  }), _react["default"].createElement(_mnetUiBase.Text, null, "Party"))));
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Party"))));
 };
 
 (0, _react2.storiesOf)('Box', module).add('onClick', function () {
-  return _react["default"].createElement(OnClickBox, null);
+  return /*#__PURE__*/_react["default"].createElement(OnClickBox, null);
 });

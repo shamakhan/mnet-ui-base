@@ -6,10 +6,10 @@ import { Box, DataTable } from 'mnet-ui-base'; // Source code for the data can b
 import { columns, DATA } from './data';
 
 var ClickableDataTable = function ClickableDataTable() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(DataTable, {
+  }, /*#__PURE__*/React.createElement(DataTable, {
     columns: columns,
     data: DATA,
     step: 10,
@@ -20,5 +20,5 @@ var ClickableDataTable = function ClickableDataTable() {
 };
 
 storiesOf('DataTable', module).add('Clickable', function () {
-  return React.createElement(ClickableDataTable, null);
+  return /*#__PURE__*/React.createElement(ClickableDataTable, null);
 });

@@ -9,16 +9,16 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var ExternalComponentWithTheme = function ExternalComponentWithTheme() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "neutral-3"
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     color: "light-1"
-  }, "This is a grommet component")), _react["default"].createElement(_mnetUiBase.ThemeContext.Consumer, null, function (theme) {
-    return _react["default"].createElement("div", {
+  }, "This is a grommet component")), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.ThemeContext.Consumer, null, function (theme) {
+    return /*#__PURE__*/_react["default"].createElement("div", {
       style: {
         backgroundColor: theme.global.colors['neutral-3']
       }
-    }, _react["default"].createElement("p", {
+    }, /*#__PURE__*/_react["default"].createElement("p", {
       style: {
         color: theme.global.colors['light-1']
       }
@@ -27,5 +27,5 @@ var ExternalComponentWithTheme = function ExternalComponentWithTheme() {
 };
 
 (0, _react2.storiesOf)('Theme', module).add('External Components', function () {
-  return _react["default"].createElement(ExternalComponentWithTheme, null);
+  return /*#__PURE__*/_react["default"].createElement(ExternalComponentWithTheme, null);
 });

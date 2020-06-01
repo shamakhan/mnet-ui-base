@@ -11,14 +11,14 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var SimpleBox = function SimpleBox() {
-  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row-responsive",
     justify: "center",
     align: "center",
     pad: "xlarge",
     background: "dark-2",
     gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "large",
     align: "center",
     background: {
@@ -27,32 +27,32 @@ var SimpleBox = function SimpleBox() {
     },
     round: true,
     gap: "small"
-  }, _react["default"].createElement(_grommetIcons.Attraction, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Attraction, {
     size: "large"
-  }), _react["default"].createElement(_mnetUiBase.Text, null, "Party"), _react["default"].createElement(_mnetUiBase.Anchor, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Party"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     href: "",
     label: "Link"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Button",
     onClick: function onClick() {}
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "large",
     align: "center",
     background: "dark-3",
     round: true,
     gap: "small"
-  }, _react["default"].createElement(_grommetIcons.Car, {
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Car, {
     size: "large",
     color: "light-2"
-  }), _react["default"].createElement(_mnetUiBase.Text, null, "Travel"), _react["default"].createElement(_mnetUiBase.Anchor, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Travel"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     href: "",
     label: "Link"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Button",
     onClick: function onClick() {}
   }))));
 };
 
 (0, _react2.storiesOf)('Box', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleBox, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleBox, null);
 });

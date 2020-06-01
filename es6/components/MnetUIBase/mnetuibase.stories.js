@@ -11,44 +11,44 @@ var customTheme = {
 };
 
 var Themed = function Themed() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: customTheme
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "medium"
-  }, React.createElement(Anchor, {
-    icon: React.createElement(Add, null),
+  }, /*#__PURE__*/React.createElement(Anchor, {
+    icon: /*#__PURE__*/React.createElement(Add, null),
     label: "Add",
     color: "custom"
   })));
 };
 
 var Plain = function Plain() {
-  return React.createElement(React.Fragment, null, React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(MnetUIBase, {
     plain: true
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "medium"
-  }, React.createElement("p", null, "Plain MnetUIBase"))), React.createElement(MnetUIBase, null, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement("p", null, "Plain MnetUIBase"))), /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Box, {
     pad: "medium"
-  }, React.createElement("p", null, "Not plain MnetUIBase"))));
+  }, /*#__PURE__*/React.createElement("p", null, "Not plain MnetUIBase"))));
 };
 
 var MnetUIBaseVars = function MnetUIBaseVars() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet,
     cssVars: true
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "medium",
     background: "var(--accent-2)",
     gap: "medium"
-  }, React.createElement(Box, null, "Checkout MnetUIBase variables, you can find them in the StyledMnetUIBase DOM."), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, null, "Checkout MnetUIBase variables, you can find them in the StyledMnetUIBase DOM."), /*#__PURE__*/React.createElement(Box, {
     "with": true
   }, "For example, the background color in this Box is using var(--accent-2)")));
 };
 
 storiesOf('MnetUIBase', module).add('Plain', function () {
-  return React.createElement(Plain, null);
+  return /*#__PURE__*/React.createElement(Plain, null);
 }).add('Theme', function () {
-  return React.createElement(Themed, null);
+  return /*#__PURE__*/React.createElement(Themed, null);
 }).add('Vars', function () {
-  return React.createElement(MnetUIBaseVars, null);
+  return /*#__PURE__*/React.createElement(MnetUIBaseVars, null);
 });

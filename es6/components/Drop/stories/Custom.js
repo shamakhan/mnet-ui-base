@@ -26,30 +26,30 @@ var Custom = function Custom() {
   useEffect(function () {
     return setShowDrop(true);
   }, []);
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: customTheme,
     full: true
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     background: "dark-3",
     pad: "medium",
     align: "center",
     justify: "start",
     ref: targetRef
-  }, "Box"), targetRef.current && React.createElement(Drop, {
+  }, "Box"), targetRef.current && /*#__PURE__*/React.createElement(Drop, {
     align: {
       top: 'bottom',
       left: 'right'
     },
     target: targetRef.current
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "small"
   }, "This Drop uses a custom theme"))));
 };
 
 storiesOf('Drop', module).add('Custom', function () {
-  return React.createElement(Custom, null);
+  return /*#__PURE__*/React.createElement(Custom, null);
 });

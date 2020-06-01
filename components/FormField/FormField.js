@@ -64,14 +64,14 @@ var Message = function Message(_ref) {
       rest = _objectWithoutPropertiesLoose(_ref, ["message"]);
 
   if (message) {
-    if (typeof message === 'string') return _react["default"].createElement(_Text.Text, rest, message);
-    return _react["default"].createElement(_Box.Box, rest, message);
+    if (typeof message === 'string') return /*#__PURE__*/_react["default"].createElement(_Text.Text, rest, message);
+    return /*#__PURE__*/_react["default"].createElement(_Box.Box, rest, message);
   }
 
   return null;
 };
 
-var FormField = (0, _react.forwardRef)(function (_ref2, ref) {
+var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
   var children = _ref2.children,
       className = _ref2.className,
       component = _ref2.component,
@@ -162,7 +162,7 @@ var FormField = (0, _react.forwardRef)(function (_ref2, ref) {
     var Input = component || _TextInput.TextInput;
 
     if (Input === _CheckBox.CheckBox) {
-      return _react["default"].createElement(Input, _extends({
+      return /*#__PURE__*/_react["default"].createElement(Input, _extends({
         name: name,
         label: label,
         disabled: disabled,
@@ -170,7 +170,7 @@ var FormField = (0, _react.forwardRef)(function (_ref2, ref) {
       }, rest));
     }
 
-    return _react["default"].createElement(Input, _extends({
+    return /*#__PURE__*/_react["default"].createElement(Input, _extends({
       name: name,
       value: !isMnetUIBaseInput(component) ? formValue[name] : undefined,
       disabled: disabled,
@@ -202,7 +202,7 @@ var FormField = (0, _react.forwardRef)(function (_ref2, ref) {
     }
 
     if (child && child.type && mnetInputNames.indexOf(child.type.displayName) !== -1 && child.props.plain === undefined && child.props.focusIndicator === undefined) {
-      return (0, _react.cloneElement)(child, {
+      return /*#__PURE__*/(0, _react.cloneElement)(child, {
         plain: true,
         focusIndicator: false
       });
@@ -243,7 +243,7 @@ var FormField = (0, _react.forwardRef)(function (_ref2, ref) {
     }
   }
 
-  contents = _react["default"].createElement(_Box.Box, contentProps, contents);
+  contents = /*#__PURE__*/_react["default"].createElement(_Box.Box, contentProps, contents);
   var borderColor;
 
   if (disabled && formFieldTheme.disabled.border && formFieldTheme.disabled.border.color) {
@@ -275,7 +275,7 @@ var FormField = (0, _react.forwardRef)(function (_ref2, ref) {
       round: formFieldTheme.round,
       focus: focus
     } : {};
-    contents = _react["default"].createElement(FormFieldContentBox, _extends({
+    contents = /*#__PURE__*/_react["default"].createElement(FormFieldContentBox, _extends({
       overflow: "hidden"
     }, innerProps), contents);
     var mergedMargin = margin || formFieldTheme.margin;
@@ -323,7 +323,7 @@ var FormField = (0, _react.forwardRef)(function (_ref2, ref) {
     round: formFieldTheme.round,
     focus: focus
   } : {};
-  return _react["default"].createElement(FormFieldBox, _extends({
+  return /*#__PURE__*/_react["default"].createElement(FormFieldBox, _extends({
     ref: ref,
     className: className,
     background: outerBackground,
@@ -339,14 +339,14 @@ var FormField = (0, _react.forwardRef)(function (_ref2, ref) {
       if (onFieldBlur) onFieldBlur(event);
       if (_onBlur) _onBlur(event);
     }
-  }, containerRest), label && component !== _CheckBox.CheckBox || help ? _react["default"].createElement(_react["default"].Fragment, null, label && component !== _CheckBox.CheckBox && _react["default"].createElement(_Text.Text, _extends({
+  }, containerRest), label && component !== _CheckBox.CheckBox || help ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, label && component !== _CheckBox.CheckBox && /*#__PURE__*/_react["default"].createElement(_Text.Text, _extends({
     as: "label",
     htmlFor: htmlFor
-  }, labelStyle), label), _react["default"].createElement(Message, _extends({
+  }, labelStyle), label), /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: help
-  }, formFieldTheme.help))) : undefined, contents, _react["default"].createElement(Message, _extends({
+  }, formFieldTheme.help))) : undefined, contents, /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: normalizedError
-  }, formFieldTheme.error)), _react["default"].createElement(Message, _extends({
+  }, formFieldTheme.error)), /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: normalizedInfo
   }, formFieldTheme.info)));
 });

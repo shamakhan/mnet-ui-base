@@ -5,63 +5,63 @@ import { storiesOf } from '@storybook/react';
 import { Box, Button, CheckBox, CheckBoxGroup, Form, FormField } from 'mnet-ui-base';
 
 var FormFieldCheckBox = function FormFieldCheckBox(props) {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Form, {
+  }, /*#__PURE__*/React.createElement(Form, {
     onSubmit: function onSubmit(_ref) {
       var value = _ref.value,
           touched = _ref.touched;
       return console.log('Submit', value, touched);
     }
-  }, React.createElement(FormField, _extends({
+  }, /*#__PURE__*/React.createElement(FormField, _extends({
     label: "Toggle",
     name: "toggle",
     htmlFor: "check-box-toggle"
-  }, props), React.createElement(Box, {
+  }, props), /*#__PURE__*/React.createElement(Box, {
     pad: {
       horizontal: 'small',
       vertical: 'xsmall'
     }
-  }, React.createElement(CheckBox, {
+  }, /*#__PURE__*/React.createElement(CheckBox, {
     id: "check-box-toggle",
     name: "toggle",
     label: "CheckBox",
     toggle: true
-  }))), React.createElement(FormField, {
+  }))), /*#__PURE__*/React.createElement(FormField, {
     label: "Default",
     name: "checkbox",
     htmlFor: "check-box",
     required: true
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: {
       horizontal: 'small',
       vertical: 'xsmall'
     }
-  }, React.createElement(CheckBox, {
+  }, /*#__PURE__*/React.createElement(CheckBox, {
     id: "check-box",
     name: "checkbox",
     label: "Required"
-  }))), React.createElement(FormField, {
+  }))), /*#__PURE__*/React.createElement(FormField, {
     label: "Where would you like to visit",
     name: "checkboxgroup",
     htmlFor: "check-box-group",
     required: true
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: {
       horizontal: 'small',
       vertical: 'xsmall'
     }
-  }, React.createElement(CheckBoxGroup, {
+  }, /*#__PURE__*/React.createElement(CheckBoxGroup, {
     id: "group",
     name: "checkboxgroup",
     options: ['Maui', 'Jerusalem', 'Wuhan']
-  }))), React.createElement(Button, {
+  }))), /*#__PURE__*/React.createElement(Button, {
     type: "submit",
     label: "Submit"
   }))));
 };
 
 storiesOf('Form', module).add('CheckBox', function () {
-  return React.createElement(FormFieldCheckBox, null);
+  return /*#__PURE__*/React.createElement(FormFieldCheckBox, null);
 });

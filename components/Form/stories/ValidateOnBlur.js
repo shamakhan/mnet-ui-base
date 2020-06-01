@@ -11,19 +11,19 @@ var _grommetIcons = require("grommet-icons");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Example = function Example() {
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Form, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Form, {
     validate: "blur",
     onReset: function onReset(event) {
       return console.log(event);
@@ -32,7 +32,7 @@ var Example = function Example() {
       var value = _ref.value;
       return console.log('Submit', value);
     }
-  }, _react["default"].createElement(_mnetUiBase.FormField, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Name",
     name: "name",
     required: true,
@@ -43,32 +43,32 @@ var Example = function Example() {
       return undefined;
     }, function (name) {
       if (name === 'good') return {
-        message: _react["default"].createElement(_mnetUiBase.Box, {
+        message: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
           align: "end"
-        }, _react["default"].createElement(_grommetIcons.StatusGood, null)),
+        }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.StatusGood, null)),
         status: 'info'
       };
       return undefined;
     }]
-  }), _react["default"].createElement(_mnetUiBase.FormField, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Email",
     name: "email",
     required: true
-  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     name: "email",
     type: "email"
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     justify: "between",
     margin: {
       top: 'medium'
     }
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Cancel"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "reset",
     label: "Reset"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "submit",
     label: "Update",
     primary: true
@@ -76,5 +76,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Form', module).add('Validate on blur', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

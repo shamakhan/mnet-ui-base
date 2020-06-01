@@ -27,26 +27,26 @@ var SimpleRangeSelector = function SimpleRangeSelector(_ref) {
     setRange(values);
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Stack, null, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Stack, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: direction === 'vertical' ? 'column' : 'row',
     justify: "between"
   }, [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(function (value) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: value,
       width: "xxsmall",
       height: "xxsmall",
       align: "center",
       pad: "small",
       border: false
-    }, _react["default"].createElement(_mnetUiBase.Text, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
       style: {
         fontFamily: 'monospace'
       }
     }, value));
-  })), _react["default"].createElement(_mnetUiBase.RangeSelector, _extends({
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RangeSelector, _extends({
     direction: direction,
     min: 10,
     max: 20,
@@ -57,13 +57,13 @@ var SimpleRangeSelector = function SimpleRangeSelector(_ref) {
 };
 
 (0, _react2.storiesOf)('RangeSelector', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleRangeSelector, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleRangeSelector, null);
 }).add('Step', function () {
-  return _react["default"].createElement(SimpleRangeSelector, {
+  return /*#__PURE__*/_react["default"].createElement(SimpleRangeSelector, {
     step: 2
   });
 }).add('Vertical', function () {
-  return _react["default"].createElement(SimpleRangeSelector, {
+  return /*#__PURE__*/_react["default"].createElement(SimpleRangeSelector, {
     direction: "vertical"
   });
 });

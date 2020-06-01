@@ -5,10 +5,10 @@ import { Power } from "grommet-icons/es6/icons/Power";
 import { User } from "grommet-icons/es6/icons/User";
 
 var Reverse = function Reverse() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Menu, {
+  }, /*#__PURE__*/React.createElement(Menu, {
     dropProps: {
       align: {
         top: 'bottom',
@@ -20,11 +20,11 @@ var Reverse = function Reverse() {
       label: 'Home'
     }, {
       label: 'Profile',
-      icon: React.createElement(User, null),
+      icon: /*#__PURE__*/React.createElement(User, null),
       gap: 'small'
     }, {
       label: 'Logout',
-      icon: React.createElement(Power, null),
+      icon: /*#__PURE__*/React.createElement(Power, null),
       reverse: true,
       gap: 'small'
     }]
@@ -32,5 +32,5 @@ var Reverse = function Reverse() {
 };
 
 storiesOf('Menu', module).add('Reverse', function () {
-  return React.createElement(Reverse, null);
+  return /*#__PURE__*/React.createElement(Reverse, null);
 });

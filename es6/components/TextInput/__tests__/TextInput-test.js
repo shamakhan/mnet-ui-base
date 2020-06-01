@@ -16,7 +16,7 @@ describe('TextInput', function () {
   beforeEach(createPortal);
   afterEach(cleanup);
   test('basic', function () {
-    var _render = render(React.createElement(TextInput, {
+    var _render = render( /*#__PURE__*/React.createElement(TextInput, {
       name: "item"
     })),
         container = _render.container;
@@ -24,7 +24,7 @@ describe('TextInput', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('a11yTitle', function () {
-    var _render2 = render(React.createElement(TextInput, {
+    var _render2 = render( /*#__PURE__*/React.createElement(TextInput, {
       a11yTitle: "aria-test",
       name: "item"
     })),
@@ -33,7 +33,7 @@ describe('TextInput', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('disabled', function () {
-    var _render3 = render(React.createElement(TextInput, {
+    var _render3 = render( /*#__PURE__*/React.createElement(TextInput, {
       disabled: true,
       name: "item"
     })),
@@ -42,8 +42,8 @@ describe('TextInput', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('icon', function () {
-    var _render4 = render(React.createElement(TextInput, {
-      icon: React.createElement(Search, null),
+    var _render4 = render( /*#__PURE__*/React.createElement(TextInput, {
+      icon: /*#__PURE__*/React.createElement(Search, null),
       name: "item"
     })),
         container = _render4.container;
@@ -51,8 +51,8 @@ describe('TextInput', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('icon reverse', function () {
-    var _render5 = render(React.createElement(TextInput, {
-      icon: React.createElement(Search, null),
+    var _render5 = render( /*#__PURE__*/React.createElement(TextInput, {
+      icon: /*#__PURE__*/React.createElement(Search, null),
       reverse: true,
       name: "item"
     })),
@@ -64,7 +64,7 @@ describe('TextInput', function () {
     var onChange = jest.fn();
     var onFocus = jest.fn();
 
-    var _render6 = render(React.createElement(TextInput, {
+    var _render6 = render( /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item",
@@ -95,7 +95,7 @@ describe('TextInput', function () {
     }, 50);
   });
   test('complex suggestions', function (done) {
-    var _render7 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+    var _render7 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item",
@@ -127,7 +127,7 @@ describe('TextInput', function () {
     }, 50);
   });
   test('close suggestion drop', function (done) {
-    var _render8 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+    var _render8 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item",
@@ -160,9 +160,9 @@ describe('TextInput', function () {
   test('let escape events propagage if there are no suggestions', function (done) {
     var callback = jest.fn();
 
-    var _render9 = render(React.createElement(MnetUIBase, null, React.createElement(Keyboard, {
+    var _render9 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Keyboard, {
       onEsc: callback
-    }, React.createElement(TextInput, {
+    }, /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item"
@@ -187,7 +187,7 @@ describe('TextInput', function () {
   test('calls onSuggestionsOpen', function (done) {
     var onSuggestionsOpen = jest.fn();
 
-    var _render10 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+    var _render10 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item",
@@ -206,7 +206,7 @@ describe('TextInput', function () {
   test('calls onSuggestionsClose', function (done) {
     var onSuggestionsClose = jest.fn();
 
-    var _render11 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+    var _render11 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item",
@@ -236,7 +236,7 @@ describe('TextInput', function () {
   test('select suggestion', function (done) {
     var onSelect = jest.fn();
 
-    var _render12 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+    var _render12 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       plain: true,
       size: "large",
@@ -269,7 +269,7 @@ describe('TextInput', function () {
   test('select a suggestion', function () {
     var onSelect = jest.fn();
 
-    var _render13 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+    var _render13 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item",
@@ -311,7 +311,7 @@ describe('TextInput', function () {
   test('handles next and previous without suggestion', function () {
     var onSelect = jest.fn();
 
-    var _render14 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+    var _render14 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item",
@@ -340,7 +340,7 @@ describe('TextInput', function () {
   });
   ['small', 'medium', 'large'].forEach(function (dropHeight) {
     test(dropHeight + " drop height", function (done) {
-      var _render15 = render(React.createElement(TextInput, {
+      var _render15 = render( /*#__PURE__*/React.createElement(TextInput, {
         "data-testid": "test-input",
         id: "item",
         name: "item",
@@ -356,11 +356,7 @@ describe('TextInput', function () {
       }, 50);
     });
   });
-  test('should return focus to input on select',
-  /*#__PURE__*/
-  _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee() {
+  test('should return focus to input on select', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
     var onSelect, _render16, getByPlaceholderText, input, selection;
 
     return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -368,7 +364,7 @@ describe('TextInput', function () {
         switch (_context.prev = _context.next) {
           case 0:
             onSelect = jest.fn();
-            _render16 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+            _render16 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
               "data-testid": "test-input-focus",
               id: "input-focus",
               name: "input-focus",
@@ -397,11 +393,7 @@ describe('TextInput', function () {
       }
     }, _callee);
   })));
-  test('should return focus to ref on select',
-  /*#__PURE__*/
-  _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee2() {
+  test('should return focus to ref on select', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
     var inputRef, onSelect, _render17, getByPlaceholderText, input, selection;
 
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -412,7 +404,7 @@ describe('TextInput', function () {
               current: {}
             };
             onSelect = jest.fn();
-            _render17 = render(React.createElement(MnetUIBase, null, React.createElement(TextInput, {
+            _render17 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(TextInput, {
               "data-testid": "test-input-focus",
               id: "input-focus",
               name: "input-focus",

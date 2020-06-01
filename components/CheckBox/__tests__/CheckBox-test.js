@@ -15,17 +15,17 @@ var _ = require("..");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 test('label renders', function () {
-  var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     label: "test label"
-  }), _react["default"].createElement(_.CheckBox, {
-    label: _react["default"].createElement("div", null, "test label")
+  }), /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
+    label: /*#__PURE__*/_react["default"].createElement("div", null, "test label")
   })));
 
   var tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
 test('checked renders', function () {
-  var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     checked: true
   })));
 
@@ -33,9 +33,9 @@ test('checked renders', function () {
   expect(tree).toMatchSnapshot();
 });
 test('disabled renders', function () {
-  var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     disabled: true
-  }), _react["default"].createElement(_.CheckBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     disabled: true,
     checked: true
   })));
@@ -44,7 +44,7 @@ test('disabled renders', function () {
   expect(tree).toMatchSnapshot();
 });
 test('reverse renders', function () {
-  var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     reverse: true,
     label: "test label"
   })));
@@ -53,12 +53,12 @@ test('reverse renders', function () {
   expect(tree).toMatchSnapshot();
 });
 test('toggle renders', function () {
-  var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     toggle: true
-  }), _react["default"].createElement(_.CheckBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     toggle: true,
     checked: true
-  }), _react["default"].createElement(_.CheckBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     toggle: true,
     label: "test label"
   })));
@@ -67,9 +67,9 @@ test('toggle renders', function () {
   expect(tree).toMatchSnapshot();
 });
 test('indeterminate renders', function () {
-  var component = _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     indeterminate: true
-  }), _react["default"].createElement(_.CheckBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     indeterminate: true,
     label: "test label"
   })));
@@ -80,7 +80,7 @@ test('indeterminate renders', function () {
 test('indeterminate checked warns', function () {
   var spy = jest.spyOn(global.console, 'warn');
 
-  _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     indeterminate: true,
     checked: true
   })));
@@ -90,7 +90,7 @@ test('indeterminate checked warns', function () {
 test('indeterminate toggle warns', function () {
   var spy = jest.spyOn(global.console, 'warn');
 
-  _reactTestRenderer["default"].create(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     indeterminate: true,
     toggle: true
   })));
@@ -98,7 +98,7 @@ test('indeterminate toggle warns', function () {
   expect(spy).toBeCalledWith('Checkbox of type toggle does not have "indeterminate" state.');
 });
 test('controlled', function () {
-  var _render = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_.CheckBox, {
+  var _render = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.CheckBox, {
     label: "test-label",
     checked: true
   }))),

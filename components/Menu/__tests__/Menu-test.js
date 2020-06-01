@@ -29,8 +29,8 @@ describe('Menu', function () {
   beforeEach(_portal.createPortal);
   afterEach(_react2.cleanup);
   test('basic', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
-      icon: _react["default"].createElement("svg", null),
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
+      icon: /*#__PURE__*/_react["default"].createElement("svg", null),
       label: "Test Menu",
       id: "test-menu",
       items: [{
@@ -43,7 +43,7 @@ describe('Menu', function () {
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('custom message', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       label: "Test Menu",
       messages: {
         openMenu: 'Abrir Menu'
@@ -58,7 +58,7 @@ describe('Menu', function () {
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('custom a11yTitle', function () {
-    var _render = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       a11yTitle: "My Menu",
       label: "Test Menu",
       items: [{
@@ -75,8 +75,8 @@ describe('Menu', function () {
     expect(container).toMatchSnapshot();
   });
   test('justify content', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, null, ['start', 'center', 'end', 'between', 'around', 'stretch'].map(function (justifyContent) {
-      return _react["default"].createElement(_.Menu, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, ['start', 'center', 'end', 'between', 'around', 'stretch'].map(function (justifyContent) {
+      return /*#__PURE__*/_react["default"].createElement(_.Menu, {
         key: justifyContent,
         label: justifyContent + " Menu",
         messages: {
@@ -96,12 +96,12 @@ describe('Menu', function () {
   test('gap between icon and label', function () {
     window.scrollTo = jest.fn();
 
-    var _render2 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render2 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       open: true,
       label: "actions",
       items: [{
         label: 'Item 1',
-        icon: _react["default"].createElement("svg", null),
+        icon: /*#__PURE__*/_react["default"].createElement("svg", null),
         gap: 'xlarge'
       }, {
         label: 'Item 2'
@@ -117,7 +117,7 @@ describe('Menu', function () {
   test('open and close on click', function () {
     window.scrollTo = jest.fn();
 
-    var _render3 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render3 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -147,7 +147,7 @@ describe('Menu', function () {
     expect(window.scrollTo).toBeCalled();
   });
   test('close by clicking outside', function (done) {
-    var _render4 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render4 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -177,7 +177,7 @@ describe('Menu', function () {
   test('select an item', function () {
     var onClick = jest.fn();
 
-    var _render5 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render5 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -203,7 +203,7 @@ describe('Menu', function () {
   test('navigate through suggestions and select', function () {
     var onClick = jest.fn();
 
-    var _render6 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render6 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -249,7 +249,7 @@ describe('Menu', function () {
     expect(document.getElementById('test-menu__drop')).toBeNull();
   });
   test('tab through menu until it closes', function () {
-    var _render7 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render7 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -293,7 +293,7 @@ describe('Menu', function () {
     expect(document.getElementById('test-menu__drop')).toBeNull();
   });
   test('close on esc', function () {
-    var _render8 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render8 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -322,7 +322,7 @@ describe('Menu', function () {
     expect(document.getElementById('test-menu__drop')).toBeNull();
   });
   test('close on tab', function () {
-    var _render9 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render9 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -351,7 +351,7 @@ describe('Menu', function () {
     expect(document.getElementById('test-menu__drop')).toBeNull();
   });
   test('with dropAlign renders', function () {
-    var _render10 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render10 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       dropAlign: {
         top: 'top',
@@ -378,7 +378,7 @@ describe('Menu', function () {
     (0, _portal.expectPortal)('test-menu__drop').toMatchSnapshot();
   });
   test('disabled', function () {
-    var _render11 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render11 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       id: "test-menu",
       disabled: true,
       label: "Test",
@@ -407,12 +407,12 @@ describe('Menu', function () {
   test('reverse icon and label', function () {
     window.scrollTo = jest.fn();
 
-    var _render12 = (0, _react2.render)(_react["default"].createElement(_.MnetUIBase, null, _react["default"].createElement(_.Menu, {
+    var _render12 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       open: true,
       label: "Test Menu",
       items: [{
         label: 'Item 1',
-        icon: _react["default"].createElement("svg", null),
+        icon: /*#__PURE__*/_react["default"].createElement("svg", null),
         reverse: true
       }, {
         label: 'Item 2'
@@ -426,9 +426,9 @@ describe('Menu', function () {
     expect(container).toMatchSnapshot();
   });
   test('custom theme icon color', function () {
-    var component = _reactTestRenderer["default"].create(_react["default"].createElement(_.MnetUIBase, {
+    var component = _reactTestRenderer["default"].create( /*#__PURE__*/_react["default"].createElement(_.MnetUIBase, {
       theme: customTheme
-    }, _react["default"].createElement(_.Menu, {
+    }, /*#__PURE__*/_react["default"].createElement(_.Menu, {
       label: "Test Menu",
       items: [{
         label: 'Item 1'

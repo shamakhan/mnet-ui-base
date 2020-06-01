@@ -21,7 +21,7 @@ var activeAsArray = function activeAsArray(active) {
   return typeof active === 'number' ? [active] : active;
 };
 
-var Accordion = (0, _react.forwardRef)(function (_ref, ref) {
+var Accordion = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var activeIndex = _ref.activeIndex,
       _ref$animate = _ref.animate,
       animate = _ref$animate === void 0 ? true : _ref$animate,
@@ -66,13 +66,13 @@ var Accordion = (0, _react.forwardRef)(function (_ref, ref) {
     }
   };
 
-  return _react["default"].createElement(_Box.Box, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
     ref: ref,
     role: "tablist"
   }, rest), _react.Children.toArray(children).filter(function (child) {
     return child;
   }).map(function (child, index) {
-    return _react["default"].createElement(_AccordionContext.AccordionContext.Provider, {
+    return /*#__PURE__*/_react["default"].createElement(_AccordionContext.AccordionContext.Provider, {
       // eslint-disable-next-line react/no-array-index-key
       key: index,
       value: {

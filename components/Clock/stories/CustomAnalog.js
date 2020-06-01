@@ -35,19 +35,19 @@ var analogClockTheme = {
 };
 
 var CustomAnalog = function CustomAnalog() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: analogClockTheme
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Clock, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Clock, {
     type: "analog"
   })));
 };
 
 (0, _react2.storiesOf)('Clock', module).add('Custom Analog', function () {
-  return _react["default"].createElement(CustomAnalog, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomAnalog, null);
 }, {
   chromatic: {
     disable: true

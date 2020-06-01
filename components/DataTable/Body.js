@@ -27,7 +27,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var Body = (0, _react.forwardRef)(function (_ref, ref) {
+var Body = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var background = _ref.background,
       border = _ref.border,
       columns = _ref.columns,
@@ -47,7 +47,7 @@ var Body = (0, _react.forwardRef)(function (_ref, ref) {
       active = _React$useState[0],
       setActive = _React$useState[1];
 
-  return _react["default"].createElement(_Keyboard.Keyboard, {
+  return /*#__PURE__*/_react["default"].createElement(_Keyboard.Keyboard, {
     onEnter: onClickRow && active >= 0 ? function (event) {
       event.persist();
       var adjustedEvent = event;
@@ -60,22 +60,22 @@ var Body = (0, _react.forwardRef)(function (_ref, ref) {
     onDown: onClickRow && data.length ? function () {
       setActive(active >= 0 ? Math.min(active + 1, data.length - 1) : 0);
     } : undefined
-  }, _react["default"].createElement(_StyledDataTable.StyledDataTableBody, _extends({
+  }, /*#__PURE__*/_react["default"].createElement(_StyledDataTable.StyledDataTableBody, _extends({
     ref: ref,
     size: size,
     tabIndex: onClickRow ? 0 : undefined
-  }, rest), _react["default"].createElement(_InfiniteScroll.InfiniteScroll, {
+  }, rest), /*#__PURE__*/_react["default"].createElement(_InfiniteScroll.InfiniteScroll, {
     items: data,
     onMore: onMore,
     replace: replace,
     renderMarker: function renderMarker(marker) {
-      return _react["default"].createElement(_TableRow.TableRow, null, _react["default"].createElement(_TableCell.TableCell, null, marker));
+      return /*#__PURE__*/_react["default"].createElement(_TableRow.TableRow, null, /*#__PURE__*/_react["default"].createElement(_TableCell.TableCell, null, marker));
     },
     scrollableAncestor: "window",
     step: step
   }, function (datum, index, rowRef) {
     var primaryValue = primaryProperty ? (0, _buildState.datumValue)(datum, primaryProperty) : undefined;
-    return _react["default"].createElement(_StyledDataTable.StyledDataTableRow, {
+    return /*#__PURE__*/_react["default"].createElement(_StyledDataTable.StyledDataTableRow, {
       key: primaryValue || index,
       ref: rowRef,
       size: size,
@@ -101,7 +101,7 @@ var Body = (0, _react.forwardRef)(function (_ref, ref) {
         return setActive(undefined);
       } : undefined
     }, columns.map(function (column) {
-      return _react["default"].createElement(_Cell.Cell, {
+      return /*#__PURE__*/_react["default"].createElement(_Cell.Cell, {
         key: column.property,
         background: background,
         border: border,

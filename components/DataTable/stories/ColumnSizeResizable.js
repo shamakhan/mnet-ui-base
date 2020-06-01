@@ -77,14 +77,14 @@ var columnsResize = [{
 }];
 
 var ExampleResizable = function ExampleResizable() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: "3"
-  }, "Table with resizeable & column sizes"), _react["default"].createElement(_mnetUiBase.DataTable, {
+  }, "Table with resizeable & column sizes"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DataTable, {
     columns: columnsResize,
     data: DATA,
     primaryKey: false,
@@ -93,5 +93,5 @@ var ExampleResizable = function ExampleResizable() {
 };
 
 (0, _react2.storiesOf)('DataTable', module).add('Column Sizes resizeable', function () {
-  return _react["default"].createElement(ExampleResizable, null);
+  return /*#__PURE__*/_react["default"].createElement(ExampleResizable, null);
 });

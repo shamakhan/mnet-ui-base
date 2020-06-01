@@ -11,31 +11,31 @@ var _mnetUiBase = require("mnet-ui-base");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var ScrollBodyLayer = function ScrollBodyLayer() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Layer, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Layer, {
     full: "vertical",
     position: "right"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     style: {
       minWidth: '378px'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     align: "center",
     as: "header",
     elevation: "small",
     justify: "between"
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     margin: {
       left: 'small'
     }
-  }, "Header"), _react["default"].createElement(_mnetUiBase.Button, {
-    icon: _react["default"].createElement(_grommetIcons.FormClose, null)
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  }, "Header"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormClose, null)
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     flex: true,
     overflow: "auto",
     pad: "xsmall"
-  }, _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body"), _react["default"].createElement("span", null, "body")), _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body"), /*#__PURE__*/_react["default"].createElement("span", null, "body")), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     as: "footer",
     border: {
       side: 'top'
@@ -44,12 +44,12 @@ var ScrollBodyLayer = function ScrollBodyLayer() {
     justify: "end",
     direction: "row",
     align: "center"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     primary: true,
     label: "Save"
   })))));
 };
 
 (0, _react2.storiesOf)('Layer', module).add('Fixed Header, Scroll Body', function () {
-  return _react["default"].createElement(ScrollBodyLayer, null);
+  return /*#__PURE__*/_react["default"].createElement(ScrollBodyLayer, null);
 });

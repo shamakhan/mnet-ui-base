@@ -16,7 +16,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var Avatar = function Avatar(_ref) {
   var rest = _extends({}, _ref);
 
-  return _react["default"].createElement(_mnetUiBase.Box, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, _extends({
     height: "xxsmall",
     width: "xxsmall",
     round: "full" // eslint-disable-next-line max-len
@@ -28,21 +28,21 @@ var Avatar = function Avatar(_ref) {
 exports.Avatar = Avatar;
 
 var Simple = function Simple() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Header, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Header, {
     background: "light-4",
     pad: "small"
-  }, _react["default"].createElement(Avatar, null), _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(Avatar, null), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Anchor, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     label: "Home",
     href: "#"
-  }), _react["default"].createElement(_mnetUiBase.Anchor, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     label: "Profile",
     href: "#"
   }))));
 };
 
 (0, _react2.storiesOf)('Header', module).add('Simple', function () {
-  return _react["default"].createElement(Simple, null);
+  return /*#__PURE__*/_react["default"].createElement(Simple, null);
 });

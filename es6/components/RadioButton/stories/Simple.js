@@ -7,11 +7,11 @@ var SimpleRadioButton = function SimpleRadioButton() {
       selected = _React$useState[0],
       setSelected = _React$useState[1];
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large",
     gap: "large"
-  }, React.createElement(RadioButton, {
+  }, /*#__PURE__*/React.createElement(RadioButton, {
     label: "option 1",
     name: "name",
     value: "option 1",
@@ -19,7 +19,7 @@ var SimpleRadioButton = function SimpleRadioButton() {
     onChange: function onChange(event) {
       return setSelected(event.target.value);
     }
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "clear",
     onClick: function onClick() {
       return setSelected(undefined);
@@ -28,5 +28,5 @@ var SimpleRadioButton = function SimpleRadioButton() {
 };
 
 storiesOf('RadioButton', module).add('Simple', function () {
-  return React.createElement(SimpleRadioButton, null);
+  return /*#__PURE__*/React.createElement(SimpleRadioButton, null);
 });

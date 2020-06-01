@@ -18,17 +18,17 @@ var SidebarButton = function SidebarButton(_ref) {
   var label = _ref.label,
       rest = _objectWithoutPropertiesLoose(_ref, ["label"]);
 
-  return _react["default"].createElement(_mnetUiBase.Button, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     plain: true
   }, rest), function (_ref2) {
     var hover = _ref2.hover;
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       background: hover ? 'accent-1' : undefined,
       pad: {
         horizontal: 'large',
         vertical: 'medium'
       }
-    }, _react["default"].createElement(_mnetUiBase.Text, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
       size: "large"
     }, label));
   });
@@ -39,19 +39,19 @@ var SidebarNav = function SidebarNav() {
       active = _useState[0],
       setActive = _useState[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     direction: "row"
-  }, _react["default"].createElement(_mnetUiBase.Nav, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Nav, {
     background: "neutral-1"
   }, ['Dashboard', 'Devices', 'Settings'].map(function (label) {
-    return _react["default"].createElement(SidebarButton, {
+    return /*#__PURE__*/_react["default"].createElement(SidebarButton, {
       key: label,
       label: label,
       active: label === active,
@@ -63,5 +63,5 @@ var SidebarNav = function SidebarNav() {
 };
 
 (0, _react2.storiesOf)('Nav', module).add('Sidebar', function () {
-  return _react["default"].createElement(SidebarNav, null);
+  return /*#__PURE__*/_react["default"].createElement(SidebarNav, null);
 });

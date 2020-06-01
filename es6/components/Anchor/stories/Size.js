@@ -3,14 +3,14 @@ import { storiesOf } from '@storybook/react';
 import { Anchor, Box } from 'mnet-ui-base';
 
 var Size = function Size() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
   }, ['xxlarge', 'xlarge', 'large', 'medium', 'small', 'xsmall'].map(function (size) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       key: size,
       margin: "small"
-    }, React.createElement(Anchor, {
+    }, /*#__PURE__*/React.createElement(Anchor, {
       size: size,
       label: size,
       href: "#"
@@ -19,5 +19,5 @@ var Size = function Size() {
 };
 
 storiesOf('Anchor', module).add('Size', function () {
-  return React.createElement(Size, null);
+  return /*#__PURE__*/React.createElement(Size, null);
 });

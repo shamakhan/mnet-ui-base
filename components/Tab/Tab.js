@@ -27,7 +27,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var Tab = (0, _react.forwardRef)(function (_ref, ref) {
+var Tab = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var active = _ref.active,
       icon = _ref.icon,
       plain = _ref.plain,
@@ -79,9 +79,9 @@ var Tab = (0, _react.forwardRef)(function (_ref, ref) {
     if (typeof title !== 'string') {
       normalizedTitle = title;
     } else if (active) {
-      normalizedTitle = _react["default"].createElement(_Text.Text, theme.tab.active, title);
+      normalizedTitle = /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.tab.active, title);
     } else {
-      normalizedTitle = _react["default"].createElement(_Text.Text, {
+      normalizedTitle = /*#__PURE__*/_react["default"].createElement(_Text.Text, {
         color: over ? theme.tab.hover.color : theme.tab.color
       }, title);
     }
@@ -111,10 +111,10 @@ var Tab = (0, _react.forwardRef)(function (_ref, ref) {
 
   var renderIcon = function renderIcon(iconProp) {
     if (active) {
-      return _react["default"].cloneElement(iconProp, _extends({}, theme.tab.active));
+      return /*#__PURE__*/_react["default"].cloneElement(iconProp, _extends({}, theme.tab.active));
     }
 
-    return _react["default"].cloneElement(iconProp, {
+    return /*#__PURE__*/_react["default"].cloneElement(iconProp, {
       color: over ? theme.tab.hover.color : theme.tab.color
     });
   };
@@ -138,7 +138,7 @@ var Tab = (0, _react.forwardRef)(function (_ref, ref) {
     };
   }
 
-  return _react["default"].createElement(_Button.Button, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({
     ref: ref,
     plain: true,
     role: "tab",
@@ -161,7 +161,7 @@ var Tab = (0, _react.forwardRef)(function (_ref, ref) {
     style: focus && {
       zIndex: 1
     }
-  }), _react["default"].createElement(_StyledTab.StyledTab, _extends({
+  }), /*#__PURE__*/_react["default"].createElement(_StyledTab.StyledTab, _extends({
     as: _Box.Box,
     plain: plain
   }, withIconStyles, tabStyles), first, second));

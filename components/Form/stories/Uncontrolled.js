@@ -11,32 +11,32 @@ var _themes = require("mnet-ui-base/themes");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Example = function Example() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     full: true,
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Form, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Form, {
     onChange: function onChange(value) {
       return console.log('Change', value);
     },
     onSubmit: function onSubmit(event) {
       return console.log('Submit', event.value, event.touched);
     }
-  }, _react["default"].createElement(_mnetUiBase.FormField, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Name",
     name: "name"
-  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     name: "name"
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Email",
     name: "email",
     required: true
-  }, _react["default"].createElement(_mnetUiBase.MaskedInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MaskedInput, {
     name: "email",
     mask: [{
       regexp: /^[\w\-_.]+$/,
@@ -52,47 +52,47 @@ var Example = function Example() {
       regexp: /^[\w]+$/,
       placeholder: 'com'
     }]
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     name: "subscribe"
-  }, _react["default"].createElement(_mnetUiBase.CheckBox, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
     name: "subscribe",
     label: "Subscribe?"
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     name: "ampm"
-  }, _react["default"].createElement(_mnetUiBase.RadioButtonGroup, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RadioButtonGroup, {
     name: "ampm",
     options: ['morning', 'evening']
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Size",
     name: "size"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     name: "size",
     options: ['small', 'medium', 'large']
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Comments",
     name: "comments"
-  }, _react["default"].createElement(_mnetUiBase.TextArea, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextArea, {
     name: "comments"
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "Age",
     name: "age",
     pad: true
-  }, _react["default"].createElement(_mnetUiBase.RangeInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RangeInput, {
     name: "age",
     min: 15,
     max: 75
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     justify: "between",
     margin: {
       top: 'medium'
     }
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Cancel"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "reset",
     label: "Reset"
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     type: "submit",
     label: "Update",
     primary: true
@@ -100,5 +100,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Form', module).add('Uncontrolled', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

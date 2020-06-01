@@ -19,16 +19,16 @@ var FillTextArea = function FillTextArea() {
     return setValue(event.target.value);
   };
 
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _themes.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "large",
     height: "medium",
     border: {
       color: 'brand',
       size: 'medium'
     }
-  }, _react["default"].createElement(_mnetUiBase.TextArea, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextArea, {
     value: value,
     onChange: onChange,
     fill: true
@@ -36,5 +36,5 @@ var FillTextArea = function FillTextArea() {
 };
 
 (0, _react2.storiesOf)('TextArea', module).add('Fill', function () {
-  return _react["default"].createElement(FillTextArea, null);
+  return /*#__PURE__*/_react["default"].createElement(FillTextArea, null);
 });

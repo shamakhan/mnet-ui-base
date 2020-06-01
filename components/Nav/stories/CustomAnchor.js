@@ -41,32 +41,32 @@ var customTheme = (0, _utils.deepMerge)(_themes.mnet, {
 });
 
 var CustomAnchor = function CustomAnchor() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     full: true,
     theme: customTheme
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "dark-1",
     pad: "large",
     fill: true
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     pad: {
       vertical: 'medium'
     }
-  }, _react["default"].createElement(_mnetUiBase.Nav, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Nav, {
     width: "small",
     margin: {
       right: 'large'
     }
   }, navItems.map(function (item) {
-    return _react["default"].createElement(_mnetUiBase.Anchor, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
       href: item.href,
       label: item.label,
       key: item.label
     });
-  })), _react["default"].createElement(_mnetUiBase.Main, null, "Place main content here"))));
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Main, null, "Place main content here"))));
 };
 
 (0, _react2.storiesOf)('Nav', module).add('Custom Anchor', function () {
-  return _react["default"].createElement(CustomAnchor, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomAnchor, null);
 });

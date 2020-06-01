@@ -7,20 +7,20 @@ var TimeMaskedInput = function TimeMaskedInput() {
       value = _React$useState[0],
       setValue = _React$useState[1];
 
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium"
-  }, React.createElement(MaskedInput, {
+  }, /*#__PURE__*/React.createElement(MaskedInput, {
     mask: [{
       length: [1, 2],
       options: Array.from({
@@ -53,5 +53,5 @@ var TimeMaskedInput = function TimeMaskedInput() {
 };
 
 storiesOf('MaskedInput', module).add('Time', function () {
-  return React.createElement(TimeMaskedInput, null);
+  return /*#__PURE__*/React.createElement(TimeMaskedInput, null);
 });

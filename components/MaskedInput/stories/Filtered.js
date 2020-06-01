@@ -35,20 +35,20 @@ var FilteredMaskedInput = function FilteredMaskedInput() {
   poems.forEach(function (p) {
     longestPoemLength = Math.max(longestPoemLength, p.length);
   });
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     width: "medium"
-  }, _react["default"].createElement(_mnetUiBase.MaskedInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MaskedInput, {
     mask: [{
       options: poets,
       placeholder: 'poet'
@@ -67,5 +67,5 @@ var FilteredMaskedInput = function FilteredMaskedInput() {
 };
 
 (0, _react2.storiesOf)('MaskedInput', module).add('Filtered', function () {
-  return _react["default"].createElement(FilteredMaskedInput, null);
+  return /*#__PURE__*/_react["default"].createElement(FilteredMaskedInput, null);
 });

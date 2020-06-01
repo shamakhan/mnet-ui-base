@@ -30,20 +30,20 @@ var RichPanel = function RichPanel(_ref) {
       setHovering = _React$useState[1];
 
   var renderPanelTitle = function renderPanelTitle() {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       direction: "row",
       align: "center",
       gap: "small",
       pad: {
         horizontal: 'small'
       }
-    }, icon, React.createElement(Heading, {
+    }, icon, /*#__PURE__*/React.createElement(Heading, {
       level: 4,
       color: hovering ? 'dark-1' : 'dark-3'
     }, label));
   };
 
-  return React.createElement(AccordionPanel, _extends({
+  return /*#__PURE__*/React.createElement(AccordionPanel, _extends({
     label: renderPanelTitle(),
     onMouseOver: function onMouseOver() {
       return setHovering(true);
@@ -60,18 +60,18 @@ var RichPanel = function RichPanel(_ref) {
   }, rest), children);
 };
 
-var spinning = React.createElement("svg", {
+var spinning = /*#__PURE__*/React.createElement("svg", {
   version: "1.1",
   viewBox: "0 0 32 32",
   width: "32px",
   height: "32px",
   fill: "#333333"
-}, React.createElement("path", {
+}, /*#__PURE__*/React.createElement("path", {
   opacity: ".25",
   d: "M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4"
-}), React.createElement("path", {
+}), /*#__PURE__*/React.createElement("path", {
   d: "M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z"
-}, React.createElement("animateTransform", {
+}, /*#__PURE__*/React.createElement("animateTransform", {
   attributeName: "transform",
   type: "rotate",
   from: "0 16 16",
@@ -79,7 +79,7 @@ var spinning = React.createElement("svg", {
   dur: "0.8s",
   repeatCount: "indefinite"
 })));
-var loading = React.createElement(Box, {
+var loading = /*#__PURE__*/React.createElement(Box, {
   align: "center",
   justify: "center",
   style: {
@@ -92,19 +92,19 @@ var RichAccordion = function RichAccordion() {
       highlightLoaded = _React$useState2[0],
       setHighlightLoaded = _React$useState2[1];
 
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     direction: "row"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     basis: "medium",
     border: "all"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     flex: false,
     border: "bottom",
     background: "light-2",
@@ -112,11 +112,11 @@ var RichAccordion = function RichAccordion() {
     pad: {
       horizontal: 'small'
     }
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: 3
-  }, React.createElement("strong", null, "About #announcements"))), React.createElement(ThemeContext.Extend, {
+  }, /*#__PURE__*/React.createElement("strong", null, "About #announcements"))), /*#__PURE__*/React.createElement(ThemeContext.Extend, {
     value: richAccordionTheme
-  }, React.createElement(Accordion, {
+  }, /*#__PURE__*/React.createElement(Accordion, {
     multiple: true,
     onActive: function onActive(activeIndexes) {
       if (activeIndexes.includes(1)) {
@@ -126,30 +126,30 @@ var RichAccordion = function RichAccordion() {
         }, 1000);
       }
     }
-  }, React.createElement(RichPanel, {
-    icon: React.createElement(CircleInformation, null),
+  }, /*#__PURE__*/React.createElement(RichPanel, {
+    icon: /*#__PURE__*/React.createElement(CircleInformation, null),
     label: "Channel Details"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: {
       bottom: 'medium',
       horizontal: 'small',
       top: 'small'
     },
     gap: "medium"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     gap: "xsmall"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     color: "dark-3"
-  }, React.createElement("strong", null, "Purpose")), React.createElement(Text, null, "Used for general announcements like new releases, trainings...")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement("strong", null, "Purpose")), /*#__PURE__*/React.createElement(Text, null, "Used for general announcements like new releases, trainings...")), /*#__PURE__*/React.createElement(Box, {
     gap: "xsmall"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     color: "dark-3"
-  }, React.createElement("strong", null, "Created")), React.createElement(Text, null, "Created by Bryan Jacquot on January 19, 2016")))), React.createElement(RichPanel, {
-    icon: React.createElement(Bookmark, {
+  }, /*#__PURE__*/React.createElement("strong", null, "Created")), /*#__PURE__*/React.createElement(Text, null, "Created by Bryan Jacquot on January 19, 2016")))), /*#__PURE__*/React.createElement(RichPanel, {
+    icon: /*#__PURE__*/React.createElement(Bookmark, {
       color: "accent-1"
     }),
     label: "Highlights"
-  }, highlightLoaded ? React.createElement(Box, {
+  }, highlightLoaded ? /*#__PURE__*/React.createElement(Box, {
     pad: {
       bottom: 'medium',
       horizontal: 'small',
@@ -160,14 +160,14 @@ var RichAccordion = function RichAccordion() {
     style: {
       maxHeight: '400px'
     }
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     color: "dark-3"
-  }, "Below is the top message in", React.createElement("strong", null, "#announcements"), "."), React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")) : loading), React.createElement(RichPanel, {
-    icon: React.createElement(User, {
+  }, "Below is the top message in", /*#__PURE__*/React.createElement("strong", null, "#announcements"), "."), /*#__PURE__*/React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), /*#__PURE__*/React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), /*#__PURE__*/React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), /*#__PURE__*/React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), /*#__PURE__*/React.createElement(Text, null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")) : loading), /*#__PURE__*/React.createElement(RichPanel, {
+    icon: /*#__PURE__*/React.createElement(User, {
       color: "accent-2"
     }),
     label: "2,000 members"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: {
       bottom: 'medium',
       horizontal: 'small',
@@ -178,5 +178,5 @@ var RichAccordion = function RichAccordion() {
 };
 
 storiesOf('Accordion', module).add('Rich', function () {
-  return React.createElement(RichAccordion, null);
+  return /*#__PURE__*/React.createElement(RichAccordion, null);
 });

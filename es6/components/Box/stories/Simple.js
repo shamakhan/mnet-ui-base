@@ -5,14 +5,14 @@ import { Car } from "grommet-icons/es6/icons/Car";
 import { Anchor, Box, Button, Text } from 'mnet-ui-base';
 
 var SimpleBox = function SimpleBox() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     direction: "row-responsive",
     justify: "center",
     align: "center",
     pad: "xlarge",
     background: "dark-2",
     gap: "medium"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     pad: "large",
     align: "center",
     background: {
@@ -21,32 +21,32 @@ var SimpleBox = function SimpleBox() {
     },
     round: true,
     gap: "small"
-  }, React.createElement(Attraction, {
+  }, /*#__PURE__*/React.createElement(Attraction, {
     size: "large"
-  }), React.createElement(Text, null, "Party"), React.createElement(Anchor, {
+  }), /*#__PURE__*/React.createElement(Text, null, "Party"), /*#__PURE__*/React.createElement(Anchor, {
     href: "",
     label: "Link"
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "Button",
     onClick: function onClick() {}
-  })), React.createElement(Box, {
+  })), /*#__PURE__*/React.createElement(Box, {
     pad: "large",
     align: "center",
     background: "dark-3",
     round: true,
     gap: "small"
-  }, React.createElement(Car, {
+  }, /*#__PURE__*/React.createElement(Car, {
     size: "large",
     color: "light-2"
-  }), React.createElement(Text, null, "Travel"), React.createElement(Anchor, {
+  }), /*#__PURE__*/React.createElement(Text, null, "Travel"), /*#__PURE__*/React.createElement(Anchor, {
     href: "",
     label: "Link"
-  }), React.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     label: "Button",
     onClick: function onClick() {}
   }))));
 };
 
 storiesOf('Box', module).add('Simple', function () {
-  return React.createElement(SimpleBox, null);
+  return /*#__PURE__*/React.createElement(SimpleBox, null);
 });

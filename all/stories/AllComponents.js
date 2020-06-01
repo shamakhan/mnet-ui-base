@@ -63,17 +63,17 @@ var Components = function Components() {
   var themeCanMode = (0, _react.useMemo)(function () {
     return theme && theme.global.colors.background && theme.global.colors.background.dark;
   }, [theme]);
-  var content = [_react["default"].createElement(_mnetUiBase.Box, {
+  var content = [/*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     key: "type",
     align: "start",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     margin: {
       top: 'none'
     }
-  }, "Heading"), _react["default"].createElement(_mnetUiBase.Paragraph, null, "Paragraph"), _react["default"].createElement(_mnetUiBase.Text, null, "Text"), _react["default"].createElement(_mnetUiBase.Anchor, {
+  }, "Heading"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Paragraph, null, "Paragraph"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Text"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Anchor, {
     href: ""
-  }, "Anchor"), _react["default"].createElement(_mnetUiBase.Menu, {
+  }, "Anchor"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Menu, {
     label: "Menu",
     items: [{
       label: 'One',
@@ -81,27 +81,27 @@ var Components = function Components() {
     }, {
       label: 'Two'
     }]
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Button",
     onClick: function onClick() {}
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     plain: true,
     onClick: function onClick() {}
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "plain button"))), _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "plain button"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     key: "input",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     placeholder: "Select",
     options: ['One', 'Two'],
     onChange: function onChange() {}
-  }), _react["default"].createElement(_mnetUiBase.CheckBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
     name: "check",
     checked: checkBox,
     label: "CheckBox",
     onChange: function onChange(event) {
       return setCheckBox(event.target.checked);
     }
-  }), _react["default"].createElement(_mnetUiBase.CheckBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
     name: "toggle",
     toggle: true,
     checked: checkBox,
@@ -109,33 +109,33 @@ var Components = function Components() {
     onChange: function onChange(event) {
       return setCheckBox(event.target.checked);
     }
-  }), _react["default"].createElement(_mnetUiBase.RadioButtonGroup, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RadioButtonGroup, {
     name: "radio",
     options: ['RadioButton 1', 'RadioButton 2'],
     value: radioButton,
     onChange: function onChange(event) {
       return setRadioButton(event.target.value);
     }
-  }), _react["default"].createElement(_mnetUiBase.TextInput, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     placeholder: "TextInput"
-  }), _react["default"].createElement(_mnetUiBase.TextArea, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextArea, {
     placeholder: "TextArea"
-  }), _react["default"].createElement(_mnetUiBase.RangeInput, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RangeInput, {
     value: 24,
     onChange: function onChange() {}
-  }), _react["default"].createElement(_mnetUiBase.Stack, null, _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Stack, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     justify: "between"
   }, [0, 1, 2, 3].map(function (value) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: value,
       pad: "small"
-    }, _react["default"].createElement(_mnetUiBase.Text, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
       style: {
         fontFamily: 'monospace'
       }
     }, value));
-  })), _react["default"].createElement(_mnetUiBase.RangeSelector, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RangeSelector, {
     direction: "horizontal",
     invert: false,
     min: 0,
@@ -146,24 +146,24 @@ var Components = function Components() {
     onChange: function onChange(values) {
       return setRangeSelector(values);
     }
-  })), _react["default"].createElement(_mnetUiBase.FormField, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, {
     label: "FormField"
-  }, _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     placeholder: "TextInput"
-  }))), _react["default"].createElement(_mnetUiBase.Box, {
+  }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     key: "time",
     gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Calendar, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Calendar, {
     size: "small"
-  }), _react["default"].createElement(_mnetUiBase.Clock, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Clock, {
     type: "digital",
     className: "chromatic-ignore"
-  }), _react["default"].createElement(_mnetUiBase.Clock, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Clock, {
     className: "chromatic-ignore"
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     key: "dataTable",
     alignSelf: "start"
-  }, _react["default"].createElement(_mnetUiBase.DataTable, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DataTable, {
     columns: [{
       property: 'name',
       header: 'Name'
@@ -182,52 +182,52 @@ var Components = function Components() {
       color: 'orange'
     }],
     sortable: true
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     key: "accordion"
-  }, _react["default"].createElement(_mnetUiBase.Accordion, null, _react["default"].createElement(_mnetUiBase.AccordionPanel, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Accordion, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AccordionPanel, {
     label: "Accordion Panel 1"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "Accordion panel 1 content"))), _react["default"].createElement(_mnetUiBase.AccordionPanel, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Accordion panel 1 content"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AccordionPanel, {
     label: "Accordion Panel 2"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "Accordion panel 2 content"))))), _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Accordion panel 2 content"))))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     key: "tabs"
-  }, _react["default"].createElement(_mnetUiBase.Tabs, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tabs, {
     activeIndex: tabIndex,
     onActive: function onActive(index) {
       return setTabIndex(index);
     }
-  }, _react["default"].createElement(_mnetUiBase.Tab, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tab, {
     title: "Tab 1"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "Tab 1 content"))), _react["default"].createElement(_mnetUiBase.Tab, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Tab 1 content"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Tab, {
     title: "Tab 2"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "small"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "Tab 2 content")))))];
-  return _react["default"].createElement("div", {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Tab 2 content")))))];
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       height: '100vh',
       display: 'flex',
       flexDirection: 'column'
     }
-  }, _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _themes.mnet,
     style: {
       flex: '0 0 auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row-responsive",
     gap: "medium",
     justify: "end",
     align: "center",
     margin: "small"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     basis: "small"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     plain: true,
     size: "small",
     options: Object.keys(themes),
@@ -235,15 +235,15 @@ var Components = function Components() {
     onChange: function onChange(event) {
       return setThemeName(event.option);
     }
-  })), themeCanMode && _react["default"].createElement(_mnetUiBase.CheckBox, {
+  })), themeCanMode && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
     label: "dark",
     checked: themeMode === 'dark',
     onChange: function onChange() {
       return setThemeMode(themeMode === 'dark' ? 'light' : 'dark');
     }
-  }), !themeCanMode && _react["default"].createElement(_mnetUiBase.Box, {
+  }), !themeCanMode && /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     basis: "small"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     plain: true,
     placeholder: "background",
     size: "small",
@@ -252,9 +252,9 @@ var Components = function Components() {
     onChange: function onChange(event) {
       return setBackground(event.option);
     }
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     basis: "small"
-  }, _react["default"].createElement(_mnetUiBase.RangeInput, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.RangeInput, {
     min: 16,
     max: 36,
     step: 2,
@@ -262,23 +262,23 @@ var Components = function Components() {
     onChange: function onChange(event) {
       return setBaseSize(parseInt(event.target.value, 10));
     }
-  })), _react["default"].createElement(_mnetUiBase.Text, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "small"
-  }, baseSize + "px base spacing"))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }, baseSize + "px base spacing"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: theme,
     themeMode: themeMode,
     style: {
       flex: '1 1'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     pad: "medium",
     background: background || theme.global.colors.background,
     overflow: "auto"
-  }, _mnetUiBase.Grid.available ? _react["default"].createElement(_mnetUiBase.Grid, {
+  }, _mnetUiBase.Grid.available ? /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, {
     columns: "small",
     gap: "medium"
-  }, content) : _react["default"].createElement(_mnetUiBase.Box, {
+  }, content) : /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     wrap: true,
     align: "start",
@@ -287,5 +287,5 @@ var Components = function Components() {
 };
 
 (0, _react2.storiesOf)('All', module).add('All', function () {
-  return _react["default"].createElement(Components, null);
+  return /*#__PURE__*/_react["default"].createElement(Components, null);
 });

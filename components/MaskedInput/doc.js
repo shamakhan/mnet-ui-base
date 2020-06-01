@@ -59,6 +59,6 @@ var themeDoc = _extends({
     type: 'number | string',
     defaultValue: undefined
   }
-}, _utils.themeDocUtils.disabledStyle, {}, _utils.themeDocUtils.focusStyle, {}, _utils.themeDocUtils.placeholderStyle, {}, _utils.themeDocUtils.inputStyle);
+}, _utils.themeDocUtils.disabledStyle, _utils.themeDocUtils.focusStyle, _utils.themeDocUtils.placeholderStyle, _utils.themeDocUtils.inputStyle);
 
 exports.themeDoc = themeDoc;

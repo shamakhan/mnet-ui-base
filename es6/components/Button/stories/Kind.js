@@ -33,44 +33,46 @@ var states = [{}, {
   hoverIndicator: 'teal'
 }];
 var contents = [{
-  icon: React.createElement(User, null)
+  icon: /*#__PURE__*/React.createElement(User, null)
 }, {
   label: 'label'
 }, {
-  icon: React.createElement(User, null),
+  icon: /*#__PURE__*/React.createElement(User, null),
   label: 'label'
 }, {
   plain: true,
-  children: React.createElement(Box, {
+  children: /*#__PURE__*/React.createElement(Box, {
     pad: "xsmall"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     color: "orange"
   }, "label"))
 }];
 
 var Example = function Example() {
-  return React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(Box, {
     pad: "large",
     gap: "large"
-  }, React.createElement(MnetUIBase, {
+  }, /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     gap: "medium"
   }, kinds.map(function (kind) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       key: kind.name,
       flex: false
-    }, React.createElement(Heading, {
+    }, /*#__PURE__*/React.createElement(Heading, {
       level: 3,
       size: "small"
     }, kind.name), states.map(function (state, index) {
-      return (// eslint-disable-next-line react/no-array-index-key
+      return (
+        /*#__PURE__*/
+        // eslint-disable-next-line react/no-array-index-key
         React.createElement(Box, {
           key: index,
           direction: "row",
           align: "center"
         }, darks.map(function (dark) {
-          return React.createElement(Box, {
+          return /*#__PURE__*/React.createElement(Box, {
             key: dark,
             direction: dark ? 'row-reverse' : 'row',
             align: "center",
@@ -81,7 +83,7 @@ var Example = function Example() {
             },
             pad: "small"
           }, contents.map(function (content, index2) {
-            return React.createElement(Button // eslint-disable-next-line react/no-array-index-key
+            return /*#__PURE__*/React.createElement(Button // eslint-disable-next-line react/no-array-index-key
             , _extends({
               key: index2
             }, kind.props, content, state));
@@ -93,5 +95,5 @@ var Example = function Example() {
 };
 
 storiesOf('Button', module).add('Kind', function () {
-  return React.createElement(Example, null);
+  return /*#__PURE__*/React.createElement(Example, null);
 });

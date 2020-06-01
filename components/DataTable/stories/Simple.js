@@ -13,10 +13,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
 var SimpleDataTable = function SimpleDataTable() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.DataTable, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DataTable, {
     columns: _data.columns,
     data: _data.DATA,
     step: 10
@@ -24,5 +24,5 @@ var SimpleDataTable = function SimpleDataTable() {
 };
 
 (0, _react2.storiesOf)('DataTable', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleDataTable, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleDataTable, null);
 });

@@ -16,7 +16,7 @@ var amountFormatter = new Intl.NumberFormat('en-US', {
 });
 var columns = [{
   property: 'name',
-  header: _react["default"].createElement(_mnetUiBase.Text, null, "Name with extra"),
+  header: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Name with extra"),
   primary: true,
   footer: 'Total'
 }, {
@@ -33,11 +33,11 @@ var columns = [{
   property: 'percent',
   header: 'Percent Complete',
   render: function render(datum) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       pad: {
         vertical: 'xsmall'
       }
-    }, _react["default"].createElement(_mnetUiBase.Meter, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Meter, {
       values: [{
         value: datum.percent
       }],

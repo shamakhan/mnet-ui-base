@@ -17,8 +17,8 @@ describe('Menu', function () {
   beforeEach(createPortal);
   afterEach(cleanup);
   test('basic', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Menu, {
-      icon: React.createElement("svg", null),
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
+      icon: /*#__PURE__*/React.createElement("svg", null),
       label: "Test Menu",
       id: "test-menu",
       items: [{
@@ -30,7 +30,7 @@ describe('Menu', function () {
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('custom message', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       label: "Test Menu",
       messages: {
         openMenu: 'Abrir Menu'
@@ -44,7 +44,7 @@ describe('Menu', function () {
     expect(component.toJSON()).toMatchSnapshot();
   });
   test('custom a11yTitle', function () {
-    var _render = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       a11yTitle: "My Menu",
       label: "Test Menu",
       items: [{
@@ -61,8 +61,8 @@ describe('Menu', function () {
     expect(container).toMatchSnapshot();
   });
   test('justify content', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, null, ['start', 'center', 'end', 'between', 'around', 'stretch'].map(function (justifyContent) {
-      return React.createElement(Menu, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, null, ['start', 'center', 'end', 'between', 'around', 'stretch'].map(function (justifyContent) {
+      return /*#__PURE__*/React.createElement(Menu, {
         key: justifyContent,
         label: justifyContent + " Menu",
         messages: {
@@ -81,12 +81,12 @@ describe('Menu', function () {
   test('gap between icon and label', function () {
     window.scrollTo = jest.fn();
 
-    var _render2 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render2 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       open: true,
       label: "actions",
       items: [{
         label: 'Item 1',
-        icon: React.createElement("svg", null),
+        icon: /*#__PURE__*/React.createElement("svg", null),
         gap: 'xlarge'
       }, {
         label: 'Item 2'
@@ -102,7 +102,7 @@ describe('Menu', function () {
   test('open and close on click', function () {
     window.scrollTo = jest.fn();
 
-    var _render3 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render3 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -128,7 +128,7 @@ describe('Menu', function () {
     expect(window.scrollTo).toBeCalled();
   });
   test('close by clicking outside', function (done) {
-    var _render4 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render4 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -156,7 +156,7 @@ describe('Menu', function () {
   test('select an item', function () {
     var onClick = jest.fn();
 
-    var _render5 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render5 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -179,7 +179,7 @@ describe('Menu', function () {
   test('navigate through suggestions and select', function () {
     var onClick = jest.fn();
 
-    var _render6 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render6 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -221,7 +221,7 @@ describe('Menu', function () {
     expect(document.getElementById('test-menu__drop')).toBeNull();
   });
   test('tab through menu until it closes', function () {
-    var _render7 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render7 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -261,7 +261,7 @@ describe('Menu', function () {
     expect(document.getElementById('test-menu__drop')).toBeNull();
   });
   test('close on esc', function () {
-    var _render8 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render8 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -287,7 +287,7 @@ describe('Menu', function () {
     expect(document.getElementById('test-menu__drop')).toBeNull();
   });
   test('close on tab', function () {
-    var _render9 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render9 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       label: "Test",
       items: [{
@@ -313,7 +313,7 @@ describe('Menu', function () {
     expect(document.getElementById('test-menu__drop')).toBeNull();
   });
   test('with dropAlign renders', function () {
-    var _render10 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render10 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       dropAlign: {
         top: 'top',
@@ -338,7 +338,7 @@ describe('Menu', function () {
     expectPortal('test-menu__drop').toMatchSnapshot();
   });
   test('disabled', function () {
-    var _render11 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render11 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       id: "test-menu",
       disabled: true,
       label: "Test",
@@ -365,12 +365,12 @@ describe('Menu', function () {
   test('reverse icon and label', function () {
     window.scrollTo = jest.fn();
 
-    var _render12 = render(React.createElement(MnetUIBase, null, React.createElement(Menu, {
+    var _render12 = render( /*#__PURE__*/React.createElement(MnetUIBase, null, /*#__PURE__*/React.createElement(Menu, {
       open: true,
       label: "Test Menu",
       items: [{
         label: 'Item 1',
-        icon: React.createElement("svg", null),
+        icon: /*#__PURE__*/React.createElement("svg", null),
         reverse: true
       }, {
         label: 'Item 2'
@@ -384,9 +384,9 @@ describe('Menu', function () {
     expect(container).toMatchSnapshot();
   });
   test('custom theme icon color', function () {
-    var component = renderer.create(React.createElement(MnetUIBase, {
+    var component = renderer.create( /*#__PURE__*/React.createElement(MnetUIBase, {
       theme: customTheme
-    }, React.createElement(Menu, {
+    }, /*#__PURE__*/React.createElement(Menu, {
       label: "Test Menu",
       items: [{
         label: 'Item 1'

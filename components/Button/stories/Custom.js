@@ -144,116 +144,116 @@ var coloredButton = {
 };
 
 var CustomTheme = function CustomTheme() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: newCustomTheme
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gap: "small",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 2,
     size: "small"
-  }, "new custom theme"), _react["default"].createElement(_mnetUiBase.Box, {
+  }, "new custom theme"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     direction: "row",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "default",
     onClick: function onClick() {}
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "active default",
     onClick: function onClick() {},
     active: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "disabled default",
     onClick: function onClick() {},
     disabled: true
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     direction: "row",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "primary",
     onClick: function onClick() {},
     primary: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "active primary",
     onClick: function onClick() {},
     primary: true,
     active: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "disabled primary",
     onClick: function onClick() {},
     primary: true,
     disabled: true
-  })), _react["default"].createElement(_mnetUiBase.Box, {
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     direction: "row",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "secondary",
     onClick: function onClick() {},
     secondary: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "active secondary",
     onClick: function onClick() {},
     secondary: true,
     active: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "disabled secondary",
     onClick: function onClick() {},
     secondary: true,
     disabled: true
-  })))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  })))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customTheme
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     justify: "center",
     pad: "large",
     direction: "row",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "custom theme",
     onClick: function onClick() {},
     primary: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "custom active primary",
     onClick: function onClick() {},
     primary: true,
     active: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "primary disabled",
     onClick: function onClick() {},
     primary: true,
     disabled: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Disabled",
     onClick: function onClick() {},
     disabled: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     label: "Plain Disabled",
     onClick: function onClick() {},
     plain: true,
     disabled: true
-  }))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: coloredButton
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     as: "span",
     label: "theme on dark background",
     primary: true
-  }))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBase.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Button, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     as: "span",
     label: "Custom as=span"
   }))));
 };
 
 (0, _react2.storiesOf)('Button', module).add('Custom', function () {
-  return _react["default"].createElement(CustomTheme, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomTheme, null);
 });

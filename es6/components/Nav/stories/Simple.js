@@ -16,10 +16,10 @@ var items = [{
 }];
 
 var Simple = function Simple() {
-  return React.createElement(React.Fragment, null, React.createElement(Nav, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, {
     pad: "large"
   }, items.map(function (item) {
-    return React.createElement(Anchor, {
+    return /*#__PURE__*/React.createElement(Anchor, {
       href: item.href,
       label: item.label,
       key: item.label
@@ -28,5 +28,5 @@ var Simple = function Simple() {
 };
 
 storiesOf('Nav', module).add('Simple', function () {
-  return React.createElement(Simple, null);
+  return /*#__PURE__*/React.createElement(Simple, null);
 });

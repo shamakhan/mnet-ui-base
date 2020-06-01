@@ -3,17 +3,17 @@ import { storiesOf } from '@storybook/react';
 import { Anchor, Box } from 'mnet-ui-base';
 
 var Disabled = function Disabled() {
-  return React.createElement("div", null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     margin: "small"
-  }, React.createElement(Anchor, {
+  }, /*#__PURE__*/React.createElement(Anchor, {
     disabled: true,
     label: "Disabled Anchor"
   }))));
 };
 
 storiesOf('Anchor', module).add('Disabled', function () {
-  return React.createElement(Disabled, null);
+  return /*#__PURE__*/React.createElement(Disabled, null);
 });

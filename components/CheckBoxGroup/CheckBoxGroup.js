@@ -19,7 +19,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var CheckBoxGroup = (0, _react.forwardRef)(function (_ref, ref) {
+var CheckBoxGroup = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var valueProp = _ref.value,
       disabledProp = _ref.disabled,
       _ref$gap = _ref.gap,
@@ -67,7 +67,7 @@ var CheckBoxGroup = (0, _react.forwardRef)(function (_ref, ref) {
     }
   };
 
-  return _react["default"].createElement(_Box.Box, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
     ref: ref,
     gap: gap
   }, rest), options.map(function (option) {
@@ -86,7 +86,7 @@ var CheckBoxGroup = (0, _react.forwardRef)(function (_ref, ref) {
       disabled: disabled
     });
 
-    return _react["default"].createElement(_CheckBox.CheckBox, _extends({
+    return /*#__PURE__*/_react["default"].createElement(_CheckBox.CheckBox, _extends({
       key: label
     }, optionProps, {
       disabled: disabled,

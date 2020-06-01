@@ -40,16 +40,16 @@ var ResponsiveGrid = function ResponsiveGrid(_ref) {
 
   var size = _react["default"].useContext(_mnetUiBase.ResponsiveContext);
 
-  return _react["default"].createElement(_mnetUiBase.Grid, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Grid, _extends({
     areas: areas[size]
   }, props), children);
 };
 
 var ResponsiveGridExample = function ResponsiveGridExample() {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customBreakpoints,
     full: true
-  }, _react["default"].createElement(ResponsiveGrid, {
+  }, /*#__PURE__*/_react["default"].createElement(ResponsiveGrid, {
     columns: ['25%', '25%', '25%', '25%'],
     rows: ['3em', '3em', '3em'],
     areas: {
@@ -122,31 +122,31 @@ var ResponsiveGridExample = function ResponsiveGridExample() {
         end: [3, 1]
       }]
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gridArea: "header",
     background: "brand"
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gridArea: "one",
     background: "dark-1"
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gridArea: "two",
     background: "dark-2"
-  }), _react["default"].createElement(_mnetUiBase.Box, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gridArea: "three",
     background: "dark-3"
-  })), _react["default"].createElement(_mnetUiBase.Paragraph, null, "Below a certain threshold, Columns 1 & 2 switch to 50% and Column 3 moves down to a new spot in the grid."));
+  })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Paragraph, null, "Below a certain threshold, Columns 1 & 2 switch to 50% and Column 3 moves down to a new spot in the grid."));
 };
 
 (0, _react2.storiesOf)('ResponsiveContext', module).add('Custom Breakpoints', function () {
-  return _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: customBreakpoints,
     full: true
-  }, _react["default"].createElement(_mnetUiBase.ResponsiveContext.Consumer, null, function (size) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.ResponsiveContext.Consumer, null, function (size) {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       fill: true,
       background: "brand"
-    }, _react["default"].createElement(_mnetUiBase.Heading, null, "Hi, I'm " + size + ", resize me!"));
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, null, "Hi, I'm " + size + ", resize me!"));
   }));
 }).add('Responsive Grid', function () {
-  return _react["default"].createElement(ResponsiveGridExample, null);
+  return /*#__PURE__*/_react["default"].createElement(ResponsiveGridExample, null);
 });

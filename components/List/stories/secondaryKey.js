@@ -11,10 +11,10 @@ var _data = require("./data");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var SecondaryKeyList = function SecondaryKeyList() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.List, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.List, {
     data: _data.data.slice(0, 10),
     primaryKey: "entry",
     secondaryKey: "location"
@@ -22,5 +22,5 @@ var SecondaryKeyList = function SecondaryKeyList() {
 };
 
 (0, _react2.storiesOf)('List', module).add('secondaryKey', function () {
-  return _react["default"].createElement(SecondaryKeyList, null);
+  return /*#__PURE__*/_react["default"].createElement(SecondaryKeyList, null);
 });

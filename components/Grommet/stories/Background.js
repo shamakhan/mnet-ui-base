@@ -14,42 +14,42 @@ var Background = function Background() {
   var themeColor = 'background-back';
   var hexValue = '#DCD0FF';
   var cssColor = 'gold';
-  return _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gap: "medium"
-  }, _react["default"].createElement(_mnetUiBase.MnetUIBase, null, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with no theme or background prop"))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with no theme or background prop"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBaseThemeNeo.neo,
     themeMode: "dark"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with theme & themeMode but no background prop"))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with theme & themeMode but no background prop"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBaseThemeNeo.neo,
     themeMode: "light",
     background: themeColor
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as theme color of '", themeColor, "'"))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as theme color of '", themeColor, "'"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBase.mnet,
     background: hexValue
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as HEX value of '", hexValue, "'"))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as HEX value of '", hexValue, "'"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBase.mnet,
     background: cssColor
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as CSS color name of '", cssColor, "'"))), _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as CSS color name of '", cssColor, "'"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBase.mnet,
     background: {
       color: 'pink',
       image: 'url(http://librelogo.org/wp-content/uploads/2014/04/gradient2.png)'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as object containing color and image"))));
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as object containing color and image"))));
 };
 
 (0, _react2.storiesOf)('MnetUIBase', module).add('Background', function () {
-  return _react["default"].createElement(Background, null);
+  return /*#__PURE__*/_react["default"].createElement(Background, null);
 });

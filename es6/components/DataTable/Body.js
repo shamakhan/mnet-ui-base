@@ -10,7 +10,7 @@ import { Keyboard } from '../Keyboard';
 import { Cell } from './Cell';
 import { StyledDataTableBody, StyledDataTableRow } from './StyledDataTable';
 import { datumValue } from './buildState';
-var Body = forwardRef(function (_ref, ref) {
+var Body = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var background = _ref.background,
       border = _ref.border,
       columns = _ref.columns,
@@ -30,7 +30,7 @@ var Body = forwardRef(function (_ref, ref) {
       active = _React$useState[0],
       setActive = _React$useState[1];
 
-  return React.createElement(Keyboard, {
+  return /*#__PURE__*/React.createElement(Keyboard, {
     onEnter: onClickRow && active >= 0 ? function (event) {
       event.persist();
       var adjustedEvent = event;
@@ -43,22 +43,22 @@ var Body = forwardRef(function (_ref, ref) {
     onDown: onClickRow && data.length ? function () {
       setActive(active >= 0 ? Math.min(active + 1, data.length - 1) : 0);
     } : undefined
-  }, React.createElement(StyledDataTableBody, _extends({
+  }, /*#__PURE__*/React.createElement(StyledDataTableBody, _extends({
     ref: ref,
     size: size,
     tabIndex: onClickRow ? 0 : undefined
-  }, rest), React.createElement(InfiniteScroll, {
+  }, rest), /*#__PURE__*/React.createElement(InfiniteScroll, {
     items: data,
     onMore: onMore,
     replace: replace,
     renderMarker: function renderMarker(marker) {
-      return React.createElement(TableRow, null, React.createElement(TableCell, null, marker));
+      return /*#__PURE__*/React.createElement(TableRow, null, /*#__PURE__*/React.createElement(TableCell, null, marker));
     },
     scrollableAncestor: "window",
     step: step
   }, function (datum, index, rowRef) {
     var primaryValue = primaryProperty ? datumValue(datum, primaryProperty) : undefined;
-    return React.createElement(StyledDataTableRow, {
+    return /*#__PURE__*/React.createElement(StyledDataTableRow, {
       key: primaryValue || index,
       ref: rowRef,
       size: size,
@@ -84,7 +84,7 @@ var Body = forwardRef(function (_ref, ref) {
         return setActive(undefined);
       } : undefined
     }, columns.map(function (column) {
-      return React.createElement(Cell, {
+      return /*#__PURE__*/React.createElement(Cell, {
         key: column.property,
         background: background,
         border: border,

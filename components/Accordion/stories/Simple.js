@@ -15,28 +15,28 @@ var SimpleAccordion = function SimpleAccordion(props) {
       multiple = props.multiple,
       rest = _objectWithoutPropertiesLoose(props, ["animate", "multiple"]);
 
-  return _react["default"].createElement("div", null, _react["default"].createElement(_mnetUiBase.Box, rest, _react["default"].createElement(_mnetUiBase.Accordion, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, rest, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Accordion, {
     animate: animate,
     multiple: multiple
-  }, _react["default"].createElement(_mnetUiBase.AccordionPanel, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AccordionPanel, {
     label: "Panel 1"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-2",
     overflow: "auto",
     height: "medium"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     height: "large",
     flex: false
-  }, "Panel 1 contents"))), _react["default"].createElement(_mnetUiBase.AccordionPanel, {
+  }, "Panel 1 contents"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AccordionPanel, {
     label: "Panel 2"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-2",
     style: {
       height: '50px'
     }
-  }, "Panel 2 contents")), _react["default"].createElement(_mnetUiBase.AccordionPanel, {
+  }, "Panel 2 contents")), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AccordionPanel, {
     label: "Panel 3"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-2",
     style: {
       height: '300px'
@@ -45,14 +45,14 @@ var SimpleAccordion = function SimpleAccordion(props) {
 };
 
 (0, _react2.storiesOf)('Accordion', module).add('Simple', function () {
-  return _react["default"].createElement(SimpleAccordion, null);
+  return /*#__PURE__*/_react["default"].createElement(SimpleAccordion, null);
 }).add('Dark no animation', function () {
-  return _react["default"].createElement(SimpleAccordion, {
+  return /*#__PURE__*/_react["default"].createElement(SimpleAccordion, {
     animate: false,
     background: "dark-2"
   });
 }).add('Multiple', function () {
-  return _react["default"].createElement(SimpleAccordion, {
+  return /*#__PURE__*/_react["default"].createElement(SimpleAccordion, {
     multiple: true
   });
 });

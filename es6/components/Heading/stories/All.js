@@ -8,7 +8,7 @@ import { deepMerge } from 'mnet-ui-base/utils';
 var H = function H(_ref) {
   var level = _ref.level,
       size = _ref.size;
-  return React.createElement(Heading, {
+  return /*#__PURE__*/React.createElement(Heading, {
     level: level,
     size: size
   }, "Heading " + level + " " + size);
@@ -21,8 +21,8 @@ H.propTypes = {
 
 var Set = function Set(_ref2) {
   var size = _ref2.size;
-  return React.createElement("div", null, [1, 2, 3, 4, 5, 6].map(function (level) {
-    return React.createElement(H, {
+  return /*#__PURE__*/React.createElement("div", null, [1, 2, 3, 4, 5, 6].map(function (level) {
+    return /*#__PURE__*/React.createElement(H, {
       key: level,
       level: level,
       size: size
@@ -35,22 +35,22 @@ Set.propTypes = {
 };
 
 var All = function All() {
-  return React.createElement(React.Fragment, null, React.createElement(Grid, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Grid, {
     columns: "large",
     gap: "medium"
-  }, React.createElement(Set, {
+  }, /*#__PURE__*/React.createElement(Set, {
     size: "medium"
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     size: "small"
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     size: "large"
-  }), React.createElement(Set, {
+  }), /*#__PURE__*/React.createElement(Set, {
     size: "xlarge"
   })));
 };
 
 var Color = function Color() {
-  return React.createElement(React.Fragment, null, React.createElement(Heading, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Heading, {
     color: "accent-1"
   }, "Colored Heading"));
 };
@@ -80,20 +80,20 @@ var customlevel = deepMerge(mnet, {
 });
 
 var CustomHeading = function CustomHeading() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: customlevel
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: 5
   }, "Heading level 5"));
 };
 
 storiesOf('Heading', module).add('All', function () {
-  return React.createElement(All, null);
+  return /*#__PURE__*/React.createElement(All, null);
 }).add('Color', function () {
-  return React.createElement(Color, null);
+  return /*#__PURE__*/React.createElement(Color, null);
 }).add('Custom', function () {
-  return React.createElement(CustomHeading, null);
+  return /*#__PURE__*/React.createElement(CustomHeading, null);
 });
 storiesOf('Heading', module).add('All', function () {
-  return React.createElement(All, null);
+  return /*#__PURE__*/React.createElement(All, null);
 });

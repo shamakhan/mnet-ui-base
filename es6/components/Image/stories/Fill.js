@@ -3,26 +3,26 @@ import { storiesOf } from '@storybook/react';
 import { Box, Image, Anchor } from 'mnet-ui-base';
 
 var Fill = function Fill() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "start",
     gap: "small"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     height: "small",
     width: "small",
     border: true
-  }, React.createElement(Anchor, {
+  }, /*#__PURE__*/React.createElement(Anchor, {
     href: "#"
-  }, React.createElement(Image, {
+  }, /*#__PURE__*/React.createElement(Image, {
     fit: "cover",
     fill: true,
     src: "//v2.mnet.io/assets/IMG_4245.jpg"
-  }))), React.createElement(Box, {
+  }))), /*#__PURE__*/React.createElement(Box, {
     height: "small",
     width: "small",
     border: true
-  }, React.createElement(Anchor, {
+  }, /*#__PURE__*/React.createElement(Anchor, {
     href: "#"
-  }, React.createElement(Image, {
+  }, /*#__PURE__*/React.createElement(Image, {
     fit: "contain",
     fill: true,
     src: "//v2.mnet.io/assets/IMG_4245.jpg"
@@ -30,5 +30,5 @@ var Fill = function Fill() {
 };
 
 storiesOf('Image', module).add('Fill', function () {
-  return React.createElement(Fill, null);
+  return /*#__PURE__*/React.createElement(Fill, null);
 });

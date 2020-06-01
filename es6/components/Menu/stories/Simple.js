@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/react';
 import { Box, Menu } from 'mnet-ui-base';
 
 var SimpleMenu = function SimpleMenu() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Menu, {
+  }, /*#__PURE__*/React.createElement(Menu, {
     dropProps: {
       align: {
         top: 'bottom',
@@ -29,5 +29,5 @@ var SimpleMenu = function SimpleMenu() {
 };
 
 storiesOf('Menu', module).add('Simple', function () {
-  return React.createElement(SimpleMenu, null);
+  return /*#__PURE__*/React.createElement(SimpleMenu, null);
 });

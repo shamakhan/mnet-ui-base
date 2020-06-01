@@ -7,7 +7,7 @@ import { Box } from '../Box';
 import { FormContext } from '../Form/FormContext';
 import { Keyboard } from '../Keyboard';
 import { RadioButton } from '../RadioButton';
-var RadioButtonGroup = forwardRef(function (_ref, ref) {
+var RadioButtonGroup = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var children = _ref.children,
       disabled = _ref.disabled,
       _ref$gap = _ref.gap,
@@ -97,13 +97,13 @@ var RadioButtonGroup = forwardRef(function (_ref, ref) {
     return focus && setFocus(false);
   };
 
-  return React.createElement(Keyboard, {
+  return /*#__PURE__*/React.createElement(Keyboard, {
     target: "document",
     onUp: focus ? onPrevious : undefined,
     onDown: focus ? onNext : undefined,
     onLeft: focus ? onPrevious : undefined,
     onRight: focus ? onNext : undefined
-  }, React.createElement(Box, _extends({
+  }, /*#__PURE__*/React.createElement(Box, _extends({
     ref: ref,
     gap: gap
   }, rest), options.map(function (_ref2, index) {
@@ -113,7 +113,7 @@ var RadioButtonGroup = forwardRef(function (_ref, ref) {
         optionValue = _ref2.value,
         optionRest = _objectWithoutPropertiesLoose(_ref2, ["disabled", "id", "label", "value"]);
 
-    return React.createElement(RadioButton, _extends({
+    return /*#__PURE__*/React.createElement(RadioButton, _extends({
       ref: function ref(aRef) {
         optionRefs.current[index] = aRef;
       },

@@ -13,18 +13,18 @@ var _data = require("./data");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var ActionList = function ActionList() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.List, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.List, {
     data: _data.data.slice(0, 10),
     pad: {
       left: 'small',
       right: 'none'
     },
     action: function action(item, index) {
-      return _react["default"].createElement(_mnetUiBase.Menu, {
+      return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Menu, {
         key: index,
-        icon: _react["default"].createElement(_grommetIcons.More, null),
+        icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.More, null),
         hoverIndicator: true,
         items: [{
           label: 'one'
@@ -35,5 +35,5 @@ var ActionList = function ActionList() {
 };
 
 (0, _react2.storiesOf)('List', module).add('action', function () {
-  return _react["default"].createElement(ActionList, null);
+  return /*#__PURE__*/_react["default"].createElement(ActionList, null);
 });

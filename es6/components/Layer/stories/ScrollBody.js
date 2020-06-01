@@ -4,31 +4,31 @@ import { FormClose } from "grommet-icons/es6/icons/FormClose";
 import { Box, Button, Layer, Text } from 'mnet-ui-base';
 
 var ScrollBodyLayer = function ScrollBodyLayer() {
-  return React.createElement(React.Fragment, null, React.createElement(Layer, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Layer, {
     full: "vertical",
     position: "right"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     style: {
       minWidth: '378px'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     align: "center",
     as: "header",
     elevation: "small",
     justify: "between"
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     margin: {
       left: 'small'
     }
-  }, "Header"), React.createElement(Button, {
-    icon: React.createElement(FormClose, null)
-  })), React.createElement(Box, {
+  }, "Header"), /*#__PURE__*/React.createElement(Button, {
+    icon: /*#__PURE__*/React.createElement(FormClose, null)
+  })), /*#__PURE__*/React.createElement(Box, {
     flex: true,
     overflow: "auto",
     pad: "xsmall"
-  }, React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body"), React.createElement("span", null, "body")), React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body"), /*#__PURE__*/React.createElement("span", null, "body")), /*#__PURE__*/React.createElement(Box, {
     as: "footer",
     border: {
       side: 'top'
@@ -37,12 +37,12 @@ var ScrollBodyLayer = function ScrollBodyLayer() {
     justify: "end",
     direction: "row",
     align: "center"
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     primary: true,
     label: "Save"
   })))));
 };
 
 storiesOf('Layer', module).add('Fixed Header, Scroll Body', function () {
-  return React.createElement(ScrollBodyLayer, null);
+  return /*#__PURE__*/React.createElement(ScrollBodyLayer, null);
 });

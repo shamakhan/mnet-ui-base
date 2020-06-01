@@ -8,11 +8,11 @@ var OnClickItemList = function OnClickItemList() {
       clicked = _React$useState[0],
       setClicked = _React$useState[1];
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large",
     gap: "large"
-  }, React.createElement(List, {
+  }, /*#__PURE__*/React.createElement(List, {
     data: data.slice(0, 10),
     onClickItem: function onClickItem(event) {
       return setClicked(event.item);
@@ -21,5 +21,5 @@ var OnClickItemList = function OnClickItemList() {
 };
 
 storiesOf('List', module).add('onClickItem', function () {
-  return React.createElement(OnClickItemList, null);
+  return /*#__PURE__*/React.createElement(OnClickItemList, null);
 });

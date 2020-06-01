@@ -13,7 +13,7 @@ var columns = [{
   footer: 'Total'
 }, {
   property: 'name',
-  header: React.createElement(Text, null, "Name with extra"),
+  header: /*#__PURE__*/React.createElement(Text, null, "Name with extra"),
   primary: true,
   footer: 'Total'
 }, {
@@ -30,12 +30,12 @@ var columns = [{
   property: 'percent',
   header: 'Percent Complete',
   render: function render(datum) {
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       pad: {
         vertical: 'xsmall'
       },
       alignSelf: "center"
-    }, React.createElement(Meter, {
+    }, /*#__PURE__*/React.createElement(Meter, {
       values: [{
         value: datum.percent,
         color: "accent-" + (datum.key % 4 + 1)
@@ -276,14 +276,14 @@ var InfiniteScrollDataTable = function InfiniteScrollDataTable() {
     console.log("InfiniteScroll fires onMore after loading " + step + " items");
   };
 
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: 3
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     gap: "small"
-  }, React.createElement("strong", null, "InfiniteScroll embedded in DataTable"), React.createElement(Text, null, "Scroll down to load more data, open console to see loading info"))), React.createElement(DataTable, {
+  }, /*#__PURE__*/React.createElement("strong", null, "InfiniteScroll embedded in DataTable"), /*#__PURE__*/React.createElement(Text, null, "Scroll down to load more data, open console to see loading info"))), /*#__PURE__*/React.createElement(DataTable, {
     columns: columns,
     data: DATA,
     step: step,
@@ -294,5 +294,5 @@ var InfiniteScrollDataTable = function InfiniteScrollDataTable() {
 };
 
 storiesOf('DataTable', module).add('Infinitescroll', function () {
-  return React.createElement(InfiniteScrollDataTable, null);
+  return /*#__PURE__*/React.createElement(InfiniteScrollDataTable, null);
 });

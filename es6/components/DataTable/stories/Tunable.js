@@ -8,10 +8,10 @@ import { Box, DataTable } from 'mnet-ui-base'; // Source code for the data can b
 import { columns, DATA } from './data';
 
 var TunableDataTable = function TunableDataTable() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large"
-  }, React.createElement(DataTable, {
+  }, /*#__PURE__*/React.createElement(DataTable, {
     columns: columns.map(function (c) {
       return _extends({}, c, {
         search: c.property === 'name' || c.property === 'location'
@@ -24,5 +24,5 @@ var TunableDataTable = function TunableDataTable() {
 };
 
 storiesOf('DataTable', module).add('Tunable', function () {
-  return React.createElement(TunableDataTable, null);
+  return /*#__PURE__*/React.createElement(TunableDataTable, null);
 });

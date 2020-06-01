@@ -32,7 +32,7 @@ describe('MaskedInput', function () {
   beforeEach(_portal.createPortal);
   afterEach(_react2.cleanup);
   test('basic', function () {
-    var _render = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
+    var _render = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
       name: "item"
     })),
         container = _render.container;
@@ -40,8 +40,8 @@ describe('MaskedInput', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('icon', function () {
-    var _render2 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
-      icon: _react["default"].createElement(_grommetIcons.Search, null),
+    var _render2 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
+      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Search, null),
       name: "item"
     })),
         container = _render2.container;
@@ -49,8 +49,8 @@ describe('MaskedInput', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('icon reverse', function () {
-    var _render3 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
-      icon: _react["default"].createElement(_grommetIcons.Search, null),
+    var _render3 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
+      icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.Search, null),
       reverse: true,
       name: "item"
     })),
@@ -59,7 +59,7 @@ describe('MaskedInput', function () {
     expect(container.firstChild).toMatchSnapshot();
   });
   test('disabled', function () {
-    var _render4 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
+    var _render4 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
       disabled: true,
       name: "item"
     })),
@@ -67,11 +67,7 @@ describe('MaskedInput', function () {
 
     expect(container.firstChild).toMatchSnapshot();
   });
-  test('mask',
-  /*#__PURE__*/
-  _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee() {
+  test('mask', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
     var onChange, onFocus, _render5, getByTestId, container;
 
     return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -80,7 +76,7 @@ describe('MaskedInput', function () {
           case 0:
             onChange = jest.fn();
             onFocus = jest.fn();
-            _render5 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
+            _render5 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
               "data-testid": "test-input",
               id: "item",
               name: "item",
@@ -119,11 +115,7 @@ describe('MaskedInput', function () {
       }
     }, _callee);
   })));
-  test('option via mouse',
-  /*#__PURE__*/
-  _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee2() {
+  test('option via mouse', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
     var onChange, _render6, getByTestId, container, option;
 
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -133,7 +125,7 @@ describe('MaskedInput', function () {
             onChange = jest.fn(function (event) {
               return event.target.value;
             });
-            _render6 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
+            _render6 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
               "data-testid": "test-input",
               plain: true,
               size: "large",
@@ -174,11 +166,7 @@ describe('MaskedInput', function () {
       }
     }, _callee2);
   })));
-  test('option via keyboard',
-  /*#__PURE__*/
-  _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee3() {
+  test('option via keyboard', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
     var onChange, _render7, getByTestId, container, input;
 
     return regeneratorRuntime.wrap(function _callee3$(_context3) {
@@ -188,7 +176,7 @@ describe('MaskedInput', function () {
             onChange = jest.fn(function (event) {
               return event.target.value;
             });
-            _render7 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
+            _render7 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
               "data-testid": "test-input",
               id: "item",
               name: "item",
@@ -251,9 +239,9 @@ describe('MaskedInput', function () {
   test('Escape events should propagage if there is no drop', function () {
     var callback = jest.fn();
 
-    var _render8 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, null, _react["default"].createElement(_Keyboard.Keyboard, {
+    var _render8 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, null, /*#__PURE__*/_react["default"].createElement(_Keyboard.Keyboard, {
       onEsc: callback
-    }, _react["default"].createElement(_.MaskedInput, {
+    }, /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item"
@@ -277,7 +265,7 @@ describe('MaskedInput', function () {
   test('next and previous without options', function () {
     var onChange = jest.fn();
 
-    var _render9 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
+    var _render9 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
       "data-testid": "test-input",
       id: "item",
       name: "item",
@@ -317,11 +305,7 @@ describe('MaskedInput', function () {
     expect(onChange).not.toBeCalled();
     expect(container.firstChild).toMatchSnapshot();
   });
-  test('event target props are available option via mouse',
-  /*#__PURE__*/
-  _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee4() {
+  test('event target props are available option via mouse', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
     var onChangeMock, _render10, getByTestId, container;
 
     return regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -341,7 +325,7 @@ describe('MaskedInput', function () {
                 }
               };
             });
-            _render10 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
+            _render10 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
               "data-testid": "test-input",
               plain: true,
               size: "large",
@@ -387,11 +371,7 @@ describe('MaskedInput', function () {
       }
     }, _callee4);
   })));
-  test('event target props are available option via keyboard',
-  /*#__PURE__*/
-  _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee5() {
+  test('event target props are available option via keyboard', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
     var onChangeMock, _render11, getByTestId, container, input;
 
     return regeneratorRuntime.wrap(function _callee5$(_context5) {
@@ -411,7 +391,7 @@ describe('MaskedInput', function () {
                 }
               };
             });
-            _render11 = (0, _react2.render)(_react["default"].createElement(_.MaskedInput, {
+            _render11 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
               "data-testid": "test-input",
               id: "item",
               name: "item",
@@ -481,11 +461,7 @@ describe('MaskedInput', function () {
       }
     }, _callee5);
   })));
-  test('applies custom global.hover theme to options',
-  /*#__PURE__*/
-  _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee6() {
+  test('applies custom global.hover theme to options', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
     var customTheme, onChange, _render12, getByTestId, container, optionButton;
 
     return regeneratorRuntime.wrap(function _callee6$(_context6) {
@@ -508,9 +484,9 @@ describe('MaskedInput', function () {
             onChange = jest.fn(function (event) {
               return event.target.value;
             });
-            _render12 = (0, _react2.render)(_react["default"].createElement(_MnetUIBase.MnetUIBase, {
+            _render12 = (0, _react2.render)( /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, {
               theme: customTheme
-            }, _react["default"].createElement(_.MaskedInput, {
+            }, /*#__PURE__*/_react["default"].createElement(_.MaskedInput, {
               "data-testid": "test-input",
               plain: true,
               size: "large",

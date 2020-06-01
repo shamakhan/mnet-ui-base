@@ -3,15 +3,15 @@ import { storiesOf } from '@storybook/react';
 import { Anchor, Box, Header, Nav, Menu, ResponsiveContext } from 'mnet-ui-base';
 
 var CollapsableNav = function CollapsableNav() {
-  return React.createElement(React.Fragment, null, React.createElement(Header, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Header, {
     background: "dark-1",
     pad: "medium"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     align: "center",
     gap: "small"
-  }, "Resize the page to collapse the Nav into a Menu"), React.createElement(ResponsiveContext.Consumer, null, function (responsive) {
-    return responsive === 'small' ? React.createElement(Menu, {
+  }, "Resize the page to collapse the Nav into a Menu"), /*#__PURE__*/React.createElement(ResponsiveContext.Consumer, null, function (responsive) {
+    return responsive === 'small' ? /*#__PURE__*/React.createElement(Menu, {
       label: "Click me",
       items: [{
         label: 'This is',
@@ -23,15 +23,15 @@ var CollapsableNav = function CollapsableNav() {
         label: 'Component',
         onClick: function onClick() {}
       }]
-    }) : React.createElement(Nav, {
+    }) : /*#__PURE__*/React.createElement(Nav, {
       direction: "row"
-    }, React.createElement(Anchor, {
+    }, /*#__PURE__*/React.createElement(Anchor, {
       href: "#",
       label: "This is"
-    }), React.createElement(Anchor, {
+    }), /*#__PURE__*/React.createElement(Anchor, {
       href: "#",
       label: "The Nav"
-    }), React.createElement(Anchor, {
+    }), /*#__PURE__*/React.createElement(Anchor, {
       href: "#",
       label: "Component"
     }));
@@ -39,5 +39,5 @@ var CollapsableNav = function CollapsableNav() {
 };
 
 storiesOf('ResponsiveContext', module).add('Collapsable Nav', function () {
-  return React.createElement(CollapsableNav, null);
+  return /*#__PURE__*/React.createElement(CollapsableNav, null);
 });

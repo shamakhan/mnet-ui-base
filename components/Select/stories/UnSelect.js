@@ -25,13 +25,13 @@ var UnSelect = function UnSelect() {
     setValue('');
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "medium",
     direction: "row",
     align: "center",
     justify: "center",
     gap: "small"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     options: optionList,
     onChange: function onChange(e) {
       return _onChange(e);
@@ -39,7 +39,7 @@ var UnSelect = function UnSelect() {
     value: value,
     placeholder: "Select multiple options",
     multiple: true
-  }), _react["default"].createElement(_mnetUiBase.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
     onClick: onClickClearOptions,
     disabled: !value,
     plain: true,
@@ -48,5 +48,5 @@ var UnSelect = function UnSelect() {
 };
 
 (0, _react2.storiesOf)('Select', module).add('UnSelect', function () {
-  return _react["default"].createElement(UnSelect, null);
+  return /*#__PURE__*/_react["default"].createElement(UnSelect, null);
 });

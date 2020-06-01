@@ -48,14 +48,14 @@ var FormFieldTextInput = function FormFieldTextInput(props) {
     }));
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.FormField, _extends({
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.FormField, _extends({
     direction: "row",
     label: "Label",
     htmlFor: "text-input"
-  }, props), _react["default"].createElement(_mnetUiBase.TextInput, {
+  }, props), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TextInput, {
     id: "text-input",
     placeholder: "placeholder",
     value: state.value,
@@ -66,5 +66,5 @@ var FormFieldTextInput = function FormFieldTextInput(props) {
 };
 
 (0, _react2.storiesOf)('Form', module).add('TextInput', function () {
-  return _react["default"].createElement(FormFieldTextInput, null);
+  return /*#__PURE__*/_react["default"].createElement(FormFieldTextInput, null);
 });

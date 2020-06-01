@@ -12,28 +12,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var values = [20, 40, 60, 80, 100];
 
 var MeterInTable = function MeterInTable() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     border: true,
     pad: {
       top: 'xsmall'
     }
-  }, _react["default"].createElement(_mnetUiBase.Table, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Table, {
     caption: "Meter Inside Table"
-  }, _react["default"].createElement(_mnetUiBase.TableBody, null, values.map(function (val, index) {
-    return _react["default"].createElement(_mnetUiBase.TableRow, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TableBody, null, values.map(function (val, index) {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TableRow, {
       key: index
-    }, _react["default"].createElement(_mnetUiBase.TableCell, null, _react["default"].createElement(_mnetUiBase.Meter, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TableCell, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Meter, {
       type: "bar",
       values: [{
         value: val
       }]
-    })), _react["default"].createElement(_mnetUiBase.TableCell, null, _react["default"].createElement(_mnetUiBase.Text, null, val, "% complete")));
+    })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.TableCell, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, val, "% complete")));
   }))))));
 };
 
 (0, _react2.storiesOf)('Table', module).add('Meter Inside Table', function () {
-  return _react["default"].createElement(MeterInTable, null);
+  return /*#__PURE__*/_react["default"].createElement(MeterInTable, null);
 });

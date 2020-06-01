@@ -19,17 +19,17 @@ var SuggestionsTextInput = function SuggestionsTextInput() {
     return setValue(event.suggestion);
   };
 
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     full: true,
     theme: mnet
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     width: "medium"
-  }, React.createElement(TextInput, {
+  }, /*#__PURE__*/React.createElement(TextInput, {
     value: value,
     onChange: onChange,
     onSelect: onSelect,
@@ -38,5 +38,5 @@ var SuggestionsTextInput = function SuggestionsTextInput() {
 };
 
 storiesOf('TextInput', module).add('Suggestions', function () {
-  return React.createElement(SuggestionsTextInput, null);
+  return /*#__PURE__*/React.createElement(SuggestionsTextInput, null);
 });

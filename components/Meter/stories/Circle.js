@@ -25,10 +25,10 @@ var CircleMeter = function CircleMeter() {
       clearTimeout(timer.current);
     };
   }, []);
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Meter, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Meter, {
     type: "circle",
     background: "light-2",
     values: [{
@@ -39,5 +39,5 @@ var CircleMeter = function CircleMeter() {
 };
 
 (0, _react2.storiesOf)('Meter', module).add('Circle', function () {
-  return _react["default"].createElement(CircleMeter, null);
+  return /*#__PURE__*/_react["default"].createElement(CircleMeter, null);
 });

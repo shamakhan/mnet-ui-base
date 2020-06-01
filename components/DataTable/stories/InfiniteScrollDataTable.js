@@ -20,7 +20,7 @@ var columns = [{
   footer: 'Total'
 }, {
   property: 'name',
-  header: _react["default"].createElement(_mnetUiBase.Text, null, "Name with extra"),
+  header: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Name with extra"),
   primary: true,
   footer: 'Total'
 }, {
@@ -37,12 +37,12 @@ var columns = [{
   property: 'percent',
   header: 'Percent Complete',
   render: function render(datum) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       pad: {
         vertical: 'xsmall'
       },
       alignSelf: "center"
-    }, _react["default"].createElement(_mnetUiBase.Meter, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Meter, {
       values: [{
         value: datum.percent,
         color: "accent-" + (datum.key % 4 + 1)
@@ -283,14 +283,14 @@ var InfiniteScrollDataTable = function InfiniteScrollDataTable() {
     console.log("InfiniteScroll fires onMore after loading " + step + " items");
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Heading, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
     level: 3
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gap: "small"
-  }, _react["default"].createElement("strong", null, "InfiniteScroll embedded in DataTable"), _react["default"].createElement(_mnetUiBase.Text, null, "Scroll down to load more data, open console to see loading info"))), _react["default"].createElement(_mnetUiBase.DataTable, {
+  }, /*#__PURE__*/_react["default"].createElement("strong", null, "InfiniteScroll embedded in DataTable"), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Scroll down to load more data, open console to see loading info"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.DataTable, {
     columns: columns,
     data: DATA,
     step: step,
@@ -301,5 +301,5 @@ var InfiniteScrollDataTable = function InfiniteScrollDataTable() {
 };
 
 (0, _react2.storiesOf)('DataTable', module).add('Infinitescroll', function () {
-  return _react["default"].createElement(InfiniteScrollDataTable, null);
+  return /*#__PURE__*/_react["default"].createElement(InfiniteScrollDataTable, null);
 });

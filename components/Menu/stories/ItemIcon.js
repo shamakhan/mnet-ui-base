@@ -12,40 +12,40 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 // This story offers a suggested workaround for issue #3209.
 var IconItemsMenu = function IconItemsMenu() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Menu, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Menu, {
     plain: true,
     open: true,
     items: [{
-      label: _react["default"].createElement(_mnetUiBase.Box, {
+      label: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
         alignSelf: "center"
       }, "Github"),
       onClick: function onClick() {},
-      icon: _react["default"].createElement(_mnetUiBase.Box, {
+      icon: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
         pad: "medium"
-      }, _react["default"].createElement(_grommetIcons.Github, {
+      }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Github, {
         size: "large"
       }))
     }, {
-      label: _react["default"].createElement(_mnetUiBase.Box, {
+      label: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
         alignSelf: "center"
       }, "Slack"),
       onClick: function onClick() {},
-      icon: _react["default"].createElement(_mnetUiBase.Box, {
+      icon: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
         pad: "medium"
-      }, _react["default"].createElement(_grommetIcons.Slack, {
+      }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.Slack, {
         size: "large"
       }))
     }]
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     direction: "row",
     gap: "small",
     pad: "large"
-  }, _react["default"].createElement(_grommetIcons.FormDown, null), _react["default"].createElement(_mnetUiBase.Text, null, "Menu with Icon on the left")))));
+  }, /*#__PURE__*/_react["default"].createElement(_grommetIcons.FormDown, null), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "Menu with Icon on the left")))));
 };
 
 (0, _react2.storiesOf)('Menu', module).add('Item with Icon', function () {
-  return _react["default"].createElement(IconItemsMenu, null);
+  return /*#__PURE__*/_react["default"].createElement(IconItemsMenu, null);
 });

@@ -39,7 +39,7 @@ To make a selection:
 - Space is pressed.
 */
 
-var Menu = forwardRef(function (props, ref) {
+var Menu = /*#__PURE__*/forwardRef(function (props, ref) {
   var a11yTitle = props.a11yTitle,
       children = props.children,
       disabled = props.disabled,
@@ -167,21 +167,21 @@ var Menu = forwardRef(function (props, ref) {
     }
   };
 
-  var content = children || React.createElement(Box, {
+  var content = children || /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     justify: justifyContent,
     align: "center",
     pad: "small",
     gap: label && icon !== false ? 'small' : undefined
-  }, React.createElement(Text, {
+  }, /*#__PURE__*/React.createElement(Text, {
     size: size
-  }, label), icon !== false ? icon !== true && icon || React.createElement(MenuIcon, {
+  }, label), icon !== false ? icon !== true && icon || /*#__PURE__*/React.createElement(MenuIcon, {
     color: iconColor,
     size: size
   }) : null);
-  var controlMirror = React.createElement(Box, {
+  var controlMirror = /*#__PURE__*/React.createElement(Box, {
     flex: false
-  }, React.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     ref: function ref(r) {
       // make it accessible at the end of all menu items
       buttonRefs[items.length] = r;
@@ -204,7 +204,7 @@ var Menu = forwardRef(function (props, ref) {
       drop: true
     }));
   } : content));
-  return React.createElement(Keyboard, {
+  return /*#__PURE__*/React.createElement(Keyboard, {
     onDown: onNextMenuItem,
     onUp: onPreviousMenuItem,
     onEnter: onSelectMenuItem,
@@ -212,7 +212,7 @@ var Menu = forwardRef(function (props, ref) {
     onEsc: onDropClose,
     onTab: onDropClose,
     onKeyDown: onKeyDown
-  }, React.createElement(DropButton, _extends({
+  }, /*#__PURE__*/React.createElement(DropButton, _extends({
     ref: ref
   }, rest, {
     a11yTitle: a11yTitle || messages.openMenu || 'Open Menu',
@@ -224,21 +224,23 @@ var Menu = forwardRef(function (props, ref) {
     open: isOpen,
     onOpen: onDropOpen,
     onClose: onDropClose,
-    dropContent: React.createElement(Keyboard, {
+    dropContent: /*#__PURE__*/React.createElement(Keyboard, {
       onTab: function onTab(event) {
         return event.shiftKey ? onPreviousMenuItem(event) : onNextMenuItem(event);
       },
       onEnter: onSelectMenuItem
-    }, React.createElement(ContainerBox, {
+    }, /*#__PURE__*/React.createElement(ContainerBox, {
       background: dropBackground || theme.menu.background
-    }, align.top === 'top' ? controlMirror : undefined, React.createElement(Box, {
+    }, align.top === 'top' ? controlMirror : undefined, /*#__PURE__*/React.createElement(Box, {
       overflow: "auto"
     }, items.map(function (item, index) {
-      return (// eslint-disable-next-line react/no-array-index-key
+      return (
+        /*#__PURE__*/
+        // eslint-disable-next-line react/no-array-index-key
         React.createElement(Box, {
           key: index,
           flex: false
-        }, React.createElement(Button, _extends({
+        }, /*#__PURE__*/React.createElement(Button, _extends({
           ref: function ref(r) {
             buttonRefs[index] = r;
           },
@@ -262,7 +264,7 @@ var Menu = forwardRef(function (props, ref) {
               onDropClose();
             }
           }
-        }), React.createElement(Box, {
+        }), /*#__PURE__*/React.createElement(Box, {
           align: "start",
           pad: "small",
           direction: "row",

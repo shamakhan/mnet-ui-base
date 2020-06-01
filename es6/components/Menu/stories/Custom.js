@@ -4,14 +4,14 @@ import { Box, Menu, Text } from 'mnet-ui-base';
 import { FormDown } from "grommet-icons/es6/icons/FormDown";
 
 var CustomMenu = function CustomMenu() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large",
     background: {
       color: 'dark-2',
       opacity: 0.7
     }
-  }, React.createElement(Menu, {
+  }, /*#__PURE__*/React.createElement(Menu, {
     plain: true,
     items: [{
       label: 'Launch',
@@ -24,19 +24,19 @@ var CustomMenu = function CustomMenu() {
     var drop = _ref.drop,
         hover = _ref.hover;
     var color = hover && !drop ? 'accent-1' : undefined;
-    return React.createElement(Box, {
+    return /*#__PURE__*/React.createElement(Box, {
       direction: "row",
       gap: "small",
       pad: "small",
       background: hover && drop ? 'light-2' : undefined
-    }, React.createElement(Text, {
+    }, /*#__PURE__*/React.createElement(Text, {
       color: color
-    }, "actions"), React.createElement(FormDown, {
+    }, "actions"), /*#__PURE__*/React.createElement(FormDown, {
       color: color
     }));
   })));
 };
 
 storiesOf('Menu', module).add('Custom', function () {
-  return React.createElement(CustomMenu, null);
+  return /*#__PURE__*/React.createElement(CustomMenu, null);
 });

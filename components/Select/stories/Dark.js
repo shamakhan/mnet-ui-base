@@ -17,18 +17,18 @@ var DarkSelect = function DarkSelect() {
       value = _useState[0],
       setValue = _useState[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     background: "dark-1",
     align: "center",
     justify: "center"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     placeholder: "Select",
     value: value,
     options: options,
@@ -40,5 +40,5 @@ var DarkSelect = function DarkSelect() {
 };
 
 (0, _react2.storiesOf)('Select', module).add('Dark', function () {
-  return _react["default"].createElement(DarkSelect, null);
+  return /*#__PURE__*/_react["default"].createElement(DarkSelect, null);
 });

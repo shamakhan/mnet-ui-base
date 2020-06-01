@@ -41,44 +41,46 @@ var states = [{}, {
   hoverIndicator: 'teal'
 }];
 var contents = [{
-  icon: _react["default"].createElement(_grommetIcons.User, null)
+  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, null)
 }, {
   label: 'label'
 }, {
-  icon: _react["default"].createElement(_grommetIcons.User, null),
+  icon: /*#__PURE__*/_react["default"].createElement(_grommetIcons.User, null),
   label: 'label'
 }, {
   plain: true,
-  children: _react["default"].createElement(_mnetUiBase.Box, {
+  children: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "xsmall"
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     color: "orange"
   }, "label"))
 }];
 
 var Example = function Example() {
-  return _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     pad: "large",
     gap: "large"
-  }, _react["default"].createElement(_mnetUiBase.MnetUIBase, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBase.mnet
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     gap: "medium"
   }, kinds.map(function (kind) {
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       key: kind.name,
       flex: false
-    }, _react["default"].createElement(_mnetUiBase.Heading, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Heading, {
       level: 3,
       size: "small"
     }, kind.name), states.map(function (state, index) {
-      return (// eslint-disable-next-line react/no-array-index-key
+      return (
+        /*#__PURE__*/
+        // eslint-disable-next-line react/no-array-index-key
         _react["default"].createElement(_mnetUiBase.Box, {
           key: index,
           direction: "row",
           align: "center"
         }, darks.map(function (dark) {
-          return _react["default"].createElement(_mnetUiBase.Box, {
+          return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
             key: dark,
             direction: dark ? 'row-reverse' : 'row',
             align: "center",
@@ -89,7 +91,7 @@ var Example = function Example() {
             },
             pad: "small"
           }, contents.map(function (content, index2) {
-            return _react["default"].createElement(_mnetUiBase.Button // eslint-disable-next-line react/no-array-index-key
+            return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button // eslint-disable-next-line react/no-array-index-key
             , _extends({
               key: index2
             }, kind.props, content, state));
@@ -101,5 +103,5 @@ var Example = function Example() {
 };
 
 (0, _react2.storiesOf)('Button', module).add('Kind', function () {
-  return _react["default"].createElement(Example, null);
+  return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

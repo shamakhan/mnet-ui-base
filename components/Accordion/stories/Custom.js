@@ -33,42 +33,42 @@ var CustomAccordion = function CustomAccordion(_ref) {
       multiple = _ref.multiple,
       rest = _objectWithoutPropertiesLoose(_ref, ["animate", "multiple"]);
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     theme: CustomAccordionTheme
-  }, _react["default"].createElement(_mnetUiBase.Box, _extends({}, rest, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, _extends({}, rest, {
     pad: "large",
     align: "center",
     justify: "center"
-  }), _react["default"].createElement(_mnetUiBase.Accordion, {
+  }), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Accordion, {
     animate: animate,
     multiple: true
-  }, _react["default"].createElement(_mnetUiBase.AccordionPanel, {
-    label: _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AccordionPanel, {
+    label: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
       size: "large"
     }, "Panel 1 - uses large Text size")
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-2",
     height: "small"
-  }, "Important Info")), _react["default"].createElement(_mnetUiBase.AccordionPanel, {
-    label: _react["default"].createElement(_mnetUiBase.Text, {
+  }, "Important Info")), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AccordionPanel, {
+    label: /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
       size: "xlarge",
       margin: "vertical"
     }, "Panel 2 - uses xlarge Text size")
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-2",
     height: "xsmall"
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "small"
-  }, "Important Info"))), _react["default"].createElement(_mnetUiBase.AccordionPanel, {
+  }, "Important Info"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.AccordionPanel, {
     label: "Panel 3 - uses custom theme heading level for sizing"
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     background: "light-2",
     height: "xsmall"
-  }, _react["default"].createElement(_mnetUiBase.Text, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
     size: "small"
   }, "Important Info"))))));
 };
 
 (0, _react2.storiesOf)('Accordion', module).add('Custom', function () {
-  return _react["default"].createElement(CustomAccordion, null);
+  return /*#__PURE__*/_react["default"].createElement(CustomAccordion, null);
 });

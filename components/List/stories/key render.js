@@ -11,19 +11,19 @@ var _data = require("./data");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var RenderedList = function RenderedList() {
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_mnetUiBase.Box, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.List, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.List, {
     data: _data.data.slice(0, 10),
     primaryKey: function primaryKey(item) {
-      return _react["default"].createElement(_mnetUiBase.Text, {
+      return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
         size: "large",
         weight: "bold"
       }, item.entry);
     },
     secondaryKey: function secondaryKey(item) {
-      return _react["default"].createElement(_mnetUiBase.Text, {
+      return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, {
         size: "small",
         color: "dark-4"
       }, item.location);
@@ -32,5 +32,5 @@ var RenderedList = function RenderedList() {
 };
 
 (0, _react2.storiesOf)('List', module).add('key render', function () {
-  return _react["default"].createElement(RenderedList, null);
+  return /*#__PURE__*/_react["default"].createElement(RenderedList, null);
 });

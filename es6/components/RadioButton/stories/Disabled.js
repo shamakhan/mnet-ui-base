@@ -3,11 +3,11 @@ import { storiesOf } from '@storybook/react';
 import { Box, RadioButton } from 'mnet-ui-base';
 
 var DisabledRadioButton = function DisabledRadioButton() {
-  return React.createElement(React.Fragment, null, React.createElement(Box, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "large",
     gap: "large"
-  }, React.createElement(RadioButton, {
+  }, /*#__PURE__*/React.createElement(RadioButton, {
     label: "option 1",
     name: "name",
     value: "option 1",
@@ -17,5 +17,5 @@ var DisabledRadioButton = function DisabledRadioButton() {
 };
 
 storiesOf('RadioButton', module).add('Disabled', function () {
-  return React.createElement(DisabledRadioButton, null);
+  return /*#__PURE__*/React.createElement(DisabledRadioButton, null);
 });

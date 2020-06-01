@@ -12,9 +12,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
 
-var Option =
-/*#__PURE__*/
-function (_PureComponent) {
+var Option = /*#__PURE__*/function (_PureComponent) {
   _inheritsLoose(Option, _PureComponent);
 
   function Option() {
@@ -27,12 +25,12 @@ function (_PureComponent) {
     var _this$props = this.props,
         value = _this$props.value,
         selected = _this$props.selected;
-    return _react["default"].createElement(_mnetUiBase.Box, {
+    return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
       direction: "row",
       gap: "small",
       align: "center",
       pad: "xsmall"
-    }, _react["default"].createElement(_mnetUiBase.CheckBox, {
+    }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.CheckBox, {
       tabIndex: "-1",
       checked: selected,
       onChange: function onChange() {}
@@ -60,18 +58,18 @@ var ManyOptions = function ManyOptions() {
       options = _React$useState2[0],
       setOptions = _React$useState2[1];
 
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, _react["default"].createElement(_mnetUiBase.Box, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
     justify: "start",
     pad: "large"
-  }, _react["default"].createElement(_mnetUiBase.Select, {
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Select, {
     multiple: true,
     closeOnChange: false,
     placeholder: "select an option...",
@@ -102,7 +100,7 @@ var ManyOptions = function ManyOptions() {
       setSelected(nextSelected);
     }
   }, function (option, index) {
-    return _react["default"].createElement(Option, {
+    return /*#__PURE__*/_react["default"].createElement(Option, {
       value: option,
       selected: selected.indexOf(index) !== -1
     });
@@ -110,5 +108,5 @@ var ManyOptions = function ManyOptions() {
 };
 
 (0, _react2.storiesOf)('Select', module).add('Lots of options', function () {
-  return _react["default"].createElement(ManyOptions, null);
+  return /*#__PURE__*/_react["default"].createElement(ManyOptions, null);
 });

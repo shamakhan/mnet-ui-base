@@ -9,18 +9,18 @@ var DarkSelect = function DarkSelect() {
       value = _useState[0],
       setValue = _useState[1];
 
-  return React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100vw',
       height: '100vh',
       overflow: 'auto'
     }
-  }, React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(Box, {
     fill: true,
     background: "dark-1",
     align: "center",
     justify: "center"
-  }, React.createElement(Select, {
+  }, /*#__PURE__*/React.createElement(Select, {
     placeholder: "Select",
     value: value,
     options: options,
@@ -32,5 +32,5 @@ var DarkSelect = function DarkSelect() {
 };
 
 storiesOf('Select', module).add('Dark', function () {
-  return React.createElement(DarkSelect, null);
+  return /*#__PURE__*/React.createElement(DarkSelect, null);
 });

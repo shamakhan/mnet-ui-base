@@ -36,20 +36,20 @@ var customTheme = deepMerge(mnet, {
 });
 
 var HeadingExtend = function HeadingExtend() {
-  return React.createElement(MnetUIBase, {
+  return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: customTheme
-  }, React.createElement(Heading, {
+  }, /*#__PURE__*/React.createElement(Heading, {
     level: "1",
     size: "large"
-  }, "This is using the extend property on Heading"), React.createElement(Heading, {
+  }, "This is using the extend property on Heading"), /*#__PURE__*/React.createElement(Heading, {
     level: "2",
     size: "medium"
-  }, "This is using the extend property on Heading"), React.createElement(Heading, {
+  }, "This is using the extend property on Heading"), /*#__PURE__*/React.createElement(Heading, {
     level: "3",
     size: "small"
   }, "This is using the extend property on Heading"));
 };
 
 storiesOf('Heading', module).add('Extend', function () {
-  return React.createElement(HeadingExtend, null);
+  return /*#__PURE__*/React.createElement(HeadingExtend, null);
 });
