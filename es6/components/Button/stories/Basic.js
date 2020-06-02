@@ -24,6 +24,13 @@ var BasicButtons = function BasicButtons(props) {
     align: "center",
     pad: "medium"
   }, /*#__PURE__*/React.createElement(Button, _extends({
+    tertiary: true,
+    label: "Tertiary",
+    onClick: function onClick() {}
+  }, props))), /*#__PURE__*/React.createElement(Box, {
+    align: "center",
+    pad: "medium"
+  }, /*#__PURE__*/React.createElement(Button, _extends({
     label: "Default",
     onClick: function onClick() {}
   }, props))), /*#__PURE__*/React.createElement(Box, {

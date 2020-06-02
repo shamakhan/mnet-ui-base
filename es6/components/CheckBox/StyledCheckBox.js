@@ -45,7 +45,7 @@ var StyledCheckBoxInput = styled.input.withConfig({
 }, function (props) {
   return props.theme.checkBox.size;
 }, function (props) {
-  return normalizeColor(props.theme.checkBox.color || 'control', props.theme);
+  return normalizeColor(props.theme.checkBox.toggle.color || 'control', props.theme);
 });
 StyledCheckBoxInput.defaultProps = {};
 Object.setPrototypeOf(StyledCheckBoxInput.defaultProps, defaultProps);

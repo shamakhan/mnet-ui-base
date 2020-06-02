@@ -110,10 +110,11 @@ var Button = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       reverse = _ref.reverse,
       secondary = _ref.secondary,
       size = _ref.size,
+      tertiary = _ref.tertiary,
       _ref$type = _ref.type,
       type = _ref$type === void 0 ? 'button' : _ref$type,
       as = _ref.as,
-      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "active", "color", "children", "disabled", "icon", "focusIndicator", "gap", "fill", "href", "kind", "label", "onBlur", "onClick", "onFocus", "onMouseOut", "onMouseOver", "plain", "primary", "reverse", "secondary", "size", "type", "as"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "active", "color", "children", "disabled", "icon", "focusIndicator", "gap", "fill", "href", "kind", "label", "onBlur", "onClick", "onFocus", "onMouseOut", "onMouseOver", "plain", "primary", "reverse", "secondary", "size", "tertiary", "type", "as"]);
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -135,11 +136,12 @@ var Button = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       if (kindArg) return kindArg;
       if (primary) return 'primary';
       if (secondary) return 'secondary';
+      if (tertiary) return 'tertiary';
       return 'default';
     }
 
     return undefined; // pre-default, no kind
-  }, [kindArg, primary, secondary, theme.button["default"]]); // When we have a kind and are not plain, themePaths stores the relative
+  }, [kindArg, primary, secondary, tertiary, theme.button["default"]]); // When we have a kind and are not plain, themePaths stores the relative
   // paths within the theme for the current kind and state of the button.
   // These paths are used with getIconColor() above and kindStyle() within
   // StyledButtonKind.

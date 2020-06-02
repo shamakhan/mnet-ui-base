@@ -30,6 +30,13 @@ var BasicButtons = function BasicButtons(props) {
     align: "center",
     pad: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
+    tertiary: true,
+    label: "Tertiary",
+    onClick: function onClick() {}
+  }, props))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
+    align: "center",
+    pad: "medium"
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     label: "Default",
     onClick: function onClick() {}
   }, props))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
