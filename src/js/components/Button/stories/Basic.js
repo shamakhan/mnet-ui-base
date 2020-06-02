@@ -17,6 +17,9 @@ export const Basic = props => (
       <Button secondary label="Secondary" onClick={() => {}} {...props} />
     </Box>
     <Box align="center" pad="medium">
+      <Button tertiary label="Tertiary" onClick={() => {}} {...props} />
+    </Box>
+    <Box align="center" pad="medium">
       <Button label="Default" onClick={() => {}} {...props} />
     </Box>
     <Box align="center" pad="medium">
