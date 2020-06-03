@@ -20,12 +20,22 @@ var SelectTextInput = styled(TextInput).withConfig({
 var StyledSelectDropButton = styled(DropButton).withConfig({
   displayName: "Select__StyledSelectDropButton",
   componentId: "f4amc3-1"
-})(["", ";", ";", ";"], function (props) {
+})(["", ";", ";", ";", ";"], function (props) {
+  return {
+    background: normalizeColor(props.theme.select.background || 'control', props.theme)
+  };
+}, function (props) {
   return !props.plain && controlBorderStyle;
 }, function (props) {
   return props.theme.select && props.theme.select.control && props.theme.select.control.extend;
 }, function (props) {
   return props.open && props.theme.select.control.open;
+});
+var StyledIconContainer = styled(Box).withConfig({
+  displayName: "Select__StyledIconContainer",
+  componentId: "f4amc3-2"
+})(["min-width:auto;", ";"], function (props) {
+  return props.theme.select && props.theme.select.icons && props.theme.select.icons.extend;
 });
 StyledSelectDropButton.defaultProps = {};
 Object.setPrototypeOf(StyledSelectDropButton.defaultProps, defaultProps);
@@ -184,6 +194,7 @@ var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
     return undefined;
   }, [labelKey, messages, optionIndexesInValue, options, selectValue]);
   var iconColor = normalizeColor(theme.select.icons.color || 'control', theme);
+  console.log(theme.select.icons);
   return /*#__PURE__*/React.createElement(Keyboard, {
     onDown: onRequestOpen,
     onUp: onRequestOpen
@@ -228,8 +239,7 @@ var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
   }, /*#__PURE__*/React.createElement(Box, {
     align: "center",
     direction: "row",
-    justify: "between",
-    background: theme.select.background
+    justify: "between"
   }, /*#__PURE__*/React.createElement(Box, {
     direction: "row",
     flex: true,
@@ -249,12 +259,11 @@ var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
     size: size,
     theme: theme,
     onClick: disabled === true ? undefined : onRequestOpen
-  }))), SelectIcon && /*#__PURE__*/React.createElement(Box, {
+  }))), SelectIcon && /*#__PURE__*/React.createElement(StyledIconContainer, {
     margin: theme.select.icons.margin,
-    flex: false,
-    style: {
-      minWidth: 'auto'
-    }
+    pad: theme.select.icons.pad,
+    background: theme.select.icons.background,
+    flex: false
   }, /*#__PURE__*/isValidElement(SelectIcon) ? SelectIcon : /*#__PURE__*/React.createElement(SelectIcon, {
     color: iconColor,
     size: size

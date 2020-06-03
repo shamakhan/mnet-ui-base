@@ -323,11 +323,12 @@ var SelectContainer = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       ref: optionRef,
       tabIndex: "-1",
       role: "menuitem",
-      hoverIndicator: "background",
+      hoverIndicator: "light-5",
       disabled: optionDisabled || undefined,
       active: optionActive,
       selected: optionSelected,
       option: option,
+      plain: true,
       onMouseOver: !optionDisabled ? onActiveOption(index) : undefined,
       onClick: !optionDisabled ? selectOption(index) : undefined
     }, children ? children(option, index, options, {

@@ -40,12 +40,22 @@ var SelectTextInput = (0, _styledComponents["default"])(_TextInput.TextInput).wi
 var StyledSelectDropButton = (0, _styledComponents["default"])(_DropButton.DropButton).withConfig({
   displayName: "Select__StyledSelectDropButton",
   componentId: "f4amc3-1"
-})(["", ";", ";", ";"], function (props) {
+})(["", ";", ";", ";", ";"], function (props) {
+  return {
+    background: (0, _utils.normalizeColor)(props.theme.select.background || 'control', props.theme)
+  };
+}, function (props) {
   return !props.plain && _utils.controlBorderStyle;
 }, function (props) {
   return props.theme.select && props.theme.select.control && props.theme.select.control.extend;
 }, function (props) {
   return props.open && props.theme.select.control.open;
+});
+var StyledIconContainer = (0, _styledComponents["default"])(_Box.Box).withConfig({
+  displayName: "Select__StyledIconContainer",
+  componentId: "f4amc3-2"
+})(["min-width:auto;", ";"], function (props) {
+  return props.theme.select && props.theme.select.icons && props.theme.select.icons.extend;
 });
 StyledSelectDropButton.defaultProps = {};
 Object.setPrototypeOf(StyledSelectDropButton.defaultProps, _defaultProps.defaultProps);
@@ -205,6 +215,7 @@ var Select = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     return undefined;
   }, [labelKey, messages, optionIndexesInValue, options, selectValue]);
   var iconColor = (0, _utils.normalizeColor)(theme.select.icons.color || 'control', theme);
+  console.log(theme.select.icons);
   return /*#__PURE__*/_react["default"].createElement(_Keyboard.Keyboard, {
     onDown: onRequestOpen,
     onUp: onRequestOpen
@@ -249,8 +260,7 @@ var Select = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     align: "center",
     direction: "row",
-    justify: "between",
-    background: theme.select.background
+    justify: "between"
   }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     direction: "row",
     flex: true,
@@ -270,12 +280,11 @@ var Select = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     size: size,
     theme: theme,
     onClick: disabled === true ? undefined : onRequestOpen
-  }))), SelectIcon && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+  }))), SelectIcon && /*#__PURE__*/_react["default"].createElement(StyledIconContainer, {
     margin: theme.select.icons.margin,
-    flex: false,
-    style: {
-      minWidth: 'auto'
-    }
+    pad: theme.select.icons.pad,
+    background: theme.select.icons.background,
+    flex: false
   }, /*#__PURE__*/(0, _react.isValidElement)(SelectIcon) ? SelectIcon : /*#__PURE__*/_react["default"].createElement(SelectIcon, {
     color: iconColor,
     size: size
