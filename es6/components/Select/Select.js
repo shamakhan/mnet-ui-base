@@ -194,7 +194,6 @@ var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
     return undefined;
   }, [labelKey, messages, optionIndexesInValue, options, selectValue]);
   var iconColor = normalizeColor(theme.select.icons.color || 'control', theme);
-  console.log(theme.select.icons);
   return /*#__PURE__*/React.createElement(Keyboard, {
     onDown: onRequestOpen,
     onUp: onRequestOpen
