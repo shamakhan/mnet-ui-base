@@ -8,6 +8,16 @@ function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.crea
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
   var data = _taggedTemplateLiteralLoose(["\n  body { margin: 0; }\n"]);
 
@@ -27,6 +37,9 @@ import { backgroundIsDark, deepMerge, getBreakpoint, getDeviceBreakpoint, normal
 import { base as baseTheme } from '../../themes';
 import { StyledMnetUIBase } from './StyledMnetUIBase';
 var FullGlobalStyle = createGlobalStyle(_templateObject());
+var GlobalStyle = createGlobalStyle(_templateObject2(), function (props) {
+  return props.theme.mnet.global;
+});
 
 var MnetUIBase = /*#__PURE__*/function (_Component) {
   _inheritsLoose(MnetUIBase, _Component);
@@ -162,7 +175,7 @@ var MnetUIBase = /*#__PURE__*/function (_Component) {
       value: containerTarget
     }, /*#__PURE__*/React.createElement(StyledMnetUIBase, _extends({
       full: full
-    }, rest), children), full && /*#__PURE__*/React.createElement(FullGlobalStyle, null))));
+    }, rest), children), full && /*#__PURE__*/React.createElement(FullGlobalStyle, null), /*#__PURE__*/React.createElement(GlobalStyle, null))));
   };
 
   return MnetUIBase;

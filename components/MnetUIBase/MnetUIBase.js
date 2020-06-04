@@ -29,6 +29,16 @@ function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.crea
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
   var data = _taggedTemplateLiteralLoose(["\n  body { margin: 0; }\n"]);
 
@@ -42,6 +52,9 @@ function _templateObject() {
 function _taggedTemplateLiteralLoose(strings, raw) { if (!raw) { raw = strings.slice(0); } strings.raw = raw; return strings; }
 
 var FullGlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject());
+var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject2(), function (props) {
+  return props.theme.mnet.global;
+});
 
 var MnetUIBase = /*#__PURE__*/function (_Component) {
   _inheritsLoose(MnetUIBase, _Component);
@@ -177,7 +190,7 @@ var MnetUIBase = /*#__PURE__*/function (_Component) {
       value: containerTarget
     }, /*#__PURE__*/_react["default"].createElement(_StyledMnetUIBase.StyledMnetUIBase, _extends({
       full: full
-    }, rest), children), full && /*#__PURE__*/_react["default"].createElement(FullGlobalStyle, null))));
+    }, rest), children), full && /*#__PURE__*/_react["default"].createElement(FullGlobalStyle, null), /*#__PURE__*/_react["default"].createElement(GlobalStyle, null))));
   };
 
   return MnetUIBase;
