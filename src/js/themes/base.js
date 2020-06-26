@@ -1212,10 +1212,37 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       // searchInput: undefined,
       step: 20,
       multiselect: {
+        checkbox: {
+          box: {
+            margin: {
+              horizontal: 'medium',
+              // extend: undefined,
+            },
+          },
+          checkmark: {
+            size: `${baseSpacing}px`,
+            color:'white',
+          },
+          check: {
+            height: `${baseSpacing}px`,
+            width: `${baseSpacing}px`,
+            margin: 'auto',
+            round: 'xsmall',
+            active: {
+              background: 'accent-3',
+              border: 'light-5',
+            },
+          },
+        },
         displayContainer: {
           wrapper: {
             pad: 'medium',
             direction: 'row',
+            border: {
+              side: 'bottom',
+              size: 'xsmall',
+              color: '#D9DBE5',
+            },
             // extend: undefined,
           },
           option: {
@@ -1229,6 +1256,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             direction: 'row',
             align: 'center',
           },
+          text: {},
           icon: {
             size: 'small',
             color: 'white',
@@ -1236,6 +1264,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
         controls: {
           wrapper: {
+            pad: 'medium',
+            direction: 'row',
             // extend: undefined,
           },
           button: {
