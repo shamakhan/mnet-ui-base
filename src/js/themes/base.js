@@ -1411,6 +1411,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         pad: 'xsmall',
       },
     },
+    tooptip: {
+      background: 'dark-1',
+      color: 'white',
+      tipSize: '5px',
+      round: 'small',
+    },
   });
 
   return deepFreeze(result);
