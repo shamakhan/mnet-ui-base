@@ -708,7 +708,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       // },
       error: {
         color: 'status-critical',
-        margin: { vertical: 'medium', horizontal: 'none' },
+        margin: { vertical: 'xsmall', horizontal: 'small' },
         // background: undefined,
       },
       // extend: undefined,
@@ -720,32 +720,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       info: {
         color: 'text-xweak',
-        margin: { vertical: 'xsmall', left: 'medium' },
+        margin: { vertical: 'xsmall', horizontal: 'small' },
       },
       label: {
         margin: { vertical: 'xsmall', horizontal: 'small' },
-        width: 'xxsmall',
       },
       margin: { bottom: 'small' },
-      postfix: {
-        color: 'white',
-        background: 'dark-3',
-        justify: 'center',
-        pad: { horizontal: 'medium', vertical: 'medium' },
-      },
-      prefix: {
-        color: 'white',
-        background: 'dark-3',
-        justify: 'center',
-        pad: { horizontal: 'medium', vertical: 'medium' },
-      },
-      extend: {
-        button: {
-          flex: 1,
-          border: 'none',
-        },
-      },
-
       // round: undefined,
     },
     mnet: {
@@ -1070,35 +1050,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       // scrubber: { track: { color: undefined } },
       scrubber: {
         color: 'light-4',
-      },
-    },
-    worldMap: {
-      color: 'light-3',
-      continent: {
-        active: '8px',
-        base: '6px',
-      },
-      hover: {
-        color: 'light-4',
-      },
-      place: {
-        active: '20px',
-        base: '8px',
-      },
-    },
-    pagination: {
-      background: 'white',
-      round: 'small',
-      border: {
-        color: 'dark-6',
-      },
-      pad: 'xlarge',
-      active: {
-        color: '#e7eaf1',
-      },
-      icon: {
-        bgColor: 'light-2',
-        pad: 'xsmall',
       },
     },
     tooptip: {
