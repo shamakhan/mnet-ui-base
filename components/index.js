@@ -393,3 +393,10 @@ Object.keys(_TextInput).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   exports[key] = _TextInput[key];
 });
+
+var _Tooltip = require("./Tooltip");
+
+Object.keys(_Tooltip).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _Tooltip[key];
+});
