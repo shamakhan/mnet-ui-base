@@ -8543,6 +8543,11 @@ boolean",
     "usage": "import { WorldMap } from 'grommet';
 <WorldMap />",
   },
+  "Tooltip": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "Tooltip",
+    "render": [Function],
+  },
   "__esModule": true,
   "calcBounds": [Function],
   "calcs": [Function],
