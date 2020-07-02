@@ -1,15 +1,15 @@
 import { describe, PropTypes } from 'react-desc';
 
-import { genericProps } from '../../utils/prop-types';
-import { getAvailableAtBadge } from '../../utils/mixins';
+import { genericProps, getAvailableAtBadge } from '../../utils';
 
-export const doc = Select => {
-  const DocumentedSelect = describe(Select)
-    .availableAt(getAvailableAtBadge('Select', 'Input'))
-    .description('A control to select a value, with optional search.')
+export const doc = MultiSelect => {
+  const DocumentedSelect = describe(MultiSelect)
+    .availableAt(getAvailableAtBadge('MultiSelect'))
+    .description(
+      'A control to select multiple values, with optional customization.')
     .usage(
-      `import { Select } from 'mnet-ui-base';
-<Select />`,
+      `import { MultiSelect } from 'mnet-ui-base';
+      <MultiSelect />`,
     );
   // We don't include svg due to a collision on the values property
   // .intrinsicElement('select');
@@ -24,38 +24,9 @@ export const doc = Select => {
       { active, disabled, selected } keys indicating the current state
       of the option.`,
     ),
-    clear: PropTypes.oneOfType([
-      PropTypes.bool,
-      PropTypes.shape({
-        position: PropTypes.oneOf(['top', 'bottom'])
-          .description(
-            `Add a clear option to the top or at the bottom of the
-            container. By default no clear option is present.`,
-          )
-          .defaultValue('top'),
-        label: PropTypes.string
-          .description('Label for the clear selection item')
-          .defaultValue('Clear selection'),
-      }),
-    ])
-      .description(`Whether to provide a button option to clear selections.`)
-      .defaultValue(false),
     closeOnChange: PropTypes.bool
       .description('Wether to close the drop when a selection is made.')
       .defaultValue(true),
-    defaultValue: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-      PropTypes.number,
-      PropTypes.arrayOf(
-        PropTypes.oneOfType([
-          PropTypes.string,
-          PropTypes.object,
-          PropTypes.number,
-        ]),
-      ),
-    ]).description(`Initially selected value. This can be an array
-      when multiple.`),
     disabled: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.arrayOf(
@@ -130,9 +101,7 @@ export const doc = Select => {
       multiple: PropTypes.string,
     }).description('Custom messages.'),
     multiple: PropTypes.bool.description(
-      `Whether to allow multiple options to be selected. When multiple is true, 
-      'value' should be an array of selected options and 'options' should be 
-      an array of possible options`,
+      'Whether to allow multiple options to be selected.',
     ),
     name: PropTypes.string.description(
       `The name of the attribute when in a Form or FormField.`,
@@ -253,8 +222,21 @@ export const doc = Select => {
       .description(
         `Render custom bottom panel component below the option list`,
       ),
-      renderCustomContent: PropTypes.func
+    renderCustomContent: PropTypes.func
       .description(`Render custom select component`),
+    width: PropTypes.string.description(`Width for the multiselect dropdown`)
+      .defaultValue('auto'),
+    onValueChange: PropTypes.func.description(
+      'Function that will be called when the user selects an option.',
+    ),
+    layout: PropTypes.oneOf(['single-column', 'double-column'])
+      .description(`Column layout for custom multiselect dropdown`),
+    withOptionChips: PropTypes.bool
+      .description(`Control to show the selected option chips`)
+      .defaultValue(false),
+    withUpdateCancelButtons: PropTypes.bool.description(
+      `Control to show the control buttons with OK and Cancel values`,
+      ).defaultValue(false),
   };
 
   return DocumentedSelect;
@@ -292,17 +274,6 @@ export const themeDoc = {
       'Any additional style for the container of the Select component.',
     type: 'string | (props) => {}',
     defaultValue: undefined,
-  },
-  'select.clear.container': {
-    description: 'Any valid Box prop for the clear button container.',
-    type: 'object',
-    defaultValue: "{ pad: 'small', background: 'light-2' }",
-  },
-  'select.clear.text': {
-    description:
-      'Any valid Text prop for text used inside the clear button container.',
-    type: 'object',
-    defaultValue: "{ color: 'dark-3' }",
   },
   'select.control.open': {
     description: `Any additional style for the Select DropButton when using the
