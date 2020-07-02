@@ -88,7 +88,11 @@ var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
       valueProp = _ref.value,
       valueKey = _ref.valueKey,
       valueLabel = _ref.valueLabel,
-      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "alignSelf", "children", "closeOnChange", "disabled", "disabledKey", "dropAlign", "dropHeight", "dropProps", "dropTarget", "emptySearchMessage", "focusIndicator", "gridArea", "id", "icon", "labelKey", "margin", "messages", "multiple", "name", "onChange", "onClick", "onClose", "onKeyDown", "onMore", "onOpen", "onSearch", "open", "options", "placeholder", "plain", "replace", "searchPlaceholder", "selected", "size", "value", "valueKey", "valueLabel"]);
+      customSearch = _ref.customSearch,
+      renderOptionTop = _ref.renderOptionTop,
+      renderOptionBottom = _ref.renderOptionBottom,
+      renderCustomContent = _ref.renderCustomContent,
+      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "alignSelf", "children", "closeOnChange", "disabled", "disabledKey", "dropAlign", "dropHeight", "dropProps", "dropTarget", "emptySearchMessage", "focusIndicator", "gridArea", "id", "icon", "labelKey", "margin", "messages", "multiple", "name", "onChange", "onClick", "onClose", "onKeyDown", "onMore", "onOpen", "onSearch", "open", "options", "placeholder", "plain", "replace", "searchPlaceholder", "selected", "size", "value", "valueKey", "valueLabel", "customSearch", "renderOptionTop", "renderOptionBottom", "renderCustomContent"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var inputRef = useRef();
@@ -230,7 +234,11 @@ var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
       searchPlaceholder: searchPlaceholder,
       selected: selected,
       value: value,
-      valueKey: valueKey
+      valueKey: valueKey,
+      customSearch: customSearch,
+      renderOptionTop: renderOptionTop,
+      renderOptionBottom: renderOptionBottom,
+      renderCustomContent: renderCustomContent
     }, children),
     plain: plain,
     dropProps: dropProps,

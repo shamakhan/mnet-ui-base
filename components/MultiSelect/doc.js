@@ -9,8 +9,8 @@ var _utils = require("../../utils");
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-var doc = function doc(Select) {
-  var DocumentedSelect = (0, _reactDesc.describe)(Select).availableAt((0, _utils.getAvailableAtBadge)('Select')).description('A control to select a value, with optional search.').usage("import { Select } from 'mnet-ui-base';\n<Select />"); // We don't include svg due to a collision on the values property
+var doc = function doc(MultiSelect) {
+  var DocumentedSelect = (0, _reactDesc.describe)(MultiSelect).availableAt((0, _utils.getAvailableAtBadge)('MultiSelect')).description('A control to select multiple values, with optional customization.').usage("import { MultiSelect } from 'mnet-ui-base';\n      <MultiSelect />"); // We don't include svg due to a collision on the values property
   // .intrinsicElement('select');
 
   DocumentedSelect.propTypes = _extends({}, _utils.genericProps, {
@@ -62,7 +62,12 @@ var doc = function doc(Select) {
     customSearch: _reactDesc.PropTypes.func.description("Render custom search component"),
     renderOptionTop: _reactDesc.PropTypes.func.description("Render custom top panel component above the option list"),
     renderOptionBottom: _reactDesc.PropTypes.func.description("Render custom bottom panel component below the option list"),
-    renderCustomContent: _reactDesc.PropTypes.func.description("Render custom select component")
+    renderCustomContent: _reactDesc.PropTypes.func.description("Render custom select component"),
+    width: _reactDesc.PropTypes.string.description("Width for the multiselect dropdown").defaultValue('auto'),
+    onValueChange: _reactDesc.PropTypes.func.description('Function that will be called when the user selects an option.'),
+    layout: _reactDesc.PropTypes.oneOf(['single-column', 'double-column']).description("Column layout for custom multiselect dropdown"),
+    withOptionChips: _reactDesc.PropTypes.bool.description("Control to show the selected option chips").defaultValue(false),
+    withUpdateCancelButtons: _reactDesc.PropTypes.bool.description("Control to show the control buttons with OK and Cancel values").defaultValue(false)
   });
   return DocumentedSelect;
 };

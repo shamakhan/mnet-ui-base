@@ -226,6 +226,13 @@ Object.keys(_Paragraph).forEach(function (key) {
   exports[key] = _Paragraph[key];
 });
 
+var _MultiSelect = require("./MultiSelect");
+
+Object.keys(_MultiSelect).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _MultiSelect[key];
+});
+
 var _Nav = require("./Nav");
 
 Object.keys(_Nav).forEach(function (key) {

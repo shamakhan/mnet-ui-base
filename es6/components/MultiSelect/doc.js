@@ -2,8 +2,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import { describe, PropTypes } from 'react-desc';
 import { genericProps, getAvailableAtBadge } from '../../utils';
-export var doc = function doc(Select) {
-  var DocumentedSelect = describe(Select).availableAt(getAvailableAtBadge('Select')).description('A control to select a value, with optional search.').usage("import { Select } from 'mnet-ui-base';\n<Select />"); // We don't include svg due to a collision on the values property
+export var doc = function doc(MultiSelect) {
+  var DocumentedSelect = describe(MultiSelect).availableAt(getAvailableAtBadge('MultiSelect')).description('A control to select multiple values, with optional customization.').usage("import { MultiSelect } from 'mnet-ui-base';\n      <MultiSelect />"); // We don't include svg due to a collision on the values property
   // .intrinsicElement('select');
 
   DocumentedSelect.propTypes = _extends({}, genericProps, {
@@ -55,7 +55,12 @@ export var doc = function doc(Select) {
     customSearch: PropTypes.func.description("Render custom search component"),
     renderOptionTop: PropTypes.func.description("Render custom top panel component above the option list"),
     renderOptionBottom: PropTypes.func.description("Render custom bottom panel component below the option list"),
-    renderCustomContent: PropTypes.func.description("Render custom select component")
+    renderCustomContent: PropTypes.func.description("Render custom select component"),
+    width: PropTypes.string.description("Width for the multiselect dropdown").defaultValue('auto'),
+    onValueChange: PropTypes.func.description('Function that will be called when the user selects an option.'),
+    layout: PropTypes.oneOf(['single-column', 'double-column']).description("Column layout for custom multiselect dropdown"),
+    withOptionChips: PropTypes.bool.description("Control to show the selected option chips").defaultValue(false),
+    withUpdateCancelButtons: PropTypes.bool.description("Control to show the control buttons with OK and Cancel values").defaultValue(false)
   });
   return DocumentedSelect;
 };

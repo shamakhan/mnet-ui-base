@@ -72,7 +72,11 @@ var SelectContainer = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       value = _ref$value === void 0 ? '' : _ref$value,
       valueKey = _ref.valueKey,
       _ref$replace = _ref.replace,
-      replace = _ref$replace === void 0 ? true : _ref$replace;
+      replace = _ref$replace === void 0 ? true : _ref$replace,
+      customSearch = _ref.customSearch,
+      renderOptionTop = _ref.renderOptionTop,
+      renderOptionBottom = _ref.renderOptionBottom,
+      renderCustomContent = _ref.renderCustomContent;
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -292,7 +296,19 @@ var SelectContainer = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     as: _Box.Box,
     id: id ? id + "__select-drop" : undefined,
     dropHeight: dropHeight
-  }, onSearch && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+  }, renderOptionTop && renderOptionTop({
+    options: options,
+    value: value,
+    isSelected: isSelected,
+    isDisabled: isDisabled,
+    selectOption: selectOption,
+    onMore: onMore,
+    replace: replace,
+    activeIndex: activeIndex,
+    onActiveOption: onActiveOption,
+    optionLabel: optionLabel,
+    optionValue: optionValue
+  }), onSearch && !customSearch && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     pad: !customSearchInput ? 'xsmall' : undefined,
     flex: false
   }, /*#__PURE__*/_react["default"].createElement(SelectTextInput, {
@@ -303,7 +319,10 @@ var SelectContainer = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     value: search || '',
     placeholder: searchPlaceholder,
     onChange: onSearchChange
-  })), /*#__PURE__*/_react["default"].createElement(OptionsBox, {
+  })), onSearch && customSearch && customSearch({
+    search: search,
+    onSearchChange: onSearchChange
+  }), !renderCustomContent && /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(OptionsBox, {
     role: "menubar",
     tabIndex: "-1",
     ref: optionsRef
@@ -345,6 +364,30 @@ var SelectContainer = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     hoverIndicator: "background",
     disabled: true,
     option: emptySearchMessage
-  }, /*#__PURE__*/_react["default"].createElement(OptionBox, selectOptionsStyle, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.select.container.text, emptySearchMessage))))));
+  }, /*#__PURE__*/_react["default"].createElement(OptionBox, selectOptionsStyle, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.select.container.text, emptySearchMessage)))), renderOptionBottom && renderOptionBottom({
+    options: options,
+    value: value,
+    isSelected: isSelected,
+    isDisabled: isDisabled,
+    selectOption: selectOption,
+    onMore: onMore,
+    replace: replace,
+    activeIndex: activeIndex,
+    onActiveOption: onActiveOption,
+    optionLabel: optionLabel,
+    optionValue: optionValue
+  })), renderCustomContent && renderCustomContent({
+    options: options,
+    value: value,
+    isSelected: isSelected,
+    isDisabled: isDisabled,
+    selectOption: selectOption,
+    onMore: onMore,
+    replace: replace,
+    activeIndex: activeIndex,
+    onActiveOption: onActiveOption,
+    optionLabel: optionLabel,
+    optionValue: optionValue
+  })));
 });
 exports.SelectContainer = SelectContainer;

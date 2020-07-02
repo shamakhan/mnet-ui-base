@@ -471,6 +471,38 @@ Empty option message to display when no matching results were found Defaults to 
 ```
 string
 ```
+
+**customSearch**
+
+Render custom search component
+
+```
+function
+```
+
+**renderOptionTop**
+
+Render custom top panel component above the option list
+
+```
+function
+```
+
+**renderOptionBottom**
+
+Render custom bottom panel component below the option list
+
+```
+function
+```
+
+**renderCustomContent**
+
+Render custom select component
+
+```
+function
+```
   
 ## Theme
   
