@@ -1070,6 +1070,33 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         next: Next,
         previous: Previous,
       },
+      custom: {
+        wrapper: {
+          direction: 'row',
+        },
+        textAreaWrap: {
+          border: { side: 'right' },
+          pad: 'large',
+        },
+        label: {
+          weight: 600,
+        },
+        textAreaContainer: {
+          width: 'medium',
+          height: 'medium',
+          margin: { vertical: 'medium' },
+        },
+        actions: {
+          wrapper: {
+            direction: 'row',
+            margin: { vertical: 'small' },
+            gap: 'medium',
+          },
+          button: {
+            pad: 'medium',
+          },
+        },
+      },
     },
     paragraph: {
       font: {
