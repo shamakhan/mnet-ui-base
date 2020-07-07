@@ -1086,27 +1086,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         base: '8px',
       },
     },
-    pagination: {
-      background: 'white',
-      round: 'small',
-      border: {
-        color: 'dark-6',
-      },
-      pad: 'xlarge',
-      active: {
-        color: '#e7eaf1',
-      },
-      icon: {
-        bgColor: 'light-2',
-        pad: 'xsmall',
-      },
-    },
-    tooptip: {
-      background: 'dark-1',
-      color: 'white',
-      tipSize: '5px',
-      round: 'small',
-    },
   });
 
   return deepFreeze(result);
