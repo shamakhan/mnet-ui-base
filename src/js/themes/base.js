@@ -1065,6 +1065,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
     select: {
       // background: undefined,
       background: 'dark-2',
+      activeColor: lightColors[4],
       container: {
         // extend: undefined,
       },

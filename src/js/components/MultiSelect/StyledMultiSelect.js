@@ -19,6 +19,8 @@ const OptionsBox = styled.div`
 const SelectOption = styled(Button)`
   display: block;
   width: 100%;
+  background: ${props => props.active ?
+    props.theme.select.activeColor : 'transparent'};
 `;
 
 const OptionBox = styled(Box)`

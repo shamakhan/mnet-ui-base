@@ -10,6 +10,7 @@ import { applyKey } from './utils';
 
 const MultiSelect = ({
   width,
+  height,
   options,
   value,
   labelKey,
@@ -83,6 +84,7 @@ const MultiSelect = ({
         <ColumnSelect
           layout={layout}
           width={width}
+          height={height}
           onUpdate={() =>
             setSelectState({ open: false, previousValue: value })
           }
