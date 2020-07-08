@@ -25,6 +25,12 @@ var _TextInput = require("../TextInput");
 
 var _FormContext = require("../Form/FormContext");
 
+var _Drop = require("../Drop");
+
+var _Button = require("../Button");
+
+var _Tooltip = require("../Tooltip");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -89,7 +95,15 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
       required = _ref2.required,
       style = _ref2.style,
       validate = _ref2.validate,
-      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "className", "component", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onFocus", "pad", "required", "style", "validate"]);
+      _ref2$direction = _ref2.direction,
+      direction = _ref2$direction === void 0 ? 'column' : _ref2$direction,
+      postfix = _ref2.postfix,
+      prefix = _ref2.prefix,
+      _ref2$labelWidth = _ref2.labelWidth,
+      labelWidth = _ref2$labelWidth === void 0 ? 0 : _ref2$labelWidth,
+      _ref2$width = _ref2.width,
+      width = _ref2$width === void 0 ? 'auto' : _ref2$width,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "className", "component", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onFocus", "pad", "required", "style", "validate", "direction", "postfix", "prefix", "labelWidth", "width"]);
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -243,7 +257,19 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
     }
   }
 
-  contents = /*#__PURE__*/_react["default"].createElement(_Box.Box, contentProps, contents);
+  contents = /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({}, contentProps, {
+    width: width
+  }), /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+    direction: "row"
+  }, prefix && /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({}, formFieldTheme.prefix, {
+    style: {
+      wordBreak: 'normal'
+    }
+  }), prefix), contents, postfix && /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({}, formFieldTheme.postfix, {
+    style: {
+      wordBreak: 'normal'
+    }
+  }), postfix)));
   var borderColor;
 
   if (disabled && formFieldTheme.disabled.border && formFieldTheme.disabled.border.color) {
@@ -316,6 +342,12 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
     }
   }
 
+  var layoutType = direction && direction === 'row' ? {
+    flexDirection: direction,
+    alignItems: 'center'
+  } : {
+    flexDirection: direction
+  };
   var outerProps = themeBorder && themeBorder.position === 'outer' ? {
     border: _extends({}, themeBorder, {
       color: borderColor
@@ -339,16 +371,22 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
       if (onFieldBlur) onFieldBlur(event);
       if (_onBlur) _onBlur(event);
     }
-  }, containerRest), label && component !== _CheckBox.CheckBox || help ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, label && component !== _CheckBox.CheckBox && /*#__PURE__*/_react["default"].createElement(_Text.Text, _extends({
+  }, containerRest), /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+    style: _extends({}, layoutType)
+  }, /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({}, labelStyle, {
+    width: labelWidth
+  }), label && component !== _CheckBox.CheckBox && /*#__PURE__*/_react["default"].createElement(_Text.Text, {
     as: "label",
     htmlFor: htmlFor
-  }, labelStyle), label), /*#__PURE__*/_react["default"].createElement(Message, _extends({
-    message: help
-  }, formFieldTheme.help))) : undefined, contents, /*#__PURE__*/_react["default"].createElement(Message, _extends({
+  }, label)), /*#__PURE__*/_react["default"].createElement(_Box.Box, null, contents, /*#__PURE__*/_react["default"].createElement(_Box.Box, null, /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: normalizedError
-  }, formFieldTheme.error)), /*#__PURE__*/_react["default"].createElement(Message, _extends({
+  }, formFieldTheme.error, {
+    style: {
+      position: "" + (direction === 'row' ? 'absolute' : 'static')
+    }
+  }))), /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: normalizedInfo
-  }, formFieldTheme.info)));
+  }, formFieldTheme.info)))));
 });
 FormField.displayName = 'FormField';
 var FormFieldDoc;

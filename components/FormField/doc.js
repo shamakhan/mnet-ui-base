@@ -18,6 +18,7 @@ var doc = function doc(FormField) {
     info: _reactDesc.PropTypes.oneOfType([_reactDesc.PropTypes.string, _reactDesc.PropTypes.node]).description("Any informational text regarding the field's value"),
     label: _reactDesc.PropTypes.oneOfType([_reactDesc.PropTypes.string, _reactDesc.PropTypes.node]).description('A short label describing the field'),
     name: _reactDesc.PropTypes.string.description("The name of the value data when in a Form and the name of\n      the input field."),
+    width: _reactDesc.PropTypes.string.description("The width of the field."),
     margin: _utils.marginProp,
     pad: _reactDesc.PropTypes.bool.description('Whether to add padding to align with the padding of TextInput.'),
     required: _reactDesc.PropTypes.bool.description('Whether the field is required.'),

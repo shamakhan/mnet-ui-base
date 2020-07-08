@@ -19,19 +19,19 @@ var ArrowStyle = function ArrowStyle(props) {
   var _backgroundStyle = (0, _utils.backgroundStyle)((0, _utils.normalizeColor)(props.theme.tooptip && props.theme.tooptip.background || 'dark-1', props.theme), props.theme),
       tipColor = _backgroundStyle[1];
 
-  if (position === 'up') {
-    return (0, _styledComponents.css)(["border-left:solid transparent;border-right:solid transparent;border-top:solid ", ";"], tipColor);
-  }
+  switch (position) {
+    case 'up':
+      return (0, _styledComponents.css)(["border-left:solid transparent;border-right:solid transparent;border-top:solid ", ";"], tipColor);
 
-  if (position === 'down') {
-    return (0, _styledComponents.css)(["border-left:solid transparent;border-right:solid transparent;border-bottom:solid ", ";"], tipColor);
-  }
+    case 'down':
+      return (0, _styledComponents.css)(["border-left:solid transparent;border-right:solid transparent;border-bottom:solid ", ";"], tipColor);
 
-  if (position === 'left') {
-    return (0, _styledComponents.css)(["border-top:solid transparent;border-bottom:solid transparent;border-left:solid ", ";"], tipColor);
-  }
+    case 'left':
+      return (0, _styledComponents.css)(["border-top:solid transparent;border-bottom:solid transparent;border-left:solid ", ";"], tipColor);
 
-  return (0, _styledComponents.css)(["border-top:solid transparent;border-bottom:solid transparent;border-right:solid ", ";"], tipColor);
+    default:
+      return (0, _styledComponents.css)(["border-top:solid transparent;border-bottom:solid transparent;border-right:solid ", ";"], tipColor);
+  }
 };
 
 var Arrow = (0, _styledComponents["default"])(_Box.Box).withConfig({
@@ -47,25 +47,25 @@ exports.Arrow = Arrow;
 var Alignment = function Alignment(props) {
   var position = props.position;
 
-  if (position === 'up') {
-    return (0, _styledComponents.css)(["flex-direction:column-reverse;align-items:center;"]);
-  }
+  switch (position) {
+    case 'up':
+      return (0, _styledComponents.css)(["flex-direction:column-reverse;"]);
 
-  if (position === 'down') {
-    return (0, _styledComponents.css)(["flex-direction:column;align-items:center;"]);
-  }
+    case 'down':
+      return (0, _styledComponents.css)(["flex-direction:column;"]);
 
-  if (position === 'left') {
-    return (0, _styledComponents.css)(["flex-direction:row-reverse;align-items:center;"]);
-  }
+    case 'left':
+      return (0, _styledComponents.css)(["flex-direction:row-reverse;"]);
 
-  return (0, _styledComponents.css)(["flex-direction:row;align-items:center;"]);
+    default:
+      return (0, _styledComponents.css)(["flex-direction:row;"]);
+  }
 };
 
 var ArrowWrap = (0, _styledComponents["default"])(_Box.Box).withConfig({
   displayName: "StyledTooltip__ArrowWrap",
   componentId: "sc-7ieemc-1"
-})(["", ""], function (props) {
+})(["align-items:center;", ""], function (props) {
   return Alignment(props);
 });
 exports.ArrowWrap = ArrowWrap;

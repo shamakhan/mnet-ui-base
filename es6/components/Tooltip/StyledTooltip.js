@@ -8,19 +8,19 @@ var ArrowStyle = function ArrowStyle(props) {
   var _backgroundStyle = backgroundStyle(normalizeColor(props.theme.tooptip && props.theme.tooptip.background || 'dark-1', props.theme), props.theme),
       tipColor = _backgroundStyle[1];
 
-  if (position === 'up') {
-    return css(["border-left:solid transparent;border-right:solid transparent;border-top:solid ", ";"], tipColor);
-  }
+  switch (position) {
+    case 'up':
+      return css(["border-left:solid transparent;border-right:solid transparent;border-top:solid ", ";"], tipColor);
 
-  if (position === 'down') {
-    return css(["border-left:solid transparent;border-right:solid transparent;border-bottom:solid ", ";"], tipColor);
-  }
+    case 'down':
+      return css(["border-left:solid transparent;border-right:solid transparent;border-bottom:solid ", ";"], tipColor);
 
-  if (position === 'left') {
-    return css(["border-top:solid transparent;border-bottom:solid transparent;border-left:solid ", ";"], tipColor);
-  }
+    case 'left':
+      return css(["border-top:solid transparent;border-bottom:solid transparent;border-left:solid ", ";"], tipColor);
 
-  return css(["border-top:solid transparent;border-bottom:solid transparent;border-right:solid ", ";"], tipColor);
+    default:
+      return css(["border-top:solid transparent;border-bottom:solid transparent;border-right:solid ", ";"], tipColor);
+  }
 };
 
 export var Arrow = styled(Box).withConfig({
@@ -35,24 +35,24 @@ export var Arrow = styled(Box).withConfig({
 var Alignment = function Alignment(props) {
   var position = props.position;
 
-  if (position === 'up') {
-    return css(["flex-direction:column-reverse;align-items:center;"]);
-  }
+  switch (position) {
+    case 'up':
+      return css(["flex-direction:column-reverse;"]);
 
-  if (position === 'down') {
-    return css(["flex-direction:column;align-items:center;"]);
-  }
+    case 'down':
+      return css(["flex-direction:column;"]);
 
-  if (position === 'left') {
-    return css(["flex-direction:row-reverse;align-items:center;"]);
-  }
+    case 'left':
+      return css(["flex-direction:row-reverse;"]);
 
-  return css(["flex-direction:row;align-items:center;"]);
+    default:
+      return css(["flex-direction:row;"]);
+  }
 };
 
 export var ArrowWrap = styled(Box).withConfig({
   displayName: "StyledTooltip__ArrowWrap",
   componentId: "sc-7ieemc-1"
-})(["", ""], function (props) {
+})(["align-items:center;", ""], function (props) {
   return Alignment(props);
 });

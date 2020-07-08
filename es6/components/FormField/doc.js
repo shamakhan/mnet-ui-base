@@ -11,6 +11,7 @@ export var doc = function doc(FormField) {
     info: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).description("Any informational text regarding the field's value"),
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).description('A short label describing the field'),
     name: PropTypes.string.description("The name of the value data when in a Form and the name of\n      the input field."),
+    width: PropTypes.string.description("The width of the field."),
     margin: marginProp,
     pad: PropTypes.bool.description('Whether to add padding to align with the padding of TextInput.'),
     required: PropTypes.bool.description('Whether the field is required.'),

@@ -133,6 +133,8 @@ Object.keys(statusColors).forEach(function (color) {
 });
 
 var generate = function generate(baseSpacing, scale) {
+  var _deepMerge;
+
   if (baseSpacing === void 0) {
     baseSpacing = 24;
   }
@@ -158,7 +160,7 @@ var generate = function generate(baseSpacing, scale) {
 
   var borderWidth = 2;
   var controlBorderWidth = 1;
-  var result = (0, _object.deepMerge)(_base.base, {
+  var result = (0, _object.deepMerge)(_base.base, (_deepMerge = {
     global: {
       active: {
         background: {
@@ -1274,7 +1276,12 @@ var generate = function generate(baseSpacing, scale) {
       tipSize: '5px',
       round: 'small'
     }
-  });
+  }, _deepMerge["tooptip"] = {
+    background: 'dark-1',
+    color: 'white',
+    tipSize: '5px',
+    round: 'small'
+  }, _deepMerge));
   return (0, _object.deepFreeze)(result);
 };
 

@@ -71,7 +71,7 @@ var Tooltip = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       return setOver(true);
     },
     onMouseOut: function onMouseOut() {
-      return setOver(true);
+      return setOver(false);
     },
     onFocus: function onFocus() {},
     onBlur: function onBlur() {}

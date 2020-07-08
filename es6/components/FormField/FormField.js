@@ -13,6 +13,9 @@ import { RadioButtonGroup } from '../RadioButtonGroup';
 import { Text } from '../Text';
 import { TextInput } from '../TextInput';
 import { FormContext } from '../Form/FormContext';
+import { Drop } from '../Drop';
+import { Button } from '../Button';
+import { Tooltip } from '../Tooltip';
 var mnetInputNames = ['TextInput', 'Select', 'MaskedInput', 'TextArea'];
 var mnetInputPadNames = ['CheckBox', 'CheckBoxGroup', 'RadioButtonGroup', 'RangeInput'];
 
@@ -69,7 +72,15 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
       required = _ref2.required,
       style = _ref2.style,
       validate = _ref2.validate,
-      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "className", "component", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onFocus", "pad", "required", "style", "validate"]);
+      _ref2$direction = _ref2.direction,
+      direction = _ref2$direction === void 0 ? 'column' : _ref2$direction,
+      postfix = _ref2.postfix,
+      prefix = _ref2.prefix,
+      _ref2$labelWidth = _ref2.labelWidth,
+      labelWidth = _ref2$labelWidth === void 0 ? 0 : _ref2$labelWidth,
+      _ref2$width = _ref2.width,
+      width = _ref2$width === void 0 ? 'auto' : _ref2$width,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "className", "component", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onFocus", "pad", "required", "style", "validate", "direction", "postfix", "prefix", "labelWidth", "width"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var context = useContext(FormContext);
@@ -222,7 +233,19 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
     }
   }
 
-  contents = /*#__PURE__*/React.createElement(Box, contentProps, contents);
+  contents = /*#__PURE__*/React.createElement(Box, _extends({}, contentProps, {
+    width: width
+  }), /*#__PURE__*/React.createElement(Box, {
+    direction: "row"
+  }, prefix && /*#__PURE__*/React.createElement(Box, _extends({}, formFieldTheme.prefix, {
+    style: {
+      wordBreak: 'normal'
+    }
+  }), prefix), contents, postfix && /*#__PURE__*/React.createElement(Box, _extends({}, formFieldTheme.postfix, {
+    style: {
+      wordBreak: 'normal'
+    }
+  }), postfix)));
   var borderColor;
 
   if (disabled && formFieldTheme.disabled.border && formFieldTheme.disabled.border.color) {
@@ -295,6 +318,12 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
     }
   }
 
+  var layoutType = direction && direction === 'row' ? {
+    flexDirection: direction,
+    alignItems: 'center'
+  } : {
+    flexDirection: direction
+  };
   var outerProps = themeBorder && themeBorder.position === 'outer' ? {
     border: _extends({}, themeBorder, {
       color: borderColor
@@ -318,16 +347,22 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
       if (onFieldBlur) onFieldBlur(event);
       if (_onBlur) _onBlur(event);
     }
-  }, containerRest), label && component !== CheckBox || help ? /*#__PURE__*/React.createElement(React.Fragment, null, label && component !== CheckBox && /*#__PURE__*/React.createElement(Text, _extends({
+  }, containerRest), /*#__PURE__*/React.createElement(Box, {
+    style: _extends({}, layoutType)
+  }, /*#__PURE__*/React.createElement(Box, _extends({}, labelStyle, {
+    width: labelWidth
+  }), label && component !== CheckBox && /*#__PURE__*/React.createElement(Text, {
     as: "label",
     htmlFor: htmlFor
-  }, labelStyle), label), /*#__PURE__*/React.createElement(Message, _extends({
-    message: help
-  }, formFieldTheme.help))) : undefined, contents, /*#__PURE__*/React.createElement(Message, _extends({
+  }, label)), /*#__PURE__*/React.createElement(Box, null, contents, /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Message, _extends({
     message: normalizedError
-  }, formFieldTheme.error)), /*#__PURE__*/React.createElement(Message, _extends({
+  }, formFieldTheme.error, {
+    style: {
+      position: "" + (direction === 'row' ? 'absolute' : 'static')
+    }
+  }))), /*#__PURE__*/React.createElement(Message, _extends({
     message: normalizedInfo
-  }, formFieldTheme.info)));
+  }, formFieldTheme.info)))));
 });
 FormField.displayName = 'FormField';
 var FormFieldDoc;
