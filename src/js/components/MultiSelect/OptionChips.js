@@ -56,7 +56,7 @@ const OptionChips = ({
   return (
     <OptionsBox>
       {Array.isArray(value) && value.length > 0 && (
-        <Box height={layout === 'single-column' ? height : 'auto'}>
+        <Box height={{ max: layout === 'single-column' ? height : 'auto' }}>
           {inclusionExclusion && isExcluded !== null && (
             <IncExcHeader {...theme.multiselect.rightPanel.incExcHeader.box}>
               <Text {...theme.multiselect.rightPanel.incExcHeader.text}>
