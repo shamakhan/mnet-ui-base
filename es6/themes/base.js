@@ -774,8 +774,8 @@ export var generate = function generate(baseSpacing, scale) {
       error: {
         color: 'status-critical',
         margin: {
-          vertical: 'xsmall',
-          horizontal: 'small'
+          vertical: 'medium',
+          horizontal: 'none'
         } // background: undefined,
 
       },
@@ -790,17 +790,42 @@ export var generate = function generate(baseSpacing, scale) {
         color: 'text-xweak',
         margin: {
           vertical: 'xsmall',
-          horizontal: 'small'
+          left: 'medium'
         }
       },
       label: {
         margin: {
           vertical: 'xsmall',
           horizontal: 'small'
-        }
+        },
+        width: 'xxsmall'
       },
       margin: {
         bottom: 'small'
+      },
+      postfix: {
+        color: 'white',
+        background: 'dark-3',
+        justify: 'center',
+        pad: {
+          horizontal: 'medium',
+          vertical: 'medium'
+        }
+      },
+      prefix: {
+        color: 'white',
+        background: 'dark-3',
+        justify: 'center',
+        pad: {
+          horizontal: 'medium',
+          vertical: 'medium'
+        }
+      },
+      extend: {
+        button: {
+          flex: 1,
+          border: 'none'
+        }
       } // round: undefined,
 
     },

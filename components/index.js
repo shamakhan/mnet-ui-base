@@ -401,6 +401,13 @@ Object.keys(_TextInput).forEach(function (key) {
   exports[key] = _TextInput[key];
 });
 
+var _Pagination = require("./Pagination");
+
+Object.keys(_Pagination).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _Pagination[key];
+});
+
 var _Tooltip = require("./Tooltip");
 
 Object.keys(_Tooltip).forEach(function (key) {
