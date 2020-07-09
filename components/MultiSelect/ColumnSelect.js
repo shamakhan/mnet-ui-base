@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.SingleColumnSelect = void 0;
+exports.ColumnSelect = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -12,6 +12,8 @@ var _defaultProps = require("../../default-props");
 var _InfiniteScroll = require("../InfiniteScroll");
 
 var _Text = require("../Text");
+
+var _Box = require("../Box");
 
 var _StyledMultiSelect = require("./StyledMultiSelect");
 
@@ -29,7 +31,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-var SingleColumnSelect = function SingleColumnSelect(_ref) {
+var ColumnSelect = function ColumnSelect(_ref) {
   var options = _ref.options,
       value = _ref.value,
       isSelected = _ref.isSelected,
@@ -44,14 +46,21 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
       onCancel = _ref.onCancel,
       onUpdate = _ref.onUpdate,
       setValues = _ref.setValues,
+      layout = _ref.layout,
       width = _ref.width,
+      height = _ref.height,
       emptySearchMessage = _ref.emptySearchMessage,
+      showSelectAll = _ref.showSelectAll,
       showOptionChips = _ref.showOptionChips,
       showControlButtons = _ref.showControlButtons,
+      inclusionExclusion = _ref.inclusionExclusion,
+      isExcluded = _ref.isExcluded,
+      setIncExcVal = _ref.setIncExcVal,
       renderSearch = _ref.renderSearch,
       searchPlaceholder = _ref.searchPlaceholder,
       searchValue = _ref.searchValue,
-      onSearchChange = _ref.onSearchChange;
+      onSearchChange = _ref.onSearchChange,
+      renderEmptySelected = _ref.renderEmptySelected;
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -60,11 +69,46 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
   var allSelected = options.every(function (item, index) {
     return isSelected(index);
   });
+
+  var setOption = function setOption(event, type, index) {
+    setIncExcVal(type);
+    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, ind) {
+      return optionValue(ind);
+    }));
+  };
+
+  var renderOptionChips = function renderOptionChips() {
+    return /*#__PURE__*/_react["default"].createElement(_OptionChips.OptionChips, {
+      width: width,
+      height: height || 'small',
+      options: options,
+      value: value,
+      isSelected: isSelected,
+      optionLabel: optionLabel,
+      selectOption: selectOption,
+      clearAll: setValues,
+      inclusionExclusion: inclusionExclusion,
+      isExcluded: isExcluded,
+      renderEmptySelected: renderEmptySelected,
+      layout: layout
+    });
+  };
+
   return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, renderSearch && /*#__PURE__*/_react["default"].createElement(_Searchbox.Searchbox, {
     placeholder: searchPlaceholder,
     value: searchValue,
-    onValueChange: onSearchChange
-  }), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionsBox, {
+    onValueChange: onSearchChange,
+    layout: layout
+  }), /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+    direction: "row",
+    height: height || 'small'
+  }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+    width: width,
+    border: [{
+      side: 'bottom',
+      color: theme.multiselect.rightPanel.border
+    }]
+  }, /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionsBox, {
     role: "menubar",
     tabIndex: "-1"
   }, options.length > 0 ? /*#__PURE__*/_react["default"].createElement(_InfiniteScroll.InfiniteScroll, {
@@ -77,7 +121,7 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
     var optionDisabled = isDisabled(index);
     var optionSelected = isSelected(index);
     var optionActive = activeIndex === index;
-    return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, index === 0 && /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.SelectOption // eslint-disable-next-line react/no-array-index-key
+    return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, index === 0 && showSelectAll && /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.SelectOption // eslint-disable-next-line react/no-array-index-key
     , {
       key: index + "_select_all",
       tabIndex: "-1",
@@ -85,31 +129,41 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
       hoverIndicator: "light-5",
       selected: allSelected,
       plain: true,
-      onClick: function onClick() {
+      onClick: !inclusionExclusion || inclusionExclusion && isExcluded !== null ? function () {
         return setValues(allSelected ? [] : options.map(function (item, ind) {
           return optionValue(ind);
         }));
-      }
+      } : undefined
     }, /*#__PURE__*/_react["default"].createElement(_OptionWithCheckControl.OptionWithCheckControl, {
       selected: allSelected,
-      label: "Select All"
+      label: "Select All",
+      inclusionExclusion: inclusionExclusion,
+      isExcluded: isExcluded,
+      onSelect: function onSelect(event, type) {
+        return setOption(event, type, -1);
+      }
     })), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.SelectOption // eslint-disable-next-line react/no-array-index-key
     , {
       key: index,
       ref: optionRef,
       tabIndex: "-1",
       role: "menuitem",
-      hoverIndicator: "light-5",
+      hoverIndicator: theme.select.activeColor,
       disabled: optionDisabled || undefined,
       active: optionActive,
       selected: optionSelected,
       option: option,
       plain: true,
       onMouseOver: !optionDisabled ? onActiveOption(index) : undefined,
-      onClick: !optionDisabled ? selectOption(index) : undefined
+      onClick: !optionDisabled && !inclusionExclusion || !optionDisabled && inclusionExclusion && isExcluded !== null ? selectOption(index) : undefined
     }, /*#__PURE__*/_react["default"].createElement(_OptionWithCheckControl.OptionWithCheckControl, {
       selected: optionSelected,
-      label: optionLabel(index)
+      label: optionLabel(index),
+      inclusionExclusion: inclusionExclusion,
+      isExcluded: isExcluded,
+      onSelect: function onSelect(event, type) {
+        return setOption(event, type, index);
+      }
     })));
   }) : /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.SelectOption, {
     key: "search_empty",
@@ -118,18 +172,19 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
     hoverIndicator: "background",
     disabled: true,
     option: "No values available"
-  }, /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionBox, selectOptionsStyle, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.select.container.text, emptySearchMessage || 'No values available')))), showOptionChips && /*#__PURE__*/_react["default"].createElement(_OptionChips.OptionChips, {
+  }, /*#__PURE__*/_react["default"].createElement(_Box.Box, selectOptionsStyle, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.select.container.text, emptySearchMessage || 'No values available'))))), layout === 'double-column' && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     width: width,
-    options: options,
-    value: value,
-    isSelected: isSelected,
-    optionLabel: optionLabel,
-    selectOption: selectOption,
-    clearAll: setValues
-  }), showControlButtons && /*#__PURE__*/_react["default"].createElement(_ControlButton.ControlButton, {
+    border: [{
+      side: 'left',
+      color: theme.multiselect.rightPanel.border
+    }, {
+      side: 'bottom',
+      color: theme.multiselect.rightPanel.border
+    }]
+  }, renderOptionChips())), showOptionChips && layout === 'single-column' && renderOptionChips(), showControlButtons && /*#__PURE__*/_react["default"].createElement(_ControlButton.ControlButton, {
     onUpdate: onUpdate,
     onCancel: onCancel
   }));
 };
 
-exports.SingleColumnSelect = SingleColumnSelect;
+exports.ColumnSelect = ColumnSelect;

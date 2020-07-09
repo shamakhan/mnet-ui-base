@@ -2,16 +2,17 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from '../Box';
 import { Select } from '../Select';
 import useCustomSelectState from './useCustomSelectState';
-import { SingleColumnSelect } from './SingleColumnSelect';
+import { ColumnSelect } from './ColumnSelect';
 import { ValueLabelWithNumber } from './ValueLabelWithNumber';
 import { applyKey } from './utils';
 
 var MultiSelect = function MultiSelect(_ref) {
   var width = _ref.width,
+      height = _ref.height,
       options = _ref.options,
       value = _ref.value,
       labelKey = _ref.labelKey,
@@ -21,10 +22,15 @@ var MultiSelect = function MultiSelect(_ref) {
       onSearch = _ref.onSearch,
       searchPlaceholder = _ref.searchPlaceholder,
       emptySearchMessage = _ref.emptySearchMessage,
+      withSelectAll = _ref.withSelectAll,
       withOptionChips = _ref.withOptionChips,
       withUpdateCancelButtons = _ref.withUpdateCancelButtons,
       searchable = _ref.searchable,
-      rest = _objectWithoutPropertiesLoose(_ref, ["width", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withOptionChips", "withUpdateCancelButtons", "searchable"]);
+      withInclusionExclusion = _ref.withInclusionExclusion,
+      isExcluded = _ref.isExcluded,
+      onIncExcChange = _ref.onIncExcChange,
+      renderEmptySelected = _ref.renderEmptySelected,
+      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected"]);
 
   var _useCustomSelectState = useCustomSelectState(options, value),
       filteredOptions = _useCustomSelectState.filteredOptions,
@@ -32,6 +38,10 @@ var MultiSelect = function MultiSelect(_ref) {
       open = _useCustomSelectState.open,
       searchVal = _useCustomSelectState.searchVal,
       setSelectState = _useCustomSelectState.setSelectState;
+
+  useEffect(function () {
+    if (withInclusionExclusion && value.length === 0) onIncExcChange(null);
+  }, [onIncExcChange, value, withInclusionExclusion]);
 
   var onCancelClick = function onCancelClick() {
     onValueChange(previousValue);
@@ -72,9 +82,11 @@ var MultiSelect = function MultiSelect(_ref) {
   };
 
   var renderContent = function renderContent(props) {
-    if (layout === 'single-column') {
-      return /*#__PURE__*/React.createElement(SingleColumnSelect, _extends({
+    if (['single-column', 'double-column'].includes(layout)) {
+      return /*#__PURE__*/React.createElement(ColumnSelect, _extends({
+        layout: layout,
         width: width,
+        height: height,
         onUpdate: function onUpdate() {
           return setSelectState({
             open: false,
@@ -86,14 +98,21 @@ var MultiSelect = function MultiSelect(_ref) {
           return onSelectValueChange(nextValue);
         },
         emptySearchMessage: emptySearchMessage,
+        showSelectAll: withSelectAll,
         showOptionChips: withOptionChips,
         showControlButtons: withUpdateCancelButtons,
+        inclusionExclusion: withInclusionExclusion,
+        isExcluded: isExcluded,
+        setIncExcVal: function setIncExcVal(incExc) {
+          return onIncExcChange(incExc);
+        },
         renderSearch: searchable && !onSearch,
         searchPlaceholder: searchPlaceholder,
         searchValue: searchVal || '',
         onSearchChange: function onSearchChange(search) {
           return _onSearchChange(search);
-        }
+        },
+        renderEmptySelected: renderEmptySelected
       }, props));
     }
 
@@ -101,8 +120,14 @@ var MultiSelect = function MultiSelect(_ref) {
   };
 
   var renderLabel = function renderLabel() {
+    var getLabel = function getLabel() {
+      if (withInclusionExclusion && isExcluded) return 'Excluded';
+      if (withInclusionExclusion && isExcluded === false) return 'Included';
+      return 'Selected';
+    };
+
     return /*#__PURE__*/React.createElement(ValueLabelWithNumber, {
-      value: "Selected",
+      value: getLabel(),
       number: value.length,
       color: "brand"
     });

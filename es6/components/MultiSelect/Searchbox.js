@@ -1,14 +1,17 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Search } from 'grommet-icons/icons/Search';
-import { Box } from '../Box';
 import { Text } from '../Text';
 import { TextInput } from '../TextInput';
+import { SearchWrapper } from './StyledMultiSelect';
 
 var Searchbox = function Searchbox(_ref) {
   var placeholder = _ref.placeholder,
       value = _ref.value,
-      onValueChange = _ref.onValueChange;
+      onValueChange = _ref.onValueChange,
+      layout = _ref.layout;
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
   var handleChange = function handleChange(textValue) {
@@ -16,7 +19,9 @@ var Searchbox = function Searchbox(_ref) {
     return null;
   };
 
-  return /*#__PURE__*/React.createElement(Box, theme.multiselect.searchbox.container, /*#__PURE__*/React.createElement(TextInput, {
+  return /*#__PURE__*/React.createElement(SearchWrapper, _extends({
+    layout: layout
+  }, theme.multiselect.searchbox.container), /*#__PURE__*/React.createElement(TextInput, {
     plain: true,
     value: value,
     valueLabel: /*#__PURE__*/React.createElement(Text, null, "value"),

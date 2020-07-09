@@ -32,6 +32,10 @@ var Example = function Example() {
       value = _useState[0],
       setValue = _useState[1];
 
+  var _useState2 = (0, _react.useState)(null),
+      isExcluded = _useState2[0],
+      setIncExc = _useState2[1];
+
   return /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     fill: true,
     align: "center",
@@ -48,17 +52,20 @@ var Example = function Example() {
     onValueChange: function onValueChange(nextValue) {
       return setValue(nextValue);
     },
-    layout: "single-column",
+    layout: "double-column",
     width: "medium",
-    height: "small",
     searchPlaceholder: "Search",
     searchable: true,
-    withSelectAll: true,
     withOptionChips: true,
-    withUpdateCancelButtons: true
+    withInclusionExclusion: true,
+    isExcluded: isExcluded,
+    onIncExcChange: function onIncExcChange(nextIncExc) {
+      return setIncExc(nextIncExc);
+    },
+    renderEmptySelected: /*#__PURE__*/_react["default"].createElement("span", null, "Empty")
   }));
 };
 
-(0, _react2.storiesOf)('MultiSelect', module).add('Single Column', function () {
+(0, _react2.storiesOf)('MultiSelect', module).add('Double Column without Control Buttons', function () {
   return /*#__PURE__*/_react["default"].createElement(Example, null);
 });

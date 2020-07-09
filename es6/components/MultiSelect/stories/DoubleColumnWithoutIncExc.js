@@ -39,17 +39,15 @@ var Example = function Example() {
     onValueChange: function onValueChange(nextValue) {
       return setValue(nextValue);
     },
-    layout: "single-column",
+    layout: "double-column",
     width: "medium",
-    height: "small",
     searchPlaceholder: "Search",
     searchable: true,
-    withSelectAll: true,
     withOptionChips: true,
-    withUpdateCancelButtons: true
+    renderEmptySelected: /*#__PURE__*/React.createElement("span", null, "Empty")
   }));
 };
 
-storiesOf('MultiSelect', module).add('Single Column', function () {
+storiesOf('MultiSelect', module).add('Double Column without Inclusion / Exclusion', function () {
   return /*#__PURE__*/React.createElement(Example, null);
 });

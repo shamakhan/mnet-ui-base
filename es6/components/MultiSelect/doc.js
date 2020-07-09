@@ -57,10 +57,16 @@ export var doc = function doc(MultiSelect) {
     renderOptionBottom: PropTypes.func.description("Render custom bottom panel component below the option list"),
     renderCustomContent: PropTypes.func.description("Render custom select component"),
     width: PropTypes.string.description("Width for the multiselect dropdown").defaultValue('auto'),
+    height: PropTypes.string.description("Height for the multiselect dropdown option panel").defaultValue('medium'),
     onValueChange: PropTypes.func.description('Function that will be called when the user selects an option.'),
     layout: PropTypes.oneOf(['single-column', 'double-column']).description("Column layout for custom multiselect dropdown"),
+    withSelectAll: PropTypes.bool.description("Control flag to add select all option feature").defaultValue(false),
     withOptionChips: PropTypes.bool.description("Control to show the selected option chips").defaultValue(false),
-    withUpdateCancelButtons: PropTypes.bool.description("Control to show the control buttons with OK and Cancel values").defaultValue(false)
+    withUpdateCancelButtons: PropTypes.bool.description("Control to show the control buttons with OK and Cancel values").defaultValue(false),
+    withInclusionExclusion: PropTypes.bool.description("Control for include / exclude feature").defaultValue(false),
+    isExcluded: PropTypes.oneOf([null, true, false]).description("Flag for identifying whether selected options \n      are included or exluded").defaultValue(null),
+    onIncExcChange: PropTypes.func.description("Function to return the included/excluded value"),
+    renderEmptySelected: PropTypes.node.description("Component for rendering when no options are selected")
   });
   return DocumentedSelect;
 };

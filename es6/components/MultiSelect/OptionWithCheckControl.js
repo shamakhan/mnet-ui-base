@@ -3,27 +3,38 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { FormCheckmark } from 'grommet-icons/icons/FormCheckmark';
+import { FormClose } from 'grommet-icons/icons/FormClose';
 import { Box } from '../Box';
 import { Text } from '../Text';
-import { OptionBox, CheckBoxWrapper } from './StyledMultiSelect';
+import { CheckBoxWrapper, CheckBox } from './StyledMultiSelect';
 
 var OptionWithCheckControl = function OptionWithCheckControl(_ref) {
   var selected = _ref.selected,
-      label = _ref.label;
+      label = _ref.label,
+      inclusionExclusion = _ref.inclusionExclusion,
+      isExcluded = _ref.isExcluded,
+      onSelect = _ref.onSelect;
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
 
-  return /*#__PURE__*/React.createElement(OptionBox, _extends({}, selectOptionsStyle, {
+  var renderCheckbox = function renderCheckbox(check, exc) {
+    return /*#__PURE__*/React.createElement(CheckBoxWrapper, theme.multiselect.checkbox.box, /*#__PURE__*/React.createElement(CheckBox, _extends({}, theme.multiselect.checkbox.check, {
+      active: selected || inclusionExclusion && isExcluded === null,
+      isExcluded: exc,
+      onClick: inclusionExclusion && isExcluded === null ? function (event) {
+        return onSelect(event, exc);
+      } : undefined
+    }), (selected || inclusionExclusion && isExcluded === null) && /*#__PURE__*/React.createElement(React.Fragment, null, check === 'check' && /*#__PURE__*/React.createElement(FormCheckmark, theme.multiselect.checkbox.checkmark), check === 'cross' && /*#__PURE__*/React.createElement(FormClose, theme.multiselect.checkbox.checkmark))));
+  };
+
+  return /*#__PURE__*/React.createElement(Box, _extends({}, selectOptionsStyle, {
     selected: selected
-  }), /*#__PURE__*/React.createElement(Box, {
+  }), /*#__PURE__*/React.createElement(Box, theme.multiselect.option, /*#__PURE__*/React.createElement(Box, {
     direction: "row"
-  }, /*#__PURE__*/React.createElement(CheckBoxWrapper, theme.multiselect.checkbox.box, /*#__PURE__*/React.createElement(Box, _extends({}, theme.multiselect.checkbox.check, {
-    background: selected ? theme.multiselect.checkbox.check.active.background : 'white',
-    border: {
-      color: selected ? theme.multiselect.checkbox.check.active.background : theme.multiselect.checkbox.check.active.border
-    }
-  }), selected && /*#__PURE__*/React.createElement(FormCheckmark, theme.multiselect.checkbox.checkmark))), /*#__PURE__*/React.createElement(Text, theme.select.options.text, label)));
+  }, !inclusionExclusion && renderCheckbox('check', null), /*#__PURE__*/React.createElement(Text, theme.select.options.text, label)), inclusionExclusion && /*#__PURE__*/React.createElement(Box, {
+    direction: "row"
+  }, [null, false].includes(isExcluded) && renderCheckbox('check', false), [null, true].includes(isExcluded) && renderCheckbox('cross', true))));
 };
 
 export { OptionWithCheckControl };

@@ -64,10 +64,16 @@ var doc = function doc(MultiSelect) {
     renderOptionBottom: _reactDesc.PropTypes.func.description("Render custom bottom panel component below the option list"),
     renderCustomContent: _reactDesc.PropTypes.func.description("Render custom select component"),
     width: _reactDesc.PropTypes.string.description("Width for the multiselect dropdown").defaultValue('auto'),
+    height: _reactDesc.PropTypes.string.description("Height for the multiselect dropdown option panel").defaultValue('medium'),
     onValueChange: _reactDesc.PropTypes.func.description('Function that will be called when the user selects an option.'),
     layout: _reactDesc.PropTypes.oneOf(['single-column', 'double-column']).description("Column layout for custom multiselect dropdown"),
+    withSelectAll: _reactDesc.PropTypes.bool.description("Control flag to add select all option feature").defaultValue(false),
     withOptionChips: _reactDesc.PropTypes.bool.description("Control to show the selected option chips").defaultValue(false),
-    withUpdateCancelButtons: _reactDesc.PropTypes.bool.description("Control to show the control buttons with OK and Cancel values").defaultValue(false)
+    withUpdateCancelButtons: _reactDesc.PropTypes.bool.description("Control to show the control buttons with OK and Cancel values").defaultValue(false),
+    withInclusionExclusion: _reactDesc.PropTypes.bool.description("Control for include / exclude feature").defaultValue(false),
+    isExcluded: _reactDesc.PropTypes.oneOf([null, true, false]).description("Flag for identifying whether selected options \n      are included or exluded").defaultValue(null),
+    onIncExcChange: _reactDesc.PropTypes.func.description("Function to return the included/excluded value"),
+    renderEmptySelected: _reactDesc.PropTypes.node.description("Component for rendering when no options are selected")
   });
   return DocumentedSelect;
 };

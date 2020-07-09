@@ -3,7 +3,7 @@
 exports.__esModule = true;
 exports.MultiSelect = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _Box = require("../Box");
 
@@ -11,7 +11,7 @@ var _Select = require("../Select");
 
 var _useCustomSelectState2 = _interopRequireDefault(require("./useCustomSelectState"));
 
-var _SingleColumnSelect = require("./SingleColumnSelect");
+var _ColumnSelect = require("./ColumnSelect");
 
 var _ValueLabelWithNumber = require("./ValueLabelWithNumber");
 
@@ -19,12 +19,17 @@ var _utils = require("./utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var MultiSelect = function MultiSelect(_ref) {
   var width = _ref.width,
+      height = _ref.height,
       options = _ref.options,
       value = _ref.value,
       labelKey = _ref.labelKey,
@@ -34,10 +39,15 @@ var MultiSelect = function MultiSelect(_ref) {
       onSearch = _ref.onSearch,
       searchPlaceholder = _ref.searchPlaceholder,
       emptySearchMessage = _ref.emptySearchMessage,
+      withSelectAll = _ref.withSelectAll,
       withOptionChips = _ref.withOptionChips,
       withUpdateCancelButtons = _ref.withUpdateCancelButtons,
       searchable = _ref.searchable,
-      rest = _objectWithoutPropertiesLoose(_ref, ["width", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withOptionChips", "withUpdateCancelButtons", "searchable"]);
+      withInclusionExclusion = _ref.withInclusionExclusion,
+      isExcluded = _ref.isExcluded,
+      onIncExcChange = _ref.onIncExcChange,
+      renderEmptySelected = _ref.renderEmptySelected,
+      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected"]);
 
   var _useCustomSelectState = (0, _useCustomSelectState2["default"])(options, value),
       filteredOptions = _useCustomSelectState.filteredOptions,
@@ -45,6 +55,10 @@ var MultiSelect = function MultiSelect(_ref) {
       open = _useCustomSelectState.open,
       searchVal = _useCustomSelectState.searchVal,
       setSelectState = _useCustomSelectState.setSelectState;
+
+  (0, _react.useEffect)(function () {
+    if (withInclusionExclusion && value.length === 0) onIncExcChange(null);
+  }, [onIncExcChange, value, withInclusionExclusion]);
 
   var onCancelClick = function onCancelClick() {
     onValueChange(previousValue);
@@ -85,9 +99,11 @@ var MultiSelect = function MultiSelect(_ref) {
   };
 
   var renderContent = function renderContent(props) {
-    if (layout === 'single-column') {
-      return /*#__PURE__*/_react["default"].createElement(_SingleColumnSelect.SingleColumnSelect, _extends({
+    if (['single-column', 'double-column'].includes(layout)) {
+      return /*#__PURE__*/_react["default"].createElement(_ColumnSelect.ColumnSelect, _extends({
+        layout: layout,
         width: width,
+        height: height,
         onUpdate: function onUpdate() {
           return setSelectState({
             open: false,
@@ -99,14 +115,21 @@ var MultiSelect = function MultiSelect(_ref) {
           return onSelectValueChange(nextValue);
         },
         emptySearchMessage: emptySearchMessage,
+        showSelectAll: withSelectAll,
         showOptionChips: withOptionChips,
         showControlButtons: withUpdateCancelButtons,
+        inclusionExclusion: withInclusionExclusion,
+        isExcluded: isExcluded,
+        setIncExcVal: function setIncExcVal(incExc) {
+          return onIncExcChange(incExc);
+        },
         renderSearch: searchable && !onSearch,
         searchPlaceholder: searchPlaceholder,
         searchValue: searchVal || '',
         onSearchChange: function onSearchChange(search) {
           return _onSearchChange(search);
-        }
+        },
+        renderEmptySelected: renderEmptySelected
       }, props));
     }
 
@@ -114,8 +137,14 @@ var MultiSelect = function MultiSelect(_ref) {
   };
 
   var renderLabel = function renderLabel() {
+    var getLabel = function getLabel() {
+      if (withInclusionExclusion && isExcluded) return 'Excluded';
+      if (withInclusionExclusion && isExcluded === false) return 'Included';
+      return 'Selected';
+    };
+
     return /*#__PURE__*/_react["default"].createElement(_ValueLabelWithNumber.ValueLabelWithNumber, {
-      value: "Selected",
+      value: getLabel(),
       number: value.length,
       color: "brand"
     });

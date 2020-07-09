@@ -48,7 +48,9 @@ var OptionBox = (0, _styledComponents["default"])(_Box.Box).withConfig({
 var SelectOption = (0, _styledComponents["default"])(_Button.Button).withConfig({
   displayName: "SelectContainer__SelectOption",
   componentId: "sc-64fnsh-2"
-})(["display:block;width:100%;"]);
+})(["display:block;width:100%;background:", ";"], function (props) {
+  return props.active ? props.theme.select.activeColor : 'transparent';
+});
 var SelectContainer = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var _ref$children = _ref.children,
       children = _ref$children === void 0 ? null : _ref$children,
@@ -342,7 +344,7 @@ var SelectContainer = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       ref: optionRef,
       tabIndex: "-1",
       role: "menuitem",
-      hoverIndicator: "light-5",
+      hoverIndicator: theme.select.activeColor,
       disabled: optionDisabled || undefined,
       active: optionActive,
       selected: optionSelected,

@@ -5,13 +5,14 @@ import { ThemeContext } from 'styled-components';
 import { defaultProps } from '../../default-props';
 import { InfiniteScroll } from '../InfiniteScroll';
 import { Text } from '../Text';
-import { OptionBox, OptionsBox, SelectOption } from './StyledMultiSelect';
+import { Box } from '../Box';
+import { OptionsBox, SelectOption } from './StyledMultiSelect';
 import { OptionWithCheckControl } from './OptionWithCheckControl';
 import { OptionChips } from './OptionChips';
 import { ControlButton } from './ControlButton';
 import { Searchbox } from './Searchbox';
 
-var SingleColumnSelect = function SingleColumnSelect(_ref) {
+var ColumnSelect = function ColumnSelect(_ref) {
   var options = _ref.options,
       value = _ref.value,
       isSelected = _ref.isSelected,
@@ -26,14 +27,21 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
       onCancel = _ref.onCancel,
       onUpdate = _ref.onUpdate,
       setValues = _ref.setValues,
+      layout = _ref.layout,
       width = _ref.width,
+      height = _ref.height,
       emptySearchMessage = _ref.emptySearchMessage,
+      showSelectAll = _ref.showSelectAll,
       showOptionChips = _ref.showOptionChips,
       showControlButtons = _ref.showControlButtons,
+      inclusionExclusion = _ref.inclusionExclusion,
+      isExcluded = _ref.isExcluded,
+      setIncExcVal = _ref.setIncExcVal,
       renderSearch = _ref.renderSearch,
       searchPlaceholder = _ref.searchPlaceholder,
       searchValue = _ref.searchValue,
-      onSearchChange = _ref.onSearchChange;
+      onSearchChange = _ref.onSearchChange,
+      renderEmptySelected = _ref.renderEmptySelected;
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
@@ -41,11 +49,46 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
   var allSelected = options.every(function (item, index) {
     return isSelected(index);
   });
+
+  var setOption = function setOption(event, type, index) {
+    setIncExcVal(type);
+    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, ind) {
+      return optionValue(ind);
+    }));
+  };
+
+  var renderOptionChips = function renderOptionChips() {
+    return /*#__PURE__*/React.createElement(OptionChips, {
+      width: width,
+      height: height || 'small',
+      options: options,
+      value: value,
+      isSelected: isSelected,
+      optionLabel: optionLabel,
+      selectOption: selectOption,
+      clearAll: setValues,
+      inclusionExclusion: inclusionExclusion,
+      isExcluded: isExcluded,
+      renderEmptySelected: renderEmptySelected,
+      layout: layout
+    });
+  };
+
   return /*#__PURE__*/React.createElement(React.Fragment, null, renderSearch && /*#__PURE__*/React.createElement(Searchbox, {
     placeholder: searchPlaceholder,
     value: searchValue,
-    onValueChange: onSearchChange
-  }), /*#__PURE__*/React.createElement(OptionsBox, {
+    onValueChange: onSearchChange,
+    layout: layout
+  }), /*#__PURE__*/React.createElement(Box, {
+    direction: "row",
+    height: height || 'small'
+  }, /*#__PURE__*/React.createElement(Box, {
+    width: width,
+    border: [{
+      side: 'bottom',
+      color: theme.multiselect.rightPanel.border
+    }]
+  }, /*#__PURE__*/React.createElement(OptionsBox, {
     role: "menubar",
     tabIndex: "-1"
   }, options.length > 0 ? /*#__PURE__*/React.createElement(InfiniteScroll, {
@@ -58,7 +101,7 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
     var optionDisabled = isDisabled(index);
     var optionSelected = isSelected(index);
     var optionActive = activeIndex === index;
-    return /*#__PURE__*/React.createElement(React.Fragment, null, index === 0 && /*#__PURE__*/React.createElement(SelectOption // eslint-disable-next-line react/no-array-index-key
+    return /*#__PURE__*/React.createElement(React.Fragment, null, index === 0 && showSelectAll && /*#__PURE__*/React.createElement(SelectOption // eslint-disable-next-line react/no-array-index-key
     , {
       key: index + "_select_all",
       tabIndex: "-1",
@@ -66,31 +109,41 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
       hoverIndicator: "light-5",
       selected: allSelected,
       plain: true,
-      onClick: function onClick() {
+      onClick: !inclusionExclusion || inclusionExclusion && isExcluded !== null ? function () {
         return setValues(allSelected ? [] : options.map(function (item, ind) {
           return optionValue(ind);
         }));
-      }
+      } : undefined
     }, /*#__PURE__*/React.createElement(OptionWithCheckControl, {
       selected: allSelected,
-      label: "Select All"
+      label: "Select All",
+      inclusionExclusion: inclusionExclusion,
+      isExcluded: isExcluded,
+      onSelect: function onSelect(event, type) {
+        return setOption(event, type, -1);
+      }
     })), /*#__PURE__*/React.createElement(SelectOption // eslint-disable-next-line react/no-array-index-key
     , {
       key: index,
       ref: optionRef,
       tabIndex: "-1",
       role: "menuitem",
-      hoverIndicator: "light-5",
+      hoverIndicator: theme.select.activeColor,
       disabled: optionDisabled || undefined,
       active: optionActive,
       selected: optionSelected,
       option: option,
       plain: true,
       onMouseOver: !optionDisabled ? onActiveOption(index) : undefined,
-      onClick: !optionDisabled ? selectOption(index) : undefined
+      onClick: !optionDisabled && !inclusionExclusion || !optionDisabled && inclusionExclusion && isExcluded !== null ? selectOption(index) : undefined
     }, /*#__PURE__*/React.createElement(OptionWithCheckControl, {
       selected: optionSelected,
-      label: optionLabel(index)
+      label: optionLabel(index),
+      inclusionExclusion: inclusionExclusion,
+      isExcluded: isExcluded,
+      onSelect: function onSelect(event, type) {
+        return setOption(event, type, index);
+      }
     })));
   }) : /*#__PURE__*/React.createElement(SelectOption, {
     key: "search_empty",
@@ -99,18 +152,19 @@ var SingleColumnSelect = function SingleColumnSelect(_ref) {
     hoverIndicator: "background",
     disabled: true,
     option: "No values available"
-  }, /*#__PURE__*/React.createElement(OptionBox, selectOptionsStyle, /*#__PURE__*/React.createElement(Text, theme.select.container.text, emptySearchMessage || 'No values available')))), showOptionChips && /*#__PURE__*/React.createElement(OptionChips, {
+  }, /*#__PURE__*/React.createElement(Box, selectOptionsStyle, /*#__PURE__*/React.createElement(Text, theme.select.container.text, emptySearchMessage || 'No values available'))))), layout === 'double-column' && /*#__PURE__*/React.createElement(Box, {
     width: width,
-    options: options,
-    value: value,
-    isSelected: isSelected,
-    optionLabel: optionLabel,
-    selectOption: selectOption,
-    clearAll: setValues
-  }), showControlButtons && /*#__PURE__*/React.createElement(ControlButton, {
+    border: [{
+      side: 'left',
+      color: theme.multiselect.rightPanel.border
+    }, {
+      side: 'bottom',
+      color: theme.multiselect.rightPanel.border
+    }]
+  }, renderOptionChips())), showOptionChips && layout === 'single-column' && renderOptionChips(), showControlButtons && /*#__PURE__*/React.createElement(ControlButton, {
     onUpdate: onUpdate,
     onCancel: onCancel
   }));
 };
 
-export { SingleColumnSelect };
+export { ColumnSelect };
