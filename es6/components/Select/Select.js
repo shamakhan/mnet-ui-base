@@ -113,23 +113,27 @@ var Select = /*#__PURE__*/forwardRef(function (_ref, ref) {
 
   var optionIndexesInValue = useMemo(function () {
     var result = [];
-    options.forEach(function (option, index) {
-      if (selected !== undefined) {
-        if (Array.isArray(selected)) {
-          if (selected.indexOf(index) !== -1) result.push(index);
-        } else if (index === selected) {
+
+    if (options) {
+      options.forEach(function (option, index) {
+        if (selected !== undefined) {
+          if (Array.isArray(selected)) {
+            if (selected.indexOf(index) !== -1) result.push(index);
+          } else if (index === selected) {
+            result.push(index);
+          }
+        } else if (Array.isArray(valuedValue)) {
+          if (valuedValue.some(function (v) {
+            return v === applyKey(option, valueKey);
+          })) {
+            result.push(index);
+          }
+        } else if (valuedValue === applyKey(option, valueKey)) {
           result.push(index);
         }
-      } else if (Array.isArray(valuedValue)) {
-        if (valuedValue.some(function (v) {
-          return v === applyKey(option, valueKey);
-        })) {
-          result.push(index);
-        }
-      } else if (valuedValue === applyKey(option, valueKey)) {
-        result.push(index);
-      }
-    });
+      });
+    }
+
     return result;
   }, [options, selected, valueKey, valuedValue]);
 

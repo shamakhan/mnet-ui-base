@@ -11,6 +11,7 @@ import { OptionWithCheckControl } from './OptionWithCheckControl';
 import { OptionChips } from './OptionChips';
 import { ControlButton } from './ControlButton';
 import { Searchbox } from './Searchbox';
+import { CustomMultiSelect } from './CustomMultiSelect';
 
 var ColumnSelect = function ColumnSelect(_ref) {
   var options = _ref.options,
@@ -41,12 +42,14 @@ var ColumnSelect = function ColumnSelect(_ref) {
       searchPlaceholder = _ref.searchPlaceholder,
       searchValue = _ref.searchValue,
       onSearchChange = _ref.onSearchChange,
-      renderEmptySelected = _ref.renderEmptySelected;
+      renderEmptySelected = _ref.renderEmptySelected,
+      onValueChange = _ref.onValueChange,
+      custom = _ref.custom;
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
 
-  var allSelected = options.every(function (item, index) {
+  var allSelected = options && options.every(function (item, index) {
     return isSelected(index);
   });
 
@@ -73,6 +76,23 @@ var ColumnSelect = function ColumnSelect(_ref) {
       layout: layout
     });
   };
+
+  if (custom) {
+    return /*#__PURE__*/React.createElement(CustomMultiSelect, {
+      value: value,
+      layout: layout,
+      onValueChange: onValueChange,
+      renderSearch: renderSearch,
+      placeholder: searchPlaceholder,
+      renderEmptySelected: renderEmptySelected,
+      width: width,
+      height: height,
+      custom: custom,
+      isExcluded: isExcluded,
+      setIncExcVal: setIncExcVal,
+      inclusionExclusion: inclusionExclusion
+    });
+  }
 
   return /*#__PURE__*/React.createElement(React.Fragment, null, renderSearch && /*#__PURE__*/React.createElement(Searchbox, {
     placeholder: searchPlaceholder,
