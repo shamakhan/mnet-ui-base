@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Box } from '../Box';
 import { Select } from '../Select';
@@ -24,7 +24,6 @@ const MultiSelect = ({
   withOptionChips,
   withUpdateCancelButtons,
   searchable,
-  custom,
   withInclusionExclusion,
   isExcluded,
   onIncExcChange,
@@ -38,6 +37,11 @@ const MultiSelect = ({
     searchVal,
     setSelectState,
   } = useCustomSelectState(options, value);
+
+  useEffect(() => {
+    if (withInclusionExclusion && value.length === 0)
+      onIncExcChange(null);
+  }, [onIncExcChange, value, withInclusionExclusion]);
 
   const onCancelClick = () => {
     onValueChange(previousValue);
@@ -61,13 +65,14 @@ const MultiSelect = ({
     if (!searchVal) onValueChange(selectValue);
     else {
       const newValue = value.slice(0);
-      const nonSelected = filteredOptions.map((val, ind) =>
-        getValue(ind, filteredOptions, valueKey),
+      const nonSelected = filteredOptions.map(
+        (val, ind) => getValue(ind, filteredOptions, valueKey),
       );
       selectValue.forEach(item => {
         if (nonSelected.includes(item))
           nonSelected.splice(nonSelected.indexOf(item), 1);
-        if (!value.includes(item)) newValue.push(item);
+        if (!value.includes(item))
+          newValue.push(item);
       });
       onValueChange(newValue.filter(item => !nonSelected.includes(item)));
     }
@@ -80,7 +85,9 @@ const MultiSelect = ({
           layout={layout}
           width={width}
           height={height}
-          onUpdate={() => setSelectState({ open: false, previousValue: value })}
+          onUpdate={() =>
+            setSelectState({ open: false, previousValue: value })
+          }
           onCancel={onCancelClick}
           setValues={nextValue => onSelectValueChange(nextValue)}
           emptySearchMessage={emptySearchMessage}
@@ -95,8 +102,6 @@ const MultiSelect = ({
           searchValue={searchVal || ''}
           onSearchChange={search => onSearchChange(search)}
           renderEmptySelected={renderEmptySelected}
-          onValueChange={onValueChange}
-          custom={custom}
           {...props}
         />
       );
@@ -106,10 +111,12 @@ const MultiSelect = ({
 
   const renderLabel = () => {
     const getLabel = () => {
-      if (withInclusionExclusion && isExcluded) return 'Excluded';
-      if (withInclusionExclusion && isExcluded === false) return 'Included';
+      if (withInclusionExclusion && isExcluded)
+        return 'Excluded';
+      if (withInclusionExclusion && isExcluded === false)
+        return 'Included';
       return 'Selected';
-    };
+    }
 
     return (
       <ValueLabelWithNumber
@@ -130,15 +137,13 @@ const MultiSelect = ({
         open={open}
         onOpen={() => setSelectState({ open: true })}
         onClose={
-          withUpdateCancelButtons
-            ? () => onValueChange(previousValue)
-            : undefined
+          withUpdateCancelButtons ?
+          () => onValueChange(previousValue) : undefined
         }
         closeOnChange={false}
         renderCustomContent={
-          ['single-column', 'double-column'].includes(layout)
-            ? props => renderContent(props)
-            : undefined
+          ['single-column', 'double-column'].includes(layout) ?
+            props => renderContent(props) : undefined
         }
         valueLabel={renderLabel()}
         labelKey={labelKey}
