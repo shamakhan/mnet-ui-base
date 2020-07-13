@@ -3,7 +3,7 @@
 exports.__esModule = true;
 exports.MultiSelect = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _Box = require("../Box");
 
@@ -18,10 +18,6 @@ var _ValueLabelWithNumber = require("./ValueLabelWithNumber");
 var _utils = require("./utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -43,11 +39,12 @@ var MultiSelect = function MultiSelect(_ref) {
       withOptionChips = _ref.withOptionChips,
       withUpdateCancelButtons = _ref.withUpdateCancelButtons,
       searchable = _ref.searchable,
+      custom = _ref.custom,
       withInclusionExclusion = _ref.withInclusionExclusion,
       isExcluded = _ref.isExcluded,
       onIncExcChange = _ref.onIncExcChange,
       renderEmptySelected = _ref.renderEmptySelected,
-      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected"]);
 
   var _useCustomSelectState = (0, _useCustomSelectState2["default"])(options, value),
       filteredOptions = _useCustomSelectState.filteredOptions,
@@ -55,10 +52,6 @@ var MultiSelect = function MultiSelect(_ref) {
       open = _useCustomSelectState.open,
       searchVal = _useCustomSelectState.searchVal,
       setSelectState = _useCustomSelectState.setSelectState;
-
-  (0, _react.useEffect)(function () {
-    if (withInclusionExclusion && value.length === 0) onIncExcChange(null);
-  }, [onIncExcChange, value, withInclusionExclusion]);
 
   var onCancelClick = function onCancelClick() {
     onValueChange(previousValue);
@@ -129,7 +122,9 @@ var MultiSelect = function MultiSelect(_ref) {
         onSearchChange: function onSearchChange(search) {
           return _onSearchChange(search);
         },
-        renderEmptySelected: renderEmptySelected
+        renderEmptySelected: renderEmptySelected,
+        onValueChange: onValueChange,
+        custom: custom
       }, props));
     }
 

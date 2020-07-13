@@ -2,7 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Box } from '../Box';
 import { Select } from '../Select';
 import useCustomSelectState from './useCustomSelectState';
@@ -26,11 +26,12 @@ var MultiSelect = function MultiSelect(_ref) {
       withOptionChips = _ref.withOptionChips,
       withUpdateCancelButtons = _ref.withUpdateCancelButtons,
       searchable = _ref.searchable,
+      custom = _ref.custom,
       withInclusionExclusion = _ref.withInclusionExclusion,
       isExcluded = _ref.isExcluded,
       onIncExcChange = _ref.onIncExcChange,
       renderEmptySelected = _ref.renderEmptySelected,
-      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected"]);
 
   var _useCustomSelectState = useCustomSelectState(options, value),
       filteredOptions = _useCustomSelectState.filteredOptions,
@@ -38,10 +39,6 @@ var MultiSelect = function MultiSelect(_ref) {
       open = _useCustomSelectState.open,
       searchVal = _useCustomSelectState.searchVal,
       setSelectState = _useCustomSelectState.setSelectState;
-
-  useEffect(function () {
-    if (withInclusionExclusion && value.length === 0) onIncExcChange(null);
-  }, [onIncExcChange, value, withInclusionExclusion]);
 
   var onCancelClick = function onCancelClick() {
     onValueChange(previousValue);
@@ -112,7 +109,9 @@ var MultiSelect = function MultiSelect(_ref) {
         onSearchChange: function onSearchChange(search) {
           return _onSearchChange(search);
         },
-        renderEmptySelected: renderEmptySelected
+        renderEmptySelected: renderEmptySelected,
+        onValueChange: onValueChange,
+        custom: custom
       }, props));
     }
 

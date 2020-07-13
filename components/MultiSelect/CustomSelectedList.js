@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.OptionChips = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -15,6 +15,8 @@ var _Button = require("../Button");
 
 var _Text = require("../Text");
 
+var _Searchbox = require("./Searchbox");
+
 var _StyledMultiSelect = require("./StyledMultiSelect");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -23,26 +25,33 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-var OptionChips = function OptionChips(_ref) {
-  var options = _ref.options,
-      value = _ref.value,
-      isSelected = _ref.isSelected,
-      optionLabel = _ref.optionLabel,
+var SelectedList = function SelectedList(_ref) {
+  var selectedItems = _ref.selectedItems,
+      layout = _ref.layout,
+      isExcluded = _ref.isExcluded,
+      renderSearch = _ref.renderSearch,
+      searchPlaceholder = _ref.searchPlaceholder,
       onRemove = _ref.onRemove,
       clearAll = _ref.clearAll,
-      width = _ref.width,
-      height = _ref.height,
-      inclusionExclusion = _ref.inclusionExclusion,
-      isExcluded = _ref.isExcluded,
       renderEmptySelected = _ref.renderEmptySelected,
-      layout = _ref.layout;
+      width = _ref.width,
+      height = _ref.height;
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
+
+  var _React$useState = _react["default"].useState(''),
+      search = _React$useState[0],
+      setSearch = _React$useState[1];
+
+  var filteredItems = selectedItems;
+  if (search.length) filteredItems = selectedItems.filter(function (val) {
+    return val.includes(search);
+  });
 
   var renderClearButton = function renderClearButton() {
     return /*#__PURE__*/_react["default"].createElement(_Button.Button, {
       focusIndicator: false,
       onClick: function onClick() {
-        return clearAll([]);
+        return clearAll();
       },
       plain: true
     }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
@@ -53,38 +62,48 @@ var OptionChips = function OptionChips(_ref) {
     }, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.multiselect.chips.clear, "CLEAR ALL")));
   };
 
-  var getSelectedOption = function getSelectedOption() {
-    return options.reduce(function (acc, item, index) {
-      if (isSelected(index)) acc.push(index);
-      return acc;
-    }, []);
-  };
-
-  var IncExcHeader = (0, _styledComponents["default"])(_Box.Box).withConfig({
-    displayName: "OptionChips__IncExcHeader",
-    componentId: "sc-1w3ospt-0"
-  })(["position:sticky;top:0;"]);
-  return /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionsBox, null, Array.isArray(value) && value.length > 0 && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
-    height: {
-      max: layout === 'single-column' ? height : 'auto'
+  var Sticky = (0, _styledComponents["default"])(_Box.Box).withConfig({
+    displayName: "CustomSelectedList__Sticky",
+    componentId: "rqavmq-0"
+  })(["position:sticky;top:0;z-index:1;"]);
+  return /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionsBox, {
+    style: {
+      height: '100%'
     }
-  }, inclusionExclusion && isExcluded !== null && /*#__PURE__*/_react["default"].createElement(IncExcHeader, theme.multiselect.rightPanel.incExcHeader.box, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.multiselect.rightPanel.incExcHeader.text, isExcluded ? 'Excluded' : 'Included', " List"), renderClearButton()), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionWrapper, _extends({
+  }, selectedItems && selectedItems.length > 0 && /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(Sticky, theme.multiselect.rightPanel.incExcHeader.box, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.multiselect.rightPanel.incExcHeader.text, isExcluded ? 'Excluded List' : 'Included List'), renderClearButton()), renderSearch && /*#__PURE__*/_react["default"].createElement(_Searchbox.Searchbox, {
+    layout: layout,
+    placeholder: searchPlaceholder,
+    value: search,
+    onValueChange: function onValueChange(val) {
+      return setSearch(val);
+    }
+  }), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionWrapper, _extends({
     twoColumnLayout: layout === 'double-column',
     width: width
   }, theme.multiselect.chips.wrapper, {
     wrap: true
-  }), getSelectedOption().map(function (item) {
+  }), filteredItems.length ? filteredItems.map(function (item, id) {
     return /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionText, _extends({
-      key: item,
+      key: id + "-" + item,
       twoColumnLayout: layout === 'double-column'
     }, theme.multiselect.chips.option), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionLabel, _extends({
       isExcluded: isExcluded
-    }, theme.multiselect.chips.label), optionLabel(item)), /*#__PURE__*/_react["default"].createElement(_Close.Close, _extends({
-      onClick: function onClick(event) {
-        return onRemove(event, item);
+    }, theme.multiselect.chips.label), /*#__PURE__*/_react["default"].createElement(_Text.Text, null, item)), /*#__PURE__*/_react["default"].createElement(_Close.Close, _extends({
+      onClick: function onClick() {
+        return onRemove(item);
       }
     }, theme.multiselect.chips.icon)));
-  }), !inclusionExclusion && renderClearButton())), (!Array.isArray(value) || !value.length) && renderEmptySelected);
+  }) : /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+    align: "center",
+    margin: "medium",
+    fill: true
+  }, /*#__PURE__*/_react["default"].createElement(_Text.Text, null, "No Result Found")))), !selectedItems.length && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+    align: "center",
+    justify: "center",
+    fill: true
+  }, renderEmptySelected));
 };
 
-exports.OptionChips = OptionChips;
+var _default = /*#__PURE__*/_react["default"].memo(SelectedList);
+
+exports["default"] = _default;

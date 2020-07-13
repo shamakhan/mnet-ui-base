@@ -107,8 +107,6 @@ Object.keys(statusColors).forEach(function (color) {
   colors["status-" + color] = statusColors[color];
 });
 export var generate = function generate(baseSpacing, scale) {
-  var _deepMerge;
-
   if (baseSpacing === void 0) {
     baseSpacing = 24;
   }
@@ -134,7 +132,7 @@ export var generate = function generate(baseSpacing, scale) {
 
   var borderWidth = 2;
   var controlBorderWidth = 1;
-  var result = deepMerge(iconBase, (_deepMerge = {
+  var result = deepMerge(iconBase, {
     global: {
       active: {
         background: {
@@ -1065,7 +1063,10 @@ export var generate = function generate(baseSpacing, scale) {
       controls: {
         wrapper: {
           pad: 'medium',
-          direction: 'row' // extend: undefined,
+          direction: 'row',
+          height: {
+            min: 'auto'
+          } // extend: undefined,
 
         },
         button: {
@@ -1074,7 +1075,10 @@ export var generate = function generate(baseSpacing, scale) {
       },
       searchbox: {
         container: {
-          height: 'xxsmall',
+          height: {
+            min: 'xxsmall',
+            max: 'xxsmall'
+          },
           direction: 'row',
           align: 'center',
           background: 'light-2',
@@ -1117,6 +1121,34 @@ export var generate = function generate(baseSpacing, scale) {
             color: 'accent-2',
             size: 'medium',
             weight: 600
+          }
+        }
+      },
+      custom: {
+        wrapper: {
+          direction: 'row'
+        },
+        textAreaWrap: {
+          border: {
+            side: 'right'
+          },
+          pad: 'large'
+        },
+        label: {
+          weight: 600
+        },
+        textAreaContainer: {
+          margin: {
+            vertical: 'medium'
+          }
+        },
+        actions: {
+          wrapper: {
+            direction: 'row',
+            margin: {
+              vertical: 'small'
+            },
+            gap: 'medium'
           }
         }
       }
@@ -1343,12 +1375,7 @@ export var generate = function generate(baseSpacing, scale) {
       tipSize: '5px',
       round: 'small'
     }
-  }, _deepMerge["tooptip"] = {
-    background: 'dark-1',
-    color: 'white',
-    tipSize: '5px',
-    round: 'small'
-  }, _deepMerge));
+  });
   return deepFreeze(result);
 };
 export var base = generate(16);
