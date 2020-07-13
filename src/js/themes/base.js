@@ -889,17 +889,21 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           border: { color: 'light-6' },
           extend: props => {
             const getBackground = () => {
-              switch(props.isExcluded) {
-                case null: return accentColors[2];
-                case false: return '#38C18B';
-                case true: return '#FC564F';
-                default: return accentColors[2];
+              switch (props.isExcluded) {
+                case null:
+                  return accentColors[2];
+                case false:
+                  return '#38C18B';
+                case true:
+                  return '#FC564F';
+                default:
+                  return accentColors[2];
               }
             };
-            return ({
+            return {
               background: props.active ? getBackground() : 'white',
               'border-color': props.active ? 'transparent' : lightColors[5],
-            });
+            };
           },
         },
       },
@@ -909,8 +913,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           direction: 'row',
           extend: props => ({
             padding: props.twoColumnLayout ? 0 : `${baseSpacing / 1.618}px`,
-            'border-bottom': props.twoColumnLayout ?
-              'none' : '1px solid #D9DBE5',
+            'border-bottom': props.twoColumnLayout
+              ? 'none'
+              : '1px solid #D9DBE5',
           }),
         },
         option: {
@@ -925,17 +930,22 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           align: 'center',
           extend: props => ({
             width: props.twoColumnLayout ? '100%' : 'auto',
-            margin: props.twoColumnLayout ?
-              0 : `${baseSpacing / (1.618 * 2)}px`,
+            margin: props.twoColumnLayout
+              ? 0
+              : `${baseSpacing / (1.618 * 2)}px`,
             background: props.twoColumnLayout ? 'white' : lightColors[2],
-            padding: props.twoColumnLayout ? `${baseSpacing / 1.618}px` :
-              `${baseSpacing / (1.618 * 2)}px ${baseSpacing / 1.618}px`,
-            'border-radius': props.twoColumnLayout ?
-              0 : `${baseSpacing / (1.618 * 2)}px`,
-            'border-bottom': props.twoColumnLayout ?
-              '1px solid #D9DBE5' : 'none',
-            'justify-content': props.twoColumnLayout ?
-              'space-between' : 'flex-start',
+            padding: props.twoColumnLayout
+              ? `${baseSpacing / 1.618}px`
+              : `${baseSpacing / (1.618 * 2)}px ${baseSpacing / 1.618}px`,
+            'border-radius': props.twoColumnLayout
+              ? 0
+              : `${baseSpacing / (1.618 * 2)}px`,
+            'border-bottom': props.twoColumnLayout
+              ? '1px solid #D9DBE5'
+              : 'none',
+            'justify-content': props.twoColumnLayout
+              ? 'space-between'
+              : 'flex-start',
           }),
         },
         label: {
@@ -948,14 +958,17 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           extend: props => {
             const getTextColor = () => {
               switch (props.isExcluded) {
-                case false: return '#38C18B';
-                case true: return '#FC564F';
-                default: return darkColors[2];
+                case false:
+                  return '#38C18B';
+                case true:
+                  return '#FC564F';
+                default:
+                  return darkColors[2];
               }
             };
-            return({
+            return {
               color: getTextColor(),
-            });
+            };
           },
         },
         icon: {
@@ -971,6 +984,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         wrapper: {
           pad: 'medium',
           direction: 'row',
+          height: {
+            min: 'auto',
+          },
           // extend: undefined,
         },
         button: {
@@ -979,20 +995,23 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
       searchbox: {
         container: {
-          height: 'xxsmall',
+          height: {
+            min: 'xxsmall',
+            max: 'xxsmall',
+          },
           direction: 'row',
           align: 'center',
           background: 'light-2',
           pad: { right: 'medium', vertical: 'small' },
           extend: props => ({
-            background: props.layout === 'double-column' ?
-              'white' : lightColors[1],
-            'flex-direction': props.layout === 'double-column' ?
-              'row-reverse' : 'row',
-            'padding-left': props.layout === 'double-column' ?
-              `${baseSpacing / 1.618}px` : 0,
-            'border-bottom': props.layout === 'double-column' ?
-              '1px solid #D9DBE5' : 'none',
+            background:
+              props.layout === 'double-column' ? 'white' : lightColors[1],
+            'flex-direction':
+              props.layout === 'double-column' ? 'row-reverse' : 'row',
+            'padding-left':
+              props.layout === 'double-column' ? `${baseSpacing / 1.618}px` : 0,
+            'border-bottom':
+              props.layout === 'double-column' ? '1px solid #D9DBE5' : 'none',
           }),
         },
         placeholder: {
@@ -1021,6 +1040,28 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             color: 'accent-2',
             size: 'medium',
             weight: 600,
+          },
+        },
+      },
+      custom: {
+        wrapper: {
+          direction: 'row',
+        },
+        textAreaWrap: {
+          border: { side: 'right' },
+          pad: 'large',
+        },
+        label: {
+          weight: 600,
+        },
+        textAreaContainer: {
+          margin: { vertical: 'medium' },
+        },
+        actions: {
+          wrapper: {
+            direction: 'row',
+            margin: { vertical: 'small' },
+            gap: 'medium',
           },
         },
       },
@@ -1236,12 +1277,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       scrubber: {
         color: 'light-4',
       },
-    },
-    tooptip: {
-      background: 'dark-1',
-      color: 'white',
-      tipSize: '5px',
-      round: 'small',
     },
     tooptip: {
       background: 'dark-1',
