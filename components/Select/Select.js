@@ -134,27 +134,23 @@ var Select = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
 
   var optionIndexesInValue = (0, _react.useMemo)(function () {
     var result = [];
-
-    if (options) {
-      options.forEach(function (option, index) {
-        if (selected !== undefined) {
-          if (Array.isArray(selected)) {
-            if (selected.indexOf(index) !== -1) result.push(index);
-          } else if (index === selected) {
-            result.push(index);
-          }
-        } else if (Array.isArray(valuedValue)) {
-          if (valuedValue.some(function (v) {
-            return v === (0, _utils2.applyKey)(option, valueKey);
-          })) {
-            result.push(index);
-          }
-        } else if (valuedValue === (0, _utils2.applyKey)(option, valueKey)) {
+    options.forEach(function (option, index) {
+      if (selected !== undefined) {
+        if (Array.isArray(selected)) {
+          if (selected.indexOf(index) !== -1) result.push(index);
+        } else if (index === selected) {
           result.push(index);
         }
-      });
-    }
-
+      } else if (Array.isArray(valuedValue)) {
+        if (valuedValue.some(function (v) {
+          return v === (0, _utils2.applyKey)(option, valueKey);
+        })) {
+          result.push(index);
+        }
+      } else if (valuedValue === (0, _utils2.applyKey)(option, valueKey)) {
+        result.push(index);
+      }
+    });
     return result;
   }, [options, selected, valueKey, valuedValue]);
 

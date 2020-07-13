@@ -133,6 +133,8 @@ Object.keys(statusColors).forEach(function (color) {
 });
 
 var generate = function generate(baseSpacing, scale) {
+  var _deepMerge;
+
   if (baseSpacing === void 0) {
     baseSpacing = 24;
   }
@@ -158,7 +160,7 @@ var generate = function generate(baseSpacing, scale) {
 
   var borderWidth = 2;
   var controlBorderWidth = 1;
-  var result = (0, _object.deepMerge)(_base.base, {
+  var result = (0, _object.deepMerge)(_base.base, (_deepMerge = {
     global: {
       active: {
         background: {
@@ -1089,10 +1091,7 @@ var generate = function generate(baseSpacing, scale) {
       controls: {
         wrapper: {
           pad: 'medium',
-          direction: 'row',
-          height: {
-            min: 'auto'
-          } // extend: undefined,
+          direction: 'row' // extend: undefined,
 
         },
         button: {
@@ -1101,10 +1100,7 @@ var generate = function generate(baseSpacing, scale) {
       },
       searchbox: {
         container: {
-          height: {
-            min: 'xxsmall',
-            max: 'xxsmall'
-          },
+          height: 'xxsmall',
           direction: 'row',
           align: 'center',
           background: 'light-2',
@@ -1147,34 +1143,6 @@ var generate = function generate(baseSpacing, scale) {
             color: 'accent-2',
             size: 'medium',
             weight: 600
-          }
-        }
-      },
-      custom: {
-        wrapper: {
-          direction: 'row'
-        },
-        textAreaWrap: {
-          border: {
-            side: 'right'
-          },
-          pad: 'large'
-        },
-        label: {
-          weight: 600
-        },
-        textAreaContainer: {
-          margin: {
-            vertical: 'medium'
-          }
-        },
-        actions: {
-          wrapper: {
-            direction: 'row',
-            margin: {
-              vertical: 'small'
-            },
-            gap: 'medium'
           }
         }
       }
@@ -1401,7 +1369,12 @@ var generate = function generate(baseSpacing, scale) {
       tipSize: '5px',
       round: 'small'
     }
-  });
+  }, _deepMerge["tooptip"] = {
+    background: 'dark-1',
+    color: 'white',
+    tipSize: '5px',
+    round: 'small'
+  }, _deepMerge));
   return (0, _object.deepFreeze)(result);
 };
 

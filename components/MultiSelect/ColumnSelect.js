@@ -25,8 +25,6 @@ var _ControlButton = require("./ControlButton");
 
 var _Searchbox = require("./Searchbox");
 
-var _CustomMultiSelect = require("./CustomMultiSelect");
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -62,31 +60,22 @@ var ColumnSelect = function ColumnSelect(_ref) {
       searchPlaceholder = _ref.searchPlaceholder,
       searchValue = _ref.searchValue,
       onSearchChange = _ref.onSearchChange,
-      renderEmptySelected = _ref.renderEmptySelected,
-      onValueChange = _ref.onValueChange,
-      custom = _ref.custom;
+      renderEmptySelected = _ref.renderEmptySelected;
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
 
-  var allSelected = options && options.every(function (item, index) {
+  var allSelected = options.every(function (item, index) {
     return isSelected(index);
   });
-  var setOption = (0, _react.useCallback)(function (event, type, index) {
+
+  var setOption = function setOption(event, type, index) {
     setIncExcVal(type);
-    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, i) {
-      return optionValue(i);
+    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, ind) {
+      return optionValue(ind);
     }));
-  }, [allSelected, optionValue, options, selectOption, setIncExcVal, setValues]);
-  var onChipRemove = (0, _react.useCallback)(function (event, index) {
-    if (inclusionExclusion && value.length === 1) setIncExcVal(null);
-    selectOption(index)(event);
-  }, [inclusionExclusion, selectOption, setIncExcVal, value]);
-  var setUnsetChips = (0, _react.useCallback)(function (updatedValues) {
-    if (inclusionExclusion && !updatedValues.length) setIncExcVal(null);
-    setValues(updatedValues);
-  }, [inclusionExclusion, setIncExcVal, setValues]);
+  };
 
   var renderOptionChips = function renderOptionChips() {
     return /*#__PURE__*/_react["default"].createElement(_OptionChips.OptionChips, {
@@ -96,31 +85,14 @@ var ColumnSelect = function ColumnSelect(_ref) {
       value: value,
       isSelected: isSelected,
       optionLabel: optionLabel,
-      onRemove: onChipRemove,
-      clearAll: setUnsetChips,
+      selectOption: selectOption,
+      clearAll: setValues,
       inclusionExclusion: inclusionExclusion,
       isExcluded: isExcluded,
       renderEmptySelected: renderEmptySelected,
       layout: layout
     });
   };
-
-  if (custom) {
-    return /*#__PURE__*/_react["default"].createElement(_CustomMultiSelect.CustomMultiSelect, {
-      value: value,
-      layout: layout,
-      onValueChange: onValueChange,
-      renderSearch: renderSearch,
-      placeholder: searchPlaceholder,
-      renderEmptySelected: renderEmptySelected,
-      width: width,
-      height: height,
-      custom: custom,
-      isExcluded: isExcluded,
-      setIncExcVal: setIncExcVal,
-      inclusionExclusion: inclusionExclusion
-    });
-  }
 
   return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, renderSearch && /*#__PURE__*/_react["default"].createElement(_Searchbox.Searchbox, {
     placeholder: searchPlaceholder,
@@ -158,7 +130,7 @@ var ColumnSelect = function ColumnSelect(_ref) {
       selected: allSelected,
       plain: true,
       onClick: !inclusionExclusion || inclusionExclusion && isExcluded !== null ? function () {
-        return setUnsetChips(allSelected ? [] : options.map(function (item, ind) {
+        return setValues(allSelected ? [] : options.map(function (item, ind) {
           return optionValue(ind);
         }));
       } : undefined

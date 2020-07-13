@@ -13,7 +13,7 @@ var OptionChips = function OptionChips(_ref) {
       value = _ref.value,
       isSelected = _ref.isSelected,
       optionLabel = _ref.optionLabel,
-      onRemove = _ref.onRemove,
+      selectOption = _ref.selectOption,
       clearAll = _ref.clearAll,
       width = _ref.width,
       height = _ref.height,
@@ -65,9 +65,7 @@ var OptionChips = function OptionChips(_ref) {
     }, theme.multiselect.chips.option), /*#__PURE__*/React.createElement(OptionLabel, _extends({
       isExcluded: isExcluded
     }, theme.multiselect.chips.label), optionLabel(item)), /*#__PURE__*/React.createElement(Close, _extends({
-      onClick: function onClick(event) {
-        return onRemove(event, item);
-      }
+      onClick: selectOption(item)
     }, theme.multiselect.chips.icon)));
   }), !inclusionExclusion && renderClearButton())), (!Array.isArray(value) || !value.length) && renderEmptySelected);
 };

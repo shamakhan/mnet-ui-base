@@ -1,6 +1,6 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-import React, { useContext, useCallback } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { defaultProps } from '../../default-props';
 import { InfiniteScroll } from '../InfiniteScroll';
@@ -11,7 +11,6 @@ import { OptionWithCheckControl } from './OptionWithCheckControl';
 import { OptionChips } from './OptionChips';
 import { ControlButton } from './ControlButton';
 import { Searchbox } from './Searchbox';
-import { CustomMultiSelect } from './CustomMultiSelect';
 
 var ColumnSelect = function ColumnSelect(_ref) {
   var options = _ref.options,
@@ -42,30 +41,21 @@ var ColumnSelect = function ColumnSelect(_ref) {
       searchPlaceholder = _ref.searchPlaceholder,
       searchValue = _ref.searchValue,
       onSearchChange = _ref.onSearchChange,
-      renderEmptySelected = _ref.renderEmptySelected,
-      onValueChange = _ref.onValueChange,
-      custom = _ref.custom;
+      renderEmptySelected = _ref.renderEmptySelected;
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
 
-  var allSelected = options && options.every(function (item, index) {
+  var allSelected = options.every(function (item, index) {
     return isSelected(index);
   });
-  var setOption = useCallback(function (event, type, index) {
+
+  var setOption = function setOption(event, type, index) {
     setIncExcVal(type);
-    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, i) {
-      return optionValue(i);
+    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, ind) {
+      return optionValue(ind);
     }));
-  }, [allSelected, optionValue, options, selectOption, setIncExcVal, setValues]);
-  var onChipRemove = useCallback(function (event, index) {
-    if (inclusionExclusion && value.length === 1) setIncExcVal(null);
-    selectOption(index)(event);
-  }, [inclusionExclusion, selectOption, setIncExcVal, value]);
-  var setUnsetChips = useCallback(function (updatedValues) {
-    if (inclusionExclusion && !updatedValues.length) setIncExcVal(null);
-    setValues(updatedValues);
-  }, [inclusionExclusion, setIncExcVal, setValues]);
+  };
 
   var renderOptionChips = function renderOptionChips() {
     return /*#__PURE__*/React.createElement(OptionChips, {
@@ -75,31 +65,14 @@ var ColumnSelect = function ColumnSelect(_ref) {
       value: value,
       isSelected: isSelected,
       optionLabel: optionLabel,
-      onRemove: onChipRemove,
-      clearAll: setUnsetChips,
+      selectOption: selectOption,
+      clearAll: setValues,
       inclusionExclusion: inclusionExclusion,
       isExcluded: isExcluded,
       renderEmptySelected: renderEmptySelected,
       layout: layout
     });
   };
-
-  if (custom) {
-    return /*#__PURE__*/React.createElement(CustomMultiSelect, {
-      value: value,
-      layout: layout,
-      onValueChange: onValueChange,
-      renderSearch: renderSearch,
-      placeholder: searchPlaceholder,
-      renderEmptySelected: renderEmptySelected,
-      width: width,
-      height: height,
-      custom: custom,
-      isExcluded: isExcluded,
-      setIncExcVal: setIncExcVal,
-      inclusionExclusion: inclusionExclusion
-    });
-  }
 
   return /*#__PURE__*/React.createElement(React.Fragment, null, renderSearch && /*#__PURE__*/React.createElement(Searchbox, {
     placeholder: searchPlaceholder,
@@ -137,7 +110,7 @@ var ColumnSelect = function ColumnSelect(_ref) {
       selected: allSelected,
       plain: true,
       onClick: !inclusionExclusion || inclusionExclusion && isExcluded !== null ? function () {
-        return setUnsetChips(allSelected ? [] : options.map(function (item, ind) {
+        return setValues(allSelected ? [] : options.map(function (item, ind) {
           return optionValue(ind);
         }));
       } : undefined
