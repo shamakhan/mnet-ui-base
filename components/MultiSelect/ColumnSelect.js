@@ -73,13 +73,20 @@ var ColumnSelect = function ColumnSelect(_ref) {
   var allSelected = options && options.every(function (item, index) {
     return isSelected(index);
   });
-
-  var setOption = function setOption(event, type, index) {
+  var setOption = (0, _react.useCallback)(function (event, type, index) {
     setIncExcVal(type);
-    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, ind) {
-      return optionValue(ind);
+    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, i) {
+      return optionValue(i);
     }));
-  };
+  }, [allSelected, optionValue, options, selectOption, setIncExcVal, setValues]);
+  var optionSelect = (0, _react.useCallback)(function (event, index) {
+    if (inclusionExclusion && value.length === 1 && isSelected(index)) setIncExcVal(null);
+    selectOption(index)(event);
+  }, [inclusionExclusion, isSelected, selectOption, setIncExcVal, value]);
+  var setUnsetChips = (0, _react.useCallback)(function (updatedValues) {
+    if (inclusionExclusion && !updatedValues.length) setIncExcVal(null);
+    setValues(updatedValues);
+  }, [inclusionExclusion, setIncExcVal, setValues]);
 
   var renderOptionChips = function renderOptionChips() {
     return /*#__PURE__*/_react["default"].createElement(_OptionChips.OptionChips, {
@@ -89,8 +96,8 @@ var ColumnSelect = function ColumnSelect(_ref) {
       value: value,
       isSelected: isSelected,
       optionLabel: optionLabel,
-      selectOption: selectOption,
-      clearAll: setValues,
+      onRemove: optionSelect,
+      clearAll: setUnsetChips,
       inclusionExclusion: inclusionExclusion,
       isExcluded: isExcluded,
       renderEmptySelected: renderEmptySelected,
@@ -151,7 +158,7 @@ var ColumnSelect = function ColumnSelect(_ref) {
       selected: allSelected,
       plain: true,
       onClick: !inclusionExclusion || inclusionExclusion && isExcluded !== null ? function () {
-        return setValues(allSelected ? [] : options.map(function (item, ind) {
+        return setUnsetChips(allSelected ? [] : options.map(function (item, ind) {
           return optionValue(ind);
         }));
       } : undefined
@@ -176,7 +183,9 @@ var ColumnSelect = function ColumnSelect(_ref) {
       option: option,
       plain: true,
       onMouseOver: !optionDisabled ? onActiveOption(index) : undefined,
-      onClick: !optionDisabled && !inclusionExclusion || !optionDisabled && inclusionExclusion && isExcluded !== null ? selectOption(index) : undefined
+      onClick: !optionDisabled && !inclusionExclusion || !optionDisabled && inclusionExclusion && isExcluded !== null ? function (event) {
+        return optionSelect(event, index);
+      } : undefined
     }, /*#__PURE__*/_react["default"].createElement(_OptionWithCheckControl.OptionWithCheckControl, {
       selected: optionSelected,
       label: optionLabel(index),

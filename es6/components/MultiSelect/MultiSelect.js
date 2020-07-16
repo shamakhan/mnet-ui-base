@@ -2,6 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { Box } from '../Box';
 import { Select } from '../Select';
@@ -38,10 +39,18 @@ var MultiSelect = function MultiSelect(_ref) {
       previousValue = _useCustomSelectState.previousValue,
       open = _useCustomSelectState.open,
       searchVal = _useCustomSelectState.searchVal,
-      setSelectState = _useCustomSelectState.setSelectState; // useEffect(() => {
-  //   if (withInclusionExclusion && value.length === 0) onIncExcChange(null);
-  // }, [onIncExcChange, value, withInclusionExclusion]);
+      setSelectState = _useCustomSelectState.setSelectState;
 
+  useEffect(function () {
+    setSelectState({
+      filteredOptions: options
+    });
+  }, [options]);
+  useEffect(function () {
+    setSelectState({
+      previousValue: value
+    });
+  }, [value]);
 
   var onCancelClick = function onCancelClick() {
     onValueChange(previousValue);

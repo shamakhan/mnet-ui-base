@@ -55,10 +55,18 @@ var MultiSelect = function MultiSelect(_ref) {
       previousValue = _useCustomSelectState.previousValue,
       open = _useCustomSelectState.open,
       searchVal = _useCustomSelectState.searchVal,
-      setSelectState = _useCustomSelectState.setSelectState; // useEffect(() => {
-  //   if (withInclusionExclusion && value.length === 0) onIncExcChange(null);
-  // }, [onIncExcChange, value, withInclusionExclusion]);
+      setSelectState = _useCustomSelectState.setSelectState;
 
+  (0, _react.useEffect)(function () {
+    setSelectState({
+      filteredOptions: options
+    });
+  }, [options]);
+  (0, _react.useEffect)(function () {
+    setSelectState({
+      previousValue: value
+    });
+  }, [value]);
 
   var onCancelClick = function onCancelClick() {
     onValueChange(previousValue);
