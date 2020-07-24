@@ -401,6 +401,13 @@ Object.keys(_TextInput).forEach(function (key) {
   exports[key] = _TextInput[key];
 });
 
+var _Notification = require("./Notification");
+
+Object.keys(_Notification).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _Notification[key];
+});
+
 var _Pagination = require("./Pagination");
 
 Object.keys(_Pagination).forEach(function (key) {

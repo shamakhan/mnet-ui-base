@@ -35,6 +35,10 @@ var _Volume = require("grommet-icons/icons/Volume");
 
 var _VolumeLow = require("grommet-icons/icons/VolumeLow");
 
+var _Info = require("grommet-icons/icons/Info");
+
+var _FormClose = require("grommet-icons/icons/FormClose");
+
 var _base = require("grommet-icons/themes/base");
 
 var _object = require("../utils/object");
@@ -1400,6 +1404,59 @@ var generate = function generate(baseSpacing, scale) {
       color: 'white',
       tipSize: '5px',
       round: 'small'
+    },
+    notification: {
+      toast: {
+        closeIcon: _FormClose.FormClose,
+        position: 'top-right',
+        zIndex: 1,
+        icon: {
+          size: 'medium',
+          "default": _Info.Info
+        },
+        text: {
+          "default": {
+            weight: 600
+          },
+          ok: {},
+          error: {}
+        },
+        "default": {
+          background: 'dark-1',
+          // border: {},
+          size: 'medium',
+          align: 'center',
+          direction: 'row',
+          gap: 'small',
+          justify: 'between',
+          round: 'xsmall',
+          elevation: 'medium',
+          pad: {
+            vertical: 'medium',
+            horizontal: 'medium'
+          },
+          margin: {
+            vertical: 'small',
+            horizontal: 'large'
+          }
+        },
+        ok: {
+          background: 'status-ok' // text: {},
+
+        },
+        critical: {
+          background: 'status-critical' // text: {},
+
+        },
+        error: {
+          background: 'status-error' // text: {},
+
+        },
+        warning: {
+          background: 'status-warning' // text: {},
+
+        }
+      }
     }
   });
   return (0, _object.deepFreeze)(result);
