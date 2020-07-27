@@ -373,18 +373,18 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
     }
   }, containerRest), /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     style: _extends({}, layoutType)
-  }, /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({}, labelStyle, {
+  }, label && component !== _CheckBox.CheckBox || labelWidth ? /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({}, labelStyle, {
     width: labelWidth
   }), label && component !== _CheckBox.CheckBox && /*#__PURE__*/_react["default"].createElement(_Text.Text, {
     as: "label",
     htmlFor: htmlFor
-  }, label)), /*#__PURE__*/_react["default"].createElement(_Box.Box, null, contents, /*#__PURE__*/_react["default"].createElement(_Box.Box, null, /*#__PURE__*/_react["default"].createElement(Message, _extends({
+  }, label)) : null, /*#__PURE__*/_react["default"].createElement(_Box.Box, null, contents, normalizedError && /*#__PURE__*/_react["default"].createElement(_Box.Box, null, /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: normalizedError
   }, formFieldTheme.error, {
     style: {
       position: "" + (direction === 'row' ? 'absolute' : 'static')
     }
-  }))), /*#__PURE__*/_react["default"].createElement(Message, _extends({
+  }))), normalizedInfo && /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: normalizedInfo
   }, formFieldTheme.info)))));
 });

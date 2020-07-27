@@ -64,7 +64,8 @@ var ColumnSelect = function ColumnSelect(_ref) {
       onSearchChange = _ref.onSearchChange,
       renderEmptySelected = _ref.renderEmptySelected,
       onValueChange = _ref.onValueChange,
-      custom = _ref.custom;
+      custom = _ref.custom,
+      validate = _ref.validate;
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -118,7 +119,8 @@ var ColumnSelect = function ColumnSelect(_ref) {
       custom: custom,
       isExcluded: isExcluded,
       setIncExcVal: setIncExcVal,
-      inclusionExclusion: inclusionExclusion
+      inclusionExclusion: inclusionExclusion,
+      validate: validate
     });
   }
 

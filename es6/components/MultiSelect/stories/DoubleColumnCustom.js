@@ -11,6 +11,13 @@ var Example = function Example() {
       isExcluded = _useState2[0],
       setIncExc = _useState2[1];
 
+  var validateDomains = function validateDomains(values) {
+    var regx = /^((http|https):\/\/)?([a-zA-Z0-9_][-_a-zA-Z0-9]{0,62}\.)+([a-zA-Z0-9]{1,10})$/;
+    return values && values.every(function (val) {
+      return regx.test(val);
+    });
+  };
+
   return /*#__PURE__*/React.createElement(Box, {
     fill: true,
     align: "center",
@@ -34,7 +41,11 @@ var Example = function Example() {
     onIncExcChange: function onIncExcChange(nextIncExc) {
       return setIncExc(nextIncExc);
     },
-    renderEmptySelected: /*#__PURE__*/React.createElement(Text, null, "No domains selected")
+    renderEmptySelected: /*#__PURE__*/React.createElement(Text, null, "No domains selected"),
+    validate: {
+      callback: validateDomains,
+      message: 'Please Enter Correct Domains'
+    }
   }));
 };
 

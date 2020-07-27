@@ -44,7 +44,8 @@ var ColumnSelect = function ColumnSelect(_ref) {
       onSearchChange = _ref.onSearchChange,
       renderEmptySelected = _ref.renderEmptySelected,
       onValueChange = _ref.onValueChange,
-      custom = _ref.custom;
+      custom = _ref.custom,
+      validate = _ref.validate;
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
@@ -97,7 +98,8 @@ var ColumnSelect = function ColumnSelect(_ref) {
       custom: custom,
       isExcluded: isExcluded,
       setIncExcVal: setIncExcVal,
-      inclusionExclusion: inclusionExclusion
+      inclusionExclusion: inclusionExclusion,
+      validate: validate
     });
   }
 

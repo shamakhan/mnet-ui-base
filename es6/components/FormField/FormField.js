@@ -349,18 +349,18 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
     }
   }, containerRest), /*#__PURE__*/React.createElement(Box, {
     style: _extends({}, layoutType)
-  }, /*#__PURE__*/React.createElement(Box, _extends({}, labelStyle, {
+  }, label && component !== CheckBox || labelWidth ? /*#__PURE__*/React.createElement(Box, _extends({}, labelStyle, {
     width: labelWidth
   }), label && component !== CheckBox && /*#__PURE__*/React.createElement(Text, {
     as: "label",
     htmlFor: htmlFor
-  }, label)), /*#__PURE__*/React.createElement(Box, null, contents, /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Message, _extends({
+  }, label)) : null, /*#__PURE__*/React.createElement(Box, null, contents, normalizedError && /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Message, _extends({
     message: normalizedError
   }, formFieldTheme.error, {
     style: {
       position: "" + (direction === 'row' ? 'absolute' : 'static')
     }
-  }))), /*#__PURE__*/React.createElement(Message, _extends({
+  }))), normalizedInfo && /*#__PURE__*/React.createElement(Message, _extends({
     message: normalizedInfo
   }, formFieldTheme.info)))));
 });

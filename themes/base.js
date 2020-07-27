@@ -1373,8 +1373,11 @@ var generate = function generate(baseSpacing, scale) {
       xlarge: _extends({}, fontSizing(2)),
       xxlarge: _extends({}, fontSizing(4))
     },
-    textArea: {// extend: undefined,
-      // disabled: { opacity: undefined },
+    textArea: {
+      extend: {
+        minHeight: '300px'
+      } // disabled: { opacity: undefined },
+
     },
     textInput: {// extend: undefined,
       // disabled: { opacity: undefined },

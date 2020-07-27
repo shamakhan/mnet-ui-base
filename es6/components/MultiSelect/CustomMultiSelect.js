@@ -6,6 +6,7 @@ import { TextArea } from '../TextArea';
 import { Box } from '../Box';
 import { Button } from '../Button';
 import { Text } from '../Text';
+import { FormField } from '../FormField';
 import CustomSelectedList from './CustomSelectedList';
 
 var CustomMultiSelect = function CustomMultiSelect(_ref) {
@@ -20,12 +21,22 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
       custom = _ref.custom,
       isExcluded = _ref.isExcluded,
       setIncExcVal = _ref.setIncExcVal,
-      inclusionExclusion = _ref.inclusionExclusion;
+      inclusionExclusion = _ref.inclusionExclusion,
+      validate = _ref.validate;
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
   var _React$useState = React.useState(''),
       textAreaValue = _React$useState[0],
       setTextAreaValue = _React$useState[1];
+
+  var _React$useState2 = React.useState(true),
+      isValid = _React$useState2[0],
+      setIsValid = _React$useState2[1];
+
+  var setTextAreaValueFn = function setTextAreaValueFn(value) {
+    setIsValid(true);
+    setTextAreaValue(value);
+  };
 
   var setItems = function setItems(isIncExc) {
     var trimedValue = textAreaValue.trim();
@@ -35,9 +46,14 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
       var filteredValues = textValues.filter(function (text) {
         return text.length;
       });
-      setIncExcVal(isIncExc);
-      onValueChange([].concat(value, filteredValues));
-      setTextAreaValue('');
+
+      if (validate && validate.callback(filteredValues)) {
+        setIncExcVal(isIncExc);
+        onValueChange([].concat(value, filteredValues));
+        setTextAreaValue('');
+      } else {
+        setIsValid(false);
+      }
     }
   };
 
@@ -63,14 +79,16 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
     style: {
       height: '100%'
     }
-  }), /*#__PURE__*/React.createElement(TextArea, {
+  }), /*#__PURE__*/React.createElement(FormField, {
+    error: !isValid ? validate.message : null
+  }, /*#__PURE__*/React.createElement(TextArea, {
     value: textAreaValue,
     onChange: function onChange(event) {
-      return setTextAreaValue(event.target.value);
+      return setTextAreaValueFn(event.target.value);
     },
     resize: false,
     fill: true
-  })), /*#__PURE__*/React.createElement(Box, theme.multiselect.custom.actions.wrapper, (isExcluded === false || isExcluded === null) && /*#__PURE__*/React.createElement(Button, {
+  }))), /*#__PURE__*/React.createElement(Box, theme.multiselect.custom.actions.wrapper, (isExcluded === false || isExcluded === null) && /*#__PURE__*/React.createElement(Button, {
     primary: true,
     onClick: function onClick() {
       return setItems(false);

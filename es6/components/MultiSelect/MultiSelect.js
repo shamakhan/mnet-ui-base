@@ -32,7 +32,8 @@ var MultiSelect = function MultiSelect(_ref) {
       isExcluded = _ref.isExcluded,
       onIncExcChange = _ref.onIncExcChange,
       renderEmptySelected = _ref.renderEmptySelected,
-      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected"]);
+      validate = _ref.validate,
+      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected", "validate"]);
 
   var _useCustomSelectState = useCustomSelectState(options, value),
       filteredOptions = _useCustomSelectState.filteredOptions,
@@ -123,7 +124,8 @@ var MultiSelect = function MultiSelect(_ref) {
         },
         renderEmptySelected: renderEmptySelected,
         onValueChange: onValueChange,
-        custom: custom
+        custom: custom,
+        validate: validate
       }, props));
     }
 
