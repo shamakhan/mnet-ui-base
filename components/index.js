@@ -421,3 +421,10 @@ Object.keys(_Tooltip).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   exports[key] = _Tooltip[key];
 });
+
+var _Loader = require("./Loader");
+
+Object.keys(_Loader).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  exports[key] = _Loader[key];
+});

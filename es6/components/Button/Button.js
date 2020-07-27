@@ -7,6 +7,7 @@ import { ThemeContext } from 'styled-components';
 import { backgroundAndTextColors, colorIsDark, normalizeBackground, normalizeColor } from '../../utils';
 import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
+import { Loader } from '../Loader';
 import { StyledButton } from './StyledButton';
 import { StyledButtonKind } from './StyledButtonKind'; // We have two Styled* components to separate
 // the newer default|primary|secondary approach,
@@ -98,7 +99,9 @@ var Button = /*#__PURE__*/forwardRef(function (_ref, ref) {
       _ref$type = _ref.type,
       type = _ref$type === void 0 ? 'button' : _ref$type,
       as = _ref.as,
-      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "active", "color", "children", "disabled", "icon", "focusIndicator", "gap", "fill", "href", "kind", "label", "onBlur", "onClick", "onFocus", "onMouseOut", "onMouseOver", "plain", "primary", "reverse", "secondary", "size", "tertiary", "type", "as"]);
+      isLoading = _ref.isLoading,
+      background = _ref.background,
+      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "active", "color", "children", "disabled", "icon", "focusIndicator", "gap", "fill", "href", "kind", "label", "onBlur", "onClick", "onFocus", "onMouseOut", "onMouseOver", "plain", "primary", "reverse", "secondary", "size", "tertiary", "type", "as", "isLoading", "background"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
@@ -251,7 +254,23 @@ var Button = /*#__PURE__*/forwardRef(function (_ref, ref) {
       primary: primary,
       sizeProp: size,
       type: !href ? type : undefined
-    }), contents);
+    }), isLoading ? /*#__PURE__*/React.createElement(Box, {
+      direction: "row",
+      align: "center"
+    }, contents, isLoading ? /*#__PURE__*/React.createElement(Box, {
+      margin: {
+        horizontal: 'small'
+      }
+    }, /*#__PURE__*/React.createElement(Loader, {
+      width: "18px",
+      height: "18px",
+      type: "inline",
+      primaryColor: "white",
+      secondaryColor: background,
+      margin: {
+        left: 'small'
+      }
+    })) : null) : contents);
   }
 
   return /*#__PURE__*/React.createElement(StyledButton, _extends({}, rest, {
@@ -286,7 +305,23 @@ var Button = /*#__PURE__*/forwardRef(function (_ref, ref) {
     primary: primary,
     sizeProp: size,
     type: !href ? type : undefined
-  }), contents);
+  }), isLoading ? /*#__PURE__*/React.createElement(Box, {
+    direction: "row",
+    align: "center"
+  }, contents, isLoading ? /*#__PURE__*/React.createElement(Box, {
+    margin: {
+      horizontal: 'small'
+    }
+  }, /*#__PURE__*/React.createElement(Loader, {
+    width: "18px",
+    height: "18px",
+    type: "inline",
+    primaryColor: "white",
+    secondaryColor: background,
+    margin: {
+      left: 'small'
+    }
+  })) : null) : contents);
 });
 Button.displayName = 'Button';
 var ButtonDoc;

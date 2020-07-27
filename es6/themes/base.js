@@ -1377,6 +1377,21 @@ export var generate = function generate(baseSpacing, scale) {
       tipSize: '5px',
       round: 'small'
     },
+    pagination: {
+      background: 'white',
+      round: 'small',
+      border: {
+        color: 'dark-6'
+      },
+      pad: 'xlarge',
+      active: {
+        color: '#e7eaf1'
+      },
+      icon: {
+        bgColor: 'light-2',
+        pad: 'xsmall'
+      }
+    },
     notification: {
       toast: {
         closeIcon: FormClose,
