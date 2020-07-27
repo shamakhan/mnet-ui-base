@@ -1341,7 +1341,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       '6xl': { ...fontSizing(18) },
     },
     textArea: {
-      // extend: undefined,
+      extend: {
+        minHeight: '300px',
+      },
       // disabled: { opacity: undefined },
     },
     textInput: {
