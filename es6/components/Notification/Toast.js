@@ -27,7 +27,7 @@ export function Toast(_ref) {
     align: "center",
     direction: "row",
     gap: "xsmall"
-  }, /*#__PURE__*/React.createElement(Icon, {
+  }, Icon && /*#__PURE__*/React.createElement(Icon, {
     size: IconSize,
     color: IconColor
   }), /*#__PURE__*/React.createElement(Text, theme.notification.toast.text[type] || theme.notification.toast.text["default"], msg)), /*#__PURE__*/React.createElement(Button, {

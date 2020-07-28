@@ -44,7 +44,7 @@ function Toast(_ref) {
     align: "center",
     direction: "row",
     gap: "xsmall"
-  }, /*#__PURE__*/_react["default"].createElement(Icon, {
+  }, Icon && /*#__PURE__*/_react["default"].createElement(Icon, {
     size: IconSize,
     color: IconColor
   }), /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.notification.toast.text[type] || theme.notification.toast.text["default"], msg)), /*#__PURE__*/_react["default"].createElement(_Button.Button, {
