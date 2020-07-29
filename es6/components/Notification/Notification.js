@@ -62,7 +62,8 @@ export function Notification() {
     onEsc: deleteLast,
     responsive: false,
     style: {
-      zIndex: theme.notification.toast.zIndex
+      zIndex: theme.notification.toast.zIndex,
+      maxWidth: theme.notification.toast.width
     },
     plain: true
   }, notifications.map(function (_ref2) {

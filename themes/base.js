@@ -1428,6 +1428,7 @@ var generate = function generate(baseSpacing, scale) {
         closeIcon: _FormClose.FormClose,
         position: 'top-right',
         zIndex: 1,
+        width: '60%',
         icon: {
           size: 'medium',
           "default": _Info.Info
