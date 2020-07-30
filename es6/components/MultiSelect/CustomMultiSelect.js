@@ -81,6 +81,12 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
     }
   }), /*#__PURE__*/React.createElement(FormField, {
     error: !isValid ? validate.message : null
+  }, /*#__PURE__*/React.createElement(Box, {
+    width: "full",
+    style: {
+      minHeight: theme.multiselect.custom.textAreaContainer.minHeight,
+      overflow: 'auto'
+    }
   }, /*#__PURE__*/React.createElement(TextArea, {
     value: textAreaValue,
     onChange: function onChange(event) {
@@ -88,7 +94,7 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
     },
     resize: false,
     fill: true
-  }))), /*#__PURE__*/React.createElement(Box, theme.multiselect.custom.actions.wrapper, (isExcluded === false || isExcluded === null) && /*#__PURE__*/React.createElement(Button, {
+  })))), /*#__PURE__*/React.createElement(Box, theme.multiselect.custom.actions.wrapper, (isExcluded === false || isExcluded === null) && /*#__PURE__*/React.createElement(Button, {
     primary: true,
     onClick: function onClick() {
       return setItems(false);

@@ -99,6 +99,12 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
     }
   }), /*#__PURE__*/_react["default"].createElement(_FormField.FormField, {
     error: !isValid ? validate.message : null
+  }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+    width: "full",
+    style: {
+      minHeight: theme.multiselect.custom.textAreaContainer.minHeight,
+      overflow: 'auto'
+    }
   }, /*#__PURE__*/_react["default"].createElement(_TextArea.TextArea, {
     value: textAreaValue,
     onChange: function onChange(event) {
@@ -106,7 +112,7 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
     },
     resize: false,
     fill: true
-  }))), /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.multiselect.custom.actions.wrapper, (isExcluded === false || isExcluded === null) && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+  })))), /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.multiselect.custom.actions.wrapper, (isExcluded === false || isExcluded === null) && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
     primary: true,
     onClick: function onClick() {
       return setItems(false);
