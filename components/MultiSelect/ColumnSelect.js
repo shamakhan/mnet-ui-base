@@ -33,6 +33,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+var SELECT_ALL_INDEX = -1;
+
 var ColumnSelect = function ColumnSelect(_ref) {
   var options = _ref.options,
       value = _ref.value,
@@ -46,8 +48,7 @@ var ColumnSelect = function ColumnSelect(_ref) {
       optionLabel = _ref.optionLabel,
       optionValue = _ref.optionValue,
       onCancel = _ref.onCancel,
-      onUpdate = _ref.onUpdate,
-      setValues = _ref.setValues,
+      onOk = _ref.onOk,
       layout = _ref.layout,
       width = _ref.width,
       height = _ref.height,
@@ -65,7 +66,8 @@ var ColumnSelect = function ColumnSelect(_ref) {
       renderEmptySelected = _ref.renderEmptySelected,
       onValueChange = _ref.onValueChange,
       custom = _ref.custom,
-      validate = _ref.validate;
+      validate = _ref.validate,
+      onChange = _ref.onChange;
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -76,18 +78,30 @@ var ColumnSelect = function ColumnSelect(_ref) {
   });
   var setOption = (0, _react.useCallback)(function (event, type, index) {
     setIncExcVal(type);
-    if (index !== -1) selectOption(index)(event);else setValues(allSelected ? [] : options.map(function (item, i) {
-      return optionValue(i);
-    }));
-  }, [allSelected, optionValue, options, selectOption, setIncExcVal, setValues]);
+
+    if (index !== SELECT_ALL_INDEX) {
+      selectOption(index)(event);
+    } else {
+      onChange(index, {
+        value: allSelected ? [] : options.map(function (item, i) {
+          return optionValue(i);
+        }),
+        selected: allSelected ? [] : options.map(function (item, i) {
+          return i;
+        })
+      });
+    }
+  }, [allSelected, onChange, optionValue, options, selectOption, setIncExcVal]);
   var optionSelect = (0, _react.useCallback)(function (event, index) {
     if (inclusionExclusion && value.length === 1 && isSelected(index)) setIncExcVal(null);
     selectOption(index)(event);
   }, [inclusionExclusion, isSelected, selectOption, setIncExcVal, value]);
   var setUnsetChips = (0, _react.useCallback)(function (updatedValues) {
     if (inclusionExclusion && !updatedValues.length) setIncExcVal(null);
-    setValues(updatedValues);
-  }, [inclusionExclusion, setIncExcVal, setValues]);
+    onChange({
+      value: updatedValues
+    });
+  }, [inclusionExclusion, setIncExcVal, onChange]);
 
   var renderOptionChips = function renderOptionChips() {
     return /*#__PURE__*/_react["default"].createElement(_OptionChips.OptionChips, {
@@ -154,11 +168,14 @@ var ColumnSelect = function ColumnSelect(_ref) {
     return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, index === 0 && showSelectAll && /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.SelectOption // eslint-disable-next-line react/no-array-index-key
     , {
       key: index + "_select_all",
+      ref: optionRef,
       tabIndex: "-1",
       role: "menuitem",
-      hoverIndicator: "light-5",
+      hoverIndicator: theme.select.activeColor,
       selected: allSelected,
       plain: true,
+      onMouseOver: onActiveOption(-1),
+      onFocus: onActiveOption(-1),
       onClick: !inclusionExclusion || inclusionExclusion && isExcluded !== null ? function () {
         return setUnsetChips(allSelected ? [] : options.map(function (item, ind) {
           return optionValue(ind);
@@ -169,9 +186,9 @@ var ColumnSelect = function ColumnSelect(_ref) {
       label: "Select All",
       inclusionExclusion: inclusionExclusion,
       isExcluded: isExcluded,
-      onSelect: function onSelect(event, type) {
-        return setOption(event, type, -1);
-      }
+      index: SELECT_ALL_INDEX,
+      onSelect: setOption,
+      active: activeIndex === -1
     })), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.SelectOption // eslint-disable-next-line react/no-array-index-key
     , {
       key: index,
@@ -193,9 +210,9 @@ var ColumnSelect = function ColumnSelect(_ref) {
       label: optionLabel(index),
       inclusionExclusion: inclusionExclusion,
       isExcluded: isExcluded,
-      onSelect: function onSelect(event, type) {
-        return setOption(event, type, index);
-      }
+      index: index,
+      onSelect: setOption,
+      active: optionActive
     })));
   }) : /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.SelectOption, {
     key: "search_empty",
@@ -214,7 +231,7 @@ var ColumnSelect = function ColumnSelect(_ref) {
       color: theme.multiselect.rightPanel.border
     }]
   }, renderOptionChips())), showOptionChips && layout === 'single-column' && renderOptionChips(), showControlButtons && /*#__PURE__*/_react["default"].createElement(_ControlButton.ControlButton, {
-    onUpdate: onUpdate,
+    onOk: onOk,
     onCancel: onCancel
   }));
 };

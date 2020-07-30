@@ -80,6 +80,9 @@ var OptionChips = function OptionChips(_ref) {
     }, theme.multiselect.chips.option), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionLabel, _extends({
       isExcluded: isExcluded
     }, theme.multiselect.chips.label), optionLabel(item)), /*#__PURE__*/_react["default"].createElement(_Close.Close, _extends({
+      style: {
+        cursor: 'pointer'
+      },
       onClick: function onClick(event) {
         return onRemove(event, item);
       }

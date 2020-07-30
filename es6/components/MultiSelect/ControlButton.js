@@ -7,7 +7,7 @@ import { Button } from '../Button';
 import { Text } from '../Text';
 
 var ControlButton = function ControlButton(_ref) {
-  var onUpdate = _ref.onUpdate,
+  var onOk = _ref.onOk,
       onCancel = _ref.onCancel;
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var ControlButtonWrapper = styled(Box).withConfig({
@@ -17,7 +17,7 @@ var ControlButton = function ControlButton(_ref) {
     return props.theme.multiselect.controls.wrapper.extend;
   });
   return /*#__PURE__*/React.createElement(ControlButtonWrapper, theme.multiselect.controls.wrapper, /*#__PURE__*/React.createElement(Button, _extends({}, theme.multiselect.controls.button, {
-    onClick: onUpdate,
+    onClick: onOk,
     primary: true
   }), /*#__PURE__*/React.createElement(Text, {
     weight: 600

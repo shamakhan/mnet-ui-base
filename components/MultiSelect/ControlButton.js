@@ -20,7 +20,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 var ControlButton = function ControlButton(_ref) {
-  var onUpdate = _ref.onUpdate,
+  var onOk = _ref.onOk,
       onCancel = _ref.onCancel;
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
   var ControlButtonWrapper = (0, _styledComponents["default"])(_Box.Box).withConfig({
@@ -30,7 +30,7 @@ var ControlButton = function ControlButton(_ref) {
     return props.theme.multiselect.controls.wrapper.extend;
   });
   return /*#__PURE__*/_react["default"].createElement(ControlButtonWrapper, theme.multiselect.controls.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.multiselect.controls.button, {
-    onClick: onUpdate,
+    onClick: onOk,
     primary: true
   }), /*#__PURE__*/_react["default"].createElement(_Text.Text, {
     weight: 600

@@ -3,10 +3,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Box } from '../Box';
 import { Select } from '../Select';
-import useCustomSelectState from './useCustomSelectState';
 import { ColumnSelect } from './ColumnSelect';
 import { ValueLabelWithNumber } from './ValueLabelWithNumber';
 import { applyKey } from './utils';
@@ -15,7 +14,7 @@ var MultiSelect = function MultiSelect(_ref) {
   var width = _ref.width,
       height = _ref.height,
       options = _ref.options,
-      value = _ref.value,
+      valueProp = _ref.value,
       labelKey = _ref.labelKey,
       valueKey = _ref.valueKey,
       onValueChange = _ref.onValueChange,
@@ -29,66 +28,112 @@ var MultiSelect = function MultiSelect(_ref) {
       searchable = _ref.searchable,
       custom = _ref.custom,
       withInclusionExclusion = _ref.withInclusionExclusion,
-      isExcluded = _ref.isExcluded,
+      isExcludedProp = _ref.isExcluded,
       onIncExcChange = _ref.onIncExcChange,
       renderEmptySelected = _ref.renderEmptySelected,
       validate = _ref.validate,
       rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected", "validate"]);
 
-  var _useCustomSelectState = useCustomSelectState(options, value),
-      filteredOptions = _useCustomSelectState.filteredOptions,
-      previousValue = _useCustomSelectState.previousValue,
-      open = _useCustomSelectState.open,
-      searchVal = _useCustomSelectState.searchVal,
-      setSelectState = _useCustomSelectState.setSelectState;
+  var _useState = useState(valueProp),
+      internalValue = _useState[0],
+      updateInternalValue = _useState[1];
 
+  var _useState2 = useState(isExcludedProp),
+      internalIsExcluded = _useState2[0],
+      updateInternalIsExcluded = _useState2[1];
+
+  var _useState3 = useState(false),
+      isOpen = _useState3[0],
+      updateIsOpen = _useState3[1];
+
+  var _useState4 = useState(''),
+      search = _useState4[0],
+      updateSearch = _useState4[1];
+
+  var isExcluded = withUpdateCancelButtons ? internalIsExcluded : isExcludedProp;
+  var value = withUpdateCancelButtons ? internalValue : valueProp;
   useEffect(function () {
-    setSelectState({
-      filteredOptions: options
-    });
-  }, [options]);
-  useEffect(function () {
-    setSelectState({
-      previousValue: value
-    });
-  }, [value]);
+    if (!isOpen && withUpdateCancelButtons) {
+      updateInternalValue(valueProp);
+    }
+  }, [isOpen, valueProp, withUpdateCancelButtons]);
+
+  var onClose = function onClose() {
+    if (withInclusionExclusion) {
+      updateInternalValue(valueProp);
+      updateInternalIsExcluded(isExcludedProp);
+    }
+
+    updateIsOpen(false);
+  };
+
+  var onOpen = function onOpen() {
+    if (withInclusionExclusion) {
+      updateInternalValue(valueProp);
+      updateInternalIsExcluded(isExcludedProp);
+    }
+
+    updateIsOpen(true);
+  };
+
+  var onIncludeExclude = function onIncludeExclude(newValue) {
+    var updater = withUpdateCancelButtons ? updateInternalIsExcluded : onIncExcChange;
+    updater(newValue);
+  };
 
   var onCancelClick = function onCancelClick() {
-    onValueChange(previousValue);
-    setSelectState({
-      open: false
-    });
+    onClose();
+  };
+
+  var onOkClick = function onOkClick() {
+    onValueChange(value);
+
+    if (onIncExcChange) {
+      onIncExcChange(isExcluded);
+    }
+
+    updateIsOpen(false);
   };
 
   var getValue = function getValue(index, array, param) {
     return applyKey(array[index], param);
   };
 
-  var _onSearchChange = function onSearchChange(search) {
-    var escapedText = search.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
-    var exp = new RegExp(escapedText, 'i');
-    setSelectState({
-      searchVal: search,
-      filteredOptions: options.filter(function (item, index) {
-        return exp.test(getValue(index, options, labelKey));
-      })
-    });
+  var onSearchChange = function onSearchChange(searchInput) {
+    var escapedText = searchInput.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
+    updateSearch(escapedText);
   };
 
-  var onSelectValueChange = function onSelectValueChange(selectValue) {
-    if (!searchVal) onValueChange(selectValue);else {
-      var newValue = value.slice(0);
-      var nonSelected = filteredOptions.map(function (val, ind) {
-        return getValue(ind, filteredOptions, valueKey);
-      });
-      selectValue.forEach(function (item) {
-        if (nonSelected.includes(item)) nonSelected.splice(nonSelected.indexOf(item), 1);
-        if (!value.includes(item)) newValue.push(item);
-      });
-      onValueChange(newValue.filter(function (item) {
-        return !nonSelected.includes(item);
-      }));
+  var getOptions = useCallback(function () {
+    if (!search) {
+      return options;
     }
+
+    var exp = new RegExp(search, 'i');
+    return options.filter(function (item, index) {
+      return exp.test(getValue(index, options, labelKey));
+    });
+  }, [options, search]);
+  var getOptionsNotMatchingSearch = useCallback(function () {
+    if (!search) {
+      return [];
+    }
+
+    var exp = new RegExp(search, 'i');
+    return options.filter(function (item, index) {
+      return !exp.test(getValue(index, options, labelKey));
+    });
+  }, [options, search]);
+
+  var onSelectValueChange = function onSelectValueChange(_ref2) {
+    var newValue = _ref2.value;
+    var valuesNotMatchingSearch = getOptionsNotMatchingSearch().filter(function (item, index, opt) {
+      return value.includes(getValue(index, opt, valueKey));
+    }).map(function (item, index, opt) {
+      return getValue(index, opt, valueKey);
+    });
+    var updater = withUpdateCancelButtons ? updateInternalValue : onValueChange;
+    updater([].concat(valuesNotMatchingSearch, newValue));
   };
 
   var renderContent = function renderContent(props) {
@@ -97,31 +142,20 @@ var MultiSelect = function MultiSelect(_ref) {
         layout: layout,
         width: width,
         height: height,
-        onUpdate: function onUpdate() {
-          return setSelectState({
-            open: false,
-            previousValue: value
-          });
-        },
+        onOk: onOkClick,
         onCancel: onCancelClick,
-        setValues: function setValues(nextValue) {
-          return onSelectValueChange(nextValue);
-        },
+        onChange: onSelectValueChange,
         emptySearchMessage: emptySearchMessage,
         showSelectAll: withSelectAll,
         showOptionChips: withOptionChips,
         showControlButtons: withUpdateCancelButtons,
         inclusionExclusion: withInclusionExclusion,
         isExcluded: isExcluded,
-        setIncExcVal: function setIncExcVal(incExc) {
-          return onIncExcChange(incExc);
-        },
+        setIncExcVal: onIncludeExclude,
         renderSearch: searchable && !onSearch,
         searchPlaceholder: searchPlaceholder,
-        searchValue: searchVal || '',
-        onSearchChange: function onSearchChange(search) {
-          return _onSearchChange(search);
-        },
+        searchValue: search,
+        onSearchChange: onSearchChange,
         renderEmptySelected: renderEmptySelected,
         onValueChange: onValueChange,
         custom: custom,
@@ -151,20 +185,11 @@ var MultiSelect = function MultiSelect(_ref) {
   }, /*#__PURE__*/React.createElement(Select, _extends({
     multiple: true,
     value: value,
-    options: filteredOptions,
-    onChange: function onChange(_ref2) {
-      var nextValue = _ref2.value;
-      return onSelectValueChange(nextValue);
-    },
-    open: open,
-    onOpen: function onOpen() {
-      return setSelectState({
-        open: true
-      });
-    },
-    onClose: withUpdateCancelButtons ? function () {
-      return onValueChange(previousValue);
-    } : undefined,
+    options: getOptions(),
+    onChange: onSelectValueChange,
+    open: isOpen,
+    onOpen: onOpen,
+    onClose: onClose,
     closeOnChange: false,
     renderCustomContent: ['single-column', 'double-column'].includes(layout) ? function (props) {
       return renderContent(props);
