@@ -378,7 +378,9 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
   }), label && component !== _CheckBox.CheckBox && /*#__PURE__*/_react["default"].createElement(_Text.Text, {
     as: "label",
     htmlFor: htmlFor
-  }, label)) : null, /*#__PURE__*/_react["default"].createElement(_Box.Box, null, contents, normalizedError && /*#__PURE__*/_react["default"].createElement(_Box.Box, null, /*#__PURE__*/_react["default"].createElement(Message, _extends({
+  }, label, " ", required && /*#__PURE__*/_react["default"].createElement(_Text.Text, {
+    color: "status-critical"
+  }, "*"))) : null, /*#__PURE__*/_react["default"].createElement(_Box.Box, null, contents, normalizedError && /*#__PURE__*/_react["default"].createElement(_Box.Box, null, /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: normalizedError
   }, formFieldTheme.error, {
     style: {

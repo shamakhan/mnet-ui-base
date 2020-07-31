@@ -354,7 +354,9 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
   }), label && component !== CheckBox && /*#__PURE__*/React.createElement(Text, {
     as: "label",
     htmlFor: htmlFor
-  }, label)) : null, /*#__PURE__*/React.createElement(Box, null, contents, normalizedError && /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Message, _extends({
+  }, label, " ", required && /*#__PURE__*/React.createElement(Text, {
+    color: "status-critical"
+  }, "*"))) : null, /*#__PURE__*/React.createElement(Box, null, contents, normalizedError && /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Message, _extends({
     message: normalizedError
   }, formFieldTheme.error, {
     style: {
