@@ -23,7 +23,7 @@ var dropKeyFrames = keyframes(["0%{opacity:0.5;transform:scale(0.8);}100%{opacit
 var StyledDrop = styled.div.withConfig({
   displayName: "StyledDrop",
   componentId: "sc-1o13o3c-0"
-})(["", " border-radius:", ";position:fixed;z-index:", ";outline:none;", " opacity:0;transform-origin:", ";animation:", " 0.1s forwards;animation-delay:0.01s;@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){display:flex;align-items:stretch;}", ""], baseStyle, function (props) {
+})(["", " border-radius:", ";position:fixed;z-index:", ";outline:none;", " opacity:0;transform-origin:", ";animation:", " 0.1s forwards;animation-delay:0.01s;margin-top:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){display:flex;align-items:stretch;}", ""], baseStyle, function (props) {
   return props.theme.global.drop.border.radius;
 }, function (props) {
   return props.theme.global.drop.zIndex;
@@ -32,6 +32,8 @@ var StyledDrop = styled.div.withConfig({
 }, function (props) {
   return getTransformOriginStyle(props.alignProp);
 }, dropKeyFrames, function (props) {
+  return props.theme.global.drop.marginTop;
+}, function (props) {
   return props.theme.global.drop && props.theme.global.drop.extend;
 });
 StyledDrop.defaultProps = {};

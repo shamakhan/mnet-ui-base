@@ -241,7 +241,8 @@ export var generate = function generate(baseSpacing, scale) {
           radius: '0px'
         },
         shadowSize: 'small',
-        zIndex: '20'
+        zIndex: '20',
+        marginTop: '4px'
       },
       edgeSize: {
         none: '0px',
