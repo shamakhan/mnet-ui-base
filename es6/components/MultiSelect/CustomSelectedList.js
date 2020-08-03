@@ -73,6 +73,9 @@ var SelectedList = function SelectedList(_ref) {
     }, theme.multiselect.chips.option), /*#__PURE__*/React.createElement(OptionLabel, _extends({
       isExcluded: isExcluded
     }, theme.multiselect.chips.label), /*#__PURE__*/React.createElement(Text, null, item)), /*#__PURE__*/React.createElement(Close, _extends({
+      style: {
+        cursor: 'pointer'
+      },
       onClick: function onClick() {
         return onRemove(item);
       }

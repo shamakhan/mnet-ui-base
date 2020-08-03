@@ -89,6 +89,9 @@ var SelectedList = function SelectedList(_ref) {
     }, theme.multiselect.chips.option), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionLabel, _extends({
       isExcluded: isExcluded
     }, theme.multiselect.chips.label), /*#__PURE__*/_react["default"].createElement(_Text.Text, null, item)), /*#__PURE__*/_react["default"].createElement(_Close.Close, _extends({
+      style: {
+        cursor: 'pointer'
+      },
       onClick: function onClick() {
         return onRemove(item);
       }
