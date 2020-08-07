@@ -25,12 +25,6 @@ var _TextInput = require("../TextInput");
 
 var _FormContext = require("../Form/FormContext");
 
-var _Drop = require("../Drop");
-
-var _Button = require("../Button");
-
-var _Tooltip = require("../Tooltip");
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -39,6 +33,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+// import { Drop } from '../Drop';
+// import { Button } from '../Button';
+// import { Tooltip } from '../Tooltip';
 var mnetInputNames = ['TextInput', 'Select', 'MaskedInput', 'TextArea'];
 var mnetInputPadNames = ['CheckBox', 'CheckBoxGroup', 'RadioButtonGroup', 'RangeInput'];
 
@@ -103,7 +100,9 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
       labelWidth = _ref2$labelWidth === void 0 ? 0 : _ref2$labelWidth,
       _ref2$width = _ref2.width,
       width = _ref2$width === void 0 ? 'auto' : _ref2$width,
-      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "className", "component", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onFocus", "pad", "required", "style", "validate", "direction", "postfix", "prefix", "labelWidth", "width"]);
+      _ref2$showBorder = _ref2.showBorder,
+      showBorder = _ref2$showBorder === void 0 ? true : _ref2$showBorder,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "className", "component", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onFocus", "pad", "required", "style", "validate", "direction", "postfix", "prefix", "labelWidth", "width", "showBorder"]);
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -303,7 +302,7 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
     } : {};
     contents = /*#__PURE__*/_react["default"].createElement(FormFieldContentBox, _extends({
       overflow: "hidden"
-    }, innerProps), contents);
+    }, showBorder && innerProps), contents);
     var mergedMargin = margin || formFieldTheme.margin;
     abut = themeBorder.position === 'outer' && (themeBorder.side === 'all' || themeBorder.side === 'horizontal' || !themeBorder.side) && !(mergedMargin && (typeof mergedMargin === 'string' && mergedMargin !== 'none' || mergedMargin.bottom && mergedMargin.bottom !== 'none' || mergedMargin.horizontal && mergedMargin.horizontal !== 'none'));
 

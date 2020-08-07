@@ -57,7 +57,7 @@ Object.setPrototypeOf(StyledCheckBoxContainer.defaultProps, _defaultProps.defaul
 var StyledCheckBoxInput = _styledComponents["default"].input.withConfig({
   displayName: "StyledCheckBox__StyledCheckBoxInput",
   componentId: "sc-14qttcc-2"
-})(["opacity:0;-moz-appearance:none;width:0;height:0;margin:0;", ":checked + span > span{left:calc( ", " - ", " );background:", ";}"], function (props) {
+})(["opacity:0;-moz-appearance:none;width:0;height:0;margin:0 !important;", ":checked + span > span{left:calc( ", " - ", " );background:", ";}"], function (props) {
   return !props.disabled && 'cursor: pointer;';
 }, function (props) {
   return props.theme.checkBox.toggle.size;

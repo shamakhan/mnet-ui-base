@@ -12,10 +12,10 @@ import { CheckBoxGroup } from '../CheckBoxGroup';
 import { RadioButtonGroup } from '../RadioButtonGroup';
 import { Text } from '../Text';
 import { TextInput } from '../TextInput';
-import { FormContext } from '../Form/FormContext';
-import { Drop } from '../Drop';
-import { Button } from '../Button';
-import { Tooltip } from '../Tooltip';
+import { FormContext } from '../Form/FormContext'; // import { Drop } from '../Drop';
+// import { Button } from '../Button';
+// import { Tooltip } from '../Tooltip';
+
 var mnetInputNames = ['TextInput', 'Select', 'MaskedInput', 'TextArea'];
 var mnetInputPadNames = ['CheckBox', 'CheckBoxGroup', 'RadioButtonGroup', 'RangeInput'];
 
@@ -80,7 +80,9 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
       labelWidth = _ref2$labelWidth === void 0 ? 0 : _ref2$labelWidth,
       _ref2$width = _ref2.width,
       width = _ref2$width === void 0 ? 'auto' : _ref2$width,
-      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "className", "component", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onFocus", "pad", "required", "style", "validate", "direction", "postfix", "prefix", "labelWidth", "width"]);
+      _ref2$showBorder = _ref2.showBorder,
+      showBorder = _ref2$showBorder === void 0 ? true : _ref2$showBorder,
+      rest = _objectWithoutPropertiesLoose(_ref2, ["children", "className", "component", "disabled", "error", "help", "htmlFor", "info", "label", "margin", "name", "onBlur", "onFocus", "pad", "required", "style", "validate", "direction", "postfix", "prefix", "labelWidth", "width", "showBorder"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var context = useContext(FormContext);
@@ -279,7 +281,7 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
     } : {};
     contents = /*#__PURE__*/React.createElement(FormFieldContentBox, _extends({
       overflow: "hidden"
-    }, innerProps), contents);
+    }, showBorder && innerProps), contents);
     var mergedMargin = margin || formFieldTheme.margin;
     abut = themeBorder.position === 'outer' && (themeBorder.side === 'all' || themeBorder.side === 'horizontal' || !themeBorder.side) && !(mergedMargin && (typeof mergedMargin === 'string' && mergedMargin !== 'none' || mergedMargin.bottom && mergedMargin.bottom !== 'none' || mergedMargin.horizontal && mergedMargin.horizontal !== 'none'));
 

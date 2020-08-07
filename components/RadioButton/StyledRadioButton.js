@@ -33,7 +33,7 @@ Object.setPrototypeOf(StyledRadioButtonContainer.defaultProps, _defaultProps.def
 var StyledRadioButtonInput = _styledComponents["default"].input.withConfig({
   displayName: "StyledRadioButton__StyledRadioButtonInput",
   componentId: "tlf8ya-1"
-})(["opacity:0;-moz-appearance:none;width:0;height:0;margin:0;", ";"], function (props) {
+})(["opacity:0;-moz-appearance:none;width:0;height:0;margin:0 !important;", ";"], function (props) {
   return !props.disabled && 'cursor: pointer;';
 });
 
