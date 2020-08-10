@@ -13,12 +13,15 @@ var Example = function Example() {
 
   var validateDomains = function validateDomains(values, list) {
     var regx = /^([a-zA-Z0-9_][-_a-zA-Z0-9]{0,62}\.)+([a-zA-Z0-9]{1,10})$/;
-    var errMsg = 'Some of the values already exists';
-    if (new Set(values).size !== values.length || values.some(function (val) {
+    if (new Set(values).size !== values.length) return {
+      isValid: false,
+      errMsg: 'Dublicate entry not allowed'
+    };
+    if (values.some(function (val) {
       return list.includes(val);
     })) return {
       isValid: false,
-      errMsg: errMsg
+      errMsg: 'Some of the values already exists'
     };
     return {
       isValid: values && values.every(function (val) {
