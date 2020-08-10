@@ -33,6 +33,10 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
       isValid = _React$useState2[0],
       setIsValid = _React$useState2[1];
 
+  var _React$useState3 = React.useState(''),
+      errorMsg = _React$useState3[0],
+      setErrorMsg = _React$useState3[1];
+
   var setTextAreaValueFn = function setTextAreaValueFn(value) {
     setIsValid(true);
     setTextAreaValue(value);
@@ -47,11 +51,16 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
         return text.length;
       });
 
-      if (validate && validate.callback(filteredValues)) {
+      var _validate = validate(filteredValues, value),
+          isValueValid = _validate.isValid,
+          errMsg = _validate.errMsg;
+
+      if (validate && isValueValid) {
         setIncExcVal(isIncExc);
         onValueChange([].concat(value, filteredValues));
         setTextAreaValue('');
       } else {
+        setErrorMsg(errMsg);
         setIsValid(false);
       }
     }
@@ -80,7 +89,7 @@ var CustomMultiSelect = function CustomMultiSelect(_ref) {
       height: '100%'
     }
   }), /*#__PURE__*/React.createElement(FormField, {
-    error: !isValid ? validate.message : null
+    error: !isValid ? errorMsg : null
   }, /*#__PURE__*/React.createElement(Box, {
     width: "full",
     style: {
