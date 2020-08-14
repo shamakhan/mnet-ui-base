@@ -14,7 +14,8 @@ const ModalPopUp = () => {
   const [popUpConfig, setPopUpConfig] = useState({
     title: '',
     message: '',
-    buttons: [],
+    onPrimaryClick: undefined,
+    renderButton: undefined,
   });
 
   const onClose = () => setModalOpen(false);

@@ -6,26 +6,17 @@ import {
   Text,
   openConfirmAlert,
   closeConfirmAlert,
-  modalIsLoading,
 } from 'mnet-ui-base';
 
-const Confirm = () => {
-  const okClick = () => {
-    modalIsLoading(true);
-    setTimeout(() => {
-      modalIsLoading(false);
-      closeConfirmAlert();
-    }, 3000);
-  };
-
+const CustomConfirm = () => {
   return(
   <Box align="center" justify="center" height="100vh" width="100vw">
     <Button
       onClick={
         () => openConfirmAlert({
-          title: 'Confirm',
-          message: 'This is a message',
-          onPrimaryClick: okClick,
+          title: <Text>Confirm</Text>,
+          message: <Text>This is a message from custom component</Text>,
+          renderButton: <Button onClick={closeConfirmAlert} primary>OK</Button>,
         })
       }
     >
@@ -34,4 +25,5 @@ const Confirm = () => {
   </Box>
 )};
 
-storiesOf('Modal Pop-up', module).add('Confirm Box', () => <Confirm />);
+storiesOf('Modal Pop-up', module)
+  .add('Custom Confirm Box', () => <CustomConfirm />);

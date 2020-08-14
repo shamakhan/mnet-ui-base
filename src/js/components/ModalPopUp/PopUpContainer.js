@@ -8,46 +8,64 @@ import { Text } from '../Text';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 
-const PopUpContainer = ({ title, message, buttons, isLoading, onClose }) => {
+const PopUpContainer = ({
+  title,
+  message,
+  onPrimaryClick,
+  renderButton,
+  isLoading,
+  onClose,
+}) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;
 
-  return(
+  return (
     <Box {...theme.modalpopup.container}>
-      <Box {...theme.modalpopup.title.wrapper}>
-        <Heading {...theme.modalpopup.title.text}>{title}</Heading>
-      </Box>
+      {title && (
+        <Box {...theme.modalpopup.title.wrapper}>
+          <Heading {...theme.modalpopup.title.text}>{title}</Heading>
+        </Box>
+      )}
       <Box {...theme.modalpopup.message.wrapper}>
         <Text {...theme.modalpopup.message.text}>{message}</Text>
       </Box>
-      <Box {...theme.modalpopup.buttons.wrapper}>
-        {buttons.map(({ label, onClick, primary }) => (
+      {renderButton || (
+        <Box {...theme.modalpopup.buttons.wrapper}>
           <Button
-            key={label}
-            onClick={onClick || onClose}
-            primary={primary || false}
-            secondary={!primary || false}
-            isLoading={(primary && isLoading) || false}
-            background={primary ? 'accent-1' : 'accent-2'}
             {...theme.modalpopup.buttons.button}
+            onClick={onPrimaryClick || onClose}
+            isLoading={isLoading}
+            background="accent-1"
+            primary
           >
-            <Text weight={600}>{label}</Text>
+            OK
           </Button>
-        ))}
-      </Box>
+          <Button
+            {...theme.modalpopup.buttons.button}
+            onClick={onClose}
+            background="accent-2"
+            secondary
+          >
+            Cancel
+          </Button>
+        </Box>
+      )}
     </Box>
   );
 };
 
 PopUpContainer.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   message: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  buttons: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string,
-    onClick: PropTypes.func,
-    primary: PropTypes.bool,
-  })).isRequired,
+  onPrimaryClick: PropTypes.func,
+  renderButton: PropTypes.node,
   isLoading: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
+};
+
+PopUpContainer.defaultProps = {
+  title: '',
+  onPrimaryClick: undefined,
+  renderButton: undefined,
 };
 
 export { PopUpContainer };

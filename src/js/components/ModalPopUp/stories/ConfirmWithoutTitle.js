@@ -9,7 +9,7 @@ import {
   modalIsLoading,
 } from 'mnet-ui-base';
 
-const Confirm = () => {
+const ConfirmWithoutTitle = () => {
   const okClick = () => {
     modalIsLoading(true);
     setTimeout(() => {
@@ -23,7 +23,6 @@ const Confirm = () => {
     <Button
       onClick={
         () => openConfirmAlert({
-          title: 'Confirm',
           message: 'This is a message',
           onPrimaryClick: okClick,
         })
@@ -34,4 +33,5 @@ const Confirm = () => {
   </Box>
 )};
 
-storiesOf('Modal Pop-up', module).add('Confirm Box', () => <Confirm />);
+storiesOf('Modal Pop-up', module)
+  .add('Confirm Box Without Title', () => <ConfirmWithoutTitle />);
