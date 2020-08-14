@@ -54,7 +54,7 @@ const PopUpContainer = ({
 };
 
 PopUpContainer.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   message: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   onPrimaryClick: PropTypes.func,
   renderButton: PropTypes.node,
