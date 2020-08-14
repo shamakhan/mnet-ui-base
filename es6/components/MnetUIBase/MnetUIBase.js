@@ -37,6 +37,7 @@ import { backgroundIsDark, deepMerge, getBreakpoint, getDeviceBreakpoint, normal
 import { base as baseTheme } from '../../themes';
 import { StyledMnetUIBase } from './StyledMnetUIBase';
 import { Notification } from '../Notification';
+import { ModalPopUp } from '../ModalPopUp';
 var FullGlobalStyle = createGlobalStyle(_templateObject());
 var GlobalStyle = createGlobalStyle(_templateObject2(), function (props) {
   return props.theme.mnet.global;
@@ -176,7 +177,7 @@ var MnetUIBase = /*#__PURE__*/function (_Component) {
       value: containerTarget
     }, /*#__PURE__*/React.createElement(StyledMnetUIBase, _extends({
       full: full
-    }, rest), children), full && /*#__PURE__*/React.createElement(FullGlobalStyle, null), /*#__PURE__*/React.createElement(GlobalStyle, null), /*#__PURE__*/React.createElement(Notification, null))));
+    }, rest), children), full && /*#__PURE__*/React.createElement(FullGlobalStyle, null), /*#__PURE__*/React.createElement(GlobalStyle, null), /*#__PURE__*/React.createElement(Notification, null), /*#__PURE__*/React.createElement(ModalPopUp, null))));
   };
 
   return MnetUIBase;

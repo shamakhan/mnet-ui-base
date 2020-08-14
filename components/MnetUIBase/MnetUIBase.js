@@ -17,6 +17,8 @@ var _StyledMnetUIBase = require("./StyledMnetUIBase");
 
 var _Notification = require("../Notification");
 
+var _ModalPopUp = require("../ModalPopUp");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -192,7 +194,7 @@ var MnetUIBase = /*#__PURE__*/function (_Component) {
       value: containerTarget
     }, /*#__PURE__*/_react["default"].createElement(_StyledMnetUIBase.StyledMnetUIBase, _extends({
       full: full
-    }, rest), children), full && /*#__PURE__*/_react["default"].createElement(FullGlobalStyle, null), /*#__PURE__*/_react["default"].createElement(GlobalStyle, null), /*#__PURE__*/_react["default"].createElement(_Notification.Notification, null))));
+    }, rest), children), full && /*#__PURE__*/_react["default"].createElement(FullGlobalStyle, null), /*#__PURE__*/_react["default"].createElement(GlobalStyle, null), /*#__PURE__*/_react["default"].createElement(_Notification.Notification, null), /*#__PURE__*/_react["default"].createElement(_ModalPopUp.ModalPopUp, null))));
   };
 
   return MnetUIBase;
