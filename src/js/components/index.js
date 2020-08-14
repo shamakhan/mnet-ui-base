@@ -38,6 +38,7 @@ export * from './Menu';
 export * from './Meter';
 export * from './Pagination';
 export * from './Paragraph';
+export * from './ModalPopUp';
 export * from './MultiSelect';
 export * from './Nav';
 export * from './RadioButton';
