@@ -42,11 +42,15 @@ var PopUpContainer = function PopUpContainer(_ref) {
     isLoading: isLoading,
     background: "accent-1",
     primary: true
-  }), "OK"), /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.modalpopup.buttons.button, {
+  }), /*#__PURE__*/_react["default"].createElement(_Text.Text, {
+    weight: 600
+  }, "OK")), /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.modalpopup.buttons.button, {
     onClick: onClose,
     background: "accent-2",
     secondary: true
-  }), "Cancel")));
+  }), /*#__PURE__*/_react["default"].createElement(_Text.Text, {
+    weight: 600
+  }, "Cancel"))));
 };
 
 exports.PopUpContainer = PopUpContainer;

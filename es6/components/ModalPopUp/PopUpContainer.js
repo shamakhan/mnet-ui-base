@@ -22,11 +22,15 @@ var PopUpContainer = function PopUpContainer(_ref) {
     isLoading: isLoading,
     background: "accent-1",
     primary: true
-  }), "OK"), /*#__PURE__*/React.createElement(Button, _extends({}, theme.modalpopup.buttons.button, {
+  }), /*#__PURE__*/React.createElement(Text, {
+    weight: 600
+  }, "OK")), /*#__PURE__*/React.createElement(Button, _extends({}, theme.modalpopup.buttons.button, {
     onClick: onClose,
     background: "accent-2",
     secondary: true
-  }), "Cancel")));
+  }), /*#__PURE__*/React.createElement(Text, {
+    weight: 600
+  }, "Cancel"))));
 };
 
 PopUpContainer.propTypes = {
