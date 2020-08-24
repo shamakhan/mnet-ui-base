@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { Close } from 'grommet-icons/icons/Close';
 
+import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
 import { Button } from '../Button';
 import { Text } from '../Text';
-
 import {
   OptionsBox,
   OptionWrapper,
@@ -78,6 +78,8 @@ const OptionChips = ({
                 {...theme.multiselect.chips.option}
               >
                 <OptionLabel
+                  role="listitem"
+                  aria-label="Selected Option Chip"
                   isExcluded={isExcluded}
                   {...theme.multiselect.chips.label}
                 >
