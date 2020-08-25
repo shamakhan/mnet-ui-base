@@ -215,4 +215,33 @@ describe('MultiSelect', () => {
 
   });
 
+  it('Single Column - Search - Value match', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
+    const onValueChange = jest.fn();
+
+    const { getByRole, getByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={onValueChange}
+        withOptionChips
+        searchable
+        searchPlaceholder="Search"
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    const searchElement = getByRole(
+      'search',
+      { name: 'multiselect searchbox' },
+    );
+
+    fireEvent.change(searchElement, { target: { value: 'Test 1' } });
+    expect(searchElement.value).toBe('Test 1');
+
+  });
+
 });
