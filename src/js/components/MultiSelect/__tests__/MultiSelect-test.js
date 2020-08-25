@@ -142,4 +142,77 @@ describe('MultiSelect', () => {
 
   });
 
+  it('Single Column - No values selected - Value Label', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
+    const onValueChange = jest.fn();
+
+    const { queryAllByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={onValueChange}
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    const [selectLabel] = queryAllByLabelText('Selected Label Value');
+    const count = queryAllByLabelText('Selected Label Count');
+
+    expect(selectLabel).toHaveTextContent(/^Select$/);
+    expect(count.length).toBe(0);
+
+  });
+
+  it('Single Column - No values selected - Option Chips', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
+    const onValueChange = jest.fn();
+
+    const { getByLabelText, queryAllByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={onValueChange}
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+    
+    const chipsElements = queryAllByRole(
+      'listitem',
+      { name: 'Selected Option Chip'},
+    );
+
+    // Match no. of options which are selected
+    expect(chipsElements.length).toBe(0);
+
+  });
+
+  it('Single Column - No values selected - Verify checkbox check', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
+    const onValueChange = jest.fn();
+
+    const { getByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={onValueChange}
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    options.forEach(_ => {
+      expect(getByLabelText(`select checkbox for Test ${_.id}`))
+        .toHaveClass('option-checkbox-inactive');
+    });
+
+  });
+
 });
