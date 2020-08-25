@@ -63,7 +63,13 @@ const OptionWithCheckControl = ({
       <Box {...theme.multiselect.option}>
         <Box direction="row">
           {!inclusionExclusion && renderCheckbox('check', null)}
-          <Text {...theme.select.options.text}>{label}</Text>
+          <Text
+            role="option"
+            aria-label="multiselect option value"
+            {...theme.select.options.text}
+          >
+            {label}
+          </Text>
         </Box>
         {inclusionExclusion &&
           ((isExcluded === null && active) || isExcluded !== null) && (

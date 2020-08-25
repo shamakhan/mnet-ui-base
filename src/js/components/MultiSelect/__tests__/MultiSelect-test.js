@@ -244,4 +244,53 @@ describe('MultiSelect', () => {
 
   });
 
+  it('Single Column - Search - Option match', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
+    const onValueChange = jest.fn();
+
+    const { getByRole, getByLabelText, queryAllByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={onValueChange}
+        withOptionChips
+        searchable
+        searchPlaceholder="Search"
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    const searchElement = getByRole(
+      'search',
+      { name: 'multiselect searchbox' },
+    );
+
+    // Initial Option count check
+    expect(queryAllByRole(
+      'option',
+      { name: 'multiselect option value' },
+    ).length).toBe(8);
+
+    fireEvent.change(searchElement, { target: { value: 'Test 1' } });
+
+    const filteredOptions = queryAllByRole(
+      'option',
+      { name: 'multiselect option value' },
+    );
+
+    expect(filteredOptions.length).toBe(4);
+
+    filteredOptions.forEach((option, index) => {
+      expect(option)
+        .toHaveTextContent(
+          new RegExp(
+            `^${options.filter(_ => _.label.includes('Test 1'))[index].label}$`,
+          ))
+    });
+
+  });
+
 });
