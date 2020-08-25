@@ -63,12 +63,12 @@ describe('MultiSelect', () => {
 
   });
 
-  it('Single column - Option selected on passing values externally', () => {
+  it('Single Column - Passing value externally - Value Label', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    let value = [1, 3];
+    let value = [ 1, 3 ];
     const onValueChange = jest.fn(values => { value = values });
 
-    const { getByLabelText, queryAllByRole } = render(
+    const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={value}
@@ -82,21 +82,64 @@ describe('MultiSelect', () => {
       .toHaveTextContent(/^Selected$/);
     expect(getByLabelText('Selected Label Count')).toHaveTextContent(/^2$/);
 
+  });
+
+  it('Single Coulmn - Passing value externally - Option Chips', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
+    const value = [ 1, 3 ];
+    const onValueChange = jest.fn();
+
+    const { getByLabelText, queryAllByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={value}
+        onValueChange={onValueChange}
+        withOptionChips
+        {...props}
+      />,
+    );
+
     // Open the multiselect dropdown
     fireEvent.click(getByLabelText('Open Drop'));
     
-    const elements = queryAllByRole(
+    const chipsElements = queryAllByRole(
       'listitem',
       { name: 'Selected Option Chip'},
     );
 
     // Match no. of options which are selected
-    expect(elements.length).toBe(2);
+    expect(chipsElements.length).toBe(2);
 
     // Match the option labels which are selected
-    elements.forEach((el, index) => {
+    chipsElements.forEach((el, index) => {
       expect(el).toHaveTextContent(new RegExp(`^Test ${value[index]}$`));
     });
+
+  });
+
+  it('Single Column - Passing value externally - Verify checkbox check', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
+    const value = [ 1, 3 ];
+    const onValueChange = jest.fn();
+
+    const { getByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={value}
+        onValueChange={onValueChange}
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    value.forEach(_ => {
+      expect(getByLabelText(`select checkbox for Test ${_}`))
+        .toHaveClass('option-checkbox-active');
+    });
+
   });
 
 });

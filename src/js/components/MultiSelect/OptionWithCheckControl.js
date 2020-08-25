@@ -28,6 +28,13 @@ const OptionWithCheckControl = ({
     return (
       <CheckBoxWrapper {...theme.multiselect.checkbox.box}>
         <CheckBox
+          role="checkbox"
+          aria-label={`${exc ? check : 'select'} checkbox for ${label}`}
+          className={
+            `option-checkbox-${
+              selected || (inclusionExclusion && isExcluded === null)
+              ? 'active' : 'inactive'
+            }`}
           {...theme.multiselect.checkbox.check}
           active={selected || (inclusionExclusion && isExcluded === null)}
           isExcluded={exc}
