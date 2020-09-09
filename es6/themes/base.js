@@ -1446,6 +1446,7 @@ export var generate = function generate(baseSpacing, scale) {
         position: 'top-right',
         zIndex: 1,
         width: '60%',
+        timeout: 2000,
         icon: {
           size: 'medium',
           "default": Info

@@ -25,6 +25,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var emitter = new _eventEmitter["default"]();
+var timeoutId;
 
 var addNotification = function addNotification(type, config) {
   var id = (0, _uuid.v1)();
@@ -66,6 +67,13 @@ function Notification() {
     }
   };
 
+  var autoRemoveNotification = function autoRemoveNotification(timeout) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(function () {
+      return deleteLast();
+    }, timeout);
+  };
+
   emitter.on('removeNotification', function (id) {
     deleteNotification(id);
   });
@@ -81,6 +89,7 @@ function Notification() {
     return null;
   }
 
+  if (notifications.length) autoRemoveNotification(theme.notification.toast.timeout || 2000);
   return /*#__PURE__*/_react["default"].createElement(_Layer.Layer, {
     position: theme.notification.toast.position,
     modal: false,

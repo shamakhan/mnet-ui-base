@@ -6,6 +6,7 @@ import { Layer } from '../Layer';
 import { defaultProps } from '../../default-props';
 import { Toast } from './Toast';
 var emitter = new EventEmitter();
+var timeoutId;
 export var addNotification = function addNotification(type, config) {
   var id = uuid();
   emitter.emit('addNotification', id, type, config);
@@ -37,6 +38,13 @@ export function Notification() {
     }
   };
 
+  var autoRemoveNotification = function autoRemoveNotification(timeout) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(function () {
+      return deleteLast();
+    }, timeout);
+  };
+
   emitter.on('removeNotification', function (id) {
     deleteNotification(id);
   });
@@ -52,6 +60,7 @@ export function Notification() {
     return null;
   }
 
+  if (notifications.length) autoRemoveNotification(theme.notification.toast.timeout || 2000);
   return /*#__PURE__*/React.createElement(Layer, {
     position: theme.notification.toast.position,
     modal: false,
