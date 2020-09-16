@@ -64,7 +64,8 @@ var Tooltip = /*#__PURE__*/forwardRef(function (_ref, ref) {
     elevation: "none",
     plain: true,
     style: {
-      boxShadow: 'none'
+      boxShadow: 'none',
+      maxWidth: tooptip.maxWidth
     }
   }, /*#__PURE__*/React.createElement(ArrowWrap, {
     position: position
