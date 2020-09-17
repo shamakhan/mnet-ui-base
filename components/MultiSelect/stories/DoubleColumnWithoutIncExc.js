@@ -25,6 +25,21 @@ var options = [{
 }, {
   id: 5,
   label: 'Test 5'
+}, {
+  id: 6,
+  label: 'Test 6'
+}, {
+  id: 7,
+  label: 'Test 7'
+}, {
+  id: 8,
+  label: 'Test 8'
+}, {
+  id: 9,
+  label: 'Test 9'
+}, {
+  id: 10,
+  label: 'Test 10'
 }];
 
 var Example = function Example() {
@@ -50,6 +65,7 @@ var Example = function Example() {
     },
     layout: "double-column",
     width: "medium",
+    height: "medium",
     searchPlaceholder: "Search",
     searchable: true,
     withOptionChips: true,

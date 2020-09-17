@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { Box, MultiSelect } from 'mnet-ui-base';
-var options = ['Test 1', 'Test 2', 'Test 3', 'Test 4', 'Test 5'];
+var options = ['Test 1', 'Test 2', 'Test 3', 'Test 4', 'Test 5', 'Test 6', 'Test 7', 'Test 8', 'Test 9', 'Test 10'];
 
 var Example = function Example() {
   var _useState = useState([]),
@@ -21,6 +21,7 @@ var Example = function Example() {
     },
     layout: "single-column",
     width: "medium",
+    height: "medium",
     withOptionChips: true
   }));
 };

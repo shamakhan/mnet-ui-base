@@ -23,7 +23,7 @@ import { deepFreeze, deepMerge } from '../utils/object';
 import { normalizeColor } from '../utils/colors';
 import { parseMetricToNum } from '../utils/mixins';
 var brandColor = '#E15151';
-var accentColors = ['#20314f', '#519bff', '#4DFFEA', '#A4FF4D'];
+var accentColors = ['#38C18B', '#8F94A6', '#739FFC', '#439ADC'];
 var neutralColors = ['#519bff', '#99742E', '#00739D', '#A2423D'];
 var statusColors = {
   critical: '#e35e59',
