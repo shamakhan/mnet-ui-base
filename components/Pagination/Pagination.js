@@ -43,6 +43,7 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
 
   var startPage = currentPage < 3 ? 0 : currentPage - 3;
   var endPage = currentPage < 3 ? currentPage + 5 : currentPage + 3;
+  var pagesArr = new Array(pages).fill(undefined);
   return /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
     direction: "row",
     margin: {
@@ -53,7 +54,7 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     direction: "row",
     round: pagination.round,
     border: pagination.border
-  }, /*#__PURE__*/_react["default"].createElement(_StyledPagination.List, {
+  }, /*#__PURE__*/_react["default"].createElement(_StyledPagination.List, _extends({
     background: pagination.icon.bgColor,
     direction: "row",
     justify: "center",
@@ -61,22 +62,23 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       size: pagination.round,
       corner: 'left'
     }
-  }, currentPage === 1 ? null : /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+  }, pagination.list), currentPage === 1 ? null : /*#__PURE__*/_react["default"].createElement(_Button.Button, {
     "data-page": currentPage - 1,
     onClick: handleClick
   }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     pad: pagination.icon.pad
-  }, leftIcon))), [].concat(Array(pages)).map(function (a, i) {
+  }, leftIcon))), pagesArr.map(function (a, i) {
     return i;
   }).slice(startPage, endPage).map(function (pageNo) {
-    return /*#__PURE__*/_react["default"].createElement(_StyledPagination.List, {
+    return /*#__PURE__*/_react["default"].createElement(_StyledPagination.List, _extends({
       background: pagination.background,
       justify: "center",
       key: pageNo || '0',
       className: "" + (currentPage === pageNo + 1 ? 'active' : '')
-    }, /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+    }, pagination.list), /*#__PURE__*/_react["default"].createElement(_Button.Button, {
       "data-page": pageNo + 1,
-      onClick: handleClick
+      onClick: handleClick,
+      color: "" + (currentPage === pageNo + 1 ? pagination.active.color : pagination.list && pagination.list.color)
     }, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
       pad: pagination.pad
     }, pageNo + 1)));

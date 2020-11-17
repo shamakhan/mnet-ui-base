@@ -24,7 +24,7 @@ var useFormContext = function useFormContext(_, valueProp, initialValue) {
   }];
 };
 
-var FormContext = _react["default"].createContext({
+var FormContext = /*#__PURE__*/_react["default"].createContext({
   useFormContext: useFormContext
 });
 

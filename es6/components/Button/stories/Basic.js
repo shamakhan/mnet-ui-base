@@ -18,6 +18,7 @@ var BasicButtons = function BasicButtons(props) {
     pad: "medium"
   }, /*#__PURE__*/React.createElement(Button, _extends({
     secondary: true,
+    size: "medium",
     label: "Secondary",
     onClick: function onClick() {}
   }, props))), /*#__PURE__*/React.createElement(Box, {
@@ -25,24 +26,28 @@ var BasicButtons = function BasicButtons(props) {
     pad: "medium"
   }, /*#__PURE__*/React.createElement(Button, _extends({
     tertiary: true,
+    size: "medium",
     label: "Tertiary",
     onClick: function onClick() {}
   }, props))), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "medium"
   }, /*#__PURE__*/React.createElement(Button, _extends({
+    size: "medium",
     label: "Default",
     onClick: function onClick() {}
   }, props))), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "medium"
   }, /*#__PURE__*/React.createElement(Button, {
+    size: "medium",
     label: "Anchor",
     href: "#"
   })), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     pad: "medium"
   }, /*#__PURE__*/React.createElement(Button, _extends({
+    size: "medium",
     disabled: true,
     label: "Disabled",
     onClick: function onClick() {}

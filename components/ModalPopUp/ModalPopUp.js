@@ -37,6 +37,7 @@ var ModalPopUp = function ModalPopUp() {
   var _useState3 = (0, _react.useState)({
     title: '',
     message: '',
+    body: undefined,
     onPrimaryClick: undefined,
     renderButton: undefined
   }),

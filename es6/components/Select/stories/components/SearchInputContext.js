@@ -1,2 +1,2 @@
 import { createContext } from 'react';
-export var SearchInputContext = createContext({});
+export var SearchInputContext = /*#__PURE__*/createContext({});

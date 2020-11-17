@@ -12,12 +12,13 @@ import { Heading } from '../Heading';
 var PopUpContainer = function PopUpContainer(_ref) {
   var title = _ref.title,
       message = _ref.message,
+      body = _ref.body,
       onPrimaryClick = _ref.onPrimaryClick,
       renderButton = _ref.renderButton,
       isLoading = _ref.isLoading,
       onClose = _ref.onClose;
   var theme = useContext(ThemeContext) || defaultProps.theme;
-  return /*#__PURE__*/React.createElement(Box, theme.modalpopup.container, title && /*#__PURE__*/React.createElement(Box, theme.modalpopup.title.wrapper, /*#__PURE__*/React.createElement(Heading, theme.modalpopup.title.text, title)), /*#__PURE__*/React.createElement(Box, theme.modalpopup.message.wrapper, /*#__PURE__*/React.createElement(Text, theme.modalpopup.message.text, message)), renderButton || /*#__PURE__*/React.createElement(Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/React.createElement(Button, _extends({}, theme.modalpopup.buttons.button, {
+  return /*#__PURE__*/React.createElement(Box, theme.modalpopup.container, title && /*#__PURE__*/React.createElement(Box, theme.modalpopup.title.wrapper, /*#__PURE__*/React.createElement(Heading, theme.modalpopup.title.text, title)), !body && message && /*#__PURE__*/React.createElement(Box, theme.modalpopup.message.wrapper, /*#__PURE__*/React.createElement(Text, theme.modalpopup.message.text, message)), !message && body && /*#__PURE__*/React.createElement(Box, theme.modalpopup.message.wrapper, body), renderButton || !body && /*#__PURE__*/React.createElement(Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/React.createElement(Button, _extends({}, theme.modalpopup.buttons.button, {
     onClick: onPrimaryClick || onClose,
     isLoading: isLoading,
     background: "accent-1",
@@ -39,11 +40,13 @@ PopUpContainer.propTypes = {
   onPrimaryClick: PropTypes.func,
   renderButton: PropTypes.node,
   isLoading: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func.isRequired,
+  body: PropTypes.node
 };
 PopUpContainer.defaultProps = {
   title: '',
   onPrimaryClick: undefined,
-  renderButton: undefined
+  renderButton: undefined,
+  body: undefined
 };
 export { PopUpContainer };

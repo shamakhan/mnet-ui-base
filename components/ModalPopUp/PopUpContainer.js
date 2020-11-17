@@ -30,6 +30,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var PopUpContainer = function PopUpContainer(_ref) {
   var title = _ref.title,
       message = _ref.message,
+      body = _ref.body,
       onPrimaryClick = _ref.onPrimaryClick,
       renderButton = _ref.renderButton,
       isLoading = _ref.isLoading,
@@ -37,7 +38,7 @@ var PopUpContainer = function PopUpContainer(_ref) {
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
-  return /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.container, title && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.title.wrapper, /*#__PURE__*/_react["default"].createElement(_Heading.Heading, theme.modalpopup.title.text, title)), /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.modalpopup.message.text, message)), renderButton || /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.modalpopup.buttons.button, {
+  return /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.container, title && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.title.wrapper, /*#__PURE__*/_react["default"].createElement(_Heading.Heading, theme.modalpopup.title.text, title)), !body && message && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.modalpopup.message.text, message)), !message && body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, body), renderButton || !body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.modalpopup.buttons.button, {
     onClick: onPrimaryClick || onClose,
     isLoading: isLoading,
     background: "accent-1",
@@ -60,10 +61,12 @@ PopUpContainer.propTypes = {
   onPrimaryClick: _propTypes["default"].func,
   renderButton: _propTypes["default"].node,
   isLoading: _propTypes["default"].bool.isRequired,
-  onClose: _propTypes["default"].func.isRequired
+  onClose: _propTypes["default"].func.isRequired,
+  body: _propTypes["default"].node
 };
 PopUpContainer.defaultProps = {
   title: '',
   onPrimaryClick: undefined,
-  renderButton: undefined
+  renderButton: undefined,
+  body: undefined
 };

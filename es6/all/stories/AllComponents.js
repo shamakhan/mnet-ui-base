@@ -5,10 +5,11 @@ import { mnet, dark } from 'mnet-ui-base/themes';
 import { generate } from 'mnet-ui-base/themes/base';
 import { deepMerge } from 'mnet-ui-base/utils';
 import { neo } from 'mnet-ui-base-theme-neo';
+import { hb } from 'mnet-ui-base-theme-hb';
 var themes = {
+  hb: hb,
   neo: neo,
-  dark: dark,
-  mnet: mnet
+  dark: dark
 };
 
 var Components = function Components() {
@@ -217,10 +218,12 @@ var Components = function Components() {
   }, /*#__PURE__*/React.createElement(Select, {
     plain: true,
     size: "small",
-    options: Object.keys(themes),
+    options: Object.keys(themes).map(function (val) {
+      return val.toUpperCase();
+    }),
     value: themeName,
     onChange: function onChange(event) {
-      return setThemeName(event.option);
+      return setThemeName(event.option.toLowerCase());
     }
   })), themeCanMode && /*#__PURE__*/React.createElement(CheckBox, {
     label: "dark",

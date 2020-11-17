@@ -20,6 +20,7 @@ var ModalPopUp = function ModalPopUp() {
   var _useState3 = useState({
     title: '',
     message: '',
+    body: undefined,
     onPrimaryClick: undefined,
     renderButton: undefined
   }),

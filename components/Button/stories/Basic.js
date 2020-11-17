@@ -24,6 +24,7 @@ var BasicButtons = function BasicButtons(props) {
     pad: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     secondary: true,
+    size: "medium",
     label: "Secondary",
     onClick: function onClick() {}
   }, props))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
@@ -31,24 +32,28 @@ var BasicButtons = function BasicButtons(props) {
     pad: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
     tertiary: true,
+    size: "medium",
     label: "Tertiary",
     onClick: function onClick() {}
   }, props))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
+    size: "medium",
     label: "Default",
     onClick: function onClick() {}
   }, props))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, {
+    size: "medium",
     label: "Anchor",
     href: "#"
   })), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
     align: "center",
     pad: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Button, _extends({
+    size: "medium",
     disabled: true,
     label: "Disabled",
     onClick: function onClick() {}

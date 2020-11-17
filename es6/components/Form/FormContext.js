@@ -14,6 +14,6 @@ var useFormContext = function useFormContext(_, valueProp, initialValue) {
   }];
 };
 
-export var FormContext = React.createContext({
+export var FormContext = /*#__PURE__*/React.createContext({
   useFormContext: useFormContext
 });
