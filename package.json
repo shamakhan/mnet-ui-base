@@ -52,6 +52,7 @@
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
     "react-desc": "^4.1.2",
+    "react-dropzone": "^11.2.4",
     "uuid": "^8.2.0"
   },
   "devDependencies": {
@@ -106,6 +107,7 @@
     "jest-cli": "^25.1.0",
     "jest-styled-components": "^7.0.0",
     "jsdom": "^15.1.1",
+    "mnet-icons": "git+ssh://git@tree.mn:saumik.s/mnet-icons.git",
     "pre-commit": "^1.2.2",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.8.0",
