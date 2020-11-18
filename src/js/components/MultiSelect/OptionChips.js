@@ -30,7 +30,13 @@ const OptionChips = ({
   const theme = useContext(ThemeContext) || defaultProps.theme;
 
   const renderClearButton = () => (
-    <Button focusIndicator={false} onClick={() => clearAll([])} plain>
+    <Button
+      role="button"
+      a11yTitle="Clear all selected options"
+      focusIndicator={false}
+      onClick={() => clearAll([])}
+      plain
+    >
       <Box
         border={{
           side: 'bottom',

@@ -21,8 +21,17 @@ const labelKey = 'label';
 const valueKey = { key: 'id', reduce: true };
 
 describe('MultiSelect', () => {
+  const setValues = jest.fn();
+  const setIncExc = jest.fn();
+  const useStateSpy = jest.spyOn(React, 'useState');
+  useStateSpy.mockImplementation(value => [value, setValues]);
+  useStateSpy.mockImplementation(incExc => [incExc, setIncExc]);
+
   beforeEach(createPortal);
-  afterEach(cleanup);
+  afterEach(() => {
+    jest.clearAllMocks();
+    cleanup();
+  });
 
   it('basic', () => {
     const props = { value: [], options, labelKey, valueKey };
@@ -37,22 +46,15 @@ describe('MultiSelect', () => {
   });
 
   it('double-column', () => {
-    let incExc = null;
-    let value = [];
     const props = { options, labelKey, valueKey, layout: 'double-column' };
-
-    const onIncExcChange = jest.fn(() => {
-      incExc = incExc !== null ? !incExc : true
-    });
-    const onValueChange = jest.fn(() => { value = [1,2] });
 
     const component = renderer.create(
       <MultiSelect
         id="test-multiselect"
-        value={value}
-        isExcluded={incExc}
-        onValueChange={onValueChange}
-        onIncExcChange={onIncExcChange}
+        value={[]}
+        isExcluded={null}
+        onValueChange={setValues}
+        onIncExcChange={setIncExc}
         withOptionChips
         withUpdateCancelButtons
         withInclusionExclusion
@@ -65,14 +67,12 @@ describe('MultiSelect', () => {
 
   it('Single Column - Passing value externally - Value Label', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    let value = [ 1, 3 ];
-    const onValueChange = jest.fn(values => { value = values });
 
     const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
-        value={value}
-        onValueChange={onValueChange}
+        value={[ 1, 3 ]}
+        onValueChange={setValues}
         withOptionChips
         {...props}
       />,
@@ -87,13 +87,12 @@ describe('MultiSelect', () => {
   it('Single Coulmn - Passing value externally - Option Chips', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
     const value = [ 1, 3 ];
-    const onValueChange = jest.fn();
 
     const { getByLabelText, queryAllByRole } = render(
       <MultiSelect
         id="test-multiselect"
         value={value}
-        onValueChange={onValueChange}
+        onValueChange={setValues}
         withOptionChips
         {...props}
       />,
@@ -120,13 +119,12 @@ describe('MultiSelect', () => {
   it('Single Column - Passing value externally - Verify checkbox check', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
     const value = [ 1, 3 ];
-    const onValueChange = jest.fn();
 
     const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={value}
-        onValueChange={onValueChange}
+        onValueChange={setValues}
         withOptionChips
         {...props}
       />,
@@ -144,13 +142,12 @@ describe('MultiSelect', () => {
 
   it('Single Column - No values selected - Value Label', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    const onValueChange = jest.fn();
 
     const { queryAllByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={[]}
-        onValueChange={onValueChange}
+        onValueChange={setValues}
         withOptionChips
         {...props}
       />,
@@ -166,13 +163,12 @@ describe('MultiSelect', () => {
 
   it('Single Column - No values selected - Option Chips', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    const onValueChange = jest.fn();
 
     const { getByLabelText, queryAllByRole } = render(
       <MultiSelect
         id="test-multiselect"
         value={[]}
-        onValueChange={onValueChange}
+        onValueChange={setValues}
         withOptionChips
         {...props}
       />,
@@ -193,13 +189,12 @@ describe('MultiSelect', () => {
 
   it('Single Column - No values selected - Verify checkbox check', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    const onValueChange = jest.fn();
 
     const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={[]}
-        onValueChange={onValueChange}
+        onValueChange={setValues}
         withOptionChips
         {...props}
       />,
@@ -217,13 +212,12 @@ describe('MultiSelect', () => {
 
   it('Single Column - Search - Value match', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    const onValueChange = jest.fn();
 
     const { getByRole, getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={[]}
-        onValueChange={onValueChange}
+        onValueChange={setValues}
         withOptionChips
         searchable
         searchPlaceholder="Search"
@@ -246,13 +240,12 @@ describe('MultiSelect', () => {
 
   it('Single Column - Search - Option match', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    const onValueChange = jest.fn();
 
     const { getByRole, getByLabelText, queryAllByRole } = render(
       <MultiSelect
         id="test-multiselect"
         value={[]}
-        onValueChange={onValueChange}
+        onValueChange={setValues}
         withOptionChips
         searchable
         searchPlaceholder="Search"
@@ -290,6 +283,189 @@ describe('MultiSelect', () => {
             `^${options.filter(_ => _.label.includes('Test 1'))[index].label}$`,
           ))
     });
+
+  });
+
+  it('Single Column - Select Option - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={setValues}
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Select Option with id 2
+    fireEvent.click(getByRole('menuitem', { name: 'option id - 2' }));
+
+    expect(setValues).toHaveBeenCalledWith([2]);
+
+  });
+
+  it('Single Column - Deselect Option - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[ 1, 2, 3 ]}
+        onValueChange={setValues}
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Select Option with id 2
+    fireEvent.click(getByRole('menuitem', { name: 'option id - 2' }));
+
+    expect(setValues).toHaveBeenCalledWith([1, 3]);
+
+  });
+
+  it('Single Column - Select All Option - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={setValues}
+        withOptionChips
+        withSelectAll
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Select all option checkbox
+    fireEvent.click(getByRole('menuitem', { name: 'select all options' }));
+
+    expect(setValues).toHaveBeenCalledWith(options.map(_ => _.id));
+
+  });
+
+  it('Single Column - Deselect All Option - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={options.map(_ => _.id)}
+        onValueChange={setValues}
+        withOptionChips
+        withSelectAll
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Select all option checkbox
+    fireEvent.click(getByRole('menuitem', { name: 'select all options' }));
+
+    expect(setValues).toHaveBeenCalledWith([]);
+
+  });
+
+  it('Single Column - Clear All Option - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[1, 2, 3]}
+        onValueChange={setValues}
+        withOptionChips
+        withSelectAll
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Select all option checkbox
+    fireEvent.click(getByRole(
+      'button',
+      { name: 'Clear all selected options' }),
+    );
+
+    expect(setValues).toHaveBeenCalledWith([]);
+
+  });
+
+  it('Single Column - OK Button', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[1, 2, 3]}
+        onValueChange={setValues}
+        withOptionChips
+        withUpdateCancelButtons
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Select Option with id 2
+    fireEvent.click(getByRole('menuitem', { name: 'option id - 2' }));
+
+    expect(setValues).toHaveBeenCalledTimes(0);
+
+    fireEvent.click(getByRole(
+      'button',
+      { name: 'OK button (Update selected values)' },
+    ));
+
+    expect(setValues).toHaveBeenCalledWith([1, 3]);
+
+  });
+
+  it('Single Column - Cancel Button', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[1, 2, 3]}
+        onValueChange={setValues}
+        withOptionChips
+        withUpdateCancelButtons
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Select Option with id 2
+    fireEvent.click(getByRole('menuitem', { name: 'option id - 2' }));
+
+    expect(setValues).toHaveBeenCalledTimes(0);
+
+    fireEvent.click(getByRole(
+      'button',
+      { name: 'Cancel button' },
+    ));
+
+    expect(setValues).toHaveBeenCalledTimes(0);
 
   });
 
