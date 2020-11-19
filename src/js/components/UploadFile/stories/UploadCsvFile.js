@@ -17,6 +17,7 @@ const UploadCsvFile = () => {
               <UploadFile
                 validateUrl="http://localhost:8880/publishers/8CUJB6ET3/targeting/domains/validate"
                 uploadUrl="http://localhost:8880/publishers/8CUJB6ET3/targeting/domains/upload"
+                downloadSampleUrl="http://localhost:8880/publishers/8CUJB6ET3/targeting/domains/getTemplate"
               />
             ),
           })

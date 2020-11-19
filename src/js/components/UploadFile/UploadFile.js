@@ -1,136 +1,103 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
-import { Box } from 'mnet-ui-base';
 
+import { Box } from '../Box';
+import { addToast } from '../Notification';
 import { ValidateTable } from './ValidateTable';
 import { UploadedTable } from './UploadedTable';
 import { UploadForm } from './UploadForm';
 
-const UploadFile = ({ validateUrl, uploadUrl }) => {
+const UploadFile = ({ validateUrl, uploadUrl, downloadSampleUrl }) => {
   const [files, setFiles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const onDrop = file => {
-    setFiles(file);
-  };
+  const [showValidateTable, setShowValidateTable] = useState(false);
+  const [showUploadedTable, setShowUploadedTable] = useState(false);
+  const [tableData, setTableData] = useState({
+    rules: [],
+    headers: [],
+  });
 
-  const [validateData, setValidateData] = useState({
-    rules: [],
-    headers: [],
-  });
-  const [uploadedData, setUploadedData] = useState({
-    rules: [],
-    headers: [],
-  });
+  const onDrop = file => setFiles(file);
+
   const { getRootProps, getInputProps } = useDropzone({
     accept: '.csv',
     multiple: false,
+    disabled: isLoading,
     onDrop,
   });
 
-  const onValidate = () => {
-    const file = files[0];
+  const getFormDate = () => {
     const formData = new FormData();
-    formData.append('file', file);
-    setIsLoading(true);
-
-    fetch(validateUrl, {
-      method: 'POST',
-      body: formData,
-    })
-      .then(resp => resp.json())
-      .then(({ data }) => {
-        setIsLoading(false);
-        setValidateData({
-          headers: data.headers,
-          rules: data.rules,
-        });
-      });
+    formData.append('file', files[0]);
+    return formData;
   };
 
-  const onUpload = () => {
-    const file = files[0];
-    const formData = new FormData();
-    formData.append('file', file);
+  const onUpload = (url, isValidate, isUpload) => {
     setIsLoading(true);
-
-    fetch(uploadUrl, {
+    fetch(url, {
       method: 'POST',
-      body: formData,
+      body: getFormDate(),
     })
       .then(resp => resp.json())
       .then(({ data }) => {
         setIsLoading(false);
-        setUploadedData({
+        setTableData({
           headers: data.headers,
           rules: data.rules,
         });
+        if (isValidate) {
+          setShowUploadedTable(false);
+          setShowValidateTable(true);
+        }
+        if (isUpload) {
+          setShowValidateTable(false);
+          setShowUploadedTable(true);
+        }
+      })
+      .catch(error => {
+        addToast({ msg: 'Something went wrong', type: 'error' });
+        setIsLoading(false);
       });
   };
 
   return (
     <Box>
-      <ValidateTable
-        validateData={{
-          rules: [
-            {
-              domain: {
-                oldValue: 'test',
-                newValue: 'changes',
-                isModified: false,
-              },
-            },
-            {
-              domain: {
-                oldValue: 'test1',
-                newValue: 'changes2',
-                isModified: true,
-              },
-            },
-          ],
-          headers: ['domain'],
-        }}
-        onUpload={onUpload}
-        files={files}
-        isLoading={isLoading}
-      />
-      <UploadedTable
-        uploadedData={{
-          rules: [
-            {
-              domain: {
-                oldValue: 'test',
-                newValue: 'changes',
-                isModified: false,
-                result: {
-                  status: 'OK',
-                  messages: '',
-                },
-              },
-            },
-            {
-              domain: {
-                oldValue: 'test1',
-                newValue: 'changes2',
-                isModified: true,
-                result: {
-                  status: 'FAIL',
-                  messages: '',
-                },
-              },
-            },
-          ],
-          headers: ['domain'],
-        }}
-      />
-      <UploadForm
-        getRootProps={getRootProps}
-        getInputProps={getInputProps}
-        onValidate={onValidate}
-        files={files}
-        isLoading={isLoading}
-      />
+      {showValidateTable && (
+        <ValidateTable
+          tableData={tableData}
+          onUpload={onUpload}
+          files={files}
+          isLoading={isLoading}
+          url={uploadUrl}
+        />
+      )}
+      {showUploadedTable && <UploadedTable tableData={tableData} />}
+      {!showValidateTable && !showUploadedTable && (
+        <UploadForm
+          getRootProps={getRootProps}
+          getInputProps={getInputProps}
+          onUpload={onUpload}
+          files={files}
+          isLoading={isLoading}
+          downloadSampleUrl={downloadSampleUrl}
+          url={validateUrl}
+        />
+      )}
     </Box>
   );
+};
+
+UploadFile.propTypes = {
+  validateUrl: PropTypes.string,
+  uploadUrl: PropTypes.string,
+  downloadSampleUrl: PropTypes.string,
+};
+
+UploadFile.defaultProps = {
+  validateUrl: '',
+  uploadUrl: '',
+  downloadSampleUrl: '',
 };
 
 export { UploadFile };

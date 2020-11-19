@@ -1,31 +1,37 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Box, Text, Button, closeConfirmAlert } from 'mnet-ui-base';
+import { ThemeContext } from 'styled-components';
 import { CloudUpload } from 'grommet-icons';
+
+import { Box } from '../Box';
+import { Button } from '../Button';
+import { Text } from '../Text';
+import { closeConfirmAlert } from '../ModalPopUp';
+import { defaultProps } from '../../default-props';
 
 const UploadForm = ({
   getRootProps,
   getInputProps,
-  onValidate,
+  onUpload,
   files,
   isLoading,
+  downloadSampleUrl,
+  url,
 }) => {
+  const { upload } = useContext(ThemeContext) || defaultProps.theme;
+
   return (
     <>
       <Box
         {...getRootProps()}
-        pad="large"
-        border={{ style: 'dashed', color: 'dark-2' }}
-        height="medium"
-        align="center"
-        justify="center"
+        {...(upload && upload.form && upload.form.container)}
       >
         <input {...getInputProps()} />
         <Box align="center">
           <Box margin="medium">
             <CloudUpload size="medium" color="dark-2" />
           </Box>
-          <Text color="dark-1" size="large" weight={600} margin="small">
+          <Text {...(upload && upload.form && upload.form.header)}>
             Drop your file here or{' '}
             <Text color="neutral-1" size="large">
               Choose File
@@ -35,12 +41,17 @@ const UploadForm = ({
             files[0].name
           ) : (
             <>
-              <Text>CSV format files will be supported</Text>
+              <Text {...(upload && upload.form && upload.form.text)}>
+                CSV format files will be supported
+              </Text>
               <Button
-                href="http://localhost:8880/publishers/8CUJB6ET3/targeting/domains/getTemplate"
+                margin="small"
+                href={downloadSampleUrl}
                 onClick={event => event.stopPropagation()}
               >
-                Download Sample File
+                <Text {...(upload && upload.form && upload.form.sampleText)}>
+                  Download Sample File
+                </Text>
               </Button>
             </>
           )}
@@ -54,7 +65,7 @@ const UploadForm = ({
           size="medium"
           margin={{ right: 'medium' }}
           disabled={!files.length}
-          onClick={onValidate}
+          onClick={() => onUpload(url, true, false)}
           background="brand"
         />
         <Button
@@ -71,7 +82,7 @@ const UploadForm = ({
 UploadForm.defaultProps = {
   getRootProps: undefined,
   getInputProps: undefined,
-  onValidate: undefined,
+  onUpload: undefined,
   files: [],
   isLoading: undefined,
 };
@@ -79,7 +90,7 @@ UploadForm.defaultProps = {
 UploadForm.propTypes = {
   getRootProps: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   getInputProps: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  onValidate: PropTypes.func,
+  onUpload: PropTypes.func,
   files: PropTypes.array,
   isLoading: PropTypes.bool,
 };

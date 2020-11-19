@@ -60,3 +60,4 @@ export * from './Notification';
 export * from './Pagination';
 export * from './Tooltip';
 export * from './Loader';
+export * from './UploadFile';
