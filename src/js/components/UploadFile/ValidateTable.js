@@ -34,7 +34,11 @@ const ValidateTable = ({ tableData, onUpload, files, isLoading, url }) => {
               <TableRow>
                 {headers.map(text => (
                   <TableCell key={text} scope="col" verticalAlign="middle">
-                    <Text size="large" color="white">
+                    <Text
+                      size="medium"
+                      color="dark-2"
+                      style={{ textTransform: 'uppercase' }}
+                    >
                       {text}
                     </Text>
                   </TableCell>
@@ -50,20 +54,22 @@ const ValidateTable = ({ tableData, onUpload, files, isLoading, url }) => {
                       return (
                         <TableCell
                           background={
-                            isShowModified && isModified ? '#ffe8b9' : null
+                            isShowModified && isModified ? '#FBFADC' : null
                           }
                           key={oldValue}
                           scope="row"
                           verticalAlign="middle"
                         >
-                          <Text size="large">{oldValue}</Text>
-                          <Text
-                            style={{ verticalAlign: 'middle' }}
-                            margin="large"
-                          >
-                            <FormNextLink size="medium" color="dark-2" />
-                          </Text>
-                          <Text size="large">{newValue}</Text>
+                          <Text size="medium">{oldValue}</Text>
+                          {oldValue && newValue && (
+                            <Text
+                              style={{ verticalAlign: 'middle' }}
+                              margin="medium"
+                            >
+                              <FormNextLink size="medium" color="dark-2" />
+                            </Text>
+                          )}
+                          <Text size="medium">{newValue}</Text>
                         </TableCell>
                       );
                     })}

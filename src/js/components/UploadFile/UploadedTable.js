@@ -27,9 +27,9 @@ const UploadedTable = ({ tableData }) => {
   const [isShowModified, setIsShowModified] = useState(true);
 
   const getStatusColor = (showModified, isModified, result) => {
-    if (showModified && isModified && result.status === 'OK') return '#8ed09c';
+    if (showModified && isModified && result.status === 'OK') return '#A9FADD';
     if (showModified && isModified && result.status === 'FAIL')
-      return '#ffd5d5';
+      return '#F9C0C6';
   };
 
   return (
@@ -45,7 +45,11 @@ const UploadedTable = ({ tableData }) => {
               <TableRow>
                 {headers.map(text => (
                   <TableCell key={text} scope="col" verticalAlign="middle">
-                    <Text size="large" color="white">
+                    <Text
+                      size="medium"
+                      color="dark-2"
+                      style={{ textTransform: 'uppercase' }}
+                    >
                       {text}
                     </Text>
                   </TableCell>
@@ -59,7 +63,7 @@ const UploadedTable = ({ tableData }) => {
                     style={{
                       background:
                         isShowModified && isAnyFailInRule(rule)
-                          ? '#ffd5d5'
+                          ? '#FDDFE2'
                           : null,
                     }}
                   >
@@ -113,14 +117,16 @@ const UploadedTable = ({ tableData }) => {
                               </Box>
                             )}
 
-                          <Text size="large">{oldValue}</Text>
-                          <Text
-                            style={{ verticalAlign: 'middle' }}
-                            margin="large"
-                          >
-                            <FormNextLink size="medium" color="dark-2" />
-                          </Text>
-                          <Text size="large">{newValue}</Text>
+                          <Text size="medium">{oldValue}</Text>
+                          {oldValue && newValue && (
+                            <Text
+                              style={{ verticalAlign: 'middle' }}
+                              margin="medium"
+                            >
+                              <FormNextLink size="medium" color="dark-2" />
+                            </Text>
+                          )}
+                          <Text size="medium">{newValue}</Text>
                         </TableCell>
                       );
                     })}
