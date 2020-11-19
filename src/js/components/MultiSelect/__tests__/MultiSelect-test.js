@@ -71,7 +71,7 @@ describe('MultiSelect', () => {
     const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
-        value={[ 1, 3 ]}
+        value={[1, 3]}
         onValueChange={setValues}
         withOptionChips
         {...props}
@@ -86,7 +86,7 @@ describe('MultiSelect', () => {
 
   it('Single Coulmn - Passing value externally - Option Chips', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    const value = [ 1, 3 ];
+    const value = [1, 3];
 
     const { getByLabelText, queryAllByRole } = render(
       <MultiSelect
@@ -100,10 +100,10 @@ describe('MultiSelect', () => {
 
     // Open the multiselect dropdown
     fireEvent.click(getByLabelText('Open Drop'));
-    
+
     const chipsElements = queryAllByRole(
       'listitem',
-      { name: 'Selected Option Chip'},
+      { name: 'Selected Option Chip' },
     );
 
     // Match no. of options which are selected
@@ -118,7 +118,7 @@ describe('MultiSelect', () => {
 
   it('Single Column - Passing value externally - Verify checkbox check', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
-    const value = [ 1, 3 ];
+    const value = [1, 3];
 
     const { getByLabelText } = render(
       <MultiSelect
@@ -176,10 +176,10 @@ describe('MultiSelect', () => {
 
     // Open the multiselect dropdown
     fireEvent.click(getByLabelText('Open Drop'));
-    
+
     const chipsElements = queryAllByRole(
       'listitem',
-      { name: 'Selected Option Chip'},
+      { name: 'Selected Option Chip' },
     );
 
     // Match no. of options which are selected
@@ -287,7 +287,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Select Option - Verify', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -310,12 +310,12 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Deselect Option - Verify', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
         id="test-multiselect"
-        value={[ 1, 2, 3 ]}
+        value={[1, 2, 3]}
         onValueChange={setValues}
         withOptionChips
         {...props}
@@ -333,7 +333,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Select All Option - Verify', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -357,7 +357,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Deselect All Option - Verify', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -381,7 +381,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Clear All Option - Verify', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -408,7 +408,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - OK Button', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -439,7 +439,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Cancel Button', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -467,7 +467,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Remove Chip - Without update and cancel buttons', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -493,7 +493,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Remove Chip - With update button', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -527,7 +527,7 @@ describe('MultiSelect', () => {
   });
 
   it('Single Column - Remove Chip - With cancel button', () => {
-    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+    const props = { options, labelKey, valueKey, layout: 'single-column' };
 
     const { getByLabelText, getByRole } = render(
       <MultiSelect
@@ -554,6 +554,333 @@ describe('MultiSelect', () => {
     fireEvent.click(getByRole('button', { name: 'Cancel button' }));
 
     expect(setValues).toHaveBeenCalledTimes(0);
+
+  });
+
+  it('Double Column - Passing value externally - Value Label - Included',
+    () => {
+      const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+      const { getByLabelText } = render(
+        <MultiSelect
+          id="test-multiselect"
+          value={[1, 3]}
+          isExcluded={false}
+          onValueChange={setValues}
+          onIncExcChange={setIncExc}
+          withInclusionExclusion
+          {...props}
+        />,
+      );
+
+      expect(getByLabelText('Selected Label Value'))
+        .toHaveTextContent(/^Included$/);
+      expect(getByLabelText('Selected Label Count')).toHaveTextContent(/^2$/);
+
+    });
+
+  it('Double Column - Passing value externally - Value Label - Excluded',
+    () => {
+      const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+      const { getByLabelText } = render(
+        <MultiSelect
+          id="test-multiselect"
+          value={[1, 3]}
+          isExcluded
+          onValueChange={setValues}
+          onIncExcChange={setIncExc}
+          withInclusionExclusion
+          {...props}
+        />,
+      );
+
+      expect(getByLabelText('Selected Label Value'))
+        .toHaveTextContent(/^Excluded$/);
+      expect(getByLabelText('Selected Label Count')).toHaveTextContent(/^2$/);
+
+    });
+
+  it('Double Coulmn - Passing inc value externally - Option Chips', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+    const value = [1, 3];
+
+    const { getByLabelText, queryAllByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={value}
+        onValueChange={setValues}
+        isExcluded={false}
+        onIncExcChange={setIncExc}
+        withInclusionExclusion
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    const chipsElements = queryAllByRole(
+      'listitem',
+      { name: 'Selected Option Chip' },
+    );
+
+    const chipListHeader = getByLabelText('Chip List header');
+
+    // Match no. of options which are selected
+    expect(chipsElements.length).toBe(2);
+
+    // Match the option labels which are selected
+    chipsElements.forEach((el, index) => {
+      expect(el).toHaveTextContent(new RegExp(`^Test ${value[index]}$`));
+    });
+
+    expect(chipListHeader).toHaveTextContent(/^Included List$/);
+
+  });
+
+  it('Double Coulmn - Passing exc value externally - Option Chips', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+    const value = [1, 3];
+
+    const { getByLabelText, queryAllByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={value}
+        onValueChange={setValues}
+        isExcluded
+        onIncExcChange={setIncExc}
+        withInclusionExclusion
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    const chipsElements = queryAllByRole(
+      'listitem',
+      { name: 'Selected Option Chip' },
+    );
+
+    const chipListHeader = getByLabelText('Chip List header');
+
+    // Match no. of options which are selected
+    expect(chipsElements.length).toBe(2);
+
+    // Match the option labels which are selected
+    chipsElements.forEach((el, index) => {
+      expect(el).toHaveTextContent(new RegExp(`^Test ${value[index]}$`));
+    });
+
+    expect(chipListHeader).toHaveTextContent(/^Excluded List$/);
+
+  });
+
+  it('Double Column - Passing inc value externally - Verify checkbox check',
+    () => {
+      const props = { options, labelKey, valueKey, layout: 'double-column' };
+      const value = [1, 3];
+
+      const { getByLabelText, queryByLabelText } = render(
+        <MultiSelect
+          id="test-multiselect"
+          value={value}
+          onValueChange={setValues}
+          isExcluded={false}
+          onIncExcChange={setIncExc}
+          withInclusionExclusion
+          withOptionChips
+          {...props}
+        />,
+      );
+
+      // Open the multiselect dropdown
+      fireEvent.click(getByLabelText('Open Drop'));
+
+      options.map(_ => _.id).forEach(_ => {
+        expect(queryByLabelText(`cross checkbox for Test ${_}`)).toBe(null);
+        const selectCheck = getByLabelText(`select checkbox for Test ${_}`);
+        if (value.includes(_)) {
+          expect(selectCheck).toHaveClass('option-checkbox-active');
+        } else {
+          expect(selectCheck).toHaveClass('option-checkbox-inactive');
+        }
+      });
+
+    });
+
+  it('Double Column - Passing exc value externally - Verify checkbox check',
+    () => {
+      const props = { options, labelKey, valueKey, layout: 'double-column' };
+      const value = [1, 3];
+
+      const { getByLabelText, queryByLabelText } = render(
+        <MultiSelect
+          id="test-multiselect"
+          value={value}
+          onValueChange={setValues}
+          isExcluded
+          onIncExcChange={setIncExc}
+          withInclusionExclusion
+          withOptionChips
+          {...props}
+        />,
+      );
+
+      // Open the multiselect dropdown
+      fireEvent.click(getByLabelText('Open Drop'));
+
+      options.map(_ => _.id).forEach(_ => {
+        expect(queryByLabelText(`select checkbox for Test ${_}`)).toBe(null);
+        const selectCheck = getByLabelText(`cross checkbox for Test ${_}`);
+        if (value.includes(_)) {
+          expect(selectCheck).toHaveClass('option-checkbox-active');
+        } else {
+          expect(selectCheck).toHaveClass('option-checkbox-inactive');
+        }
+      });
+
+    });
+
+  it('Double Column - Passing no value externally - Verify checkbox check',
+    () => {
+      const props = { options, labelKey, valueKey, layout: 'double-column' };
+      const value = [];
+
+      const { getByLabelText, getByRole, queryByLabelText } = render(
+        <MultiSelect
+          id="test-multiselect"
+          value={value}
+          onValueChange={setValues}
+          isExcluded={null}
+          onIncExcChange={setIncExc}
+          withInclusionExclusion
+          withOptionChips
+          {...props}
+        />,
+      );
+
+      // Open the multiselect dropdown
+      fireEvent.click(getByLabelText('Open Drop'));
+
+      options.map(_ => _.id).forEach(_ => {
+        expect(queryByLabelText(`select checkbox for Test ${_}`)).toBe(null);
+        expect(queryByLabelText(`cross checkbox for Test ${_}`)).toBe(null);
+      });
+
+      // Hover option with id 2
+      fireEvent.mouseOver(getByRole('menuitem', { name: 'option id - 2' }));
+
+      expect(getByLabelText(`select checkbox for Test 2`))
+        .toHaveClass('option-checkbox-active');
+      expect(getByLabelText(`cross checkbox for Test 2`))
+        .toHaveClass('option-checkbox-active');
+
+    });
+
+  it('Double Column - No values selected - Value Label', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+    const { queryAllByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={setValues}
+        isExcluded={null}
+        onIncExcChange={setIncExc}
+        withInclusionExclusion
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    const [selectLabel] = queryAllByLabelText('Selected Label Value');
+    const count = queryAllByLabelText('Selected Label Count');
+
+    expect(selectLabel).toHaveTextContent(/^Select$/);
+    expect(count.length).toBe(0);
+
+  });
+
+  it('Double Column - No values selected - Option Chips', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+    const { getByLabelText, queryAllByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={setValues}
+        isExcluded={null}
+        onIncExcChange={setIncExc}
+        withInclusionExclusion
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    const chipsElements = queryAllByRole(
+      'listitem',
+      { name: 'Selected Option Chip' },
+    );
+
+    // Match no. of options which are selected
+    expect(chipsElements.length).toBe(0);
+
+  });
+
+  it('Double Column - Search - Option match', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+    const { getByRole, getByLabelText, queryAllByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={setValues}
+        isExcluded={null}
+        onIncExcChange={setIncExc}
+        withOptionChips
+        searchable
+        searchPlaceholder="Search"
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    const searchElement = getByRole(
+      'search',
+      { name: 'multiselect searchbox' },
+    );
+
+    // Initial Option count check
+    expect(queryAllByRole(
+      'option',
+      { name: 'multiselect option value' },
+    ).length).toBe(8);
+
+    fireEvent.change(searchElement, { target: { value: 'Test 1' } });
+
+    const filteredOptions = queryAllByRole(
+      'option',
+      { name: 'multiselect option value' },
+    );
+
+    expect(filteredOptions.length).toBe(4);
+
+    filteredOptions.forEach((option, index) => {
+      expect(option)
+        .toHaveTextContent(
+          new RegExp(
+            `^${options.filter(_ => _.label.includes('Test 1'))[index].label}$`,
+          ))
+    });
 
   });
 

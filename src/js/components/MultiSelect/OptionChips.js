@@ -65,7 +65,10 @@ const OptionChips = ({
         <Box height={{ max: layout === 'single-column' ? height : 'auto' }}>
           {inclusionExclusion && isExcluded !== null && (
             <IncExcHeader {...theme.multiselect.rightPanel.incExcHeader.box}>
-              <Text {...theme.multiselect.rightPanel.incExcHeader.text}>
+              <Text
+                aria-label="Chip List header"
+                {...theme.multiselect.rightPanel.incExcHeader.text}
+              >
                 {isExcluded ? 'Excluded' : 'Included'} List
               </Text>
               {renderClearButton()}
