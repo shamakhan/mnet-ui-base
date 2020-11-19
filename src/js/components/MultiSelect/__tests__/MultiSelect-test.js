@@ -460,10 +460,98 @@ describe('MultiSelect', () => {
 
     expect(setValues).toHaveBeenCalledTimes(0);
 
+    fireEvent.click(getByRole('button', { name: 'Cancel button' }));
+
+    expect(setValues).toHaveBeenCalledTimes(0);
+
+  });
+
+  it('Single Column - Remove Chip - Without update and cancel buttons', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[1, 2, 3]}
+        onValueChange={setValues}
+        withOptionChips
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Remove Option Test 2
     fireEvent.click(getByRole(
       'button',
-      { name: 'Cancel button' },
+      { name: 'Remove selected chip Test 2' },
     ));
+
+    expect(setValues).toHaveBeenCalledWith([1, 3]);
+
+  });
+
+  it('Single Column - Remove Chip - With update button', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[1, 2, 3]}
+        onValueChange={setValues}
+        withOptionChips
+        withUpdateCancelButtons
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Remove Option Test 2
+    fireEvent.click(getByRole(
+      'button',
+      { name: 'Remove selected chip Test 2' },
+    ));
+
+    expect(setValues).toHaveBeenCalledTimes(0);
+
+    fireEvent.click(getByRole(
+      'button',
+      { name: 'OK button (Update selected values)' },
+    ));
+
+    expect(setValues).toHaveBeenCalledWith([1, 3]);
+
+  });
+
+  it('Single Column - Remove Chip - With cancel button', () => {
+    const props = { options, labelKey, valueKey, layout: 'single-column' };    
+
+    const { getByLabelText, getByRole } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[1, 2, 3]}
+        onValueChange={setValues}
+        withOptionChips
+        withUpdateCancelButtons
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Remove Option Test 2
+    fireEvent.click(getByRole(
+      'button',
+      { name: 'Remove selected chip Test 2' },
+    ));
+
+    expect(setValues).toHaveBeenCalledTimes(0);
+
+    fireEvent.click(getByRole('button', { name: 'Cancel button' }));
 
     expect(setValues).toHaveBeenCalledTimes(0);
 

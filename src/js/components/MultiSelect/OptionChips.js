@@ -92,6 +92,8 @@ const OptionChips = ({
                   {optionLabel(item)}
                 </OptionLabel>
                 <Close
+                  role="button"
+                  aria-label={`Remove selected chip ${optionLabel(item)}`}
                   style={{cursor: 'pointer'}}
                   onClick={event => onRemove(event, item)}
                   {...theme.multiselect.chips.icon}
