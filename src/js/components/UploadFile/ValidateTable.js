@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { ThemeContext } from 'styled-components';
 import { FormNextLink } from 'grommet-icons';
 
+import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
 import { Button } from '../Button';
 import { Text } from '../Text';
@@ -11,25 +13,22 @@ import { TableCell } from '../TableCell';
 import { TableHeader } from '../TableHeader';
 import { TableRow } from '../TableRow';
 import { closeConfirmAlert } from '../ModalPopUp';
-import { CheckBox } from '../CheckBox';
+import { ShowChanges } from './ShowChanges';
 import { modifiedValInRule } from '../../utils';
 
 const ValidateTable = ({ tableData, onUpload, files, isLoading, url }) => {
+  const { upload } = useContext(ThemeContext) || defaultProps.theme;
   const { headers, rules } = tableData;
   const [isShowModified, setIsShowModified] = useState(true);
-  const onChange = event => setIsShowModified(event.target.checked);
 
   return (
     <Box>
-      <Box align="end" margin={{ bottom: 'medium' }}>
-        <CheckBox
-          label="Show Changed"
-          checked={isShowModified}
-          onChange={onChange}
-        />
-      </Box>
+      <ShowChanges
+        isShowModified={isShowModified}
+        setIsShowModified={setIsShowModified}
+      />
       <Box>
-        <Box overflow={{ vertical: 'auto' }} height="medium">
+        <Box {...(upload && upload.table && upload.table.container)}>
           <Table>
             <TableHeader>
               <TableRow>
