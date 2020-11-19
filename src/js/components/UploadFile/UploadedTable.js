@@ -156,8 +156,8 @@ UploadedTable.defaultProps = {
 
 UploadedTable.propTypes = {
   tableData: PropTypes.shape({
-    headers: PropTypes.shape([]),
-    rules: PropTypes.shape([]),
+    headers: PropTypes.oneOfType([PropTypes.array]),
+    rules: PropTypes.oneOfType([PropTypes.array]),
   }),
 };
 

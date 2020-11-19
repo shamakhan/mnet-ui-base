@@ -105,8 +105,8 @@ const ValidateTable = ({ tableData, onUpload, files, isLoading, url }) => {
 
 ValidateTable.propTypes = {
   tableData: PropTypes.shape({
-    headers: PropTypes.shape([]),
-    rules: PropTypes.shape([]),
+    headers: PropTypes.oneOfType([PropTypes.array]),
+    rules: PropTypes.oneOfType([PropTypes.array]),
   }),
 };
 
