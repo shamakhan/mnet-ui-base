@@ -846,6 +846,7 @@ describe('MultiSelect', () => {
         onIncExcChange={setIncExc}
         withOptionChips
         searchable
+        withInclusionExclusion
         searchPlaceholder="Search"
         {...props}
       />,
@@ -881,6 +882,162 @@ describe('MultiSelect', () => {
             `^${options.filter(_ => _.label.includes('Test 1'))[index].label}$`,
           ))
     });
+
+  });
+
+  it('Double Column - Select Option (include) - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+    const { getByRole, getByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={setValues}
+        isExcluded={null}
+        onIncExcChange={setIncExc}
+        withOptionChips
+        withInclusionExclusion
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Hover option with id 2
+    fireEvent.mouseOver(getByRole('menuitem', { name: 'option id - 2' }));
+
+    // Select Option with id 2
+    fireEvent.click(getByRole(
+      'checkbox',
+      { name: 'select checkbox for Test 2' },
+    ));
+
+    expect(setValues).toHaveBeenCalledWith([2]);
+    expect(setIncExc).toHaveBeenCalledWith(false);
+
+  });
+
+  it('Double Column - Select Option (exclude) - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+    const { getByRole, getByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={setValues}
+        isExcluded={null}
+        onIncExcChange={setIncExc}
+        withOptionChips
+        withInclusionExclusion
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Hover option with id 2
+    fireEvent.mouseOver(getByRole('menuitem', { name: 'option id - 2' }));
+
+    // Select Option with id 2
+    fireEvent.click(getByRole(
+      'checkbox',
+      { name: 'cross checkbox for Test 2' },
+    ));
+
+    expect(setValues).toHaveBeenCalledWith([2]);
+    expect(setIncExc).toHaveBeenCalledWith(true);
+
+  });
+
+  it('Double Column - Clear All - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+    const { getByRole, getByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[1, 2, 3]}
+        onValueChange={setValues}
+        isExcluded={false}
+        onIncExcChange={setIncExc}
+        withOptionChips
+        withInclusionExclusion
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    fireEvent.click(getByRole(
+      'button',
+      { name: 'Clear all selected options' }),
+    );
+
+    expect(setValues).toHaveBeenCalledWith([]);
+
+  });
+
+  it('Double Column - Select All Option - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+    const { getByRole, getByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={[]}
+        onValueChange={setValues}
+        isExcluded={null}
+        onIncExcChange={setIncExc}
+        withOptionChips
+        withInclusionExclusion
+        withSelectAll
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Hover option Select All
+    fireEvent.mouseOver(getByRole('menuitem', { name: 'select all options' }));
+
+    // Select Option Select All
+    fireEvent.click(getByRole(
+      'checkbox',
+      { name: 'cross checkbox for Select All' },
+    ));
+
+    expect(setValues).toHaveBeenCalledWith(options.map(_ => _.id));
+    expect(setIncExc).toHaveBeenCalledWith(true);
+
+  });
+
+  it('Double Column - Deselect All Option - Verify', () => {
+    const props = { options, labelKey, valueKey, layout: 'double-column' };
+
+    const { getByRole, getByLabelText } = render(
+      <MultiSelect
+        id="test-multiselect"
+        value={options.map(_ => _.id)}
+        onValueChange={setValues}
+        isExcluded={false}
+        onIncExcChange={setIncExc}
+        withOptionChips
+        withInclusionExclusion
+        withSelectAll
+        {...props}
+      />,
+    );
+
+    // Open the multiselect dropdown
+    fireEvent.click(getByLabelText('Open Drop'));
+
+    // Select all option checkbox
+    fireEvent.click(getByRole('menuitem', { name: 'select all options' }));
+
+    expect(setValues).toHaveBeenCalledWith([]);
+    expect(setIncExc).toHaveBeenCalledWith(null);
 
   });
 
