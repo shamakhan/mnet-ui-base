@@ -87,8 +87,6 @@ const OptionChips = ({
                 {...theme.multiselect.chips.option}
               >
                 <OptionLabel
-                  role="listitem"
-                  aria-label="Selected Option Chip"
                   isExcluded={isExcluded}
                   {...theme.multiselect.chips.label}
                 >

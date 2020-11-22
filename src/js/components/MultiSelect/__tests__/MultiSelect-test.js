@@ -3,9 +3,11 @@ import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import { findAll } from 'styled-components/test-utils';
 
 import { createPortal } from '../../../utils/portal';
 import { MultiSelect } from '..';
+import { OptionLabel } from '../StyledMultiSelect';
 
 const options = [
   { id: 1, label: 'Test 1' },
@@ -88,7 +90,7 @@ describe('MultiSelect', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
     const value = [1, 3];
 
-    const { getByLabelText, queryAllByRole } = render(
+    const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={value}
@@ -101,10 +103,7 @@ describe('MultiSelect', () => {
     // Open the multiselect dropdown
     fireEvent.click(getByLabelText('Open Drop'));
 
-    const chipsElements = queryAllByRole(
-      'listitem',
-      { name: 'Selected Option Chip' },
-    );
+    const chipsElements = findAll(document.body, OptionLabel);
 
     // Match no. of options which are selected
     expect(chipsElements.length).toBe(2);
@@ -164,7 +163,7 @@ describe('MultiSelect', () => {
   it('Single Column - No values selected - Option Chips', () => {
     const props = { options, labelKey, valueKey, layout: 'single-column' };
 
-    const { getByLabelText, queryAllByRole } = render(
+    const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={[]}
@@ -177,10 +176,7 @@ describe('MultiSelect', () => {
     // Open the multiselect dropdown
     fireEvent.click(getByLabelText('Open Drop'));
 
-    const chipsElements = queryAllByRole(
-      'listitem',
-      { name: 'Selected Option Chip' },
-    );
+    const chipsElements = findAll(document.body, OptionLabel);
 
     // Match no. of options which are selected
     expect(chipsElements.length).toBe(0);
@@ -605,7 +601,7 @@ describe('MultiSelect', () => {
     const props = { options, labelKey, valueKey, layout: 'double-column' };
     const value = [1, 3];
 
-    const { getByLabelText, queryAllByRole } = render(
+    const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={value}
@@ -621,10 +617,7 @@ describe('MultiSelect', () => {
     // Open the multiselect dropdown
     fireEvent.click(getByLabelText('Open Drop'));
 
-    const chipsElements = queryAllByRole(
-      'listitem',
-      { name: 'Selected Option Chip' },
-    );
+    const chipsElements = findAll(document.body, OptionLabel);
 
     const chipListHeader = getByLabelText('Chip List header');
 
@@ -644,7 +637,7 @@ describe('MultiSelect', () => {
     const props = { options, labelKey, valueKey, layout: 'double-column' };
     const value = [1, 3];
 
-    const { getByLabelText, queryAllByRole } = render(
+    const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={value}
@@ -660,10 +653,7 @@ describe('MultiSelect', () => {
     // Open the multiselect dropdown
     fireEvent.click(getByLabelText('Open Drop'));
 
-    const chipsElements = queryAllByRole(
-      'listitem',
-      { name: 'Selected Option Chip' },
-    );
+    const chipsElements = findAll(document.body, OptionLabel);
 
     const chipListHeader = getByLabelText('Chip List header');
 
@@ -808,7 +798,7 @@ describe('MultiSelect', () => {
   it('Double Column - No values selected - Option Chips', () => {
     const props = { options, labelKey, valueKey, layout: 'double-column' };
 
-    const { getByLabelText, queryAllByRole } = render(
+    const { getByLabelText } = render(
       <MultiSelect
         id="test-multiselect"
         value={[]}
@@ -824,10 +814,7 @@ describe('MultiSelect', () => {
     // Open the multiselect dropdown
     fireEvent.click(getByLabelText('Open Drop'));
 
-    const chipsElements = queryAllByRole(
-      'listitem',
-      { name: 'Selected Option Chip' },
-    );
+    const chipsElements = findAll(document.body, OptionLabel);
 
     // Match no. of options which are selected
     expect(chipsElements.length).toBe(0);
