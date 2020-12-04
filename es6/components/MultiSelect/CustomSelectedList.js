@@ -67,19 +67,23 @@ var SelectedList = function SelectedList(_ref) {
   }, theme.multiselect.chips.wrapper, {
     wrap: true
   }), filteredItems.length ? filteredItems.map(function (item, id) {
+    var _extends2;
+
     return /*#__PURE__*/React.createElement(OptionText, _extends({
       key: id + "-" + item,
       twoColumnLayout: layout === 'double-column'
     }, theme.multiselect.chips.option), /*#__PURE__*/React.createElement(OptionLabel, _extends({
       isExcluded: isExcluded
-    }, theme.multiselect.chips.label), /*#__PURE__*/React.createElement(Text, null, item)), /*#__PURE__*/React.createElement(Close, _extends({
+    }, theme.multiselect.chips.label), /*#__PURE__*/React.createElement(Text, null, item)), /*#__PURE__*/React.createElement(Close, _extends((_extends2 = {
       style: {
         cursor: 'pointer'
       },
       onClick: function onClick() {
         return onRemove(item);
       }
-    }, theme.multiselect.chips.icon)));
+    }, _extends2["style"] = {
+      cursor: 'pointer'
+    }, _extends2), theme.multiselect.chips.icon)));
   }) : /*#__PURE__*/React.createElement(Box, {
     align: "center",
     margin: "medium",
