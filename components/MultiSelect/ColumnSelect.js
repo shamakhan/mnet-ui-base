@@ -82,7 +82,7 @@ var ColumnSelect = function ColumnSelect(_ref) {
     if (index !== SELECT_ALL_INDEX) {
       selectOption(index)(event);
     } else {
-      onChange(index, {
+      onChange({
         value: allSelected ? [] : options.map(function (item, i) {
           return optionValue(i);
         }),
