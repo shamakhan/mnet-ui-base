@@ -36,7 +36,11 @@ var OptionWithCheckControl = function OptionWithCheckControl(_ref) {
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
 
   var renderCheckbox = function renderCheckbox(check, exc) {
-    return /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.CheckBoxWrapper, theme.multiselect.checkbox.box, /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.CheckBox, _extends({}, theme.multiselect.checkbox.check, {
+    return /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.CheckBoxWrapper, theme.multiselect.checkbox.box, /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.CheckBox, _extends({
+      role: "checkbox",
+      "aria-label": (exc ? check : 'select') + " checkbox for " + label,
+      className: "option-checkbox-" + (selected || inclusionExclusion && isExcluded === null ? 'active' : 'inactive')
+    }, theme.multiselect.checkbox.check, {
       active: selected || inclusionExclusion && isExcluded === null,
       isExcluded: exc,
       onClick: inclusionExclusion && isExcluded === null ? function (event) {
@@ -49,7 +53,10 @@ var OptionWithCheckControl = function OptionWithCheckControl(_ref) {
     selected: selected
   }), /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.multiselect.option, /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     direction: "row"
-  }, !inclusionExclusion && renderCheckbox('check', null), /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.select.options.text, label)), inclusionExclusion && (isExcluded === null && active || isExcluded !== null) && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+  }, !inclusionExclusion && renderCheckbox('check', null), /*#__PURE__*/_react["default"].createElement(_Text.Text, _extends({
+    role: "option",
+    "aria-label": "multiselect option value"
+  }, theme.select.options.text), label)), inclusionExclusion && (isExcluded === null && active || isExcluded !== null) && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     direction: "row"
   }, [null, false].includes(isExcluded) && renderCheckbox('check', false), [null, true].includes(isExcluded) && renderCheckbox('cross', true))));
 };

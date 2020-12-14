@@ -22,6 +22,8 @@ var Searchbox = function Searchbox(_ref) {
   return /*#__PURE__*/React.createElement(SearchWrapper, _extends({
     layout: layout
   }, theme.multiselect.searchbox.container), /*#__PURE__*/React.createElement(TextInput, {
+    role: "search",
+    "aria-label": "multiselect searchbox",
     plain: true,
     value: value,
     valueLabel: /*#__PURE__*/React.createElement(Text, null, "value"),

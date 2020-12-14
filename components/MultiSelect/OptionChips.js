@@ -9,6 +9,8 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _Close = require("grommet-icons/icons/Close");
 
+var _defaultProps = require("../../default-props");
+
 var _Box = require("../Box");
 
 var _Button = require("../Button");
@@ -36,10 +38,13 @@ var OptionChips = function OptionChips(_ref) {
       isExcluded = _ref.isExcluded,
       renderEmptySelected = _ref.renderEmptySelected,
       layout = _ref.layout;
-  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
+
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
   var renderClearButton = function renderClearButton() {
     return /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+      role: "button",
+      a11yTitle: "Clear all selected options",
       focusIndicator: false,
       onClick: function onClick() {
         return clearAll([]);
@@ -68,7 +73,9 @@ var OptionChips = function OptionChips(_ref) {
     height: {
       max: layout === 'single-column' ? height : 'auto'
     }
-  }, inclusionExclusion && isExcluded !== null && /*#__PURE__*/_react["default"].createElement(IncExcHeader, theme.multiselect.rightPanel.incExcHeader.box, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.multiselect.rightPanel.incExcHeader.text, isExcluded ? 'Excluded' : 'Included', " List"), renderClearButton()), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionWrapper, _extends({
+  }, inclusionExclusion && isExcluded !== null && /*#__PURE__*/_react["default"].createElement(IncExcHeader, theme.multiselect.rightPanel.incExcHeader.box, /*#__PURE__*/_react["default"].createElement(_Text.Text, _extends({
+    "aria-label": "Chip List header"
+  }, theme.multiselect.rightPanel.incExcHeader.text), isExcluded ? 'Excluded' : 'Included', " List"), renderClearButton()), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionWrapper, _extends({
     twoColumnLayout: layout === 'double-column',
     width: width
   }, theme.multiselect.chips.wrapper, {
@@ -80,6 +87,8 @@ var OptionChips = function OptionChips(_ref) {
     }, theme.multiselect.chips.option), /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.OptionLabel, _extends({
       isExcluded: isExcluded
     }, theme.multiselect.chips.label), optionLabel(item)), /*#__PURE__*/_react["default"].createElement(_Close.Close, _extends({
+      role: "button",
+      "aria-label": "Remove selected chip " + optionLabel(item),
       style: {
         cursor: 'pointer'
       },

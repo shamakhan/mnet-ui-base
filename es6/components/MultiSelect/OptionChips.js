@@ -3,6 +3,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 import React, { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
 import { Close } from 'grommet-icons/icons/Close';
+import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
 import { Button } from '../Button';
 import { Text } from '../Text';
@@ -25,6 +26,8 @@ var OptionChips = function OptionChips(_ref) {
 
   var renderClearButton = function renderClearButton() {
     return /*#__PURE__*/React.createElement(Button, {
+      role: "button",
+      a11yTitle: "Clear all selected options",
       focusIndicator: false,
       onClick: function onClick() {
         return clearAll([]);
@@ -53,7 +56,9 @@ var OptionChips = function OptionChips(_ref) {
     height: {
       max: layout === 'single-column' ? height : 'auto'
     }
-  }, inclusionExclusion && isExcluded !== null && /*#__PURE__*/React.createElement(IncExcHeader, theme.multiselect.rightPanel.incExcHeader.box, /*#__PURE__*/React.createElement(Text, theme.multiselect.rightPanel.incExcHeader.text, isExcluded ? 'Excluded' : 'Included', " List"), renderClearButton()), /*#__PURE__*/React.createElement(OptionWrapper, _extends({
+  }, inclusionExclusion && isExcluded !== null && /*#__PURE__*/React.createElement(IncExcHeader, theme.multiselect.rightPanel.incExcHeader.box, /*#__PURE__*/React.createElement(Text, _extends({
+    "aria-label": "Chip List header"
+  }, theme.multiselect.rightPanel.incExcHeader.text), isExcluded ? 'Excluded' : 'Included', " List"), renderClearButton()), /*#__PURE__*/React.createElement(OptionWrapper, _extends({
     twoColumnLayout: layout === 'double-column',
     width: width
   }, theme.multiselect.chips.wrapper, {
@@ -65,6 +70,8 @@ var OptionChips = function OptionChips(_ref) {
     }, theme.multiselect.chips.option), /*#__PURE__*/React.createElement(OptionLabel, _extends({
       isExcluded: isExcluded
     }, theme.multiselect.chips.label), optionLabel(item)), /*#__PURE__*/React.createElement(Close, _extends({
+      role: "button",
+      "aria-label": "Remove selected chip " + optionLabel(item),
       style: {
         cursor: 'pointer'
       },

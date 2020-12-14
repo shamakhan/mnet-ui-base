@@ -29,12 +29,18 @@ var ControlButton = function ControlButton(_ref) {
   })(["", ";"], function (props) {
     return props.theme.multiselect.controls.wrapper.extend;
   });
-  return /*#__PURE__*/_react["default"].createElement(ControlButtonWrapper, theme.multiselect.controls.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.multiselect.controls.button, {
+  return /*#__PURE__*/_react["default"].createElement(ControlButtonWrapper, theme.multiselect.controls.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({
+    role: "button",
+    a11yTitle: "OK button (Update selected values)"
+  }, theme.multiselect.controls.button, {
     onClick: onOk,
     primary: true
   }), /*#__PURE__*/_react["default"].createElement(_Text.Text, {
     weight: 600
-  }, "OK")), /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.multiselect.controls.button, {
+  }, "OK")), /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({
+    role: "button",
+    a11yTitle: "Cancel button"
+  }, theme.multiselect.controls.button, {
     onClick: onCancel,
     secondary: true
   }), /*#__PURE__*/_react["default"].createElement(_Text.Text, {

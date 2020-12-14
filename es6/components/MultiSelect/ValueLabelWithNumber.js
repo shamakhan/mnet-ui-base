@@ -13,6 +13,7 @@ var ValueLabelWithNumber = function ValueLabelWithNumber(_ref) {
     },
     align: "center"
   }, /*#__PURE__*/React.createElement(Text, {
+    "aria-label": "Selected Label Value",
     size: "medium",
     weight: 600
   }, number ? value : 'Select'), number > 0 && /*#__PURE__*/React.createElement(Box, {
@@ -23,6 +24,7 @@ var ValueLabelWithNumber = function ValueLabelWithNumber(_ref) {
       horizontal: 'medium'
     }
   }, /*#__PURE__*/React.createElement(Text, {
+    "aria-label": "Selected Label Count",
     size: "10px",
     color: "white",
     weight: 600
