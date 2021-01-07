@@ -22,7 +22,9 @@ var ModalPopUp = function ModalPopUp() {
     message: '',
     body: undefined,
     onPrimaryClick: undefined,
-    renderButton: undefined
+    renderButton: undefined,
+    closeOnOutSideClick: false,
+    closeOnEscape: false
   }),
       popUpConfig = _useState3[0],
       setPopUpConfig = _useState3[1];
@@ -32,7 +34,7 @@ var ModalPopUp = function ModalPopUp() {
   };
 
   emitter.on(OPEN_MODAL, function (config) {
-    setPopUpConfig(_extends({}, config));
+    setPopUpConfig(_extends({}, popUpConfig, config));
     setModalOpen(true);
   });
   emitter.on(CLOSE_MODAL, function () {
@@ -46,8 +48,8 @@ var ModalPopUp = function ModalPopUp() {
     height: "100vh"
   }, /*#__PURE__*/React.createElement(Layer, {
     position: "center",
-    onClickOutside: onClose,
-    onEsc: onClose
+    onClickOutside: popUpConfig.closeOnOutSideClick ? onClose : null,
+    onEsc: popUpConfig.closeOnEscape ? onClose : null
   }, /*#__PURE__*/React.createElement(PopUpContainer, _extends({
     isLoading: isLoading,
     onClose: onClose
