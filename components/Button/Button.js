@@ -275,6 +275,9 @@ var Button = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       direction: "row",
       align: "center"
     }, contents, isLoading ? /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+      role: "alert",
+      "aria-busy": "true",
+      "aria-label": "button-loader",
       margin: {
         horizontal: 'small'
       }
@@ -326,6 +329,9 @@ var Button = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     direction: "row",
     align: "center"
   }, contents, isLoading ? /*#__PURE__*/_react["default"].createElement(_Box.Box, {
+    role: "alert",
+    "aria-busy": "true",
+    "aria-label": "button-loader",
     margin: {
       horizontal: 'small'
     }

@@ -38,7 +38,10 @@ var PopUpContainer = function PopUpContainer(_ref) {
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
-  return /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.container, title && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.title.wrapper, /*#__PURE__*/_react["default"].createElement(_Heading.Heading, theme.modalpopup.title.text, title)), !body && message && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.modalpopup.message.text, message)), !message && body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, body), renderButton || !body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.modalpopup.buttons.button, {
+  return /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
+    role: "dialog",
+    "aria-label": "modal-pop-up"
+  }, theme.modalpopup.container), title && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.title.wrapper, /*#__PURE__*/_react["default"].createElement(_Heading.Heading, theme.modalpopup.title.text, title)), !body && message && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.modalpopup.message.text, message)), !message && body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, body), renderButton || !body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.modalpopup.buttons.button, {
     onClick: onPrimaryClick || onClose,
     isLoading: isLoading,
     background: "accent-1",
@@ -57,7 +60,7 @@ var PopUpContainer = function PopUpContainer(_ref) {
 exports.PopUpContainer = PopUpContainer;
 PopUpContainer.propTypes = {
   title: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].node]),
-  message: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].node]).isRequired,
+  message: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].node]),
   onPrimaryClick: _propTypes["default"].func,
   renderButton: _propTypes["default"].node,
   isLoading: _propTypes["default"].bool.isRequired,
@@ -66,6 +69,7 @@ PopUpContainer.propTypes = {
 };
 PopUpContainer.defaultProps = {
   title: '',
+  message: undefined,
   onPrimaryClick: undefined,
   renderButton: undefined,
   body: undefined
