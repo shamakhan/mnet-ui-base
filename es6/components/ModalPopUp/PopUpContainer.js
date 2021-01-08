@@ -18,10 +18,19 @@ var PopUpContainer = function PopUpContainer(_ref) {
       isLoading = _ref.isLoading,
       onClose = _ref.onClose;
   var theme = useContext(ThemeContext) || defaultProps.theme;
+  var closeIcon = theme.modalpopup.title.close;
+  var CloseIcon = closeIcon && closeIcon.icon;
   return /*#__PURE__*/React.createElement(Box, _extends({
     role: "dialog",
     "aria-label": "modal-pop-up"
-  }, theme.modalpopup.container), title && /*#__PURE__*/React.createElement(Box, theme.modalpopup.title.wrapper, /*#__PURE__*/React.createElement(Heading, theme.modalpopup.title.text, title)), !body && message && /*#__PURE__*/React.createElement(Box, theme.modalpopup.message.wrapper, /*#__PURE__*/React.createElement(Text, theme.modalpopup.message.text, message)), !message && body && /*#__PURE__*/React.createElement(Box, theme.modalpopup.message.wrapper, body), renderButton || !body && /*#__PURE__*/React.createElement(Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/React.createElement(Button, _extends({}, theme.modalpopup.buttons.button, {
+  }, theme.modalpopup.container), title && /*#__PURE__*/React.createElement(Box, theme.modalpopup.title.wrapper, /*#__PURE__*/React.createElement(Heading, theme.modalpopup.title.text, title), CloseIcon && /*#__PURE__*/React.createElement(Button, {
+    icon: /*#__PURE__*/React.createElement(CloseIcon, {
+      color: closeIcon.color,
+      size: closeIcon.size
+    }),
+    onClick: onClose,
+    plain: true
+  })), !body && message && /*#__PURE__*/React.createElement(Box, theme.modalpopup.message.wrapper, /*#__PURE__*/React.createElement(Text, theme.modalpopup.message.text, message)), !message && body && /*#__PURE__*/React.createElement(Box, theme.modalpopup.message.wrapper, body), renderButton || !body && /*#__PURE__*/React.createElement(Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/React.createElement(Button, _extends({}, theme.modalpopup.buttons.button, {
     onClick: onPrimaryClick || onClose,
     isLoading: isLoading,
     background: "accent-1",

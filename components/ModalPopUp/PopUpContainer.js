@@ -38,10 +38,19 @@ var PopUpContainer = function PopUpContainer(_ref) {
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
+  var closeIcon = theme.modalpopup.title.close;
+  var CloseIcon = closeIcon && closeIcon.icon;
   return /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
     role: "dialog",
     "aria-label": "modal-pop-up"
-  }, theme.modalpopup.container), title && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.title.wrapper, /*#__PURE__*/_react["default"].createElement(_Heading.Heading, theme.modalpopup.title.text, title)), !body && message && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.modalpopup.message.text, message)), !message && body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, body), renderButton || !body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.modalpopup.buttons.button, {
+  }, theme.modalpopup.container), title && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.title.wrapper, /*#__PURE__*/_react["default"].createElement(_Heading.Heading, theme.modalpopup.title.text, title), CloseIcon && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+    icon: /*#__PURE__*/_react["default"].createElement(CloseIcon, {
+      color: closeIcon.color,
+      size: closeIcon.size
+    }),
+    onClick: onClose,
+    plain: true
+  })), !body && message && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.modalpopup.message.text, message)), !message && body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.message.wrapper, body), renderButton || !body && /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.modalpopup.buttons.wrapper, /*#__PURE__*/_react["default"].createElement(_Button.Button, _extends({}, theme.modalpopup.buttons.button, {
     onClick: onPrimaryClick || onClose,
     isLoading: isLoading,
     background: "accent-1",
