@@ -15,7 +15,7 @@ const Example = () => {
     'media.net',
     'testing.com',
   ]);
-  const [isExcluded, setIncExc] = useState(null);
+  const [isExcluded, setIncExc] = useState(false);
 
   const validateDomains = (values, list) => {
     const regx = /^([a-zA-Z0-9_][-_a-zA-Z0-9]{0,62}\.)+([a-zA-Z0-9]{1,10})$/;
@@ -41,8 +41,8 @@ const Example = () => {
         value={value}
         onValueChange={nextValue => setValue(nextValue)}
         layout="double-column"
-        width="medium"
-        height="large"
+        width="large"
+        height="medium"
         searchPlaceholder="Search"
         searchable
         custom={{ label: 'Enter one domain per line' }}
