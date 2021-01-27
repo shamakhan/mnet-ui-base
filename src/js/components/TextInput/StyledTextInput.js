@@ -49,6 +49,8 @@ const StyledTextInput = styled.input`
       props.theme.textInput.disabled && props.theme.textInput.disabled.opacity,
     )}
   ${props => props.theme.textInput && props.theme.textInput.extend};
+  ${props =>
+    props.custom && props.theme.textInput && props.theme.textInput.extendCustom};
 `;
 
 StyledTextInput.defaultProps = {};
