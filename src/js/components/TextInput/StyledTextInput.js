@@ -50,7 +50,9 @@ const StyledTextInput = styled.input`
     )}
   ${props => props.theme.textInput && props.theme.textInput.extend};
   ${props =>
-    props.custom && props.theme.textInput && props.theme.textInput.extendCustom};
+    props.custom &&
+    props.theme.textInput &&
+    props.theme.textInput.extendCustom};
 `;
 
 StyledTextInput.defaultProps = {};
