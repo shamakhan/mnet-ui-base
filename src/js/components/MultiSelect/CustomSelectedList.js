@@ -32,12 +32,16 @@ const SelectedList = ({
     filteredItems = selectedItems.filter(val => val.includes(search));
 
   const renderClearButton = () => (
-    <Button focusIndicator={false} onClick={() => clearAll()} plain>
+    <Button
+      role="button"
+      a11yTitle="Clear all selected options"
+      focusIndicator={false}
+      onClick={() => clearAll()}
+      plain
+    >
       <Box
-        border={{
-          side: 'bottom',
-          color: theme.multiselect.chips.clear.color,
-        }}
+        border={theme.multiselect.chips.clear.border}
+        height={theme.multiselect.chips.clear.height}
       >
         <Text {...theme.multiselect.chips.clear}>CLEAR ALL</Text>
       </Box>
@@ -53,12 +57,14 @@ const SelectedList = ({
   return (
     <OptionsBox style={{ height: '100%' }}>
       {selectedItems && selectedItems.length > 0 && (
-        <>
+        <Box>
           <Sticky {...theme.multiselect.rightPanel.incExcHeader.box}>
             <Text {...theme.multiselect.rightPanel.incExcHeader.text}>
-              {isExcluded ? 'Excluded List' : 'Included List'}
+              {isExcluded ? 'Excluded' : 'Included'}
             </Text>
-            {renderClearButton()}
+            <Box {...theme.multiselect.rightPanel.incExcHeader.count}>
+              <Text weight="600">{selectedItems.length}</Text>
+            </Box>
           </Sticky>
           {renderSearch && (
             <Searchbox
@@ -71,38 +77,41 @@ const SelectedList = ({
 
           <OptionWrapper
             twoColumnLayout={layout === 'double-column'}
-            width={width}
+            height={height}
             {...theme.multiselect.chips.wrapper}
             wrap
           >
-            {filteredItems.length ? (
-              filteredItems.map((item, id) => (
-                <OptionText
-                  key={`${id}-${item}`}
-                  twoColumnLayout={layout === 'double-column'}
-                  {...theme.multiselect.chips.option}
-                >
-                  <OptionLabel
-                    isExcluded={isExcluded}
-                    {...theme.multiselect.chips.label}
+            <Box width="100%">
+              {filteredItems.length ? (
+                filteredItems.map((item, id) => (
+                  <OptionText
+                    key={`${id}-${item}`}
+                    twoColumnLayout={layout === 'double-column'}
+                    {...theme.multiselect.chips.option}
                   >
-                    <Text>{item}</Text>
-                  </OptionLabel>
-                  <Close
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => onRemove(item)}
-                    style={{ cursor: 'pointer' }}
-                    {...theme.multiselect.chips.icon}
-                  />
-                </OptionText>
-              ))
-            ) : (
-              <Box align="center" margin="medium" fill>
-                <Text>No Result Found</Text>
-              </Box>
-            )}
+                    <OptionLabel
+                      isExcluded={isExcluded}
+                      {...theme.multiselect.chips.label}
+                    >
+                      <Text>{item}</Text>
+                    </OptionLabel>
+                    <Close
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => onRemove(item)}
+                      style={{ cursor: 'pointer' }}
+                      {...theme.multiselect.chips.icon}
+                    />
+                  </OptionText>
+                ))
+              ) : (
+                <Box align="center" margin="medium" fill>
+                  <Text>No Result Found</Text>
+                </Box>
+              )}
+            </Box>
           </OptionWrapper>
-        </>
+          {renderClearButton()}
+        </Box>
       )}
       {!selectedItems.length && (
         <Box align="center" justify="center" fill>

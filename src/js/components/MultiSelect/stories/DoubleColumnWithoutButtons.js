@@ -29,7 +29,7 @@ const Example = () => {
         valueKey={{ key: 'id', reduce: true }}
         onValueChange={nextValue => setValue(nextValue)}
         layout="double-column"
-        width="medium"
+        width="large"
         height="medium"
         searchPlaceholder="Search"
         searchable

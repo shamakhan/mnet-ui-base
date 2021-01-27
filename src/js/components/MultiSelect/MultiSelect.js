@@ -32,19 +32,18 @@ const MultiSelect = ({
   validate,
   ...rest
 }) => {
-
   const [internalValue, updateInternalValue] = useState(valueProp);
-  const [
-    internalIsExcluded,
-    updateInternalIsExcluded,
-  ] = useState(isExcludedProp);
+  const [internalIsExcluded, updateInternalIsExcluded] = useState(
+    isExcludedProp,
+  );
   const [isOpen, updateIsOpen] = useState(false);
   const [search, updateSearch] = useState('');
 
-  const isExcluded = withUpdateCancelButtons ? 
-  internalIsExcluded : isExcludedProp;
+  const isExcluded = withUpdateCancelButtons
+    ? internalIsExcluded
+    : isExcludedProp;
 
-  const value = withUpdateCancelButtons ? internalValue: valueProp;
+  const value = withUpdateCancelButtons ? internalValue : valueProp;
 
   useEffect(() => {
     if (!isOpen && withUpdateCancelButtons) {
@@ -66,13 +65,14 @@ const MultiSelect = ({
       updateInternalIsExcluded(isExcludedProp);
     }
     updateIsOpen(true);
-  }
+  };
 
   const onIncludeExclude = newValue => {
-    const updater = withUpdateCancelButtons ? 
-    updateInternalIsExcluded : onIncExcChange;
+    const updater = withUpdateCancelButtons
+      ? updateInternalIsExcluded
+      : onIncExcChange;
     updater(newValue);
-  }
+  };
 
   const onCancelClick = () => {
     onClose();
@@ -84,7 +84,7 @@ const MultiSelect = ({
       onIncExcChange(isExcluded);
     }
     updateIsOpen(false);
-  }
+  };
 
   const getValue = (index, array, param) => applyKey(array[index], param);
 
@@ -101,27 +101,28 @@ const MultiSelect = ({
     return options.filter((item, index) =>
       exp.test(getValue(index, options, labelKey)),
     );
-  }, [options, search])
+  }, [options, search]);
 
   const getOptionsNotMatchingSearch = useCallback(() => {
     if (!search) {
       return [];
     }
     const exp = new RegExp(search, 'i');
-    return options.filter((item, index) =>
-      !exp.test(getValue(index, options, labelKey)),
+    return options.filter(
+      (item, index) => !exp.test(getValue(index, options, labelKey)),
     );
-  }, [options, search])
+  }, [options, search]);
 
   const onSelectValueChange = ({ value: newValue }) => {
     const valuesNotMatchingSearch = getOptionsNotMatchingSearch()
-    .filter((item, index, opt) => 
-    value.includes(getValue(index, opt, valueKey)))
-    .map((item, index, opt)=> getValue(index, opt, valueKey));
+      .filter((item, index, opt) =>
+        value.includes(getValue(index, opt, valueKey)),
+      )
+      .map((item, index, opt) => getValue(index, opt, valueKey));
 
-    const updater = withUpdateCancelButtons ? 
-    updateInternalValue : 
-    onValueChange;
+    const updater = withUpdateCancelButtons
+      ? updateInternalValue
+      : onValueChange;
     updater([...valuesNotMatchingSearch, ...newValue]);
   };
 
@@ -158,19 +159,13 @@ const MultiSelect = ({
   };
 
   const renderLabel = () => {
-    const getLabel = () => {
-      if (withInclusionExclusion && isExcluded) return 'Excluded';
-      if (withInclusionExclusion && isExcluded === false) return 'Included';
-      return 'Selected';
+    const getColor = () => {
+      if (withInclusionExclusion && isExcluded) return 'status-error';
+      if (withInclusionExclusion && isExcluded === false) return 'status-ok';
+      return 'dark-1';
     };
 
-    return (
-      <ValueLabelWithNumber
-        value={getLabel()}
-        number={value.length}
-        color="brand"
-      />
-    );
+    return <ValueLabelWithNumber value={value} color={getColor()} />;
   };
 
   return (
