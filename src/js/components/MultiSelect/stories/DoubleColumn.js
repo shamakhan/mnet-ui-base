@@ -34,6 +34,8 @@ const Example = () => {
         isExcluded={isExcluded}
         onIncExcChange={nextIncExc => setIncExc(nextIncExc)}
         renderEmptySelected={<Text>No Selection</Text>}
+        isEnableOutSideClick={false}
+        isOpenState
       />
     </Box>
   );

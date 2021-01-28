@@ -25,6 +25,7 @@ const CustomMultiSelect = ({
   setIncExcVal,
   inclusionExclusion,
   validate,
+  onCancel,
 }) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;
   const [textAreaValue, setTextAreaValue] = React.useState('');
@@ -146,6 +147,7 @@ const CustomMultiSelect = ({
           width={width}
           height={height}
           inclusionExclusion={inclusionExclusion}
+          onCancel={onCancel}
         />
       </Box>
     </Box>

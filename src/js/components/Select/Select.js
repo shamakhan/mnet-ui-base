@@ -100,6 +100,7 @@ const Select = forwardRef(
       renderOptionTop,
       renderOptionBottom,
       renderCustomContent,
+      isEnableOutSideClick = true,
       ...rest
     },
     ref,
@@ -259,6 +260,7 @@ const Select = forwardRef(
           plain={plain}
           dropProps={dropProps}
           theme={theme}
+          isEnableOutSideClick={isEnableOutSideClick}
         >
           <Box align="center" direction="row" justify="between">
             <Box direction="row" flex basis="auto">
@@ -296,7 +298,10 @@ const Select = forwardRef(
                 {isValidElement(SelectIcon) ? (
                   SelectIcon
                 ) : (
-                  <SelectIcon color={iconColor} size={size} />
+                  <SelectIcon
+                    color={iconColor}
+                    size={theme.select.icons.size}
+                  />
                 )}
               </StyledIconContainer>
             )}

@@ -127,6 +127,7 @@ const ColumnSelect = ({
         setIncExcVal={setIncExcVal}
         inclusionExclusion={inclusionExclusion}
         validate={validate}
+        onCancel={onCancel}
       />
     );
   }
@@ -139,6 +140,8 @@ const ColumnSelect = ({
           value={searchValue}
           onValueChange={onSearchChange}
           layout={layout}
+          selectIcon={theme.select.icons}
+          onCancel={onCancel}
         />
       )}
       <Box direction="row" height={height || 'small'}>
