@@ -33,7 +33,7 @@ const MultiSelect = ({
   size,
   isOpenState,
   isEnableOutSideClick,
-  isCustomSelect,
+  shouldRenderInDrop,
   ...rest
 }) => {
   const [internalValue, updateInternalValue] = useState(valueProp);
@@ -196,7 +196,7 @@ const MultiSelect = ({
         searchPlaceholder={searchPlaceholder}
         emptySearchMessage={emptySearchMessage}
         isEnableOutSideClick={isEnableOutSideClick}
-        isCustomSelect={isCustomSelect}
+        shouldRenderInDrop={shouldRenderInDrop}
         size={size}
         {...rest}
       />

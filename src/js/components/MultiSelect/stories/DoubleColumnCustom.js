@@ -79,8 +79,8 @@ const Example = () => {
         renderEmptySelected={<Text>No domains selected</Text>}
         validate={validateDomains}
         isEnableOutSideClick={false}
+        shouldRenderInDrop={false}
         isOpenState
-        isCustomSelect
       />
     </Box>
   );

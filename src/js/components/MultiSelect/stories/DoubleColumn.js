@@ -35,8 +35,8 @@ const Example = () => {
         onIncExcChange={nextIncExc => setIncExc(nextIncExc)}
         renderEmptySelected={<Text>No Selection</Text>}
         isEnableOutSideClick={false}
+        shouldRenderInDrop={false}
         isOpenState={false}
-        isCustomSelect
       />
     </Box>
   );
