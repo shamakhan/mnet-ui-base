@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { Box, MnetUIBase, CheckBox, Text } from 'mnet-ui-base';
 import { hb } from 'mnet-ui-base-theme-hb';
 
-const HBThemedCheckBox = props => {
+const CheckBoxMaterial = props => {
   const [checked, setChecked] = useState(true);
 
   return (
@@ -21,4 +21,6 @@ const HBThemedCheckBox = props => {
   );
 };
 
-storiesOf('CheckBox', module).add('HBThemed', () => <HBThemedCheckBox />);
+storiesOf('CheckBox', module).add('CheckBoxMaterial', () => (
+  <CheckBoxMaterial />
+));

@@ -55,7 +55,7 @@ const getRegExp = text => {
   return new RegExp(escapedText, 'i');
 };
 
-const SimpleSelect = ({ ...rest }) => {
+const SelectMaterial = ({ ...rest }) => {
   const [options, setOptions] = useState(defaultOptions);
   const [searchValue, setSearchValue] = useState('')
   const [value, setValue] = useState('');
@@ -145,4 +145,4 @@ const SimpleSelect = ({ ...rest }) => {
 storiesOf('Select', module)
   // Chromatic does not catch open Drop.
   // Screenshot taken before the Drop is open.
-  .add('HBTheme', () => <SimpleSelect width="xxlarge" />);
+  .add('SelectMaterial', () => <SelectMaterial width="xxlarge" />);

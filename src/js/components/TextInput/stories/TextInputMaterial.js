@@ -5,7 +5,7 @@ import { hb } from 'mnet-ui-base-theme-hb';
 import { Text } from '../../Text';
 
 
-const ThemedTextInput = () => {
+const TextInputMaterial = () => {
   const [value, setValue] = React.useState('');
 
   const onChange = event => setValue(event.target.value);
@@ -61,4 +61,6 @@ const ThemedTextInput = () => {
   );
 };
 
-storiesOf('TextInput', module).add('HBThemed', () => <ThemedTextInput />);
+storiesOf('TextInput', module).add('TextInputMaterial', () => (
+  <TextInputMaterial />
+));
