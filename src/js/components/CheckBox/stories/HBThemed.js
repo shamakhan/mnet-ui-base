@@ -5,7 +5,7 @@ import { Box, MnetUIBase, CheckBox, Text } from 'mnet-ui-base';
 import { hb } from 'mnet-ui-base-theme-hb';
 
 const HBThemedCheckBox = props => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
 
   return (
     <MnetUIBase theme={hb}>

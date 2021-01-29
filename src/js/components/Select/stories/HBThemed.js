@@ -31,7 +31,7 @@ const customRoundedTheme = deepMerge(hb, {
   },
 });
 
-const defaultOptions = ['one', 'two'];
+const defaultOptions = ['China', 'USA', 'Russia', 'Brazil'];
 const prefix = 'Create';
 const updateCreateOption = text => {
   const len = defaultOptions.length;
@@ -81,8 +81,6 @@ const SimpleSelect = ({ ...rest }) => {
             setOptions(defaultOptions.filter(o => exp.test(o)));
             setSearchValue(text);
           }}
-          flex="1"
-          direction="row"
           {...rest}
           open
           onChange={({ option }) => {
@@ -108,8 +106,6 @@ const SimpleSelect = ({ ...rest }) => {
           value={value}
           options={options}
           onSearch={_ => _}
-          flex="1"
-          direction="row"
           onChange={({ option }) => setValue(option)}
           {...rest}
         />
@@ -126,8 +122,6 @@ const SimpleSelect = ({ ...rest }) => {
           value={value}
           options={options}
           onSearch={_ => _}
-          flex="1"
-          direction="row"
           onChange={({ option }) => setValue(option)}
           {...rest}
         />
