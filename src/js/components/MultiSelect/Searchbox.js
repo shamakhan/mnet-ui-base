@@ -5,8 +5,7 @@ import { Search } from 'grommet-icons/icons/Search';
 import { Text } from '../Text';
 import { TextInput } from '../TextInput';
 import { Button } from '../Button';
-
-import { SearchWrapper } from './StyledMultiSelect';
+import { Box } from '../Box';
 
 const Searchbox = ({
   placeholder,
@@ -27,7 +26,7 @@ const Searchbox = ({
   const CollapsibleIcon = selectIcon && selectIcon.up;
 
   return (
-    <SearchWrapper layout={layout} {...theme.multiselect.searchbox.container}>
+    <Box layout={layout} {...theme.multiselect.searchbox.container}>
       <TextInput
         role="search"
         aria-label="multiselect searchbox"
@@ -51,7 +50,7 @@ const Searchbox = ({
           />
         </Button>
       )}
-    </SearchWrapper>
+    </Box>
   );
 };
 

@@ -80,6 +80,7 @@ const Example = () => {
         validate={validateDomains}
         isEnableOutSideClick={false}
         isOpenState
+        isCustomSelect
       />
     </Box>
   );

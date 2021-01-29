@@ -4,6 +4,7 @@ import { Alert } from 'grommet-icons/icons/Alert';
 
 import { Box } from '../Box';
 import { Text } from '../Text';
+import { LabelText } from './StyledMultiSelect';
 
 const ValueLabelWithIcon = ({
   withInclusionExclusion,
@@ -40,20 +41,13 @@ const ValueLabelWithIcon = ({
         </Box>
       )}
 
-      <Text
+      <LabelText
         aria-label="Selected Label Value"
         color={getColor()}
         size={size}
-        style={{
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-          display: '-webkit-box',
-          WebkitLineClamp: '3',
-          WebkitBoxOrient: 'vertical',
-        }}
       >
         {number ? value.join(', ') : 'Select'}
-      </Text>
+      </LabelText>
     </Box>
   );
 };

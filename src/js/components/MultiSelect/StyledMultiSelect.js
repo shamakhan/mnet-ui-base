@@ -51,12 +51,16 @@ const OptionText = styled(Box)`
   ${props => props.theme.multiselect.chips.option.extend};
 `;
 
-const OptionLabel = styled(Text)``;
-
-const SearchWrapper = styled(Box)``;
-
 const TextAreaWrapper = styled(Box)`
   ${props => props.theme.multiselect.custom.textAreaWrap.extend};
+`;
+
+const LabelText = styled(Text)`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 `;
 
 export {
@@ -67,8 +71,7 @@ export {
   CheckBox,
   OptionWrapper,
   OptionText,
-  OptionLabel,
-  SearchWrapper,
   SelectedOption,
   TextAreaWrapper,
+  LabelText,
 };

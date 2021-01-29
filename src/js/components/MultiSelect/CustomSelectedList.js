@@ -5,12 +5,7 @@ import { Box } from '../Box';
 import { Button } from '../Button';
 import { Text } from '../Text';
 import { Searchbox } from './Searchbox';
-import {
-  OptionsBox,
-  OptionWrapper,
-  OptionText,
-  OptionLabel,
-} from './StyledMultiSelect';
+import { OptionsBox, OptionWrapper, OptionText } from './StyledMultiSelect';
 
 const SelectedList = ({
   selectedItems,
@@ -102,12 +97,12 @@ const SelectedList = ({
                     twoColumnLayout={layout === 'double-column'}
                     {...theme.multiselect.chips.option}
                   >
-                    <OptionLabel
+                    <Text
                       isExcluded={isExcluded}
                       {...theme.multiselect.chips.label}
                     >
                       <Text>{item}</Text>
-                    </OptionLabel>
+                    </Text>
                     <Close
                       style={{ cursor: 'pointer' }}
                       onClick={() => onRemove(item)}
