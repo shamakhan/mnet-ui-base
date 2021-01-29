@@ -14,6 +14,33 @@ const Example = () => {
     'google.com',
     'media.net',
     'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
+    'google.com',
+    'media.net',
+    'testing.com',
   ]);
   const [isExcluded, setIncExc] = useState(false);
 
@@ -51,6 +78,9 @@ const Example = () => {
         onIncExcChange={nextIncExc => setIncExc(nextIncExc)}
         renderEmptySelected={<Text>No domains selected</Text>}
         validate={validateDomains}
+        isEnableOutSideClick={false}
+        isOpenState
+        isCustomSelect
       />
     </Box>
   );

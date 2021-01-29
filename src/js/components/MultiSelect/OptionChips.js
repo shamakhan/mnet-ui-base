@@ -6,7 +6,7 @@ import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
 import { Button } from '../Button';
 import { Text } from '../Text';
-import { OptionWrapper, OptionText, OptionLabel } from './StyledMultiSelect';
+import { OptionWrapper, OptionText } from './StyledMultiSelect';
 
 const OptionChips = ({
   options,
@@ -53,14 +53,16 @@ const OptionChips = ({
         <Box>
           {inclusionExclusion && isExcluded !== null && (
             <Box {...theme.multiselect.rightPanel.incExcHeader.box}>
-              <Text
-                aria-label="Chip List header"
-                {...theme.multiselect.rightPanel.incExcHeader.text}
-              >
-                {isExcluded ? 'Excluded' : 'Included'}
-              </Text>
-              <Box {...theme.multiselect.rightPanel.incExcHeader.count}>
-                <Text weight="600">{value.length}</Text>
+              <Box direction="row">
+                <Text
+                  aria-label="Chip List header"
+                  {...theme.multiselect.rightPanel.incExcHeader.text}
+                >
+                  {isExcluded ? 'Excluded' : 'Included'}
+                </Text>
+                <Box {...theme.multiselect.rightPanel.incExcHeader.count}>
+                  <Text weight="600">{value.length}</Text>
+                </Box>
               </Box>
             </Box>
           )}
@@ -88,12 +90,12 @@ const OptionChips = ({
                   twoColumnLayout={layout === 'double-column'}
                   {...theme.multiselect.chips.option}
                 >
-                  <OptionLabel
+                  <Text
                     isExcluded={isExcluded}
                     {...theme.multiselect.chips.label}
                   >
                     {optionLabel(item)}
-                  </OptionLabel>
+                  </Text>
                   <Close
                     role="button"
                     aria-label={`Remove selected chip ${optionLabel(item)}`}

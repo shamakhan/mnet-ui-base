@@ -55,7 +55,6 @@
     "uuid": "^8.2.0"
   },
   "devDependencies": {
-    "mnet-icons": "git+ssh://git@tree.mn:saumik.s/mnet-icons.git",
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/node": "^7.10.1",

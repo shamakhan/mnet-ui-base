@@ -5,7 +5,7 @@ import { Box } from '../Box';
 import { Select } from '../Select';
 
 import { ColumnSelect } from './ColumnSelect';
-import { ValueLabelWithNumber } from './ValueLabelWithNumber';
+import { ValueLabelWithIcon } from './ValueLabelWithIcon';
 import { applyKey } from './utils';
 
 const MultiSelect = ({
@@ -30,13 +30,17 @@ const MultiSelect = ({
   onIncExcChange,
   renderEmptySelected,
   validate,
+  size,
+  isOpenState,
+  isEnableOutSideClick,
+  isCustomSelect,
   ...rest
 }) => {
   const [internalValue, updateInternalValue] = useState(valueProp);
   const [internalIsExcluded, updateInternalIsExcluded] = useState(
     isExcludedProp,
   );
-  const [isOpen, updateIsOpen] = useState(false);
+  const [isOpen, updateIsOpen] = useState(isOpenState || false);
   const [search, updateSearch] = useState('');
 
   const isExcluded = withUpdateCancelButtons
@@ -159,13 +163,14 @@ const MultiSelect = ({
   };
 
   const renderLabel = () => {
-    const getColor = () => {
-      if (withInclusionExclusion && isExcluded) return 'status-error';
-      if (withInclusionExclusion && isExcluded === false) return 'status-ok';
-      return 'dark-1';
-    };
-
-    return <ValueLabelWithNumber value={value} color={getColor()} />;
+    return (
+      <ValueLabelWithIcon
+        withInclusionExclusion={withInclusionExclusion}
+        isExcluded={isExcluded}
+        size={size}
+        value={value}
+      />
+    );
   };
 
   return (
@@ -190,6 +195,9 @@ const MultiSelect = ({
         onSearch={onSearch}
         searchPlaceholder={searchPlaceholder}
         emptySearchMessage={emptySearchMessage}
+        isEnableOutSideClick={isEnableOutSideClick}
+        isCustomSelect={isCustomSelect}
+        size={size}
         {...rest}
       />
     </Box>

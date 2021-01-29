@@ -12,8 +12,8 @@ const options = [
 ];
 
 const Example = () => {
-  const [value, setValue] = useState([]);
-  const [isExcluded, setIncExc] = useState(null);
+  const [value, setValue] = useState(['Mobile', 'Tablet']);
+  const [isExcluded, setIncExc] = useState(false);
 
   return (
     <Box fill align="center" justify="start" pad="large">
@@ -21,7 +21,7 @@ const Example = () => {
         options={options}
         value={value}
         labelKey="label"
-        valueKey={{ key: 'id', reduce: true }}
+        valueKey={{ key: 'label', reduce: true }}
         onValueChange={nextValue => setValue(nextValue)}
         layout="double-column"
         width="large"
@@ -34,6 +34,9 @@ const Example = () => {
         isExcluded={isExcluded}
         onIncExcChange={nextIncExc => setIncExc(nextIncExc)}
         renderEmptySelected={<Text>No Selection</Text>}
+        isEnableOutSideClick={false}
+        isOpenState={false}
+        isCustomSelect
       />
     </Box>
   );

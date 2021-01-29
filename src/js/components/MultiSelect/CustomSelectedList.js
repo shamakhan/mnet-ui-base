@@ -5,12 +5,7 @@ import { Box } from '../Box';
 import { Button } from '../Button';
 import { Text } from '../Text';
 import { Searchbox } from './Searchbox';
-import {
-  OptionsBox,
-  OptionWrapper,
-  OptionText,
-  OptionLabel,
-} from './StyledMultiSelect';
+import { OptionsBox, OptionWrapper, OptionText } from './StyledMultiSelect';
 
 const SelectedList = ({
   selectedItems,
@@ -23,6 +18,7 @@ const SelectedList = ({
   renderEmptySelected,
   width,
   height,
+  onCancel,
 }) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;
   const [search, setSearch] = React.useState('');
@@ -54,17 +50,29 @@ const SelectedList = ({
     z-index: 1;
   `;
 
+  const CollapsibleIcon = theme.select.icons && theme.select.icons.up;
+
   return (
     <OptionsBox style={{ height: '100%' }}>
       {selectedItems && selectedItems.length > 0 && (
         <Box>
           <Sticky {...theme.multiselect.rightPanel.incExcHeader.box}>
-            <Text {...theme.multiselect.rightPanel.incExcHeader.text}>
-              {isExcluded ? 'Excluded' : 'Included'}
-            </Text>
-            <Box {...theme.multiselect.rightPanel.incExcHeader.count}>
-              <Text weight="600">{selectedItems.length}</Text>
+            <Box direction="row">
+              <Text {...theme.multiselect.rightPanel.incExcHeader.text}>
+                {isExcluded ? 'Excluded' : 'Included'}
+              </Text>
+              <Box {...theme.multiselect.rightPanel.incExcHeader.count}>
+                <Text weight="600">{selectedItems.length}</Text>
+              </Box>
             </Box>
+            {CollapsibleIcon && (
+              <Button role="button" onClick={onCancel} plain>
+                <CollapsibleIcon
+                  color="dark-1"
+                  size={theme.select.icons.size}
+                />
+              </Button>
+            )}
           </Sticky>
           {renderSearch && (
             <Searchbox
@@ -89,12 +97,12 @@ const SelectedList = ({
                     twoColumnLayout={layout === 'double-column'}
                     {...theme.multiselect.chips.option}
                   >
-                    <OptionLabel
+                    <Text
                       isExcluded={isExcluded}
                       {...theme.multiselect.chips.label}
                     >
                       <Text>{item}</Text>
-                    </OptionLabel>
+                    </Text>
                     <Close
                       style={{ cursor: 'pointer' }}
                       onClick={() => onRemove(item)}
