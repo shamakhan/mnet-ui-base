@@ -103,7 +103,7 @@ const Select = forwardRef(
       renderOptionBottom,
       renderCustomContent,
       isEnableOutSideClick = true,
-      isCustomSelect = false,
+      shouldRenderInDrop = true,
       ...rest
     },
     ref,
@@ -218,7 +218,7 @@ const Select = forwardRef(
     return (
       <Keyboard onDown={onRequestOpen} onUp={onRequestOpen}>
         <>
-          {!isCustomSelect && (
+          {shouldRenderInDrop && (
             <StyledSelectDropButton
               ref={ref}
               id={id}
@@ -313,7 +313,7 @@ const Select = forwardRef(
               </Box>
             </StyledSelectDropButton>
           )}
-          {isCustomSelect && (
+          {!shouldRenderInDrop && (
             <>
               {!open && (
                 <StyledSelectDropButton
