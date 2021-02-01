@@ -1,35 +1,10 @@
-import React, { useState,useRef ,useEffect } from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { Box, MnetUIBase, Select } from 'mnet-ui-base';
 import { hb } from 'mnet-ui-base-theme-hb';
-import {deepMerge} from '../../../utils'
-import { TextInput } from '../../TextInput';
-import { SearchBorderBox } from './components/SearchBorderBox';
 
-const StyledSearchInput = props => {
-  const textInputRef = useRef();
-  useEffect(() => {
-    const focusTimeout = setTimeout(() => {
-      textInputRef.current.focus();
-    }, 300);
 
-    return () => {
-      clearTimeout(focusTimeout);
-    };
-  }, []);
- return (
-   <SearchBorderBox>
-     <TextInput {...props} plain ref={textInputRef} />
-   </SearchBorderBox>
- )
-}
-
-const customRoundedTheme = deepMerge(hb, {
-  select: {
-    searchInput: StyledSearchInput,
-  },
-});
 
 const defaultOptions = ['China', 'USA', 'Russia', 'Brazil'];
 const prefix = 'Create';
@@ -62,7 +37,7 @@ const SelectMaterial = ({ ...rest }) => {
 
 
   return (
-    <MnetUIBase full theme={customRoundedTheme}>
+    <MnetUIBase full theme={hb}>
       <Box
         pad="large"
         height="xsmall"
@@ -130,19 +105,6 @@ const SelectMaterial = ({ ...rest }) => {
   );
 };
 
-// const defaultOptions = [];
-// const objectOptions = [];
-// for (let i = 1; i <= 200; i += 1) {
-//   defaultOptions.push(`option ${i}`);
-//   objectOptions.push({
-//     lab: `option ${i}`,
-//     val: i,
-//     dis: i % 5 === 0,
-//     sel: i % 13 === 0,
-//   });
-// }
 
 storiesOf('Select', module)
-  // Chromatic does not catch open Drop.
-  // Screenshot taken before the Drop is open.
   .add('SelectMaterial', () => <SelectMaterial width="xxlarge" />);

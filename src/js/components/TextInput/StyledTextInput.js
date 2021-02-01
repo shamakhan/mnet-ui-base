@@ -49,10 +49,13 @@ const StyledTextInput = styled.input`
       props.theme.textInput.disabled && props.theme.textInput.disabled.opacity,
     )}
   ${props => props.theme.textInput && props.theme.textInput.extend};
-  ${props =>
-    props.custom &&
-    props.theme.textInput &&
-    props.theme.textInput.extendCustom};
+  box-shadow: none;
+  ${props => `border: ${props.theme.textInput.border}`}
+  border-bottom-width: 2px;
+  ${props => props.focus && props.theme.textInput.focus}
+  ${props => props.error && props.theme.textInput.error.extend}
+  transition: width 0.2s ease 0s, background 0.2s ease 0s, border 0.2s ease 0s;
+  
 `;
 
 StyledTextInput.defaultProps = {};
@@ -104,6 +107,11 @@ const StyledIcon = styled.div`
       : `left: ${getInputPadBySide(props, 'left')};`}
 `;
 
+const StyledHelperTextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
 const StyledSuggestions = styled.ol`
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -126,4 +134,5 @@ export {
   StyledPlaceholder,
   StyledIcon,
   StyledSuggestions,
+  StyledHelperTextWrapper,
 };

@@ -24,6 +24,8 @@ import { applyKey } from './utils';
 
 const SelectTextInput = styled(TextInput)`
   cursor: pointer;
+  pointer-events: none;
+  border: none;
 `;
 
 const StyledSelectDropButton = styled(DropButton)`

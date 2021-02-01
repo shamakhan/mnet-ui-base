@@ -32,12 +32,11 @@ const TextInputMaterial = () => {
         </Box>
         <Box width="medium" height="40px">
           <TextInput
-            custom
             pad="xxlarge"
             margin="xxlarge"
             value={value}
-            plain={Boolean(value)}
             error
+            errorMessage="Incorrect Entry"
             onChange={onChange}
           />
         </Box>
@@ -46,14 +45,16 @@ const TextInputMaterial = () => {
         <Box pad="medium">
           <Text>Div Id</Text>
         </Box>
-        <Box width="medium" height="40px">
+        <Box width="small" height="40px">
           <TextInput
             pad="xxlarge"
             margin="xxlarge"
             value={value}
             plain={Boolean(value)}
-            error
+            error={!value}
+            errorMessage="This field is required!"
             onChange={onChange}
+
           />
         </Box>
       </Box>
