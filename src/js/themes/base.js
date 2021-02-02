@@ -1050,6 +1050,9 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         },
       },
       searchbox: {
+        textWrapper: {
+          flex: 'grow',
+        },
         container: {
           height: {
             min: 'xxsmall',

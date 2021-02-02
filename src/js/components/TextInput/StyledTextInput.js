@@ -50,7 +50,7 @@ const StyledTextInput = styled.input`
     )}
   ${props => props.theme.textInput && props.theme.textInput.extend};
   box-shadow: none;
-  ${props => `border: ${props.theme.textInput.border}`}
+  ${props => !props.plain && `border: ${props.theme.textInput.border}`}
   border-bottom-width: 2px;
   ${props => props.focus && props.theme.textInput.focus}
   ${props => props.error && props.theme.textInput.error.extend}
@@ -100,7 +100,7 @@ const StyledIcon = styled.div`
   justify: center;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;
+  // pointer-events: none;
   ${props =>
     props.reverse
       ? `right: ${getInputPadBySide(props, 'right')};`

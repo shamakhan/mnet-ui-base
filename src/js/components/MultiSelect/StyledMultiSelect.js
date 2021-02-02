@@ -63,6 +63,11 @@ const LabelText = styled(Text)`
   -webkit-box-orient: vertical;
 `;
 
+const IconWrapper = styled(Box)`
+    align-items: center;
+    flex-direction: row;
+`;
+
 export {
   CheckBoxWrapper,
   OptionsBox,
@@ -74,4 +79,5 @@ export {
   SelectedOption,
   TextAreaWrapper,
   LabelText,
+  IconWrapper,
 };

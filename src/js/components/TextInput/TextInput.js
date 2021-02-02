@@ -92,6 +92,7 @@ const TextInput = forwardRef(
       placeholder,
       error = false,
       readOnly,
+      plain,
       reverse,
       suggestions,
       value: valueProp,
@@ -115,7 +116,6 @@ const TextInput = forwardRef(
       readOnly ? undefined : name,
       valueProp,
     );
-    const plain = Boolean(valueProp);
 
     const [focus, setFocus] = useState();
     const [showDrop, setShowDrop] = useState();

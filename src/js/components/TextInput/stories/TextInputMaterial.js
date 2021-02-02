@@ -50,7 +50,7 @@ const TextInputMaterial = () => {
             pad="xxlarge"
             margin="xxlarge"
             value={value}
-            plain={Boolean(value)}
+            // plain={Boolean(value)}
             error={!value}
             errorMessage="This field is required!"
             onChange={onChange}
