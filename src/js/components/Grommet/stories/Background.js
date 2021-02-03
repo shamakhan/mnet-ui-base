@@ -2,6 +2,7 @@ import React from 'react';
 
 import { mnet, MnetUIBase, Box, Text } from 'mnet-ui-base';
 import { neo } from 'mnet-ui-base-theme-neo';
+import { cdp } from 'mnet-ui-base-theme-cdp';
 
 export const Background = () => {
   const themeColor = 'background-back';
@@ -20,6 +21,19 @@ export const Background = () => {
         </Box>
       </MnetUIBase>
       <MnetUIBase theme={neo} themeMode="light" background={themeColor}>
+        <Box pad="medium">
+          <Text>
+            MnetUIBase with background as theme color of &apos;{themeColor}
+            &apos;
+          </Text>
+        </Box>
+      </MnetUIBase>
+      <MnetUIBase theme={cdp} themeMode="dark">
+        <Box pad="medium">
+          <Text>MnetUIBase with theme & themeMode but no background prop</Text>
+        </Box>
+      </MnetUIBase>
+      <MnetUIBase theme={cdp} themeMode="light" background={themeColor}>
         <Box pad="medium">
           <Text>
             MnetUIBase with background as theme color of &apos;{themeColor}
