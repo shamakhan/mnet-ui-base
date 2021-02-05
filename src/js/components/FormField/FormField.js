@@ -19,7 +19,7 @@ import { TextInput } from '../TextInput';
 import { FormContext } from '../Form/FormContext';
 // import { Drop } from '../Drop';
 // import { Button } from '../Button';
-// import { Tooltip } from '../Tooltip';
+import { Tooltip } from '../Tooltip';
 
 const mnetInputNames = ['TextInput', 'Select', 'MaskedInput', 'TextArea'];
 const mnetInputPadNames = [
@@ -69,6 +69,7 @@ const FormField = forwardRef(
       onFocus,
       pad,
       required, // pass through in renderInput()
+      tooltip, // pass through in renderInput()
       style,
       validate,
       direction = 'column',
@@ -83,6 +84,14 @@ const FormField = forwardRef(
   ) => {
     const theme = useContext(ThemeContext) || defaultProps.theme;
     const context = useContext(FormContext);
+    let tooltipTitle; 
+    let toolTipMsg;
+    if(typeof tooltip === 'object' && tooltip!= null) {
+      toolTipMsg = tooltip.message
+      tooltipTitle = tooltip.title
+    } else {
+      toolTipMsg = tooltip;
+    }
     
     useEffect(() => {
       if (context && context.addValidation) {
@@ -299,15 +308,22 @@ const FormField = forwardRef(
       const innerProps =
         themeBorder.position === 'inner'
           ? {
-              border: {
-                ...themeBorder,
-                side: themeBorder.side || 'bottom',
-                color: borderColor,
-              },
-              round: formFieldTheme.round,
-              focus,
-            }
-          : {};
+            border: [{
+              ...themeBorder,
+              side: themeBorder.side || 'bottom',
+              color: borderColor,
+            }],
+            round: formFieldTheme.round,
+            focus,
+          } : {};
+      if(!error && innerProps.border) {
+        innerProps.border.push({
+          ...themeBorder,
+          side: 'bottom',
+          color: borderColor,
+          size: 'small',
+        });
+      }
       contents = (
         <FormFieldContentBox overflow="hidden" {...(showBorder && innerProps)}>
           {contents}
@@ -391,6 +407,8 @@ const FormField = forwardRef(
           }
         : {};
 
+    const ToolTipIcon = formFieldTheme.tooltip.icon;
+
     return (
       <FormFieldBox
         ref={ref}
@@ -417,6 +435,15 @@ const FormField = forwardRef(
                 <Text as="label" htmlFor={htmlFor}>
                   {label} {required && <Text color="status-critical">*</Text>}
                 </Text>
+              )}
+              {tooltip && (
+                <Tooltip
+                  message={toolTipMsg}
+                  title={tooltipTitle}
+                  {...formFieldTheme.tooltip.extend}
+                >
+                  <ToolTipIcon {...formFieldTheme.tooltip.iconProps} />
+                </Tooltip>
               )}
             </Box>
           ) : null}

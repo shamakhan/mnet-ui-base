@@ -324,7 +324,6 @@ const TextInput = forwardRef(
     }
 
     return (
-      <StyledHelperTextWrapper>
         <StyledTextInputContainer plain={plain}>
           {showStyledPlaceholder && (
             <StyledPlaceholder>{placeholder}</StyledPlaceholder>
@@ -430,12 +429,6 @@ const TextInput = forwardRef(
           </Keyboard>
           {drop}
         </StyledTextInputContainer>
-        {error && (
-          <Text {...theme.textInput.error.text} color="brand">
-            {errorMessage}
-          </Text>
-        )}
-      </StyledHelperTextWrapper>
     );
   },
 );

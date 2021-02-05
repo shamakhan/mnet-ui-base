@@ -107,11 +107,6 @@ const StyledIcon = styled.div`
       : `left: ${getInputPadBySide(props, 'left')};`}
 `;
 
-const StyledHelperTextWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
 const StyledSuggestions = styled.ol`
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -134,5 +129,4 @@ export {
   StyledPlaceholder,
   StyledIcon,
   StyledSuggestions,
-  StyledHelperTextWrapper,
 };

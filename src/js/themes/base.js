@@ -748,6 +748,13 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           border: 'none',
         },
       },
+      tooltip: {
+        icon: Info,
+        iconProps: {
+          margin: { horizontal: 'small' },
+          size: 'large',
+        },
+      },
 
       // round: undefined,
     },
@@ -1350,8 +1357,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       },
     },
     tooptip: {
-      background: 'dark-1',
-      color: 'white',
+      background: 'light-1',
+      color: 'dark-1',
       tipSize: '5px',
       round: 'small',
       maxWidth: '20%',
