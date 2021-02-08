@@ -65,6 +65,7 @@ const SelectedList = ({
                 <Text weight="600">{selectedItems.length}</Text>
               </Box>
             </Box>
+            <Box flex="grow" />
             {CollapsibleIcon && (
               <Button role="button" onClick={onCancel} plain>
                 <CollapsibleIcon
@@ -122,8 +123,18 @@ const SelectedList = ({
         </Box>
       )}
       {!selectedItems.length && (
-        <Box align="center" justify="center" fill>
+        <Box align="end" pad="large" flex="grow">
+          {CollapsibleIcon && (
+              <Button role="button" style={{position: 'absolute'}} onClick={onCancel} plain>
+                <CollapsibleIcon
+                  color="dark-1"
+                  size={theme.select.icons.size}
+                />
+              </Button>
+            )}
+          <Box align="center" justify="center" fill>
           {renderEmptySelected}
+          </Box>
         </Box>
       )}
     </OptionsBox>
