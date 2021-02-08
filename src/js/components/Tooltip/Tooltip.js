@@ -62,8 +62,11 @@ const Tooltip = forwardRef(
             plain
             style={{ boxShadow: tooptip.boxShadow, maxWidth: tooptip.maxWidth }}
           >
-            <ArrowWrap position={position}>
-              { showArrow  && <Arrow position={position} />}
+            <ArrowWrap 
+              position={position}
+              background={tooptip.background || 'dark-1'}
+            >
+              { showArrow && <Arrow position={position} />}
               <Box
                 pad={tooptip.pad}
                 background={tooptip.background || 'dark-1'}

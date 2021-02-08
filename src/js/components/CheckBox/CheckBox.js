@@ -4,6 +4,7 @@ import { ThemeContext } from 'styled-components';
 import { removeUndefined } from '../../utils/object';
 import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
+import { Text } from '../Text';
 import { FormContext } from '../Form/FormContext';
 
 import {
@@ -183,7 +184,7 @@ const CheckBox = forwardRef(
     );
 
     const normalizedLabel =
-      typeof label === 'string' ? <span>{label}</span> : label;
+      typeof label === 'string' ? <Text {...theme.checkBox.label}>{label}</Text> : label;
 
     const first = reverse ? normalizedLabel : checkBoxNode;
     const second = reverse ? checkBoxNode : normalizedLabel;

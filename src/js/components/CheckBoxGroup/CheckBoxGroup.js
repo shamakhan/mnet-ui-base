@@ -1,6 +1,7 @@
 import React, { forwardRef, useContext, useMemo } from 'react';
-
+import { ThemeContext } from 'styled-components';
 import { Box } from '../Box';
+import { Text } from '../Text';
 import { CheckBox } from '../CheckBox';
 import { FormContext } from '../Form/FormContext';
 
@@ -20,6 +21,7 @@ export const CheckBoxGroup = forwardRef(
     ref,
   ) => {
     const formContext = useContext(FormContext);
+    const theme = useContext(ThemeContext) || defaultProps.theme;
 
     // In case option is a string, normalize it to be an object
     const options = useMemo(
@@ -78,10 +80,19 @@ export const CheckBoxGroup = forwardRef(
           return (
             <CheckBox
               key={label}
+              name={label}
               {...optionProps}
               disabled={disabled}
               checked={checked}
-              label={label}
+              label={
+                typeof label === 'string' ? (
+                  <Text {...theme.CheckBoxGroup.label}>
+                    {label}
+                  </Text>
+                ) : (
+                  label
+                )
+              }
               onChange={event =>
                 onCheckBoxChange(event, valueOption, optionProps)
               }
