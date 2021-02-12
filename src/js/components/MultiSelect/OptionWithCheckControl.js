@@ -15,7 +15,7 @@ const OptionWithCheckControl = ({
   inclusionExclusion,
   isExcluded,
   onSelect,
-  active,
+  // active,
   index,
 }) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;

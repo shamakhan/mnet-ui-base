@@ -32,9 +32,9 @@ const CustomMultiSelect = ({
   const [isValid, setIsValid] = React.useState(true);
   const [errorMsg, setErrorMsg] = React.useState('');
 
-  const setTextAreaValueFn = value => {
+  const setTextAreaValueFn = val => {
     setIsValid(true);
-    setTextAreaValue(value);
+    setTextAreaValue(val);
   };
 
   const setItems = isIncExc => {

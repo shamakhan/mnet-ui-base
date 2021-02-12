@@ -16,7 +16,7 @@ const SelectedList = ({
   onRemove,
   clearAll,
   renderEmptySelected,
-  width,
+  // width,
   height,
   onCancel,
 }) => {
@@ -107,7 +107,6 @@ const SelectedList = ({
                     <Close
                       style={{ cursor: 'pointer' }}
                       onClick={() => onRemove(item)}
-                      style={{ cursor: 'pointer' }}
                       {...theme.multiselect.chips.icon}
                     />
                   </OptionText>
@@ -125,15 +124,17 @@ const SelectedList = ({
       {!selectedItems.length && (
         <Box align="end" pad="large" flex="grow">
           {CollapsibleIcon && (
-              <Button role="button" style={{position: 'absolute'}} onClick={onCancel} plain>
-                <CollapsibleIcon
-                  color="dark-1"
-                  size={theme.select.icons.size}
-                />
-              </Button>
-            )}
+            <Button
+              role="button"
+              style={{ position: 'absolute' }}
+              onClick={onCancel}
+              plain
+            >
+              <CollapsibleIcon color="dark-1" size={theme.select.icons.size} />
+            </Button>
+          )}
           <Box align="center" justify="center" fill>
-          {renderEmptySelected}
+            {renderEmptySelected}
           </Box>
         </Box>
       )}

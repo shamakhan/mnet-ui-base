@@ -3,13 +3,13 @@ import { CircleInformation } from 'grommet-icons/icons/CircleInformation';
 import { Alert } from 'grommet-icons/icons/Alert';
 
 import { Box } from '../Box';
-import { Text } from '../Text';
+// import { Text } from '../Text';
 import { LabelText } from './StyledMultiSelect';
 
 const ValueLabelWithIcon = ({
   withInclusionExclusion,
   isExcluded,
-  value,
+  value = [],
   size,
 }) => {
   const number = value.length;

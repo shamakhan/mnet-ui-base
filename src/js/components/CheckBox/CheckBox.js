@@ -184,7 +184,11 @@ const CheckBox = forwardRef(
     );
 
     const normalizedLabel =
-      typeof label === 'string' ? <Text {...theme.checkBox.label}>{label}</Text> : label;
+      typeof label === 'string' ? (
+        <Text {...theme.checkBox.label}>{label}</Text>
+      ) : (
+        label
+      );
 
     const first = reverse ? normalizedLabel : checkBoxNode;
     const second = reverse ? checkBoxNode : normalizedLabel;

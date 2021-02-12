@@ -84,14 +84,6 @@ const FormField = forwardRef(
   ) => {
     const theme = useContext(ThemeContext) || defaultProps.theme;
     const context = useContext(FormContext);
-    let tooltipTitle; 
-    let toolTipMsg;
-    if(typeof tooltip === 'object' && tooltip!= null) {
-      toolTipMsg = tooltip.message
-      tooltipTitle = tooltip.title
-    } else {
-      toolTipMsg = tooltip;
-    }
     
     useEffect(() => {
       if (context && context.addValidation) {
@@ -436,10 +428,9 @@ const FormField = forwardRef(
                   {label} {required && <Text color="status-critical">*</Text>}
                 </Text>
               )}
-              {tooltip && (
+              {typeof tooltip === 'object' && tooltip!= null && (
                 <Tooltip
-                  message={toolTipMsg}
-                  title={tooltipTitle}
+                  {...tooltip}
                   {...formFieldTheme.tooltip.extend}
                 >
                   <ToolTipIcon {...formFieldTheme.tooltip.iconProps} />

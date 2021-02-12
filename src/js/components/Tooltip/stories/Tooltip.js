@@ -24,7 +24,7 @@ const TooltipPreview = () => {
           <Button label="Down" />
         </Tooltip>
         <Tooltip
-          message="Enabling this allows bidders to drop pixels or scripts to sync cookies in order to match their cookies with DSP’s cookies. They do this since some DSPs are most likely to bid on."
+          message="Enabling this allows bidders to drop pixels or scripts to sync cookies in order to"
           position="right"
           margin="large"
         >

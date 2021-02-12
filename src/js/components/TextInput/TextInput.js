@@ -12,7 +12,7 @@ import styled, { ThemeContext } from 'styled-components';
 import { defaultProps } from '../../default-props';
 
 import { Box } from '../Box';
-import { Text } from '../Text';
+// import { Text } from '../Text';
 import { Button } from '../Button';
 import { Drop } from '../Drop';
 import { InfiniteScroll } from '../InfiniteScroll';
@@ -27,7 +27,6 @@ import {
   StyledPlaceholder,
   StyledIcon,
   StyledSuggestions,
-  StyledHelperTextWrapper,
 } from './StyledTextInput';
 
 const renderLabel = suggestion => {
@@ -96,7 +95,7 @@ const TextInput = forwardRef(
       reverse,
       suggestions,
       value: valueProp,
-      errorMessage = "",
+      // errorMessage = "",
       ...rest
     },
     ref,

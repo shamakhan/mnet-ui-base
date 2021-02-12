@@ -10,13 +10,24 @@ import { Drop } from '../Drop';
 import { ArrowWrap, Arrow } from './StyledTooltip';
 
 const Tooltip = forwardRef(
-  ({ children, message, position = 'right', title, showArrow = true, ...rest }, ref) => {
+  (
+    {
+      children,
+      message,
+      body = false,
+      position = 'right',
+      title,
+      showArrow = true,
+      ...rest
+    },
+    ref,
+  ) => {
     const [over, setOver] = useState();
     const overRef = useRef();
     const theme = useContext(ThemeContext) || defaultProps.theme;
     const { tooptip } = theme;
 
-    let alignDrop = {...tooptip.dropProps};
+    let alignDrop = { ...tooptip.dropProps };
     if (position === 'up') {
       alignDrop = { bottom: 'top' };
     }
@@ -28,17 +39,17 @@ const Tooltip = forwardRef(
     }
     let timeOut = null;
     const showToolTip = (show, timer) => {
-      if(timeOut) {
+      if (timeOut) {
         clearTimeout(timeOut);
       }
-      if(timer) {
+      if (timer) {
         timeOut = setTimeout(() => {
-          setOver(show)
+          setOver(show);
         }, 50);
       } else {
-        setOver(show)
+        setOver(show);
       }
-    }
+    };
     return (
       <Box ref={ref} {...rest}>
         <Box
@@ -62,18 +73,27 @@ const Tooltip = forwardRef(
             plain
             style={{ boxShadow: tooptip.boxShadow, maxWidth: tooptip.maxWidth }}
           >
-            <ArrowWrap 
+            <ArrowWrap
               position={position}
               background={tooptip.background || 'dark-1'}
             >
-              { showArrow && <Arrow position={position} />}
+              {showArrow && <Arrow position={position} />}
               <Box
                 pad={tooptip.pad}
                 background={tooptip.background || 'dark-1'}
                 round={tooptip.round}
               >
-                {title && <Text color={tooptip.color} {...tooptip.titleProps}>{title}</Text>}
-                <Text color={tooptip.color}>{message}</Text>
+                {body}
+                {!body && (
+                  <>
+                    {title && (
+                      <Text color={tooptip.color} {...tooptip.titleProps}>
+                        {title}
+                      </Text>
+                    )}
+                    <Text color={tooptip.color}>{message}</Text>
+                  </>
+                )}
               </Box>
             </ArrowWrap>
           </Drop>

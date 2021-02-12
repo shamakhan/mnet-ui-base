@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import { ThemeContext } from 'styled-components';
 import { Close } from 'grommet-icons/icons/Close';
 
 import { defaultProps } from '../../default-props';
