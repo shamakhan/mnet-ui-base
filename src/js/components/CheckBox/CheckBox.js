@@ -88,7 +88,6 @@ const CheckBox = forwardRef(
     const {
       checked: CheckedIcon,
       indeterminate: IndeterminateIcon,
-      isMnetIcon,
     } = theme.checkBox.icons;
 
     let borderColor = normalizeColor(theme.checkBox.border.color, theme);
@@ -96,7 +95,7 @@ const CheckBox = forwardRef(
       borderColor = normalizeColor(theme.checkBox.color || 'control', theme);
     }
 
-    const checkIcon = isMnetIcon ? (
+    const checkIcon = CheckedIcon && CheckedIcon.notSvg ? (
       <CheckedIcon {...theme.checkBox.icon} />
     ) : (
       <CheckedIcon theme={theme} as={StyledCheckBoxIcon} />
