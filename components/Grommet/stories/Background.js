@@ -8,6 +8,8 @@ var _mnetUiBase = require("mnet-ui-base");
 
 var _mnetUiBaseThemeNeo = require("mnet-ui-base-theme-neo");
 
+var _mnetUiBaseThemeCdp = require("mnet-ui-base-theme-cdp");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var Background = function Background() {
@@ -25,6 +27,17 @@ var Background = function Background() {
     pad: "medium"
   }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with theme & themeMode but no background prop"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
     theme: _mnetUiBaseThemeNeo.neo,
+    themeMode: "light",
+    background: themeColor
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
+    pad: "medium"
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with background as theme color of '", themeColor, "'"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
+    theme: _mnetUiBaseThemeCdp.cdp,
+    themeMode: "dark"
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {
+    pad: "medium"
+  }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Text, null, "MnetUIBase with theme & themeMode but no background prop"))), /*#__PURE__*/_react["default"].createElement(_mnetUiBase.MnetUIBase, {
+    theme: _mnetUiBaseThemeCdp.cdp,
     themeMode: "light",
     background: themeColor
   }, /*#__PURE__*/_react["default"].createElement(_mnetUiBase.Box, {

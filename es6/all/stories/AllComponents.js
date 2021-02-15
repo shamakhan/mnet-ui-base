@@ -6,9 +6,11 @@ import { generate } from 'mnet-ui-base/themes/base';
 import { deepMerge } from 'mnet-ui-base/utils';
 import { neo } from 'mnet-ui-base-theme-neo';
 import { hb } from 'mnet-ui-base-theme-hb';
+import { cdp } from 'mnet-ui-base-theme-cdp';
 var themes = {
   hb: hb,
   neo: neo,
+  cdp: cdp,
   dark: dark
 };
 
