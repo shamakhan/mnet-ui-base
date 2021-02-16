@@ -24,6 +24,7 @@ import { isNodeAfterScroll, isNodeBeforeScroll, sizeStyle } from '../../utils';
 import {
   StyledTextInput,
   StyledTextInputContainer,
+  fill,
   StyledPlaceholder,
   StyledIcon,
   StyledSuggestions,
@@ -323,7 +324,7 @@ const TextInput = forwardRef(
     }
 
     return (
-        <StyledTextInputContainer plain={plain}>
+        <StyledTextInputContainer plain={plain} fill={fill}>
           {showStyledPlaceholder && (
             <StyledPlaceholder>{placeholder}</StyledPlaceholder>
           )}
@@ -387,6 +388,7 @@ const TextInput = forwardRef(
             onKeyDown={onKeyDown}
           >
             <StyledTextInput
+              fill={fill}
               aria-label={a11yTitle}
               ref={ref || inputRef}
               id={id}

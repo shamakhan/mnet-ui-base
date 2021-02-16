@@ -297,7 +297,8 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   }
 
   return /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledTextInputContainer, {
-    plain: plain
+    plain: plain,
+    fill: _StyledTextInput.fill
   }, showStyledPlaceholder && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledPlaceholder, null, placeholder), icon && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledIcon, {
     reverse: reverse,
     theme: theme
@@ -341,6 +342,7 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     } : undefined,
     onKeyDown: onKeyDown
   }, /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledTextInput, _extends({
+    fill: _StyledTextInput.fill,
     "aria-label": a11yTitle,
     ref: ref || inputRef,
     id: id,

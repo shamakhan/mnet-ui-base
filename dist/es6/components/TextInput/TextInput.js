@@ -14,7 +14,7 @@ import { Keyboard } from '../Keyboard';
 import { FormContext } from '../Form/FormContext';
 import { AnnounceContext } from '../../contexts';
 import { isNodeAfterScroll, isNodeBeforeScroll, sizeStyle } from '../../utils';
-import { StyledTextInput, StyledTextInputContainer, StyledPlaceholder, StyledIcon, StyledSuggestions } from './StyledTextInput';
+import { StyledTextInput, StyledTextInputContainer, fill, StyledPlaceholder, StyledIcon, StyledSuggestions } from './StyledTextInput';
 
 var renderLabel = function renderLabel(suggestion) {
   if (suggestion && typeof suggestion === 'object') {
@@ -277,7 +277,8 @@ var TextInput = /*#__PURE__*/forwardRef(function (_ref, ref) {
   }
 
   return /*#__PURE__*/React.createElement(StyledTextInputContainer, {
-    plain: plain
+    plain: plain,
+    fill: fill
   }, showStyledPlaceholder && /*#__PURE__*/React.createElement(StyledPlaceholder, null, placeholder), icon && /*#__PURE__*/React.createElement(StyledIcon, {
     reverse: reverse,
     theme: theme
@@ -321,6 +322,7 @@ var TextInput = /*#__PURE__*/forwardRef(function (_ref, ref) {
     } : undefined,
     onKeyDown: onKeyDown
   }, /*#__PURE__*/React.createElement(StyledTextInput, _extends({
+    fill: fill,
     "aria-label": a11yTitle,
     ref: ref || inputRef,
     id: id,
