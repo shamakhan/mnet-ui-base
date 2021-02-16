@@ -14,7 +14,7 @@ import { Keyboard } from '../Keyboard';
 import { FormContext } from '../Form/FormContext';
 import { AnnounceContext } from '../../contexts';
 import { isNodeAfterScroll, isNodeBeforeScroll, sizeStyle } from '../../utils';
-import { StyledTextInput, StyledTextInputContainer, fill, StyledPlaceholder, StyledIcon, StyledSuggestions } from './StyledTextInput';
+import { StyledTextInput, StyledTextInputContainer, StyledPlaceholder, StyledIcon, StyledSuggestions } from './StyledTextInput';
 
 var renderLabel = function renderLabel(suggestion) {
   if (suggestion && typeof suggestion === 'object') {
@@ -59,6 +59,7 @@ var TextInput = /*#__PURE__*/forwardRef(function (_ref, ref) {
       dropAlign = _ref$dropAlign === void 0 ? defaultDropAlign : _ref$dropAlign,
       dropHeight = _ref.dropHeight,
       dropTarget = _ref.dropTarget,
+      fill = _ref.fill,
       dropProps = _ref.dropProps,
       icon = _ref.icon,
       id = _ref.id,
@@ -80,7 +81,7 @@ var TextInput = /*#__PURE__*/forwardRef(function (_ref, ref) {
       reverse = _ref.reverse,
       suggestions = _ref.suggestions,
       valueProp = _ref.value,
-      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "error", "readOnly", "plain", "reverse", "suggestions", "value"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "fill", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "error", "readOnly", "plain", "reverse", "suggestions", "value"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var announce = useContext(AnnounceContext);

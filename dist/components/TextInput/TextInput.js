@@ -78,6 +78,7 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       dropAlign = _ref$dropAlign === void 0 ? defaultDropAlign : _ref$dropAlign,
       dropHeight = _ref.dropHeight,
       dropTarget = _ref.dropTarget,
+      fill = _ref.fill,
       dropProps = _ref.dropProps,
       icon = _ref.icon,
       id = _ref.id,
@@ -99,7 +100,7 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       reverse = _ref.reverse,
       suggestions = _ref.suggestions,
       valueProp = _ref.value,
-      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "error", "readOnly", "plain", "reverse", "suggestions", "value"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "fill", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "error", "readOnly", "plain", "reverse", "suggestions", "value"]);
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -298,7 +299,7 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
 
   return /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledTextInputContainer, {
     plain: plain,
-    fill: _StyledTextInput.fill
+    fill: fill
   }, showStyledPlaceholder && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledPlaceholder, null, placeholder), icon && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledIcon, {
     reverse: reverse,
     theme: theme
@@ -342,7 +343,7 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     } : undefined,
     onKeyDown: onKeyDown
   }, /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledTextInput, _extends({
-    fill: _StyledTextInput.fill,
+    fill: fill,
     "aria-label": a11yTitle,
     ref: ref || inputRef,
     id: id,

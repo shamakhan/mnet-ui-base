@@ -24,7 +24,6 @@ import { isNodeAfterScroll, isNodeBeforeScroll, sizeStyle } from '../../utils';
 import {
   StyledTextInput,
   StyledTextInputContainer,
-  fill,
   StyledPlaceholder,
   StyledIcon,
   StyledSuggestions,
@@ -77,6 +76,7 @@ const TextInput = forwardRef(
       dropAlign = defaultDropAlign,
       dropHeight,
       dropTarget,
+      fill,
       dropProps,
       icon,
       id,
