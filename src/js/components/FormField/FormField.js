@@ -41,7 +41,7 @@ const FormFieldBox = styled(Box)`
 
 const FormFieldContentBox = styled(Box)`
   ${props => props.focus && focusStyle({ justBorder: true })}
-  ${props => props.focus && props.plainOnFocus && `border:none;`}
+  ${props => props.focus && props.plainOnFocus && `border-color: white;`}
 `;
 
 const Message = ({ message, ...rest }) => {

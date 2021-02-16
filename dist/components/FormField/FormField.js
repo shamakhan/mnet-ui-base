@@ -60,7 +60,7 @@ var FormFieldContentBox = (0, _styledComponents["default"])(_Box.Box).withConfig
     justBorder: true
   });
 }, function (props) {
-  return props.focus && props.plainOnFocus && "border:none;";
+  return props.focus && props.plainOnFocus && "border-color: white;";
 });
 
 var Message = function Message(_ref) {
