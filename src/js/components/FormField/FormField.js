@@ -41,7 +41,7 @@ const FormFieldBox = styled(Box)`
 
 const FormFieldContentBox = styled(Box)`
   ${props => props.focus && focusStyle({ justBorder: true })}
-  ${props => props.plainOnFocus && `border:none;`}
+  ${props => props.focus && props.plainOnFocus && `border:none;`}
 `;
 
 const Message = ({ message, ...rest }) => {
@@ -319,7 +319,11 @@ const FormField = forwardRef(
         });
       }
       contents = (
-        <FormFieldContentBox overflow="hidden" {...(showBorder && innerProps)} plainOnFocus={plainOnFocus}>
+        <FormFieldContentBox
+          overflow="hidden"
+          {...(showBorder && innerProps)}
+          plainOnFocus={plainOnFocus}
+        >
           {contents}
         </FormFieldContentBox>
       );
