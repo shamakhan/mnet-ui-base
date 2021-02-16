@@ -11,7 +11,7 @@ var plainStyle = css(["outline:none;border:none;box-shadow:none;"]);
 var StyledTextInput = styled.input.withConfig({
   displayName: "StyledTextInput",
   componentId: "ilbntv-0"
-})(["", " width:100%;", " ", " ", " ", " &::-moz-focus-inner{border:none;outline:none;}", ";", " ", ";box-shadow:none;", " border-bottom-width:2px;", " ", " transition:width 0.2s ease 0s,background 0.2s ease 0s,border 0.2s ease 0s;"], inputStyle, function (props) {
+})(["", " width:100%;height:100%;", " ", " ", " ", " &::-moz-focus-inner{border:none;outline:none;}", ";", " ", ";box-shadow:none;", " border-bottom-width:2px;", " ", " transition:width 0.2s ease 0s,background 0.2s ease 0s,border 0.2s ease 0s;"], inputStyle, function (props) {
   return props.size && sizeStyle(props);
 }, function (props) {
   return props.plain && plainStyle;
