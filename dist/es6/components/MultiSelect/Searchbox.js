@@ -36,10 +36,11 @@ var Searchbox = function Searchbox(_ref) {
   })));
   return /*#__PURE__*/React.createElement(Box, _extends({
     layout: layout
-  }, theme.multiselect.searchbox.container), /*#__PURE__*/React.createElement(Box, theme.multiselect.searchbox.textWrapper, /*#__PURE__*/React.createElement(TextInput, {
+  }, theme.multiselect.searchbox.container), /*#__PURE__*/React.createElement(TextInput, {
     role: "search",
     "aria-label": "multiselect searchbox",
     plain: true,
+    fill: true,
     icon: icons,
     reverse: true,
     width: width,
@@ -49,7 +50,7 @@ var Searchbox = function Searchbox(_ref) {
       return handleChange(event.target.value);
     },
     placeholder: /*#__PURE__*/React.createElement(Text, theme.multiselect.searchbox.placeholder, value ? '' : placeholder)
-  })));
+  }));
 };
 
 export { Searchbox };

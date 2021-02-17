@@ -44,11 +44,11 @@ const Searchbox = ({
 
   return (
     <Box layout={layout} {...theme.multiselect.searchbox.container}>
-      <Box {...theme.multiselect.searchbox.textWrapper}>
       <TextInput
         role="search"
         aria-label="multiselect searchbox"
         plain
+        fill
         icon={icons}
         reverse
         width={width}
@@ -61,7 +61,6 @@ const Searchbox = ({
           </Text>
         }
       />
-      </Box>
       
     </Box>
   );

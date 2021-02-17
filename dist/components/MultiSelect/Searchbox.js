@@ -54,10 +54,11 @@ var Searchbox = function Searchbox(_ref) {
 
   return /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
     layout: layout
-  }, theme.multiselect.searchbox.container), /*#__PURE__*/_react["default"].createElement(_Box.Box, theme.multiselect.searchbox.textWrapper, /*#__PURE__*/_react["default"].createElement(_TextInput.TextInput, {
+  }, theme.multiselect.searchbox.container), /*#__PURE__*/_react["default"].createElement(_TextInput.TextInput, {
     role: "search",
     "aria-label": "multiselect searchbox",
     plain: true,
+    fill: true,
     icon: icons,
     reverse: true,
     width: width,
@@ -67,7 +68,7 @@ var Searchbox = function Searchbox(_ref) {
       return handleChange(event.target.value);
     },
     placeholder: /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.multiselect.searchbox.placeholder, value ? '' : placeholder)
-  })));
+  }));
 };
 
 exports.Searchbox = Searchbox;
