@@ -117,7 +117,7 @@ const CheckBox = forwardRef(
         {!indeterminate &&
           checked &&
           (CheckedIcon ? (
-            <CheckedIcon theme={theme}  />
+            <CheckedIcon theme={theme} size="large" />
           ) : (
             <StyledCheckBoxIcon
               theme={theme}

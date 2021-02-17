@@ -99,7 +99,8 @@ var CheckBox = /*#__PURE__*/forwardRef(function (_ref, ref) {
     },
     round: theme.checkBox.check.radius
   }, themeableProps), !indeterminate && checked && (CheckedIcon ? /*#__PURE__*/React.createElement(CheckedIcon, {
-    theme: theme
+    theme: theme,
+    size: "large"
   }) : /*#__PURE__*/React.createElement(StyledCheckBoxIcon, _extends({
     theme: theme,
     viewBox: "0 0 24 24",
