@@ -67,7 +67,7 @@ const SelectedList = ({
             </Box>
             <Box flex="grow" />
             {CollapsibleIcon && (
-              <Button role="button" onClick={onCancel} plain>
+              <Button role="button" onClick={onCancel} plain style={{ position: 'absolute', right: '15px' }}>
                 <CollapsibleIcon
                   color="dark-1"
                   size={theme.select.icons.size}

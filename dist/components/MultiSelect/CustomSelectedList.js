@@ -80,7 +80,11 @@ var SelectedList = function SelectedList(_ref) {
   }), CollapsibleIcon && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
     role: "button",
     onClick: onCancel,
-    plain: true
+    plain: true,
+    style: {
+      position: 'absolute',
+      right: '15px'
+    }
   }, /*#__PURE__*/_react["default"].createElement(CollapsibleIcon, {
     color: "dark-1",
     size: theme.select.icons.size
