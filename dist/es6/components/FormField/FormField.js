@@ -264,7 +264,7 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
     borderColor = themeBorder && themeBorder.color || 'border';
   }
 
-  var labelStyle = _extends({}, formFieldTheme.label);
+  var labelStyle = _extends({}, formFieldTheme.labelWrap);
 
   if (disabled) {
     labelStyle.color = formFieldTheme.disabled && formFieldTheme.disabled.label ? formFieldTheme.disabled.label.color : labelStyle.color;
@@ -369,12 +369,12 @@ var FormField = /*#__PURE__*/forwardRef(function (_ref2, ref) {
     style: _extends({}, layoutType)
   }, label && component !== CheckBox || labelWidth ? /*#__PURE__*/React.createElement(Box, _extends({}, labelStyle, {
     width: labelWidth
-  }), label && component !== CheckBox && /*#__PURE__*/React.createElement(Text, {
+  }), label && component !== CheckBox && /*#__PURE__*/React.createElement(Text, _extends({
     as: "label",
     htmlFor: htmlFor
-  }, label, " ", required && /*#__PURE__*/React.createElement(Text, {
+  }, formFieldTheme.label), label), required && /*#__PURE__*/React.createElement(Text, {
     color: "status-critical"
-  }, "*")), typeof tooltip === 'object' && tooltip != null && /*#__PURE__*/React.createElement(Tooltip, _extends({}, tooltip, formFieldTheme.tooltip.extend), /*#__PURE__*/React.createElement(ToolTipIcon, formFieldTheme.tooltip.iconProps))) : null, /*#__PURE__*/React.createElement(Box, null, contents, normalizedError && /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Message, _extends({
+  }, "*"), typeof tooltip === 'object' && tooltip != null && /*#__PURE__*/React.createElement(Tooltip, _extends({}, tooltip, formFieldTheme.tooltip.extend), /*#__PURE__*/React.createElement(ToolTipIcon, formFieldTheme.tooltip.iconProps))) : null, /*#__PURE__*/React.createElement(Box, null, contents, normalizedError && /*#__PURE__*/React.createElement(Box, null, /*#__PURE__*/React.createElement(Message, _extends({
     message: normalizedError
   }, formFieldTheme.error, {
     style: {

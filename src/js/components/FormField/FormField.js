@@ -285,7 +285,7 @@ const FormField = forwardRef(
       borderColor = (themeBorder && themeBorder.color) || 'border';
     }
 
-    const labelStyle = { ...formFieldTheme.label };
+    const labelStyle = { ...formFieldTheme.labelWrap };
 
     if (disabled) {
       labelStyle.color =
@@ -430,10 +430,11 @@ const FormField = forwardRef(
           {(label && component !== CheckBox) || labelWidth ? (
             <Box {...labelStyle} width={labelWidth}>
               {label && component !== CheckBox && (
-                <Text as="label" htmlFor={htmlFor}>
-                  {label} {required && <Text color="status-critical">*</Text>}
+                <Text as="label" htmlFor={htmlFor} {...formFieldTheme.label}>
+                  {label} 
                 </Text>
               )}
+              {required && <Text color="status-critical">*</Text>}
               {typeof tooltip === 'object' && tooltip!= null && (
                 <Tooltip
                   {...tooltip}

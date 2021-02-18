@@ -284,7 +284,7 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
     borderColor = themeBorder && themeBorder.color || 'border';
   }
 
-  var labelStyle = _extends({}, formFieldTheme.label);
+  var labelStyle = _extends({}, formFieldTheme.labelWrap);
 
   if (disabled) {
     labelStyle.color = formFieldTheme.disabled && formFieldTheme.disabled.label ? formFieldTheme.disabled.label.color : labelStyle.color;
@@ -389,12 +389,12 @@ var FormField = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, ref) {
     style: _extends({}, layoutType)
   }, label && component !== _CheckBox.CheckBox || labelWidth ? /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({}, labelStyle, {
     width: labelWidth
-  }), label && component !== _CheckBox.CheckBox && /*#__PURE__*/_react["default"].createElement(_Text.Text, {
+  }), label && component !== _CheckBox.CheckBox && /*#__PURE__*/_react["default"].createElement(_Text.Text, _extends({
     as: "label",
     htmlFor: htmlFor
-  }, label, " ", required && /*#__PURE__*/_react["default"].createElement(_Text.Text, {
+  }, formFieldTheme.label), label), required && /*#__PURE__*/_react["default"].createElement(_Text.Text, {
     color: "status-critical"
-  }, "*")), typeof tooltip === 'object' && tooltip != null && /*#__PURE__*/_react["default"].createElement(_Tooltip.Tooltip, _extends({}, tooltip, formFieldTheme.tooltip.extend), /*#__PURE__*/_react["default"].createElement(ToolTipIcon, formFieldTheme.tooltip.iconProps))) : null, /*#__PURE__*/_react["default"].createElement(_Box.Box, null, contents, normalizedError && /*#__PURE__*/_react["default"].createElement(_Box.Box, null, /*#__PURE__*/_react["default"].createElement(Message, _extends({
+  }, "*"), typeof tooltip === 'object' && tooltip != null && /*#__PURE__*/_react["default"].createElement(_Tooltip.Tooltip, _extends({}, tooltip, formFieldTheme.tooltip.extend), /*#__PURE__*/_react["default"].createElement(ToolTipIcon, formFieldTheme.tooltip.iconProps))) : null, /*#__PURE__*/_react["default"].createElement(_Box.Box, null, contents, normalizedError && /*#__PURE__*/_react["default"].createElement(_Box.Box, null, /*#__PURE__*/_react["default"].createElement(Message, _extends({
     message: normalizedError
   }, formFieldTheme.error, {
     style: {
