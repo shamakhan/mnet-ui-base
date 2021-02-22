@@ -57,6 +57,8 @@ const RadioButton = forwardRef(
         }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
+        checked={checked}
+        disabled={disabled}
       >
         <StyledRadioButton
           as={Box}

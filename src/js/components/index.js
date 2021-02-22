@@ -54,6 +54,7 @@ export * from './SkipLinks';
 export * from './SkipLinkTarget';
 export * from './Spinner';
 export * from './Stack';
+export * from './Switch';
 export * from './Table';
 export * from './TableBody';
 export * from './TableCell';
