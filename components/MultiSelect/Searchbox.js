@@ -9,6 +9,8 @@ var _styledComponents = require("styled-components");
 
 var _Search = require("grommet-icons/icons/Search");
 
+var _defaultProps = require("../../default-props");
+
 var _Text = require("../Text");
 
 var _TextInput = require("../TextInput");
@@ -26,7 +28,8 @@ var Searchbox = function Searchbox(_ref) {
       value = _ref.value,
       onValueChange = _ref.onValueChange,
       layout = _ref.layout;
-  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
+
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
   var handleChange = function handleChange(textValue) {
     if (textValue.replace(/\s/g, '').length || !textValue.length) return onValueChange(textValue);

@@ -11,6 +11,8 @@ var _FormCheckmark = require("grommet-icons/icons/FormCheckmark");
 
 var _FormClose = require("grommet-icons/icons/FormClose");
 
+var _defaultProps = require("../../default-props");
+
 var _Box = require("../Box");
 
 var _Text = require("../Text");
@@ -31,7 +33,8 @@ var OptionWithCheckControl = function OptionWithCheckControl(_ref) {
       onSelect = _ref.onSelect,
       active = _ref.active,
       index = _ref.index;
-  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
+
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
 

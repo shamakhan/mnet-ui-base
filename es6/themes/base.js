@@ -1180,6 +1180,7 @@ export var generate = function generate(baseSpacing, scale) {
           }
         }
       },
+      label: undefined,
       custom: {
         wrapper: {
           direction: 'row'

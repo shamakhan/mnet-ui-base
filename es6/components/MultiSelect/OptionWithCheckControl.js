@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { FormCheckmark } from 'grommet-icons/icons/FormCheckmark';
 import { FormClose } from 'grommet-icons/icons/FormClose';
+import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
 import { Text } from '../Text';
 import { CheckBoxWrapper, CheckBox } from './StyledMultiSelect';
