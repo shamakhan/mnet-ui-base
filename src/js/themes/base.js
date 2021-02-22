@@ -1071,6 +1071,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         next: Next,
         previous: Previous,
       },
+      label: undefined,
       custom: {
         wrapper: {
           direction: 'row',
