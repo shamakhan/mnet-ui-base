@@ -21,7 +21,10 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
 
   return /*#__PURE__*/React.createElement(Box, {
     direction: "row",
-    align: "center"
+    align: "center",
+    pad: {
+      left: 'xlarge'
+    }
   }, withInclusionExclusion && isExcluded && /*#__PURE__*/React.createElement(Box, {
     width: {
       min: '20px'
