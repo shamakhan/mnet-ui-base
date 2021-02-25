@@ -378,6 +378,14 @@ Object.keys(_Stack).forEach(function (key) {
   exports[key] = _Stack[key];
 });
 
+var _Switch = require("./Switch");
+
+Object.keys(_Switch).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Switch[key]) return;
+  exports[key] = _Switch[key];
+});
+
 var _Table = require("./Table");
 
 Object.keys(_Table).forEach(function (key) {
