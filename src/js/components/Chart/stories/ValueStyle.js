@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, Chart } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Chart } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const values = [
   {
@@ -35,12 +35,12 @@ const values = [
 ];
 
 export const ValueStyleChart = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large" gap="large">
       <Chart type="point" point="circle" values={values} />
       <Chart type="bar" values={values} />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ValueStyleChart.storyName = 'Value style';

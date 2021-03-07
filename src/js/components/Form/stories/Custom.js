@@ -9,17 +9,16 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
   TextInput,
-  MnetUIBase,
 } from 'mnet-ui-base';
 
-const customTheme = {
+const customFormFieldTheme = {
   global: {
     font: {
       size: '16px',

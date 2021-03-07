@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, Menu, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Menu, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 import { FormDown } from 'grommet-icons';
 
 const MenuWithChildren = props => (
@@ -31,7 +31,7 @@ const MenuWithChildren = props => (
 );
 
 const Example = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box
       align="center"
       pad="large"
@@ -40,7 +40,7 @@ const Example = () => (
       <MenuWithChildren disabled />
       <MenuWithChildren />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const Children = () => <Example />;

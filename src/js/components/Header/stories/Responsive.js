@@ -1,16 +1,17 @@
 import React from 'react';
 
-import { Grommet, Header, Anchor, Box, ResponsiveContext, Menu } from 'grommet';
-import { Grommet as GrommetIcon, Menu as MenuIcon } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Header, Anchor, Box, ResponsiveContext, 
+  Menu } from 'mnet-ui-base';
+import { MnetUIBase as MnetUIBaseIcon, Menu as MenuIcon } from 'grommet-icons';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Responsive = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Header background="light-4" pad="medium" height="xsmall">
       <Anchor
         href="https://tools.grommet.io/"
-        icon={<GrommetIcon color="brand" />}
-        label="Grommet Tools"
+        icon={<MnetUIBaseIcon color="brand" />}
+        label="MnetUIBase Tools"
       />
       <ResponsiveContext.Consumer>
         {size =>
@@ -22,7 +23,7 @@ export const Responsive = () => (
                 icon={<MenuIcon color="brand" />}
                 items={[
                   {
-                    label: <Box pad="small">Grommet.io</Box>,
+                    label: <Box pad="small">MnetUIBase.io</Box>,
                     href: 'https://v2.grommet.io/',
                   },
                   {
@@ -34,7 +35,7 @@ export const Responsive = () => (
             </Box>
           ) : (
             <Box justify="end" direction="row" gap="medium">
-              <Anchor href="https://v2.grommet.io/" label="Grommet.io" />
+              <Anchor href="https://v2.grommet.io/" label="MnetUIBase.io" />
               <Anchor
                 href="https://github.com/grommet/grommet/issues"
                 label="Feedback"
@@ -44,7 +45,7 @@ export const Responsive = () => (
         }
       </ResponsiveContext.Consumer>
     </Header>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

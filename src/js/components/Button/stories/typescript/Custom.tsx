@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ThemeType } from 'grommet/themes';
+import { ThemeType } from 'mnet-ui-base/themes';
 import { Box, Button, MnetUIBase } from 'mnet-ui-base';
 
 // Type annotations can only be used in TypeScript files.

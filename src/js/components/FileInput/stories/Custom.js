@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Grommet, FileInput, Text } from 'grommet';
+import { Box, MnetUIBase, FileInput, Text } from 'mnet-ui-base';
 import { Trash } from 'grommet-icons';
 
 const customTheme = {
@@ -26,7 +26,7 @@ const customTheme = {
 };
 
 export const Custom = () => (
-  <Grommet full theme={customTheme}>
+  <MnetUIBase full theme={customTheme}>
     <Box fill align="center" justify="start" pad="large">
       <Box width="medium">
         <FileInput
@@ -46,7 +46,7 @@ export const Custom = () => (
         />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

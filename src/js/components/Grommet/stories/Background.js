@@ -75,5 +75,5 @@ export const Background = () => {
 };
 
 export default {
-  title: 'Utilities/Grommet/Background',
+  title: 'Utilities/MnetUIBase/Background',
 };

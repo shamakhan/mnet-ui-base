@@ -66,13 +66,13 @@ const MultiSelect = ({
       updateInternalIsExcluded(isExcludedProp);
     }
     updateIsOpen(true);
-  }
+  };
 
   const onIncludeExclude = newValue => {
     const updater = withUpdateCancelButtons ? 
     updateInternalIsExcluded : onIncExcChange;
     updater(newValue);
-  }
+  };
 
   const onCancelClick = () => {
     onClose();
@@ -84,7 +84,7 @@ const MultiSelect = ({
       onIncExcChange(isExcluded);
     }
     updateIsOpen(false);
-  }
+  };
 
   const getValue = (index, array, param) => applyKey(array[index], param);
 
@@ -101,7 +101,7 @@ const MultiSelect = ({
     return options.filter((item, index) =>
       exp.test(getValue(index, options, labelKey)),
     );
-  }, [options, search])
+  }, [options, search]);
 
   const getOptionsNotMatchingSearch = useCallback(() => {
     if (!search) {
@@ -111,7 +111,7 @@ const MultiSelect = ({
     return options.filter((item, index) =>
       !exp.test(getValue(index, options, labelKey)),
     );
-  }, [options, search])
+  }, [options, search]);
 
   const onSelectValueChange = ({ value: newValue }) => {
     const valuesNotMatchingSearch = getOptionsNotMatchingSearch()

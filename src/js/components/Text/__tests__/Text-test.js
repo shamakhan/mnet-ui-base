@@ -12,9 +12,9 @@ import { Text } from '..';
 
 test('should have no accessibility violations', async () => {
   const { container } = render(
-    <Grommet>
+    <MnetUIBase>
       <Text a11yTitle="test"> Example</Text>
-    </Grommet>,
+    </MnetUIBase>,
   );
   const results = await axe(container);
   expect(results).toHaveNoViolations();
@@ -34,9 +34,9 @@ test('renders', () => {
 test('accepts ref', () => {
   const ref = React.createRef();
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Text ref={ref}>text</Text>
-    </Grommet>,
+    </MnetUIBase>,
     { createNodeMock: el => el },
   );
   expect(ref.current).not.toBeNull();

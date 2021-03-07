@@ -13,27 +13,7 @@ import {
   TextInput,
 } from '../../components';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { dark, grommet } from '..';
-
-// hpe theme has deprecated the accent and neutral colors
-const hpeColors = [
-  'brand',
-  'background-contrast',
-  'background-front',
-  'control',
-  'graph-0',
-  'graph-1',
-  'graph-2',
-  'graph-3',
-  'graph-4',
-  'focus',
-  'status-critical',
-  'status-disabled',
-  'status-ok',
-  'status-unknown',
-  'status-warning',
-  'text',
-];
+import { dark, mnet } from '..';
 
 const colors = [
   'accent-1',
@@ -109,12 +89,12 @@ describe('MnetUIBase', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('grommet theme', () => {
+  test('mnet theme', () => {
     const component = renderer.create(
-      <Grommet theme={grommet}>
+      <MnetUIBase theme={mnet}>
         <Button label="test" />
         <Button plain label="test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -122,7 +102,7 @@ describe('MnetUIBase', () => {
 
   test('ThemeContext theme', () => {
     const component = renderer.create(
-      <Grommet theme={grommet}>
+      <MnetUIBase theme={mnet}>
         <ThemeContext.Extend
           value={{
             global: {
@@ -134,7 +114,7 @@ describe('MnetUIBase', () => {
         >
           <Anchor color="test" label="Hello" />
         </ThemeContext.Extend>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -144,20 +124,6 @@ describe('MnetUIBase', () => {
     const component = renderer.create(
       <MnetUIBase theme={dark}>
         {colors.map(color => (
-          <Box key={color} background={color}>
-            <Text>{color}</Text>
-          </Box>
-        ))}
-      </MnetUIBase>,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('hpe theme', () => {
-    const component = renderer.create(
-      <MnetUIBase theme={hpe}>
-        {hpeColors.map(color => (
           <Box key={color} background={color}>
             <Text>{color}</Text>
           </Box>

@@ -34,6 +34,6 @@ const Searchbox = ({ placeholder, value, onValueChange, layout }) => {
       <Search {...theme.multiselect.searchbox.icon} />
     </SearchWrapper>
   );
-}
+};
 
 export { Searchbox };

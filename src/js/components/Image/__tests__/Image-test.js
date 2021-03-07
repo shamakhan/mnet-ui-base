@@ -15,9 +15,9 @@ const SRC =
 
 test('image should have no violations', async () => {
   const { container } = render(
-    <Grommet>
+    <MnetUIBase>
       <Image src={SRC} a11yTitle="Alt Text" />
-    </Grommet>,
+    </MnetUIBase>,
   );
 
   const results = await axe(container);
@@ -38,9 +38,9 @@ test('Image renders', () => {
 
 test('Image renders with aria-label', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Image a11yTitle="aria-label-text" src={SRC} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -85,9 +85,9 @@ test('Image fillProp renders', () => {
 test('Image onError', () => {
   const onError = jest.fn();
   const { getByAltText } = render(
-    <Grommet>
+    <MnetUIBase>
       <Image alt="test" onError={onError} />
-    </Grommet>,
+    </MnetUIBase>,
   );
 
   act(() => {

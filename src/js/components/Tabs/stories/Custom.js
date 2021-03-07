@@ -3,7 +3,8 @@ import { css } from 'styled-components';
 
 import { CircleInformation, Currency } from 'grommet-icons';
 
-import { Box, MnetUIBase, FormField, Tab, Tabs, Text, TextInput } from 'mnet-ui-base';
+import { Box, MnetUIBase, FormField, Tab, Tabs, Text,
+   TextInput } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 import { deepMerge } from 'mnet-ui-base/utils';
 

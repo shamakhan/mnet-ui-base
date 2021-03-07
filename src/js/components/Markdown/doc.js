@@ -7,7 +7,7 @@ export const doc = Markdown => {
     .availableAt(getAvailableAtBadge('Markdown', 'Type'))
     .description('Markdown formatting using MnetUIBase components.')
     .details(
-      `Grommet uses 'markdown-to-jsx' in Markdown component,
+      `MnetUIBase uses 'markdown-to-jsx' in Markdown component,
       you can see all the options in the documentation.`,
     )
     .usage(

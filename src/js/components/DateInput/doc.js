@@ -7,7 +7,7 @@ export const doc = DateInput => {
     .availableAt(getAvailableAtBadge('DateInput', 'Input'))
     .description('A control to input a single date or a date range.')
     .usage(
-      `import { DateInput } from 'grommet';
+      `import { DateInput } from 'mnet-ui-base';
 <DateInput id='item' name='item' />`,
     )
     .intrinsicElement('div');

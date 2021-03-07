@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { grommet, Box, Grommet, Spinner } from 'grommet';
+import { mnet, Box, MnetUIBase, Spinner } from 'mnet-ui-base';
 
 const gradient =
   'radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)';
@@ -41,7 +41,7 @@ export const Animation = () => {
   }, [meterValue]);
 
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Box
         gap="xlarge"
         pad={{ vertical: 'xlarge', horizontal: 'large' }}
@@ -62,7 +62,7 @@ export const Animation = () => {
           border={false}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

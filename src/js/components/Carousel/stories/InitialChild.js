@@ -1,10 +1,10 @@
 import React from 'react';
 import { Attraction, Car, TreeOption } from 'grommet-icons';
 
-import { Grommet, Box, Carousel } from 'grommet';
+import { MnetUIBase, Box, Carousel } from 'mnet-ui-base';
 
 export const Initial = () => (
-  <Grommet>
+  <MnetUIBase>
     <Box align="center" pad="large">
       <Carousel initialChild={1}>
         <Box pad="xlarge" background="accent-1">
@@ -18,7 +18,7 @@ export const Initial = () => (
         </Box>
       </Carousel>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Initial.storyName = 'Initial child';

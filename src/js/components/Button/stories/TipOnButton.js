@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet } from 'grommet';
+import { mnet, Box, Button, MnetUIBase } from 'mnet-ui-base';
 
 export const TipOnButton = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="medium" gap="large">
       <Button label="Default Tip" onClick={() => {}} tip="tooltip" />
       <Button
@@ -33,7 +33,7 @@ export const TipOnButton = () => (
         }}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 TipOnButton.storyName = 'Tip on button';

@@ -25,8 +25,7 @@ const OptionWithCheckControl = ({
     ...theme.select.options.container,
   };
 
-  const renderCheckbox = (check, exc) => {
-    return (
+  const renderCheckbox = (check, exc) => (
       <CheckBoxWrapper {...theme.multiselect.checkbox.box}>
         <CheckBox
           role="checkbox"
@@ -57,7 +56,6 @@ const OptionWithCheckControl = ({
         </CheckBox>
       </CheckBoxWrapper>
     );
-  };
 
   return (
     <Box {...selectOptionsStyle} selected={selected}>
@@ -88,6 +86,6 @@ const OptionWithCheckControl = ({
       </Box>
     </Box>
   );
-}
+};
 
 export { OptionWithCheckControl };

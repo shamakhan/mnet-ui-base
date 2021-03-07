@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { CheckBoxGroup } from '..';
 
 describe('CheckBoxGroup', () => {
@@ -154,7 +154,7 @@ describe('CheckBoxGroup', () => {
     };
 
     const { container } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <CheckBoxGroup
           valueKey="valueKeyTest"
           options={[
@@ -162,7 +162,7 @@ describe('CheckBoxGroup', () => {
             { label: 'second-label', valueKeyTest: 'Second' },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

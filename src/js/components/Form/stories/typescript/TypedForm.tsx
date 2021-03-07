@@ -6,13 +6,13 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 import { useState } from 'react';
 
 // interface declarations can only be used in TypeScript files
@@ -31,7 +31,7 @@ export const TypedForm = () => {
   const [value, setValue] = useState<FormState>({});
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           {/* 
@@ -98,7 +98,7 @@ export const TypedForm = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

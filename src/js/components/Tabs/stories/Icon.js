@@ -2,11 +2,11 @@ import React from 'react';
 import { css } from 'styled-components';
 
 import { Attraction, Car, TreeOption } from 'grommet-icons';
-import { Box, Grommet, Tab, Tabs } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, MnetUIBase, Tab, Tabs } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   tab: {
     color: 'text',
     active: {
@@ -38,7 +38,7 @@ const customTheme = deepMerge(grommet, {
   },
 });
 const IconTabs = () => (
-  <Grommet theme={customTheme} full>
+  <MnetUIBase theme={customTheme} full>
     <Box pad="medium" fill>
       <Tabs flex>
         <Tab title="Tab 1" icon={<Attraction />}>
@@ -58,7 +58,7 @@ const IconTabs = () => (
         </Tab>
       </Tabs>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const Icon = () => <IconTabs />;

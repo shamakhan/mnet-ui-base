@@ -3,7 +3,8 @@ import React from 'react';
 import { deepMerge } from 'mnet-ui-base/utils';
 import { mnet } from 'mnet-ui-base/themes';
 
-import { Box, Grid, Paragraph, MnetUIBase, ResponsiveContext } from 'mnet-ui-base';
+import { Box, Grid, Paragraph, MnetUIBase, 
+  ResponsiveContext } from 'mnet-ui-base';
 
 const customBreakpoints = deepMerge(mnet, {
   global: {

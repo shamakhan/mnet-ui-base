@@ -7,7 +7,7 @@ export const doc = Spinner => {
     .availableAt(getAvailableAtBadge('Spinner', 'Visualizations'))
     .description('A Spinner.')
     .usage(
-      `import { Spinner } from 'grommet';
+      `import { Spinner } from 'mnet-ui-base';
 <Spinner/>`,
     );
 

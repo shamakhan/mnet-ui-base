@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { grommet, Box, Grommet, Spinner, Text } from 'grommet';
+import { mnet, Box, MnetUIBase, Spinner, Text } from 'mnet-ui-base';
 
 export const Border = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box gap="large" pad="medium">
       <Box align="center" direction="row" gap="small">
         <Spinner
@@ -71,7 +71,7 @@ export const Border = () => (
         <Text>Loading...</Text>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

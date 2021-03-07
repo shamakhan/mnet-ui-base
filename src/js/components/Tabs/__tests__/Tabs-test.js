@@ -12,11 +12,11 @@ import { MnetUIBase, Tab, Tabs } from '../..';
 describe('Tabs', () => {
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Tabs>
           <Tab a11yTitle="test" />
         </Tabs>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = await axe(container);
@@ -64,7 +64,7 @@ describe('Tabs', () => {
 
   test('with icon + reverse', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Tabs>
           <Tab title="Tab 1" icon={<svg />}>
             Tab body 1
@@ -73,19 +73,19 @@ describe('Tabs', () => {
             Tab body 2
           </Tab>
         </Tabs>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('alignControls', () => {
     const { container } = render(
-      <Grommet full>
+      <MnetUIBase full>
         <Tabs alignControls="center">
           <Tab title="Tab 1">Tab body 1</Tab>
           <Tab title="Tab 2">Tab body 2</Tab>
         </Tabs>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -93,12 +93,12 @@ describe('Tabs', () => {
   test('Custom Tab component', () => {
     const CustomTab = () => <Tab title="Tab 1">Tab body 1</Tab>;
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Tabs>
           <CustomTab />
           <Tab title="Tab 2">Tab body 2</Tab>
         </Tabs>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -167,14 +167,14 @@ describe('Tabs', () => {
 
   test('should style as disabled', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Tabs>
           <Tab title="Enabled Tab">This tab is enabled</Tab>
           <Tab title="Disabled Tab" disabled>
             This tab is disabled
           </Tab>
         </Tabs>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -197,14 +197,14 @@ describe('Tabs', () => {
     };
 
     const { container, getByText } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <Tabs>
           <Tab title="Enabled Tab">This tab is enabled</Tab>
           <Tab title="Disabled Tab" disabled>
             This tab is disabled
           </Tab>
         </Tabs>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -236,14 +236,14 @@ describe('Tabs', () => {
     };
 
     const { container, getByText } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <Tabs>
           <Tab title="Enabled Tab">This tab is enabled</Tab>
           <Tab title="Disabled Tab" disabled>
             This tab is disabled
           </Tab>
         </Tabs>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -262,13 +262,13 @@ describe('Tabs', () => {
 
   test('styled component should change tab color when active', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Tabs>
           <ButtonTab title="About" />
           <ButtonTab title="Activity" />
           <ButtonTab title="Stickers" />
         </Tabs>
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.click(getByText('Activity'));
     expect(container.firstChild).toMatchSnapshot();

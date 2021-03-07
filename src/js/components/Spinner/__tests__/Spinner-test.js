@@ -8,7 +8,7 @@ import 'jest-axe/extend-expect';
 import { axe } from 'jest-axe';
 
 import { Node } from 'grommet-icons';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Spinner } from '..';
 
 describe('Spinner', () => {
@@ -16,9 +16,9 @@ describe('Spinner', () => {
 
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Spinner />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = await axe(container);
@@ -28,10 +28,10 @@ describe('Spinner', () => {
 
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Spinner />
         <Spinner id="test id" name="test name" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -39,13 +39,13 @@ describe('Spinner', () => {
 
   test('size renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Spinner size="xsmall" />
         <Spinner size="small" />
         <Spinner size="medium" />
         <Spinner size="large" />
         <Spinner size="xlarge" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -53,13 +53,13 @@ describe('Spinner', () => {
 
   test('size renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Spinner color="graph-0" />
         <Spinner color="graph-1" />
         <Spinner color="graph-2" />
         <Spinner color="graph-3" />
         <Spinner color="graph-4" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -67,12 +67,12 @@ describe('Spinner', () => {
 
   test('round renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Spinner round={false} />
         <Spinner round="small" />
         <Spinner round="medium" />
         <Spinner round="large" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -80,7 +80,7 @@ describe('Spinner', () => {
 
   test('border renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Spinner
           border={[
             {
@@ -118,7 +118,7 @@ describe('Spinner', () => {
         <Spinner
           border={[{ side: 'horizontal', color: 'brand', size: 'medium' }]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -141,9 +141,9 @@ describe('Spinner', () => {
     };
 
     const component = renderer.create(
-      <Grommet theme={theme}>
+      <MnetUIBase theme={theme}>
         <Spinner />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -164,9 +164,9 @@ describe('Spinner', () => {
     };
 
     const component = renderer.create(
-      <Grommet theme={theme}>
+      <MnetUIBase theme={theme}>
         <Spinner />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Chart } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Chart } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Pattern = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large" gap="medium">
       {[
         'squares',
@@ -27,7 +27,7 @@ export const Pattern = () => (
         />
       ))}
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

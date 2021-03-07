@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Grommet, MaskedInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, MaskedInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const CustomBoxMaskedInput = () => {
   const [value, setValue] = React.useState('');
@@ -8,7 +8,7 @@ export const CustomBoxMaskedInput = () => {
   const boxRef = React.useCallback(setBox, []);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box
         direction="row"
         align="center"
@@ -44,7 +44,7 @@ export const CustomBoxMaskedInput = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

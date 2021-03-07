@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Box, Grommet, DataTable } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, DataTable } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 import { columns, DATA } from './data';
 
 export const Paginated = () => {
   const [select, setSelect] = React.useState([]);
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Box pad="large">
         <DataTable
           columns={columns}
@@ -19,7 +19,7 @@ export const Paginated = () => {
           paginate
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

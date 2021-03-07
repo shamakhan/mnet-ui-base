@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { grommet, Box, Grommet, Spinner, Text } from 'grommet';
+import { mnet, Box, MnetUIBase, Spinner, Text } from 'mnet-ui-base';
 
 export const Simple = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box align="center" direction="row" gap="small" pad="small">
       <Spinner />
       <Text>Loading...</Text>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

@@ -6,15 +6,15 @@ import {
   Box,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   Heading,
   Text,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 import { deepMerge } from '../../../utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   formField: {
     border: {
       side: 'all',
@@ -59,7 +59,7 @@ const customTheme = deepMerge(grommet, {
 });
 
 export const Themed = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Box gap="medium">
       <Box border pad={{ horizontal: 'medium' }} width="medium">
         <Form>
@@ -120,7 +120,7 @@ export const Themed = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

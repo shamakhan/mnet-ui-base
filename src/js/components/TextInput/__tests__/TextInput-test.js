@@ -20,9 +20,9 @@ describe('TextInput', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput a11yTitle="aria-test" name="item" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -241,7 +241,7 @@ describe('TextInput', () => {
   test('calls onSuggestionsOpen', done => {
     const onSuggestionsOpen = jest.fn();
     const { getByTestId } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input"
           id="item"
@@ -249,7 +249,7 @@ describe('TextInput', () => {
           suggestions={['test', 'test1']}
           onSuggestionsOpen={onSuggestionsOpen}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.focus(getByTestId('test-input'));
@@ -263,7 +263,7 @@ describe('TextInput', () => {
   test('calls onSuggestionsClose', done => {
     const onSuggestionsClose = jest.fn();
     const { getByTestId, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input"
           id="item"
@@ -271,7 +271,7 @@ describe('TextInput', () => {
           suggestions={['test', 'test1']}
           onSuggestionsClose={onSuggestionsClose}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -359,7 +359,7 @@ describe('TextInput', () => {
     const suggestions = ['test1', 'test2'];
     const defaultSuggestionIndex = 1;
     const { getByTestId } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input"
           id="item"
@@ -368,7 +368,7 @@ describe('TextInput', () => {
           suggestions={suggestions}
           onSuggestionSelect={onSelect}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const input = getByTestId('test-input');
@@ -388,7 +388,7 @@ describe('TextInput', () => {
     const suggestions = ['nodefault1', 'default', 'nodefault2'];
     const defaultSuggestionIndex = 1;
     const { getByTestId } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input"
           id="item"
@@ -397,7 +397,7 @@ describe('TextInput', () => {
           suggestions={suggestions}
           onSuggestionSelect={onSelect}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const input = getByTestId('test-input');
@@ -420,7 +420,7 @@ describe('TextInput', () => {
   test('do not select any suggestion without defaultSuggestion', () => {
     const onSelect = jest.fn();
     const { getByTestId } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input"
           id="item"
@@ -428,7 +428,7 @@ describe('TextInput', () => {
           suggestions={['test1', 'test2']}
           onSuggestionSelect={onSelect}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const input = getByTestId('test-input');
@@ -457,7 +457,7 @@ describe('TextInput', () => {
   test('select a suggestion with onSuggestionSelect', () => {
     const onSuggestionSelect = jest.fn();
     const { getByTestId, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input"
           id="item"
@@ -465,7 +465,7 @@ describe('TextInput', () => {
           suggestions={['test', { value: 'test1' }]}
           onSuggestionSelect={onSuggestionSelect}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -487,7 +487,7 @@ describe('TextInput', () => {
     const onSelect = jest.fn();
     const onSuggestionSelect = jest.fn();
     const { getByTestId, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-input"
           id="item"
@@ -496,7 +496,7 @@ describe('TextInput', () => {
           onSelect={onSelect}
           onSuggestionSelect={onSuggestionSelect}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -615,36 +615,36 @@ describe('TextInput', () => {
 
   test('should not have padding when plain="full"', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           plain="full"
           name="name"
           placeholder="should not have padding"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('should have padding when plain', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput plain name="name" placeholder="should still have padding" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('should show non-string placeholder', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="test-styled-placeholder"
           id="styled-placeholder"
           name="styled-placeholder"
           placeholder={<Text>placeholder text</Text>}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const placeholder = screen.getByText('placeholder text');
@@ -654,7 +654,7 @@ describe('TextInput', () => {
 
   test('should hide non-string placeholder when having a value', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="styled-placeholder"
           id="styled-placeholder"
@@ -662,7 +662,7 @@ describe('TextInput', () => {
           placeholder={<Text>placeholder text</Text>}
           value="test"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const placeholder = screen.queryByText('placeholder text');
@@ -674,14 +674,14 @@ describe('TextInput', () => {
   test(`should only show default placeholder when placeholder is a
   string`, () => {
     const { container, getByTestId } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput
           data-testid="placeholder"
           id="placeholder"
           name="placeholder"
           placeholder="placeholder text"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const placeholder = screen.queryByText('placeholder text');
@@ -700,9 +700,9 @@ describe('TextInput', () => {
 
   test('textAlign end', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextInput value="1234" textAlign="end" />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();

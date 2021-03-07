@@ -12,7 +12,6 @@ import { MnetUIBase } from '../../MnetUIBase';
 import { Form } from '../../Form';
 import { FormField } from '..';
 import { TextInput } from '../../TextInput';
-import { Form } from '../../Form';
 
 const CustomFormField = styled(FormField)`
   font-size: 40px;
@@ -23,9 +22,9 @@ describe('FormField', () => {
 
   test(`should have no accessibility violations`, async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FormField />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -205,12 +204,12 @@ describe('FormField', () => {
 
   test('disabled', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField disabled /> {/* don't use FormField without Form */}
         <Form>
           <FormField disabled />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -219,12 +218,12 @@ describe('FormField', () => {
 
   test('required', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <FormField required /> {/* don't use FormField without Form */}
         <Form>
           <FormField required />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -233,7 +232,7 @@ describe('FormField', () => {
 
   test('custom label', () => {
     const component = renderer.create(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             label: {
@@ -248,7 +247,7 @@ describe('FormField', () => {
         <Form>
           <FormField label="label" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -257,7 +256,7 @@ describe('FormField', () => {
 
   test('disabled with custom label', () => {
     const component = renderer.create(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             label: {
@@ -277,7 +276,7 @@ describe('FormField', () => {
         <Form>
           <FormField disabled label="label" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -286,7 +285,7 @@ describe('FormField', () => {
 
   test('pad with border undefined', () => {
     const component = renderer.create(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             border: undefined,
@@ -299,7 +298,7 @@ describe('FormField', () => {
         <Form>
           <FormField label="label" pad />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -308,7 +307,7 @@ describe('FormField', () => {
 
   test('custom input margin', () => {
     const component = renderer.create(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             content: {
@@ -320,7 +319,7 @@ describe('FormField', () => {
         <Form>
           <FormField label="label" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -329,7 +328,7 @@ describe('FormField', () => {
 
   test('contentProps', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField
             label="label"
@@ -338,7 +337,7 @@ describe('FormField', () => {
             }}
           />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -347,7 +346,7 @@ describe('FormField', () => {
 
   test('custom error and info icon and container', () => {
     const component = renderer.create(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             error: {
@@ -377,7 +376,7 @@ describe('FormField', () => {
             }}
           />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -386,7 +385,7 @@ describe('FormField', () => {
 
   test('should render asterisk when requiredIndicator === true', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             label: {
@@ -398,7 +397,7 @@ describe('FormField', () => {
         <Form>
           <FormField label="label" required />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -407,7 +406,7 @@ describe('FormField', () => {
   test(`should render custom indicator when requiredIndicator is 
   element`, () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           formField: {
             label: {
@@ -419,7 +418,7 @@ describe('FormField', () => {
         <Form>
           <FormField label="label" required />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();

@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Tip } from 'grommet';
+import { mnet, Box, Button, MnetUIBase, Tip } from 'mnet-ui-base';
 
 export const Simple = () => {
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box align="center" justify="center" fill>
         <Tip content="action info">
           <Button label="action" />
         </Tip>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

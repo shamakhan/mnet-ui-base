@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { Grommet, Box, Stack } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Stack } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Fill = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Stack fill>
       <Box background="brand" fill>
         Test
       </Box>
     </Stack>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

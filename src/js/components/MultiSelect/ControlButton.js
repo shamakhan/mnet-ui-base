@@ -34,6 +34,6 @@ const ControlButton = ({ onOk, onCancel }) => {
       </Button>
     </ControlButtonWrapper>
   );
-}
+};
 
 export { ControlButton };

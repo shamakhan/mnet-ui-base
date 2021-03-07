@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Grid } from 'grommet';
-import { grommet } from '../../../themes';
+import { MnetUIBase, Box, Grid } from 'mnet-ui-base';
+import { mnet } from '../../../themes';
 
 export const Animation = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="medium">
       <Grid columns="small" gap="medium">
         {[
@@ -33,7 +33,7 @@ export const Animation = () => (
         ))}
       </Grid>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

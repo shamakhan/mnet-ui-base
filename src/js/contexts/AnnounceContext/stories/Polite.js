@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 
 import { Announce } from 'grommet-icons';
 
-import { grommet } from 'grommet/themes'; // used only for the grommet's font
+import { mnet } from 'mnet-ui-base/themes'; // used only for the grommet's font
 import {
   Anchor,
   AnnounceContext,
   Box,
   Button,
-  Grommet,
+  MnetUIBase,
   Paragraph,
-} from 'grommet';
+} from 'mnet-ui-base';
 
 const message = `Thank you for clicking the Announce Button, 
 this announcement is being broadcast on the Button's click.`;
@@ -43,11 +43,11 @@ const PageContent = ({ mode }) => {
 };
 
 export const Polite = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box justify="center" align="center" background="brand" fill>
       <PageContent mode="polite" role="log" />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

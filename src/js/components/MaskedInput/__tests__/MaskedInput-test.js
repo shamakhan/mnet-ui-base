@@ -416,7 +416,7 @@ describe('MaskedInput', () => {
     };
 
     const { container } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <MaskedInput
           data-testid="test-input"
           size="large"
@@ -424,7 +424,7 @@ describe('MaskedInput', () => {
           icon={<Search />}
           name="item"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Box, Button, DateInput, Form, FormField, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, DateInput, Form, FormField,
+   MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const DateForm = () => {
   const [value, setValue] = React.useState({ value: '' });
@@ -10,7 +11,7 @@ export const DateForm = () => {
     setValue(nextValue);
   };
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Form
           value={value}
@@ -26,7 +27,7 @@ export const DateForm = () => {
           <Button type="submit" label="submit" />
         </Form>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

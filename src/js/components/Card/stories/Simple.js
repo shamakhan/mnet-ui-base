@@ -1,18 +1,18 @@
 import React from 'react';
 
 import {
-  grommet,
+  mnet,
   Box,
   Card,
   CardBody,
   CardFooter,
   CardHeader,
-  Grommet,
+  MnetUIBase,
   Text,
-} from 'grommet';
+} from 'mnet-ui-base';
 
 export const Simple = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="large" gap="medium" height="large" width="medium">
       <Card pad="small" background="dark-1" gap="medium">
         <CardHeader>header</CardHeader>
@@ -36,7 +36,7 @@ export const Simple = () => (
         <Box>box - random component</Box>
       </Card>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

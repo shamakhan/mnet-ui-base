@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Anchor, Box, Grommet, Paragraph, Text } from 'grommet';
+import { Anchor, Box, MnetUIBase, Paragraph, Text } from 'mnet-ui-base';
 
 const customTheme = {
   global: {
@@ -38,21 +38,22 @@ const customTheme = {
 };
 
 export const Colors = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Box background="yellow" gap="medium" pad="small">
       <Text>Custom color purple</Text>
       <Text color="deepGreen">Inline custom color of deepGreen</Text>
       <Paragraph color="red">
-        Wrapping your application with the Grommet component that is pointing to
+        {/* eslint-disable-next-line max-len */}
+        Wrapping your application with the MnetUIBase component that is pointing to
         your customTheme object as shown on the example, will allow you full
         access to your custom colors across your application. You can override
-        any Grommet color that is mentioned in the docs in a similar fashion.
+        any MnetUIBase color that is mentioned in the docs in a similar fashion.
       </Paragraph>
       <Anchor href="https://github.com/grommet/grommet/wiki/Color-Properties">
-        Click here to read more about Grommet Colors
+        Click here to read more about MnetUIBase Colors
       </Anchor>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

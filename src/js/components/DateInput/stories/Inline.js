@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DateInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DateInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Inline = () => {
   const [value, setValue] = React.useState('');
@@ -11,11 +11,11 @@ export const Inline = () => {
     setValue(nextValue);
   };
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <DateInput inline value={value} onChange={onChange} />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

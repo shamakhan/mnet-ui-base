@@ -8,7 +8,7 @@ import 'regenerator-runtime/runtime';
 
 import { createPortal, expectPortal } from '../../../utils/portal';
 
-import { Grommet } from '../..';
+import { MnetUIBase } from '../..';
 import { Select } from '..';
 
 describe('Select Controlled', () => {
@@ -18,9 +18,9 @@ describe('Select Controlled', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select options={['one', 'two', 'three']} a11yTitle="test" multiple />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -134,9 +134,9 @@ describe('Select Controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -201,9 +201,9 @@ describe('Select Controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -250,9 +250,9 @@ describe('Select Controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -290,9 +290,9 @@ describe('Select Controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -305,7 +305,7 @@ describe('Select Controlled', () => {
 
   test('multiple with empty results', () => {
     const { getByPlaceholderText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           id="test-select"
           placeholder="test select"
@@ -313,7 +313,7 @@ describe('Select Controlled', () => {
           multiple
           value={[]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -377,9 +377,9 @@ describe('Select Controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const selectInput = getByPlaceholderText('Select multiple options');
@@ -473,9 +473,9 @@ describe('Select Controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const selectInput = getByPlaceholderText(

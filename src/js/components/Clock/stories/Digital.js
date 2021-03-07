@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Box, Clock } from 'mnet-ui-base';
 
-const DigitalClock = () => (
+const Digital = () => (
   <>
     <Box align="center" justify="start" pad="large">
       <Clock type="digital" />

@@ -64,7 +64,7 @@ const Tabs = forwardRef(
             // if it is still necessary in our next major release.
         React.cloneElement(child, { active: activeIndex === index })
           : child}
-        </TabsContext.Provider>
+      </TabsContext.Provider>
           ));
 
             const tabsHeaderStyles = {};
@@ -90,25 +90,27 @@ const Tabs = forwardRef(
         role="tablist"
         flex={flex}
         responsive={responsive}
-        responsive={responsive}{...rest}
+        {...rest}
         background={theme.tabs.background}
       >
         <StyledTabsHeader
           as={Box}
           direction="row"
           justify={justify}
-          alignSelf={alignControls}flex={false}
+          alignSelf={alignControls}
+          flex={false}
           wrap
           background={theme.tabs.header.background}
           gap={theme.tabs.gap}
-        {...tabsHeaderStyles}>
+          {...tabsHeaderStyles}
+        >
           {tabs}
         </StyledTabsHeader>
         <StyledTabPanel
           flex={flex}
           aria-label={tabContentTitle}
           role="tabpanel"
-          >
+        >
           {activeContent}
         </StyledTabPanel>
       </StyledTabs>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Select } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const options = ['one', 'two'];
 
@@ -9,7 +9,7 @@ export const Multiple = () => {
   const [value, setValue] = useState(['one']);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           placeholder="Select"
@@ -20,7 +20,7 @@ export const Multiple = () => {
           onChange={({ value: nextValue }) => setValue(nextValue)}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

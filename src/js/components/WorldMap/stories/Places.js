@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Box, Grommet, WorldMap } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, WorldMap } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Places = () => {
   const [active, setActive] = React.useState();
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <WorldMap
           places={[
@@ -20,7 +20,7 @@ export const Places = () => {
         />
         {active && <Box margin="large">Sydney</Box>}
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

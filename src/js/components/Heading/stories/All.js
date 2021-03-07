@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-import { MnetUIBase, Grid, Heading } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Grid, Heading } from 'mnet-ui-base';
 
 const headingFiller = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -42,7 +41,7 @@ export const All = () => (
       <Set size="xlarge" />
     </Grid>
     <Heading fill>{headingFiller}</Heading>
-  </MnetUIBase>
+  </>
 );
 
 export default {

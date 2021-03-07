@@ -6,13 +6,13 @@ import {
   CheckBoxGroup,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   Heading,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const FormUncontrolled = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="medium">
       <Heading level="3">Form with string options</Heading>
       <Form
@@ -47,7 +47,7 @@ export const FormUncontrolled = () => (
         <Button type="submit" label="Submit" />
       </Form>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 FormUncontrolled.storyName = 'Form uncontrolled';

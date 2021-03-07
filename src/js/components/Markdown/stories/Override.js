@@ -26,14 +26,6 @@ import { MnetUIBase } from 'mnet-ui-base';
   1 | 2 | 3
 `;
 
-const SimpleMarkdown = () => (
-  <>
-    <Box align="center" pad="large">
-      <Markdown>{CONTENT}</Markdown>
-    </Box>
-  </>
-);
-
 const StyledPre = styled.pre`
   background-color: #7d4cdb;
 `;

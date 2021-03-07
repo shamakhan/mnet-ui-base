@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Box, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, MnetUIBase, TextInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 const suggestions = Array(100)
   .fill()
   .map((_, i) => `suggestion ${i + 1}`);
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   global: {
     input: {
       padding: {
@@ -66,7 +66,7 @@ export const Themed = () => {
   const onSelect = event => setValue(event.suggestion);
 
   return (
-    <Grommet full theme={customTheme}>
+    <MnetUIBase full theme={customTheme}>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <TextInput
@@ -80,7 +80,7 @@ export const Themed = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

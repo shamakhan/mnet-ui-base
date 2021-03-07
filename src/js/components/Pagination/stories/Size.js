@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Pagination, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Pagination, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Size = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="start" pad="small" gap="large">
       <>
         <Text>Small</Text>
@@ -19,7 +19,7 @@ export const Size = () => (
         <Pagination numberItems={237} size="large" />
       </>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

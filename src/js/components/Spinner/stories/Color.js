@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { grommet, Box, Grommet, Spinner, Text } from 'grommet';
+import { mnet, Box, MnetUIBase, Spinner, Text } from 'mnet-ui-base';
 
 const gradientRainbow =
   // eslint-disable-next-line max-len
   'radial-gradient(circle at 50% -3.03%, #ff99ff 0, #ff91ff 3.33%, #ff8bf9 6.67%, #ff86e4 10%, #ff85cf 13.33%, #ff85b9 16.67%, #ff89a4 20%, #ff8f90 23.33%, #ff967d 26.67%, #ff9e6a 30%, #ffa758 33.33%, #ffb047 36.67%, #ffb937 40%, #ffc228 43.33%, #ffca1a 46.67%, #f8d110 50%, #e5d812 53.33%, #d0de1f 56.67%, #bae32f 60%, #a2e840 63.33%, #87ec52 66.67%, #67ef65 70%, #36f279 73.33%, #00f48e 76.67%, #00f6a3 80%, #00f7b9 83.33%, #00f8cf 86.67%, #00f9e5 90%, #00f9fb 93.33%, #00f9ff 96.67%, #00f8ff 100%);';
 
 export const Color = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box gap="large" pad="small">
       {[1, 2, 3].map(color => (
         <Box align="center" direction="row" gap="small" key={`graph-${color}`}>
@@ -28,7 +28,7 @@ export const Color = () => (
         <Text>Loading...</Text>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

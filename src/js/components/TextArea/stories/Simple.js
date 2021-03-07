@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Box, MnetUIBase, TextArea } from 'mnet-ui-base';
+import { Box, TextArea } from 'mnet-ui-base';
 
 const Resize = props => {
   const [value, setValue] = useState('');

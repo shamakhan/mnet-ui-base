@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-import { Box, Button, CheckBoxGroup, Form, FormField, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, CheckBoxGroup, Form, FormField, 
+  MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const FormControlled = () => {
   const [value, setValue] = useState();
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box pad="medium" width="medium">
         <Form
           onSubmit={({ value: values, touched }) =>
@@ -28,7 +29,7 @@ export const FormControlled = () => {
           <Button type="submit" label="Submit" />
         </Form>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

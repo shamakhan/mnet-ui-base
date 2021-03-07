@@ -6,7 +6,7 @@ import 'regenerator-runtime/runtime';
 import { cleanup, render } from '@testing-library/react';
 import { fireEvent } from '@testing-library/dom';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Pagination } from '..';
 
 const NUM_ITEMS = 237;
@@ -22,9 +22,9 @@ describe('Pagination', () => {
   test(`should display the correct last page based on items length 
   and step`, () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // default step is 10
@@ -37,9 +37,9 @@ describe('Pagination', () => {
 
   test('should render correct numberEdgePages', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} numberEdgePages={3} page={10} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -47,9 +47,9 @@ describe('Pagination', () => {
 
   test('should render correct numberMiddlePages when odd', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} numberMiddlePages={5} page={10} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -57,9 +57,9 @@ describe('Pagination', () => {
 
   test('should render correct numberMiddlePages when even', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} numberMiddlePages={4} page={10} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -70,9 +70,9 @@ describe('Pagination', () => {
   test(`should disable previous and next controls when numberItems 
   < step`, () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={10} step={20} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const previousButtonDisabled = container
@@ -90,9 +90,9 @@ describe('Pagination', () => {
   test(`should disable previous and next controls when numberItems 
   === step`, () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={20} step={20} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const previousButtonDisabled = container
@@ -110,9 +110,9 @@ describe('Pagination', () => {
   test(`should disable previous and next controls when numberItems 
   === 0`, () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={0} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const previousButtonDisabled = container
@@ -132,9 +132,9 @@ describe('Pagination', () => {
     const numberItems = 500;
     const step = 50;
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={numberItems} step={step} page={700} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const expectedPage = `${Math.ceil(numberItems / step)}`;
@@ -151,9 +151,9 @@ describe('Pagination', () => {
   onChange`, () => {
     const onChange = jest.fn();
     const { container, getByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} page={1} onChange={onChange} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const nextPageButton = getByLabelText('Go to next page');
@@ -171,9 +171,9 @@ describe('Pagination', () => {
   selected`, () => {
     const onChange = jest.fn();
     const { container, getByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} onChange={onChange} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const nextPageButton = getByLabelText('Go to next page');
@@ -197,9 +197,9 @@ describe('Pagination', () => {
   selected`, () => {
     const onChange = jest.fn();
     const { container, getByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} page={3} onChange={onChange} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const previousPageButton = getByLabelText('Go to previous page');
@@ -222,9 +222,9 @@ describe('Pagination', () => {
   test(`should display page 'n' of results when "page n" is 
   selected`, () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const desiredPage = '2';
@@ -238,9 +238,9 @@ describe('Pagination', () => {
 
   test(`should disable previous button if on first page`, () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const previousButtonDisabled = container
@@ -254,9 +254,9 @@ describe('Pagination', () => {
   test(`should disable next button if on last page`, () => {
     const lastPage = Math.ceil(NUM_ITEMS / STEP);
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} page={lastPage} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const nextButtonDisabled = container
@@ -270,9 +270,9 @@ describe('Pagination', () => {
   test(`should set numberMiddlePages = 1 if user provides value < 1`, () => {
     console.warn = jest.fn();
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} numberMiddlePages={0} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(console.warn).toHaveBeenCalledTimes(1);
@@ -289,9 +289,9 @@ describe('Pagination', () => {
     };
 
     const { container } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <Pagination numberItems={NUM_ITEMS} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -326,9 +326,9 @@ describe('Pagination', () => {
     };
 
     const { container } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <Pagination numberItems={NUM_ITEMS} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -336,11 +336,11 @@ describe('Pagination', () => {
 
   test(`should apply size`, () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Pagination numberItems={NUM_ITEMS} />
         <Pagination numberItems={NUM_ITEMS} size="small" />
         <Pagination numberItems={NUM_ITEMS} size="large" />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();

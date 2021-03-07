@@ -1,10 +1,10 @@
 import React from 'react';
 import { Attraction, Car, TreeOption } from 'grommet-icons';
 
-import { Grommet, Box, Carousel } from 'grommet';
+import { MnetUIBase, Box, Carousel } from 'mnet-ui-base';
 
 export const NoControls = () => (
-  <Grommet>
+  <MnetUIBase>
     <Box align="center" pad="large">
       <Carousel controls={false} play={1500}>
         <Box pad="xlarge" background="accent-1">
@@ -18,7 +18,7 @@ export const NoControls = () => (
         </Box>
       </Carousel>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 NoControls.storyName = 'Without controls';

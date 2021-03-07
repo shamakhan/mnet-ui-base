@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Form, FormField, Grommet, Text, TextArea } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Form, FormField, MnetUIBase, Text, 
+  TextArea } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const InsideFormField = () => {
   const [value, setValue] = useState({ name: '', email: '', value: '' });
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Text weight="bold">TextArea as component prop of FormField</Text>
         <Form>
@@ -34,7 +35,7 @@ export const InsideFormField = () => {
           <Button type="submit" label="submit" />
         </Form>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

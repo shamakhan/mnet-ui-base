@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 
-import { Box, Button, Form, FormField, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Form, FormField, MnetUIBase, Select } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const options = [
   { label: 'option 1', value: 1 },
@@ -14,7 +14,7 @@ export const InsideFormField = () => {
   const onChange = useCallback(nextValue => setValue(nextValue), []);
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Form
           value={value}
@@ -33,7 +33,7 @@ export const InsideFormField = () => {
           <Button type="submit" label="Update" primary />
         </Form>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

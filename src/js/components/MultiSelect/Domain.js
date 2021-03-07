@@ -1,5 +1,4 @@
-import React, { useContext, useCallback } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import React, { useCallback } from 'react';
 import { TextArea } from '../TextArea';
 
 import { Box } from '../Box';
@@ -8,10 +7,10 @@ import { Text } from '../Text';
 import SelectedList from './SelectedList';
 
 const Domain = ({ value, onValueChange, renderSearch, searchPlaceholder }) => {
-  const theme = useContext(ThemeContext) || defaultProps.theme;
   const { isInclude, items } = value;
   const [textAreaValue, setTextAreaValue] = React.useState('');
 
+  // eslint-disable-next-line no-shadow
   const setItems = isInclude => {
     if (textAreaValue.length) {
       const values = textAreaValue.trim().split('\n');

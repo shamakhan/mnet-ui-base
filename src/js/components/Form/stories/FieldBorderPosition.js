@@ -6,7 +6,7 @@ import {
   Form,
   FormField,
   Grid,
-  Grommet,
+  MnetUIBase,
   RadioButtonGroup,
   RangeInput,
   Select,
@@ -14,9 +14,9 @@ import {
   TextArea,
   TextInput,
   ThemeContext,
-} from 'grommet';
-import { deepMerge } from 'grommet/utils';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { deepMerge } from 'mnet-ui-base/utils';
+import { mnet } from 'mnet-ui-base/themes';
 
 const allOptions = Array(3)
   .fill()
@@ -24,12 +24,12 @@ const allOptions = Array(3)
 
 const borderPositions = [
   {
-    name: 'Default Grommet Theme',
-    theme: grommet,
+    name: 'Default MnetUIBase Theme',
+    theme: mnet,
   },
   {
     name: 'Border Inner',
-    theme: deepMerge(grommet, {
+    theme: deepMerge(mnet, {
       formField: {
         border: { position: 'inner', side: 'all' },
       },
@@ -37,7 +37,7 @@ const borderPositions = [
   },
   {
     name: 'Border Outer',
-    theme: deepMerge(grommet, {
+    theme: deepMerge(mnet, {
       formField: {
         border: { position: 'outer', side: 'all' },
       },
@@ -45,7 +45,7 @@ const borderPositions = [
   },
   {
     name: 'Border None',
-    theme: deepMerge(grommet, {
+    theme: deepMerge(mnet, {
       formField: {
         border: { position: 'none' },
       },
@@ -53,7 +53,7 @@ const borderPositions = [
   },
   {
     name: 'Border Undefined',
-    theme: deepMerge(grommet, {
+    theme: deepMerge(mnet, {
       formField: {
         border: undefined,
         content: { pad: 'large' },
@@ -126,7 +126,7 @@ const FormExample = ({ index, borderPosition, theme }) => {
 };
 
 export const FieldBorderPosition = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="large">
       <Grid columns={{ count: 'fit', size: ['auto', 'medium'] }} gap="medium">
         {borderPositions &&
@@ -139,7 +139,7 @@ export const FieldBorderPosition = () => (
           ))}
       </Grid>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 FieldBorderPosition.storyName = 'Field border position';

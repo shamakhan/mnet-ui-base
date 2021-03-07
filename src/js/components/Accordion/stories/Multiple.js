@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Accordion, AccordionPanel, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Accordion, AccordionPanel, Box, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Multiple = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box>
       <Accordion multiple>
         <AccordionPanel label="Panel 1">
@@ -26,7 +26,7 @@ export const Multiple = () => (
         </AccordionPanel>
       </Accordion>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Multiple.parameters = {

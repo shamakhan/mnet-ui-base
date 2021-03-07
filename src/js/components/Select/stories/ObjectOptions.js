@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Select } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const objectOptions = [
   {
@@ -26,7 +26,7 @@ export const ObjectOptions = () => {
   const [value, setValue] = useState('');
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box fill align="center" justify="start" pad="large">
         <Select
           id="select"
@@ -39,7 +39,7 @@ export const ObjectOptions = () => {
           onChange={({ value: nextValue }) => setValue(nextValue)}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

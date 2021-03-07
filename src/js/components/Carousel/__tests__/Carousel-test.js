@@ -66,7 +66,7 @@ describe('Carousel', () => {
     const onFocus = jest.fn();
     const onBlur = jest.fn();
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Carousel
           id="test-carousel"
           onFocus={onFocus}
@@ -76,7 +76,7 @@ describe('Carousel', () => {
           <Image src="//v2.grommet.io/assets/IMG_4245.jpg" />
           <Image src="//v2.grommet.io/assets/IMG_4210.jpg" />
         </Carousel>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const button = document

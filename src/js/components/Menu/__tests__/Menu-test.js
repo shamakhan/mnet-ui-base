@@ -47,9 +47,9 @@ describe('Menu', () => {
 
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Menu />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = await axe(container);
@@ -298,13 +298,13 @@ describe('Menu', () => {
 
   test('shift + tab through menu until it closes', () => {
     const { getByLabelText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Menu
           id="test-menu"
           label="Test"
           items={[{ label: 'Item 1' }, { label: 'Item 2' }]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -385,13 +385,13 @@ describe('Menu', () => {
 
   test('open on up close on esc', () => {
     const { getByLabelText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Menu
           id="test-menu"
           label="Test"
           items={[{ label: 'Item 1' }, { label: 'Item 2' }]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -462,14 +462,14 @@ describe('Menu', () => {
 
   test('with dropAlign bottom renders', () => {
     const { getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Menu
           id="test-menu"
           dropAlign={{ bottom: 'bottom', left: 'left' }}
           label="Test"
           items={[{ label: 'Item 1' }, { label: 'Item 2' }]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -533,48 +533,48 @@ describe('Menu', () => {
 
   test('custom theme icon color', () => {
     const component = renderer.create(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <Menu
           label="Test Menu"
           items={[{ label: 'Item 1' }, { label: 'Item 2' }]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('custom theme with default button', () => {
     const component = renderer.create(
-      <Grommet theme={defaultButtonTheme}>
+      <MnetUIBase theme={defaultButtonTheme}>
         <Menu
           label="Test Menu"
           items={[{ label: 'Item 1' }, { label: 'Item 2' }]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('menu with children when custom theme has default button', () => {
     const component = renderer.create(
-      <Grommet theme={defaultButtonTheme}>
+      <MnetUIBase theme={defaultButtonTheme}>
         <Menu items={[{ label: 'Item 1' }, { label: 'Item 2' }]}>
           {() => <>Test Menu</>}
         </Menu>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test('should apply themed drop props', () => {
     const { container } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <Menu
           label="Test Menu"
           items={[{ label: 'Item 1' }, { label: 'Item 2' }]}
           open
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

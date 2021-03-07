@@ -20,9 +20,9 @@ describe('Meter', () => {
 
   test('single', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Meter value={25} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

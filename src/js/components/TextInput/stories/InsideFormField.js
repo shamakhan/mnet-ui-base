@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
-import { Box, FormField, TextInput } from 'mnet-ui-base';
+import { Box, FormField, TextInput, Form, Button } from 'mnet-ui-base';
 import { allSuggestions } from './data';
-
-const allSuggestions = Array(100)
-  .fill()
-  .map((_, i) => `suggestion ${i + 1}`);
 
 export const InsideFormField = props => {
   const [state, setState] = useState({
@@ -41,11 +36,11 @@ export const InsideFormField = props => {
           }}
         >
           <FormField
-          direction="row"
-          label="Label"
-          htmlFor="text-input"
-          {...props}
-        >
+            direction="row"
+            label="Label"
+            htmlFor="text-input"
+            {...props}
+          >
             <TextInput
               id="text-input"
               placeholder="placeholder"

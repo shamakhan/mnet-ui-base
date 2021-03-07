@@ -1,5 +1,4 @@
 import React from 'react';
-import { mnet } from 'mnet-ui-base/themes';
 
 import { Box, InfiniteScroll, Text } from 'mnet-ui-base';
 

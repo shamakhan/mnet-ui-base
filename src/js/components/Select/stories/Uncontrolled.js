@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Select } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Select } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Uncontrolled = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Box fill align="center" justify="start" pad="large">
       <Select
         id="select"
@@ -14,7 +14,7 @@ export const Uncontrolled = () => (
         onChange={({ option }) => console.log(option)}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Uncontrolled.parameters = {

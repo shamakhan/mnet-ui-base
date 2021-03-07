@@ -4,8 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { Box, Button } from 'mnet-ui-base';
 import { Tooltip } from '../Tooltip';
 
-const TooltipPreview = () => {
-  return (
+const TooltipPreview = () => (
     <div>
       <Box
         direction="row"
@@ -24,7 +23,10 @@ const TooltipPreview = () => {
           <Button label="Down" />
         </Tooltip>
         <Tooltip
-          message="Enabling this allows bidders to drop pixels or scripts to sync cookies in order to match their cookies with DSP’s cookies. They do this since some DSPs are most likely to bid on."
+          message="Enabling this allows bidders to drop pixels or \
+          scripts to sync cookies in order to match their cookies\
+           with DSP’s cookies. They do this since some DSPs are \
+           most likely to bid on."
           position="right"
           margin="large"
         >
@@ -33,6 +35,5 @@ const TooltipPreview = () => {
       </Box>
     </div>
   );
-};
 
 storiesOf('Tooltip', module).add('Tooltip', () => <TooltipPreview />);

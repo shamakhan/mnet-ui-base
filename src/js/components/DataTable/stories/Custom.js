@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Grommet, DataTable } from 'grommet';
+import { Box, MnetUIBase, DataTable } from 'mnet-ui-base';
 import { Blank } from 'grommet-icons';
 
 // Source code for the data can be found here
@@ -50,7 +50,7 @@ export const Custom = () => {
     direction: 'desc',
   });
   return (
-    <Grommet theme={customTheme}>
+    <MnetUIBase theme={customTheme}>
       <Box align="center" pad="large">
         <DataTable
           columns={columns}
@@ -60,7 +60,7 @@ export const Custom = () => {
           onSort={setSort}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

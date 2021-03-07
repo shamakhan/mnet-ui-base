@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, DateInput, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, DateInput, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const European = () => {
   const [value, setValue] = React.useState();
@@ -11,13 +11,13 @@ export const European = () => {
     setValue(nextValue);
   };
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium" gap="medium">
           <DateInput format="dd/mm/yyyy" value={value} onChange={onChange} />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

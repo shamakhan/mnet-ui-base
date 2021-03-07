@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Add } from 'grommet-icons';
 
-import { Box, Button, Text } from 'mnet-ui-base';
+import { Box, Button, Text, MnetUIBase } from 'mnet-ui-base';
 
 export const Plain = () => (
   <Box pad="large" gap="large">
@@ -19,7 +19,7 @@ export const Plain = () => (
       </Box>
     </>
     {/* Kind Button */}
-    <Grommet
+    <MnetUIBase
       theme={{
         global: {
           font: {
@@ -38,7 +38,7 @@ export const Plain = () => (
           </Box>
         </Button>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   </Box>
 );
 

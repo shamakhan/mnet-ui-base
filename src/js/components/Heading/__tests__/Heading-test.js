@@ -18,9 +18,9 @@ test('Heading renders', () => {
 test('Heading accepts ref', () => {
   const ref = React.createRef();
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading ref={ref} />
-    </Grommet>,
+    </MnetUIBase>,
     { createNodeMock: el => el },
   );
   expect(ref.current).not.toBeNull();
@@ -213,12 +213,12 @@ test('Theme color renders', () => {
     },
   };
   const component = renderer.create(
-    <Grommet theme={customTheme}>
+    <MnetUIBase theme={customTheme}>
       <Heading level={1} />
       <Heading level={2} />
       <Heading level={3} />
       <Heading level={4} />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
@@ -238,9 +238,9 @@ test('Throws a warning when heading.level is undefined in the theme.', () => {
   };
 
   renderer.create(
-    <Grommet theme={customTheme}>
+    <MnetUIBase theme={customTheme}>
       <Heading level={6} />
-    </Grommet>,
+    </MnetUIBase>,
   );
 
   const consoleMsg = 'Heading level 6 is not defined in your theme.';
@@ -249,9 +249,9 @@ test('Throws a warning when heading.level is undefined in the theme.', () => {
 
 test('Heading fill renders', () => {
   const component = renderer.create(
-    <Grommet>
+    <MnetUIBase>
       <Heading fill />
-    </Grommet>,
+    </MnetUIBase>,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

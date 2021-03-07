@@ -36,6 +36,6 @@ const ValueLabelWithNumber = ({ value, number, color }) => {
       )}
     </Box>
   );
-}
+};
 
 export { ValueLabelWithNumber };

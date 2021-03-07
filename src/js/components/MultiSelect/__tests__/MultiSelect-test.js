@@ -277,7 +277,7 @@ describe('MultiSelect', () => {
         .toHaveTextContent(
           new RegExp(
             `^${options.filter(_ => _.label.includes('Test 1'))[index].label}$`,
-          ))
+          ));
     });
 
   });
@@ -867,7 +867,7 @@ describe('MultiSelect', () => {
         .toHaveTextContent(
           new RegExp(
             `^${options.filter(_ => _.label.includes('Test 1'))[index].label}$`,
-          ))
+          ));
     });
 
   });

@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Avatar } from '../../Avatar';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Sidebar } from '..';
 
 const src = '';
@@ -14,9 +14,9 @@ describe('Sidebar', () => {
 
   test('renders', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Sidebar id="test id" name="test name" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -24,9 +24,9 @@ describe('Sidebar', () => {
 
   test('header', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Sidebar header={<Avatar src={src} />} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -34,9 +34,9 @@ describe('Sidebar', () => {
 
   test('footer', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Sidebar footer={<Avatar src={src} />} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -44,12 +44,12 @@ describe('Sidebar', () => {
 
   test('children', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Sidebar>
           <Avatar src={src} />
           children test
         </Sidebar>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -57,7 +57,7 @@ describe('Sidebar', () => {
 
   test('all', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Sidebar
           footer={<Avatar>SY</Avatar>}
           header={<Avatar src={src} />}
@@ -65,7 +65,7 @@ describe('Sidebar', () => {
         >
           test all props and children
         </Sidebar>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

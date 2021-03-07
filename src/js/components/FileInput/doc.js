@@ -8,7 +8,7 @@ export const doc = FileInput => {
     .availableAt(getAvailableAtBadge('FileInput', 'Input'))
     .description('A control to input one or more files.')
     .usage(
-      `import { FileInput } from 'grommet';
+      `import { FileInput } from 'mnet-ui-base';
 <FileInput id='file' name='file' />`,
     )
     .intrinsicElement('input');

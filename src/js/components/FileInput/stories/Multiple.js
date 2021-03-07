@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, FileInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, FileInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Multiple = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Box fill align="center" justify="start" pad="large">
       <Box width="medium">
         <FileInput
@@ -19,7 +19,7 @@ export const Multiple = () => (
         />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

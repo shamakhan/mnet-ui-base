@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Pagination, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Pagination, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const NumberEdgePages = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="small" gap="medium">
       <Box>
         <Text>numberEdgePages = 2 (number of pages on start/end)</Text>
@@ -15,7 +15,7 @@ export const NumberEdgePages = () => (
         <Pagination numberItems={237} page={10} numberEdgePages={0} />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 NumberEdgePages.storyName = 'Number edge pages';

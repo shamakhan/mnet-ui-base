@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grommet, Box, Carousel, Image } from 'grommet';
+import { MnetUIBase, Box, Carousel, Image } from 'mnet-ui-base';
 
 const data = [
   '//v2.grommet.io/assets/Wilderpeople_Ricky.jpg',
@@ -46,13 +46,13 @@ const View2 = () => {
 };
 
 export const Multi = () => (
-  <Grommet>
+  <MnetUIBase>
     <Carousel>
       <View0 />
       <View1 />
       <View2 />
     </Carousel>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

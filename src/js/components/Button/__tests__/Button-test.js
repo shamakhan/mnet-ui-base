@@ -48,14 +48,14 @@ describe('Button', () => {
 
   test('children function with disabled prop', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Button onClick={() => {}} disabled>
           {({ disabled }) => <Text>{disabled ? 'Disabled' : 'Test'}</Text>}
         </Button>
         <Button onClick={() => {}}>
           {({ disabled }) => <Text>{disabled ? 'Disabled' : 'Test'}</Text>}
         </Button>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -150,9 +150,9 @@ describe('Button', () => {
 
   test('tip', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Button label="Default Tip" onClick={() => {}} tip="tooltip" />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.mouseOver(getByText('Default Tip'));
@@ -173,7 +173,7 @@ describe('Button', () => {
         <Button disabled icon={<svg />} label="Button" />
         <Button disabled icon={<svg />} label="Button" plain />
         <Button disabled icon={<svg />} label="Button" primary />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

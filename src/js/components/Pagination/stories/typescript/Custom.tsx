@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, Pagination, Text } from 'grommet';
-import { ThemeType } from 'grommet/themes';
+import { Box, MnetUIBase, Pagination, Text } from 'mnet-ui-base';
+import { ThemeType } from 'mnet-ui-base/themes';
 import { FormPreviousLink } from 'grommet-icons/icons/FormPreviousLink';
 import { FormNextLink } from 'grommet-icons/icons/FormNextLink';
 
@@ -43,7 +43,7 @@ const customTheme: ThemeType = {
 };
 
 export const Custom = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Box direction="row" gap="large">
       <Box
         align="start"
@@ -65,7 +65,7 @@ export const Custom = () => (
         <Pagination numberItems={237} />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

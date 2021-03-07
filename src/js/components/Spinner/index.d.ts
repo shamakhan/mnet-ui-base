@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ColorType } from 'grommet/utils';
+import { ColorType } from 'mnet-ui-base/utils';
 import { BoxProps } from '../Box';
 export interface SpinnerProps {
   size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | string;

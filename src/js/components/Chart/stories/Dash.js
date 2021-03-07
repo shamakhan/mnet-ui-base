@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Box, Chart } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Chart } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Dash = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large" gap="large">
       <Chart type="line" dash values={[20, 30, 15]} />
       <Chart type="line" dash round values={[20, 30, 15]} />
@@ -21,7 +21,7 @@ export const Dash = () => (
         ]}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

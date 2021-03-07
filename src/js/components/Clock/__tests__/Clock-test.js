@@ -80,7 +80,7 @@ describe('Clock', () => {
   ['hours', 'minutes', 'seconds'].forEach(precision =>
     test(`type analog precision ${precision} size huge`, () => {
       const component = renderer.create(
-        <Grommet>
+        <MnetUIBase>
           <Clock
             run={false}
             type="analog"
@@ -88,7 +88,7 @@ describe('Clock', () => {
             size="huge"
             time={DURATION}
           />
-        </Grommet>,
+        </MnetUIBase>,
       );
       expect(component.toJSON()).toMatchSnapshot();
     }),
@@ -109,9 +109,9 @@ describe('Clock', () => {
     };
 
     const component = renderer.create(
-      <Grommet theme={override}>
+      <MnetUIBase theme={override}>
         <Clock type="digital" run={false} time={DURATION} size="customSize" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });

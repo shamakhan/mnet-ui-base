@@ -1,8 +1,7 @@
 import React from 'react';
 import { Gremlin } from 'grommet-icons';
 
-import { MnetUIBase, Box, DropButton, Text } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Box, DropButton, Text } from 'mnet-ui-base';
 
 const renderItems = () => (
   <Box>

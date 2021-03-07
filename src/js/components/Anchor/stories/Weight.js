@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Anchor, Box, Grommet } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Anchor, Box, MnetUIBase } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const WeightAnchor = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large" gap="xsmall">
       <Anchor href="#" label="Anchor default weight" />
       <Anchor href="#" label="Anchor weight Normal" weight="normal" />
@@ -13,7 +13,7 @@ const WeightAnchor = () => (
       <Anchor href="#" label="Anchor weight 400" weight="400" />
       <Anchor href="#" label="Anchor weight 600" weight="600" />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const Weight = () => <WeightAnchor />;

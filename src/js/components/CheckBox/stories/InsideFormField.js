@@ -7,12 +7,12 @@ import {
   CheckBoxGroup,
   Form,
   FormField,
-  Grommet,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+  MnetUIBase,
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const InsideFormField = props => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <Form
         onSubmit={({ value, touched }) => console.log('Submit', value, touched)}
@@ -54,7 +54,7 @@ export const InsideFormField = props => (
         <Button type="submit" label="Submit" />
       </Form>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 InsideFormField.storyName = 'Inside a FormField';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Avatar, Button, Box, grommet, Grommet, Nav, Sidebar } from 'grommet';
+import { Avatar, Button, Box, mnet, MnetUIBase, Nav, Sidebar } from 'mnet-ui-base';
 
 import {
   Analytics,
@@ -43,7 +43,7 @@ const MainNavigation = () => (
 );
 
 export const SidebarIcons = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box direction="row" height={{ min: '100%' }}>
       <Sidebar
         background="accent-1"
@@ -53,7 +53,7 @@ export const SidebarIcons = () => (
         <MainNavigation />
       </Sidebar>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 SidebarIcons.storyName = 'Icons';

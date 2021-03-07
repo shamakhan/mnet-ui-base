@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, Heading, Paragraph, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Heading, Paragraph, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const paragraphFiller = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -11,7 +11,7 @@ tempor incididunt ut labore et dolore magna aliqua.
 export const Medium = () => {
   const margin = undefined;
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box pad="medium">
         <div>
           <Heading margin={margin}>Heading 1 - Medium</Heading>
@@ -46,7 +46,7 @@ export const Medium = () => {
           </Paragraph>
         </div>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

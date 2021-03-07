@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { Grid, Grommet, Box, Image, InfiniteScroll, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Grid, MnetUIBase, Box, Image, InfiniteScroll,
+   Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const allItems = Array(2000)
   .fill()
   .map((_, i) => `item ${i + 1}`);
 
 export const GridWithShow = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Grid columns="xsmall" rows="small">
       <InfiniteScroll items={allItems} step={12} show={78}>
         {item => (
@@ -19,7 +20,7 @@ export const GridWithShow = () => (
         )}
       </InfiniteScroll>
     </Grid>
-  </Grommet>
+  </MnetUIBase>
 );
 
 GridWithShow.storyName = 'Grid with show item 77';

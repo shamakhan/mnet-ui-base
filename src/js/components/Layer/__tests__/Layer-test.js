@@ -131,11 +131,11 @@ describe('Layer', () => {
 
   test(`should apply background`, () => {
     render(
-      <Grommet>
+      <MnetUIBase>
         <Layer id="margin-test" background="brand">
           This is a layer
         </Layer>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expectPortal('margin-test').toMatchSnapshot();
   });
@@ -312,11 +312,11 @@ describe('Layer', () => {
 
   test('target not modal', () => {
     render(
-      <Grommet>
+      <MnetUIBase>
         <TargetLayer id="target-test" modal={false}>
           This layer has a target
         </TargetLayer>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expectPortal('target-test').toMatchSnapshot();
   });
@@ -334,9 +334,9 @@ describe('Layer', () => {
 
   test('default containerTarget', () => {
     render(
-      <Grommet>
+      <MnetUIBase>
         <Layer data-testid="layer">Test</Layer>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const layer = getByTestId(document, 'layer');
     const actualRoot = layer.parentNode.parentNode.parentNode.parentNode;
@@ -348,9 +348,9 @@ describe('Layer', () => {
     document.body.appendChild(target);
     try {
       render(
-        <Grommet containerTarget={target}>
+        <MnetUIBase containerTarget={target}>
           <Layer data-testid="layer">Test</Layer>
-        </Grommet>,
+        </MnetUIBase>,
       );
       const layer = getByTestId(document, 'layer');
       const actualRoot = layer.parentNode.parentNode.parentNode.parentNode;
@@ -363,7 +363,7 @@ describe('Layer', () => {
   test('invoke onClickOutside when modal={true}', () => {
     const onClickOutside = jest.fn();
     render(
-      <Grommet>
+      <MnetUIBase>
         <FakeLayer
           id="layer-node"
           onClickOutside={onClickOutside}
@@ -371,7 +371,7 @@ describe('Layer', () => {
         >
           <div data-testid="test-body-node" />
         </FakeLayer>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expectPortal('layer-node').toMatchSnapshot();
 
@@ -385,7 +385,7 @@ describe('Layer', () => {
   test('invoke onClickOutside when modal={false}', () => {
     const onClickOutside = jest.fn();
     render(
-      <Grommet>
+      <MnetUIBase>
         <FakeLayer
           id="layer-node"
           onClickOutside={onClickOutside}
@@ -394,7 +394,7 @@ describe('Layer', () => {
         >
           <div data-testid="test-body-node" />
         </FakeLayer>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expectPortal('layer-node').toMatchSnapshot();
 
@@ -452,11 +452,11 @@ describe('Layer', () => {
     };
 
     render(
-      <Grommet theme={theme}>
+      <MnetUIBase theme={theme}>
         <Layer id="custom-theme-test" animation={false}>
           This is a layer
         </Layer>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expectPortal('custom-theme-test').toMatchSnapshot();
   });
@@ -466,11 +466,11 @@ describe('Layer', () => {
     window.scrollTo = jest.fn();
     const onEsc = jest.fn();
     const { getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Layer id="esc-test" onEsc={onEsc} modal={false} animation={false}>
           <Select options={['one', 'two', 'three']} data-testid="test-select" />
         </Layer>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const selectNode = getByTestId(document, 'test-select');

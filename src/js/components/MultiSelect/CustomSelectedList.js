@@ -22,7 +22,6 @@ const SelectedList = ({
   clearAll,
   renderEmptySelected,
   width,
-  height,
 }) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;
   const [search, setSearch] = React.useState('');
@@ -78,6 +77,7 @@ const SelectedList = ({
             {filteredItems.length ? (
               filteredItems.map((item, id) => (
                 <OptionText
+                  {/* eslint-disable-next-line react/no-array-index-key */}
                   key={`${id}-${item}`}
                   twoColumnLayout={layout === 'double-column'}
                   {...theme.multiselect.chips.option}
@@ -91,7 +91,6 @@ const SelectedList = ({
                   <Close
                     style={{ cursor: 'pointer' }}
                     onClick={() => onRemove(item)}
-                    style={{ cursor: 'pointer' }}
                     {...theme.multiselect.chips.icon}
                   />
                 </OptionText>

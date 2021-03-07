@@ -6,15 +6,15 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const defaultValue = {
   name: '',
@@ -43,7 +43,7 @@ export const ControlledLazy = () => {
     [],
   );
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -95,7 +95,7 @@ export const ControlledLazy = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

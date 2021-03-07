@@ -52,7 +52,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -60,7 +60,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -68,7 +68,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -76,7 +76,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -84,7 +84,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -92,7 +92,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -100,7 +100,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -108,7 +108,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -122,7 +122,7 @@ string",
       },
       Object {
         "defaultValue": 0,
-        "description": "Active panel index. If specified, Accordion will be a controlled 
+        "description": "Active panel index. If specified, Accordion will be a controlled
 component. This means that future panel changes will not work unless you
 subscribe to onActive function and update activeIndex accordingly.",
         "format": "number
@@ -163,7 +163,7 @@ It will always send an array with currently active panel indexes.",
         "name": "messages",
       },
     ],
-    "usage": "import { Accordion, AccordionPanel } from 'grommet';
+    "usage": "import { Accordion, AccordionPanel } from 'mnet-ui-base';
 <Accordion>
   <AccordionPanel label='Panel 1'>...</AccordionPanel>
   <AccordionPanel label='Panel 2'>...</AccordionPanel>
@@ -239,7 +239,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -247,7 +247,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -255,7 +255,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -263,7 +263,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -271,7 +271,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -279,7 +279,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -287,7 +287,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -295,7 +295,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -377,7 +377,7 @@ number",
         "name": "weight",
       },
     ],
-    "usage": "import { Anchor } from 'grommet';
+    "usage": "import { Anchor } from 'mnet-ui-base';
 <Anchor href={location} label='Label' />",
   },
   "Avatar": [Function],
@@ -433,7 +433,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -441,7 +441,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -449,7 +449,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -457,7 +457,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -465,7 +465,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -473,7 +473,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -481,7 +481,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -489,7 +489,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -539,7 +539,7 @@ slideRight
 zoomIn
 zoomOut
 {
-  type: 
+  type:
     fadeIn
     fadeOut
     jiggle
@@ -554,7 +554,7 @@ zoomOut
     zoomOut,
   delay: number,
   duration: number,
-  size: 
+  size:
     xsmall
     small
     medium
@@ -575,7 +575,7 @@ zoomOut
   zoomIn
   zoomOut
   {
-    type: 
+    type:
       fadeIn
       fadeOut
       jiggle
@@ -590,7 +590,7 @@ zoomOut
       zoomOut,
     delay: number,
     duration: number,
-    size: 
+    size:
       xsmall
       small
       medium
@@ -601,34 +601,34 @@ zoomOut
         "name": "animation",
       },
       Object {
-        "description": "Either a color 
-identifier to use for the background color. For example: 'neutral-1'. Or, a 
+        "description": "Either a color
+identifier to use for the background color. For example: 'neutral-1'. Or, a
 'url()' for an image. Dark is not needed if color is provided.",
         "format": "string
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  dark: 
+  dark:
     boolean
     string,
   image: string,
   position: string,
-  opacity: 
+  opacity:
     string
     boolean
     number
     weak
     medium
     strong,
-  repeat: 
+  repeat:
     no-repeat
     repeat
     string,
-  size: 
+  size:
     cover
     contain
     string,
@@ -671,13 +671,13 @@ vertical
 all
 between
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  side: 
+  side:
     top
     left
     bottom
@@ -688,14 +688,14 @@ between
     vertical
     all
     between,
-  size: 
+  size:
     xsmall
     small
     medium
     large
     xlarge
     string,
-  style: 
+  style:
     solid
     dashed
     dotted
@@ -707,13 +707,13 @@ between
     hidden
 }
 [{
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  side: 
+  side:
     top
     left
     bottom
@@ -724,14 +724,14 @@ between
     vertical
     all
     between,
-  size: 
+  size:
     xsmall
     small
     medium
     large
     xlarge
     string,
-  style: 
+  style:
     solid
     dashed
     dotted
@@ -818,7 +818,7 @@ xlarge
 xxlarge
 string
 {
-  min: 
+  min:
     xxsmall
     xsmall
     small
@@ -827,7 +827,7 @@ string
     xlarge
     xxlarge
     string,
-  max: 
+  max:
     xxsmall
     xsmall
     small
@@ -850,67 +850,67 @@ string
 background
 string
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  dark: 
+  dark:
     boolean
     string,
   image: string,
   position: string,
-  opacity: 
+  opacity:
     string
     boolean
     number
     weak
     medium
     strong,
-  repeat: 
+  repeat:
     no-repeat
     repeat
     string,
-  size: 
+  size:
     cover
     contain
     string,
   light: string
 }
 {
-  background: 
+  background:
     string
     {
-      color: 
+      color:
         string
         {
           dark: string,
           light: string
         },
-      dark: 
+      dark:
         boolean
         string,
       image: string,
       position: string,
-      opacity: 
+      opacity:
         string
         boolean
         number
         weak
         medium
         strong,
-      repeat: 
+      repeat:
         no-repeat
         repeat
         string,
-      size: 
+      size:
         cover
         contain
         string,
       light: string
     },
-  elevation: 
+  elevation:
     none
     xsmall
     small
@@ -946,12 +946,12 @@ hidden
 scroll
 visible
 {
-  horizontal: 
+  horizontal:
     auto
     hidden
     scroll
     visible,
-  vertical: 
+  vertical:
     auto
     hidden
     scroll
@@ -972,7 +972,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -980,7 +980,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -988,7 +988,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -996,7 +996,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -1004,7 +1004,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -1012,7 +1012,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -1020,7 +1020,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -1028,7 +1028,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -1059,7 +1059,7 @@ xlarge
 full
 string
 {
-  corner: 
+  corner:
     top
     left
     bottom
@@ -1068,7 +1068,7 @@ string
     top-right
     bottom-left
     bottom-right,
-  size: 
+  size:
     xsmall
     small
     medium
@@ -1103,7 +1103,7 @@ xlarge
 xxlarge
 string
 {
-  width: 
+  width:
     xxsmall
     xsmall
     small
@@ -1112,7 +1112,7 @@ string
     xlarge
     xxlarge
     string,
-  min: 
+  min:
     xxsmall
     xsmall
     small
@@ -1121,7 +1121,7 @@ string
     xlarge
     xxlarge
     string,
-  max: 
+  max:
     xxsmall
     xsmall
     small
@@ -1141,7 +1141,7 @@ reverse",
         "name": "wrap",
       },
     ],
-    "usage": "import { Box } from 'grommet';
+    "usage": "import { Box } from 'mnet-ui-base';
 <Box />",
   },
   "Button": Object {
@@ -1159,7 +1159,7 @@ reverse",
     ],
     "description": "A button.",
     "details": "You can provide a single function child that will be called with
-      'disabled', 'hover' and 'focus' keys. 
+      'disabled', 'hover' and 'focus' keys.
       This allows you to customize the rendering of the Button in those cases.",
     "intrinsicElement": "button",
     "name": "Button",
@@ -1197,7 +1197,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -1205,7 +1205,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -1213,7 +1213,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -1221,7 +1221,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -1229,7 +1229,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -1237,7 +1237,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -1245,7 +1245,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -1253,7 +1253,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -1267,10 +1267,10 @@ string",
       },
       Object {
         "description": "Function that can be called to render the visual representation.
-      Button can take in Children as a function, node, or object. 
-      For example, 'disabled', 'hover', and 'focus' can be passed as an 
+      Button can take in Children as a function, node, or object.
+      For example, 'disabled', 'hover', and 'focus' can be passed as an
       argument that would then return a react element.
-      \`children={({ disabled, hover, focus }) => <Box...>{...}</Box>}\`. 
+      \`children={({ disabled, hover, focus }) => <Box...>{...}</Box>}\`.
       When Button has children, it is styled as a \`plain\` button.
       ",
         "format": "function
@@ -1307,7 +1307,7 @@ function",
       },
       Object {
         "defaultValue": false,
-        "description": "Whether the button expands to fill all of the available width and/or 
+        "description": "Whether the button expands to fill all of the available width and/or
         height.",
         "format": "horizontal
 vertical
@@ -1344,67 +1344,67 @@ string
 background
 string
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  dark: 
+  dark:
     boolean
     string,
   image: string,
   position: string,
-  opacity: 
+  opacity:
     string
     boolean
     number
     weak
     medium
     strong,
-  repeat: 
+  repeat:
     no-repeat
     repeat
     string,
-  size: 
+  size:
     cover
     contain
     string,
   light: string
 }
 {
-  background: 
+  background:
     string
     {
-      color: 
+      color:
         string
         {
           dark: string,
           light: string
         },
-      dark: 
+      dark:
         boolean
         string,
       image: string,
       position: string,
-      opacity: 
+      opacity:
         string
         boolean
         number
         weak
         medium
         strong,
-      repeat: 
+      repeat:
         no-repeat
         repeat
         string,
-      size: 
+      size:
         cover
         contain
         string,
       light: string
     },
-  elevation: 
+  elevation:
     none
     xsmall
     small
@@ -1440,9 +1440,9 @@ string
         "defaultValue": false,
         "description": "Whether this is a plain button with no border or pad.
           Non plain button will show both pad and border.
-          The plain button has no border and unless the icon prop exist it has 
-          no pad as well. 
-          When using the kind button (i.e. button.default on the theme), 
+          The plain button has no border and unless the icon prop exist it has
+          no pad as well.
+          When using the kind button (i.e. button.default on the theme),
           the usage of plain is deprecated.",
         "format": "boolean",
         "name": "plain",
@@ -1467,8 +1467,8 @@ string
         "name": "secondary",
       },
       Object {
-        "description": "The possible sizes of Button, that impacts the overall Button 
-      padding, border radius, text size and line height. 
+        "description": "The possible sizes of Button, that impacts the overall Button
+      padding, border radius, text size and line height.
       'size' will not impact any icon related sizing.",
         "format": "small
 medium
@@ -1487,10 +1487,10 @@ string",
       Object {
         "description": "tooltip or a hint when hovering over the button.",
         "format": "{
-  content: 
+  content:
     node
     string,
-  dropProps: 
+  dropProps:
     {
 
     },
@@ -1501,7 +1501,7 @@ string",
       },
       Object {
         "defaultValue": "button",
-        "description": "The type of button. Set the type to submit for the default button on 
+        "description": "The type of button. Set the type to submit for the default button on
                 forms.",
         "format": "button
 reset
@@ -1509,7 +1509,7 @@ submit",
         "name": "type",
       },
     ],
-    "usage": "import { Button } from 'grommet';
+    "usage": "import { Button } from 'mnet-ui-base';
 <Button primary label='Label' />",
   },
   "Calendar": Object {
@@ -1564,7 +1564,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -1572,7 +1572,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -1580,7 +1580,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -1588,7 +1588,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -1596,7 +1596,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -1604,7 +1604,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -1612,7 +1612,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -1620,7 +1620,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -1634,7 +1634,7 @@ string",
       },
       Object {
         "defaultValue": "start",
-        "description": "When using range, Whether the next date selection will affect the 
+        "description": "When using range, Whether the next date selection will affect the
         start or end bound of the range.",
         "format": "start
 end",
@@ -1755,7 +1755,7 @@ to disable the previous and next buttons.
         "description": "Whether to automatically manage multiple date selection as a range.
         When the user clicks the first date, onSelect will be called with that
         date. When the user selects another date, onSelect will be called with
-        an array of two dates. If range = \\"array\\", then an array of dates will 
+        an array of two dates. If range = \\"array\\", then an array of dates will
         be returned even when the start or end date of the range is undefined.",
         "format": "boolean
 array",
@@ -1768,8 +1768,8 @@ array",
       },
       Object {
         "defaultValue": true,
-        "description": "Whether to show the days from the previous and next months. 
-        \`trim\` limits adjacent days shown to rows containing days in 
+        "description": "Whether to show the days from the previous and next months.
+        \`trim\` limits adjacent days shown to rows containing days in
         the current month.",
         "format": "boolean
 trim",
@@ -1785,7 +1785,7 @@ string",
         "name": "size",
       },
     ],
-    "usage": "import { Calendar } from 'grommet';
+    "usage": "import { Calendar } from 'mnet-ui-base';
 <Calendar />",
   },
   "Card": Object {
@@ -1801,12 +1801,12 @@ string",
         "url": "https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/card&module=%2Fsrc%2FCard.js",
       },
     ],
-    "description": "A Card is a container of information that provides access to more 
-      details. Elements of a Card can include Header, Body, Footer or any 
+    "description": "A Card is a container of information that provides access to more
+      details. Elements of a Card can include Header, Body, Footer or any
       other custom component.",
     "intrinsicElement": "div",
     "name": "Card",
-    "usage": "import { Card } from 'grommet';
+    "usage": "import { Card } from 'mnet-ui-base';
 <Card/>",
   },
   "CardBody": [Function],
@@ -1862,7 +1862,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -1870,7 +1870,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -1878,7 +1878,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -1886,7 +1886,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -1894,7 +1894,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -1902,7 +1902,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -1910,7 +1910,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -1918,7 +1918,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -1936,9 +1936,9 @@ string",
         "name": "animate",
       },
       Object {
-        "description": "The limits for the values, specified as a two dimensional array. 
-      The first array specifies the limits of the x-axis. The second array 
-      specifies the limits of the y-axis. 
+        "description": "The limits for the values, specified as a two dimensional array.
+      The first array specifies the limits of the x-axis. The second array
+      specifies the limits of the y-axis.
       For example: [[x-min, x-max], [y-min, y-max]].
       If not specified, the bounds will automatically be set to fit
       the provided values.",
@@ -1959,20 +1959,20 @@ string",
   light: string
 }
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  opacity: 
+  opacity:
     weak
     medium
     strong
     boolean
 }
 [{
-  color: 
+  color:
     string
     {
       dark: string,
@@ -2051,7 +2051,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -2059,7 +2059,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -2067,7 +2067,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -2075,7 +2075,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -2083,7 +2083,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -2091,7 +2091,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -2099,7 +2099,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -2107,7 +2107,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -2164,7 +2164,7 @@ xlarge
 fill
 full
 {
-  height: 
+  height:
     xxsmall
     xsmall
     small
@@ -2174,7 +2174,7 @@ full
     fill
     full
     string,
-  width: 
+  width:
     xxsmall
     xsmall
     small
@@ -2224,7 +2224,7 @@ point",
   number
   [number]
   {
-    color: 
+    color:
       string
       {
         dark: string,
@@ -2233,10 +2233,10 @@ point",
     label: string,
     onClick: function,
     onHover: function,
-    opacity: 
+    opacity:
       string
       number,
-    thickness: 
+    thickness:
       hair
       xsmall
       small
@@ -2246,7 +2246,7 @@ point",
       none
       string
       number,
-    value: 
+    value:
       number
       [number]
   }
@@ -2255,7 +2255,7 @@ point",
         "required": true,
       },
     ],
-    "usage": "import { Chart } from 'grommet';
+    "usage": "import { Chart } from 'mnet-ui-base';
 <Chart />",
   },
   "CheckBox": Object {
@@ -2300,13 +2300,13 @@ point",
         "name": "id",
       },
       Object {
-        "description": "Label text to place next to the control. 
+        "description": "Label text to place next to the control.
       Can be used instead of a11yTitle to meet accessibility requirements",
         "format": "node",
         "name": "label",
       },
       Object {
-        "description": "The DOM name attribute value to use for the underlying <input/> 
+        "description": "The DOM name attribute value to use for the underlying <input/>
       element.",
         "format": "string",
         "name": "name",
@@ -2338,7 +2338,7 @@ NOTE: This can only be used with non-toggle components",
         "name": "indeterminate",
       },
     ],
-    "usage": "import { CheckBox } from 'grommet';
+    "usage": "import { CheckBox } from 'mnet-ui-base';
 <CheckBox />",
   },
   "CheckBoxGroup": Object {
@@ -2359,8 +2359,8 @@ NOTE: This can only be used with non-toggle components",
     "name": "CheckBoxGroup",
     "properties": Array [
       Object {
-        "description": "An array of the values for the checked options. 
-      If options is provided as an object, the value array will be the values 
+        "description": "An array of the values for the checked options.
+      If options is provided as an object, the value array will be the values
      that the valueKey maps to.",
         "format": "[
   number
@@ -2387,15 +2387,15 @@ NOTE: This can only be used with non-toggle components",
         "name": "name",
       },
       Object {
-        "description": "Function that will be called when the user clicks on a CheckBox option. 
-      It will pass a React event object with the additional CheckBoxGroup 
+        "description": "Function that will be called when the user clicks on a CheckBox option.
+      It will pass a React event object with the additional CheckBoxGroup
       properties of 'option' and 'value'.",
         "format": "function",
         "name": "onChange",
       },
       Object {
-        "description": "Options can be either a string or an object of CheckBox props 
-      excluding the 'checked' property, use CheckBoxGroup 'value' prop instead 
+        "description": "Options can be either a string or an object of CheckBox props
+      excluding the 'checked' property, use CheckBoxGroup 'value' prop instead
       of 'checked'.",
         "format": "[string]
 [{
@@ -2406,13 +2406,13 @@ NOTE: This can only be used with non-toggle components",
       },
       Object {
         "description": "When the options array contains objects, this property indicates how
-        to determine the value of each option. If a string is provided, 
+        to determine the value of each option. If a string is provided,
         it is used as the key to retrieve each option's value.",
         "format": "string",
         "name": "valueKey",
       },
     ],
-    "usage": "import { CheckBoxGroup } from 'grommet';
+    "usage": "import { CheckBoxGroup } from 'mnet-ui-base';
         <CheckBoxGroup />",
   },
   "Clock": Object {
@@ -2468,7 +2468,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -2476,7 +2476,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -2484,7 +2484,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -2492,7 +2492,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -2500,7 +2500,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -2508,7 +2508,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -2516,7 +2516,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -2524,7 +2524,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -2598,7 +2598,7 @@ digital",
         "name": "type",
       },
     ],
-    "usage": "import { Clock } from 'grommet';
+    "usage": "import { Clock } from 'mnet-ui-base';
 <Clock />",
   },
   "Collapsible": Object {
@@ -2619,7 +2619,7 @@ vertical",
         "name": "direction",
       },
     ],
-    "usage": "import { Collapsible } from 'grommet';
+    "usage": "import { Collapsible } from 'mnet-ui-base';
 <Collapsible open>test</Collapsible>",
   },
   "DataChart": Object {
@@ -2674,7 +2674,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -2682,7 +2682,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -2690,7 +2690,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -2698,7 +2698,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -2706,7 +2706,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -2714,7 +2714,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -2722,7 +2722,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -2730,7 +2730,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -2757,22 +2757,22 @@ string",
       'medium' granularity picks something in between.",
         "format": "boolean
 {
-  x: 
+  x:
     boolean
     string
     {
       property: string,
-      granularity: 
+      granularity:
         coarse
         medium
         fine
     },
-  y: 
+  y:
     boolean
     string
     {
       property: string,
-      granularity: 
+      granularity:
         coarse
         medium
         fine
@@ -2800,13 +2800,13 @@ string",
     string for the color.",
         "format": "string
 {
-  property: 
+  property:
     string
     [
       string
       {
         property: string,
-        color: 
+        color:
           string
           [{
   color: string,
@@ -2815,13 +2815,13 @@ string",
       }
     ]
     {
-      color: 
+      color:
         string
         {
           property: string,
           transform: function
         },
-      thickness: 
+      thickness:
         string
         {
           property: string,
@@ -2830,20 +2830,20 @@ string",
       x: string,
       y: string
     },
-  color: 
+  color:
     string
     [{
   color: string,
   value: number
 }],
   dash: boolean,
-  opacity: 
+  opacity:
     weak
     medium
     strong
     number
     boolean,
-  point: 
+  point:
     circle
     diamond
     square
@@ -2851,7 +2851,7 @@ string",
     triangle
     triangleDown,
   round: boolean,
-  thickness: 
+  thickness:
     hair
     xsmall
     small
@@ -2860,7 +2860,7 @@ string",
     xlarge
     none
     string,
-  type: 
+  type:
     bar
     bars
     line
@@ -2870,13 +2870,13 @@ string",
 [
   string
   {
-    property: 
+    property:
       string
       [
         string
         {
           property: string,
-          color: 
+          color:
             string
             [{
   color: string,
@@ -2885,13 +2885,13 @@ string",
         }
       ]
       {
-        color: 
+        color:
           string
           {
             property: string,
             transform: function
           },
-        thickness: 
+        thickness:
           string
           {
             property: string,
@@ -2900,20 +2900,20 @@ string",
         x: string,
         y: string
       },
-    color: 
+    color:
       string
       [{
   color: string,
   value: number
 }],
     dash: boolean,
-    opacity: 
+    opacity:
       weak
       medium
       strong
       number
       boolean,
-    point: 
+    point:
       circle
       diamond
       square
@@ -2921,7 +2921,7 @@ string",
       triangle
       triangleDown,
     round: boolean,
-    thickness: 
+    thickness:
       hair
       xsmall
       small
@@ -2930,7 +2930,7 @@ string",
       xlarge
       none
       string,
-    type: 
+    type:
       bar
       bars
       line
@@ -2972,18 +2972,18 @@ string",
     See the description of 'granularity' under 'axis'.",
         "format": "boolean
 {
-  x: 
+  x:
     boolean
     {
-      granularity: 
+      granularity:
         coarse
         medium
         fine
     },
-  y: 
+  y:
     boolean
     {
-      granularity: 
+      granularity:
         coarse
         medium
         fine
@@ -3008,7 +3008,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -3016,7 +3016,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -3024,7 +3024,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -3032,7 +3032,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -3040,7 +3040,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -3048,7 +3048,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -3056,7 +3056,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -3064,7 +3064,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -3086,7 +3086,7 @@ string",
     (value, datum, property) => { return < />; }",
         "format": "string
 {
-  label: 
+  label:
     string,
   prefix: string,
   property: string,
@@ -3096,7 +3096,7 @@ string",
 [
   string
   {
-    label: 
+    label:
       string,
     prefix: string,
     property: string,
@@ -3111,7 +3111,7 @@ string",
       and any gap. It is passed through to the underlying Chart.",
         "format": "fill
 {
-  height: 
+  height:
     xxsmall
     xsmall
     small
@@ -3120,7 +3120,7 @@ string",
     xlarge
     fill
     string,
-  width: 
+  width:
     xxsmall
     xsmall
     small
@@ -3134,7 +3134,7 @@ string",
         "name": "size",
       },
     ],
-    "usage": "import { DataChart } from 'grommet';
+    "usage": "import { DataChart } from 'mnet-ui-base';
 <DataChart data={data} property={} />",
   },
   "DataTable": [Function],
@@ -3236,7 +3236,7 @@ string",
         "name": "value",
       },
     ],
-    "usage": "import { DateInput } from 'grommet';
+    "usage": "import { DateInput } from 'mnet-ui-base';
 <DateInput id='item' name='item' />",
   },
   "Diagram": Object {
@@ -3266,27 +3266,27 @@ string",
       'offset' can be used to shift a bit to reduce the amount of overlap
       with other connection lines to make the lines easier to distinguish.",
         "format": "[{
-  anchor: 
+  anchor:
     center
     vertical
     horizontal,
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  fromTarget: 
+  fromTarget:
     string
     object,
   label: string,
-  offset: 
+  offset:
     xsmall
     small
     medium
     large
     string,
-  thickness: 
+  thickness:
     hair
     xxsmall
     xsmall
@@ -3294,10 +3294,10 @@ string",
     medium
     large
     string,
-  toTarget: 
+  toTarget:
     string
     object,
-  type: 
+  type:
     direct
     curved
     rectilinear
@@ -3306,7 +3306,7 @@ string",
         "required": true,
       },
     ],
-    "usage": "import { Diagram } from 'grommet';
+    "usage": "import { Diagram } from 'mnet-ui-base';
 <Diagram />",
   },
   "Distribution": [Function],
@@ -3332,20 +3332,20 @@ string",
           "left": "left",
           "top": "top",
         },
-        "description": "How to align the drop with respect to the target element. Not 
-        specifying a vertical or horizontal alignment will cause it to be 
+        "description": "How to align the drop with respect to the target element. Not
+        specifying a vertical or horizontal alignment will cause it to be
         aligned in the center.",
         "format": "{
-  top: 
+  top:
     top
     bottom,
-  bottom: 
+  bottom:
     top
     bottom,
-  right: 
+  right:
     left
     right,
-  left: 
+  left:
     left
     right
 }",
@@ -3370,12 +3370,12 @@ hidden
 scroll
 visible
 {
-  horizontal: 
+  horizontal:
     auto
     hidden
     scroll
     visible,
-  vertical: 
+  vertical:
     auto
     hidden
     scroll
@@ -3407,14 +3407,14 @@ align",
         "name": "stretch",
       },
       Object {
-        "description": "Target where the drop will be aligned to. This should be a React 
+        "description": "Target where the drop will be aligned to. This should be a React
       reference.",
         "format": "object",
         "name": "target",
         "required": true,
       },
       Object {
-        "description": "Elevated height of the target, indicated via a drop shadow. 
+        "description": "Elevated height of the target, indicated via a drop shadow.
       Only applicable if the Drop isn't plain.",
         "format": "none
 xsmall
@@ -3438,7 +3438,7 @@ string",
         "name": "trapFocus",
       },
     ],
-    "usage": "import { Drop } from 'grommet';
+    "usage": "import { Drop } from 'mnet-ui-base';
 <Drop target={reference}>...</Drop>",
   },
   "DropButton": Object {
@@ -3456,7 +3456,7 @@ string",
     ],
     "description": "A Button that controls a Drop. When opened, the Drop will contain
       whatever is specified via \`dropContent\`. The Drop will control the focus
-      so that the contents behind it are not focusable. All properties and 
+      so that the contents behind it are not focusable. All properties and
       theme properties of Button or Drop can be passed through.
       ",
     "intrinsicElement": "button",
@@ -3495,7 +3495,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -3503,7 +3503,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -3511,7 +3511,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -3519,7 +3519,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -3527,7 +3527,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -3535,7 +3535,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -3543,7 +3543,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -3551,7 +3551,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -3576,16 +3576,16 @@ string",
         },
         "description": "How to align the drop with respect to the button.",
         "format": "{
-  top: 
+  top:
     top
     bottom,
-  bottom: 
+  bottom:
     top
     bottom,
-  right: 
+  right:
     left
     right,
-  left: 
+  left:
     left
     right
 }",
@@ -3627,7 +3627,7 @@ string",
         "name": "open",
       },
     ],
-    "usage": "import { DropButton } from 'grommet';
+    "usage": "import { DropButton } from 'mnet-ui-base';
 <DropButton dropContent={...} />",
   },
   "FileInput": Object {
@@ -3698,7 +3698,7 @@ string",
         "name": "name",
       },
       Object {
-        "description": "Function that will be called when one or more files are added to 
+        "description": "Function that will be called when one or more files are added to
       the input. The file(s) can be found in event.target.files.",
         "format": "function",
         "name": "onChange",
@@ -3711,7 +3711,7 @@ string",
         "name": "renderFile",
       },
     ],
-    "usage": "import { FileInput } from 'grommet';
+    "usage": "import { FileInput } from 'mnet-ui-base';
 <FileInput id='file' name='file' />",
   },
   "Footer": [Function],
@@ -3785,7 +3785,7 @@ string",
       Object {
         "description": "Function that will be called when the form is validated. The
       single argument is an event containing the latest error object
-      via \`validationResults.errors\`, info object via 
+      via \`validationResults.errors\`, info object via
       \`validationResults.infos\` and form's validity via \`valid\`.",
         "format": "function",
         "name": "onValidate",
@@ -3807,7 +3807,7 @@ change",
         "name": "value",
       },
     ],
-    "usage": "import { Form } from 'grommet';
+    "usage": "import { Form } from 'mnet-ui-base';
 <Form />",
   },
   "FormContext": Object {
@@ -3862,7 +3862,7 @@ change",
         "name": "a11yTitle",
       },
       Object {
-        "description": "The component to insert in the FormField. Grommet will add update the
+        "description": "The component to insert in the FormField. MnetUIBase will add update the
       form values when this field changes. Any additional properties
       (such as initial value) you pass to FormField will be forwarded to this
       component. The component may be custom as long it supports the properties
@@ -3931,7 +3931,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -3939,7 +3939,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -3947,7 +3947,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -3955,7 +3955,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -3963,7 +3963,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -3971,7 +3971,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -3979,7 +3979,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -3987,7 +3987,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -4019,10 +4019,10 @@ string",
       and 'status' properties.",
         "format": "{
   regexp: new RegExp(...),
-  message: 
+  message:
     string
     node,
-  status: 
+  status:
     error
     info
 }
@@ -4030,10 +4030,10 @@ function
 [
   {
     regexp: new RegExp(...),
-    message: 
+    message:
       string
       node,
-    status: 
+    status:
       error
       info
   }
@@ -4042,7 +4042,7 @@ function
         "name": "validate",
       },
     ],
-    "usage": "import { FormField } from 'grommet';
+    "usage": "import { FormField } from 'mnet-ui-base';
 <FormField />",
   },
   "Grid": Object {
@@ -4100,7 +4100,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -4108,7 +4108,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -4116,7 +4116,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -4124,7 +4124,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -4132,7 +4132,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -4140,7 +4140,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -4148,7 +4148,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -4156,7 +4156,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -4213,13 +4213,13 @@ horizontal
 vertical
 all
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  side: 
+  side:
     top
     left
     bottom
@@ -4229,14 +4229,14 @@ all
     horizontal
     vertical
     all,
-  size: 
+  size:
     xsmall
     small
     medium
     large
     xlarge
     string,
-  style: 
+  style:
     solid
     dashed
     dotted
@@ -4248,13 +4248,13 @@ all
     hidden
 }
 [{
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  side: 
+  side:
     top
     left
     bottom
@@ -4264,14 +4264,14 @@ all
     horizontal
     vertical
     all,
-  size: 
+  size:
     xsmall
     small
     medium
     large
     xlarge
     string,
-  style: 
+  style:
     solid
     dashed
     dotted
@@ -4332,11 +4332,11 @@ medium
 large
 xlarge
 {
-  count: 
+  count:
     fit
     fill
     number,
-  size: 
+  size:
     xsmall
     small
     medium
@@ -4381,7 +4381,7 @@ large
 xlarge
 none
 {
-  row: 
+  row:
     xxsmall
     xsmall
     small
@@ -4390,7 +4390,7 @@ none
     xlarge
     none
     string,
-  column: 
+  column:
     xxsmall
     xsmall
     small
@@ -4435,7 +4435,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -4443,7 +4443,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -4451,7 +4451,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -4459,7 +4459,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -4467,7 +4467,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -4475,7 +4475,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -4483,7 +4483,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -4491,7 +4491,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -4573,55 +4573,55 @@ function",
         "name": "as",
       },
     ],
-    "usage": "import { Grid } from 'grommet';
+    "usage": "import { Grid } from 'mnet-ui-base';
 <Grid />",
   },
-  "Grommet": Object {
+  "MnetUIBase": Object {
     "availableAt": Array [
       Object {
         "badge": "https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png",
         "label": "Storybook",
-        "url": "https://storybook.grommet.io/?selectedKind=Utilities-Grommet&full=0&stories=1&panelRight=0",
+        "url": "https://storybook.grommet.io/?selectedKind=Utilities-MnetUIBase&full=0&stories=1&panelRight=0",
       },
       Object {
         "badge": "https://codesandbox.io/static/img/play-codesandbox.svg",
         "label": "CodeSandbox",
-        "url": "https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/grommet&module=%2Fsrc%2FGrommet.js",
+        "url": "https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/grommet&module=%2Fsrc%2FMnetUIBase.js",
       },
     ],
-    "description": "The top level Grommet container.",
+    "description": "The top level MnetUIBase container.",
     "intrinsicElement": "div",
-    "name": "Grommet",
+    "name": "MnetUIBase",
     "properties": Array [
       Object {
-        "description": "Either a color 
-identifier to use for the background color. For example: 'neutral-1'. Or, a 
+        "description": "Either a color
+identifier to use for the background color. For example: 'neutral-1'. Or, a
 'url()' for an image. Dark is not needed if color is provided.",
         "format": "string
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  dark: 
+  dark:
     boolean
     string,
   image: string,
   position: string,
-  opacity: 
+  opacity:
     string
     boolean
     number
     weak
     medium
     strong,
-  repeat: 
+  repeat:
     no-repeat
     repeat
     string,
-  size: 
+  size:
     cover
     contain
     string,
@@ -4642,7 +4642,7 @@ identifier to use for the background color. For example: 'neutral-1'. Or, a
       },
       Object {
         "defaultValue": false,
-        "description": "Whether or not Grommet should apply a global font-family, font-size,
+        "description": "Whether or not MnetUIBase should apply a global font-family, font-size,
         and line-height.",
         "format": "boolean",
         "name": "plain",
@@ -4654,7 +4654,7 @@ identifier to use for the background color. For example: 'neutral-1'. Or, a
         "name": "cssVars",
       },
       Object {
-        "description": "Custom styles for Grommet app component.",
+        "description": "Custom styles for MnetUIBase app component.",
         "format": "object",
         "name": "theme",
       },
@@ -4680,8 +4680,8 @@ light",
         "name": "containerTarget",
       },
     ],
-    "usage": "import { Grommet } from 'grommet';
-<Grommet>...</Grommet>",
+    "usage": "import { mnet } from 'mnet-ui-base';
+<MnetUIBase>...</MnetUIBase>",
   },
   "Header": [Function],
   "Heading": Object {
@@ -4739,7 +4739,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -4747,7 +4747,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -4755,7 +4755,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -4763,7 +4763,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -4771,7 +4771,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -4779,7 +4779,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -4787,7 +4787,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -4795,7 +4795,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -4877,7 +4877,7 @@ is too long to all fit.",
         "name": "truncate",
       },
     ],
-    "usage": "import { Heading } from 'grommet';
+    "usage": "import { Heading } from 'mnet-ui-base';
 <Heading />",
   },
   "Image": Object {
@@ -4930,7 +4930,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -4938,7 +4938,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -4946,7 +4946,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -4954,7 +4954,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -4962,7 +4962,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -4970,7 +4970,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -4978,7 +4978,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -4986,7 +4986,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -5012,7 +5012,7 @@ contain",
         "name": "fit",
       },
       Object {
-        "description": "Specifies the URL of the fallback image used when 
+        "description": "Specifies the URL of the fallback image used when
       src is failing to load",
         "format": "string",
         "name": "fallback",
@@ -5027,7 +5027,7 @@ boolean",
         "name": "opacity",
       },
     ],
-    "usage": "import { Image } from 'grommet';
+    "usage": "import { Image } from 'mnet-ui-base';
 <Image/>",
   },
   "InfiniteScroll": [Function],
@@ -5069,34 +5069,34 @@ boolean",
         "name": "animation",
       },
       Object {
-        "description": "Either a color 
-identifier to use for the background color. For example: 'neutral-1'. Or, a 
+        "description": "Either a color
+identifier to use for the background color. For example: 'neutral-1'. Or, a
 'url()' for an image. Dark is not needed if color is provided.",
         "format": "string
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  dark: 
+  dark:
     boolean
     string,
   image: string,
   position: string,
-  opacity: 
+  opacity:
     string
     boolean
     number
     weak
     medium
     strong,
-  repeat: 
+  repeat:
     no-repeat
     repeat
     string,
-  size: 
+  size:
     cover
     contain
     string,
@@ -5124,56 +5124,56 @@ small
 medium
 large
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
     medium
     large
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
     medium
     large
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
     medium
     large
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
     medium
     large
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
     medium
     large
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
     medium
     large
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
     medium
     large
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -5228,8 +5228,8 @@ top-right",
       },
       Object {
         "defaultValue": true,
-        "description": "Whether the layer should take full width and height on mobile. If a 
-        target is provided, the Layer will take the full width and height of 
+        "description": "Whether the layer should take full width and height on mobile. If a
+        target is provided, the Layer will take the full width and height of
         the target.",
         "format": "boolean",
         "name": "responsive",
@@ -5241,7 +5241,7 @@ top-right",
         "name": "target",
       },
     ],
-    "usage": "import { Layer } from 'grommet';
+    "usage": "import { Layer } from 'mnet-ui-base';
 <Layer />",
   },
   "List": Object {
@@ -5294,7 +5294,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -5302,7 +5302,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -5310,7 +5310,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -5318,7 +5318,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -5326,7 +5326,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -5334,7 +5334,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -5342,7 +5342,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -5350,7 +5350,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -5396,13 +5396,13 @@ right
 start
 end
 {
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  side: 
+  side:
     horizontal
     vertical
     top
@@ -5411,7 +5411,7 @@ end
     right
     start
     end,
-  size: 
+  size:
     none
     xxsmall
     xsmall
@@ -5484,7 +5484,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -5492,7 +5492,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -5500,7 +5500,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -5508,7 +5508,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -5516,7 +5516,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -5524,7 +5524,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -5532,7 +5532,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -5540,7 +5540,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -5554,8 +5554,8 @@ string",
       },
       Object {
         "defaultValue": undefined,
-        "description": "Whether to paginate the data. If providing an object, any Box props or 
-    Pagination props are valid and will be used to style the underlying 
+        "description": "Whether to paginate the data. If providing an object, any Box props or
+    Pagination props are valid and will be used to style the underlying
     pagination component.",
         "format": "boolean
 object",
@@ -5581,8 +5581,8 @@ function",
       },
       Object {
         "defaultValue": undefined,
-        "description": "If provided as a number, the index of an item to show. If using 
-        paginate and provided as an object in the format of show={{ page: 2 }}, 
+        "description": "If provided as a number, the index of an item to show. If using
+        paginate and provided as an object in the format of show={{ page: 2 }},
         the default page to show.",
         "format": "number
 {
@@ -5597,7 +5597,7 @@ function",
         "name": "step",
       },
     ],
-    "usage": "import { List } from 'grommet';
+    "usage": "import { List } from 'mnet-ui-base';
 <List data={[...]} />",
   },
   "Main": [Function],
@@ -5677,7 +5677,7 @@ string",
       as the user types characters one by one. When using regexp to match number
       values make sure that the option values are numbers as well.",
         "format": "[{
-  length: 
+  length:
     number
     [number],
   fixed: string,
@@ -5685,7 +5685,7 @@ string",
   string
   number
 ],
-  regexp: 
+  regexp:
     {
 
     }
@@ -5715,7 +5715,7 @@ number",
         "name": "value",
       },
     ],
-    "usage": "import { MaskedInput } from 'grommet';
+    "usage": "import { MaskedInput } from 'mnet-ui-base';
 <MaskedInput id='item' name='item' />",
   },
   "Menu": Object {
@@ -5735,8 +5735,8 @@ number",
     "details": "The labels and behavior of the contained Buttons are described
       via the \`items\` property.
       You can provide a single function child that will be called with
-      'disabled', 'hover', 'focus', and 'drop' keys. 
-      This allows you to customize the rendering of the Menu button 
+      'disabled', 'hover', 'focus', and 'drop' keys.
+      This allows you to customize the rendering of the Menu button
       in those cases.",
     "intrinsicElement": "button",
     "name": "Menu",
@@ -5774,7 +5774,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -5782,7 +5782,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -5790,7 +5790,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -5798,7 +5798,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -5806,7 +5806,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -5814,7 +5814,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -5822,7 +5822,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -5830,7 +5830,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -5880,16 +5880,16 @@ The values correspond to a side of the control. For instance,
 the drop down to the bottom of the control. At most one of left or right and
 one of top or bottom should be specified.",
         "format": "{
-  top: 
+  top:
     top
     bottom,
-  bottom: 
+  bottom:
     top
     bottom,
-  left: 
+  left:
     right
     left,
-  right: 
+  right:
     right
     left
 }",
@@ -5900,7 +5900,7 @@ one of top or bottom should be specified.",
         "format": "string
 {
   color: string,
-  opacity: 
+  opacity:
     boolean
     number
     weak
@@ -5942,7 +5942,7 @@ node",
       Object {
         "defaultValue": Array [],
         "description": "Menu items to be placed inside the drop down.
-The object values can be any Button prop, 
+The object values can be any Button prop,
 for example: \`label\`, \`onClick\`, and \`href\`.",
         "format": "[object]",
         "name": "items",
@@ -5959,7 +5959,7 @@ node",
           "closeMenu": "Close Menu",
           "openMenu": "Open Menu",
         },
-        "description": "Custom messages. Used for accessibility by screen readers. 
+        "description": "Custom messages. Used for accessibility by screen readers.
       These values will be overridden if an a11yTitle is provided.",
         "format": "{
   closeMenu: string,
@@ -5984,7 +5984,7 @@ string",
         "name": "size",
       },
     ],
-    "usage": "import { Menu } from 'grommet';
+    "usage": "import { Menu } from 'mnet-ui-base';
 <Menu />",
   },
   "Meter": Object {
@@ -6036,7 +6036,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -6044,7 +6044,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -6052,7 +6052,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -6060,7 +6060,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -6068,7 +6068,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -6076,7 +6076,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -6084,7 +6084,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -6092,7 +6092,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -6113,7 +6113,7 @@ string",
         "format": "string
 {
   color: string,
-  opacity: 
+  opacity:
     weak
     medium
     strong
@@ -6198,7 +6198,7 @@ circle",
         "name": "values",
       },
     ],
-    "usage": "import { Meter } from 'grommet';
+    "usage": "import { Meter } from 'mnet-ui-base';
 <Meter />",
   },
   "Nav": [Function],
@@ -6215,7 +6215,7 @@ circle",
         "url": "https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/pagination&module=%2Fsrc%2FPagination.js",
       },
     ],
-    "description": "A control that enables selection of a single page from a 
+    "description": "A control that enables selection of a single page from a
       range of pages.",
     "intrinsicElement": "nav",
     "name": "Pagination",
@@ -6253,7 +6253,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -6261,7 +6261,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -6269,7 +6269,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -6277,7 +6277,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -6285,7 +6285,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -6293,7 +6293,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -6301,7 +6301,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -6309,7 +6309,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -6323,7 +6323,7 @@ string",
       },
       Object {
         "defaultValue": 1,
-        "description": "The number of pagination buttons visible at the start and end of page 
+        "description": "The number of pagination buttons visible at the start and end of page
         range.",
         "format": "number",
         "name": "numberEdgePages",
@@ -6336,24 +6336,24 @@ string",
       },
       Object {
         "defaultValue": 3,
-        "description": "The number of pagination buttons visible in the middle of the 
+        "description": "The number of pagination buttons visible in the middle of the
         controls.",
         "format": "number",
         "name": "numberMiddlePages",
       },
       Object {
         "defaultValue": undefined,
-        "description": "Function called when the user clicks a page or arrow button. The 
-        single argument is an event containing the target page via 
-        \`event.page\`, and the startIndex and endIndex for items contained 
-        in the target page via \`event.startIndex\` and \`event.endIndex\`, 
+        "description": "Function called when the user clicks a page or arrow button. The
+        single argument is an event containing the target page via
+        \`event.page\`, and the startIndex and endIndex for items contained
+        in the target page via \`event.startIndex\` and \`event.endIndex\`,
         respectively.",
         "format": "function",
         "name": "onChange",
       },
       Object {
         "defaultValue": undefined,
-        "description": "The default page. If used with onChange, it can be used to control the 
+        "description": "The default page. If used with onChange, it can be used to control the
         active page via state.",
         "format": "number",
         "name": "page",
@@ -6373,7 +6373,7 @@ large",
         "name": "step",
       },
     ],
-    "usage": "import { Pagination } from 'grommet';
+    "usage": "import { Pagination } from 'mnet-ui-base';
       <Pagination />",
   },
   "Paragraph": Object {
@@ -6426,7 +6426,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -6434,7 +6434,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -6442,7 +6442,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -6450,7 +6450,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -6458,7 +6458,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -6466,7 +6466,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -6474,7 +6474,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -6482,7 +6482,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -6535,7 +6535,7 @@ end",
         "name": "textAlign",
       },
     ],
-    "usage": "import { Paragraph } from 'grommet';
+    "usage": "import { Paragraph } from 'mnet-ui-base';
 <Paragraph />",
   },
   "RadioButton": Object {
@@ -6609,7 +6609,7 @@ with the same name so form submissions work.",
         "name": "onChange",
       },
     ],
-    "usage": "import { RadioButton } from 'grommet';
+    "usage": "import { RadioButton } from 'mnet-ui-base';
 <RadioButton />",
   },
   "RadioButtonGroup": Object {
@@ -6646,7 +6646,7 @@ with the same name so form submissions work.",
         "name": "disabled",
       },
       Object {
-        "description": "The DOM name attribute value to use for the underlying <input/> 
+        "description": "The DOM name attribute value to use for the underlying <input/>
       elements.",
         "format": "string",
         "name": "name",
@@ -6659,7 +6659,7 @@ with the same name so form submissions work.",
         "name": "onChange",
       },
       Object {
-        "description": "Options can be either a string, boolean, number 
+        "description": "Options can be either a string, boolean, number
       or an object. Each option is rendered as a single RadioButton.",
         "format": "[string]
 [number]
@@ -6667,10 +6667,10 @@ with the same name so form submissions work.",
 [{
   disabled: boolean,
   id: string,
-  label: 
+  label:
     string
     element,
-  value: 
+  value:
     string
     number
     boolean
@@ -6687,7 +6687,7 @@ object",
         "name": "value",
       },
     ],
-    "usage": "import { RadioButtonGroup } from 'grommet';
+    "usage": "import { RadioButtonGroup } from 'mnet-ui-base';
 <RadioButtonGroup />",
   },
   "RangeInput": Object {
@@ -6754,7 +6754,7 @@ string",
         "name": "value",
       },
     ],
-    "usage": "import { RangeInput } from 'grommet';
+    "usage": "import { RangeInput } from 'mnet-ui-base';
 <RangeInput />",
   },
   "RangeSelector": Object {
@@ -6868,7 +6868,7 @@ string",
         "required": true,
       },
     ],
-    "usage": "import { RangeSelector } from 'grommet';
+    "usage": "import { RangeSelector } from 'mnet-ui-base';
 <RangeSelector />",
   },
   "RoutedAnchor": [Function],
@@ -6922,7 +6922,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -6930,7 +6930,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -6938,7 +6938,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -6946,7 +6946,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -6954,7 +6954,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -6962,7 +6962,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -6970,7 +6970,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -6978,7 +6978,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -7005,7 +7005,7 @@ string",
         "description": "Whether to provide a button option to clear selections.",
         "format": "boolean
 {
-  position: 
+  position:
     top
     bottom,
   label: string
@@ -7063,16 +7063,16 @@ function",
         },
         "description": "How to align the drop.",
         "format": "{
-  top: 
+  top:
     top
     bottom,
-  bottom: 
+  bottom:
     top
     bottom,
-  right: 
+  right:
     left
     right,
-  left: 
+  left:
     left
     right
 }",
@@ -7131,8 +7131,8 @@ function",
         "name": "messages",
       },
       Object {
-        "description": "Whether to allow multiple options to be selected. When multiple is true, 
-      'value' should be an array of selected options and 'options' should be 
+        "description": "Whether to allow multiple options to be selected. When multiple is true,
+      'value' should be an array of selected options and 'options' should be
       an array of possible options",
         "format": "boolean",
         "name": "multiple",
@@ -7212,7 +7212,7 @@ node",
         "name": "replace",
       },
       Object {
-        "description": "Placeholder text to use in the search box when the search input is 
+        "description": "Placeholder text to use in the search box when the search input is
       empty.",
         "format": "string",
         "name": "searchPlaceholder",
@@ -7279,7 +7279,7 @@ function
         "name": "emptySearchMessage",
       },
     ],
-    "usage": "import { Select } from 'grommet';
+    "usage": "import { Select } from 'mnet-ui-base';
 <Select />",
   },
   "Sidebar": [Function],
@@ -7328,8 +7328,8 @@ string",
       },
       Object {
         "defaultValue": undefined,
-        "description": "The message that will be announced for screen readers when message 
-        is a string. When an object, the start message will be announced 
+        "description": "The message that will be announced for screen readers when message
+        is a string. When an object, the start message will be announced
         as the Spinner shows, and the end message as the spinner closes.",
         "format": "string
 {
@@ -7339,7 +7339,7 @@ string",
         "name": "message",
       },
     ],
-    "usage": "import { Spinner } from 'grommet';
+    "usage": "import { Spinner } from 'mnet-ui-base';
 <Spinner/>",
   },
   "Stack": [Function],
@@ -7378,7 +7378,7 @@ string",
         "name": "title",
       },
     ],
-    "usage": "import { Tab } from 'grommet';
+    "usage": "import { Tab } from 'mnet-ui-base';
 <Tab />",
   },
   "Table": [Function],
@@ -7386,7 +7386,7 @@ string",
     "description": "The body of a table.",
     "intrinsicElement": "tbody",
     "name": "TableBody",
-    "usage": "import { TableBody } from 'grommet';
+    "usage": "import { TableBody } from 'mnet-ui-base';
 <TableBody />",
   },
   "TableCell": Object {
@@ -7446,28 +7446,28 @@ string",
         "name": "align",
       },
     ],
-    "usage": "import { TableCell } from 'grommet';
+    "usage": "import { TableCell } from 'mnet-ui-base';
 <TableCell />",
   },
   "TableFooter": Object {
     "description": "The footer of a table.",
     "intrinsicElement": "tfoot",
     "name": "TableFooter",
-    "usage": "import { TableFooter } from 'grommet';
+    "usage": "import { TableFooter } from 'mnet-ui-base';
 <TableFooter />",
   },
   "TableHeader": Object {
     "description": "The header of a table.",
     "intrinsicElement": "thead",
     "name": "TableHeader",
-    "usage": "import { TableHeader } from 'grommet';
+    "usage": "import { TableHeader } from 'mnet-ui-base';
 <TableHeader />",
   },
   "TableRow": Object {
     "description": "A row of cells in a table.",
     "intrinsicElement": "tr",
     "name": "TableRow",
-    "usage": "import { TableRow } from 'grommet';
+    "usage": "import { TableRow } from 'mnet-ui-base';
 <TableRow />",
   },
   "Tabs": Object {
@@ -7520,7 +7520,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -7528,7 +7528,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -7536,7 +7536,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -7544,7 +7544,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -7552,7 +7552,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -7560,7 +7560,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -7568,7 +7568,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -7576,7 +7576,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -7641,7 +7641,7 @@ currently active tab changes.",
         "name": "onActive",
       },
     ],
-    "usage": "import { Tabs, Tab } from 'grommet';
+    "usage": "import { Tabs, Tab } from 'mnet-ui-base';
 <Tabs>
   <Tab title='Tab 1'>...</Tab>
   <Tab title='Tab 2'>...</Tab>
@@ -7686,11 +7686,11 @@ stretch",
         "name": "gridArea",
       },
       Object {
-        "description": "The amount of margin around the component. An object can be 
-    specified to distinguish horizontal margin, vertical margin, and margin on 
-    a particular side. For vertical margin to be applied, Text needs to be 
-    contained within a layout component (such as Box or a generic div) or 
-    behave as a div (by applying as=\\"div\\" or a display style of 
+        "description": "The amount of margin around the component. An object can be
+    specified to distinguish horizontal margin, vertical margin, and margin on
+    a particular side. For vertical margin to be applied, Text needs to be
+    contained within a layout component (such as Box or a generic div) or
+    behave as a div (by applying as=\\"div\\" or a display style of
     inline-block).",
         "format": "none
 xxsmall
@@ -7700,7 +7700,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -7708,7 +7708,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -7716,7 +7716,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -7724,7 +7724,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -7732,7 +7732,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -7740,7 +7740,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -7748,7 +7748,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -7756,7 +7756,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -7820,7 +7820,7 @@ end",
       Object {
         "defaultValue": false,
         "description": "Restrict the text to a single line and truncate with ellipsis if it
-is too long to all fit. For truncate to be applied, Text needs to be 
+is too long to all fit. For truncate to be applied, Text needs to be
 contained within a layout component (such as Box or a generic div).",
         "format": "boolean",
         "name": "truncate",
@@ -7842,7 +7842,7 @@ break-word",
         "name": "wordBreak",
       },
     ],
-    "usage": "import { Text } from 'grommet';
+    "usage": "import { Text } from 'mnet-ui-base';
 <Text />",
   },
   "TextArea": Object {
@@ -7928,7 +7928,7 @@ string",
         "name": "size",
       },
     ],
-    "usage": "import { TextArea } from 'grommet';
+    "usage": "import { TextArea } from 'mnet-ui-base';
 <TextArea id='item' name='item' />",
   },
   "TextInput": Object {
@@ -7969,16 +7969,16 @@ string",
         },
         "description": "How to align the drop.",
         "format": "{
-  top: 
+  top:
     top
     bottom,
-  bottom: 
+  bottom:
     top
     bottom,
-  right: 
+  right:
     left
     right,
-  left: 
+  left:
     left
     right
 }",
@@ -8131,7 +8131,7 @@ number",
         "name": "value",
       },
     ],
-    "usage": "import { TextInput } from 'grommet';
+    "usage": "import { TextInput } from 'mnet-ui-base';
 <TextInput id='item' name='item' />",
   },
   "Tip": Object {
@@ -8147,7 +8147,7 @@ number",
         "url": "https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/tip&module=%2Fsrc%2FTip.js",
       },
     ],
-    "description": "Tooltip or a hint when hovering over an element. The tooltip will render 
+    "description": "Tooltip or a hint when hovering over an element. The tooltip will render
       when hovering on top of the Tip's child node or string.",
     "name": "Tip",
     "properties": Array [
@@ -8172,7 +8172,7 @@ number",
         "name": "plain",
       },
     ],
-    "usage": "import { Tip } from 'grommet';
+    "usage": "import { Tip } from 'mnet-ui-base';
 <Tip />",
   },
   "Video": Object {
@@ -8225,7 +8225,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -8233,7 +8233,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -8241,7 +8241,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -8249,7 +8249,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -8257,7 +8257,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -8265,7 +8265,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -8273,7 +8273,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -8281,7 +8281,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -8349,7 +8349,7 @@ contain",
         "name": "messages",
       },
     ],
-    "usage": "import { Video } from 'grommet';
+    "usage": "import { Video } from 'mnet-ui-base';
 <Video />",
   },
   "WorldMap": Object {
@@ -8402,7 +8402,7 @@ medium
 large
 xlarge
 {
-  bottom: 
+  bottom:
     xxsmall
     xsmall
     small
@@ -8410,7 +8410,7 @@ xlarge
     large
     xlarge
     string,
-  end: 
+  end:
     xxsmall
     xsmall
     small
@@ -8418,7 +8418,7 @@ xlarge
     large
     xlarge
     string,
-  horizontal: 
+  horizontal:
     xxsmall
     xsmall
     small
@@ -8426,7 +8426,7 @@ xlarge
     large
     xlarge
     string,
-  left: 
+  left:
     xxsmall
     xsmall
     small
@@ -8434,7 +8434,7 @@ xlarge
     large
     xlarge
     string,
-  right: 
+  right:
     xxsmall
     xsmall
     small
@@ -8442,7 +8442,7 @@ xlarge
     large
     xlarge
     string,
-  start: 
+  start:
     xxsmall
     xsmall
     small
@@ -8450,7 +8450,7 @@ xlarge
     large
     xlarge
     string,
-  top: 
+  top:
     xxsmall
     xsmall
     small
@@ -8458,7 +8458,7 @@ xlarge
     large
     xlarge
     string,
-  vertical: 
+  vertical:
     xxsmall
     xsmall
     small
@@ -8482,13 +8482,13 @@ string",
       Object {
         "description": "Continent details.",
         "format": "[{
-  color: 
+  color:
     string
     {
       dark: string,
       light: string
     },
-  name: 
+  name:
     Africa
     Asia
     Australia
@@ -8517,7 +8517,7 @@ boolean",
         "description": "Place details. location is an array of two numeric values that indicates
        the latitude and longitude of the specified location.",
         "format": "[{
-  color: 
+  color:
     string
     {
       dark: string,
@@ -8540,7 +8540,7 @@ boolean",
         "name": "hoverColor",
       },
     ],
-    "usage": "import { WorldMap } from 'grommet';
+    "usage": "import { WorldMap } from 'mnet-ui-base';
 <WorldMap />",
   },
   "Tooltip": Object {

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Layer, Spinner, Text } from 'grommet';
+import { mnet, Box, Button, MnetUIBase, Layer, Spinner,
+  Text } from 'mnet-ui-base';
 
 export const Modal = () => {
   const [open, setOpen] = React.useState();
@@ -15,7 +16,7 @@ export const Modal = () => {
   };
 
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Box fill align="center" justify="center" gap="medium">
         <Button label="Load Data" onClick={onOpen} />
         {isDataLoaded && (
@@ -41,7 +42,7 @@ export const Modal = () => {
           </Box>
         </Layer>
       )}
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

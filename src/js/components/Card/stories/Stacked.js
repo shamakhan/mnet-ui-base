@@ -8,11 +8,11 @@ import {
   CardBody,
   CardHeader,
   Grid,
-  Grommet,
+  MnetUIBase,
   Text,
   Image,
   Stack,
-} from 'grommet';
+} from 'mnet-ui-base';
 
 const theme = {
   global: {
@@ -57,7 +57,7 @@ export const Stacked = () => {
     '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 
   return (
-    <Grommet theme={theme}>
+    <MnetUIBase theme={theme}>
       <Box pad="large">
         <Grid
           gap="large"
@@ -66,7 +66,7 @@ export const Stacked = () => {
         >
           {data.map(item => (
             <Card width="medium" key={item.location}>
-              {/* Stacked CardBody and CardHeader on top of each other 
+              {/* Stacked CardBody and CardHeader on top of each other
               in that order */}
               <Stack anchor="bottom-left">
                 <CardBody height="medium">
@@ -96,7 +96,7 @@ export const Stacked = () => {
           ))}
         </Grid>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

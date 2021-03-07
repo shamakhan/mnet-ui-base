@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-import { Box, Form, FormField, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Form, FormField, MnetUIBase, TextInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const FieldStates = () => {
   const inputRef = useRef();
@@ -11,7 +11,7 @@ export const FieldStates = () => {
   }, []);
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Form>
           <Box border gap="medium" pad="large" width="medium">
@@ -72,7 +72,7 @@ export const FieldStates = () => {
           </Box>
         </Form>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

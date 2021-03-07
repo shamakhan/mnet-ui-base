@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Attraction, Car, TreeOption } from 'grommet-icons';
-import { Box, Grommet, grommet, Tab, Tabs } from 'grommet';
-import { deepMerge } from 'grommet/utils';
+import { Box, MnetUIBase, mnet, Tab, Tabs } from 'mnet-ui-base';
+import { deepMerge } from 'mnet-ui-base/utils';
 
-const myTheme = deepMerge(grommet, {
+const myTheme = deepMerge(mnet, {
   tabs: {
     header: {
       border: {
@@ -29,7 +29,7 @@ const myTheme = deepMerge(grommet, {
 });
 
 const AlignControlsTabs = () => (
-  <Grommet theme={myTheme} full>
+  <MnetUIBase theme={myTheme} full>
     <Tabs justify="start" alignControls="start">
       <Tab title="Tab 1">
         <Box fill pad="large" align="center">
@@ -47,7 +47,7 @@ const AlignControlsTabs = () => (
         </Box>
       </Tab>
     </Tabs>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const AlignControls = () => <AlignControlsTabs />;

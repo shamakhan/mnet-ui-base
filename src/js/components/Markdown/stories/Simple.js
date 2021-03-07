@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, Markdown } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Markdown } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const CONTENT = `
   # Out of Breath
@@ -13,7 +13,7 @@ const CONTENT = `
   [reference](#)
 
 \`\`\`
-import { Grommet } from 'grommet';
+import { mnet } from 'mnet-ui-base';
 \`\`\`
 
   > i carry your heart with me
@@ -27,11 +27,11 @@ import { Grommet } from 'grommet';
 `;
 
 export const Simple = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <Markdown>{CONTENT}</Markdown>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

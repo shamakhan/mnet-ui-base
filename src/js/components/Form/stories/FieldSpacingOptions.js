@@ -5,16 +5,16 @@ import {
   Form,
   FormField,
   Grid,
-  Grommet,
+  MnetUIBase,
   Heading,
   RadioButtonGroup,
   TextInput,
   ThemeContext,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   formField: {
     border: {
       side: 'all',
@@ -52,7 +52,7 @@ const adjustedLabelMargins = {
 };
 
 export const FieldSpacingOptions = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Grid columns={{ count: 'fit', size: 'medium' }} gap="medium">
       <Box pad={{ horizontal: 'medium' }}>
         <Form>
@@ -254,7 +254,7 @@ export const FieldSpacingOptions = () => (
         </Form>
       </Box>
     </Grid>
-  </Grommet>
+  </MnetUIBase>
 );
 
 FieldSpacingOptions.storyName = 'Field spacing options';

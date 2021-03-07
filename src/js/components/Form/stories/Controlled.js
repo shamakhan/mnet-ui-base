@@ -31,7 +31,7 @@ const suggestions = ['Shimi', 'Eric'];
 export const Controlled = () => {
   const [value, setValue] = useState(defaultValue);
   return (
-    <MnetUIBase full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form

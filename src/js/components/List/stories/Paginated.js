@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, List, Menu } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, List, Menu } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 import { More } from 'grommet-icons';
 
 const data = [];
@@ -13,7 +13,7 @@ for (let i = 0; i < 95; i += 1) {
 }
 
 export const Paginated = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box pad="medium">
       <List
         data={data}
@@ -30,7 +30,7 @@ export const Paginated = () => (
         paginate
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

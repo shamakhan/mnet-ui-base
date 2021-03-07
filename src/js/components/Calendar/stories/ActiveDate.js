@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
-import { Box, Button, Calendar, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, Calendar, MnetUIBase, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const ActiveDate = () => {
   const [datesD, setDatesD] = useState();
@@ -11,7 +11,7 @@ export const ActiveDate = () => {
   const endDateButton = useRef();
 
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Box gap="small" pad="large">
         <Box direction="row" gap="small">
           <Button
@@ -55,7 +55,7 @@ export const ActiveDate = () => {
           range="array"
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, TextInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Simple = () => {
   const [value, setValue] = React.useState('');
@@ -9,13 +9,13 @@ export const Simple = () => {
   const onChange = event => setValue(event.target.value);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <TextInput value={value} onChange={onChange} />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

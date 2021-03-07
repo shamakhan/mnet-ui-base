@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DataTable, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const DATA = [
   {
@@ -40,12 +40,12 @@ const columns = [
 ];
 
 export const UnitsDataTable = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <Heading level="3">Table with units in the heading</Heading>
       <DataTable columns={columns} data={DATA} primaryKey={false} />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 UnitsDataTable.storyName = 'Units';

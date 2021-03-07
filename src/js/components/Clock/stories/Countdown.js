@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Box, Grommet, Clock } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Clock } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Countdown = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" justify="start" pad="large">
       <Clock type="digital" time="PT0H0M20S" run="backward" />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Countdown.parameters = {

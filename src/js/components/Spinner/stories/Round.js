@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { grommet, Box, Grommet, Spinner } from 'grommet';
+import { mnet, Box, MnetUIBase, Spinner } from 'mnet-ui-base';
 
 const RoundSpinner = ({ round }) => (
   <Spinner
@@ -11,14 +11,14 @@ const RoundSpinner = ({ round }) => (
   />
 );
 export const Round = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box align="center" direction="row" gap="medium" pad="large">
       <RoundSpinner round={false} />
       <RoundSpinner round="small" />
       <RoundSpinner round="medium" />
       <RoundSpinner round="full" />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Round.parameters = {

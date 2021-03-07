@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import React from 'react';
 import { Close } from 'grommet-icons/icons/Close';
 import { Box } from '../Box';
 import { Button } from '../Button';
@@ -14,7 +13,6 @@ const SelectedList = ({
   searchPlaceholder,
   onRemove,
 }) => {
-  const theme = useContext(ThemeContext) || defaultProps.theme;
   const [search, setSearch] = React.useState('');
 
   const filteredItems = selectedItems.filter(val => val.includes(search));

@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Box, Grommet, WorldMap } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, WorldMap } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Color = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <WorldMap color="graph-1" />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Color.parameters = {

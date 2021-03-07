@@ -3,7 +3,7 @@ import React from 'react';
 import 'jest-styled-components';
 
 import { act, cleanup, render, fireEvent } from '@testing-library/react';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Form } from '..';
 import { FormField } from '../../FormField';
 import { Button } from '../../Button';
@@ -28,9 +28,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -62,9 +62,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -100,9 +100,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -138,9 +138,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -170,9 +170,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -212,9 +212,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -255,9 +255,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -287,9 +287,9 @@ describe('Form controlled', () => {
       );
     };
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('set'));
@@ -315,9 +315,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByLabelText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.change(getByLabelText('test'), { target: { value: 'v' } });
@@ -339,7 +339,7 @@ describe('Form controlled', () => {
       const [value, setValue] = React.useState({ test: '' });
       const onChange = React.useCallback(nextValue => setValue(nextValue), []);
       return (
-        <Grommet>
+        <MnetUIBase>
           <Form
             onReset={onReset}
             onChange={onChange}
@@ -354,7 +354,7 @@ describe('Form controlled', () => {
             />
             <Button type="reset" primary label="Reset" />
           </Form>
-        </Grommet>
+        </MnetUIBase>
       );
     };
     const { getByPlaceholderText, getByText, queryByText } = render(<Test />);
@@ -382,9 +382,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByPlaceholderText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -436,9 +436,9 @@ describe('Form controlled', () => {
       );
     };
     const { getByPlaceholderText, getByLabelText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();

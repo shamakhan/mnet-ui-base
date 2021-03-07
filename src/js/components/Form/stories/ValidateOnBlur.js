@@ -2,7 +2,6 @@ import React from 'react';
 
 import { StatusGood } from 'grommet-icons';
 import { Box, Button, Form, FormField, TextInput } from 'mnet-ui-base';
-import { StatusGood } from 'grommet-icons';
 
 export const ValidateOnBlur = () => (
   <div style={{ width: '100vw', height: '100vh', overflow: 'auto' }}>

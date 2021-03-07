@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, Spinner, Stack } from 'grommet';
-import { ThemeType } from 'grommet/themes';
+import { Box, MnetUIBase, Spinner, Stack } from 'mnet-ui-base';
+import { ThemeType } from 'mnet-ui-base/themes';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
@@ -37,7 +37,7 @@ const OlympicRing = ({ color }) => (
 );
 
 export const Themed = () => (
-  <Grommet theme={theme} full>
+  <MnetUIBase theme={theme} full>
     <Box align="center" pad="large" responsive={false}>
       <Stack anchor="left">
         <Box align="start" responsive={false}>
@@ -61,7 +61,7 @@ export const Themed = () => (
         </Stack>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

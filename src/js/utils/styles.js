@@ -540,7 +540,7 @@ export const plainInputStyle = css`
 export const kindPartStyles = (obj, theme, colorValue) => {
   const styles = [];
   if (obj.padding || obj.pad) {
-    // button uses `padding` but other components use Grommet `pad`
+    // button uses `padding` but other components use MnetUIBase `pad`
     const pad = obj.padding || obj.pad;
     if (pad.vertical || pad.horizontal)
       styles.push(

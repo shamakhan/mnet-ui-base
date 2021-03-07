@@ -4,22 +4,6 @@ import { Box, Text, Heading } from 'mnet-ui-base';
 
 const wordBreakValues = ['normal', 'break-all', 'keep-all', 'break-word'];
 
-const All = () => (
-  <>
-    {sizes.map(size => (
-      <Box key={size} margin="small">
-        <Text size={size}>{`Text ${size}`}</Text>
-      </Box>
-    ))}
-  </>
-);
-
-const Color = () => (
-  <>
-    <Text color="accent-1">Colored Text</Text>
-  </>
-);
-
 /* eslint-disable max-len */
 export const WordBreak = () => (
   <>

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Heading, Text, Tip } from 'grommet';
+import { mnet, Box, Button, MnetUIBase, Heading, Text,
+   Tip } from 'mnet-ui-base';
 import { Trash } from 'grommet-icons';
 
 const TipContent = ({ message }) => (
@@ -19,7 +20,7 @@ const TipContent = ({ message }) => (
 );
 
 export const Caret = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Box align="center" justify="center" background="dark-1" fill gap="large">
       <Heading textAlign="center" level="1" size="xsmall">
         Tooltip is styled with a Caret
@@ -36,7 +37,7 @@ export const Caret = () => (
         </Box>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Caret.parameters = {

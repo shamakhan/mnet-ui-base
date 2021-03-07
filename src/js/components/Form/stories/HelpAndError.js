@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Form, FormField, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Form, FormField, MnetUIBase, TextInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const HelpAndError = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <Form>
         <FormField
@@ -22,7 +22,7 @@ export const HelpAndError = () => (
         </FormField>
       </Form>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 HelpAndError.storyName = 'Help and error';

@@ -7,7 +7,7 @@ export const doc = CheckBoxGroup => {
     .availableAt(getAvailableAtBadge('CheckBoxGroup', 'Input'))
     .description('A group of CheckBoxes.')
     .usage(
-      `import { CheckBoxGroup } from 'grommet';
+      `import { CheckBoxGroup } from 'mnet-ui-base';
         <CheckBoxGroup />`,
     )
     .intrinsicElement('div');

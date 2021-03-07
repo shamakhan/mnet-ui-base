@@ -36,13 +36,13 @@ const RangeSelector = forwardRef(
     ref,
   ) => {
     const theme = useContext(ThemeContext);
-    if (!theme) {
-      return null;
-    }
+    
     const [changing, setChanging] = useState();
     const [lastChange, setLastChange] = useState();
     const [moveValue, setMoveValue] = useState();
     const containerRef = useRef();
+
+    
 
     const valueForMouseCoord = useCallback(
       event => {
@@ -114,6 +114,7 @@ const RangeSelector = forwardRef(
       }
       return undefined;
     }, [changing, max, min, moveValue, onChange, valueForMouseCoord, values]);
+    
 
     const onClick = useCallback(
       event => {
@@ -134,6 +135,10 @@ const RangeSelector = forwardRef(
       },
       [lastChange, onChange, valueForMouseCoord, values],
     );
+
+    if (!theme) {
+      return null;
+    }
 
     const [lower, upper] = values;
     // It needs to be true when vertical, due to how browsers manage height

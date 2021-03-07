@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Grommet, Paragraph } from 'grommet';
-import { deepMerge } from 'grommet/utils';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Paragraph } from 'mnet-ui-base';
+import { deepMerge } from 'mnet-ui-base/utils';
+import { mnet } from 'mnet-ui-base/themes';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   paragraph: {
     font: {
       family: 'Comic Sans MS',
@@ -13,11 +13,11 @@ const customTheme = deepMerge(grommet, {
 });
 
 export const Themed = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Paragraph>
       The font family for this paragraph is being defined by a custom theme.
     </Paragraph>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Themed.parameters = {

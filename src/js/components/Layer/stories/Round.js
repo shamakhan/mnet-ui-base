@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Button, Grommet, Layer, Select, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { Box, Button, MnetUIBase, Layer, Select, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 import { FormClose } from 'grommet-icons';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   layer: {
     border: {
       radius: 'large',
@@ -22,7 +22,7 @@ export const RoundLayer = () => {
   const onClose = () => setOpen(undefined);
 
   return (
-    <Grommet theme={customTheme} full>
+    <MnetUIBase theme={customTheme} full>
       <Box fill align="center" justify="center" gap="medium">
         <Select
           placeholder="Layer position"
@@ -74,7 +74,7 @@ export const RoundLayer = () => {
           </Box>
         </Layer>
       )}
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

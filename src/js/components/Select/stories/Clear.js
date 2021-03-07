@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, Select, grommet } from 'grommet';
+import { Box, MnetUIBase, Select, mnet } from 'mnet-ui-base';
 
 const options = ['one', 'two', 'three'];
 
@@ -21,9 +21,9 @@ const ClearTop = () => {
 };
 
 export const Clear = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <ClearTop />
-  </Grommet>
+  </MnetUIBase>
 );
 
 Clear.parameters = {

@@ -8,7 +8,7 @@ import { axe } from 'jest-axe';
 import { cleanup, fireEvent, render } from '@testing-library/react';
 import { Add } from 'grommet-icons';
 
-import { Grommet, Button } from '../..';
+import { MnetUIBase, Button } from '../..';
 import { buttonKindTheme } from './theme/buttonKindTheme';
 
 describe('Button kind', () => {
@@ -16,13 +16,13 @@ describe('Button kind', () => {
 
   test('should have no accessibility violations', async () => {
     const { container, getByText } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: { default: {} },
         }}
       >
         <Button a11yTitle="Test button" label="Test" onClick={() => {}} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.click(getByText('Test'));
@@ -32,16 +32,16 @@ describe('Button kind', () => {
 
   test('default button', () => {
     const { container } = render(
-      <Grommet theme={buttonKindTheme}>
+      <MnetUIBase theme={buttonKindTheme}>
         <Button />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('button with icon and align', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -51,14 +51,14 @@ describe('Button kind', () => {
         }}
       >
         <Button icon={<Add />} align="start" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('button icon colors', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -74,14 +74,14 @@ describe('Button kind', () => {
         }}
       >
         <Button icon={<Add />} color="#000" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test(`mouseOver and mouseOut events`, async () => {
     const { container, getByText } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -91,7 +91,7 @@ describe('Button kind', () => {
         }}
       >
         <Button label="label" icon={<Add />} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.mouseOver(getByText('label'));
     expect(container.firstChild).toMatchSnapshot();
@@ -102,25 +102,25 @@ describe('Button kind', () => {
 
   test('primary button', () => {
     const { container } = render(
-      <Grommet theme={buttonKindTheme}>
+      <MnetUIBase theme={buttonKindTheme}>
         <Button primary />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('secondary button', () => {
     const { container } = render(
-      <Grommet theme={buttonKindTheme}>
+      <MnetUIBase theme={buttonKindTheme}>
         <Button secondary />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('border on default button', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -133,14 +133,14 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('no border on default button', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -150,14 +150,14 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('extend on default button', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -169,14 +169,14 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('fill', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: { default: {} },
         }}
@@ -184,14 +184,14 @@ describe('Button kind', () => {
         <Button label="Test" fill />
         <Button label="Test" fill="vertical" />
         <Button label="Test" fill="horizontal" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('font on button default', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -204,14 +204,14 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('font undefined', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -224,14 +224,14 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('hover on default button', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -244,14 +244,14 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" plain hoverIndicator onClick={() => {}} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('opacity on default button', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -261,14 +261,14 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('padding on default button', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -285,23 +285,23 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('render of children', () => {
     const { container } = render(
-      <Grommet theme={buttonKindTheme}>
+      <MnetUIBase theme={buttonKindTheme}>
         <Button>Test</Button>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('no padding on default button', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -315,14 +315,14 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('size of default button', () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {
@@ -342,7 +342,7 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Test" size="small" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -350,13 +350,13 @@ describe('Button kind', () => {
   test(`disabled state cursor should indicate the button cannot be 
   clicked`, () => {
     const { getByText } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: { default: {} },
         }}
       >
         <Button disabled label="Button" />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const button = getByText('Button');
@@ -368,13 +368,13 @@ describe('Button kind', () => {
 
   test(`disabled with hoverIndicator should not hover`, () => {
     const { container, getByText } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: { default: {} },
         }}
       >
         <Button disabled hoverIndicator label="Button" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -384,7 +384,7 @@ describe('Button kind', () => {
 
   test(`should apply styling according to theme size definitions`, () => {
     const { container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           button: {
             default: {},
@@ -421,12 +421,12 @@ describe('Button kind', () => {
         }}
       >
         <Button label="Button" size="small" />
-        {/* button with no size specified should have medium styling applied 
+        {/* button with no size specified should have medium styling applied
         by default */}
         <Button label="Button" />
         <Button label="Button" size="medium" />
         <Button label="Button" size="large" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

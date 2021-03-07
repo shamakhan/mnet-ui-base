@@ -44,7 +44,7 @@ describe('DataTable', () => {
 
   test('!primaryKey', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -56,7 +56,7 @@ describe('DataTable', () => {
           ]}
           primaryKey={false}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -118,7 +118,7 @@ describe('DataTable', () => {
 
   test('sortable', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -131,7 +131,7 @@ describe('DataTable', () => {
           ]}
           sortable
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -172,7 +172,7 @@ describe('DataTable', () => {
   test('onSort external', () => {
     const onSort = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -186,7 +186,7 @@ describe('DataTable', () => {
           onSort={onSort}
           sort={{ property: 'a', direction: 'asc', external: true }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -204,7 +204,7 @@ describe('DataTable', () => {
 
   test('sort', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -217,14 +217,14 @@ describe('DataTable', () => {
           ]}
           sort={{ property: 'a', direction: 'asc' }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('sort nested object', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -241,7 +241,7 @@ describe('DataTable', () => {
           ]}
           sort={{ property: 'b.value', direction: 'asc' }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.querySelectorAll('td').item(0).textContent).toBe('1');
@@ -260,7 +260,7 @@ describe('DataTable', () => {
   test('sort nested object with onSort', () => {
     const onSort = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -278,7 +278,7 @@ describe('DataTable', () => {
           onSort={onSort}
           sort={{ property: 'b.value', direction: 'asc' }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.querySelectorAll('td').item(0).textContent).toBe('1');
@@ -300,7 +300,7 @@ describe('DataTable', () => {
 
   test('sort external', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -313,7 +313,7 @@ describe('DataTable', () => {
           ]}
           sort={{ property: 'a', direction: 'asc', external: true }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -381,7 +381,7 @@ describe('DataTable', () => {
 
   test('aggregate with nested object', () => {
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -402,7 +402,7 @@ describe('DataTable', () => {
             { a: 'two', obj: { value: 2 }, obj2: { value: 20 } },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(getByText('3')).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
@@ -410,7 +410,7 @@ describe('DataTable', () => {
 
   test('rowDetails', () => {
     const { container, getAllByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -425,7 +425,7 @@ describe('DataTable', () => {
           rowDetails={row => <Box>{row.a}</Box>}
           primaryKey="b"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const expandButtons = getAllByLabelText('expand');
     fireEvent.click(expandButtons[1], {});
@@ -434,7 +434,7 @@ describe('DataTable', () => {
 
   test('rowDetails condtional', () => {
     const { container, getAllByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -458,7 +458,7 @@ describe('DataTable', () => {
           }}
           primaryKey="b"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const expandButtons = getAllByLabelText('expand');
     fireEvent.click(expandButtons[1], {});
@@ -715,7 +715,7 @@ describe('DataTable', () => {
 
   test('themeColumnSizes', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A', size: 'medium' },
@@ -726,14 +726,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('absoluteColumnSizes', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A', size: '400px' },
@@ -744,14 +744,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('relativeColumnSizes', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A', size: '2/3' },
@@ -762,14 +762,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('fill', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         {[true, 'horizontal', 'vertical'].map(fill => (
           <DataTable
             key={JSON.stringify(fill)}
@@ -784,14 +784,14 @@ describe('DataTable', () => {
             fill={fill}
           />
         ))}
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('pin', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         {[true, 'header', 'footer'].map(pin => (
           <DataTable
             key={JSON.stringify(pin)}
@@ -806,7 +806,7 @@ describe('DataTable', () => {
             pin={pin}
           />
         ))}
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -830,7 +830,7 @@ describe('DataTable', () => {
     };
 
     const { container } = render(
-      <Grommet theme={theme}>
+      <MnetUIBase theme={theme}>
         {[true, 'header', 'footer'].map(pin => (
           <DataTable
             background={{ pinned: 'red' }}
@@ -846,14 +846,14 @@ describe('DataTable', () => {
             pin={pin}
           />
         ))}
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('pin + background context', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         {[
           'background-back',
           'background-front',
@@ -873,7 +873,7 @@ describe('DataTable', () => {
             />
           </Box>
         ))}
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -881,7 +881,7 @@ describe('DataTable', () => {
   test('select', () => {
     const onSelect = jest.fn();
     const { container, getByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[{ property: 'a', header: 'A' }]}
           data={[{ a: 'alpha' }, { a: 'beta' }]}
@@ -889,7 +889,7 @@ describe('DataTable', () => {
           select={['alpha']}
           onSelect={onSelect}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByLabelText('select beta'));
@@ -930,7 +930,7 @@ describe('DataTable', () => {
     };
 
     const { container, getByLabelText } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <DataTable
           columns={[{ property: 'a', header: 'A' }]}
           data={[{ a: 'alpha' }, { a: 'beta' }]}
@@ -939,7 +939,7 @@ describe('DataTable', () => {
           sortable
           resizeable
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
 
@@ -949,7 +949,7 @@ describe('DataTable', () => {
 
   test('units', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A', footer: 'Total' },
@@ -960,14 +960,14 @@ describe('DataTable', () => {
             { a: 'two', b: 2 },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('placeholder', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A', footer: 'Total' },
@@ -990,14 +990,14 @@ describe('DataTable', () => {
           ]}
           placeholder={<Text weight="bold">test placeholder</Text>}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('should paginate', () => {
     const { container, getAllByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -1006,7 +1006,7 @@ describe('DataTable', () => {
           data={DATA}
           paginate
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = getAllByText('entry', { exact: false });
@@ -1017,7 +1017,7 @@ describe('DataTable', () => {
 
   test('should apply pagination styling', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -1026,7 +1026,7 @@ describe('DataTable', () => {
           data={DATA}
           paginate={{ background: 'red', margin: 'large' }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -1034,7 +1034,7 @@ describe('DataTable', () => {
   test('should show correct item index when "show" is a number', () => {
     const show = 15;
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -1044,7 +1044,7 @@ describe('DataTable', () => {
           paginate
           show={show}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const result = getByText(`entry-${show}`);
@@ -1055,7 +1055,7 @@ describe('DataTable', () => {
   test('should show correct page when "show" is { page: # }', () => {
     const desiredPage = 2;
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -1065,7 +1065,7 @@ describe('DataTable', () => {
           paginate
           show={{ page: desiredPage }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const activePage = container.querySelector(`[aria-current="page"]`)
@@ -1078,7 +1078,7 @@ describe('DataTable', () => {
   test('should render correct num items per page (step)', () => {
     const step = 14;
     const { container, getAllByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -1088,7 +1088,7 @@ describe('DataTable', () => {
           paginate
           step={step}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = getAllByText('entry', { exact: false });
@@ -1099,7 +1099,7 @@ describe('DataTable', () => {
 
   test('should render new data when page changes', () => {
     const { container, getByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <DataTable
           columns={[
             { property: 'a', header: 'A' },
@@ -1108,7 +1108,7 @@ describe('DataTable', () => {
           data={DATA}
           paginate
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();

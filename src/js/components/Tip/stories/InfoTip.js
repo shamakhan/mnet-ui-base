@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Text, Tip } from 'grommet';
+import { mnet, Box, Button, MnetUIBase, Text, Tip } from 'mnet-ui-base';
 import { HelpOption, CircleInformation } from 'grommet-icons';
 
 export const Info = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Box
       fill
       background="background-back"
@@ -50,7 +50,7 @@ export const Info = () => (
         <Button icon={<HelpOption size="large" />} />
       </Tip>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Info.parameters = {

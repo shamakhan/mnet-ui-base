@@ -14,9 +14,9 @@ describe('RangeSelector', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <RangeSelector values={[20, 30]} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();

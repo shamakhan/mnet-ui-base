@@ -10,7 +10,7 @@ export const doc = Tip => {
       when hovering on top of the Tip's child node or string.`,
     )
     .usage(
-      `import { Tip } from 'grommet';
+      `import { Tip } from 'mnet-ui-base';
 <Tip />`,
     );
 

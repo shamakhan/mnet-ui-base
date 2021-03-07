@@ -13,8 +13,7 @@ const Loader = forwardRef(
       ...rest
     },
     ref,
-  ) => {
-    return (
+  ) => (
       <Box ref={ref}>
         {type === 'inline' ? (
           <StyledLoader
@@ -39,8 +38,7 @@ const Loader = forwardRef(
           </LoaderWrap>
         )}
       </Box>
-    );
-  },
+    ),
 );
 
 Loader.displayName = 'Loader';

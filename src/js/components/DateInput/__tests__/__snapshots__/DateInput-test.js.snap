@@ -115,7 +115,7 @@ exports[`DateInput basic 1`] = `
 </div>
 `;
 
-exports[`DateInput buttonProps should pass props to Button 
+exports[`DateInput buttonProps should pass props to Button
   when not inline and no format 1`] = `
 .c2 {
   display: inline-block;
@@ -233,7 +233,7 @@ exports[`DateInput buttonProps should pass props to Button
 </div>
 `;
 
-exports[`DateInput dropProps should pass props to Drop 
+exports[`DateInput dropProps should pass props to Drop
   when not inline 1`] = `
 .c3 {
   display: inline-block;
@@ -8045,7 +8045,7 @@ exports[`DateInput select format 1`] = `
 
 exports[`DateInput select format 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledMnetUIBase-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledMaskedInput__StyledMaskedInputContainer-sc-99vkfa-1 dOerlP"
@@ -10423,7 +10423,7 @@ exports[`DateInput select format inline 1`] = `
 
 exports[`DateInput select format inline 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledMnetUIBase-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -12453,7 +12453,7 @@ exports[`DateInput select format inline range 1`] = `
 
 exports[`DateInput select format inline range 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledMnetUIBase-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"
@@ -15554,7 +15554,7 @@ exports[`DateInput type format inline 1`] = `
 
 exports[`DateInput type format inline 2`] = `
 <div
-  class="StyledGrommet-sc-19lkkz7-0 djOnwZ"
+  class="StyledMnetUIBase-sc-19lkkz7-0 djOnwZ"
 >
   <div
     class="StyledBox-sc-13pk1d4-0 dYebPD"

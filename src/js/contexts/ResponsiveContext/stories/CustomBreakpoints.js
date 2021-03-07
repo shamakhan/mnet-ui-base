@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Grommet, Heading, ResponsiveContext } from 'grommet';
+import { Box, MnetUIBase, Heading, ResponsiveContext } from 'mnet-ui-base';
 
 const customBreakpoints = {
   global: {
@@ -49,7 +49,7 @@ const customBreakpoints = {
 };
 
 export const CustomBreakpoints = () => (
-  <Grommet theme={customBreakpoints} full>
+  <MnetUIBase theme={customBreakpoints} full>
     <ResponsiveContext.Consumer>
       {size => (
         <Box fill background="brand">
@@ -57,7 +57,7 @@ export const CustomBreakpoints = () => (
         </Box>
       )}
     </ResponsiveContext.Consumer>
-  </Grommet>
+  </MnetUIBase>
 );
 
 CustomBreakpoints.storyName = 'Custom breakpoints';

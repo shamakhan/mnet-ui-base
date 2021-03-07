@@ -17,7 +17,7 @@ import { Text } from '../Text';
 import { TextInput } from '../TextInput';
 import { FormContext } from '../Form/FormContext';
 
-const grommetInputNames = [
+const mnetInputNames = [
   'TextInput',
   'Select',
   'MaskedInput',
@@ -32,9 +32,9 @@ const grommetInputPadNames = [
   'RangeInput',
 ];
 
-const isGrommetInput = comp =>
+const isMnetUIBaseInput = comp =>
   comp &&
-  (grommetInputNames.indexOf(comp.displayName) !== -1 ||
+  (mnetInputNames.indexOf(comp.displayName) !== -1 ||
     grommetInputPadNames.indexOf(comp.displayName) !== -1);
 
 const FormFieldBox = styled(Box)`
@@ -90,12 +90,12 @@ const Input = ({ component, disabled, invalid, name, onChange, ...rest }) => {
   const formContext = useContext(FormContext);
   const [value, setValue] = formContext.useFormInput(name, rest.value);
   const InputComponent = component || TextInput;
-  // Grommet input components already check for FormContext
+  // MnetUIBase input components already check for FormContext
   // and, using their `name`, end up calling the useFormInput.setValue()
   // already. For custom components, we expect they will call
   // this onChange() and we'll call setValue() here, primarily
   // for backwards compatibility.
-  const extraProps = isGrommetInput(InputComponent)
+  const extraProps = isMnetUIBaseInput(InputComponent)
     ? { focusIndicator: false, onChange, plain: true }
     : {
         value,
@@ -198,7 +198,7 @@ const FormField = forwardRef(
           if (
             child &&
             child.type &&
-            grommetInputNames.indexOf(child.type.displayName) !== -1 &&
+            mnetInputNames.indexOf(child.type.displayName) !== -1 &&
             child.props.plain === undefined &&
             child.props.focusIndicator === undefined
           ) {

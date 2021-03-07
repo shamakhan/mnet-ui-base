@@ -20,11 +20,11 @@ describe('Accordion', () => {
 
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Accordion>
           <AccordionPanel>Panel body 1</AccordionPanel>
         </Accordion>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = await axe(container);
@@ -178,7 +178,7 @@ describe('Accordion', () => {
 
   test('accordion border', () => {
     const component = renderer.create(
-      <Grommet
+      <MnetUIBase
         theme={{
           accordion: {
             border: undefined,
@@ -193,7 +193,7 @@ describe('Accordion', () => {
         <Accordion>
           <AccordionPanel label="Panel 1">Panel body 1</AccordionPanel>
         </Accordion>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -240,7 +240,7 @@ describe('Accordion', () => {
   test('focus and hover styles', () => {
     const warnSpy = jest.spyOn(console, 'warn').mockImplementation();
     const { getByText, container } = render(
-      <Grommet theme={{ accordion: { hover: { color: 'red' } } }}>
+      <MnetUIBase theme={{ accordion: { hover: { color: 'red' } } }}>
         <Accordion>
           <AccordionPanel
             label="Panel 1"
@@ -252,7 +252,7 @@ describe('Accordion', () => {
             Panel body 1
           </AccordionPanel>
         </Accordion>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.focus(getByText('Panel 1'));
@@ -264,7 +264,7 @@ describe('Accordion', () => {
   test('backward compatibility of hover.color = undefined', () => {
     const warnSpy = jest.spyOn(console, 'warn').mockImplementation();
     const { getByText, container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           accordion: {
             hover: { color: undefined },
@@ -282,7 +282,7 @@ describe('Accordion', () => {
             Panel body 1
           </AccordionPanel>
         </Accordion>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.focus(getByText('Panel 1'));
@@ -294,7 +294,7 @@ describe('Accordion', () => {
 
   test('theme hover of hover.heading.color', () => {
     const { getByText, container } = render(
-      <Grommet
+      <MnetUIBase
         theme={{
           accordion: {
             hover: { heading: { color: 'teal' } },
@@ -312,7 +312,7 @@ describe('Accordion', () => {
             Panel body 1
           </AccordionPanel>
         </Accordion>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.focus(getByText('Panel 1'));
@@ -464,7 +464,9 @@ describe('Accordion', () => {
   test('blur styles', () => {
     const onBlur = jest.fn();
     const { container, getByText } = render(
-      <MnetUIBase theme={{ accordion: { hover: { heading: { color: 'red' } } } }}>
+      <MnetUIBase 
+        theme={{ accordion: { hover: { heading: { color: 'red' } } } }}
+      >
         <Accordion>
           <AccordionPanel
             label="Panel 1"

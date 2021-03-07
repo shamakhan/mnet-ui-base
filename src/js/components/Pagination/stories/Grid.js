@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Card, Grid, Grommet, Pagination, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Card, Grid, MnetUIBase, Pagination, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const data = [];
 
@@ -28,7 +28,7 @@ const PaginatedGrid = () => {
   };
 
   return (
-    <Grommet theme={grommet} full>
+    <MnetUIBase theme={mnet} full>
       <Box pad="large" gap="medium">
         <Box height={{ min: 'medium' }}>
           <Grid columns="small" rows="small" gap="medium" justify="center">
@@ -44,7 +44,7 @@ const PaginatedGrid = () => {
           <Pagination numberItems={data.length} onChange={handleChange} />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

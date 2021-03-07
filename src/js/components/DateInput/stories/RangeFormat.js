@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DateInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DateInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const dateFormat = new Intl.DateTimeFormat(undefined, {
   month: 'short',
@@ -19,7 +19,7 @@ export const RangeFormat = () => {
     setValue(nextValue);
   };
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Box width="medium">
           <DateInput
@@ -34,7 +34,7 @@ export const RangeFormat = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

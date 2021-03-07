@@ -8,9 +8,9 @@ import {
   CardFooter,
   Chart,
   Grid,
-  Grommet,
+  MnetUIBase,
   Text,
-} from 'grommet';
+} from 'mnet-ui-base';
 
 const theme = {
   themeMode: 'dark',
@@ -104,7 +104,7 @@ const Identifier = ({ children, title, subTitle, size, ...rest }) => (
 );
 
 export const Clickable = () => (
-  <Grommet theme={theme} full>
+  <MnetUIBase theme={theme} full>
     <Box pad="large" background="dark-1" height="100%">
       <Grid gap="medium" columns={{ count: 'fit', size: 'small' }}>
         {data.map(value => (
@@ -132,7 +132,7 @@ export const Clickable = () => (
         ))}
       </Grid>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

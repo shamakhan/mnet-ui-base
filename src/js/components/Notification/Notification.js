@@ -17,9 +17,7 @@ export const addNotification = (type, config) => {
   return id;
 };
 
-export const addToast = config => {
-  return addNotification('toast', config);
-};
+export const addToast = config => addNotification('toast', config);
 
 export const removeNotification = id => {
   emitter.emit('removeNotification', id);

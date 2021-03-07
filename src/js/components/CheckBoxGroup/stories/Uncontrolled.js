@@ -12,8 +12,7 @@ import {
 } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 
-const CheckBoxGroupForm = () => {
-  return (
+const CheckBoxGroupForm = () => (
     <MnetUIBase theme={mnet}>
       <Box pad="medium">
         <Heading level="3">Form with string options</Heading>
@@ -53,7 +52,6 @@ const CheckBoxGroupForm = () => {
       </Box>
     </MnetUIBase>
   );
-};
 
 storiesOf('CheckBoxGroup', module).add('Form uncontrolled', () => (
   <CheckBoxGroupForm />

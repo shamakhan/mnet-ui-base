@@ -4,12 +4,12 @@ import {
   Avatar,
   Button,
   Box,
-  grommet,
-  Grommet,
+  mnet,
+  MnetUIBase,
   Nav,
   Stack,
   Text,
-} from 'grommet';
+} from 'mnet-ui-base';
 
 import {
   Analytics,
@@ -68,7 +68,7 @@ const MainNavigation = () => (
 );
 
 export const Labels = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box direction="row" height={{ min: '100%' }}>
       <Sidebar
         responsive={false}
@@ -80,7 +80,7 @@ export const Labels = () => (
         <MainNavigation />
       </Sidebar>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

@@ -19,7 +19,6 @@ import { base as iconBase } from 'grommet-icons/themes/base';
 
 import { deepFreeze, deepMerge } from '../utils/object';
 import { parseMetricToNum } from '../utils/mixins';
-import { parseMetricToNum } from '../utils/mixins';
 
 const brandColor = '#E15151';
 const accentColors = ['#38C18B', '#8F94A6', '#739FFC', '#439ADC'];
@@ -136,7 +135,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
   });
 
   const borderWidth = 2;
-  const controlBorderWidth = 1;
   const controlBorderWidth = 1;
 
   const result = deepMerge(iconBase, {
@@ -1510,27 +1508,6 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       tipSize: '5px',
       round: 'small',
       maxWidth: '20%',
-    },
-    pagination: {
-      background: 'white',
-      round: 'small',
-      border: {
-        color: 'dark-6',
-      },
-      pad: 'xlarge',
-      active: {
-        color: '#e7eaf1',
-      },
-      icon: {
-        bgColor: 'light-2',
-        pad: 'xsmall',
-      },
-    },
-    tooptip: {
-      background: 'dark-1',
-      color: 'white',
-      tipSize: '5px',
-      round: 'small',
     },
   });
 

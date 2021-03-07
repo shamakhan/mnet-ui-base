@@ -44,9 +44,9 @@ describe('Grid', () => {
     console.warn = jest.fn();
     const warnSpy = jest.spyOn(console, 'warn');
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Grid rows={['flex']} fill={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -97,7 +97,7 @@ describe('Grid', () => {
     const warnSpy = jest.spyOn(console, 'warn');
     expect(() => {
       renderer.create(
-        <Grommet>
+        <MnetUIBase>
           <Grid
             rows={['xxsmall', 'medium', 'xsmall']}
             columns="small"
@@ -108,7 +108,7 @@ describe('Grid', () => {
               { name: 'footer', start: [2, 0], end: [2, 1] },
             ]}
           />
-        </Grommet>,
+        </MnetUIBase>,
       );
     }).toThrow('props.columns.map is not a function');
     expect(warnSpy).toHaveBeenCalledWith(
@@ -225,10 +225,10 @@ describe('Grid', () => {
 
   test('responsive', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Grid responsive />
         <Grid responsive={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -280,7 +280,7 @@ describe('Grid', () => {
 
   test('border', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Grid border="all" />
         <Grid border="horizontal" />
         <Grid border="vertical" />
@@ -304,7 +304,7 @@ describe('Grid', () => {
             { side: 'left', color: 'accent-2', size: 'large', style: 'dashed' },
           ]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

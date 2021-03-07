@@ -537,9 +537,9 @@ describe('Box', () => {
 
   test('width object', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Box width={{ width: '100px' }} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -576,7 +576,7 @@ describe('Box', () => {
 
   test('hoverIndicator', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Box>
           <Box onClick={() => {}} hoverIndicator />
           <Box onClick={() => {}} hoverIndicator="background-contrast" />\
@@ -592,7 +592,7 @@ describe('Box', () => {
             }}
           />
         </Box>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

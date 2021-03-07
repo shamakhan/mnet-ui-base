@@ -1,21 +1,21 @@
 import React from 'react';
 
 import {
-  grommet,
+  mnet,
   Box,
   Meter,
-  Grommet,
+  MnetUIBase,
   Heading,
   List,
   ResponsiveContext,
   Text,
   Tip,
-} from 'grommet';
-import { deepMerge } from 'grommet/utils';
+} from 'mnet-ui-base';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 const tooltipColor = 'white';
 
-const theme = deepMerge(grommet, {
+const theme = deepMerge(mnet, {
   list: {
     item: {
       pad: { horizontal: 'small', vertical: 'xsmall' },
@@ -99,7 +99,7 @@ const TipContent = ({ size }) => (
 );
 
 export const ResponsiveTip = () => (
-  <Grommet theme={theme} full>
+  <MnetUIBase theme={theme} full>
     <ResponsiveContext.Consumer>
       {size => (
         <Box
@@ -127,7 +127,7 @@ export const ResponsiveTip = () => (
         </Box>
       )}
     </ResponsiveContext.Consumer>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ResponsiveTip.storyName = 'Responsive';

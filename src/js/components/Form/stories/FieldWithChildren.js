@@ -6,15 +6,15 @@ import {
   CheckBoxGroup,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
   Select,
   TextArea,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const passwordRulesStrong = [
   {
@@ -40,7 +40,7 @@ const passwordRulesStrong = [
 ];
 
 export const FieldWithChildren = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Box fill align="center" justify="center">
       <Box width="medium">
         <Form
@@ -103,7 +103,7 @@ export const FieldWithChildren = () => (
         </Form>
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 FieldWithChildren.storyName = 'Field with children';

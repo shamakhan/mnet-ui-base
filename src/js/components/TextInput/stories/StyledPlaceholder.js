@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { Box, Form, Grommet, TextInput, Text } from 'mnet-ui-base';
+import { Box, Form, MnetUIBase, TextInput, Text } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
 
 export const StyledPlaceholder = () => (
-  <Grommet full theme={grommet}>
+  <MnetUIBase full theme={mnet}>
     <Box>
       <Form>
         <TextInput name="name" placeholder={<Text>placeholder</Text>} />
       </Form>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 StyledPlaceholder.storyName = 'Styled placeholder';

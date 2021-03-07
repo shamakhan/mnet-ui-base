@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { Box, Drop, MnetUIBase } from 'mnet-ui-base';
 import { mnet } from 'mnet-ui-base/themes';
-import { deepMerge } from 'grommet/utils';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 const customTheme = deepMerge(mnet, {
   global: {

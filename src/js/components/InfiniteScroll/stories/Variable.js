@@ -1,14 +1,14 @@
 import React from 'react';
-import { grommet } from 'grommet/themes';
+import { mnet } from 'mnet-ui-base/themes';
 
-import { Grommet, Box, InfiniteScroll, Text } from 'grommet';
+import { MnetUIBase, Box, InfiniteScroll, Text } from 'mnet-ui-base';
 
 const allItems = Array(240)
   .fill()
   .map((_, i) => i + 1);
 
 export const Height = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box>
       <InfiniteScroll items={allItems}>
         {item => (
@@ -24,7 +24,7 @@ export const Height = () => (
         )}
       </InfiniteScroll>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Height.storyName = 'Variable item height';

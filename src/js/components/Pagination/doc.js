@@ -11,7 +11,7 @@ export const doc = Pagination => {
       range of pages.`,
     )
     .usage(
-      `import { Pagination } from 'grommet';
+      `import { Pagination } from 'mnet-ui-base';
       <Pagination />`,
     )
     .intrinsicElement('nav');

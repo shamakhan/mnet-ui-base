@@ -15,9 +15,9 @@ describe('RadioButton', () => {
 
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <RadioButton name="test" a11yTitle="test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = await axe(container);
@@ -95,9 +95,9 @@ describe('RadioButton', () => {
       },
     };
     const component = renderer.create(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <RadioButton label="test" name="test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -115,9 +115,9 @@ describe('RadioButton', () => {
     };
 
     const component = renderer.create(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <RadioButton name="test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const tree = component.toJSON();

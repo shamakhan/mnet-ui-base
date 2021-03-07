@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'styled-components';
-import { ThemeType, BoxTypes, Grommet, Box, Anchor, Button } from 'grommet';
+import { ThemeType, BoxTypes, MnetUIBase, Box, Anchor, Button } from 'mnet-ui-base';
 
 // Custom theme to verify that various `extend` types work correctly
 // Type annotations can only be used in TypeScript files.
@@ -46,7 +46,7 @@ const custom: ThemeType = {
 // Remove ': TReact.FC' is you are not using TypeScript.
 const ExtendTheme: React.FC = () => {
   return (
-    <Grommet theme={custom}>
+    <MnetUIBase theme={custom}>
       <Box pad="small" gap="medium" width="medium">
         <Anchor href="#">Anchor (href)</Anchor>
         <Anchor>Anchor (no href)</Anchor>
@@ -58,7 +58,7 @@ const ExtendTheme: React.FC = () => {
 
         <Box>Un-clickable box should use standard cursor.</Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

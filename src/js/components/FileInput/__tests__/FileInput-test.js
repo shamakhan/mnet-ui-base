@@ -2,101 +2,101 @@ import React from 'react';
 import 'jest-styled-components';
 import { render } from '@testing-library/react';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { FileInput } from '..';
 
 describe('FileInput', () => {
   test('basic', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('multiple', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" multiple />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('multiple aggregateThreshold', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" multiple={{ aggregateThreshold: 2 }} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('accept', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" accept="image/*" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('disabled', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" disabled />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('messages', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput
           name="file"
           messages={{
             browse: 'test browse',
           }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('background', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" background={{ color: 'background-contrast' }} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('border', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" border={{ color: 'brand', size: 'large' }} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('pad', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" pad="small" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('margin', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <FileInput name="file" margin="small" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

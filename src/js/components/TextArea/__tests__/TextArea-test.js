@@ -14,9 +14,9 @@ describe('TextArea', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <TextArea a11yTitle="test" id="item" name="item" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(results).toHaveNoViolations();
@@ -122,14 +122,14 @@ describe('TextArea', () => {
       };
 
       const component = render(
-        <Grommet>
+        <MnetUIBase>
           <TextArea
             id="item"
             name="item"
             placeholder="item"
             onKeyDown={callback}
           />
-        </Grommet>,
+        </MnetUIBase>,
       );
 
       const textArea = component.getByPlaceholderText('item');
@@ -147,14 +147,14 @@ describe('TextArea', () => {
       };
 
       const component = render(
-        <Grommet>
+        <MnetUIBase>
           <TextArea
             id="item"
             name="item"
             placeholder="item"
             onKeyUp={callback}
           />
-        </Grommet>,
+        </MnetUIBase>,
       );
 
       const textArea = component.getByPlaceholderText('item');
@@ -167,9 +167,9 @@ describe('TextArea', () => {
     test('onFocus', () => {
       const onFocus = jest.fn();
       const { container, getByPlaceholderText } = render(
-        <Grommet>
+        <MnetUIBase>
           <TextArea name="item" placeholder="item" onFocus={onFocus} />
-        </Grommet>,
+        </MnetUIBase>,
       );
       fireEvent.focus(getByPlaceholderText('item'));
       expect(container.firstChild).toMatchSnapshot();
@@ -179,9 +179,9 @@ describe('TextArea', () => {
     test('onChange', () => {
       const onChange = jest.fn();
       const { getByPlaceholderText } = render(
-        <Grommet>
+        <MnetUIBase>
           <TextArea name="item" placeholder="item" onChange={onChange} />
-        </Grommet>,
+        </MnetUIBase>,
       );
       const input = getByPlaceholderText('item');
       fireEvent.change(input, {
@@ -194,9 +194,9 @@ describe('TextArea', () => {
     test('onBlur is being called', () => {
       const onBlur = jest.fn();
       const { getByPlaceholderText } = render(
-        <Grommet>
+        <MnetUIBase>
           <TextArea name="item" placeholder="item" onBlur={onBlur} />
-        </Grommet>,
+        </MnetUIBase>,
       );
       fireEvent.blur(getByPlaceholderText('item'));
       expect(onBlur).toHaveBeenCalledTimes(1);

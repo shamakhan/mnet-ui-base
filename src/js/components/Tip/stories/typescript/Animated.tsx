@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Tip } from 'grommet';
+import { mnet, Box, Button, MnetUIBase, Tip } from 'mnet-ui-base';
 import { UserFemale, Info } from 'grommet-icons';
 
 const Circle = ({ ...rest }) => (
@@ -14,7 +14,7 @@ const Circle = ({ ...rest }) => (
 
 export const Animated = () => {
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box
         align="center"
         justify="center"
@@ -39,7 +39,7 @@ export const Animated = () => {
         </Tip>
         Double animation of 'fadeIn' and 'pulse'
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

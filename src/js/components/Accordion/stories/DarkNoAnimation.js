@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Accordion, AccordionPanel, Box, MnetUIBase } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
+import { Accordion, AccordionPanel, Box } from 'mnet-ui-base';
 
 export const DarkNoAnimation = () => (
   <div>

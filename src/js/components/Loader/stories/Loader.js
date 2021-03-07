@@ -4,8 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { Box, Button, Text } from 'mnet-ui-base';
 import { Loader } from '../Loader';
 
-const LoaderPreview = () => {
-  return (
+const LoaderPreview = () => (
     <>
       <Box margin="small" align="center">
         <Text margin="large">Circle Loader</Text>
@@ -25,6 +24,5 @@ const LoaderPreview = () => {
       </Box>
     </>
   );
-};
 
 storiesOf('Loader', module).add('Loaders', () => <LoaderPreview />);

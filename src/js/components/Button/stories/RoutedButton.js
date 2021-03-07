@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Box,
-  RoutedButton as GrommetRoutedButton,
-  Text,} from 'mnet-ui-base';
+  RoutedButton as MnetUIBaseRoutedButton,
+  Text} from 'mnet-ui-base';
 
 export const RoutedButton = () => (
   <>
@@ -10,7 +10,7 @@ export const RoutedButton = () => (
       <Text margin="medium" size="small">
         Note: RoutedButton will soon be deprecated
       </Text>
-      <GrommetRoutedButton label="Go" path="/" />
+      <MnetUIBaseRoutedButton label="Go" path="/" />
     </Box>
   </>
 );

@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { Box, Calendar, Grommet } from 'grommet';
+import { Box, Calendar, MnetUIBase } from 'mnet-ui-base';
 
-import { grommet } from 'grommet/themes';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Fill = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center">
       <Box height="large" width="large" border>
         <Calendar fill daysOfWeek />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

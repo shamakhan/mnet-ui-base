@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Grommet, Box, Stack } from 'grommet';
+import { MnetUIBase, Box, Stack } from 'mnet-ui-base';
 
 export const Simple = () => (
-  <Grommet>
+  <MnetUIBase>
     <Stack anchor="center">
       <Box pad="large" background="neutral-1" />
       <Box pad="small" background="accent-1" />
     </Stack>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

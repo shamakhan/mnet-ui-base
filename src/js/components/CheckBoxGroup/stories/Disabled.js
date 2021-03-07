@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, CheckBoxGroup, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, CheckBoxGroup, MnetUIBase, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Disabled = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box pad="medium" gap="large">
       <Box>
         <Text margin={{ vertical: 'small' }}>Disabled Group</Text>
@@ -21,7 +21,7 @@ export const Disabled = () => (
         />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Text, Tip } from 'grommet';
+import { mnet, Box, Button, MnetUIBase, Text, Tip } from 'mnet-ui-base';
 
 export const Children = () => {
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box align="center" pad="xlarge" gap="xlarge" fill>
         <Text>Tooltip will be displayed once hovering on the Tip's Child</Text>
         <Tip
@@ -55,7 +55,7 @@ export const Children = () => {
           <Button label="Button Child" />
         </Tip>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

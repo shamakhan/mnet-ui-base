@@ -32,6 +32,6 @@ const Confirm = () => {
       <Text size="large" weight={600}>Open Confirm Box</Text>
     </Button>
   </Box>
-)};
+);};
 
 storiesOf('Modal Pop-up', module).add('Confirm Box', () => <Confirm />);

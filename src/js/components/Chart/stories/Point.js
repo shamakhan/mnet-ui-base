@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Grommet, Box, Chart, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Chart, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const values = [{ value: [10, 20] }, { value: [20, 30] }, { value: [30, 15] }];
 
 export const Point = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box direction="row-responsive" wrap pad="large">
       {['circle', 'square', 'diamond', 'star', 'triangle', 'triangleDown'].map(
         point => (
@@ -19,7 +19,7 @@ export const Point = () => (
         ),
       )}
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

@@ -28,6 +28,7 @@ const CustomMultiSelect = ({
   const [isValid, setIsValid] = React.useState(true);
   const [errorMsg, setErrorMsg] = React.useState('');
 
+  // eslint-disable-next-line no-shadow
   const setTextAreaValueFn = value => {
     setIsValid(true);
     setTextAreaValue(value);

@@ -161,8 +161,6 @@ describe('CheckBox', () => {
     fireEvent.click(getByText('test-label'));
     expect(container.firstChild).toMatchSnapshot();
   });
-});
-
   test('controlled', () => {
     const { container, getByText } = render(
       <MnetUIBase>

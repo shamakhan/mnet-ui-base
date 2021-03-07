@@ -1,7 +1,7 @@
 import React, { ReactText, useState } from 'react';
 
-import { Grommet, Box, DataTable, Meter, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DataTable, Meter, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 import { ColumnConfig } from '../..';
 
@@ -146,7 +146,7 @@ export const OnSelectDataTable = () => {
   const [select, setSelect] = useState<ReactText[]>([]);
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <DataTable
           columns={columns}
@@ -156,7 +156,7 @@ export const OnSelectDataTable = () => {
           onSelect={setSelect}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

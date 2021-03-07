@@ -2,7 +2,7 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import 'jest-styled-components';
 
-import { MnetUIBase, Image, Box } from '../../MnetUIBase';
+import { MnetUIBase, Image, Box } from "../..";
 import { InfiniteScroll } from '..';
 
 const simpleItems = value =>
@@ -141,11 +141,11 @@ describe('InfiniteScroll', () => {
       }
     }
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll items={mixedItems}>
           {(item, index) => <div key={index}>{item}</div>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -156,7 +156,7 @@ describe('Number of Items Rendered', () => {
   step when step < items.length`, () => {
     const step = 50;
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll
           items={simpleItems(1000)}
           // show={117}
@@ -164,7 +164,7 @@ describe('Number of Items Rendered', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -176,11 +176,11 @@ describe('Number of Items Rendered', () => {
   step when step = array.length`, () => {
     const step = 200;
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll items={simpleItems(200)} step={step}>
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -192,11 +192,11 @@ describe('Number of Items Rendered', () => {
   item array when step > array`, () => {
     const numItems = 1000;
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll items={simpleItems(numItems)} step={1050}>
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -208,11 +208,11 @@ describe('Number of Items Rendered', () => {
     const step = 25;
     const numItems = 200;
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll items={simpleItems(numItems)} step={step}>
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -234,11 +234,11 @@ describe('show scenarios', () => {
     // https://github.com/jsdom/jsdom/issues/1695#issuecomment-449931788
     window.HTMLElement.prototype.scrollIntoView = jest.fn();
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll items={simpleItems(300)} show={105}>
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
     // advance timers so InfiniteScroll can scroll to show index
     act(() => jest.advanceTimersByTime(200));
@@ -255,7 +255,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 67;
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll
           items={simpleItems(numItems)}
           show={showIndex}
@@ -263,7 +263,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const pageItems = createPageItems(container.firstChild.children);
@@ -282,7 +282,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 41;
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll
           items={simpleItems(numItems)}
           show={showIndex}
@@ -290,7 +290,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // Check to see that expected item exists
@@ -310,7 +310,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 26;
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll
           items={simpleItems(numItems)}
           show={showIndex}
@@ -318,7 +318,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // Check to see that expected item exists
@@ -340,7 +340,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 88;
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll
           items={simpleItems(numItems)}
           replace
@@ -349,7 +349,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // Check to see that expected item exists
@@ -378,7 +378,7 @@ describe('show scenarios', () => {
     const numItems = 200;
     const showIndex = 26;
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <InfiniteScroll
           items={simpleItems(numItems)}
           replace
@@ -387,7 +387,7 @@ describe('show scenarios', () => {
         >
           {item => <Box key={item}>{item}</Box>}
         </InfiniteScroll>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // Check to see that expected item exists

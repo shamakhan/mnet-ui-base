@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grommet, Anchor, Box } from 'grommet';
+import { MnetUIBase, Anchor, Box } from 'mnet-ui-base';
 import { Add } from 'grommet-icons';
 
 const customTheme = {
@@ -12,13 +12,13 @@ const customTheme = {
 };
 
 export const Theme = () => (
-  <Grommet theme={customTheme}>
+  <MnetUIBase theme={customTheme}>
     <Box pad="medium">
       <Anchor icon={<Add />} label="Add" color="custom" />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {
-  title: 'Utilities/Grommet/Theme',
+  title: 'Utilities/MnetUIBase/Theme',
 };

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
 import {
-  grommet,
+  mnet,
   Anchor,
   Box,
   DataTable,
-  Grommet,
+  MnetUIBase,
   Heading,
   Paragraph,
   Text,
   Tip,
-} from 'grommet';
+} from 'mnet-ui-base';
 import { Trash, Refresh, Info } from 'grommet-icons';
 
 // Source code for the data can be found here
@@ -35,7 +35,7 @@ export const HeaderActions = () => {
   };
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box
         align="center"
         background="dark-1"
@@ -99,7 +99,7 @@ export const HeaderActions = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

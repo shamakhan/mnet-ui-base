@@ -6,7 +6,7 @@ import 'jest-axe/extend-expect';
 import 'regenerator-runtime/runtime';
 
 import { Collapsible } from '..';
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Text } from '../../Text';
 
 describe('Collapsible', () => {
@@ -14,11 +14,11 @@ describe('Collapsible', () => {
 
   beforeEach(() => {
     App = ({ ...props }) => (
-      <Grommet>
+      <MnetUIBase>
         <Collapsible {...props}>
           <Text>Example</Text>
         </Collapsible>
-      </Grommet>
+      </MnetUIBase>
     );
   });
   afterEach(cleanup);

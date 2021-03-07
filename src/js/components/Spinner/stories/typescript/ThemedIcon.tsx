@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Box, Grommet, Spinner } from 'grommet';
+import { Box, MnetUIBase, Spinner } from 'mnet-ui-base';
 import { Node } from 'grommet-icons';
-import { ThemeType } from 'grommet/themes';
+import { ThemeType } from 'mnet-ui-base/themes';
 
 // Type annotations can only be used in TypeScript files.
 // Remove ': ThemeType' if you are not using Typescript.
@@ -54,16 +54,16 @@ const themeWithAnimatedIcon: ThemeType = {
 
 export const ThemedIcon = () => (
   <>
-    <Grommet theme={themeWithAnimation}>
+    <MnetUIBase theme={themeWithAnimation}>
       <Box pad="large">
         <Spinner />
       </Box>
-    </Grommet>
-    <Grommet theme={themeWithAnimatedIcon}>
+    </MnetUIBase>
+    <MnetUIBase theme={themeWithAnimatedIcon}>
       <Box pad="large">
         <Spinner />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   </>
 );
 

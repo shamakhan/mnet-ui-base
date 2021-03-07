@@ -13,7 +13,7 @@ import {
 import { mnet } from 'mnet-ui-base/themes';
 import { deepMerge } from 'mnet-ui-base/utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   formField: {
     label: {
       requiredIndicator: true,
@@ -50,7 +50,7 @@ export const RequiredLabel = () => (
         </Text>
       </Form>
     </Box>
-  </>
+  </MnetUIBase>
 );
 
 RequiredLabel.storyName = 'Required label';

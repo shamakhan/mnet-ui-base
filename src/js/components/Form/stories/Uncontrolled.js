@@ -7,7 +7,6 @@ import {
   Form,
   FormField,
   FileInput,
-  Grommet,
   MaskedInput,
   RadioButtonGroup,
   RangeInput,
@@ -77,10 +76,6 @@ export const Uncontrolled = () => (
   </div>
 );
 
-<<<<<<<< HEAD:src/js/components/Form/stories/Uncontrolled.js
 export default {
   title: 'Input/Form/Uncontrolled',
 };
-========
-storiesOf('Form', module).add('FormField children', () => <Example />);
->>>>>>>> Squashed commit of the following::src/js/components/Form/stories/AllChildren.js

@@ -6,15 +6,15 @@ import {
   CheckBox,
   Form,
   FormField,
-  Grommet,
+  MnetUIBase,
   TextInput,
-} from 'grommet';
-import { grommet } from 'grommet/themes';
+} from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const DynamicFields = () => {
   const [haveAlias, setHaveAlias] = useState();
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -46,7 +46,7 @@ export const DynamicFields = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

@@ -8,7 +8,7 @@ import 'regenerator-runtime/runtime';
 import { act, cleanup, render, fireEvent } from '@testing-library/react';
 import { axe } from 'jest-axe';
 
-import { Grommet } from '../../Grommet';
+import { MnetUIBase } from '../../MnetUIBase';
 import { Form } from '..';
 import { FormField } from '../../FormField';
 import { Button } from '../../Button';
@@ -25,11 +25,11 @@ describe('Form accessibility', () => {
   test(`TextInput in Form should have
   no accessibility violations`, async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField a11yTitle="test" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -38,13 +38,13 @@ describe('Form accessibility', () => {
 
   test('Select in Form should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField>
             <Select options={['small', 'medium', 'large']} a11yTitle="test" />
           </FormField>
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -53,13 +53,13 @@ describe('Form accessibility', () => {
 
   test('CheckBox in Form should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField>
             <CheckBox label="test" />
           </FormField>
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -69,13 +69,13 @@ describe('Form accessibility', () => {
   test(`FormField with an explicit TextInput child
   should have no accessibility violations`, async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField>
             <TextInput a11yTitle="test" />
           </FormField>
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -85,7 +85,7 @@ describe('Form accessibility', () => {
   test(`Box with TextInput in Form should
   have no accessibility violations`, async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField>
             <Box>
@@ -93,7 +93,7 @@ describe('Form accessibility', () => {
             </Box>
           </FormField>
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -106,9 +106,9 @@ describe('Form uncontrolled', () => {
 
   test('empty', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Form />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -116,11 +116,11 @@ describe('Form uncontrolled', () => {
 
   test('with field', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField name="test" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -128,11 +128,11 @@ describe('Form uncontrolled', () => {
 
   test('errors', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form errors={{ test: 'missing' }}>
           <FormField name="test" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -140,11 +140,11 @@ describe('Form uncontrolled', () => {
 
   test('infos', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form infos={{ test: 'missing' }}>
           <FormField name="test" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -153,14 +153,14 @@ describe('Form uncontrolled', () => {
   test('uncontrolled', () => {
     const onSubmit = jest.fn();
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onSubmit={onSubmit}>
           <FormField name="test">
             <TextInput name="test" placeholder="test input" />
           </FormField>
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -180,14 +180,14 @@ describe('Form uncontrolled', () => {
   test('uncontrolled onValidate', () => {
     const onValidate = jest.fn();
     const { getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onValidate={onValidate}>
           <FormField name="test" required>
             <TextInput name="test" placeholder="test input" />
           </FormField>
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('Submit'));
@@ -210,14 +210,14 @@ describe('Form uncontrolled', () => {
     };
 
     const { getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onValidate={onValidate}>
           <FormField name="test" validate={testRules}>
             <TextInput name="test" placeholder="test input" />
           </FormField>
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('Submit'));
@@ -240,14 +240,14 @@ describe('Form uncontrolled', () => {
     };
 
     const { getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onValidate={onValidate}>
           <FormField name="test" validate={testRules}>
             <TextInput name="test" placeholder="test input" />
           </FormField>
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByText('Submit'));
@@ -269,7 +269,7 @@ describe('Form uncontrolled', () => {
 
     const onSubmit = jest.fn();
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onSubmit={onSubmit}>
           <FormField
             name="test"
@@ -284,7 +284,7 @@ describe('Form uncontrolled', () => {
           />
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -323,7 +323,7 @@ describe('Form uncontrolled', () => {
   test('regexp validation', () => {
     const onSubmit = jest.fn();
     const { getByPlaceholderText, getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onSubmit={onSubmit}>
           <FormField
             name="test"
@@ -333,7 +333,7 @@ describe('Form uncontrolled', () => {
           />
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -352,7 +352,7 @@ describe('Form uncontrolled', () => {
   test('validate', () => {
     const onSubmit = jest.fn();
     const { getByPlaceholderText, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onSubmit={onSubmit}>
           <FormField
             name="test"
@@ -374,7 +374,7 @@ describe('Form uncontrolled', () => {
           />
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -405,12 +405,12 @@ describe('Form uncontrolled', () => {
   test('required validation', () => {
     const onSubmit = jest.fn();
     const { getByPlaceholderText, getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onSubmit={onSubmit}>
           <FormField name="test" required placeholder="test input" />
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.click(getByText('Submit'));
@@ -424,12 +424,12 @@ describe('Form uncontrolled', () => {
   test('reset clears form', () => {
     const onReset = jest.fn();
     const { getByPlaceholderText, getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onReset={onReset}>
           <FormField name="test" required placeholder="test input" />
           <Button type="reset" primary label="Reset" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.change(getByPlaceholderText('test input'), {
       target: { value: 'Input has changed' },
@@ -441,7 +441,7 @@ describe('Form uncontrolled', () => {
   test('initial values', () => {
     const onSubmit = jest.fn();
     const { getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         {/* this test continues running forever if the whole event
                 passed to onSubmit */}
         <Form onSubmit={({ value, touched }) => onSubmit({ value, touched })}>
@@ -454,7 +454,7 @@ describe('Form uncontrolled', () => {
           <FormField name="test2" value="Initial value2" />
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.click(getByText('Submit'));
     expect(queryByText('required')).toBeNull();
@@ -469,7 +469,7 @@ describe('Form uncontrolled', () => {
   test('validate on change', async () => {
     jest.useFakeTimers();
     const { getByPlaceholderText, queryAllByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form validate="change">
           <FormField
             label="Name"
@@ -503,7 +503,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button label="submit" type="submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // change input of first field
@@ -537,7 +537,7 @@ describe('Form uncontrolled', () => {
       queryAllByText,
       queryByText,
     } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form validate="blur">
           <FormField
             onFocus={onFocus}
@@ -572,7 +572,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button onFocus={onFocus} label="submit" type="submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // both fields have required error message
@@ -613,7 +613,7 @@ describe('Form uncontrolled', () => {
     jest.useFakeTimers();
     let valid;
     const { getByPlaceholderText, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form
           validate="change"
           onValidate={validationResults => {
@@ -675,7 +675,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button label="submit" type="submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // verify validate on change
@@ -779,7 +779,7 @@ describe('Form uncontrolled', () => {
   test('uncontrolled reset without value', () => {
     const onChange = jest.fn();
     const { getByPlaceholderText, getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onChange={onChange}>
           <FormField
             name="test"
@@ -789,7 +789,7 @@ describe('Form uncontrolled', () => {
           />
           <Button type="reset" primary label="Reset" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.change(getByPlaceholderText('test input'), {
       target: { value: 'Input has changed' },
@@ -803,14 +803,14 @@ describe('Form uncontrolled', () => {
   test('disabled FormField', () => {
     const onSubmit = jest.fn();
     const { getByPlaceholderText, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onSubmit={onSubmit}>
           <FormField disabled>
             <TextInput a11yTitle="test" placeholder="test input" />
           </FormField>
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.change(getByPlaceholderText('test input'), {
       target: { value: 'v' },
@@ -828,7 +828,7 @@ describe('Form uncontrolled', () => {
   test('regexp validation with status', () => {
     const onSubmit = jest.fn();
     const { getByPlaceholderText, getByText, getAllByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onSubmit={onSubmit}>
           <FormField
             name="test"
@@ -843,7 +843,7 @@ describe('Form uncontrolled', () => {
           />
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -870,13 +870,13 @@ describe('Form uncontrolled', () => {
     );
     const onChange = jest.fn();
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onChange={onChange}>
           <FormField required>
             <CustomTextInput name="test" onChange={onChange} />
           </FormField>
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.change(getByPlaceholderText('Username'), {
       target: { value: 'v' },
@@ -904,7 +904,7 @@ describe('Form uncontrolled', () => {
     const expectedMessage = 'At least one special character or space';
 
     const { getByPlaceholderText, getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField
             label="Create a Password"
@@ -917,7 +917,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button type="submit" label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const input = getByPlaceholderText('Enter Password');
@@ -953,7 +953,7 @@ describe('Form uncontrolled', () => {
       "That's amazing. I've got the same combination on my luggage!";
 
     const { getByPlaceholderText, getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField
             label="Druidia Shield Combination"
@@ -964,7 +964,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button type="submit" label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const input = getByPlaceholderText('Enter Combination');
@@ -1021,7 +1021,7 @@ describe('Form uncontrolled', () => {
     ];
 
     const { getByPlaceholderText, getByText, queryByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField
             label="Druidia Shield Combination"
@@ -1032,7 +1032,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button type="submit" label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const input = getByPlaceholderText('Enter Combination');
@@ -1090,7 +1090,7 @@ describe('Form uncontrolled', () => {
     const onChange = jest.fn();
     window.scrollTo = jest.fn();
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField>
             <Select
@@ -1103,7 +1103,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.click(getByPlaceholderText('test input'));
@@ -1118,7 +1118,7 @@ describe('Form uncontrolled', () => {
   test('uncontrolled onChange with touched', () => {
     const onChange = jest.fn();
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onChange={onChange}>
           <FormField
             name="test"
@@ -1128,7 +1128,7 @@ describe('Form uncontrolled', () => {
           />
           <Button type="reset" primary label="Reset" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.change(getByPlaceholderText('test input'), {
@@ -1144,7 +1144,7 @@ describe('Form uncontrolled', () => {
   test('reset clears select, checkbox, radiobuttongroup', () => {
     const onReset = jest.fn();
     const { container, getByPlaceholderText, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form onReset={onReset}>
           <FormField
             label="Select Size"
@@ -1182,7 +1182,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button type="reset" primary label="Reset" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.click(getByPlaceholderText('test select'));
@@ -1199,7 +1199,7 @@ describe('Form uncontrolled', () => {
     const onChange = jest.fn();
     window.scrollTo = jest.fn();
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Form>
           <FormField>
             <Select
@@ -1211,7 +1211,7 @@ describe('Form uncontrolled', () => {
           </FormField>
           <Button type="submit" primary label="Submit" />
         </Form>
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.click(getByPlaceholderText('test input'));
@@ -1254,9 +1254,9 @@ describe('Form uncontrolled', () => {
       );
     };
     const { getByPlaceholderText, getByLabelText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();

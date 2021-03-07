@@ -19,12 +19,12 @@ describe('List', () => {
   test('should have no accessibility violations', async () => {
     const onClickItem = jest.fn();
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <List
           data={[{ a: 'alpha' }, { a: 'beta' }]}
           onClickItem={onClickItem}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.click(getByText('alpha'));
@@ -114,9 +114,9 @@ describe('List', () => {
 
   test('border boolean false', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={['one', 'two']} border={false} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -246,12 +246,12 @@ describe('List events', () => {
   beforeEach(() => {
     onClickItem = jest.fn();
     App = () => (
-      <Grommet>
+      <MnetUIBase>
         <List
           data={[{ a: 'alpha' }, { a: 'beta' }]}
           onClickItem={onClickItem}
         />
-      </Grommet>
+      </MnetUIBase>
     );
   });
 
@@ -347,9 +347,9 @@ describe('List events', () => {
 
   test('should paginate', () => {
     const { container, getAllByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={data} paginate />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = getAllByText('entry', { exact: false });
@@ -360,9 +360,9 @@ describe('List events', () => {
 
   test('should apply pagination styling', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={data} paginate={{ background: 'red', margin: 'large' }} />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -370,9 +370,9 @@ describe('List events', () => {
   test('should show correct item index when "show" is a number', () => {
     const show = 15;
     const { container, getByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={data} show={show} paginate />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const result = getByText(`entry-${show}`);
@@ -383,9 +383,9 @@ describe('List events', () => {
   test('should show correct page when "show" is { page: # }', () => {
     const desiredPage = 2;
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={data} show={{ page: desiredPage }} paginate />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const activePage = container.querySelector(`[aria-current="page"]`)
@@ -398,9 +398,9 @@ describe('List events', () => {
   test('should render correct num items per page (step)', () => {
     const step = 14;
     const { container, getAllByText } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={data} step={step} paginate />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = getAllByText('entry', { exact: false });
@@ -411,9 +411,9 @@ describe('List events', () => {
 
   test('should render new data when page changes', () => {
     const { container, getByLabelText } = render(
-      <Grommet>
+      <MnetUIBase>
         <List data={data} paginate />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();

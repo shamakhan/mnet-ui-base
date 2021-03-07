@@ -5,8 +5,7 @@ import { FormPrevious, FormNext } from 'grommet-icons';
 import { Box } from 'mnet-ui-base';
 import { Pagination } from '../Pagination';
 
-const PaginationPreview = () => {
-  return (
+const PaginationPreview = () => (
     <div>
       <Box align="center" pad="large">
         <Pagination
@@ -19,6 +18,5 @@ const PaginationPreview = () => {
       </Box>
     </div>
   );
-};
 
 storiesOf('Pagination', module).add('Pagination', () => <PaginationPreview />);

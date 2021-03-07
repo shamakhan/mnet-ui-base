@@ -1,7 +1,7 @@
 import React from 'react';
-import { Grommet, Box, DataTable } from 'grommet';
-import { grommet } from 'grommet/themes';
-import { deepMerge } from 'grommet/utils';
+import { MnetUIBase, Box, DataTable } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
+import { deepMerge } from 'mnet-ui-base/utils';
 
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
@@ -10,7 +10,7 @@ import { columns, data } from './data';
 const pinnedColumns = columns.map(c => ({ ...c }));
 pinnedColumns[0].pin = true;
 
-const myTheme = deepMerge(grommet, {
+const myTheme = deepMerge(mnet, {
   table: {
     footer: {
       background: {
@@ -34,7 +34,7 @@ const myTheme = deepMerge(grommet, {
 });
 
 export const Fill = () => (
-  <Grommet theme={myTheme} full>
+  <MnetUIBase theme={myTheme} full>
     <Box fill="vertical">
       <DataTable
         columns={pinnedColumns}
@@ -47,7 +47,7 @@ export const Fill = () => (
         }}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Fill.storyName = 'Fill and pin';

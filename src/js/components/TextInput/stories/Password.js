@@ -1,15 +1,15 @@
 import React from 'react';
 
 import { Hide, View } from 'grommet-icons';
-import { Box, Button, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, MnetUIBase, TextInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Password = () => {
   const [value, setValue] = React.useState('');
   const [reveal, setReveal] = React.useState(false);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box
         width="medium"
         direction="row"
@@ -29,7 +29,7 @@ export const Password = () => {
           onClick={() => setReveal(!reveal)}
         />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

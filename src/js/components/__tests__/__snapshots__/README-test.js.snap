@@ -748,7 +748,7 @@ An Avatar.
 ## Usage
 
 \`\`\`javascript
-import { Avatar } from 'grommet';
+import { Avatar } from 'mnet-ui-base';
 <Avatar/>
 \`\`\`
 
@@ -3854,7 +3854,7 @@ A Card is a container of information that provides access to more
 ## Usage
 
 \`\`\`javascript
-import { Card } from 'grommet';
+import { Card } from 'mnet-ui-base';
 <Card/>
 \`\`\`
 
@@ -5120,7 +5120,7 @@ A group of CheckBoxes.
 ## Usage
 
 \`\`\`javascript
-import { CheckBoxGroup } from 'grommet';
+import { CheckBoxGroup } from 'mnet-ui-base';
         <CheckBoxGroup />
 \`\`\`
 
@@ -5820,7 +5820,7 @@ Takes a data set and visualizes it. While Chart renders a
 ## Usage
 
 \`\`\`javascript
-import { DataChart } from 'grommet';
+import { DataChart } from 'mnet-ui-base';
 <DataChart data={data} property={} />
 \`\`\`
 
@@ -7537,7 +7537,7 @@ A control to input a single date or a date range.
 ## Usage
 
 \`\`\`javascript
-import { DateInput } from 'grommet';
+import { DateInput } from 'mnet-ui-base';
 <DateInput id='item' name='item' />
 \`\`\`
 
@@ -8445,7 +8445,7 @@ A control to input one or more files.
 ## Usage
 
 \`\`\`javascript
-import { FileInput } from 'grommet';
+import { FileInput } from 'mnet-ui-base';
 <FileInput id='file' name='file' />
 \`\`\`
 
@@ -10075,15 +10075,15 @@ Defaults to
   }
 \`\`\`
 ",
-  "Grommet": "## Grommet
-The top level Grommet container.
+  "MnetUIBase": "## MnetUIBase
+The top level MnetUIBase container.
 
-[![](https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png)](https://storybook.grommet.io/?selectedKind=Utilities-Grommet&full=0&stories=1&panelRight=0) [![](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/grommet&module=%2Fsrc%2FGrommet.js)
+[![](https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png)](https://storybook.grommet.io/?selectedKind=Utilities-MnetUIBase&full=0&stories=1&panelRight=0) [![](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/grommet&module=%2Fsrc%2FMnetUIBase.js)
 ## Usage
 
 \`\`\`javascript
-import { Grommet } from 'grommet';
-<Grommet>...</Grommet>
+import { mnet } from 'mnet-ui-base';
+<MnetUIBase>...</MnetUIBase>
 \`\`\`
 
 ## Properties
@@ -10145,7 +10145,7 @@ boolean
 
 **plain**
 
-Whether or not Grommet should apply a global font-family, font-size,
+Whether or not MnetUIBase should apply a global font-family, font-size,
         and line-height.
 
 \`\`\`
@@ -10162,7 +10162,7 @@ boolean
 
 **theme**
 
-Custom styles for Grommet app component.
+Custom styles for MnetUIBase app component.
 
 \`\`\`
 object
@@ -10206,7 +10206,7 @@ div
 
 **grommet.extend**
 
-Any additional style for Grommet. Expects \`string | (props) => {}\`.
+Any additional style for MnetUIBase. Expects \`string | (props) => {}\`.
 
 Defaults to
 
@@ -11930,7 +11930,7 @@ import { Main } from 'mnet-ui-base';
   "Markdown": "## MnetUIBaseMarkdown
 Markdown formatting using MnetUIBase components.
 
-Grommet uses 'markdown-to-jsx' in Markdown component,
+MnetUIBase uses 'markdown-to-jsx' in Markdown component,
       you can see all the options in the documentation.
 
 [![](https://cdn-images-1.medium.com/fit/c/120/120/1*TD1P0HtIH9zF0UEH28zYtw.png)](https://storybook.grommet.io/?selectedKind=Type-Markdown&full=0&stories=1&panelRight=0) [![](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/grommet/grommet-sandbox?initialpath=/markdown&module=%2Fsrc%2FMarkdown.js)
@@ -13139,7 +13139,7 @@ Is a Box container for navigation links
 ## Usage
 
 \`\`\`javascript
-import { Nav } from 'grommet';
+import { Nav } from 'mnet-ui-base';
 <Nav />
 \`\`\`
 
@@ -13154,7 +13154,7 @@ A control that enables selection of a single page from a
 ## Usage
 
 \`\`\`javascript
-import { Pagination } from 'grommet';
+import { Pagination } from 'mnet-ui-base';
       <Pagination />
 \`\`\`
 
@@ -15417,7 +15417,7 @@ A sidebar, typically used with Nav children.
 ## Usage
 
 \`\`\`javascript
-import { Sidebar } from 'grommet';
+import { Sidebar } from 'mnet-ui-base';
 <Sidebar/>
 \`\`\`
 
@@ -15577,7 +15577,7 @@ A Spinner.
 ## Usage
 
 \`\`\`javascript
-import { Spinner } from 'grommet';
+import { Spinner } from 'mnet-ui-base';
 <Spinner/>
 \`\`\`
 
@@ -18111,7 +18111,7 @@ Tooltip or a hint when hovering over an element. The tooltip will render
 ## Usage
 
 \`\`\`javascript
-import { Tip } from 'grommet';
+import { Tip } from 'mnet-ui-base';
 <Tip />
 \`\`\`
 

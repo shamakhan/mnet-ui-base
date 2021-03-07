@@ -4,12 +4,12 @@ import {
   Avatar,
   Button,
   Box,
-  Grommet,
+  MnetUIBase,
   Nav,
   Sidebar,
   Stack,
   Tip,
-} from 'grommet';
+} from 'mnet-ui-base';
 
 import {
   Analytics,
@@ -100,7 +100,7 @@ const SidebarButton = ({ iconName, index }) => {
 };
 
 export const SidebarTip = () => (
-  <Grommet theme={customTheme} full>
+  <MnetUIBase theme={customTheme} full>
     <Box direction="row" height={{ min: '100%' }}>
       <Sidebar
         background="brand"
@@ -120,7 +120,7 @@ export const SidebarTip = () => (
         </Nav>
       </Sidebar>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 SidebarTip.storyName = 'Sidebar';

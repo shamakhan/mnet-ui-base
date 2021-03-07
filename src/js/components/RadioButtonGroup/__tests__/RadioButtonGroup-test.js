@@ -14,9 +14,9 @@ describe('RadioButtonGroup', () => {
   afterEach(cleanup);
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <RadioButtonGroup name="test" options={[]} />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     const results = await axe(container);
@@ -28,7 +28,7 @@ describe('RadioButtonGroup', () => {
     const component = renderer.create(
       <MnetUIBase>
         <RadioButtonGroup name="test" options={['one', 'two']} value="one" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -37,7 +37,7 @@ describe('RadioButtonGroup', () => {
 
   test('number options', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <RadioButtonGroup name="test" options={[1, 2]} value={1} />
       </MnetUIBase>,
     );
@@ -172,13 +172,13 @@ describe('RadioButtonGroup', () => {
     });
 
     const { getByTestId } = render(
-      <Grommet>
+      <MnetUIBase>
         <RadioButtonGroup
           name="test"
           options={radioGroupOptions}
           onChange={onChange}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // Select first radio button
@@ -198,7 +198,7 @@ describe('RadioButtonGroup', () => {
     const onChange = jest.fn();
 
     const { getByTestId } = render(
-      <Grommet>
+      <MnetUIBase>
         <RadioButtonGroup
           name="test"
           value="2"
@@ -221,7 +221,7 @@ describe('RadioButtonGroup', () => {
           ]}
           onChange={onChange}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     // Focus radio '2' button and simulate ArrowDown key

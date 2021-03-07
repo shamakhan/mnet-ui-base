@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Calendar, Grid, Grommet, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Calendar, Grid, MnetUIBase, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 import { Box } from '../../Box';
 
 const Container = ({ ...rest }) => (
@@ -16,7 +16,7 @@ export const ShowAdjacent = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Grid columns={{ count: 'fit', size: ['small', 'auto'] }} gap="medium">
         <Container>
           <Text size="small">showAdjacentDays = false</Text>
@@ -48,7 +48,7 @@ export const ShowAdjacent = () => {
           />
         </Container>
       </Grid>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

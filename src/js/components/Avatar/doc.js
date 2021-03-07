@@ -7,7 +7,7 @@ export const doc = Avatar => {
     .availableAt(getAvailableAtBadge('Avatar', 'Visualizations'))
     .description('An Avatar.')
     .usage(
-      `import { Avatar } from 'grommet';
+      `import { Avatar } from 'mnet-ui-base';
 <Avatar/>`,
     )
     .intrinsicElement('div');

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DataTable, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const DATA = [
   {
@@ -62,7 +62,7 @@ const columnsResize = [
 ];
 
 export const ResizableDataTable = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <Heading level="3">Table with resizable & column sizes</Heading>
       <DataTable
@@ -72,7 +72,7 @@ export const ResizableDataTable = () => (
         resizeable
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 ResizableDataTable.storyName = 'Resizable columns';

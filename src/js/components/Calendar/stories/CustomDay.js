@@ -4,13 +4,13 @@ import {
   Box,
   Calendar,
   DropButton,
-  Grommet,
+  MnetUIBase,
   Heading,
   Stack,
   Text,
-} from 'grommet';
+} from 'mnet-ui-base';
 import { Notification } from 'grommet-icons';
-import { grommet } from 'grommet/themes';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const CustomDayCalendar = () => {
   const calendarContent = [7, 8, 9];
@@ -20,7 +20,7 @@ export const CustomDayCalendar = () => {
   };
 
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <Heading level={4}>Example without onSelect set</Heading>
         <Calendar date={selectedDay} fill>
@@ -67,7 +67,7 @@ export const CustomDayCalendar = () => {
           )}
         </Calendar>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

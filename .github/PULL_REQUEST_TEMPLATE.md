@@ -14,7 +14,7 @@
 
 #### Screenshots (if appropriate)
 
-#### Do the grommet docs need to be updated?
+#### Do the MnetUIBase docs need to be updated?
 
 #### Should this PR be mentioned in the release notes?
 

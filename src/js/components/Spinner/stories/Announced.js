@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { grommet } from 'grommet/themes';
+import { mnet } from 'mnet-ui-base/themes';
 
-import { Box, Button, Grommet, Paragraph, Spinner } from 'grommet';
+import { Box, Button, MnetUIBase, Paragraph, Spinner } from 'mnet-ui-base';
 
 const PageContent = () => {
   // 'show=true' will trigger the announcement
@@ -28,11 +28,11 @@ const PageContent = () => {
 };
 
 export const Announced = () => (
-  <Grommet theme={grommet} full>
+  <MnetUIBase theme={mnet} full>
     <Box align="center" pad="large">
       <PageContent />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 Announced.parameters = {

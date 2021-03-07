@@ -4,13 +4,10 @@ import { FormClose } from 'grommet-icons';
 import {
   Box,
   Button,
-  MnetUIBase,
   Keyboard,
   Text,
   TextInput,
 } from 'mnet-ui-base';
-import { mnet } from 'mnet-ui-base/themes';
-import { FormClose } from 'grommet-icons';
 
 const allSuggestions = ['sony', 'sonar', 'foo', 'bar'];
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grommet, Box, Chart, Heading } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, Chart, Heading } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const values = [
   [10, 20, 30],
@@ -10,7 +10,7 @@ const values = [
 ];
 
 export const Range = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box direction="row-responsive" wrap pad="large">
       {['bar', 'line', 'area', 'point'].map(type => (
         <Box key={type} margin="medium">
@@ -21,7 +21,7 @@ export const Range = () => (
         </Box>
       ))}
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

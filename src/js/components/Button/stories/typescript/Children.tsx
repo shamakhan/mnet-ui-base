@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { grommet, Box, Button, Grommet, Text } from 'grommet';
+import { mnet, Box, Button, MnetUIBase, Text } from 'mnet-ui-base';
 import { Add } from 'grommet-icons';
 
 const ButtonWithChildren = props => (
@@ -20,12 +20,12 @@ const ButtonWithChildren = props => (
 
 export const Children = () => {
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="medium" gap="medium">
         <ButtonWithChildren />
         <ButtonWithChildren disabled />
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

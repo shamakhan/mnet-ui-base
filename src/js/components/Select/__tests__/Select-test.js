@@ -19,9 +19,9 @@ describe('Select', () => {
 
   test('should not have accessibility violations', async () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select options={['one', 'two', 'three']} a11yTitle="test" />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const results = await axe(container);
     expect(container.firstChild).toMatchSnapshot();
@@ -37,11 +37,11 @@ describe('Select', () => {
 
   test('dark', () => {
     const component = renderer.create(
-      <Grommet>
+      <MnetUIBase>
         <Box fill background="dark-1" align="center" justify="center">
           <Select placeholder="Select" options={['one', 'two']} />
         </Box>
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -278,9 +278,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -324,9 +324,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText, getByText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -372,9 +372,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText, container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firstChild).toMatchSnapshot();
     fireEvent.click(getByPlaceholderText('test select'));
@@ -842,12 +842,12 @@ describe('Select', () => {
     };
 
     const { getByPlaceholderText, container } = render(
-      <Grommet theme={customTheme}>
+      <MnetUIBase theme={customTheme}>
         <Select
           options={['morning', 'afternoon', 'evening']}
           placeholder="Select..."
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     expect(container.firstChild).toMatchSnapshot();
@@ -936,13 +936,13 @@ describe('Select', () => {
 
   test('undefined option', () => {
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           id="test-select"
           placeholder="test select"
           options={[undefined, 1, 2]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const select = getByPlaceholderText('test select');
     fireEvent.click(getByPlaceholderText('test select'));
@@ -955,28 +955,28 @@ describe('Select', () => {
 
   test('valueLabel', () => {
     const { container } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           id="test-select"
           placeholder="test select"
           options={[undefined, 1, 2]}
           valueLabel="test"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     expect(container.firsChild).toMatchSnapshot();
   });
 
   test('selected', () => {
     const { container, getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           options={['one', 'two']}
           placeholder="test select"
           id="test-select"
           selected={0}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const select = getByPlaceholderText('test select');
     expect(container.firstChild).toMatchSnapshot();
@@ -990,14 +990,14 @@ describe('Select', () => {
     // has scrollIntoView as part of its implementation.
     window.HTMLElement.prototype.scrollIntoView = jest.fn();
     const { container, getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           id="test-select"
           placeholder="test select"
           options={['one', 'two', 'three']}
           disabled={[0]}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.click(getByPlaceholderText('test select'));
     // key event to start keyboard navigation
@@ -1017,14 +1017,14 @@ describe('Select', () => {
     jest.useFakeTimers();
     const onSearch = jest.fn();
     const { container, getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           id="test-select"
           placeholder="test select"
           options={['one', 'two']}
           onSearch={onSearch}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
 
     fireEvent.click(getByPlaceholderText('test select'));
@@ -1046,14 +1046,14 @@ describe('Select', () => {
   test('disabled option value', () => {
     jest.useFakeTimers();
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           id="test-select"
           placeholder="test select"
           options={['one', 'two']}
           disabled={['one']}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.click(getByPlaceholderText('test select'));
     expectPortal('test-select__drop').toMatchSnapshot();
@@ -1073,9 +1073,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.click(getByPlaceholderText('test select'));
 
@@ -1096,9 +1096,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.click(getByPlaceholderText('test select'));
 
@@ -1119,9 +1119,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.click(getByPlaceholderText('test select'));
 
@@ -1145,9 +1145,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     fireEvent.click(getByPlaceholderText('test select'));
 
@@ -1171,9 +1171,9 @@ describe('Select', () => {
       );
     };
     const { getByPlaceholderText } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const select = getByPlaceholderText('test select');
     fireEvent.click(getByPlaceholderText('test select'));
@@ -1193,14 +1193,14 @@ describe('Select', () => {
 
   test('default value', () => {
     const { container, getByDisplayValue } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           id="test-select"
           placeholder="test select"
           options={['one', 'two']}
           defaultValue="two"
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const select = getByDisplayValue('two');
     expect(container.firstChild).toMatchSnapshot();
@@ -1209,7 +1209,7 @@ describe('Select', () => {
 
   test('default value object options', () => {
     const { container, getByDisplayValue } = render(
-      <Grommet>
+      <MnetUIBase>
         <Select
           id="test-select"
           placeholder="test select"
@@ -1221,7 +1221,7 @@ describe('Select', () => {
           labelKey="label"
           valueKey={{ key: 'value', reduce: true }}
         />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const select = getByDisplayValue('two');
     expect(container.firstChild).toMatchSnapshot();
@@ -1243,9 +1243,9 @@ describe('Select', () => {
       );
     };
     const { getByDisplayValue } = render(
-      <Grommet>
+      <MnetUIBase>
         <Test />
-      </Grommet>,
+      </MnetUIBase>,
     );
     const select = getByDisplayValue('two');
     fireEvent.click(select);

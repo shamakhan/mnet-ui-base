@@ -9,7 +9,7 @@ export const Controlled = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <MnetUIBase full theme={theme || mnet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="start" pad="large" gap="small">
         <Button onClick={() => setOpen(!open)} label="Control the select" />
         <Select

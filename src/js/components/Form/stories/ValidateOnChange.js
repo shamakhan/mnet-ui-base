@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import { Box, Button, Grommet, Form, FormField } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, Button, MnetUIBase, Form, FormField } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const ValidateOnChange = () => {
   const [valid, setValid] = useState(false);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="center">
         <Box width="medium">
           <Form
@@ -55,7 +55,7 @@ export const ValidateOnChange = () => {
           </Form>
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

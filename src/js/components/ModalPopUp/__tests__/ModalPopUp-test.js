@@ -46,31 +46,31 @@ describe('ModalPopUp', () => {
         title,
         message,
         onPrimaryClick: clicks.okButtonClick,
-      }
+      };
       case 1: return {
         message,
         onPrimaryClick: clicks.okButtonClick,
-      }
+      };
       case 2: return {
         title: <span>{title}</span>,
         message: <span>{message}</span>,
         renderButton: <button type="button" onClick={clicks.okButtonClick}>
                         {okLabel}
                       </button>,
-      }
+      };
       case 3: return {
         title: <span>{title}</span>,
         body: <div><span>{message}</span></div>,
         renderButton: <button type="button" onClick={clicks.okButtonClick}>
                         {okLabel}
                       </button>,
-      }
-      case 4: return { title, message }
+      };
+      case 4: return { title, message };
     };
 
     return null;
     
-  }
+  };
 
   beforeEach(createPortal);
   afterEach(() => {

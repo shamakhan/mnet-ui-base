@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { Box, Grommet, Heading, Keyboard } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Heading, Keyboard } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const OnDocument = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     {/* eslint-disable no-alert */}
     <Keyboard target="document" onEsc={() => alert('You pressed Esc!')}>
       <Box pad="large" background="light-4">
         <Heading level="3">Press Esc on me!</Heading>
       </Box>
     </Keyboard>
-  </Grommet>
+  </MnetUIBase>
 );
 
 OnDocument.parameters = {

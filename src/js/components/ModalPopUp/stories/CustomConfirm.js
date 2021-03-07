@@ -8,8 +8,7 @@ import {
   closeConfirmAlert,
 } from 'mnet-ui-base';
 
-const CustomConfirm = () => {
-  return(
+const CustomConfirm = () => (
   <Box align="center" justify="center" height="100vh" width="100vw">
     <Button
       onClick={
@@ -23,7 +22,7 @@ const CustomConfirm = () => {
       <Text size="large" weight={600}>Open Confirm Box</Text>
     </Button>
   </Box>
-)};
+);
 
 storiesOf('Modal Pop-up', module)
   .add('Custom Confirm Box', () => <CustomConfirm />);

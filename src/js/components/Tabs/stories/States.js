@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Grommet, Tab, Tabs, Text, ThemeContext } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Tab, Tabs, Text, ThemeContext } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const colors = {
   'background-contrast': '#0000000A',
@@ -100,9 +100,9 @@ const TabsExample = ({ label }) => {
 };
 
 const TabStates = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box gap="large" pad="large" width={{ max: 'large' }}>
-      <TabsExample label="Grommet Default" />
+      <TabsExample label="MnetUIBase Default" />
       <ThemeContext.Extend value={customTheme}>
         <TabsExample label="Customized Disabled State" />
       </ThemeContext.Extend>
@@ -113,7 +113,7 @@ const TabStates = () => (
         />
       </ThemeContext.Extend>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export const States = () => <TabStates />;

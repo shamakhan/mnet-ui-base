@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Grommet, TextInput } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, TextInput } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 const suggestions = Array(100)
   .fill()
@@ -15,7 +15,7 @@ export const DefaultSuggestion = () => {
   const onSelect = event => setValue(event.suggestion);
 
   return (
-    <Grommet full theme={grommet}>
+    <MnetUIBase full theme={mnet}>
       <Box fill align="center" justify="start" pad="large">
         <Box width="medium">
           <TextInput
@@ -27,7 +27,7 @@ export const DefaultSuggestion = () => {
           />
         </Box>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

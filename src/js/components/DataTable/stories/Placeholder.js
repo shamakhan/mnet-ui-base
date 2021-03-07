@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Grommet, Box, DataTable, Spinner, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { MnetUIBase, Box, DataTable, Spinner, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 // Source code for the data can be found here
 // https://github.com/grommet/grommet/blob/master/src/js/components/DataTable/stories/data.js
 import { columns, DATA } from './data';
 
 export const Placeholder = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="center" pad="large">
       <DataTable
         columns={columns}
@@ -30,7 +30,7 @@ export const Placeholder = () => (
         step={10}
       />
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

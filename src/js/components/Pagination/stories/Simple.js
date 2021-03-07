@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Grommet, Pagination, Text } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, Pagination, Text } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Simple = () => (
-  <Grommet theme={grommet}>
+  <MnetUIBase theme={mnet}>
     <Box align="start" pad="small" gap="medium">
       <Box>
         <Text>Default</Text>
@@ -21,7 +21,7 @@ export const Simple = () => (
         />
       </Box>
     </Box>
-  </Grommet>
+  </MnetUIBase>
 );
 
 export default {

@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 
-import { grommet, Box, Form, FormField, TextInput, Grommet } from 'grommet';
-import { deepMerge } from 'grommet/utils';
+import { mnet, Box, Form, FormField, TextInput,
+   MnetUIBase } from 'mnet-ui-base';
+import { deepMerge } from 'mnet-ui-base/utils';
 
-const customTheme = deepMerge(grommet, {
+const customTheme = deepMerge(mnet, {
   formField: {
     border: {
       error: {
@@ -67,7 +68,7 @@ export const FieldCustomStates = () => {
   }, []);
 
   return (
-    <Grommet theme={customTheme}>
+    <MnetUIBase theme={customTheme}>
       <Box align="center" pad="large">
         <Form>
           <Box border gap="medium" pad="large" width="medium">
@@ -128,7 +129,7 @@ export const FieldCustomStates = () => {
           </Box>
         </Form>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

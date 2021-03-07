@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Box, Grommet, WorldMap } from 'grommet';
-import { grommet } from 'grommet/themes';
+import { Box, MnetUIBase, WorldMap } from 'mnet-ui-base';
+import { mnet } from 'mnet-ui-base/themes';
 
 export const Continents = () => {
   const [active, setActive] = React.useState();
   return (
-    <Grommet theme={grommet}>
+    <MnetUIBase theme={mnet}>
       <Box align="center" pad="large">
         <WorldMap
           continents={[
@@ -19,7 +19,7 @@ export const Continents = () => {
         />
         {active && <Box margin="large">Africa</Box>}
       </Box>
-    </Grommet>
+    </MnetUIBase>
   );
 };
 

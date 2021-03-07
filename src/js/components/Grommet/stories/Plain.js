@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Grommet, Box } from 'grommet';
+import { MnetUIBase, Box } from 'mnet-ui-base';
 
 export const Plain = () => (
   <>
-    <Grommet plain>
+    <MnetUIBase plain>
       <Box pad="medium">
-        <p>Plain Grommet</p>
+        <p>Plain MnetUIBase</p>
       </Box>
-    </Grommet>
-    <Grommet>
+    </MnetUIBase>
+    <MnetUIBase>
       <Box pad="medium">
-        <p>Not plain Grommet</p>
+        <p>Not plain MnetUIBase</p>
       </Box>
-    </Grommet>
+    </MnetUIBase>
   </>
 );
 
 export default {
-  title: 'Utilities/Grommet/Plain',
+  title: 'Utilities/MnetUIBase/Plain',
 };
