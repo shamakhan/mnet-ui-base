@@ -44,8 +44,9 @@ var MultiSelect = function MultiSelect(_ref) {
       isExcludedProp = _ref.isExcluded,
       onIncExcChange = _ref.onIncExcChange,
       renderEmptySelected = _ref.renderEmptySelected,
+      gridArea = _ref.gridArea,
       validate = _ref.validate,
-      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected", "validate"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected", "gridArea", "validate"]);
 
   var _useState = (0, _react.useState)(valueProp),
       internalValue = _useState[0],
@@ -194,7 +195,8 @@ var MultiSelect = function MultiSelect(_ref) {
   };
 
   return /*#__PURE__*/_react["default"].createElement(_Box.Box, {
-    width: width
+    width: width,
+    gridArea: gridArea
   }, /*#__PURE__*/_react["default"].createElement(_Select.Select, _extends({
     multiple: true,
     value: value,
