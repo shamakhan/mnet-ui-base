@@ -1,23 +1,19 @@
 "use strict";
 
 exports.__esModule = true;
-exports.Switch = void 0;
+exports.Breadcrumb = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = require("styled-components");
 
-var _utils = require("../../utils");
-
 var _defaultProps = require("../../default-props");
 
-var _MnetUIBase = require("../MnetUIBase");
+var _Button = require("../Button");
 
-var _RadioButtonGroup = require("../RadioButtonGroup");
+var _List = require("../List");
 
-var _switchTheme = _interopRequireDefault(require("./switchTheme"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _StyledBreadcrumb = require("./StyledBreadcrumb");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -27,32 +23,45 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var Switch = function Switch(_ref) {
-  var value = _ref.value,
-      options = _ref.options,
-      onValueChange = _ref.onValueChange,
-      disabled = _ref.disabled,
-      rest = _objectWithoutPropertiesLoose(_ref, ["value", "options", "onValueChange", "disabled"]);
+var Breadcrumb = function Breadcrumb(_ref) {
+  var data = _ref.data,
+      breadcrumbIcon = _ref.icon,
+      onValueSelect = _ref.onValueSelect,
+      rest = _objectWithoutPropertiesLoose(_ref, ["data", "icon", "onValueSelect"]);
 
-  var theme = (0, _utils.deepMerge)((0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme, (0, _switchTheme["default"])());
-  return /*#__PURE__*/_react["default"].createElement(_MnetUIBase.MnetUIBase, {
-    theme: theme
-  }, /*#__PURE__*/_react["default"].createElement(_RadioButtonGroup.RadioButtonGroup, _extends({
-    name: "radio",
-    options: options,
-    value: value,
-    onChange: onValueChange,
-    disabled: disabled
-  }, theme["switch"].container, disabled && theme["switch"].disabled, rest)));
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
+
+  var handleClick = function handleClick(item) {
+    if (item && typeof item === 'object') {
+      onValueSelect(item.id);
+    } else {
+      onValueSelect(item);
+    }
+  };
+
+  var Icon = breadcrumbIcon || theme.breadcrumb.icons.separator;
+  return /*#__PURE__*/_react["default"].createElement(_StyledBreadcrumb.StyledBreadcrumb, null, /*#__PURE__*/_react["default"].createElement(_List.List, _extends({
+    data: data
+  }, rest), function (item, index) {
+    return /*#__PURE__*/_react["default"].createElement(_StyledBreadcrumb.StyledBreadcrumbItem, _extends({
+      key: index
+    }, theme.breadcrumb.item), /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+      onClick: index !== data.length - 1 ? function () {
+        return handleClick(item);
+      } : undefined
+    }, /*#__PURE__*/_react["default"].createElement(_StyledBreadcrumb.StyledBreadcrumbText, _extends({
+      last: data.length > 1 && index === data.length - 1
+    }, theme.breadcrumb.content), item && typeof item === 'object' ? item.label : item), index < data.length - 1 && /*#__PURE__*/_react["default"].createElement(Icon, theme.breadcrumb.icon)));
+  }));
 };
 
-Switch.displayName = 'Switch';
-var SwitchDoc;
+Breadcrumb.displayName = 'Breadcrumb';
+var BreadcrumbDoc;
 
 if (process.env.NODE_ENV !== 'production') {
   // eslint-disable-next-line global-require
-  SwitchDoc = require('./doc').doc(Switch);
+  BreadcrumbDoc = require('./doc').doc(Breadcrumb);
 }
 
-var SwitchWrapper = SwitchDoc || Switch;
-exports.Switch = SwitchWrapper;
+var BreadcrumbWrapper = BreadcrumbDoc || Breadcrumb;
+exports.Breadcrumb = BreadcrumbWrapper;

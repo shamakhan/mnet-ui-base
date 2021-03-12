@@ -439,6 +439,34 @@ var generate = function generate(baseSpacing, scale) {
       // extend: undefined,
 
     },
+    breadcrumb: {
+      item: {
+        margin: {
+          right: 'medium'
+        }
+      },
+      content: {
+        color: 'dark-1',
+        size: 'large' // extend: undefined,
+
+      },
+      icon: {
+        color: 'dark-1',
+        size: 'small'
+      },
+      icons: {
+        separator: _Next.Next
+      },
+      extend: {
+        ul: {
+          display: 'flex',
+          li: {
+            border: 'none',
+            padding: 0
+          }
+        }
+      }
+    },
     button: {
       size: {
         small: {

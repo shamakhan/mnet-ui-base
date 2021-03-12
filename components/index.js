@@ -42,6 +42,14 @@ Object.keys(_Box).forEach(function (key) {
   exports[key] = _Box[key];
 });
 
+var _Breadcrumb = require("./Breadcrumb");
+
+Object.keys(_Breadcrumb).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _Breadcrumb[key]) return;
+  exports[key] = _Breadcrumb[key];
+});
+
 var _Button = require("./Button");
 
 Object.keys(_Button).forEach(function (key) {

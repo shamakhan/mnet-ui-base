@@ -5,6 +5,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { deepMerge } from '../../utils';
+import { defaultProps } from '../../default-props';
 import { MnetUIBase } from '../MnetUIBase';
 import { RadioButtonGroup } from '../RadioButtonGroup';
 import getSwitchTheme from './switchTheme';
@@ -16,7 +17,7 @@ var Switch = function Switch(_ref) {
       disabled = _ref.disabled,
       rest = _objectWithoutPropertiesLoose(_ref, ["value", "options", "onValueChange", "disabled"]);
 
-  var theme = deepMerge(useContext(ThemeContext), getSwitchTheme());
+  var theme = deepMerge(useContext(ThemeContext) || defaultProps.theme, getSwitchTheme());
   return /*#__PURE__*/React.createElement(MnetUIBase, {
     theme: theme
   }, /*#__PURE__*/React.createElement(RadioButtonGroup, _extends({
