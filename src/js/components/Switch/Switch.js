@@ -5,10 +5,9 @@ import { deepMerge } from '../../utils';
 import { RadioButtonGroup } from '../RadioButtonGroup';
 import getSwitchTheme from './switchTheme';
 
-const Switch = ({ value, options, onValueChange, disabled, ...rest }) => {
-  return(
-    <ThemeContext.Consumer>
-      {theme => (
+const Switch = ({ value, options, onValueChange, disabled, ...rest }) => (
+  <ThemeContext.Consumer>
+    {theme => (
       <ThemeContext.Provider value={deepMerge(theme, getSwitchTheme())}>
         <RadioButtonGroup
           name="radio"
@@ -22,9 +21,8 @@ const Switch = ({ value, options, onValueChange, disabled, ...rest }) => {
         />
       </ThemeContext.Provider>
     )}
-    </ThemeContext.Consumer>
-  );
-}
+  </ThemeContext.Consumer>
+);
 
 Switch.displayName = 'Switch';
 
