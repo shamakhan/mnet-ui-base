@@ -2,11 +2,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import React, { useContext } from 'react';
+import React from 'react';
 import { ThemeContext } from 'styled-components';
 import { deepMerge } from '../../utils';
-import { defaultProps } from '../../default-props';
-import { MnetUIBase } from '../MnetUIBase';
 import { RadioButtonGroup } from '../RadioButtonGroup';
 import getSwitchTheme from './switchTheme';
 
@@ -17,16 +15,17 @@ var Switch = function Switch(_ref) {
       disabled = _ref.disabled,
       rest = _objectWithoutPropertiesLoose(_ref, ["value", "options", "onValueChange", "disabled"]);
 
-  var theme = deepMerge(useContext(ThemeContext) || defaultProps.theme, getSwitchTheme());
-  return /*#__PURE__*/React.createElement(MnetUIBase, {
-    theme: theme
-  }, /*#__PURE__*/React.createElement(RadioButtonGroup, _extends({
-    name: "radio",
-    options: options,
-    value: value,
-    onChange: onValueChange,
-    disabled: disabled
-  }, theme["switch"].container, disabled && theme["switch"].disabled, rest)));
+  return /*#__PURE__*/React.createElement(ThemeContext.Consumer, null, function (theme) {
+    return /*#__PURE__*/React.createElement(ThemeContext.Provider, {
+      value: deepMerge(theme, getSwitchTheme())
+    }, /*#__PURE__*/React.createElement(RadioButtonGroup, _extends({
+      name: "radio",
+      options: options,
+      value: value,
+      onChange: onValueChange,
+      disabled: disabled
+    }, theme["switch"].container, disabled && theme["switch"].disabled, rest)));
+  });
 };
 
 Switch.displayName = 'Switch';
