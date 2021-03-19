@@ -424,7 +424,7 @@ const FormField = forwardRef(
           <Box>
             {contents}
             {normalizedError && (
-              <Box>
+              <Box style={{ height: 'auto' }}>
                 <Message
                   message={normalizedError}
                   {...formFieldTheme.error}
