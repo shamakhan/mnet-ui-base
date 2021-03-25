@@ -7,7 +7,8 @@ import { addToast } from '..';
 var Toast = function Toast() {
   var addToastDefault = function addToastDefault() {
     addToast({
-      msg: 'I am default toast'
+      msg: 'I am default toast',
+      autoClose: false
     });
   };
 

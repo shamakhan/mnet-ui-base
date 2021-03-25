@@ -15,7 +15,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var Toast = function Toast() {
   var addToastDefault = function addToastDefault() {
     (0, _.addToast)({
-      msg: 'I am default toast'
+      msg: 'I am default toast',
+      autoClose: false
     });
   };
 
