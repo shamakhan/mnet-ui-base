@@ -43,16 +43,20 @@ function Toast(_ref) {
   }, theme.notification.toast["default"], theme.notification.toast[type]), /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     align: "center",
     direction: "row",
-    gap: "xsmall"
+    gap: "xsmall",
+    margin: {
+      right: 'medium'
+    }
   }, Icon && /*#__PURE__*/_react["default"].createElement(Icon, {
     size: IconSize,
     color: IconColor
   }), /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.notification.toast.text[type] || theme.notification.toast.text["default"], msg)), /*#__PURE__*/_react["default"].createElement(_Button.Button, {
     icon: /*#__PURE__*/_react["default"].createElement(CloseIcon, null),
     onClick: handleClose,
-    plain: true,
     style: {
-      display: 'flex'
-    }
+      display: 'flex',
+      padding: 0
+    },
+    color: IconColor
   }));
 }

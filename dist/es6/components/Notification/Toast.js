@@ -26,16 +26,20 @@ export function Toast(_ref) {
   }, theme.notification.toast["default"], theme.notification.toast[type]), /*#__PURE__*/React.createElement(Box, {
     align: "center",
     direction: "row",
-    gap: "xsmall"
+    gap: "xsmall",
+    margin: {
+      right: 'medium'
+    }
   }, Icon && /*#__PURE__*/React.createElement(Icon, {
     size: IconSize,
     color: IconColor
   }), /*#__PURE__*/React.createElement(Text, theme.notification.toast.text[type] || theme.notification.toast.text["default"], msg)), /*#__PURE__*/React.createElement(Button, {
     icon: /*#__PURE__*/React.createElement(CloseIcon, null),
     onClick: handleClose,
-    plain: true,
     style: {
-      display: 'flex'
-    }
+      display: 'flex',
+      padding: 0
+    },
+    color: IconColor
   }));
 }
