@@ -1,7 +1,5 @@
-import React from 'react';
-import { CircleInformation } from 'grommet-icons/icons/CircleInformation';
-import { Alert } from 'grommet-icons/icons/Alert';
-
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import { Box } from '../Box';
 // import { Text } from '../Text';
 import { LabelText } from './StyledMultiSelect';
@@ -13,7 +11,11 @@ const ValueLabelWithIcon = ({
   size,
 }) => {
   const number = value.length;
-
+  const theme = useContext(ThemeContext) || defaultProps.theme;
+  const { include, exclude} = theme.multiselect.icons;
+  const { icon: IncIcon, extend: incExtend } = include;
+  const { icon: ExcIcon, extend: excExtend } = exclude;
+  
   const getColor = () => {
     if (withInclusionExclusion && isExcluded) return 'status-error';
     if (withInclusionExclusion && isExcluded === false) return 'status-ok';
@@ -28,7 +30,7 @@ const ValueLabelWithIcon = ({
           alignSelf="start"
           pad={{ vertical: 'small' }}
         >
-          <CircleInformation color="status-error" size="small" />
+          <ExcIcon {...excExtend} />
         </Box>
       )}
       {withInclusionExclusion && isExcluded === false && (
@@ -37,7 +39,7 @@ const ValueLabelWithIcon = ({
           alignSelf="start"
           pad={{ vertical: 'small' }}
         >
-          <Alert color="status-ok" size="small" />
+          <IncIcon {...incExtend} />
         </Box>
       )}
 

@@ -1,6 +1,5 @@
-import React from 'react';
-import { CircleInformation } from 'grommet-icons/icons/CircleInformation';
-import { Alert } from 'grommet-icons/icons/Alert';
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import { Box } from '../Box'; // import { Text } from '../Text';
 
 import { LabelText } from './StyledMultiSelect';
@@ -12,6 +11,14 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
       value = _ref$value === void 0 ? [] : _ref$value,
       size = _ref.size;
   var number = value.length;
+  var theme = useContext(ThemeContext) || defaultProps.theme;
+  var _theme$multiselect$ic = theme.multiselect.icons,
+      include = _theme$multiselect$ic.include,
+      exclude = _theme$multiselect$ic.exclude;
+  var IncIcon = include.icon,
+      incExtend = include.extend;
+  var ExcIcon = exclude.icon,
+      excExtend = exclude.extend;
 
   var getColor = function getColor() {
     if (withInclusionExclusion && isExcluded) return 'status-error';
@@ -33,10 +40,7 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
     pad: {
       vertical: 'small'
     }
-  }, /*#__PURE__*/React.createElement(CircleInformation, {
-    color: "status-error",
-    size: "small"
-  })), withInclusionExclusion && isExcluded === false && /*#__PURE__*/React.createElement(Box, {
+  }, /*#__PURE__*/React.createElement(ExcIcon, excExtend)), withInclusionExclusion && isExcluded === false && /*#__PURE__*/React.createElement(Box, {
     width: {
       min: '20px'
     },
@@ -44,10 +48,7 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
     pad: {
       vertical: 'small'
     }
-  }, /*#__PURE__*/React.createElement(Alert, {
-    color: "status-ok",
-    size: "small"
-  })), /*#__PURE__*/React.createElement(LabelText, {
+  }, /*#__PURE__*/React.createElement(IncIcon, incExtend)), /*#__PURE__*/React.createElement(LabelText, {
     "aria-label": "Selected Label Value",
     color: getColor(),
     size: size
