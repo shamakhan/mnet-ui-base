@@ -33,7 +33,7 @@ exports.SelectedOption = SelectedOption;
 var OptionsBox = (0, _styledComponents["default"])(_Box.Box).withConfig({
   displayName: "StyledMultiSelect__OptionsBox",
   componentId: "sc-1yaxkjp-2"
-})(["position:relative;scroll-behavior:smooth;overflow:auto;&::-webkit-scrollbar{width:.4em;}&::-webkit-scrollbar-thumb{background-color:#E0E0E0;border-radius:3.5px;border:.2em solid rgba(0,0,0,0);}"]);
+})(["position:relative;scroll-behavior:smooth;overflow:auto;&::-webkit-scrollbar{width:1.2em;}&::-webkit-scrollbar-thumb{background-color:#E0E0E0;border:.4em solid #FFF;border-radius:3.5px;}"]);
 exports.OptionsBox = OptionsBox;
 var SelectOption = (0, _styledComponents["default"])(_Button.Button).withConfig({
   displayName: "StyledMultiSelect__SelectOption",

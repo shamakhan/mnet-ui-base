@@ -26,12 +26,12 @@ const OptionsBox = styled(Box)`
   scroll-behavior: smooth;
   overflow: auto;
   &::-webkit-scrollbar {
-    width: .4em;
+    width: 1.2em;
   }
   &::-webkit-scrollbar-thumb {
     background-color: #E0E0E0;
+    border: .4em solid #FFF;
     border-radius: 3.5px;
-    border: .2em solid rgba(0, 0, 0, 0);
   }
 `;
 
@@ -62,7 +62,7 @@ const OptionWrapper = styled(Box)`
     background-color: #E0E0E0;
     border: .4em solid #FFF;
     border-radius: 3.5px;
-  }  
+  }
 `;
 
 const OptionText = styled(Box)`
