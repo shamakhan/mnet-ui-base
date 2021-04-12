@@ -68,11 +68,13 @@ const OptionChips = ({
           )}
           {!inclusionExclusion && layout === 'double-column' && (
             <Box {...theme.multiselect.rightPanel.incExcHeader.box}>
-              <Text {...theme.multiselect.rightPanel.incExcHeader.text}>
-                Selected
-              </Text>
-              <Box {...theme.multiselect.rightPanel.incExcHeader.count}>
-                <Text weight="600">{value.length}</Text>
+              <Box direction="row">
+                <Text {...theme.multiselect.rightPanel.incExcHeader.text}>
+                  Selected
+                </Text>
+                <Box {...theme.multiselect.rightPanel.incExcHeader.count}>
+                  <Text weight="600">{value.length}</Text>
+                </Box>
               </Box>
             </Box>
           )}

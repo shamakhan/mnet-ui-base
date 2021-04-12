@@ -54,9 +54,11 @@ var OptionChips = function OptionChips(_ref) {
     "aria-label": "Chip List header"
   }, theme.multiselect.rightPanel.incExcHeader.text), isExcluded ? 'Excluded' : 'Included'), /*#__PURE__*/React.createElement(Box, theme.multiselect.rightPanel.incExcHeader.count, /*#__PURE__*/React.createElement(Text, {
     weight: "600"
-  }, value.length)))), !inclusionExclusion && layout === 'double-column' && /*#__PURE__*/React.createElement(Box, theme.multiselect.rightPanel.incExcHeader.box, /*#__PURE__*/React.createElement(Text, theme.multiselect.rightPanel.incExcHeader.text, "Selected"), /*#__PURE__*/React.createElement(Box, theme.multiselect.rightPanel.incExcHeader.count, /*#__PURE__*/React.createElement(Text, {
+  }, value.length)))), !inclusionExclusion && layout === 'double-column' && /*#__PURE__*/React.createElement(Box, theme.multiselect.rightPanel.incExcHeader.box, /*#__PURE__*/React.createElement(Box, {
+    direction: "row"
+  }, /*#__PURE__*/React.createElement(Text, theme.multiselect.rightPanel.incExcHeader.text, "Selected"), /*#__PURE__*/React.createElement(Box, theme.multiselect.rightPanel.incExcHeader.count, /*#__PURE__*/React.createElement(Text, {
     weight: "600"
-  }, value.length))), /*#__PURE__*/React.createElement(OptionWrapper, _extends({
+  }, value.length)))), /*#__PURE__*/React.createElement(OptionWrapper, _extends({
     twoColumnLayout: layout === 'double-column',
     width: width,
     height: height
