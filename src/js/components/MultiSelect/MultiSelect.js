@@ -34,6 +34,7 @@ const MultiSelect = ({
   isOpenState,
   isEnableOutSideClick,
   shouldRenderInDrop,
+  placeholder,
   ...rest
 }) => {
   const [internalValue, updateInternalValue] = useState(valueProp);
@@ -168,6 +169,7 @@ const MultiSelect = ({
         withInclusionExclusion={withInclusionExclusion}
         isExcluded={isExcluded}
         size={size}
+        placeholder={placeholder}
         value={value}
       />
     );

@@ -73,6 +73,7 @@ var SelectedList = function SelectedList(_ref) {
     color: "dark-1",
     size: theme.select.icons.size
   }))), renderSearch && /*#__PURE__*/React.createElement(Searchbox, {
+    reverse: false,
     layout: layout,
     placeholder: searchPlaceholder,
     value: search,

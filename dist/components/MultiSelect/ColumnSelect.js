@@ -142,6 +142,7 @@ var ColumnSelect = function ColumnSelect(_ref) {
   return /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({}, theme.multiselect.container, {
     width: width
   }), renderSearch && /*#__PURE__*/_react["default"].createElement(_Searchbox.Searchbox, {
+    reverse: false,
     width: width,
     placeholder: searchPlaceholder,
     value: searchValue,

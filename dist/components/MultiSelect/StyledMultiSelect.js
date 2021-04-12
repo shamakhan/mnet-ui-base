@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.IconWrapper = exports.LabelText = exports.TextAreaWrapper = exports.SelectedOption = exports.OptionText = exports.OptionWrapper = exports.CheckBox = exports.OptionBox = exports.SelectOption = exports.OptionsBox = exports.CheckBoxWrapper = void 0;
+exports.LabelText = exports.TextAreaWrapper = exports.SelectedOption = exports.OptionText = exports.OptionWrapper = exports.CheckBox = exports.OptionBox = exports.SelectOption = exports.OptionsBox = exports.CheckBoxWrapper = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -15,7 +15,7 @@ var _Text = require("../Text");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var disabledStyle = "\n  opacity: 0.4;\n  cursor: not-allowed;\n";
+var disabledStyle = "\n  opacity: 0.4;\n  cursor: not-allowed;\n  display: none;\n  box-shadow: none\n";
 var CheckBoxWrapper = (0, _styledComponents["default"])(_Box.Box).withConfig({
   displayName: "StyledMultiSelect__CheckBoxWrapper",
   componentId: "sc-1yaxkjp-0"
@@ -33,7 +33,7 @@ exports.SelectedOption = SelectedOption;
 var OptionsBox = (0, _styledComponents["default"])(_Box.Box).withConfig({
   displayName: "StyledMultiSelect__OptionsBox",
   componentId: "sc-1yaxkjp-2"
-})(["position:relative;scroll-behavior:smooth;overflow:auto;"]);
+})(["position:relative;scroll-behavior:smooth;overflow:auto;&::-webkit-scrollbar{width:.4em;}&::-webkit-scrollbar-thumb{background-color:#E0E0E0;border-radius:3.5px;border:.2em solid rgba(0,0,0,0);}"]);
 exports.OptionsBox = OptionsBox;
 var SelectOption = (0, _styledComponents["default"])(_Button.Button).withConfig({
   displayName: "StyledMultiSelect__SelectOption",
@@ -59,7 +59,7 @@ exports.CheckBox = CheckBox;
 var OptionWrapper = (0, _styledComponents["default"])(_Box.Box).withConfig({
   displayName: "StyledMultiSelect__OptionWrapper",
   componentId: "sc-1yaxkjp-6"
-})(["position:relative;scroll-behavior:smooth;overflow:auto;", ";"], function (props) {
+})(["position:relative;scroll-behavior:smooth;overflow:auto;", ";&::-webkit-scrollbar{width:1.2em;}&::-webkit-scrollbar-thumb{background-color:#E0E0E0;border:.4em solid #FFF;border-radius:3.5px;}"], function (props) {
   return props.theme.multiselect.chips.wrapper.extend;
 });
 exports.OptionWrapper = OptionWrapper;
@@ -80,10 +80,5 @@ exports.TextAreaWrapper = TextAreaWrapper;
 var LabelText = (0, _styledComponents["default"])(_Text.Text).withConfig({
   displayName: "StyledMultiSelect__LabelText",
   componentId: "sc-1yaxkjp-9"
-})(["overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;"]);
+})(["overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;"]);
 exports.LabelText = LabelText;
-var IconWrapper = (0, _styledComponents["default"])(_Box.Box).withConfig({
-  displayName: "StyledMultiSelect__IconWrapper",
-  componentId: "sc-1yaxkjp-10"
-})(["align-items:center;flex-direction:row;"]);
-exports.IconWrapper = IconWrapper;

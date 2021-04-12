@@ -120,6 +120,7 @@ var ColumnSelect = function ColumnSelect(_ref) {
   return /*#__PURE__*/React.createElement(Box, _extends({}, theme.multiselect.container, {
     width: width
   }), renderSearch && /*#__PURE__*/React.createElement(Searchbox, {
+    reverse: false,
     width: width,
     placeholder: searchPlaceholder,
     value: searchValue,

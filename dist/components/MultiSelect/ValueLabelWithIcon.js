@@ -21,7 +21,9 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
       isExcluded = _ref.isExcluded,
       _ref$value = _ref.value,
       value = _ref$value === void 0 ? [] : _ref$value,
-      size = _ref.size;
+      size = _ref.size,
+      _ref$placeholder = _ref.placeholder,
+      placeholder = _ref$placeholder === void 0 ? 'Select' : _ref$placeholder;
   var number = value.length;
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
   var _theme$multiselect$ic = theme.multiselect.icons,
@@ -42,7 +44,8 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
     direction: "row",
     align: "center",
     pad: {
-      left: 'xlarge'
+      left: 'xlarge',
+      vertical: 'small'
     }
   }, withInclusionExclusion && isExcluded && /*#__PURE__*/_react["default"].createElement(_Box.Box, {
     width: {
@@ -64,7 +67,7 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
     "aria-label": "Selected Label Value",
     color: getColor(),
     size: size
-  }, number ? value.join(', ') : 'Select'));
+  }, number ? value.join(', ') : placeholder));
 };
 
 exports.ValueLabelWithIcon = ValueLabelWithIcon;

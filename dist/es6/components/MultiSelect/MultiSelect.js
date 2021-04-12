@@ -36,7 +36,8 @@ var MultiSelect = function MultiSelect(_ref) {
       isOpenState = _ref.isOpenState,
       isEnableOutSideClick = _ref.isEnableOutSideClick,
       shouldRenderInDrop = _ref.shouldRenderInDrop,
-      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected", "validate", "size", "isOpenState", "isEnableOutSideClick", "shouldRenderInDrop"]);
+      placeholder = _ref.placeholder,
+      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected", "validate", "size", "isOpenState", "isEnableOutSideClick", "shouldRenderInDrop", "placeholder"]);
 
   var _useState = useState(valueProp),
       internalValue = _useState[0],
@@ -175,6 +176,7 @@ var MultiSelect = function MultiSelect(_ref) {
       withInclusionExclusion: withInclusionExclusion,
       isExcluded: isExcluded,
       size: size,
+      placeholder: placeholder,
       value: value
     });
   };

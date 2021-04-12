@@ -6,7 +6,6 @@ import { Text } from '../Text';
 import { TextInput } from '../TextInput';
 import { Button } from '../Button';
 import { Box } from '../Box';
-import { IconWrapper } from './StyledMultiSelect';
 
 const Searchbox = ({
   placeholder,
@@ -16,6 +15,7 @@ const Searchbox = ({
   layout,
   selectIcon,
   onCancel,
+  reverse = true,
 }) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;
 
@@ -28,18 +28,8 @@ const Searchbox = ({
   const CollapsibleIcon = selectIcon && selectIcon.up;
 
   const icons = (
-    <IconWrapper {...theme.multiselect.searchbox.iconWrapper}>
       <Search {...theme.multiselect.searchbox.icon} />
-      {selectIcon && (
-        <Button role="button" onClick={onCancel} plain>
-          <CollapsibleIcon
-            // margin={{ left: 'large', right: 'small' }}
-            color="dark-1"
-            size={selectIcon.size}
-          />
-        </Button>
-      )}
-    </IconWrapper>
+    
   );
 
   return (
@@ -50,7 +40,7 @@ const Searchbox = ({
         plain
         fill
         icon={icons}
-        reverse
+        reverse={reverse}
         width={width}
         value={value}
         valueLabel={<Text>value</Text>}
@@ -61,6 +51,14 @@ const Searchbox = ({
           </Text>
         }
       />
+      {selectIcon && (
+        <Button role="button" margin="large" onClick={onCancel} plain>
+          <CollapsibleIcon
+            color="dark-1"
+            size={selectIcon.size}
+          />
+        </Button>
+      )}
       
     </Box>
   );

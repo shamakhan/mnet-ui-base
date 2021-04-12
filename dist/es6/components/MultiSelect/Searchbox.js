@@ -7,7 +7,6 @@ import { Text } from '../Text';
 import { TextInput } from '../TextInput';
 import { Button } from '../Button';
 import { Box } from '../Box';
-import { IconWrapper } from './StyledMultiSelect';
 
 var Searchbox = function Searchbox(_ref) {
   var placeholder = _ref.placeholder,
@@ -16,7 +15,9 @@ var Searchbox = function Searchbox(_ref) {
       width = _ref.width,
       layout = _ref.layout,
       selectIcon = _ref.selectIcon,
-      onCancel = _ref.onCancel;
+      onCancel = _ref.onCancel,
+      _ref$reverse = _ref.reverse,
+      reverse = _ref$reverse === void 0 ? true : _ref$reverse;
   var theme = useContext(ThemeContext) || defaultProps.theme;
 
   var handleChange = function handleChange(textValue) {
@@ -25,15 +26,7 @@ var Searchbox = function Searchbox(_ref) {
   };
 
   var CollapsibleIcon = selectIcon && selectIcon.up;
-  var icons = /*#__PURE__*/React.createElement(IconWrapper, theme.multiselect.searchbox.iconWrapper, /*#__PURE__*/React.createElement(Search, theme.multiselect.searchbox.icon), selectIcon && /*#__PURE__*/React.createElement(Button, {
-    role: "button",
-    onClick: onCancel,
-    plain: true
-  }, /*#__PURE__*/React.createElement(CollapsibleIcon // margin={{ left: 'large', right: 'small' }}
-  , {
-    color: "dark-1",
-    size: selectIcon.size
-  })));
+  var icons = /*#__PURE__*/React.createElement(Search, theme.multiselect.searchbox.icon);
   return /*#__PURE__*/React.createElement(Box, _extends({
     layout: layout
   }, theme.multiselect.searchbox.container), /*#__PURE__*/React.createElement(TextInput, {
@@ -42,7 +35,7 @@ var Searchbox = function Searchbox(_ref) {
     plain: true,
     fill: true,
     icon: icons,
-    reverse: true,
+    reverse: reverse,
     width: width,
     value: value,
     valueLabel: /*#__PURE__*/React.createElement(Text, null, "value"),
@@ -50,7 +43,15 @@ var Searchbox = function Searchbox(_ref) {
       return handleChange(event.target.value);
     },
     placeholder: /*#__PURE__*/React.createElement(Text, theme.multiselect.searchbox.placeholder, value ? '' : placeholder)
-  }));
+  }), selectIcon && /*#__PURE__*/React.createElement(Button, {
+    role: "button",
+    margin: "large",
+    onClick: onCancel,
+    plain: true
+  }, /*#__PURE__*/React.createElement(CollapsibleIcon, {
+    color: "dark-1",
+    size: selectIcon.size
+  })));
 };
 
 export { Searchbox };

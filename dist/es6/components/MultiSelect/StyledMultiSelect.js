@@ -3,7 +3,7 @@ import { selectedStyle } from '../../utils';
 import { Box } from '../Box';
 import { Button } from '../Button';
 import { Text } from '../Text';
-var disabledStyle = "\n  opacity: 0.4;\n  cursor: not-allowed;\n";
+var disabledStyle = "\n  opacity: 0.4;\n  cursor: not-allowed;\n  display: none;\n  box-shadow: none\n";
 var CheckBoxWrapper = styled(Box).withConfig({
   displayName: "StyledMultiSelect__CheckBoxWrapper",
   componentId: "sc-1yaxkjp-0"
@@ -19,7 +19,7 @@ var SelectedOption = styled(Box).withConfig({
 var OptionsBox = styled(Box).withConfig({
   displayName: "StyledMultiSelect__OptionsBox",
   componentId: "sc-1yaxkjp-2"
-})(["position:relative;scroll-behavior:smooth;overflow:auto;"]);
+})(["position:relative;scroll-behavior:smooth;overflow:auto;&::-webkit-scrollbar{width:.4em;}&::-webkit-scrollbar-thumb{background-color:#E0E0E0;border-radius:3.5px;border:.2em solid rgba(0,0,0,0);}"]);
 var SelectOption = styled(Button).withConfig({
   displayName: "StyledMultiSelect__SelectOption",
   componentId: "sc-1yaxkjp-3"
@@ -41,7 +41,7 @@ var CheckBox = styled(Box).withConfig({
 var OptionWrapper = styled(Box).withConfig({
   displayName: "StyledMultiSelect__OptionWrapper",
   componentId: "sc-1yaxkjp-6"
-})(["position:relative;scroll-behavior:smooth;overflow:auto;", ";"], function (props) {
+})(["position:relative;scroll-behavior:smooth;overflow:auto;", ";&::-webkit-scrollbar{width:1.2em;}&::-webkit-scrollbar-thumb{background-color:#E0E0E0;border:.4em solid #FFF;border-radius:3.5px;}"], function (props) {
   return props.theme.multiselect.chips.wrapper.extend;
 });
 var OptionText = styled(Box).withConfig({
@@ -59,9 +59,5 @@ var TextAreaWrapper = styled(Box).withConfig({
 var LabelText = styled(Text).withConfig({
   displayName: "StyledMultiSelect__LabelText",
   componentId: "sc-1yaxkjp-9"
-})(["overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;"]);
-var IconWrapper = styled(Box).withConfig({
-  displayName: "StyledMultiSelect__IconWrapper",
-  componentId: "sc-1yaxkjp-10"
-})(["align-items:center;flex-direction:row;"]);
-export { CheckBoxWrapper, OptionsBox, SelectOption, OptionBox, CheckBox, OptionWrapper, OptionText, SelectedOption, TextAreaWrapper, LabelText, IconWrapper };
+})(["overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;"]);
+export { CheckBoxWrapper, OptionsBox, SelectOption, OptionBox, CheckBox, OptionWrapper, OptionText, SelectedOption, TextAreaWrapper, LabelText };

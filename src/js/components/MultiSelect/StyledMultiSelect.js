@@ -9,6 +9,8 @@ import { Text } from '../Text';
 const disabledStyle = `
   opacity: 0.4;
   cursor: not-allowed;
+  display: none;
+  box-shadow: none
 `;
 
 const CheckBoxWrapper = styled(Box)`
@@ -23,6 +25,14 @@ const OptionsBox = styled(Box)`
   position: relative;
   scroll-behavior: smooth;
   overflow: auto;
+  &::-webkit-scrollbar {
+    width: .4em;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #E0E0E0;
+    border-radius: 3.5px;
+    border: .2em solid rgba(0, 0, 0, 0);
+  }
 `;
 
 const SelectOption = styled(Button)`
@@ -45,6 +55,14 @@ const OptionWrapper = styled(Box)`
   scroll-behavior: smooth;
   overflow: auto;
   ${props => props.theme.multiselect.chips.wrapper.extend};
+  &::-webkit-scrollbar {
+    width: 1.2em;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #E0E0E0;
+    border: .4em solid #FFF;
+    border-radius: 3.5px;
+  }  
 `;
 
 const OptionText = styled(Box)`
@@ -59,13 +77,8 @@ const LabelText = styled(Text)`
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
-`;
-
-const IconWrapper = styled(Box)`
-    align-items: center;
-    flex-direction: row;
 `;
 
 export {
@@ -79,5 +92,4 @@ export {
   SelectedOption,
   TextAreaWrapper,
   LabelText,
-  IconWrapper,
 };

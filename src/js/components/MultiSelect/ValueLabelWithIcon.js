@@ -9,6 +9,7 @@ const ValueLabelWithIcon = ({
   isExcluded,
   value = [],
   size,
+  placeholder = 'Select',
 }) => {
   const number = value.length;
   const theme = useContext(ThemeContext) || defaultProps.theme;
@@ -23,7 +24,11 @@ const ValueLabelWithIcon = ({
   };
 
   return (
-    <Box direction="row" align="center" pad={{ left: 'xlarge' }}>
+    <Box
+      direction="row"
+      align="center"
+      pad={{ left: 'xlarge', vertical: 'small' }}
+    >
       {withInclusionExclusion && isExcluded && (
         <Box
           width={{ min: '20px' }}
@@ -48,7 +53,7 @@ const ValueLabelWithIcon = ({
         color={getColor()}
         size={size}
       >
-        {number ? value.join(', ') : 'Select'}
+        {number ? value.join(', ') : placeholder}
       </LabelText>
     </Box>
   );

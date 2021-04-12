@@ -136,6 +136,7 @@ const ColumnSelect = ({
     <Box {...theme.multiselect.container} width={width}>
       {renderSearch && (
         <Searchbox
+          reverse={false}
           width={width}
           placeholder={searchPlaceholder}
           value={searchValue}

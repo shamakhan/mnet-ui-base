@@ -17,8 +17,6 @@ var _Button = require("../Button");
 
 var _Box = require("../Box");
 
-var _StyledMultiSelect = require("./StyledMultiSelect");
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -32,7 +30,9 @@ var Searchbox = function Searchbox(_ref) {
       width = _ref.width,
       layout = _ref.layout,
       selectIcon = _ref.selectIcon,
-      onCancel = _ref.onCancel;
+      onCancel = _ref.onCancel,
+      _ref$reverse = _ref.reverse,
+      reverse = _ref$reverse === void 0 ? true : _ref$reverse;
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
 
   var handleChange = function handleChange(textValue) {
@@ -42,15 +42,7 @@ var Searchbox = function Searchbox(_ref) {
 
   var CollapsibleIcon = selectIcon && selectIcon.up;
 
-  var icons = /*#__PURE__*/_react["default"].createElement(_StyledMultiSelect.IconWrapper, theme.multiselect.searchbox.iconWrapper, /*#__PURE__*/_react["default"].createElement(_Search.Search, theme.multiselect.searchbox.icon), selectIcon && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
-    role: "button",
-    onClick: onCancel,
-    plain: true
-  }, /*#__PURE__*/_react["default"].createElement(CollapsibleIcon // margin={{ left: 'large', right: 'small' }}
-  , {
-    color: "dark-1",
-    size: selectIcon.size
-  })));
+  var icons = /*#__PURE__*/_react["default"].createElement(_Search.Search, theme.multiselect.searchbox.icon);
 
   return /*#__PURE__*/_react["default"].createElement(_Box.Box, _extends({
     layout: layout
@@ -60,7 +52,7 @@ var Searchbox = function Searchbox(_ref) {
     plain: true,
     fill: true,
     icon: icons,
-    reverse: true,
+    reverse: reverse,
     width: width,
     value: value,
     valueLabel: /*#__PURE__*/_react["default"].createElement(_Text.Text, null, "value"),
@@ -68,7 +60,15 @@ var Searchbox = function Searchbox(_ref) {
       return handleChange(event.target.value);
     },
     placeholder: /*#__PURE__*/_react["default"].createElement(_Text.Text, theme.multiselect.searchbox.placeholder, value ? '' : placeholder)
-  }));
+  }), selectIcon && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+    role: "button",
+    margin: "large",
+    onClick: onCancel,
+    plain: true
+  }, /*#__PURE__*/_react["default"].createElement(CollapsibleIcon, {
+    color: "dark-1",
+    size: selectIcon.size
+  })));
 };
 
 exports.Searchbox = Searchbox;
