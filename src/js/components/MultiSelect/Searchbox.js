@@ -29,8 +29,15 @@ const Searchbox = ({
 
   const icons = (
       <Search {...theme.multiselect.searchbox.icon} />
-    
   );
+  const collapseBtn = selectIcon && (
+    <Button role="button" margin="none" onClick={onCancel} plain>
+      <CollapsibleIcon
+        color="dark-1"
+        size={selectIcon.size}
+      />
+    </Button>
+  )
 
   return (
     <Box layout={layout} {...theme.multiselect.searchbox.container}>
@@ -40,6 +47,7 @@ const Searchbox = ({
         plain
         fill
         icon={icons}
+        collapseBtn={collapseBtn}
         reverse={reverse}
         width={width}
         value={value}
@@ -51,15 +59,6 @@ const Searchbox = ({
           </Text>
         }
       />
-      {selectIcon && (
-        <Button role="button" margin="large" onClick={onCancel} plain>
-          <CollapsibleIcon
-            color="dark-1"
-            size={selectIcon.size}
-          />
-        </Button>
-      )}
-      
     </Box>
   );
 };

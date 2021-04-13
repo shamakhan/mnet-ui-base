@@ -99,8 +99,9 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
       plain = _ref.plain,
       reverse = _ref.reverse,
       suggestions = _ref.suggestions,
+      collapseBtn = _ref.collapseBtn,
       valueProp = _ref.value,
-      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "fill", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "error", "readOnly", "plain", "reverse", "suggestions", "value"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "fill", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "error", "readOnly", "plain", "reverse", "suggestions", "collapseBtn", "value"]);
 
   var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
@@ -303,7 +304,10 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   }, showStyledPlaceholder && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledPlaceholder, null, placeholder), icon && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledIcon, {
     reverse: reverse,
     theme: theme
-  }, icon), error && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledIcon, {
+  }, icon), collapseBtn && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledIcon, {
+    reverse: true,
+    theme: theme
+  }, collapseBtn), error && /*#__PURE__*/_react["default"].createElement(_StyledTextInput.StyledIcon, {
     reverse: true,
     theme: theme
   }, /*#__PURE__*/_react["default"].createElement(ErrorIcon, {
@@ -353,6 +357,7 @@ var TextInput = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     plain: plain,
     placeholder: typeof placeholder === 'string' ? placeholder : undefined,
     icon: icon,
+    collapseBtn: collapseBtn,
     reverse: reverse,
     focus: focus
   }, rest, {

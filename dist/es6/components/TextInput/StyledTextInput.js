@@ -18,7 +18,7 @@ var StyledTextInput = styled.input.withConfig({
 }, function (props) {
   return props.plain && plainStyle;
 }, placeholderStyle, function (props) {
-  return props.icon && (props.reverse ? "padding-right: " + props.theme.global.edgeSize.large + ";" : "padding-left: " + props.theme.global.edgeSize.large + ";");
+  return props.icon && (props.reverse ? "padding-right: " + props.theme.global.edgeSize.large + ";" : "padding-left: " + props.theme.global.edgeSize.xlarge + ";");
 }, function (props) {
   return props.focus && !props.plain && focusStyle();
 }, function (props) {

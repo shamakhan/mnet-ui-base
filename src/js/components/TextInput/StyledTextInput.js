@@ -35,7 +35,7 @@ const StyledTextInput = styled.input`
     props.icon &&
     (props.reverse
       ? `padding-right: ${props.theme.global.edgeSize.large};`
-      : `padding-left: ${props.theme.global.edgeSize.large};`)}
+      : `padding-left: ${props.theme.global.edgeSize.xlarge};`)}
 
   &::-moz-focus-inner {
     border: none;

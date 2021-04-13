@@ -27,7 +27,7 @@ const ValueLabelWithIcon = ({
     <Box
       direction="row"
       align="center"
-      pad={{ left: 'xlarge', vertical: 'small' }}
+      pad={{ left: 'large', vertical: 'small' }}
     >
       {withInclusionExclusion && isExcluded && (
         <Box

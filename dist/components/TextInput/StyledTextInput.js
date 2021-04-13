@@ -30,7 +30,7 @@ var StyledTextInput = _styledComponents["default"].input.withConfig({
 }, function (props) {
   return props.plain && plainStyle;
 }, _utils.placeholderStyle, function (props) {
-  return props.icon && (props.reverse ? "padding-right: " + props.theme.global.edgeSize.large + ";" : "padding-left: " + props.theme.global.edgeSize.large + ";");
+  return props.icon && (props.reverse ? "padding-right: " + props.theme.global.edgeSize.large + ";" : "padding-left: " + props.theme.global.edgeSize.xlarge + ";");
 }, function (props) {
   return props.focus && !props.plain && (0, _utils.focusStyle)();
 }, function (props) {

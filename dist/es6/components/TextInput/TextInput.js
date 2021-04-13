@@ -80,8 +80,9 @@ var TextInput = /*#__PURE__*/forwardRef(function (_ref, ref) {
       plain = _ref.plain,
       reverse = _ref.reverse,
       suggestions = _ref.suggestions,
+      collapseBtn = _ref.collapseBtn,
       valueProp = _ref.value,
-      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "fill", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "error", "readOnly", "plain", "reverse", "suggestions", "value"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["a11yTitle", "defaultValue", "dropAlign", "dropHeight", "dropTarget", "fill", "dropProps", "icon", "id", "messages", "name", "onBlur", "onChange", "onFocus", "onKeyDown", "onSelect", "onSuggestionsClose", "onSuggestionsOpen", "placeholder", "error", "readOnly", "plain", "reverse", "suggestions", "collapseBtn", "value"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var announce = useContext(AnnounceContext);
@@ -283,7 +284,10 @@ var TextInput = /*#__PURE__*/forwardRef(function (_ref, ref) {
   }, showStyledPlaceholder && /*#__PURE__*/React.createElement(StyledPlaceholder, null, placeholder), icon && /*#__PURE__*/React.createElement(StyledIcon, {
     reverse: reverse,
     theme: theme
-  }, icon), error && /*#__PURE__*/React.createElement(StyledIcon, {
+  }, icon), collapseBtn && /*#__PURE__*/React.createElement(StyledIcon, {
+    reverse: true,
+    theme: theme
+  }, collapseBtn), error && /*#__PURE__*/React.createElement(StyledIcon, {
     reverse: true,
     theme: theme
   }, /*#__PURE__*/React.createElement(ErrorIcon, {
@@ -333,6 +337,7 @@ var TextInput = /*#__PURE__*/forwardRef(function (_ref, ref) {
     plain: plain,
     placeholder: typeof placeholder === 'string' ? placeholder : undefined,
     icon: icon,
+    collapseBtn: collapseBtn,
     reverse: reverse,
     focus: focus
   }, rest, {

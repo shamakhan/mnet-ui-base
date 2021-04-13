@@ -95,6 +95,7 @@ const TextInput = forwardRef(
       plain,
       reverse,
       suggestions,
+      collapseBtn,
       value: valueProp,
       // errorMessage = "",
       ...rest
@@ -333,6 +334,11 @@ const TextInput = forwardRef(
               {icon}
             </StyledIcon>
           )}
+          {collapseBtn && (
+            <StyledIcon reverse theme={theme}>
+              {collapseBtn}
+            </StyledIcon>
+          )}
           {error && (
             <StyledIcon reverse theme={theme}>
               <ErrorIcon color="brand" />
@@ -400,6 +406,7 @@ const TextInput = forwardRef(
                 typeof placeholder === 'string' ? placeholder : undefined
               }
               icon={icon}
+              collapseBtn={collapseBtn}
               reverse={reverse}
               focus={focus}
               {...rest}

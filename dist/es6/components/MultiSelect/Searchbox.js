@@ -27,6 +27,15 @@ var Searchbox = function Searchbox(_ref) {
 
   var CollapsibleIcon = selectIcon && selectIcon.up;
   var icons = /*#__PURE__*/React.createElement(Search, theme.multiselect.searchbox.icon);
+  var collapseBtn = selectIcon && /*#__PURE__*/React.createElement(Button, {
+    role: "button",
+    margin: "none",
+    onClick: onCancel,
+    plain: true
+  }, /*#__PURE__*/React.createElement(CollapsibleIcon, {
+    color: "dark-1",
+    size: selectIcon.size
+  }));
   return /*#__PURE__*/React.createElement(Box, _extends({
     layout: layout
   }, theme.multiselect.searchbox.container), /*#__PURE__*/React.createElement(TextInput, {
@@ -35,6 +44,7 @@ var Searchbox = function Searchbox(_ref) {
     plain: true,
     fill: true,
     icon: icons,
+    collapseBtn: collapseBtn,
     reverse: reverse,
     width: width,
     value: value,
@@ -43,15 +53,7 @@ var Searchbox = function Searchbox(_ref) {
       return handleChange(event.target.value);
     },
     placeholder: /*#__PURE__*/React.createElement(Text, theme.multiselect.searchbox.placeholder, value ? '' : placeholder)
-  }), selectIcon && /*#__PURE__*/React.createElement(Button, {
-    role: "button",
-    margin: "large",
-    onClick: onCancel,
-    plain: true
-  }, /*#__PURE__*/React.createElement(CollapsibleIcon, {
-    color: "dark-1",
-    size: selectIcon.size
-  })));
+  }));
 };
 
 export { Searchbox };
