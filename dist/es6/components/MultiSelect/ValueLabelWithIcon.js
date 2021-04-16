@@ -12,7 +12,9 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
       size = _ref.size,
       _ref$placeholder = _ref.placeholder,
       placeholder = _ref$placeholder === void 0 ? 'Select' : _ref$placeholder;
-  var number = value.length;
+  var valueProp = value;
+  valueProp = Array.isArray(valueProp) ? valueProp : [valueProp];
+  var number = valueProp.length;
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var _theme$multiselect$ic = theme.multiselect.icons,
       include = _theme$multiselect$ic.include,
@@ -55,7 +57,7 @@ var ValueLabelWithIcon = function ValueLabelWithIcon(_ref) {
     "aria-label": "Selected Label Value",
     color: getColor(),
     size: size
-  }, number ? value.join(', ') : placeholder));
+  }, number ? valueProp.join(', ') : placeholder));
 };
 
 export { ValueLabelWithIcon };

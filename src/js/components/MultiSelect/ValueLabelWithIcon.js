@@ -11,7 +11,9 @@ const ValueLabelWithIcon = ({
   size,
   placeholder = 'Select',
 }) => {
-  const number = value.length;
+  let valueProp = value;
+  valueProp = Array.isArray(valueProp) ? valueProp : [valueProp];
+  const number = valueProp.length;
   const theme = useContext(ThemeContext) || defaultProps.theme;
   const { include, exclude} = theme.multiselect.icons;
   const { icon: IncIcon, extend: incExtend } = include;
@@ -53,7 +55,7 @@ const ValueLabelWithIcon = ({
         color={getColor()}
         size={size}
       >
-        {number ? value.join(', ') : placeholder}
+        {number ? valueProp.join(', ') : placeholder}
       </LabelText>
     </Box>
   );
