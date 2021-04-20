@@ -105,6 +105,10 @@ var CheckBox = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
     borderColor = (0, _utils.normalizeColor)(theme.checkBox.color || 'control', theme);
   }
 
+  var checkIcon = CheckedIcon && CheckedIcon.notSvg ? /*#__PURE__*/_react["default"].createElement(CheckedIcon, theme.checkBox.icon) : /*#__PURE__*/_react["default"].createElement(CheckedIcon, {
+    theme: theme,
+    as: _StyledCheckBox.StyledCheckBoxIcon
+  });
   var visual = toggle ? /*#__PURE__*/_react["default"].createElement(_StyledCheckBox.StyledCheckBoxToggle, themeableProps, /*#__PURE__*/_react["default"].createElement(_StyledCheckBox.StyledCheckBoxKnob, themeableProps)) : /*#__PURE__*/_react["default"].createElement(_StyledCheckBox.StyledCheckBoxBox, _extends({
     as: _Box.Box,
     align: "center",

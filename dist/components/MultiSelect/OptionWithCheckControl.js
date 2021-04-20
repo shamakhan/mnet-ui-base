@@ -13,6 +13,8 @@ var _FormSubtract = require("grommet-icons/icons/FormSubtract");
 
 var _Add = require("grommet-icons/icons/Add");
 
+var _defaultProps = require("../../default-props");
+
 var _Box = require("../Box");
 
 var _Text = require("../Text");
@@ -32,7 +34,8 @@ var OptionWithCheckControl = function OptionWithCheckControl(_ref) {
       isExcluded = _ref.isExcluded,
       onSelect = _ref.onSelect,
       index = _ref.index;
-  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || defaultProps.theme;
+
+  var theme = (0, _react.useContext)(_styledComponents.ThemeContext) || _defaultProps.defaultProps.theme;
 
   var selectOptionsStyle = _extends({}, theme.select.options.box, theme.select.options.container);
 

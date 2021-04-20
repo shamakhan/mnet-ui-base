@@ -411,6 +411,34 @@ export var generate = function generate(baseSpacing, scale) {
       // extend: undefined,
 
     },
+    breadcrumb: {
+      item: {
+        margin: {
+          right: 'medium'
+        }
+      },
+      content: {
+        color: 'dark-1',
+        size: 'large' // extend: undefined,
+
+      },
+      icon: {
+        color: 'dark-1',
+        size: 'small'
+      },
+      icons: {
+        separator: Next
+      },
+      extend: {
+        ul: {
+          display: 'flex',
+          li: {
+            border: 'none',
+            padding: 0
+          }
+        }
+      }
+    },
     button: {
       size: {
         small: {
@@ -1200,6 +1228,7 @@ export var generate = function generate(baseSpacing, scale) {
           }
         }
       },
+      label: undefined,
       custom: {
         wrapper: {
           direction: 'row'
@@ -1315,6 +1344,30 @@ export var generate = function generate(baseSpacing, scale) {
       },
       // searchInput: undefined,
       step: 20
+    },
+    "switch": {
+      padding: baseSpacing * 0.625 + "px",
+      background: {
+        active: 'accent-1',
+        inactive: 'dark-3',
+        disabled: {// active: 'dark-2',
+          // inactive: undefined,
+        }
+      },
+      text: {
+        active: 'white',
+        inactive: 'dark-2',
+        disabled: {// active: 'dark-3',
+          // inactive: undefined,
+        }
+      },
+      container: {
+        direction: 'row',
+        gap: 'none',
+        round: 'small',
+        overflow: 'hidden'
+      },
+      disabled: undefined
     },
     tab: {
       active: {

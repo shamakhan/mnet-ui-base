@@ -31,13 +31,14 @@ var MultiSelect = function MultiSelect(_ref) {
       isExcludedProp = _ref.isExcluded,
       onIncExcChange = _ref.onIncExcChange,
       renderEmptySelected = _ref.renderEmptySelected,
+      gridArea = _ref.gridArea,
       validate = _ref.validate,
       size = _ref.size,
       isOpenState = _ref.isOpenState,
       isEnableOutSideClick = _ref.isEnableOutSideClick,
       shouldRenderInDrop = _ref.shouldRenderInDrop,
       placeholder = _ref.placeholder,
-      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected", "validate", "size", "isOpenState", "isEnableOutSideClick", "shouldRenderInDrop", "placeholder"]);
+      rest = _objectWithoutPropertiesLoose(_ref, ["width", "height", "options", "value", "labelKey", "valueKey", "onValueChange", "layout", "onSearch", "searchPlaceholder", "emptySearchMessage", "withSelectAll", "withOptionChips", "withUpdateCancelButtons", "searchable", "custom", "withInclusionExclusion", "isExcluded", "onIncExcChange", "renderEmptySelected", "gridArea", "validate", "size", "isOpenState", "isEnableOutSideClick", "shouldRenderInDrop", "placeholder"]);
 
   var _useState = useState(valueProp),
       internalValue = _useState[0],
@@ -182,7 +183,8 @@ var MultiSelect = function MultiSelect(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(Box, {
-    width: width
+    width: width,
+    gridArea: gridArea
   }, /*#__PURE__*/React.createElement(Select, _extends({
     multiple: true,
     value: value,

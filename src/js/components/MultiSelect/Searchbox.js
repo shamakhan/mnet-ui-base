@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Search } from 'grommet-icons/icons/Search';
 
+import { defaultProps } from '../../default-props';
 import { Text } from '../Text';
 import { TextInput } from '../TextInput';
 import { Button } from '../Button';
