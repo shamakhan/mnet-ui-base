@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Box, MultiSelect, MnetUIBase } from 'mnet-ui-base';
-import { hb } from 'mnet-ui-base-theme-hb';
+
+import { Box, MultiSelect } from 'mnet-ui-base';
 
 const options = [
   'Test 1',
@@ -20,7 +20,6 @@ const Example = () => {
   const [value, setValue] = useState([]);
 
   return (
-    <MnetUIBase full theme={hb}>
     <Box fill align="center" justify="start" pad="large">
       <MultiSelect
         options={options}
@@ -33,7 +32,6 @@ const Example = () => {
         searchable
       />
     </Box>
-    </MnetUIBase>
   );
 };
 

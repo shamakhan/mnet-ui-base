@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { hb } from 'mnet-ui-base-theme-hb';
-import { Box, MultiSelect, MnetUIBase } from 'mnet-ui-base';
+
+import { Box, MultiSelect } from 'mnet-ui-base';
 
 const options = [
   { id: 1, label: 'Test 1' },
@@ -21,7 +21,6 @@ const Example = () => {
   const [isExcluded, setIncExc] = useState(null);
 
   return (
-    <MnetUIBase full theme={hb}>
     <Box fill align="center" justify="start" pad="large">
       <MultiSelect
         options={options}
@@ -41,7 +40,6 @@ const Example = () => {
         renderEmptySelected={<span>Empty</span>}
       />
     </Box>
-    </MnetUIBase>
   );
 };
 

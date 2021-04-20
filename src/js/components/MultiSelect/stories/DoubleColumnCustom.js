@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { hb } from 'mnet-ui-base-theme-hb';
-import { Box, MultiSelect, Text, MnetUIBase } from 'mnet-ui-base';
+
+import { Box, MultiSelect, Text } from 'mnet-ui-base';
 
 const Example = () => {
   const [value, setValue] = useState([
@@ -63,7 +63,6 @@ const Example = () => {
   };
 
   return (
-    <MnetUIBase full theme={hb}>
     <Box fill align="center" justify="start" pad="large">
       <MultiSelect
         value={value}
@@ -84,7 +83,6 @@ const Example = () => {
         isOpenState
       />
     </Box>
-    </MnetUIBase>
   );
 };
 
