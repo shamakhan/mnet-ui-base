@@ -17,6 +17,7 @@ const Searchbox = ({
   selectIcon,
   onCancel,
   reverse = true,
+  shouldRenderInDrop,
 }) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;
 
@@ -31,7 +32,7 @@ const Searchbox = ({
   const icons = (
       <Search {...theme.multiselect.searchbox.icon} />
   );
-  const collapseBtn = selectIcon && (
+  const collapseBtn = !shouldRenderInDrop && selectIcon && (
     <Button role="button" margin="none" onClick={onCancel} plain>
       <CollapsibleIcon
         color="dark-1"

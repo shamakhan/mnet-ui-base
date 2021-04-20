@@ -49,6 +49,7 @@ const ColumnSelect = ({
   custom,
   validate,
   onChange,
+  shouldRenderInDrop,
 }) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;
 
@@ -142,6 +143,7 @@ const ColumnSelect = ({
           value={searchValue}
           onValueChange={onSearchChange}
           layout={layout}
+          shouldRenderInDrop={shouldRenderInDrop}
           selectIcon={theme.select.icons}
           onCancel={onCancel}
         />

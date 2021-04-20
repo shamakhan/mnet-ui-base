@@ -34,7 +34,7 @@ const MultiSelect = ({
   size,
   isOpenState,
   isEnableOutSideClick,
-  shouldRenderInDrop,
+  shouldRenderInDrop = true,
   placeholder,
   ...rest
 }) => {
@@ -157,6 +157,7 @@ const MultiSelect = ({
           onValueChange={onValueChange}
           custom={custom}
           validate={validate}
+          shouldRenderInDrop={shouldRenderInDrop}
           {...props}
         />
       );
