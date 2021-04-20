@@ -87,10 +87,6 @@ var CheckBox = /*#__PURE__*/forwardRef(function (_ref, ref) {
     borderColor = normalizeColor(theme.checkBox.color || 'control', theme);
   }
 
-  var checkIcon = CheckedIcon && CheckedIcon.notSvg ? /*#__PURE__*/React.createElement(CheckedIcon, theme.checkBox.icon) : /*#__PURE__*/React.createElement(CheckedIcon, {
-    theme: theme,
-    as: StyledCheckBoxIcon
-  });
   var visual = toggle ? /*#__PURE__*/React.createElement(StyledCheckBoxToggle, themeableProps, /*#__PURE__*/React.createElement(StyledCheckBoxKnob, themeableProps)) : /*#__PURE__*/React.createElement(StyledCheckBoxBox, _extends({
     as: Box,
     align: "center",
