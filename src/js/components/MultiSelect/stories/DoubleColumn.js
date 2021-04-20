@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { Box, MultiSelect, Text } from 'mnet-ui-base';
+import { Box, MultiSelect, Text, MnetUIBase } from 'mnet-ui-base';
+import { hb } from 'mnet-ui-base-theme-hb';
 
 const options = [
   { id: 1, label: 'Desktop' },
@@ -16,6 +17,7 @@ const Example = () => {
   const [isExcluded, setIncExc] = useState(false);
 
   return (
+    <MnetUIBase full theme={hb}>
     <Box fill align="center" justify="start" pad="large">
       <MultiSelect
         options={options}
@@ -39,6 +41,7 @@ const Example = () => {
         isOpenState={false}
       />
     </Box>
+    </MnetUIBase>
   );
 };
 
