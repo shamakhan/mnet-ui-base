@@ -4,7 +4,6 @@ import { ThemeContext } from 'styled-components';
 import { removeUndefined } from '../../utils/object';
 import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
-import { Text } from '../Text';
 import { FormContext } from '../Form/FormContext';
 
 import {
@@ -96,6 +95,12 @@ const CheckBox = forwardRef(
       borderColor = normalizeColor(theme.checkBox.color || 'control', theme);
     }
 
+    const checkIcon = CheckedIcon && CheckedIcon.notSvg ? (
+      <CheckedIcon {...theme.checkBox.icon} />
+    ) : (
+      <CheckedIcon theme={theme} as={StyledCheckBoxIcon} />
+    );
+
     const visual = toggle ? (
       <StyledCheckBoxToggle {...themeableProps}>
         <StyledCheckBoxKnob {...themeableProps} />
@@ -116,9 +121,8 @@ const CheckBox = forwardRef(
       >
         {!indeterminate &&
           checked &&
-          (CheckedIcon ? (
-            <CheckedIcon theme={theme} size="large" />
-          ) : (
+          
+          (CheckedIcon ? checkIcon : (
             <StyledCheckBoxIcon
               theme={theme}
               viewBox="0 0 24 24"
@@ -184,11 +188,7 @@ const CheckBox = forwardRef(
     );
 
     const normalizedLabel =
-      typeof label === 'string' ? (
-        <Text {...theme.checkBox.label}>{label}</Text>
-      ) : (
-        label
-      );
+      typeof label === 'string' ? <span>{label}</span> : label;
 
     const first = reverse ? normalizedLabel : checkBoxNode;
     const second = reverse ? checkBoxNode : normalizedLabel;
