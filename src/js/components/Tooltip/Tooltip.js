@@ -14,10 +14,9 @@ const Tooltip = forwardRef(
     {
       children,
       message,
-      body = false,
       position = 'right',
-      title,
       showArrow = true,
+      closeOnTooltipHover = true,
       ...rest
     },
     ref,
@@ -50,12 +49,13 @@ const Tooltip = forwardRef(
         setOver(show);
       }
     };
+    const normalizedMouseOverfn = closeOnTooltipHover ? setOver : showToolTip;
     return (
       <Box ref={ref} {...rest}>
         <Box
           ref={overRef}
-          onMouseOver={() => showToolTip(true)}
-          onMouseOut={() => showToolTip(false, true)}
+          onMouseOver={() => normalizedMouseOverfn(true)}
+          onMouseOut={() => normalizedMouseOverfn(false, true)}
           onFocus={() => {}}
           onBlur={() => {}}
         >
@@ -83,17 +83,7 @@ const Tooltip = forwardRef(
                 background={tooptip.background || 'dark-1'}
                 round={tooptip.round}
               >
-                {body}
-                {!body && (
-                  <>
-                    {title && (
-                      <Text color={tooptip.color} {...tooptip.titleProps}>
-                        {title}
-                      </Text>
-                    )}
-                    <Text color={tooptip.color}>{message}</Text>
-                  </>
-                )}
+                <Text color={tooptip.color}>{message}</Text>
               </Box>
             </ArrowWrap>
           </Drop>

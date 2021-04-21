@@ -70,7 +70,7 @@ const FormField = forwardRef(
       onFocus,
       pad,
       required, // pass through in renderInput()
-      tooltip, // pass through in renderInput()
+      tooltip = false, // pass through in renderInput()
       style,
       validate,
       direction = 'column',
@@ -435,7 +435,7 @@ const FormField = forwardRef(
                 </Text>
               )}
               {required && <Text color="status-critical">*</Text>}
-              {typeof tooltip === 'object' && tooltip!= null && (
+              {tooltip &&  (
                 <Tooltip
                   {...tooltip}
                   {...formFieldTheme.tooltip.extend}
