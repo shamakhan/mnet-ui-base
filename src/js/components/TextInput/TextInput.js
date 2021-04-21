@@ -92,9 +92,7 @@ const TextInput = forwardRef(
       reverse,
       suggestions,
       value: valueProp,
-      collapseBtn,
       plain,
-      error = false,
       fill,
       ...rest
     },
@@ -107,7 +105,6 @@ const TextInput = forwardRef(
     const dropRef = useRef();
     const suggestionsRef = useRef();
     const suggestionRefs = {};
-    const ErrorIcon = theme.textInput.error.icon;
 
     // if this is a readOnly property, don't set a name with the form context
     // this allows Select to control the form context for the name.
@@ -323,118 +320,106 @@ const TextInput = forwardRef(
     }
 
     return (
-        <StyledTextInputContainer plain={plain} fill={fill}>
-          {showStyledPlaceholder && (
-            <StyledPlaceholder>{placeholder}</StyledPlaceholder>
-          )}
-          {icon && (
-            <StyledIcon reverse={reverse} theme={theme}>
-              {icon}
-            </StyledIcon>
-          )}
-          {collapseBtn && (
-            <StyledIcon reverse theme={theme}>
-              {collapseBtn}
-            </StyledIcon>
-          )}
-          {error && (
-            <StyledIcon reverse theme={theme}>
-              <ErrorIcon color="brand" />
-            </StyledIcon>
-          )}
-          <Keyboard
-            onEnter={event => {
-              closeDrop();
-              if (activeSuggestionIndex >= 0 && onSelect) {
-                // prevent submitting forms when choosing a suggestion
-                event.preventDefault();
-                event.persist();
-                const adjustedEvent = event;
-                adjustedEvent.suggestion = suggestions[activeSuggestionIndex];
-                adjustedEvent.target = (ref || inputRef).current;
-                onSelect(adjustedEvent);
-              }
-            }}
-            onEsc={
-              showDrop
-                ? event => {
-                    closeDrop();
-                    // we have to stop both synthetic events and native events
-                    // drop and layer should not close by pressing esc on this
-                    // input
-                    event.stopPropagation();
-                    event.nativeEvent.stopImmediatePropagation();
-                  }
-                : undefined
+      <StyledTextInputContainer plain={plain} fill={fill}>
+        {showStyledPlaceholder && (
+          <StyledPlaceholder>{placeholder}</StyledPlaceholder>
+        )}
+        {icon && (
+          <StyledIcon reverse={reverse} theme={theme}>
+            {icon}
+          </StyledIcon>
+        )}
+        <Keyboard
+          onEnter={event => {
+            closeDrop();
+            if (activeSuggestionIndex >= 0 && onSelect) {
+              // prevent submitting forms when choosing a suggestion
+              event.preventDefault();
+              event.persist();
+              const adjustedEvent = event;
+              adjustedEvent.suggestion = suggestions[activeSuggestionIndex];
+              adjustedEvent.target = (ref || inputRef).current;
+              onSelect(adjustedEvent);
             }
-            onTab={showDrop ? closeDrop : undefined}
-            onUp={
-              showDrop &&
-              suggestions &&
-              suggestions.length > 0 &&
-              activeSuggestionIndex
-                ? event => {
-                    onPreviousSuggestion(event);
-                  }
-                : undefined
-            }
-            onDown={
-              suggestions && suggestions.length > 0
-                ? event => {
-                    if (!showDrop) {
-                      openDrop();
-                    } else {
-                      onNextSuggestion(event);
-                    }
-                  }
-                : undefined
-            }
-            onKeyDown={onKeyDown}
-          >
-            <StyledTextInput
-              fill={fill}
-              aria-label={a11yTitle}
-              ref={ref || inputRef}
-              id={id}
-              name={name}
-              autoComplete="off"
-              error={error}
-              plain={plain}
-              placeholder={
-                typeof placeholder === 'string' ? placeholder : undefined
-              }
-              icon={icon}
-              collapseBtn={collapseBtn}
-              reverse={reverse}
-              focus={focus}
-              {...rest}
-              defaultValue={renderLabel(defaultValue)}
-              value={renderLabel(value)}
-              readOnly={readOnly}
-              onFocus={event => {
-                setFocus(true);
-                if (suggestions && suggestions.length > 0) {
-                  announce(messages.suggestionsExist);
-                  openDrop();
+          }}
+          onEsc={
+            showDrop
+              ? event => {
+                  closeDrop();
+                  // we have to stop both synthetic events and native events
+                  // drop and layer should not close by pressing esc on this
+                  // input
+                  event.stopPropagation();
+                  event.nativeEvent.stopImmediatePropagation();
                 }
-                if (onFocus) onFocus(event);
-              }}
-              onBlur={event => {
-                setFocus(false);
-                if (onBlur) onBlur(event);
-              }}
-              onChange={
-                readOnly
-                  ? undefined
-                  : event => {
-                      setValue(event.target.value);
-                      if (onChange) onChange(event);
-                    }
+              : undefined
+          }
+          onTab={showDrop ? closeDrop : undefined}
+          onUp={
+            showDrop &&
+            suggestions &&
+            suggestions.length > 0 &&
+            activeSuggestionIndex
+              ? event => {
+                  onPreviousSuggestion(event);
+                }
+              : undefined
+          }
+          onDown={
+            suggestions && suggestions.length > 0
+              ? event => {
+                  if (!showDrop) {
+                    openDrop();
+                  } else {
+                    onNextSuggestion(event);
+                  }
+                }
+              : undefined
+          }
+          onKeyDown={onKeyDown}
+        >
+          <StyledTextInput
+            fill={fill}
+            aria-label={a11yTitle}
+            ref={ref || inputRef}
+            id={id}
+            name={name}
+            autoComplete="off"
+            plain={plain}
+            placeholder={
+              typeof placeholder === 'string' ? placeholder : undefined
+            }
+            icon={icon}
+            reverse={reverse}
+            focus={focus}
+            {...rest}
+            defaultValue={renderLabel(defaultValue)}
+            value={renderLabel(value)}
+            readOnly={readOnly}
+            onFocus={event => {
+              setFocus(true);
+              if (suggestions && suggestions.length > 0) {
+                announce(messages.suggestionsExist);
+                openDrop();
               }
-            />
-          </Keyboard>
-          {drop}
-        </StyledTextInputContainer>
+              if (onFocus) onFocus(event);
+            }}
+            onBlur={event => {
+              setFocus(false);
+              if (onBlur) onBlur(event);
+            }}
+            onChange={
+              readOnly
+                ? undefined
+                : event => {
+                    setValue(event.target.value);
+                    if (onChange) onChange(event);
+                  }
+            }
+          />
+        </Keyboard>
+        {drop}
+      </StyledTextInputContainer>
     );
   },
 );

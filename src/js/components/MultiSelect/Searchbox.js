@@ -33,7 +33,13 @@ const Searchbox = ({
       <Search {...theme.multiselect.searchbox.icon} />
   );
   const collapseBtn = !shouldRenderInDrop && selectIcon && (
-    <Button role="button" margin="none" onClick={onCancel} plain>
+    <Button 
+      role="button" 
+      margin="none" 
+      onClick={onCancel} 
+      plain
+      style={{  position: 'absolute', right: '15px'  }}
+    >
       <CollapsibleIcon
         color="dark-1"
         size={selectIcon.size}
@@ -49,7 +55,6 @@ const Searchbox = ({
         plain
         fill
         icon={icons}
-        collapseBtn={collapseBtn}
         reverse={reverse}
         width={width}
         value={value}
@@ -61,6 +66,7 @@ const Searchbox = ({
           </Text>
         }
       />
+      {collapseBtn}
     </Box>
   );
 };
