@@ -77,7 +77,7 @@ const Tooltip = forwardRef(
               position={position}
               background={tooptip.background || 'dark-1'}
             >
-              {showArrow && <Arrow position={position} />}
+              <Arrow position={position} showArrow={showArrow} />
               <Box
                 pad={tooptip.pad}
                 background={tooptip.background || 'dark-1'}

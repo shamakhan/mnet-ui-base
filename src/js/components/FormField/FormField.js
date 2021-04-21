@@ -40,8 +40,12 @@ const FormFieldBox = styled(Box)`
 `;
 
 const FormFieldContentBox = styled(Box)`
+  ${props => !props.error && props.theme.formField.field && props.theme.formField.field.default}
   ${props => props.focus && focusStyle({ justBorder: true })}
-  ${props => props.focus && props.plainOnFocus && `border-color: white;`}
+  ${props => props.focus && 
+    props.plainOnFocus && 
+    props.theme.formField.field && 
+    props.theme.formField.field.focus}
 `;
 
 const Message = ({ message, ...rest }) => {
@@ -314,6 +318,8 @@ const FormField = forwardRef(
           overflow="hidden"
           {...(showBorder && innerProps)}
           plainOnFocus={plainOnFocus}
+          theme={theme}
+          error={error}
         >
           {contents}
         </FormFieldContentBox>
