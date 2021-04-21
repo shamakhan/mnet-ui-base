@@ -26,6 +26,7 @@ const plainStyle = css`
 
 const StyledTextInput = styled.input`
   ${inputStyle} width: 100%;
+  
   ${props => props.size && sizeStyle(props)}
   ${props => props.plain && plainStyle}
 
@@ -34,7 +35,7 @@ const StyledTextInput = styled.input`
     props.icon &&
     (props.reverse
       ? `padding-right: ${props.theme.global.edgeSize.large};`
-      : `padding-left: ${props.theme.global.edgeSize.xlarge};`)}
+      : `padding-left: ${props.theme.global.edgeSize.large};`)}
 
   &::-moz-focus-inner {
     border: none;
