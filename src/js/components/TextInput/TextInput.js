@@ -88,12 +88,11 @@ const TextInput = forwardRef(
       onSuggestionsClose,
       onSuggestionsOpen,
       placeholder,
+      plain,
       readOnly,
       reverse,
       suggestions,
       value: valueProp,
-      plain,
-      fill,
       ...rest
     },
     ref,
@@ -320,7 +319,7 @@ const TextInput = forwardRef(
     }
 
     return (
-      <StyledTextInputContainer plain={plain} fill={fill}>
+      <StyledTextInputContainer plain={plain}>
         {showStyledPlaceholder && (
           <StyledPlaceholder>{placeholder}</StyledPlaceholder>
         )}
@@ -379,7 +378,6 @@ const TextInput = forwardRef(
           onKeyDown={onKeyDown}
         >
           <StyledTextInput
-            fill={fill}
             aria-label={a11yTitle}
             ref={ref || inputRef}
             id={id}
