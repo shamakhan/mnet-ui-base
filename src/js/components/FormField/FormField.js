@@ -7,8 +7,6 @@ import React, {
   useState,
 } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-
-
 import { defaultProps } from '../../default-props';
 
 import { focusStyle, parseMetricToNum } from '../../utils';
@@ -21,7 +19,7 @@ import { TextInput } from '../TextInput';
 import { FormContext } from '../Form/FormContext';
 // import { Drop } from '../Drop';
 // import { Button } from '../Button';
-import { Tooltip } from '../Tooltip';
+// import { Tooltip } from '../Tooltip';
 
 const mnetInputNames = ['TextInput', 'Select', 'MaskedInput', 'TextArea'];
 const mnetInputPadNames = [
@@ -81,7 +79,6 @@ const FormField = forwardRef(
       width = 'auto',
       showBorder = true,
       plainOnFocus,
-      tooltip = false, // pass through in renderInput()
       ...rest
     },
     ref,
@@ -304,14 +301,14 @@ const FormField = forwardRef(
       const innerProps =
         themeBorder.position === 'inner'
           ? {
-            border: {
-              ...themeBorder,
-              side: themeBorder.side || 'bottom',
-              color: borderColor,
-            },
-            round: formFieldTheme.round,
-            focus,
-          } : {};
+              border: {
+                ...themeBorder,
+                side: themeBorder.side || 'bottom',
+                color: borderColor,
+              },
+              round: formFieldTheme.round,
+              focus,
+           } : {};
       contents = (
         <FormFieldContentBox
           overflow="hidden"
@@ -398,8 +395,6 @@ const FormField = forwardRef(
             focus,
           }
         : {};
-
-    const ToolTipIcon = formFieldTheme.tooltip.icon;
 
     return (
       <FormFieldBox
