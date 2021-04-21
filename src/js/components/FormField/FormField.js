@@ -7,6 +7,8 @@ import React, {
   useState,
 } from 'react';
 import styled, { ThemeContext } from 'styled-components';
+
+
 import { defaultProps } from '../../default-props';
 
 import { focusStyle, parseMetricToNum } from '../../utils';
@@ -285,7 +287,7 @@ const FormField = forwardRef(
       borderColor = (themeBorder && themeBorder.color) || 'border';
     }
 
-    const labelStyle = { ...formFieldTheme.labelWrap };
+    const labelStyle = { ...formFieldTheme.label };
 
     if (disabled) {
       labelStyle.color =
@@ -302,22 +304,14 @@ const FormField = forwardRef(
       const innerProps =
         themeBorder.position === 'inner'
           ? {
-            border: [{
+            border: {
               ...themeBorder,
               side: themeBorder.side || 'bottom',
               color: borderColor,
-            }],
+            },
             round: formFieldTheme.round,
             focus,
           } : {};
-      if(!error && innerProps.border) {
-        innerProps.border.push({
-          ...themeBorder,
-          side: 'bottom',
-          color: borderColor,
-          size: 'small',
-        });
-      }
       contents = (
         <FormFieldContentBox
           overflow="hidden"
@@ -430,18 +424,9 @@ const FormField = forwardRef(
           {(label && component !== CheckBox) || labelWidth ? (
             <Box {...labelStyle} width={labelWidth}>
               {label && component !== CheckBox && (
-                <Text as="label" htmlFor={htmlFor} {...formFieldTheme.label}>
+                <Text as="label" htmlFor={htmlFor}>
                   {label} 
                 </Text>
-              )}
-              {required && <Text color="status-critical">*</Text>}
-              {tooltip &&  (
-                <Tooltip
-                  {...tooltip}
-                  {...formFieldTheme.tooltip.extend}
-                >
-                  <ToolTipIcon {...formFieldTheme.tooltip.iconProps} />
-                </Tooltip>
               )}
             </Box>
           ) : null}
