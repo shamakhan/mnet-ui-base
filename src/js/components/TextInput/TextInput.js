@@ -12,7 +12,6 @@ import styled, { ThemeContext } from 'styled-components';
 import { defaultProps } from '../../default-props';
 
 import { Box } from '../Box';
-// import { Text } from '../Text';
 import { Button } from '../Button';
 import { Drop } from '../Drop';
 import { InfiniteScroll } from '../InfiniteScroll';
@@ -76,7 +75,6 @@ const TextInput = forwardRef(
       dropAlign = defaultDropAlign,
       dropHeight,
       dropTarget,
-      fill,
       dropProps,
       icon,
       id,
@@ -90,14 +88,14 @@ const TextInput = forwardRef(
       onSuggestionsClose,
       onSuggestionsOpen,
       placeholder,
-      error = false,
       readOnly,
-      plain,
       reverse,
       suggestions,
-      collapseBtn,
       value: valueProp,
-      // errorMessage = "",
+      collapseBtn,
+      plain,
+      error = false,
+      fill,
       ...rest
     },
     ref,

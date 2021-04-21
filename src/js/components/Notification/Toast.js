@@ -11,7 +11,9 @@ export function Toast({ type, id, msg, onClose }) {
   const Icon =
     theme.notification.toast.icon[type] ||
     theme.notification.toast.icon.default;
-  const IconSize = theme.notification.toast.icon.size;
+  const { 
+    size: IconSize, 
+    container: iconContainer } = theme.notification.toast.icon;
   const IconColor =
     (theme.notification.toast.text[type] &&
       theme.notification.toast.text[type].color) ||
@@ -26,12 +28,7 @@ export function Toast({ type, id, msg, onClose }) {
       {...theme.notification.toast.default}
       {...theme.notification.toast[type]}
     >
-      <Box
-        align="center"
-        direction="row"
-        gap="xsmall"
-        margin={{ right: 'medium' }}
-      >
+      <Box align="center" direction="row" gap="xsmall" {...iconContainer}>
         {Icon && <Icon size={IconSize} color={IconColor} />}
         <Text
           {...(theme.notification.toast.text[type] ||
@@ -43,8 +40,8 @@ export function Toast({ type, id, msg, onClose }) {
       <Button
         icon={<CloseIcon />}
         onClick={handleClose}
-        style={{ display: 'flex', padding: 0 }}
         color={IconColor}
+        style={{ display: 'flex', padding: 0 }}
       />
     </Box>
   );

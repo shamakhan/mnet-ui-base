@@ -70,7 +70,6 @@ const FormField = forwardRef(
       onFocus,
       pad,
       required, // pass through in renderInput()
-      tooltip = false, // pass through in renderInput()
       style,
       validate,
       direction = 'column',
@@ -80,6 +79,7 @@ const FormField = forwardRef(
       width = 'auto',
       showBorder = true,
       plainOnFocus,
+      tooltip = false, // pass through in renderInput()
       ...rest
     },
     ref,

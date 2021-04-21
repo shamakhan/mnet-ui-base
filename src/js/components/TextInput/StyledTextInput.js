@@ -26,7 +26,7 @@ const plainStyle = css`
 
 const StyledTextInput = styled.input`
   ${inputStyle} width: 100%;
-  
+
   ${props => props.size && sizeStyle(props)}
   ${props => props.plain && plainStyle}
 
