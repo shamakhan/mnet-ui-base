@@ -21,6 +21,7 @@ import { TextInput } from '../TextInput';
 
 import { SelectContainer } from './SelectContainer';
 import { applyKey } from './utils';
+import { SelectOutSideDrop } from './SelectOutSideDrop';
 
 const SelectTextInput = styled(TextInput)`
   cursor: pointer;
@@ -210,10 +211,58 @@ const Select = forwardRef(
       theme,
     );
 
+    if (!shouldRenderInDrop) {
+      return <SelectOutSideDrop 
+        a11yTitle={a11yTitle}
+        alignSelf={alignSelf}
+        // children={children}
+        closeOnChange={closeOnChange}
+        disabled={disabled}
+        disabledKey={disabledKey}
+        dropAlign={dropAlign}
+        dropHeight={dropHeight}
+        dropProps={dropProps}
+        dropTarget={dropTarget}
+        emptySearchMessage={emptySearchMessage}
+        focusIndicator={focusIndicator}
+        gridArea={gridArea}
+        id={id}
+        icon={icon}
+        labelKey={labelKey}
+        margin={margin}
+        messages={messages}
+        multiple={multiple}
+        name={name}
+        onChange={onChange}
+        onClick={onClick}
+        onClose={onClose}
+        onKeyDown={onKeyDown}
+        onMore={onMore}
+        onOpen={onOpen}
+        onSearch={onSearch}
+        open={propOpen}
+        options={options}
+        placeholder={placeholder}
+        plain={plain}
+        replace={replace}
+        searchPlaceholder={searchPlaceholder}
+        selected={selected}
+        size={size}
+        value={valueProp}
+        valueKey={valueKey}
+        valueLabel={valueLabel}
+        customSearch={customSearch}
+        renderOptionTop={renderOptionTop}
+        renderOptionBottom={renderOptionBottom}
+        renderCustomContent={renderCustomContent}
+        isEnableOutSideClick={isEnableOutSideClick}
+        shouldRenderInDrop={shouldRenderInDrop}
+        {...rest}
+      />
+    }
+
     return (
       <Keyboard onDown={onRequestOpen} onUp={onRequestOpen}>
-        <>
-          {(shouldRenderInDrop || (!shouldRenderInDrop && !open)) &&
             <StyledSelectDropButton
               ref={ref}
               id={id}
@@ -228,7 +277,7 @@ const Select = forwardRef(
               onOpen={onRequestOpen}
               onClose={onRequestClose}
               onClick={onClick}
-              dropContent={shouldRenderInDrop ? (
+              dropContent={
                 <SelectContainer
                   disabled={disabled}
                   disabledKey={disabledKey}
@@ -255,7 +304,7 @@ const Select = forwardRef(
                   renderCustomContent={renderCustomContent}
                 >
                   {children}
-                </SelectContainer>) : null
+                </SelectContainer>
               }
               plain={plain}
               dropProps={dropProps}
@@ -304,38 +353,9 @@ const Select = forwardRef(
                 )}
               </Box>
             </StyledSelectDropButton>
-          }
+          
       
-          {(!shouldRenderInDrop && open) && (
-            <SelectContainer
-              disabled={disabled}
-              disabledKey={disabledKey}
-              dropHeight={dropHeight}
-              emptySearchMessage={emptySearchMessage}
-              id={id}
-              labelKey={labelKey}
-              multiple={multiple}
-              name={name}
-              onChange={onSelectChange}
-              onKeyDown={onKeyDown}
-              onMore={onMore}
-              onSearch={onSearch}
-              options={options}
-              optionIndexesInValue={optionIndexesInValue}
-              replace={replace}
-              searchPlaceholder={searchPlaceholder}
-              selected={selected}
-              value={value}
-              valueKey={valueKey}
-              customSearch={customSearch}
-              renderOptionTop={renderOptionTop}
-              renderOptionBottom={renderOptionBottom}
-              renderCustomContent={renderCustomContent}
-            >
-              {children}
-            </SelectContainer>
-          )}
-        </>  
+          
       </Keyboard>
     );
   },

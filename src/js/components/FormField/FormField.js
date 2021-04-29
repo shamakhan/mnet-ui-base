@@ -312,7 +312,8 @@ const FormField = forwardRef(
               },
               round: formFieldTheme.round,
               focus,
-           } : {};
+           }
+         : {};
       contents = (
         <FormFieldContentBox
           overflow="hidden"
