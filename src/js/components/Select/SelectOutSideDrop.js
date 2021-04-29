@@ -101,6 +101,7 @@ import React, {
         renderOptionBottom,
         renderCustomContent,
         isEnableOutSideClick = true,
+        shouldRenderInDrop = false,
         ...rest
       },
       ref,
@@ -276,7 +277,7 @@ import React, {
               </StyledSelectDropButton>
             }
         
-            {!open && (
+            {open && (
               <SelectContainer
                 disabled={disabled}
                 disabledKey={disabledKey}
@@ -311,16 +312,16 @@ import React, {
     },
   );
   
-  SelectOutSideDrop.defaultProps = { ...defaultProps };
+  SelectOutSideDrop.defaultProps = { ...defaultProps};
   
   SelectOutSideDrop.displayName = 'SelectOutSideDrop';
   
   let SelectDoc;
   if (process.env.NODE_ENV !== 'production') {
-    // eslint-disable-next-line global-require
-    SelectDoc = require('./doc').doc(SelectOutSideDrop);
+            // eslint-disable-next-line global-require
+            SelectDoc = require('./doc').doc(SelectOutSideDrop);
   }
   const SelectWrapper = SelectDoc || SelectOutSideDrop;
   
-  export { SelectWrapper as SelectOutSideDrop };
+  export { SelectWrapper as SelectOutSideDrop};
   

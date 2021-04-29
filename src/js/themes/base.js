@@ -17,6 +17,8 @@ import { Volume } from 'grommet-icons/icons/Volume';
 import { VolumeLow } from 'grommet-icons/icons/VolumeLow';
 import { Info } from 'grommet-icons/icons/Info';
 import { FormClose } from 'grommet-icons/icons/FormClose';
+import { Select as Success }  from 'grommet-icons/icons/Select'
+import { Split as Block }  from 'grommet-icons/icons/Split'
 import { base as iconBase } from 'grommet-icons/themes/base';
 
 import { deepFreeze, deepMerge } from '../utils/object';
@@ -967,6 +969,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         justify: 'between',
         pad: { horizontal: 'medium' },
       },
+      includeBtn: {
+        color: 'status-ok',
+      },
+      excludeBtn: {
+        color: 'status-error',
+      },
       checkbox: {
         box: {
           margin: {
@@ -1096,6 +1104,12 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         textWrapper: {
           flex: 'grow',
         },
+        iconWrapper: {
+          gap: 'medium',
+          width: 'xxsmall',
+          direction: 'row',
+          justify: 'center',
+        },
         container: {
           height: {
             min: 'xxsmall',
@@ -1166,6 +1180,22 @@ export const generate = (baseSpacing = 24, scale = 6) => {
             direction: 'row',
             margin: { vertical: 'small' },
             gap: 'medium',
+          },
+        },
+      },
+      icons: {
+        include: {
+          icon: Success,
+          extend: {
+            color: 'status-ok',
+            size: 'large',
+          },
+        },
+        exclude: {
+          icon: Block,
+          extend: {
+            color: 'status-error',
+            size: 'large',
           },
         },
       },
@@ -1244,7 +1274,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
         color: 'white',
         margin: { horizontal: 'small' },
         down: FormDown,
-        // up: undefined
+        up: FormUp,
       },
       options: {
         container: {
