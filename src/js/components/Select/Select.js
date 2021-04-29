@@ -142,6 +142,7 @@ const Select = forwardRef(
           }
         });
       }
+
       return result;
     }, [options, selected, valueKey, valuedValue]);
 
@@ -258,7 +259,6 @@ const Select = forwardRef(
         renderOptionBottom={renderOptionBottom}
         renderCustomContent={renderCustomContent}
         isEnableOutSideClick={isEnableOutSideClick}
-        shouldRenderInDrop={shouldRenderInDrop}
         {...rest}
       />
     }
@@ -355,9 +355,6 @@ const Select = forwardRef(
             )}
           </Box>
         </StyledSelectDropButton>
-          
-      
-          
       </Keyboard>
     );
   },
