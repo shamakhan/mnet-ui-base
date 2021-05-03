@@ -186,9 +186,10 @@ const ColumnSelect = ({
                                   setUnsetChips(
                                     allSelected
                                       ? []
-                                      : options.map((item, ind) =>
-                                          optionValue(ind),
-                                        ),
+                                      : options.reduce((acc, item, ind) => {
+                                        if(!isDisabled(ind)) acc.push(optionValue(ind));
+                                        return acc;
+                                      }, []),
                                   )
                               : undefined
                           }

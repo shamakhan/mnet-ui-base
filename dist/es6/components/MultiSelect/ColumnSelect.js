@@ -162,9 +162,10 @@ var ColumnSelect = function ColumnSelect(_ref) {
       onMouseOver: onActiveOption(-1),
       onFocus: onActiveOption(-1),
       onClick: !inclusionExclusion || inclusionExclusion && isExcluded !== null ? function () {
-        return setUnsetChips(allSelected ? [] : options.map(function (item, ind) {
-          return optionValue(ind);
-        }));
+        return setUnsetChips(allSelected ? [] : options.reduce(function (acc, item, ind) {
+          if (!isDisabled(ind)) acc.push(optionValue(ind));
+          return acc;
+        }, []));
       } : undefined
     }, /*#__PURE__*/React.createElement(OptionWithCheckControl, {
       selected: allSelected,
