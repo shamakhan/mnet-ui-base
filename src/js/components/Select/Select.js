@@ -213,6 +213,36 @@ const Select = forwardRef(
       theme,
     );
 
+    const getDropDownContent = () => (
+      <SelectContainer
+        disabled={disabled}
+        disabledKey={disabledKey}
+        dropHeight={dropHeight}
+        emptySearchMessage={emptySearchMessage}
+        id={id}
+        labelKey={labelKey}
+        multiple={multiple}
+        name={name}
+        onChange={onSelectChange}
+        onKeyDown={onKeyDown}
+        onMore={onMore}
+        onSearch={onSearch}
+        options={options}
+        optionIndexesInValue={optionIndexesInValue}
+        replace={replace}
+        searchPlaceholder={searchPlaceholder}
+        selected={selected}
+        value={value}
+        valueKey={valueKey}
+        customSearch={customSearch}
+        renderOptionTop={renderOptionTop}
+        renderOptionBottom={renderOptionBottom}
+        renderCustomContent={renderCustomContent}
+      >
+        {children}
+      </SelectContainer>
+    )
+
     return (
       <Keyboard onDown={onRequestOpen} onUp={onRequestOpen}>
         <>
@@ -231,35 +261,7 @@ const Select = forwardRef(
               onOpen={onRequestOpen}
               onClose={onRequestClose}
               onClick={onClick}
-              dropContent={shouldRenderInDrop ? (
-                <SelectContainer
-                  disabled={disabled}
-                  disabledKey={disabledKey}
-                  dropHeight={dropHeight}
-                  emptySearchMessage={emptySearchMessage}
-                  id={id}
-                  labelKey={labelKey}
-                  multiple={multiple}
-                  name={name}
-                  onChange={onSelectChange}
-                  onKeyDown={onKeyDown}
-                  onMore={onMore}
-                  onSearch={onSearch}
-                  options={options}
-                  optionIndexesInValue={optionIndexesInValue}
-                  replace={replace}
-                  searchPlaceholder={searchPlaceholder}
-                  selected={selected}
-                  value={value}
-                  valueKey={valueKey}
-                  customSearch={customSearch}
-                  renderOptionTop={renderOptionTop}
-                  renderOptionBottom={renderOptionBottom}
-                  renderCustomContent={renderCustomContent}
-                >
-                  {children}
-                </SelectContainer>) : null
-              }
+              dropContent={shouldRenderInDrop ? (getDropDownContent()) : null}
               plain={plain}
               dropProps={dropProps}
               theme={theme}
@@ -309,35 +311,7 @@ const Select = forwardRef(
             </StyledSelectDropButton>
           }
       
-          {(!shouldRenderInDrop && open) && (
-            <SelectContainer
-              disabled={disabled}
-              disabledKey={disabledKey}
-              dropHeight={dropHeight}
-              emptySearchMessage={emptySearchMessage}
-              id={id}
-              labelKey={labelKey}
-              multiple={multiple}
-              name={name}
-              onChange={onSelectChange}
-              onKeyDown={onKeyDown}
-              onMore={onMore}
-              onSearch={onSearch}
-              options={options}
-              optionIndexesInValue={optionIndexesInValue}
-              replace={replace}
-              searchPlaceholder={searchPlaceholder}
-              selected={selected}
-              value={value}
-              valueKey={valueKey}
-              customSearch={customSearch}
-              renderOptionTop={renderOptionTop}
-              renderOptionBottom={renderOptionBottom}
-              renderCustomContent={renderCustomContent}
-            >
-              {children}
-            </SelectContainer>
-          )}
+          {(!shouldRenderInDrop && open) && getDropDownContent()}
         </>  
       </Keyboard>
     );
