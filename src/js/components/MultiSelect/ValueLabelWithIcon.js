@@ -1,8 +1,8 @@
-import { margin } from 'polished';
 import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { Box } from '../Box';
 import { Text } from '../Text';
+import { defaultProps } from '../../default-props';
 import { LabelText } from './StyledMultiSelect';
 
 const ValueLabelWithIcon = ({
