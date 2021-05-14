@@ -50,6 +50,7 @@ const ColumnSelect = ({
   validate,
   onChange,
   shouldRenderInDrop,
+  showCount,
 }) => {
   const theme = useContext(ThemeContext) || defaultProps.theme;
 
@@ -109,6 +110,7 @@ const ColumnSelect = ({
       isExcluded={isExcluded}
       renderEmptySelected={renderEmptySelected}
       layout={layout}
+      showCount={showCount}
     />
   );
 
@@ -134,7 +136,7 @@ const ColumnSelect = ({
   }
 
   return (
-    <Box {...theme.multiselect.container} width={width}>
+    <Box width={width} {...theme.multiselect.container}>
       {renderSearch && (
         <Searchbox
           reverse={false}
@@ -151,7 +153,7 @@ const ColumnSelect = ({
       <Box direction="row" height={height || 'small'}>
         <Box
           width={layout === 'single-column' ? '100%' : '50%'}
-          pad={{ vertical: 'small' }}
+          // pad={{ vertical: 'small' }}
         >
           <OptionsBox role="menubar" tabIndex="-1">
             {options.length > 0 ? (

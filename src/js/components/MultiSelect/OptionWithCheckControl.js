@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { FormCheckmark } from 'grommet-icons/icons/FormCheckmark';
 import { FormSubtract } from 'grommet-icons/icons/FormSubtract';
+import { FormClose } from 'grommet-icons/icons/FormClose';
 import { Add } from 'grommet-icons/icons/Add';
 
 import { defaultProps } from '../../default-props';
 import { Box } from '../Box';
 import { Text } from '../Text';
+import { normalizeColor } from '../../utils/colors';
 
 import { CheckBoxWrapper, CheckBox, SelectedOption } from './StyledMultiSelect';
 
@@ -26,7 +28,25 @@ const OptionWithCheckControl = ({
     ...theme.select.options.container,
   };
 
+  const {
+    include = {},
+    exclude = {},
+  } = theme.multiselect.checkbox;
+
+  const {
+    background: incBackground = 'white',
+    color: incColor = 'black',
+    check: incCheck = 'add',
+  } = include;
+
+  const {
+    background: excBackground = 'white',
+    color: excColor = 'black',
+    check: excCheck = 'subtract',
+  } = exclude;
+
   const renderCheckbox = (check, exc) => {
+    
     return (
       <CheckBoxWrapper {...theme.multiselect.checkbox.box}>
         <CheckBox
@@ -38,6 +58,7 @@ const OptionWithCheckControl = ({
               : 'inactive'
           }`}
           {...theme.multiselect.checkbox.check}
+          color={(!exc ? incColor : excColor) || 'black'}
           active={selected || (inclusionExclusion && isExcluded === null)}
           isExcluded={exc}
           onClick={
@@ -45,6 +66,7 @@ const OptionWithCheckControl = ({
               ? event => onSelect(event, exc, index)
               : undefined
           }
+          background={(exc ? normalizeColor(excBackground, theme): normalizeColor(incBackground, theme)) || 'white'}
         >
           {(selected ||
             !selected ||
@@ -52,6 +74,9 @@ const OptionWithCheckControl = ({
             <>
               {check === 'check' && (
                 <FormCheckmark {...theme.multiselect.checkbox.checkmark} />
+              )}
+              {check === 'close' && (
+                <FormClose {...theme.multiselect.checkbox.checkmark} />
               )}
               {check === 'add' && (
                 <Add
@@ -90,12 +115,12 @@ const OptionWithCheckControl = ({
             {label}
           </Text>
         </Box>
-        {!inclusionExclusion && <Box>{renderCheckbox('add', null)}</Box>}
+        {!inclusionExclusion && <Box>{renderCheckbox(incCheck, null)}</Box>}
         {inclusionExclusion && (isExcluded === null || isExcluded !== null) && (
           <Box direction="row">
-            {[null, false].includes(isExcluded) && renderCheckbox('add', false)}
+            {[null, false].includes(isExcluded) && renderCheckbox(incCheck, false)}
             {[null, true].includes(isExcluded) &&
-              renderCheckbox('subtract', true)}
+              renderCheckbox(excCheck, true)}
           </Box>
         )}
       </Box>

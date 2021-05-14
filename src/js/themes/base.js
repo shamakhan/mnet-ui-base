@@ -783,7 +783,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
       extend: {
         button: {
           flex: 1,
-          border: 'none',
+          // border: 'none',
         },
       },
       tooltip: {
@@ -992,6 +992,7 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           size: `${baseSpacing * 1.2}px`,
           color: 'white',
         },
+        type: 'add',
         check: {
           height: `${baseSpacing * 1.2}px`,
           width: `${baseSpacing * 1.2}px`,
@@ -1170,8 +1171,8 @@ export const generate = (baseSpacing = 24, scale = 6) => {
           height: '100%',
           extend: {
             '*': {
-              border: 'none',
-              height: '100%',
+              // border: 'none',
+              // height: '100%',
             },
           },
         },

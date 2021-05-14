@@ -48,6 +48,8 @@ const OptionBox = styled(Box)`
 
 const CheckBox = styled(Box)`
   ${props => props.theme.multiselect.checkbox.check};
+  ${props => props.background && `background: ${props.background};`}
+  
 `;
 
 const OptionWrapper = styled(Box)`
@@ -77,7 +79,7 @@ const LabelText = styled(Text)`
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: ${props => props.rowCount};
   -webkit-box-orient: vertical;
 `;
 

@@ -250,20 +250,18 @@ const FormField = forwardRef(
       }
     }
     contents = (
-      <Box {...contentProps} width={width}>
-        <Box direction="row">
-          {prefix && (
-            <Box {...formFieldTheme.prefix} style={{ wordBreak: 'normal' }}>
-              {prefix}
-            </Box>
-          )}
-          {contents}
-          {postfix && (
-            <Box {...formFieldTheme.postfix} style={{ wordBreak: 'normal' }}>
-              {postfix}
-            </Box>
-          )}
-        </Box>
+      <Box {...contentProps} width={width} direction="row">
+        {prefix && (
+          <Box {...formFieldTheme.prefix} style={{ wordBreak: 'normal' }}>
+            {prefix}
+          </Box>
+        )}
+        {contents}
+        {postfix && (
+          <Box {...formFieldTheme.postfix} style={{ wordBreak: 'normal' }}>
+            {postfix}
+          </Box>
+        )}
       </Box>
     );
 

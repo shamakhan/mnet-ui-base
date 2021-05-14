@@ -51,6 +51,11 @@ const MultiSelect = ({
 
   const value = withUpdateCancelButtons ? internalValue : valueProp;
 
+  const {
+    showCount = false,
+    rowCount = 5,
+  } = rest;
+
   useEffect(() => {
     if (!isOpen && withUpdateCancelButtons) {
       updateInternalValue(valueProp);
@@ -158,6 +163,7 @@ const MultiSelect = ({
           custom={custom}
           validate={validate}
           shouldRenderInDrop={shouldRenderInDrop}
+          showCount={showCount}
           {...props}
         />
       );
@@ -168,11 +174,16 @@ const MultiSelect = ({
   const renderLabel = () => {
     return (
       <ValueLabelWithIcon
+        showCount={showCount}
+        rowCount={rowCount}
         withInclusionExclusion={withInclusionExclusion}
         isExcluded={isExcluded}
         size={size}
         placeholder={placeholder}
-        value={value}
+        value={custom ? value : (options || []).filter(obj => 
+          value.includes(applyKey(obj, valueKey)))
+            .map(optionObj => applyKey(optionObj, labelKey))
+        }
       />
     );
   };
