@@ -49,6 +49,7 @@ const DropContainer = forwardRef(
       responsive,
       restrictFocus,
       stretch = 'width',
+      preserveDropHeight = false,
       ...rest
     },
     ref,
@@ -66,7 +67,7 @@ const DropContainer = forwardRef(
       // We try to preserve the maxHeight as changing it causes any scroll
       // position to be lost. We set the maxHeight on mount and if the window
       // is resized.
-      const place = preserveHeight => {
+      const place = (preserveHeight = preserveDropHeight) => {
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
         const target = dropTarget;
@@ -259,7 +260,7 @@ const DropContainer = forwardRef(
       const onResize = () => {
         removeScrollListeners();
         addScrollListeners();
-        place(false);
+        place(preserveDropHeight);
       };
 
       addScrollListeners();
@@ -268,7 +269,7 @@ const DropContainer = forwardRef(
         document.addEventListener('mousedown', onClickDocument);
       }
 
-      place(false);
+      place(preserveDropHeight);
 
       return () => {
         removeScrollListeners();
@@ -288,6 +289,7 @@ const DropContainer = forwardRef(
       restrictFocus,
       stretch,
       theme.drop,
+      preserveDropHeight,
     ]);
 
     useEffect(() => {

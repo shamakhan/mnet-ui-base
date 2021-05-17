@@ -42,7 +42,9 @@ var DropContainer = /*#__PURE__*/forwardRef(function (_ref, ref) {
       restrictFocus = _ref.restrictFocus,
       _ref$stretch = _ref.stretch,
       stretch = _ref$stretch === void 0 ? 'width' : _ref$stretch,
-      rest = _objectWithoutPropertiesLoose(_ref, ["align", "children", "dropTarget", "elevation", "onClickOutside", "onEsc", "onKeyDown", "overflow", "plain", "responsive", "restrictFocus", "stretch"]);
+      _ref$preserveDropHeig = _ref.preserveDropHeight,
+      preserveDropHeight = _ref$preserveDropHeig === void 0 ? false : _ref$preserveDropHeig,
+      rest = _objectWithoutPropertiesLoose(_ref, ["align", "children", "dropTarget", "elevation", "onClickOutside", "onEsc", "onKeyDown", "overflow", "plain", "responsive", "restrictFocus", "stretch", "preserveDropHeight"]);
 
   var theme = useContext(ThemeContext) || defaultProps.theme;
   var portalContext = useContext(PortalContext) || defaultPortalContext;
@@ -58,6 +60,10 @@ var DropContainer = /*#__PURE__*/forwardRef(function (_ref, ref) {
     // position to be lost. We set the maxHeight on mount and if the window
     // is resized.
     var place = function place(preserveHeight) {
+      if (preserveHeight === void 0) {
+        preserveHeight = preserveDropHeight;
+      }
+
       var windowWidth = window.innerWidth;
       var windowHeight = window.innerHeight;
       var target = dropTarget;
@@ -255,7 +261,7 @@ var DropContainer = /*#__PURE__*/forwardRef(function (_ref, ref) {
     var onResize = function onResize() {
       removeScrollListeners();
       addScrollListeners();
-      place(false);
+      place(preserveDropHeight);
     };
 
     addScrollListeners();
@@ -265,7 +271,7 @@ var DropContainer = /*#__PURE__*/forwardRef(function (_ref, ref) {
       document.addEventListener('mousedown', onClickDocument);
     }
 
-    place(false);
+    place(preserveDropHeight);
     return function () {
       removeScrollListeners();
       window.removeEventListener('resize', onResize);
@@ -274,7 +280,7 @@ var DropContainer = /*#__PURE__*/forwardRef(function (_ref, ref) {
         document.removeEventListener('mousedown', onClickDocument);
       }
     };
-  }, [align, dropTarget, onClickOutside, portalContext, portalId, ref, responsive, restrictFocus, stretch, theme.drop]);
+  }, [align, dropTarget, onClickOutside, portalContext, portalId, ref, responsive, restrictFocus, stretch, theme.drop, preserveDropHeight]);
   useEffect(function () {
     if (restrictFocus) {
       (ref || dropRef).current.focus();
